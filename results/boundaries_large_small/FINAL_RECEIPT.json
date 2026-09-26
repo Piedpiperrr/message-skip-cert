@@ -1,0 +1,38 @@
+{
+  "status": "COMPLETE",
+  "task": "P2_CONFIDENCE_REFERENCE_BOUNDARIES",
+  "stage": "P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z",
+  "job_id": "run018",
+  "utc": "2026-09-14T17:21:30.707127+00:00",
+  "counts": {
+    "attempts": 7044,
+    "success": 7044,
+    "new_cal": 140,
+    "new_evaluations": 3422
+  },
+  "reused": {
+    "probe": 4208,
+    "cal": 20,
+    "deployment_rows": 742
+  },
+  "deployment_q": {
+    "large_obqa_T": 0.8,
+    "large_obqa_C": 0.8,
+    "large_arc_T": 0.95,
+    "large_arc_C": 0.9,
+    "small_obqa_T": 0.0,
+    "small_obqa_C": 0.0,
+    "small_arc_T": 0.0,
+    "small_arc_C": 0.0
+  },
+  "resource_sha256": "398ddcab88ac44338674c9ac641c7595ad73b7e473653cdabbbe40597b310be6",
+  "config_sha256": "e84c015eb04ef92dfc252917e2f1ae3cfb0e86d2e830bf283afbaba0e9073f22",
+  "all_routes_sha256": "3d43ac84def188e7fb53ce9ab43fc61610aac38402fb1ed6dd58e001744ebaa5",
+  "CPU_charged_seconds": 473.45149200000003,
+  "actual_GPU_allocation_hours": 0.16111111111111112,
+  "TeX_compiled": false,
+  "contribution_words": 127,
+  "budget_closed": true,
+  "remaining_submissions": 0,
+  "next_action": "Return to Work; no automatic E2E/final test or new algorithm claim"
+}

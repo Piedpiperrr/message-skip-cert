@@ -1,0 +1,20 @@
+{
+  "utc": "2026-09-14T22:18:58.245284+00:00",
+  "complete": true,
+  "raw_rows": 1172,
+  "groups": 1172,
+  "complete_actions": 4688,
+  "online_probes": 2344,
+  "unique_request_keys": 4688,
+  "same_allocation_one_residency": true,
+  "all_timing_parts_sum": true,
+  "all_decompositions_sum": true,
+  "predictions_hashed_before_gold": true,
+  "thresholds_changed": false,
+  "cold_requests_removed": 0,
+  "rows_deleted": 0,
+  "same_population_accuracy_latency_utility": true,
+  "bootstrap_seed": 0,
+  "bootstrap_replicates": 2000,
+  "no_method_search": true
+}

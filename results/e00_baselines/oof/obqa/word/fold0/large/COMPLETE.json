@@ -1,0 +1,14 @@
+{
+  "status": "OOF_FOLD_COMPLETE",
+  "pair": "large",
+  "dataset": "obqa",
+  "family": "word",
+  "fold": 0,
+  "n_fit": 2772,
+  "n_heldout": 694,
+  "fit_panel_n": 202,
+  "protocol_sha256": "41239823e728796dd108aae24cc48401ec8093c38aca16f7a30a1352145ef797",
+  "prediction_sha256": "793968d592b75f039b8ba43c310317363b1a021465cee43c125f29017aa3a9e5",
+  "dev_used": false,
+  "full_train_pretrained_heads_used": false
+}

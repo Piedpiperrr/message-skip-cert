@@ -1,0 +1,10 @@
+setting,N_fit,N_fit_upos,N_cal,N_cal_upos,N_dev,N_dev_upos,cal_dis_upos,q_plus,accepted_q,min_p,min_p_q,min_p_n,min_p_k,label,threshold_plus,cal_n,cal_k,cal_p,dev_n,dev_k,dev_coverage_within_upos,dev_coverage_of_all,dev_rate,dev_CP_lo,dev_CP_hi
+large/OBQA/Text,2100,1051,1366,724,742,388,142,fallback,none,0.0020438974165390964,0.2,165,1,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy",,,,,,,,,,,
+large/OBQA/C2C,2100,1051,1366,724,742,388,125,0.35,0.30;0.35,0.0007059670785300266,0.3,228,2,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy",1.8835067749023438e-05,257,3,0.0009668288004584947,122,1,0.31443298969072164,0.16442048517520216,0.00819672131147541,0.00020750148485297826,0.04482265743309292
+large/ARC/Text,670,176,448,127,299,82,12,fallback,none,0.1285121565651034,0.25,40,0,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy",,,,,,,,,,,
+large/ARC/C2C,670,176,448,127,299,82,19,fallback,none,0.06597069817787209,0.35,53,0,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy",,,,,,,,,,,
+large/MMLU-Pro/Text,3000,2287,6000,4558,2641,1996,1281,fallback,none,0.14980791484666162,0.1,445,17,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy",,,,,,,,,,,
+large/MMLU-Pro/C2C,3000,2287,6000,4558,2641,1996,1739,fallback,none,0.14980791484666162,0.1,445,17,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy",,,,,,,,,,,
+medium/OBQA/C2C,2100,1145,1366,765,742,421,235,fallback,none,0.601409264851612,0.05,64,3,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy",,,,,,,,,,,
+medium/ARC/C2C,670,291,448,192,299,125,54,fallback,none,0.17482461472379734,0.1,34,0,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy",,,,,,,,,,,
+large/OBQA/Text+fact,2100,1051,1366,724,742,388,168,fallback,none,0.0642531180486782,0.15,117,2,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy",,,,,,,,,,,

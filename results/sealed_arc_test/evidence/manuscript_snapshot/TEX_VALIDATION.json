@@ -1,0 +1,69 @@
+{
+  "compiled": false,
+  "engines": {
+    "pdflatex": null,
+    "xelatex": null,
+    "lualatex": null,
+    "tectonic": null,
+    "latexmk": null
+  },
+  "reason": "No compiler on PATH; source topology and environments checked; no installation",
+  "active_inputs": [
+    {
+      "source": "manuscript.tex",
+      "target": "reference_preserving.tex",
+      "sha256": "80dcc9c8f6abf54e0baabc3aed443f94908d90003d8e1d2ecd773d11d006b31d"
+    },
+    {
+      "source": "reference_preserving.tex",
+      "target": "boundary_methods.tex",
+      "sha256": "457bab1f97919ef1333c4b55a0f9106731fded3fdcdbb29d2b41152d8d9168e7"
+    },
+    {
+      "source": "reference_preserving.tex",
+      "target": "boundary_results.tex",
+      "sha256": "b11c5b26afa5c2452feea5f794ed26202edfd885c56764a5d2e5b20ecf42f02d"
+    },
+    {
+      "source": "boundary_results.tex",
+      "target": "boundary_main_table.tex",
+      "sha256": "447040380f6ab9748c51bac51f8346786408657bdf700724d216605580931a61"
+    },
+    {
+      "source": "boundary_results.tex",
+      "target": "boundary_panel_table.tex",
+      "sha256": "eec4056616260085fdefd8f8a5b091c3c0aef0d558871c59ddbbdbb04492e894"
+    },
+    {
+      "source": "reference_preserving.tex",
+      "target": "boundary_cost_limitations.tex",
+      "sha256": "e25dcd607d345773991609eb2fcb0287edb6e1ed6e8cf865461781b4225940ca"
+    },
+    {
+      "source": "boundary_cost_limitations.tex",
+      "target": "contribution_positioning.tex",
+      "sha256": "a47f248b157aea516a8c968a0211bce5bd67472897e91f3812442b9246f775b4"
+    },
+    {
+      "source": "reference_preserving.tex",
+      "target": "e2e_validation.tex",
+      "sha256": "4b61e82f5639749c7cb130fd27622fcb97cbe6f2314d48fae9f7a470c7a1d5af"
+    },
+    {
+      "source": "e2e_validation.tex",
+      "target": "e2e_table.tex",
+      "sha256": "6cec194c689bbe77ffe9279f16f19f6bc036f21b9cbe0bb2b8232a3e6e33cae9"
+    },
+    {
+      "source": "manuscript.tex",
+      "target": "boundary_appendix.tex",
+      "sha256": "54800b594df21750f6c69fc84a936492890f3c163ec7d9a88e9e5b17e0e676f5"
+    },
+    {
+      "source": "manuscript.tex",
+      "target": "e2e_appendix.tex",
+      "sha256": "b47f82ffc3add7e700ccfc11f672884d514e47ca18b6e93f1c10b8c478920723"
+    }
+  ],
+  "figure_rendered_and_viewed": true
+}

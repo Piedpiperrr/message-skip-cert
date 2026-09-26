@@ -1,0 +1,8 @@
+pair,population,N,V1_V2_complete,n_V1,n_V2,n_V0_supp,R_correct_paper_saved,V1_perm_correct,V2_irrelevant_msg_correct,R_invalid,V1_invalid,V2_invalid,oracle_R_V1_V2,best_of_R_V1_V2,oracle_gain_R_V1_V2_pp,oracle_R_V1,oracle_R_V2,answer_change_R_vs_V1,answer_change_rate_R_vs_V1_pct,answer_change_R_vs_V2,answer_change_rate_R_vs_V2_pct,T_correct_paper,C_correct_paper,paper_oracle_R_T_C,paper_best_fixed,paper_oracle_gain_pp,table1_oracle,table1_gain_pp,matches_table1,reparse_vs_stored_mismatch_R_T_C,V0_supp_same_job_R_replay_correct,V0_supp_answer_change_vs_saved_R
+small,obqa,742,True,742,742,742,285,290,316,25,30,48,488,316,23.18,449,363,558,75.2,213,28.71,346,366,498,366,17.79,498,17.79,True,0/0/0,285,0
+small,arc,299,True,299,299,299,110,123,130,32,21,22,200,130,23.41,175,148,209,69.9,89,29.77,126,155,204,155,16.39,204,16.39,True,0/0/0,110,0
+medium,obqa,742,True,742,742,742,490,482,507,8,5,0,596,507,11.99,556,556,183,24.66,152,20.49,523,486,593,523,9.43,593,9.43,True,0/0/0,490,0
+medium,arc,299,True,299,299,299,217,216,220,2,0,0,245,220,8.36,236,233,53,17.73,36,12.04,221,202,248,221,9.03,248,9.03,True,0/0/0,217,0
+large,obqa,742,True,742,742,742,617,599,624,0,3,0,679,624,7.41,665,648,137,18.46,68,9.16,645,598,670,645,3.37,670,3.37,True,0/0/0,617,0
+large,arc,299,True,299,299,299,268,260,271,0,0,0,277,271,2.01,274,275,20,6.69,12,4.01,274,266,280,274,2.01,280,2.01,True,0/0/0,268,0
+large,mmlu_pro,2641,True,2641,2641,2641,1282,1286,1306,6,6,2,1599,1306,11.09,1514,1433,914,34.61,535,20.26,1319,1233,1558,1319,9.05,1558,9.05,True,0/0/0,1282,0

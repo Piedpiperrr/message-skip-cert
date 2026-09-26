@@ -1,0 +1,7 @@
+You are a communication router for a small receiver answering a multiple-choice science question. Decide whether receiver-only is sufficient or C2C communication should be requested. Use the question, options, and receiver probe diagnostics. Probe probabilities are not probabilities of correctness. Output only 0 for receiver-only or 1 for C2C when additional information is needed or the receiver is unreliable. Do not answer the question or explain your decision.
+
+Question: {question}
+Options:
+{options}
+Receiver probe: predicted option={predicted_option}; top-1 probability={top1}; top-2 margin={margin}; entropy in nats={entropy}.
+Routing decision:

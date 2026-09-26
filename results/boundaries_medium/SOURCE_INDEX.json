@@ -1,0 +1,202 @@
+{
+  "sources": [
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/HANDOFF_ZH.md",
+      "local_path": "evidence/handoffs/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z.md",
+      "sha256": "e55604781058c82435997e0b21bd6113d8b05d5daca9102affc41ddc0f816a39"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/HANDOFF_ZH.md",
+      "local_path": "evidence/handoffs/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z.md",
+      "sha256": "fc286627e7ae29dcb32db3a89a0fcc1afb5148c7177da7d0d0a6e8fa5505ea14"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/HANDOFF_ZH.md",
+      "local_path": "evidence/handoffs/P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z.md",
+      "sha256": "984d0c44aad3114ac404b94eb251be7f642dfc2913b5403d9954f4a9cd679e41"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/arc_cal_ids.json",
+      "local_path": "splits/arc_cal_ids.json",
+      "sha256": "61781f830a784f82d8a9d4c426b8a2a824f1c0919bc6e3fd27209a5aed4bdfaa"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/arc_cal_representatives.json",
+      "local_path": "splits/arc_cal_representatives.json",
+      "sha256": "61781f830a784f82d8a9d4c426b8a2a824f1c0919bc6e3fd27209a5aed4bdfaa"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/arc_dev_ids.json",
+      "local_path": "splits/arc_dev_ids.json",
+      "sha256": "588d16b38e5db04b26a0d48feb5b4b96f4caa6af3bd5352626e59aa40063419c"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/arc_dev_representatives.json",
+      "local_path": "splits/arc_dev_representatives.json",
+      "sha256": "588d16b38e5db04b26a0d48feb5b4b96f4caa6af3bd5352626e59aa40063419c"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/arc_fit_ids.json",
+      "local_path": "splits/arc_fit_ids.json",
+      "sha256": "b3771328b85bbbe00cffe1cf6155bfa689d9de29c80fbdea7cc732488883a1e7"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/arc_fit_representatives.json",
+      "local_path": "splits/arc_fit_representatives.json",
+      "sha256": "6a347fc68fa467ffb6b605dba872d06f3ddc064077c8dbc740b12c607fa90d5a"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/arc_group_members.csv",
+      "local_path": "splits/arc_group_members.csv",
+      "sha256": "77f5f120fdd8e1153b15a61a358ee42241a59557a5b185bb8d3ca558d970a43a"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/arc_train_dev_overlap.json",
+      "local_path": "splits/arc_train_dev_overlap.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/obqa_cal_ids.json",
+      "local_path": "splits/obqa_cal_ids.json",
+      "sha256": "8b33a4d168131c5a0095c5eabcdea2f2b3bb272dfae8a41ab2a7e0e05d5ebaed"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/obqa_cal_representatives.json",
+      "local_path": "splits/obqa_cal_representatives.json",
+      "sha256": "8b33a4d168131c5a0095c5eabcdea2f2b3bb272dfae8a41ab2a7e0e05d5ebaed"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/obqa_dev_ids.json",
+      "local_path": "splits/obqa_dev_ids.json",
+      "sha256": "80d1bbdd9148df3037401881533a2137b0d4ce9ee90a8ebb424fb413440bfbab"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/obqa_dev_representatives.json",
+      "local_path": "splits/obqa_dev_representatives.json",
+      "sha256": "80d1bbdd9148df3037401881533a2137b0d4ce9ee90a8ebb424fb413440bfbab"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/obqa_fit_ids.json",
+      "local_path": "splits/obqa_fit_ids.json",
+      "sha256": "1559bc9668d88a986df0967b96fdf14c995f02f622b126f396819b69b58c4028"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/obqa_fit_representatives.json",
+      "local_path": "splits/obqa_fit_representatives.json",
+      "sha256": "1559bc9668d88a986df0967b96fdf14c995f02f622b126f396819b69b58c4028"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/obqa_group_members.csv",
+      "local_path": "splits/obqa_group_members.csv",
+      "sha256": "be43bbee6009f73481c6a89976d1efee650bc0ae71c879f119267630ba28e3c9"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/obqa_train_dev_overlap.json",
+      "local_path": "splits/obqa_train_dev_overlap.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/populations.json",
+      "local_path": "splits/populations.json",
+      "sha256": "d87127b433f5eef3c82adc24d6990f919333df437c6a27f21f4caf78a47351ae"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/inputs/obqa_train_queries.jsonl",
+      "local_path": "inputs/obqa_train_queries.jsonl",
+      "sha256": "56a89982c5fbf8fc08edc322d08a11eaba5ef05ac3b0dfeb662ddb96477ea767"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/inputs/obqa_dev_queries.jsonl",
+      "local_path": "inputs/obqa_dev_queries.jsonl",
+      "sha256": "23c6a8039b63d176a63c820114a20def2ce6a785d8b8cd86a3b510ed68928094"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/inputs/arc_train_queries.jsonl",
+      "local_path": "inputs/arc_train_queries.jsonl",
+      "sha256": "bc039741db9e9932d29632699e91113f881b67aa6aff82c5261de9e8f4dbf928"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/inputs/arc_dev_queries.jsonl",
+      "local_path": "inputs/arc_dev_queries.jsonl",
+      "sha256": "b550cf4db8635d3c3926bc7c90643794f071bb16a8ed10b112d2399a04c4657f"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/summary/panel_cost.csv",
+      "local_path": "evidence/historical_throughput/panel_cost.csv",
+      "sha256": "f8c917c061303e7c9a11321a2fece4704116b92153c6149dfa4e0f43ff28c233"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/summary/probe_timing.csv",
+      "local_path": "evidence/historical_throughput/probe_timing.csv",
+      "sha256": "3ee3ad14d96c96d0bd367b11f85b517884a7dffe604a51546ed3751f7c99d3e6"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/SPLIT_FREEZE.json",
+      "local_path": "evidence/parent_SPLIT_FREEZE.json",
+      "sha256": "df1cb3a2b2327e16acd69085ddb7f2b85bf43e95f10a87a796535300fb9c814a"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/frozen_config.json",
+      "local_path": "evidence/parent_boundary_config.json",
+      "sha256": "e84c015eb04ef92dfc252917e2f1ae3cfb0e86d2e830bf283afbaba0e9073f22"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/frozen_config.json",
+      "local_path": "evidence/parent_native_config.json",
+      "sha256": "4fce806e4b928b8ac1c6fa74bfa59eef67a9ea42c88af2675eb16300bb7d2719"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_10_20260911T122423Z/runtime.py",
+      "local_path": "protocol/native_source/runtime.py",
+      "sha256": "a6888586a8bd5f13c62ccc17079f4bd86e34bfa1ada2d804a4d502dfec726514"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_10_20260911T122423Z/legacy_methods.py",
+      "local_path": "protocol/native_source/legacy_methods.py",
+      "sha256": "91b03c146f56fe151dc399c4202411974afb61c4a195080cf8c54abd584bffdf"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_10_20260911T122423Z/protocol_min.py",
+      "local_path": "protocol/native_source/protocol_min.py",
+      "sha256": "23c702e16ff5b2bb164ab25ef4e35f4105ac81becb83747c138d222faab2cd35"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_10_20260911T122423Z/arc_runtime_adapter.py",
+      "local_path": "protocol/native_source/arc_runtime_adapter.py",
+      "sha256": "c6f6127037ec6e3a75aad6c5ccc78e005c95916fd57b89261684e15206d79f76"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_10_20260911T122423Z/arc_protocol.py",
+      "local_path": "protocol/native_source/arc_protocol.py",
+      "sha256": "b88840e37086c82dc6d485fe6ed3777bd99feb9718a47c901b4d4a5ad74ddbbe"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/src/receiver_prompt.py",
+      "local_path": "protocol/receiver_prompt.py",
+      "sha256": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/src/run_boundaries.py",
+      "local_path": "protocol/parent_run_boundaries.py",
+      "sha256": "1b034b11dc2eef167d78cceb6fe76d18936f64585865092b673a5d03b4adb4d7"
+    },
+    {
+      "source_path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/scoring_v2.py",
+      "local_path": "protocol/scoring_v2.py",
+      "sha256": "d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9"
+    },
+    {
+      "source_path": "$DATA_DIR/c2c_reproduction_assets/official_C2C/README.md",
+      "local_path": "evidence/official_C2C_README.md",
+      "sha256": "66f8129682e4fed2a4e604de003c6f4f5e915378a7ff89656bcebbb94cf6b4d5"
+    }
+  ],
+  "state_read_only": {
+    "path": "$DATA_DIR/P2_1_20260910T041720Z/P2_STATE.md",
+    "sha256": "b7ea18a78eaf4cb2b9526950a75ce6f449d68444aa4133376725bf9ec347c274"
+  },
+  "official_runtime_repo": "https://github.com/thu-nics/C2C",
+  "official_runtime_revision": "113c3a9b2538cbf096a0477e1ec99ae2a2e0d12a",
+  "ARC_test_content_read": false,
+  "prior_artifacts_modified": false
+}

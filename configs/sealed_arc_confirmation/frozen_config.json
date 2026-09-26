@@ -1,0 +1,708 @@
+{
+  "task": "sealed_arc_confirmation",
+  "stage": "sealed_arc_confirmation",
+  "native_root": "<private_path>/native_action_panel",
+  "native": {
+    "models": {
+      "helper": {
+        "repo_id": "Qwen/Qwen2.5-7B-Instruct",
+        "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+        "path": "<private_path>/Qwen2.5-7B-Instruct",
+        "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+        "config": {
+          "vocab_size": 152064,
+          "max_position_embeddings": 32768,
+          "hidden_size": 3584,
+          "intermediate_size": 18944,
+          "num_hidden_layers": 28,
+          "num_attention_heads": 28,
+          "use_sliding_window": false,
+          "sliding_window": 131072,
+          "max_window_layers": 28,
+          "num_key_value_heads": 4,
+          "hidden_act": "silu",
+          "initializer_range": 0.02,
+          "rms_norm_eps": 1e-06,
+          "use_cache": true,
+          "rope_theta": 1000000.0,
+          "rope_scaling": null,
+          "attention_dropout": 0.0,
+          "return_dict": true,
+          "output_hidden_states": false,
+          "output_attentions": false,
+          "torchscript": false,
+          "torch_dtype": "bfloat16",
+          "use_bfloat16": false,
+          "tf_legacy_loss": false,
+          "pruned_heads": {},
+          "tie_word_embeddings": false,
+          "chunk_size_feed_forward": 0,
+          "is_encoder_decoder": false,
+          "is_decoder": false,
+          "cross_attention_hidden_size": null,
+          "add_cross_attention": false,
+          "tie_encoder_decoder": false,
+          "max_length": 20,
+          "min_length": 0,
+          "do_sample": false,
+          "early_stopping": false,
+          "num_beams": 1,
+          "num_beam_groups": 1,
+          "diversity_penalty": 0.0,
+          "temperature": 1.0,
+          "top_k": 50,
+          "top_p": 1.0,
+          "typical_p": 1.0,
+          "repetition_penalty": 1.0,
+          "length_penalty": 1.0,
+          "no_repeat_ngram_size": 0,
+          "encoder_no_repeat_ngram_size": 0,
+          "bad_words_ids": null,
+          "num_return_sequences": 1,
+          "output_scores": false,
+          "return_dict_in_generate": false,
+          "forced_bos_token_id": null,
+          "forced_eos_token_id": null,
+          "remove_invalid_values": false,
+          "exponential_decay_length_penalty": null,
+          "suppress_tokens": null,
+          "begin_suppress_tokens": null,
+          "architectures": [
+            "Qwen2ForCausalLM"
+          ],
+          "finetuning_task": null,
+          "id2label": {
+            "0": "LABEL_0",
+            "1": "LABEL_1"
+          },
+          "label2id": {
+            "LABEL_0": 0,
+            "LABEL_1": 1
+          },
+          "tokenizer_class": null,
+          "prefix": null,
+          "bos_token_id": 151643,
+          "pad_token_id": null,
+          "eos_token_id": 151645,
+          "sep_token_id": null,
+          "decoder_start_token_id": null,
+          "task_specific_params": null,
+          "problem_type": null,
+          "_name_or_path": "<private_path>/Qwen2.5-7B-Instruct",
+          "transformers_version": "4.52.4",
+          "model_type": "qwen2"
+        }
+      },
+      "receiver": {
+        "repo_id": "Qwen/Qwen3-8B",
+        "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+        "path": "<private_path>/b968826d9c46dd6066d109eabc6255188de91218",
+        "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+        "config": {
+          "vocab_size": 151936,
+          "max_position_embeddings": 40960,
+          "hidden_size": 4096,
+          "intermediate_size": 12288,
+          "num_hidden_layers": 36,
+          "num_attention_heads": 32,
+          "use_sliding_window": false,
+          "sliding_window": null,
+          "max_window_layers": 36,
+          "num_key_value_heads": 8,
+          "head_dim": 128,
+          "hidden_act": "silu",
+          "initializer_range": 0.02,
+          "rms_norm_eps": 1e-06,
+          "use_cache": true,
+          "rope_theta": 1000000,
+          "rope_scaling": null,
+          "attention_bias": false,
+          "attention_dropout": 0.0,
+          "return_dict": true,
+          "output_hidden_states": false,
+          "output_attentions": false,
+          "torchscript": false,
+          "torch_dtype": "bfloat16",
+          "use_bfloat16": false,
+          "tf_legacy_loss": false,
+          "pruned_heads": {},
+          "tie_word_embeddings": false,
+          "chunk_size_feed_forward": 0,
+          "is_encoder_decoder": false,
+          "is_decoder": false,
+          "cross_attention_hidden_size": null,
+          "add_cross_attention": false,
+          "tie_encoder_decoder": false,
+          "max_length": 20,
+          "min_length": 0,
+          "do_sample": false,
+          "early_stopping": false,
+          "num_beams": 1,
+          "num_beam_groups": 1,
+          "diversity_penalty": 0.0,
+          "temperature": 1.0,
+          "top_k": 50,
+          "top_p": 1.0,
+          "typical_p": 1.0,
+          "repetition_penalty": 1.0,
+          "length_penalty": 1.0,
+          "no_repeat_ngram_size": 0,
+          "encoder_no_repeat_ngram_size": 0,
+          "bad_words_ids": null,
+          "num_return_sequences": 1,
+          "output_scores": false,
+          "return_dict_in_generate": false,
+          "forced_bos_token_id": null,
+          "forced_eos_token_id": null,
+          "remove_invalid_values": false,
+          "exponential_decay_length_penalty": null,
+          "suppress_tokens": null,
+          "begin_suppress_tokens": null,
+          "architectures": [
+            "Qwen3ForCausalLM"
+          ],
+          "finetuning_task": null,
+          "id2label": {
+            "0": "LABEL_0",
+            "1": "LABEL_1"
+          },
+          "label2id": {
+            "LABEL_0": 0,
+            "LABEL_1": 1
+          },
+          "tokenizer_class": null,
+          "prefix": null,
+          "bos_token_id": 151643,
+          "pad_token_id": null,
+          "eos_token_id": 151645,
+          "sep_token_id": null,
+          "decoder_start_token_id": null,
+          "task_specific_params": null,
+          "problem_type": null,
+          "_name_or_path": "<private_path>/b968826d9c46dd6066d109eabc6255188de91218",
+          "transformers_version": "4.52.4",
+          "model_type": "qwen3"
+        }
+      }
+    },
+    "fuser": {
+      "repo_id": "nics-efc/C2C_Fuser",
+      "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d",
+      "path": "<private_path>/final",
+      "projector_config": {
+        "0": {
+          "1": {
+            "0": [
+              [
+                0,
+                0
+              ]
+            ],
+            "1": [
+              [
+                0,
+                1
+              ]
+            ],
+            "2": [
+              [
+                0,
+                2
+              ]
+            ],
+            "3": [
+              [
+                0,
+                3
+              ]
+            ],
+            "4": [
+              [
+                0,
+                4
+              ]
+            ],
+            "5": [
+              [
+                0,
+                5
+              ]
+            ],
+            "6": [
+              [
+                0,
+                6
+              ]
+            ],
+            "7": [
+              [
+                0,
+                7
+              ]
+            ],
+            "8": [
+              [
+                0,
+                8
+              ]
+            ],
+            "9": [
+              [
+                1,
+                9
+              ]
+            ],
+            "10": [
+              [
+                2,
+                10
+              ]
+            ],
+            "11": [
+              [
+                3,
+                11
+              ]
+            ],
+            "12": [
+              [
+                4,
+                12
+              ]
+            ],
+            "13": [
+              [
+                5,
+                13
+              ]
+            ],
+            "14": [
+              [
+                6,
+                14
+              ]
+            ],
+            "15": [
+              [
+                7,
+                15
+              ]
+            ],
+            "16": [
+              [
+                8,
+                16
+              ]
+            ],
+            "17": [
+              [
+                9,
+                17
+              ]
+            ],
+            "18": [
+              [
+                10,
+                18
+              ]
+            ],
+            "19": [
+              [
+                11,
+                19
+              ]
+            ],
+            "20": [
+              [
+                12,
+                20
+              ]
+            ],
+            "21": [
+              [
+                13,
+                21
+              ]
+            ],
+            "22": [
+              [
+                14,
+                22
+              ]
+            ],
+            "23": [
+              [
+                15,
+                23
+              ]
+            ],
+            "24": [
+              [
+                16,
+                24
+              ]
+            ],
+            "25": [
+              [
+                17,
+                25
+              ]
+            ],
+            "26": [
+              [
+                18,
+                26
+              ]
+            ],
+            "27": [
+              [
+                19,
+                27
+              ]
+            ],
+            "28": [
+              [
+                20,
+                28
+              ]
+            ],
+            "29": [
+              [
+                21,
+                29
+              ]
+            ],
+            "30": [
+              [
+                22,
+                30
+              ]
+            ],
+            "31": [
+              [
+                23,
+                31
+              ]
+            ],
+            "32": [
+              [
+                24,
+                32
+              ]
+            ],
+            "33": [
+              [
+                25,
+                33
+              ]
+            ],
+            "34": [
+              [
+                26,
+                34
+              ]
+            ],
+            "35": [
+              [
+                27,
+                35
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "receiver_generation_config": {
+      "max_length": 20,
+      "max_new_tokens": 64,
+      "min_length": 0,
+      "min_new_tokens": null,
+      "early_stopping": false,
+      "max_time": null,
+      "stop_strings": null,
+      "do_sample": false,
+      "num_beams": 1,
+      "num_beam_groups": 1,
+      "penalty_alpha": null,
+      "dola_layers": null,
+      "use_cache": true,
+      "cache_implementation": null,
+      "cache_config": null,
+      "return_legacy_cache": null,
+      "prefill_chunk_size": null,
+      "temperature": null,
+      "top_k": null,
+      "top_p": null,
+      "min_p": null,
+      "typical_p": 1.0,
+      "epsilon_cutoff": 0.0,
+      "eta_cutoff": 0.0,
+      "diversity_penalty": 0.0,
+      "repetition_penalty": null,
+      "encoder_repetition_penalty": 1.0,
+      "length_penalty": 1.0,
+      "no_repeat_ngram_size": 0,
+      "bad_words_ids": null,
+      "force_words_ids": null,
+      "renormalize_logits": false,
+      "constraints": null,
+      "forced_bos_token_id": null,
+      "forced_eos_token_id": null,
+      "remove_invalid_values": false,
+      "exponential_decay_length_penalty": null,
+      "suppress_tokens": null,
+      "begin_suppress_tokens": null,
+      "forced_decoder_ids": null,
+      "sequence_bias": null,
+      "token_healing": false,
+      "guidance_scale": null,
+      "low_memory": null,
+      "watermarking_config": null,
+      "num_return_sequences": 1,
+      "output_attentions": false,
+      "output_hidden_states": false,
+      "output_scores": false,
+      "output_logits": null,
+      "return_dict_in_generate": false,
+      "pad_token_id": 151643,
+      "bos_token_id": 151643,
+      "eos_token_id": [
+        151645,
+        151643
+      ],
+      "encoder_no_repeat_ngram_size": 0,
+      "decoder_start_token_id": null,
+      "is_assistant": false,
+      "num_assistant_tokens": 20,
+      "num_assistant_tokens_schedule": "constant",
+      "assistant_confidence_threshold": 0.4,
+      "prompt_lookup_num_tokens": null,
+      "max_matching_ngram_size": null,
+      "assistant_early_exit": null,
+      "assistant_lookbehind": 10,
+      "target_lookbehind": 10,
+      "disable_compile": false,
+      "generation_kwargs": {},
+      "_from_model_config": false,
+      "transformers_version": "4.52.4"
+    },
+    "dtype": "bfloat16",
+    "attention": "sdpa",
+    "tf32": false,
+    "thinking": false,
+    "generation_seed": 0,
+    "helper_text_max_new_tokens": 256,
+    "receiver_max_new_tokens": 64,
+    "R_T_C_calls": "stage runtime.Runner.request using same native bundles and arc_runtime_adapter formatting",
+    "C_helper_tokenizer": "receiver tokenizer, exactly as stage"
+  },
+  "parser_path": "<private_path>/scoring_v2.py",
+  "parser_sha256": "d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9",
+  "prefix": "The correct answer is",
+  "thresholds": {
+    "T": {
+      "q": 0.95,
+      "threshold": 0.01800704002380371,
+      "source": "<private_path>/large_arc_T.json",
+      "source_sha256": "30028f08c5423f324ec9762e9a91d2228bcbd0ad4decd2ea067a3c2f615a865c"
+    },
+    "C": {
+      "q": 0.9,
+      "threshold": 0.0007095932960510254,
+      "source": "<private_path>/large_arc_C.json",
+      "source_sha256": "a3391054c494b06edab5e67df330283ea611f34db5cdf2c14953c593221a18b5"
+    }
+  },
+  "score": {
+    "name": "ProbeMax",
+    "definition": "For each displayed label l: a_l=logsumexp(FP32 last-position logits at frozen token set S_l); p=exp(log_softmax(stack(a_l))); u=float((1-p.max()).item()).",
+    "arithmetic": "FP32 label logsumexp, log_softmax, exp, 1-p.max; BF16 backbone and LM-head; all logits projected only at last valid position",
+    "comparison": "u <= frozen threshold; all ties retained; no test quantile",
+    "probability_meaning": "conditional distribution on union of label token sets, not calibrated correctness",
+    "code_sha256": "4709d439ec57f5e64dc79ba85f1295f73d1b08b29da2588c830b1e2daa22aab7"
+  },
+  "population": {
+    "dataset": "allenai/ai2_arc",
+    "config": "ARC-Challenge",
+    "revision": "210d026faf9955653af8916fad021475a3f00453",
+    "file": "ARC-Challenge/test-00000-of-00001.parquet",
+    "expected_sha256": "62f03257e737aed263f55c6abf87c7bb0028a44a6bdd2a26eb1279eb42c1d1e9",
+    "expected_bytes": 203808,
+    "N": 1172,
+    "local_file": "<private_path>/test-00000-of-00001.parquet",
+    "order": "original physical parquet row order, ordinal 0..1171; never sorted for execution",
+    "expected_schema": {
+      "id": "string",
+      "question": "string",
+      "choices": {
+        "label": "list[string]",
+        "text": "list[string]"
+      },
+      "answerKey": "string (not projected until prediction freeze)"
+    },
+    "loader": "src/access_test.py: pyarrow.parquet.read_table(columns=[id, question, choices], use_threads=False); no answerKey projection",
+    "schema_validation": "after FIRST_TEST_ACCESS.json; mechanical repairs only; semantic change BLOCKED; no row exclusions"
+  },
+  "group_rule": {
+    "source": "<private_path>/common.py",
+    "function": "signature",
+    "normalization": "case-sensitive whitespace collapse of Question: stem + Choices: + ordered displayed-label: choice-text; no lowercase, fuzzy, gold or output inputs",
+    "representative": "lexicographic minimum original string ID in each signature group",
+    "primary_order": "representatives retained in original physical row order",
+    "all_raw_rows_retained": true,
+    "raw_row_statistics": "all accuracy/latency/utility also reported on all 1172 rows; primary uses representatives consistently"
+  },
+  "gold_isolation": {
+    "pre_prediction_columns": [
+      "id",
+      "question",
+      "choices"
+    ],
+    "post_prediction_columns": [
+      "id",
+      "answerKey"
+    ],
+    "freeze_required": "PREDICTION_TIMING_FREEZE.json, including every raw/parsed action, probe, route and timing",
+    "opaque_bytes": "download and SHA256 verification do not decode or associate the gold column; content access timestamp precedes first projected read",
+    "gold_mapping": "original choice labels mapped in original order to A..Z, exactly stage; unmapped or ambiguous key is BLOCKED; no population edits"
+  },
+  "invalid": {
+    "machine_answer": "single sentinel INVALID; both invalid = unchanged; exactly one invalid = changed; distinct valid labels = changed",
+    "accuracy": "INVALID always incorrect; runtime failure is not INVALID and stops execution"
+  },
+  "risk_target": 0.05,
+  "primary_metrics": [
+    "test_N",
+    "independent_group_N",
+    "omission_coverage",
+    "changed_among_routed/routed",
+    "conditional_answer_change",
+    "marginal_omission_answer_change",
+    "total_policy_reference_answer_change",
+    "reference_correct_accuracy",
+    "policy_correct_accuracy",
+    "paired_accuracy_difference",
+    "benefit_harm_neutral",
+    "policy_mean_median_E2E_ms",
+    "reference_mean_median_E2E_ms",
+    "paired_mean_saving_ms",
+    "paired_saving_95_interval",
+    "online_probe_selector_overhead_ms",
+    "same_population_utility"
+  ],
+  "metric_definitions": {
+    "marginal_omission_answer_change": "count(route_R and policy_answer != reference_answer)/N",
+    "total_policy_reference_answer_change": "count(policy_answer != reference_answer)/N, reports reference-route identity failures separately",
+    "benefit": "policy correct, reference incorrect",
+    "harm": "policy incorrect, reference correct",
+    "neutral": "equal correctness, subdivided both correct, both incorrect",
+    "saving": "fixed_reference_E2E_ms - policy_E2E_ms",
+    "utility": "correct - lambda * latency_ms / frozen_c_ref"
+  },
+  "bootstrap": {
+    "seed": 0,
+    "replicates": 2000,
+    "unit": "independent representative question group, paired paths",
+    "generator": "numpy.random.default_rng(0).integers(0,G,size=(2000,G))",
+    "shared_indices": "Text and C2C",
+    "interval": "percentile [.025,.975], numpy default linear quantile; descriptive",
+    "metrics": [
+      "net_saving_ms",
+      "accuracy_diff",
+      "delta_U",
+      "coverage",
+      "marginal_answer_change",
+      "conditional_answer_change"
+    ],
+    "zero_routed_resample": "conditional risk undefined/null; count disclosed"
+  },
+  "binomial_interval": {
+    "method": "two-sided Clopper-Pearson 95% descriptive, scipy.stats.beta.ppf",
+    "lower": "0 if k=0 else beta.ppf(.025,k,n-k+1)",
+    "upper": "1 if k=n else beta.ppf(.975,k+1,n-k)",
+    "zero_routed": "undefined, cannot conclude preservation"
+  },
+  "interpretation": {
+    "preservation": "report exact changed/routed and whether empirical rate <=.05; if >.05 report excess, never retune or use interval as calibration",
+    "economic": "report whether paired mean saving >0 and whether descriptive interval is above/across/below zero independently",
+    "no_joint_gate": true,
+    "accuracy_not_selection": true,
+    "scope": "two frozen large/ARC policies, one sealed project population and one timing environment; no causal scale or algorithm novelty; public benchmark training contamination unknown"
+  },
+  "order": {
+    "tasks": [
+      "arc"
+    ],
+    "paths": [
+      "policy_T",
+      "reference_T",
+      "policy_C",
+      "reference_C"
+    ],
+    "rotation": "left rotation by original question ordinal modulo 4, reset ordinal=0 for test"
+  },
+  "timing": "outer synchronized wall: query fields, tokenization/prefix/transfer/backbone/last projection/FP32 score, selector, complete native action, decode, V2 parse, hook cleanup; I/O/diagnostics/gold excluded; startup separate",
+  "topology": {
+    "GPU_count": 2,
+    "helper": "cuda:0",
+    "receiver_fuser": "cuda:1",
+    "single_node": true,
+    "one_residency": true
+  },
+  "lambda": 0.01,
+  "c_ref": {
+    "arc": 266.9407253203125
+  },
+  "runtime_constraints": {
+    "native_adapter": "byte-identical to completed E2E replay",
+    "batch_size": 1,
+    "warmup": 0,
+    "retries": 0,
+    "probe_KV_reuse": false,
+    "probe_argmax_as_answer": false,
+    "model_residencies": 1,
+    "first_cold_retained": true,
+    "diagnostics_and_audit_IO": "outside authoritative timer as before"
+  },
+  "counts": {
+    "complete_action_attempt_cap": 4688,
+    "online_policy_probe_cap": 2344,
+    "fixed_T": 1172,
+    "policy_T": 1172,
+    "fixed_C": 1172,
+    "policy_C": 1172,
+    "extra_fixed_R": 0
+  },
+  "resources": {
+    "account": "<allocation>",
+    "queue": "REDACTED",
+    "select": 2,
+    "GPU_count": 2,
+    "wall_seconds": 7200,
+    "walltime": "02:00:00",
+    "requested_GPU_allocation_hours": 4,
+    "user_GPU_allocation_hour_cap": 5,
+    "CPU_cap_seconds": 9000,
+    "preparation_reporting_reserve": 1200,
+    "threads": 1,
+    "max_submissions": 1,
+    "python": "<private_path>/python",
+    "throughput_estimate_seconds": 2617.910288937579,
+    "throughput_evidence": "<private_path>/e2e_summary.csv",
+    "estimate_note": "1172 times sum of four prior ARC path means, excluding startup; under 2h so no extension",
+    "stop_margin_seconds": 90,
+    "output_destination": "<private_path>/sealed_arc_confirmation",
+    "run_destination": "<private_path>/project<PBS_JOBID>_sealed_arc",
+    "temporary_destination": "<private_path>/tmp<PBS_JOBID>"
+  },
+  "failure_rule": "single submission, no retries/resume/replay successful IDs; runtime failure PARTIAL, semantic protocol change BLOCKED, preserve hashes and completed keys; return Work",
+  "method_search": "CLOSED permanently for this task; no method/reference/q/threshold/risk/prompt/parser selection; small and OBQA not executed",
+  "D": "learned control",
+  "ProbeMax": "ordinary fixed-format confidence baseline",
+  "manuscript": {
+    "active_directory": "<private_path>/paper",
+    "snapshot": "evidence/manuscript_snapshot",
+    "editing": "edit current active English source in place after results; task paper symlink points to same source, no parallel manuscript"
+  },
+  "ARC_TEST_ACCESSED": false
+}

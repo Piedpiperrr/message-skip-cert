@@ -1,0 +1,13 @@
+reference,metric,CI95_low,CI95_high,seed,replicates,undefined_replicates,groups,indices_sha256,interpretation
+T,net_saving_ms,669.6143680759515,700.8016402741581,0,2000,0,1172,3351a9c4c58d3cf726b026fff3fd33249d41818e1c1ee6a4efb7e5578837f936,paired descriptive percentile interval; not calibration
+T,accuracy_diff,-0.011945392491467578,0.002559726962457338,0,2000,0,1172,3351a9c4c58d3cf726b026fff3fd33249d41818e1c1ee6a4efb7e5578837f936,paired descriptive percentile interval; not calibration
+T,delta_U,0.013927247349442094,0.028552573277699913,0,2000,0,1172,3351a9c4c58d3cf726b026fff3fd33249d41818e1c1ee6a4efb7e5578837f936,paired descriptive percentile interval; not calibration
+T,coverage,0.924061433447099,0.951386518771331,0,2000,0,1172,3351a9c4c58d3cf726b026fff3fd33249d41818e1c1ee6a4efb7e5578837f936,paired descriptive percentile interval; not calibration
+T,marginal_answer_change,0.00938566552901024,0.024744027303754267,0,2000,0,1172,3351a9c4c58d3cf726b026fff3fd33249d41818e1c1ee6a4efb7e5578837f936,paired descriptive percentile interval; not calibration
+T,conditional_answer_change,0.010073029669324272,0.026679546998598872,0,2000,0,1172,3351a9c4c58d3cf726b026fff3fd33249d41818e1c1ee6a4efb7e5578837f936,paired descriptive percentile interval; not calibration
+C,net_saving_ms,80.98003717553372,100.9846724776852,0,2000,0,1172,3351a9c4c58d3cf726b026fff3fd33249d41818e1c1ee6a4efb7e5578837f936,paired descriptive percentile interval; not calibration
+C,accuracy_diff,-0.0017064846416382253,0.008532423208191127,0,2000,0,1172,3351a9c4c58d3cf726b026fff3fd33249d41818e1c1ee6a4efb7e5578837f936,paired descriptive percentile interval; not calibration
+C,delta_U,0.0016339935609715412,0.012040978667165296,0,2000,0,1172,3351a9c4c58d3cf726b026fff3fd33249d41818e1c1ee6a4efb7e5578837f936,paired descriptive percentile interval; not calibration
+C,coverage,0.8754266211604096,0.9104095563139932,0,2000,0,1172,3351a9c4c58d3cf726b026fff3fd33249d41818e1c1ee6a4efb7e5578837f936,paired descriptive percentile interval; not calibration
+C,marginal_answer_change,0.004266211604095563,0.015358361774744027,0,2000,0,1172,3351a9c4c58d3cf726b026fff3fd33249d41818e1c1ee6a4efb7e5578837f936,paired descriptive percentile interval; not calibration
+C,conditional_answer_change,0.004739224292689933,0.01724220663180885,0,2000,0,1172,3351a9c4c58d3cf726b026fff3fd33249d41818e1c1ee6a4efb7e5578837f936,paired descriptive percentile interval; not calibration

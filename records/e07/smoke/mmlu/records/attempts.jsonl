@@ -1,0 +1,64 @@
+{"event": "START", "utc": "2026-09-19T23:31:13.158598+00:00", "key": "mmlu_pro|T|test:3074|fixed", "attempt": 1, "arm": "fixed", "panel_ordinal": 0, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:15.234080+00:00", "key": "mmlu_pro|T|test:3074|fixed", "attempt": 1}
+{"event": "START", "utc": "2026-09-19T23:31:15.238251+00:00", "key": "mmlu_pro|T|test:3074|original", "attempt": 2, "arm": "original", "panel_ordinal": 0, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:16.551907+00:00", "key": "mmlu_pro|T|test:3074|original", "attempt": 2}
+{"event": "START", "utc": "2026-09-19T23:31:16.556400+00:00", "key": "mmlu_pro|T|test:3074|reuse", "attempt": 3, "arm": "reuse", "panel_ordinal": 0, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:17.828751+00:00", "key": "mmlu_pro|T|test:3074|reuse", "attempt": 3}
+{"event": "START", "utc": "2026-09-19T23:31:17.833056+00:00", "key": "mmlu_pro|T|test:3074|argmax", "attempt": 4, "arm": "argmax", "panel_ordinal": 0, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:19.098760+00:00", "key": "mmlu_pro|T|test:3074|argmax", "attempt": 4}
+{"event": "START", "utc": "2026-09-19T23:31:19.120388+00:00", "key": "mmlu_pro|T|test:3502|original", "attempt": 5, "arm": "original", "panel_ordinal": 1, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:19.387207+00:00", "key": "mmlu_pro|T|test:3502|original", "attempt": 5}
+{"event": "START", "utc": "2026-09-19T23:31:19.391435+00:00", "key": "mmlu_pro|T|test:3502|reuse", "attempt": 6, "arm": "reuse", "panel_ordinal": 1, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:19.640908+00:00", "key": "mmlu_pro|T|test:3502|reuse", "attempt": 6}
+{"event": "START", "utc": "2026-09-19T23:31:19.644839+00:00", "key": "mmlu_pro|T|test:3502|argmax", "attempt": 7, "arm": "argmax", "panel_ordinal": 1, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:19.720418+00:00", "key": "mmlu_pro|T|test:3502|argmax", "attempt": 7}
+{"event": "START", "utc": "2026-09-19T23:31:19.723263+00:00", "key": "mmlu_pro|T|test:3502|fixed", "attempt": 8, "arm": "fixed", "panel_ordinal": 1, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:20.581453+00:00", "key": "mmlu_pro|T|test:3502|fixed", "attempt": 8}
+{"event": "START", "utc": "2026-09-19T23:31:20.587611+00:00", "key": "mmlu_pro|T|test:3459|reuse", "attempt": 9, "arm": "reuse", "panel_ordinal": 2, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:20.844766+00:00", "key": "mmlu_pro|T|test:3459|reuse", "attempt": 9}
+{"event": "START", "utc": "2026-09-19T23:31:20.847933+00:00", "key": "mmlu_pro|T|test:3459|argmax", "attempt": 10, "arm": "argmax", "panel_ordinal": 2, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:20.905250+00:00", "key": "mmlu_pro|T|test:3459|argmax", "attempt": 10}
+{"event": "START", "utc": "2026-09-19T23:31:20.908294+00:00", "key": "mmlu_pro|T|test:3459|fixed", "attempt": 11, "arm": "fixed", "panel_ordinal": 2, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:22.233874+00:00", "key": "mmlu_pro|T|test:3459|fixed", "attempt": 11}
+{"event": "START", "utc": "2026-09-19T23:31:22.236921+00:00", "key": "mmlu_pro|T|test:3459|original", "attempt": 12, "arm": "original", "panel_ordinal": 2, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:22.511024+00:00", "key": "mmlu_pro|T|test:3459|original", "attempt": 12}
+{"event": "START", "utc": "2026-09-19T23:31:22.514759+00:00", "key": "mmlu_pro|T|test:2955|argmax", "attempt": 13, "arm": "argmax", "panel_ordinal": 3, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:22.565498+00:00", "key": "mmlu_pro|T|test:2955|argmax", "attempt": 13}
+{"event": "START", "utc": "2026-09-19T23:31:22.568179+00:00", "key": "mmlu_pro|T|test:2955|fixed", "attempt": 14, "arm": "fixed", "panel_ordinal": 3, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:23.592088+00:00", "key": "mmlu_pro|T|test:2955|fixed", "attempt": 14}
+{"event": "START", "utc": "2026-09-19T23:31:23.596229+00:00", "key": "mmlu_pro|T|test:2955|original", "attempt": 15, "arm": "original", "panel_ordinal": 3, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:23.891831+00:00", "key": "mmlu_pro|T|test:2955|original", "attempt": 15}
+{"event": "START", "utc": "2026-09-19T23:31:23.894948+00:00", "key": "mmlu_pro|T|test:2955|reuse", "attempt": 16, "arm": "reuse", "panel_ordinal": 3, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:24.143377+00:00", "key": "mmlu_pro|T|test:2955|reuse", "attempt": 16}
+{"event": "START", "utc": "2026-09-19T23:31:24.149016+00:00", "key": "mmlu_pro|C|test:3074|fixed", "attempt": 17, "arm": "fixed", "panel_ordinal": 0, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:24.951255+00:00", "key": "mmlu_pro|C|test:3074|fixed", "attempt": 17}
+{"event": "START", "utc": "2026-09-19T23:31:24.955570+00:00", "key": "mmlu_pro|C|test:3074|original", "attempt": 18, "arm": "original", "panel_ordinal": 0, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:25.760629+00:00", "key": "mmlu_pro|C|test:3074|original", "attempt": 18}
+{"event": "START", "utc": "2026-09-19T23:31:25.788934+00:00", "key": "mmlu_pro|C|test:3074|reuse", "attempt": 19, "arm": "reuse", "panel_ordinal": 0, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:26.612072+00:00", "key": "mmlu_pro|C|test:3074|reuse", "attempt": 19}
+{"event": "START", "utc": "2026-09-19T23:31:26.615081+00:00", "key": "mmlu_pro|C|test:3074|argmax", "attempt": 20, "arm": "argmax", "panel_ordinal": 0, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:27.428574+00:00", "key": "mmlu_pro|C|test:3074|argmax", "attempt": 20}
+{"event": "START", "utc": "2026-09-19T23:31:27.431742+00:00", "key": "mmlu_pro|C|test:3502|original", "attempt": 21, "arm": "original", "panel_ordinal": 1, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:27.697245+00:00", "key": "mmlu_pro|C|test:3502|original", "attempt": 21}
+{"event": "START", "utc": "2026-09-19T23:31:27.700279+00:00", "key": "mmlu_pro|C|test:3502|reuse", "attempt": 22, "arm": "reuse", "panel_ordinal": 1, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:27.951082+00:00", "key": "mmlu_pro|C|test:3502|reuse", "attempt": 22}
+{"event": "START", "utc": "2026-09-19T23:31:27.954386+00:00", "key": "mmlu_pro|C|test:3502|argmax", "attempt": 23, "arm": "argmax", "panel_ordinal": 1, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:28.006132+00:00", "key": "mmlu_pro|C|test:3502|argmax", "attempt": 23}
+{"event": "START", "utc": "2026-09-19T23:31:28.009106+00:00", "key": "mmlu_pro|C|test:3502|fixed", "attempt": 24, "arm": "fixed", "panel_ordinal": 1, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:28.991502+00:00", "key": "mmlu_pro|C|test:3502|fixed", "attempt": 24}
+{"event": "START", "utc": "2026-09-19T23:31:28.996037+00:00", "key": "mmlu_pro|C|test:3459|reuse", "attempt": 25, "arm": "reuse", "panel_ordinal": 2, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:29.255091+00:00", "key": "mmlu_pro|C|test:3459|reuse", "attempt": 25}
+{"event": "START", "utc": "2026-09-19T23:31:29.258311+00:00", "key": "mmlu_pro|C|test:3459|argmax", "attempt": 26, "arm": "argmax", "panel_ordinal": 2, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:29.315616+00:00", "key": "mmlu_pro|C|test:3459|argmax", "attempt": 26}
+{"event": "START", "utc": "2026-09-19T23:31:29.318858+00:00", "key": "mmlu_pro|C|test:3459|fixed", "attempt": 27, "arm": "fixed", "panel_ordinal": 2, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:29.556355+00:00", "key": "mmlu_pro|C|test:3459|fixed", "attempt": 27}
+{"event": "START", "utc": "2026-09-19T23:31:29.559570+00:00", "key": "mmlu_pro|C|test:3459|original", "attempt": 28, "arm": "original", "panel_ordinal": 2, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:29.833961+00:00", "key": "mmlu_pro|C|test:3459|original", "attempt": 28}
+{"event": "START", "utc": "2026-09-19T23:31:29.837320+00:00", "key": "mmlu_pro|C|test:2955|argmax", "attempt": 29, "arm": "argmax", "panel_ordinal": 3, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:29.887491+00:00", "key": "mmlu_pro|C|test:2955|argmax", "attempt": 29}
+{"event": "START", "utc": "2026-09-19T23:31:29.890404+00:00", "key": "mmlu_pro|C|test:2955|fixed", "attempt": 30, "arm": "fixed", "panel_ordinal": 3, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:31.100892+00:00", "key": "mmlu_pro|C|test:2955|fixed", "attempt": 30}
+{"event": "START", "utc": "2026-09-19T23:31:31.106360+00:00", "key": "mmlu_pro|C|test:2955|original", "attempt": 31, "arm": "original", "panel_ordinal": 3, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:31.366810+00:00", "key": "mmlu_pro|C|test:2955|original", "attempt": 31}
+{"event": "START", "utc": "2026-09-19T23:31:31.370234+00:00", "key": "mmlu_pro|C|test:2955|reuse", "attempt": 32, "arm": "reuse", "panel_ordinal": 3, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:31:31.619087+00:00", "key": "mmlu_pro|C|test:2955|reuse", "attempt": 32}

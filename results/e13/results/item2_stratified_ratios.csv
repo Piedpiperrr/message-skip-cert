@@ -1,0 +1,9 @@
+population,N,H_real_best_fixed,gain_real_over_R,H_null_mean,H_null_p2_5,H_null_p97_5,ratio_best_fixed,gain_null_mean,gain_null_p2_5,gain_null_p97_5,ratio_gain_over_R,mean_correct_N1,mean_correct_N2,mean_best_fixed_null_minus_R,under_matched_strata,lower_bound_flag,draws,label
+small/OBQA,742,132,213,103.855,96.0,113.0,0.787,155.380,146.0,165.0,0.729,319.136,336.513,51.525,none,no,1000,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+small/ARC,299,49,94,35.545,30.0,41.0,0.725,70.919,65.0,77.0,0.754,117.307,145.374,35.374,none,no,1000,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+medium/OBQA,742,70,103,69.738,65.0,75.0,0.996,96.661,92.0,101.0,0.938,516.923,492.426,26.923,R_incorrect,yes,1000,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+medium/ARC,299,27,31,25.357,23.0,28.0,0.939,26.315,24.0,28.0,0.849,217.669,209.519,0.958,R_correct,yes,1000,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+large/OBQA,742,25,53,27.099,24.0,30.0,1.084,46.456,43.0,51.0,0.877,636.357,599.344,19.357,none,no,1000,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+large/ARC,299,6,12,5.802,5.0,6.0,0.967,9.000,9.0,9.0,0.750,271.198,265.582,3.198,R_incorrect,yes,1000,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+large/MMLU-Pro,2641,239,276,244.394,231.0,258.0,1.023,263.925,254.0,274.0,0.956,1301.516,1267.642,19.531,none,no,1000,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+MEDIAN of 7,,,,,,,0.967,,,,0.849,,,,,,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision

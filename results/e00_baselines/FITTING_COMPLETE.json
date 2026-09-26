@@ -1,0 +1,6 @@
+{
+  "status": "FITTING_AND_PREDICTIONS_COMPLETE_ANALYSIS_PENDING",
+  "baseline_C_heads": 8,
+  "OOF_heads": 280,
+  "note": "Model/prediction generation only. Scientific metric tables and report still required; do not declare task complete."
+}

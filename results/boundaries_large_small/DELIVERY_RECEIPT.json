@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-14T17:22:43.100471+00:00",
+  "archive": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z_WORK_LIGHT.tar.gz",
+  "bytes": 17858367,
+  "sha256": "f96be7dbabea6d0d65d7be77946cea4e1e639a0251748e477b8d53968c79f112",
+  "file_count": 234,
+  "status": "COMPLETE",
+  "all_disk_and_archive_members_match_SHA256SUMS": true,
+  "excluded_runtime_stdout": "evidence/finalize_stdout.json",
+  "no_weights_or_full_vocab_logits": true
+}

@@ -1,0 +1,118 @@
+{
+  "utc": "2026-09-19T20:16:50.852510+00:00",
+  "verdict": "PASS",
+  "rows": [
+    {
+      "dataset": "obqa",
+      "id": "14-1371",
+      "runtime_ok": true,
+      "T_raw_equal": true,
+      "T_input_tokens_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-97",
+      "runtime_ok": true,
+      "T_raw_equal": true,
+      "T_input_tokens_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "11-514",
+      "runtime_ok": true,
+      "T_raw_equal": true,
+      "T_input_tokens_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-1178",
+      "runtime_ok": true,
+      "T_raw_equal": true,
+      "T_input_tokens_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-655",
+      "runtime_ok": true,
+      "T_raw_equal": true,
+      "T_input_tokens_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "1000",
+      "runtime_ok": true,
+      "T_raw_equal": true,
+      "T_input_tokens_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-356",
+      "runtime_ok": true,
+      "T_raw_equal": true,
+      "T_input_tokens_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-743",
+      "runtime_ok": true,
+      "T_raw_equal": true,
+      "T_input_tokens_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7181965",
+      "runtime_ok": true,
+      "T_raw_equal": true,
+      "T_input_tokens_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7009923",
+      "runtime_ok": true,
+      "T_raw_equal": true,
+      "T_input_tokens_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7230195",
+      "runtime_ok": true,
+      "T_raw_equal": true,
+      "T_input_tokens_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "NYSEDREGENTS_2016_4_13",
+      "runtime_ok": true,
+      "T_raw_equal": true,
+      "T_input_tokens_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7133368",
+      "runtime_ok": true,
+      "T_raw_equal": true,
+      "T_input_tokens_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7228288",
+      "runtime_ok": true,
+      "T_raw_equal": true,
+      "T_input_tokens_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_184293",
+      "runtime_ok": true,
+      "T_raw_equal": true,
+      "T_input_tokens_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_SC_407691",
+      "runtime_ok": true,
+      "T_raw_equal": true,
+      "T_input_tokens_equal": true
+    }
+  ]
+}

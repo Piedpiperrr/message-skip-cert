@@ -1,0 +1,7 @@
+pair,action,n_compared,parsed_answer_agreement,raw_output_exact_match,rendered_prompts_byte_identical_first3,prompt_detail,parsed_disagreement_ids
+small,Receiver-only,500,500,500,True,q0: text=True ids=True; q1: text=True ids=True; q2: text=True ids=True,
+small,C2C,500,500,500,True,q0: text=True ids=True; q1: text=True ids=True; q2: text=True ids=True,
+medium,Receiver-only,500,500,500,True,q0: text=True ids=True; q1: text=True ids=True; q2: text=True ids=True,
+medium,C2C,500,500,500,True,q0: text=True ids=True; q1: text=True ids=True; q2: text=True ids=True,
+large,Receiver-only,500,500,500,True,q0: text=True ids=True; q1: text=True ids=True; q2: text=True ids=True,
+large,C2C,500,500,500,True,q0: text=True ids=True; q1: text=True ids=True; q2: text=True ids=True,

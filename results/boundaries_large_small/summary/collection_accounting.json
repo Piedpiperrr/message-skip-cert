@@ -1,0 +1,132 @@
+{
+  "independent_flows": [
+    {
+      "pair": "large",
+      "dataset": "obqa",
+      "reference": "T",
+      "N_fit_representatives": 2100,
+      "N_cal_representatives": 1366,
+      "independent_machine_protocol_requests": 2732,
+      "offline_probe_rows": 3466,
+      "gold_for_thresholds": 0,
+      "actual_new_protocol_requests": 0
+    },
+    {
+      "pair": "large",
+      "dataset": "obqa",
+      "reference": "C",
+      "N_fit_representatives": 2100,
+      "N_cal_representatives": 1366,
+      "independent_machine_protocol_requests": 2732,
+      "offline_probe_rows": 3466,
+      "gold_for_thresholds": 0,
+      "actual_new_protocol_requests": 0
+    },
+    {
+      "pair": "large",
+      "dataset": "arc",
+      "reference": "T",
+      "N_fit_representatives": 670,
+      "N_cal_representatives": 448,
+      "independent_machine_protocol_requests": 896,
+      "offline_probe_rows": 1119,
+      "gold_for_thresholds": 0,
+      "actual_new_protocol_requests": 0
+    },
+    {
+      "pair": "large",
+      "dataset": "arc",
+      "reference": "C",
+      "N_fit_representatives": 670,
+      "N_cal_representatives": 448,
+      "independent_machine_protocol_requests": 896,
+      "offline_probe_rows": 1119,
+      "gold_for_thresholds": 0,
+      "actual_new_protocol_requests": 0
+    },
+    {
+      "pair": "small",
+      "dataset": "obqa",
+      "reference": "T",
+      "N_fit_representatives": 2100,
+      "N_cal_representatives": 1366,
+      "independent_machine_protocol_requests": 2732,
+      "offline_probe_rows": 3466,
+      "gold_for_thresholds": 0,
+      "actual_new_protocol_requests": 0
+    },
+    {
+      "pair": "small",
+      "dataset": "obqa",
+      "reference": "C",
+      "N_fit_representatives": 2100,
+      "N_cal_representatives": 1366,
+      "independent_machine_protocol_requests": 2732,
+      "offline_probe_rows": 3466,
+      "gold_for_thresholds": 0,
+      "actual_new_protocol_requests": 0
+    },
+    {
+      "pair": "small",
+      "dataset": "arc",
+      "reference": "T",
+      "N_fit_representatives": 670,
+      "N_cal_representatives": 448,
+      "independent_machine_protocol_requests": 896,
+      "offline_probe_rows": 1119,
+      "gold_for_thresholds": 0,
+      "actual_new_protocol_requests": 0
+    },
+    {
+      "pair": "small",
+      "dataset": "arc",
+      "reference": "C",
+      "N_fit_representatives": 670,
+      "N_cal_representatives": 448,
+      "independent_machine_protocol_requests": 896,
+      "offline_probe_rows": 1119,
+      "gold_for_thresholds": 0,
+      "actual_new_protocol_requests": 0
+    }
+  ],
+  "simultaneous_two_references": [
+    {
+      "pair": "large",
+      "dataset": "obqa",
+      "N_cal": 1366,
+      "physical_unique_machine_requests_R_T_C": 4098,
+      "actual_new_requests": 0
+    },
+    {
+      "pair": "large",
+      "dataset": "arc",
+      "N_cal": 448,
+      "physical_unique_machine_requests_R_T_C": 1344,
+      "actual_new_requests": 0
+    },
+    {
+      "pair": "small",
+      "dataset": "obqa",
+      "N_cal": 1366,
+      "physical_unique_machine_requests_R_T_C": 4098,
+      "actual_new_requests": 0
+    },
+    {
+      "pair": "small",
+      "dataset": "arc",
+      "N_cal": 448,
+      "physical_unique_machine_requests_R_T_C": 1344,
+      "actual_new_requests": 0
+    }
+  ],
+  "actual_new_generation": 0,
+  "new_prefill_attempts": 7044,
+  "reused_prefills": 4208,
+  "helper": 0,
+  "heads_fit": 0,
+  "fit_gold": 0,
+  "new_calibration": 140,
+  "reused_calibration": 20,
+  "new_deployment_evaluations": 3422,
+  "reused_deployment_evaluations": 742
+}

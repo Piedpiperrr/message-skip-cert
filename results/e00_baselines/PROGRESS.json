@@ -1,0 +1,21 @@
+{
+  "status": "COMPLETE_BOUNDED_E0_VALIDATED",
+  "task_complete": true,
+  "updated_utc": "2026-09-13T04:38:29.100348+00:00",
+  "baseline_C_heads_completed": 8,
+  "OOF_heads_completed": 280,
+  "completed_heads": 288,
+  "LR_attempts": 288,
+  "metrics_complete": true,
+  "report_complete": true,
+  "paper_results_complete": true,
+  "P2_STATE_appended": true,
+  "CPU_budget_charged_seconds": 131.77281,
+  "CPU_remaining_seconds": 3468.22719,
+  "PBS_job_ids": [
+    "run006",
+    "run007"
+  ],
+  "PBS_all_finished": true,
+  "next": "Return to Work for review of the next scientific task; no automatic follow-on experiment"
+}

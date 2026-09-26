@@ -1,0 +1,200 @@
+{
+ "utc": "2026-09-22T00:38:36.322930+00:00",
+ "pilot_dir": "$DATA_DIR/P2_R8_E20P_20260921T224653Z",
+ "checks": [
+  {
+   "item": "PREREG_E20P.md",
+   "stored": "c02cf958a7c972c6c976da4100d02293fcd81ba91b5f614d02b3cf0a1ab7adb5",
+   "now": "c02cf958a7c972c6c976da4100d02293fcd81ba91b5f614d02b3cf0a1ab7adb5",
+   "ok": true
+  },
+  {
+   "item": "SELECTION_E20P.json",
+   "stored": "4fdee068d98de22cf2cf463b65668ac992049405b94de4b4e9ab463c5b6cad33",
+   "now": "4fdee068d98de22cf2cf463b65668ac992049405b94de4b4e9ab463c5b6cad33",
+   "ok": true
+  },
+  {
+   "item": "PREREG_E20P.md (task-stated)",
+   "stored": "c02cf958a7c972c6c976da4100d02293fcd81ba91b5f614d02b3cf0a1ab7adb5",
+   "now": "c02cf958a7c972c6c976da4100d02293fcd81ba91b5f614d02b3cf0a1ab7adb5",
+   "ok": true
+  },
+  {
+   "item": "PROMPTS_E20.md (hash in PREREG_E20P.md)",
+   "stored": "6ed439e8c320c9c9bb62bb3fad969564219168976f134db7e3199db674c6814e",
+   "now": "6ed439e8c320c9c9bb62bb3fad969564219168976f134db7e3199db674c6814e",
+   "ok": true
+  },
+  {
+   "item": "notes/CODE_FREEZE.json (hash in PREREG_E20P.md)",
+   "stored": "5dc333c88cc55741a9d6323fcab4b2147525c1f13a8b878a7905e64f42cdf895",
+   "now": "5dc333c88cc55741a9d6323fcab4b2147525c1f13a8b878a7905e64f42cdf895",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: GATE.md",
+   "stored": "46e64a6d88a09dc85bc5609d14d5dc5fec6614d09c92403e78f2b83373f51cd8",
+   "now": "46e64a6d88a09dc85bc5609d14d5dc5fec6614d09c92403e78f2b83373f51cd8",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: PROMPTS_E20.md",
+   "stored": "6ed439e8c320c9c9bb62bb3fad969564219168976f134db7e3199db674c6814e",
+   "now": "6ed439e8c320c9c9bb62bb3fad969564219168976f134db7e3199db674c6814e",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: inputs/PILOT_nqopen.jsonl",
+   "stored": "7cc1e18170835e8789a9583a7dd056a3e637af421882cfcbcceafb0f48394a91",
+   "now": "7cc1e18170835e8789a9583a7dd056a3e637af421882cfcbcceafb0f48394a91",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: inputs/PILOT_nqp.jsonl",
+   "stored": "eddf08f0701f08ca3fbcc08455a36273ab0fd251c4dd992ff03dc7884292088b",
+   "now": "eddf08f0701f08ca3fbcc08455a36273ab0fd251c4dd992ff03dc7884292088b",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: inputs/PILOT_squad.jsonl",
+   "stored": "bcf2b0e2de5756a179893d7e4b711a667006007321842f325ac47b4d43937d9d",
+   "now": "bcf2b0e2de5756a179893d7e4b711a667006007321842f325ac47b4d43937d9d",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: inputs/PILOT_triviaqa.jsonl",
+   "stored": "fb0fe5a72f53f3bb38277380264c29387bb009abe7d3b6d0fe4a683af29f0a84",
+   "now": "fb0fe5a72f53f3bb38277380264c29387bb009abe7d3b6d0fe4a683af29f0a84",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: inputs/POOL_ORDER_nqopen.txt",
+   "stored": "f7ec7dfca52f2443f704a822dec14fb2690c841782fee1fe9d7190840558e6bf",
+   "now": "f7ec7dfca52f2443f704a822dec14fb2690c841782fee1fe9d7190840558e6bf",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: inputs/POOL_ORDER_nqp.txt",
+   "stored": "ba6525fb9dd6693cfc88f3497dc300db10749e4e50d7b4e292121f04a5888036",
+   "now": "ba6525fb9dd6693cfc88f3497dc300db10749e4e50d7b4e292121f04a5888036",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: inputs/POOL_ORDER_squad.txt",
+   "stored": "9754449546d370e2ab7c690ee99f44a50c240230850574f195f596664ffab7f3",
+   "now": "9754449546d370e2ab7c690ee99f44a50c240230850574f195f596664ffab7f3",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: inputs/POOL_ORDER_triviaqa.txt",
+   "stored": "3457e6978a7942344299c30859679c2103cf906b522790622a6e304386534b7e",
+   "now": "3457e6978a7942344299c30859679c2103cf906b522790622a6e304386534b7e",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: jobs/e20_jobA.pbs",
+   "stored": "eca05000f4b4e2ced0cb29d062ae2d19ed30d74b5c8c0d1b59dd5c45ddcd48dd",
+   "now": "eca05000f4b4e2ced0cb29d062ae2d19ed30d74b5c8c0d1b59dd5c45ddcd48dd",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: jobs/e20_jobB.pbs",
+   "stored": "817cfc55e8ffe3272f37ce873f82ff62329440cd0ed36c4f616ff94a03740a5f",
+   "now": "817cfc55e8ffe3272f37ce873f82ff62329440cd0ed36c4f616ff94a03740a5f",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: jobs/e20_slot.sh",
+   "stored": "ec14f16f60f45ddc76357cccc48e5974f92410c5736dd0b8b3e2607bd5cf38a6",
+   "now": "ec14f16f60f45ddc76357cccc48e5974f92410c5736dd0b8b3e2607bd5cf38a6",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: notes/DOWNLOAD_MANIFEST.json",
+   "stored": "45b36ba78c4fc2abaa5ea0128641df48dd871948d92a6d9c295b74093c99a5fa",
+   "now": "45b36ba78c4fc2abaa5ea0128641df48dd871948d92a6d9c295b74093c99a5fa",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: notes/POOL_E20P.json",
+   "stored": "9f5613aca456471da8a26927032387959b0eb70a881d8d97a25580591773d68e",
+   "now": "9f5613aca456471da8a26927032387959b0eb70a881d8d97a25580591773d68e",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: notes/PREREG_BLOCK.txt",
+   "stored": "8c9f497417308edf2b61b2fc5373b12ee39c07590b2d17576e1860486a0b3d2d",
+   "now": "8c9f497417308edf2b61b2fc5373b12ee39c07590b2d17576e1860486a0b3d2d",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: notes/PROMPT_CHECKS.json",
+   "stored": "90544047cdf81cc2ccd50b04d083894413e8a732e4cb90fab1d245ecbbb5ad23",
+   "now": "90544047cdf81cc2ccd50b04d083894413e8a732e4cb90fab1d245ecbbb5ad23",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: src/download_datasets.py",
+   "stored": "73d58344d49e2ef255fad5acacae8aed541ee510bd90f5d0c7eedb1e643cf508",
+   "now": "73d58344d49e2ef255fad5acacae8aed541ee510bd90f5d0c7eedb1e643cf508",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: src/e20_accuracy.py",
+   "stored": "1806e0137eeda1dfef6d19074c47102b044db1d27ebaa3c6d1453ef6cd8ba6e1",
+   "now": "1806e0137eeda1dfef6d19074c47102b044db1d27ebaa3c6d1453ef6cd8ba6e1",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: src/e20_analyze.py",
+   "stored": "7185a3696d0ec3a805126f3872921acb29881ae996cbc7eb908dc985b793abac",
+   "now": "7185a3696d0ec3a805126f3872921acb29881ae996cbc7eb908dc985b793abac",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: src/e20_exec.py",
+   "stored": "841f849807d5be2f71d0fdb49ec77ab573585e21f16314108003741715769f3f",
+   "now": "841f849807d5be2f71d0fdb49ec77ab573585e21f16314108003741715769f3f",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: src/e20_exec_common.py",
+   "stored": "7e74678c1367a3e74a039e5fa1371cadb3bc2091ecbe60a12c1659e291f80c85",
+   "now": "7e74678c1367a3e74a039e5fa1371cadb3bc2091ecbe60a12c1659e291f80c85",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: src/e20_extract.py",
+   "stored": "d9c30fa611218ff2decdf498349f3a1eefbdaada89dbed171b1d40fed9342be0",
+   "now": "d9c30fa611218ff2decdf498349f3a1eefbdaada89dbed171b1d40fed9342be0",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: src/e20_merge.py",
+   "stored": "9085534ea8ce4a79e5b5101579c5404727168e32f890f401212d43b8f3758111",
+   "now": "9085534ea8ce4a79e5b5101579c5404727168e32f890f401212d43b8f3758111",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: src/e20_pool.py",
+   "stored": "53413dc7ec8dab1a53b1cae9b043347d8f4086263ef437891f8f00ca3a60bee7",
+   "now": "53413dc7ec8dab1a53b1cae9b043347d8f4086263ef437891f8f00ca3a60bee7",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: src/e20_prompts.py",
+   "stored": "c4b0be5dea890f56ed4a86f820045775743504556cb22b6f332b760f50c0c900",
+   "now": "c4b0be5dea890f56ed4a86f820045775743504556cb22b6f332b760f50c0c900",
+   "ok": true
+  },
+  {
+   "item": "CODE_FREEZE: src/e20_render.py",
+   "stored": "e919aabc4741f94d80d7bba8923464716ffb9dd40c2349848c4f2fbb33312802",
+   "now": "e919aabc4741f94d80d7bba8923464716ffb9dd40c2349848c4f2fbb33312802",
+   "ok": true
+  }
+ ],
+ "n_code_freeze_files": 27,
+ "all_ok": true
+}

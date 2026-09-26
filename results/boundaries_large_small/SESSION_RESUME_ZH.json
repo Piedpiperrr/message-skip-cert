@@ -1,0 +1,17 @@
+{
+  "stage": "COMPLETE_STOPPED",
+  "job_id": "run018",
+  "successful_ids_source": "records/probe_records.jsonl",
+  "successful_ids_sha256": "8fed9b7fdf0824b1e922166d559829797fe403a2a884d5d06f61dd46a7739e35",
+  "counts": {
+    "attempts": 7044,
+    "success": 7044,
+    "new_cal": 140,
+    "new_evaluations": 3422
+  },
+  "config_sha256": "e84c015eb04ef92dfc252917e2f1ae3cfb0e86d2e830bf283afbaba0e9073f22",
+  "budget_closed": true,
+  "remaining_submissions": 0,
+  "remaining_execution_authorization": 0,
+  "next_action": "交回Work；禁止重新提交或重采成功id"
+}

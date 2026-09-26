@@ -1,0 +1,20 @@
+{
+  "utc": "2026-09-14T22:18:44.602336+00:00",
+  "files": {
+    "records/reference_route_identity.jsonl": "8b55a228ee7f653201e8e351735d45e0f082ad29cef6dc7f4e254dabcf501faa",
+    "records/frozen_scores_routes_1172.jsonl": "62ccb7106f523179c4bd9fb70c1da96533ce0fc08ce3ac8f92f7d727c0e1cac6",
+    "records/attempts.jsonl": "c353ed9f6e54a144bb161230746e1228c4b74647cbcb4b2f21bd415cb933a5fb",
+    "records/probe_timing_2344.jsonl": "864c9a81a8687c240e25c7a6aa5d53f37680fe4aac03d386d5bd85f0fda50a5d",
+    "records/large_arc_C_scores_routes.jsonl": "41ea39c570f12f20d3b4200684d505120721386dba9216f612786f3f93582047",
+    "records/large_arc_T_scores_routes.jsonl": "b980c2e3f31be5c7b8fc2722799541a39eb93db62004260796155575f8ec170d",
+    "records/successful_request_keys.jsonl": "60bf0ba63bb3bee496ea1f126f8c17cc0506903a502b7bb9d0007f12a7eaa43e",
+    "records/e2e_requests.jsonl": "389b5a27e1f19640bd2a331d2eb67bb045dcbcac963973e61b54566cdbd7f9d8",
+    "evidence/PREDICTION_DIAGNOSTICS.json": "188463901a9969520b5c188757d574aaeaa98fd2d759a3772c735a6f24f8bd7c",
+    "TEST_POPULATION_FREEZE.json": "877b3806476437561aa3cd53ef4e3e2bf1ab705be0e501d9aad3b0fea2857ee0",
+    "evidence/startup_total.json": "b61e6c08640fc161116c5e46f6132f314cc9f6bde4e2d6237ca67835f0c9c367"
+  },
+  "job_id": "run001",
+  "complete_actions": 4688,
+  "independent_online_probes": 2344,
+  "gold_read": false
+}

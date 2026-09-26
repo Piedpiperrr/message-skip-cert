@@ -1,0 +1,16 @@
+{
+  "utc": "2026-09-14T04:41:36.488822+00:00",
+  "files": {
+    "frozen_config.json": "e8af66d2c75eff54a9d378bce932951af8961560e0bf180e211ff611e6653861",
+    "SPLIT_FREEZE.json": "0a6081b8da2e907c45b570618815b5feb867182c77ef791ffb32dbe88af31d17",
+    "SOURCE_INDEX.csv": "5eaaee2922ecf132de445bfff4ad535eb48dda9c4b18ff1e0f2a7213650f7698",
+    "inputs/train_queries.jsonl": "56a89982c5fbf8fc08edc322d08a11eaba5ef05ac3b0dfeb662ddb96477ea767",
+    "inputs/TRAIN_FEATURE_INDEX.csv": "6f72f6b681971ffa00c6e1073557dce54303d0028ea98118962cdbc4fffaeea4",
+    "inputs/dev_queries.jsonl": "23c6a8039b63d176a63c820114a20def2ce6a785d8b8cd86a3b510ed68928094",
+    "src/receiver_prompt.py": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66"
+  },
+  "new_fits": 0,
+  "new_prefills": 0,
+  "new_jobs": 0,
+  "cal_disagreement_statistics_read": false
+}

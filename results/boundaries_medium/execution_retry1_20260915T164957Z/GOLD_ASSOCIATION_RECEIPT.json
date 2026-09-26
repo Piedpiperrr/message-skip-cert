@@ -1,0 +1,21 @@
+{
+  "utc": "2026-09-15T19:33:42.305876+00:00",
+  "sources": [
+    {
+      "task": "obqa",
+      "path": "$DATA_DIR/P2_10_20260911T122423Z/data/obqa_dev.jsonl",
+      "sha256": "fddc1d889c02c31014885fb9932baa6c4d27757dbbc5187e8aeb0f964acaa296",
+      "N": 742
+    },
+    {
+      "task": "arc",
+      "path": "$DATA_DIR/P2_10_20260911T122423Z/data/arc_validation.jsonl",
+      "sha256": "8b0244ccb07aa1c77003e82908ba0955ab9255361ec32dd75b2006221248f481",
+      "N": 299
+    }
+  ],
+  "ALL_ROUTES_FREEZE_sha256": "b90a8429454a917df9aaa653cd8a13c11a410904c26b8c07d7a303f80c6d4a8e",
+  "ARC_test_read": false,
+  "fit_cal_gold_read": false,
+  "accuracy_used_for_selection": false
+}

@@ -1,0 +1,159 @@
+[
+  {
+    "family": "D",
+    "accepted_q": [
+      0.15,
+      0.2,
+      0.25,
+      0.3
+    ],
+    "deployed_q": 0.3,
+    "minimum_p_test": {
+      "family": "D",
+      "q": 0.25,
+      "threshold": 0.08051686084384338,
+      "N": 1366.0,
+      "n_R": 325.0,
+      "changed": 4.0,
+      "conditional_risk": 0.012307692307692308,
+      "p_value": 0.0002585875876890614,
+      "CP_upper_0_999": 0.04477067949153525,
+      "accepted": true,
+      "coverage": 0.23792093704245973,
+      "marginal_change": 0.0029282576866764276,
+      "calculation_identity": "reused"
+    },
+    "max_zero_change_n": 132,
+    "max_empirical_risk_le_alpha_n": 920,
+    "zero_change_min_n_for_acceptance": 135
+  },
+  {
+    "family": "R2100",
+    "accepted_q": [
+      0.25,
+      0.3,
+      0.35,
+      0.4
+    ],
+    "deployed_q": 0.4,
+    "minimum_p_test": {
+      "family": "R2100",
+      "q": 0.3,
+      "threshold": 0.15367244904923216,
+      "N": 1366.0,
+      "n_R": 387.0,
+      "changed": 6.0,
+      "conditional_risk": 0.015503875968992248,
+      "p_value": 0.0003172420151450698,
+      "CP_upper_0_999": 0.045948466853728824,
+      "accepted": true,
+      "coverage": 0.28330893118594436,
+      "marginal_change": 0.004392386530014641,
+      "calculation_identity": "reused"
+    },
+    "max_zero_change_n": 129,
+    "max_empirical_risk_le_alpha_n": 852,
+    "zero_change_min_n_for_acceptance": 135
+  },
+  {
+    "family": "ProbeMax",
+    "accepted_q": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8
+    ],
+    "deployed_q": 0.8,
+    "minimum_p_test": {
+      "family": "ProbeMax",
+      "q": 0.6,
+      "threshold": 1.7881393432617188e-06,
+      "N": 1366.0,
+      "n_R": 807.0,
+      "changed": 2.0,
+      "conditional_risk": 0.0024783147459727386,
+      "p_value": 9.956079973330062e-16,
+      "CP_upper_0_999": 0.01383503443046264,
+      "accepted": true,
+      "coverage": 0.5907759882869692,
+      "marginal_change": 0.0014641288433382138,
+      "calculation_identity": "new"
+    },
+    "max_zero_change_n": 0,
+    "max_empirical_risk_le_alpha_n": 1135,
+    "zero_change_min_n_for_acceptance": 135
+  },
+  {
+    "family": "ProbeEntropy",
+    "accepted_q": [
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8
+    ],
+    "deployed_q": 0.8,
+    "minimum_p_test": {
+      "family": "ProbeEntropy",
+      "q": 0.65,
+      "threshold": 7.344190089497715e-05,
+      "N": 1366.0,
+      "n_R": 867.0,
+      "changed": 3.0,
+      "conditional_risk": 0.0034602076124567475,
+      "p_value": 8.192641052623266e-16,
+      "CP_upper_0_999": 0.014978861963065413,
+      "accepted": true,
+      "coverage": 0.6346998535871157,
+      "marginal_change": 0.0021961932650073207,
+      "calculation_identity": "new"
+    },
+    "max_zero_change_n": 639,
+    "max_empirical_risk_le_alpha_n": 1134,
+    "zero_change_min_n_for_acceptance": 135
+  },
+  {
+    "family": "WordD",
+    "accepted_q": [],
+    "deployed_q": 0.0,
+    "minimum_p_test": {
+      "family": "WordD",
+      "q": 0.15,
+      "threshold": 0.07163248026957554,
+      "N": 1366.0,
+      "n_R": 149.0,
+      "changed": 11.0,
+      "conditional_risk": 0.0738255033557047,
+      "p_value": 0.9288349505259517,
+      "CP_upper_0_999": 0.1634558714972504,
+      "accepted": false,
+      "coverage": 0.10907759882869693,
+      "marginal_change": 0.008052708638360176,
+      "calculation_identity": "new"
+    },
+    "max_zero_change_n": 0,
+    "max_empirical_risk_le_alpha_n": 0,
+    "zero_change_min_n_for_acceptance": 135
+  }
+]

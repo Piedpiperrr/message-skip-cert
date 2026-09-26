@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-19T07:18:40.271349+00:00",
+  "seconds": 50.87867259979248,
+  "returncode": 0,
+  "stderr_tail": "\nGenerating train split:   0%|          | 0/4957 [00:00<?, ? examples/s]\nGenerating train split:  20%|██        | 1000/4957 [00:00<00:00, 7038.53 examples/s]\nGenerating train split: 100%|██████████| 4957/4957 [00:00<00:00, 33224.03 examples/s]\n\nGenerating validation split:   0%|          | 0/500 [00:00<?, ? examples/s]\nGenerating validation split: 100%|██████████| 500/500 [00:00<00:00, 143218.74 examples/s]\n\nGenerating test split:   0%|          | 0/500 [00:00<?, ? examples/s]\nGenerating test split: 100%|██████████| 500/500 [00:00<00:00, 163024.88 examples/s]\n",
+  "config": "main",
+  "n": 500,
+  "rows_identical_in_order_to_local_parquet": 500,
+  "fingerprint": "f412d851e9522d86",
+  "cache_files": [
+    "$DATA_DIR/P2_R1_EXP_20260919T050555Z/cache/hf_official/datasets/openbookqa/main/0.0.0/388097ea7776314e93a529163e0fea805b8a6454/openbookqa-test.arrow"
+  ],
+  "clean_usable": true
+}

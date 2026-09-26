@@ -1,0 +1,44 @@
+{
+ "N_fit": 2100,
+ "N_cal": 1366,
+ "deployed_q": 0.6,
+ "accepted": [
+  0.15,
+  0.2,
+  0.25,
+  0.3,
+  0.35,
+  0.4,
+  0.45,
+  0.5,
+  0.55,
+  0.6
+ ],
+ "n": 800,
+ "k": 21,
+ "p": 0.0005735099785435151,
+ "all_20_rows_equal_stored_csv": true,
+ "PASS": true,
+ "function_files": {
+  "common_r1.py": {
+   "path": "$DATA_DIR/P2_R1_CPU_20260919T045556Z/src/common_r1.py",
+   "sha256": "61a4b20b876897427c3e02d5c5ed3a8a8c7771d27be3ede6ef9fa8cd97a37038"
+  },
+  "data_r1.py": {
+   "path": "$DATA_DIR/P2_R1_CPU_20260919T045556Z/src/data_r1.py",
+   "sha256": "619c4496c0352c6987a3c352bb55395662c4a60802a16fdae63529ad0dcba2d3"
+  },
+  "analyze_x3.py": {
+   "path": "$DATA_DIR/P2_R6_X3_20260921T052602Z/src/analyze_x3.py",
+   "sha256": "5953c24b73cb99f36f3bf91237e9ab0b0a5a158cd790f36e84c39e54522e9c4f"
+  },
+  "analyze_e16_5.py": {
+   "path": "$DATA_DIR/P2_R7_E16_20260921T184114Z/src/analyze_e16_5.py",
+   "sha256": "0a36728fa38ef6d35d6bc884750c96b7a2fcb15055daa2376b471e01fa68c9fa"
+  }
+ },
+ "this_module": {
+  "path": "$DATA_DIR/P2_R8_E20F_20260922T003652Z/src/e20f_cert.py",
+  "sha256": "3d713d9163ed746f29724fd1a70289913bfe48a3fb27021b8fc18c581f12a702"
+ }
+}

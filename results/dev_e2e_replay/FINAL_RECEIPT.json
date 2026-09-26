@@ -1,0 +1,38 @@
+{
+  "status": "COMPLETE",
+  "task": "P2_FROZEN_POLICY_E2E_VALIDATION",
+  "stage": "P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z",
+  "job_id": "run009",
+  "job_state": "F",
+  "exit_status": 0,
+  "utc": "2026-09-14T18:10:18.578488+00:00",
+  "counts": {
+    "complete_action_attempts": 1024,
+    "successful_complete_requests": 1024,
+    "online_probe_attempts": 512,
+    "online_probe_records": 512,
+    "fixed_reference_records": 512,
+    "paired_rows": 512,
+    "new_fits": 0,
+    "new_calibration": 0,
+    "new_gold": 0,
+    "warmup": 0,
+    "retry": 0,
+    "prior_probe_reacquisition": 0
+  },
+  "confirmed_descriptive_savings": [
+    "OBQA/Text",
+    "OBQA/C2C",
+    "ARC/Text",
+    "ARC/C2C"
+  ],
+  "unconfirmed": [],
+  "meaning": "paired mean saving and lower descriptive 95% bound positive on exposed original128 panel; not independent population confirmation",
+  "resource_sha256": "98f364c5055d2e61008d9aebfc6478391d2e651f157a52eaa732fa063b785832",
+  "config_sha256": "4fce806e4b928b8ac1c6fa74bfa59eef67a9ea42c88af2675eb16300bb7d2719",
+  "budget_closed": true,
+  "remaining_submissions": 0,
+  "ARC_test_read": false,
+  "TeX_compiled": false,
+  "next_action": "Return to Work; stop; do not start another experiment"
+}

@@ -1,0 +1,10 @@
+{
+  "utc": "2026-09-15T19:32:54.339764+00:00",
+  "hashes": {
+    "development/obqa_T_routes.jsonl": "2887697eee077779835788c9dc0be94c206c077b03ca29bf27cc479e34553bff",
+    "development/obqa_C_routes.jsonl": "4481dbec8f836f4a11c13c1a7f86d66dbe70cee52aaeb888a469285ea964b2ce",
+    "development/arc_T_routes.jsonl": "cbf0db21af652b2a523b4024efdab5dc7a9df2738dc290260683c42b48768cee",
+    "development/arc_C_routes.jsonl": "1f746c1270b26d8975e4ad40e8b7973f61be64e133a6c8255d55be296b11c789"
+  },
+  "gold_read": false
+}

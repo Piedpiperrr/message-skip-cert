@@ -1,0 +1,62 @@
+[
+  {
+    "setting": "small/MMLU-Pro/Text",
+    "original_outcome": "fallback q=0",
+    "seeds": 200,
+    "certification_rate": 0.0,
+    "match_rate": 1.0,
+    "stable": "stable",
+    "median_q": null,
+    "IQR_q": null,
+    "median_dev_coverage_pct": null,
+    "median_dev_changed": null,
+    "median_dev_omitted": null,
+    "n_deploying": 0,
+    "seed0_reproduces_frozen_split": true
+  },
+  {
+    "setting": "small/MMLU-Pro/C2C",
+    "original_outcome": "fallback q=0",
+    "seeds": 200,
+    "certification_rate": 0.0,
+    "match_rate": 1.0,
+    "stable": "stable",
+    "median_q": null,
+    "IQR_q": null,
+    "median_dev_coverage_pct": null,
+    "median_dev_changed": null,
+    "median_dev_omitted": null,
+    "n_deploying": 0,
+    "seed0_reproduces_frozen_split": true
+  },
+  {
+    "setting": "medium/MMLU-Pro/Text",
+    "original_outcome": "fallback q=0",
+    "seeds": 200,
+    "certification_rate": 0.0,
+    "match_rate": 1.0,
+    "stable": "stable",
+    "median_q": null,
+    "IQR_q": null,
+    "median_dev_coverage_pct": null,
+    "median_dev_changed": null,
+    "median_dev_omitted": null,
+    "n_deploying": 0,
+    "seed0_reproduces_frozen_split": true
+  },
+  {
+    "setting": "medium/MMLU-Pro/C2C",
+    "original_outcome": "fallback q=0",
+    "seeds": 200,
+    "certification_rate": 0.0,
+    "match_rate": 1.0,
+    "stable": "stable",
+    "median_q": null,
+    "IQR_q": null,
+    "median_dev_coverage_pct": null,
+    "median_dev_changed": null,
+    "median_dev_omitted": null,
+    "n_deploying": 0,
+    "seed0_reproduces_frozen_split": true
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "utc": "2026-09-21T23:59:26.548658+00:00",
+  "selection_sha256": "4fdee068d98de22cf2cf463b65668ac992049405b94de4b4e9ab463c5b6cad33",
+  "settings": [
+    {
+      "dataset": "SQuAD",
+      "receiver": "qwen3",
+      "n": 400,
+      "acc_R": 0.645,
+      "acc_Text": 0.6125,
+      "gain_Text_minus_R": -0.03249999999999997
+    },
+    {
+      "dataset": "SQuAD",
+      "receiver": "llama",
+      "n": 400,
+      "acc_R": 0.655,
+      "acc_Text": 0.6625,
+      "gain_Text_minus_R": 0.007499999999999951
+    },
+    {
+      "dataset": "NQ-passage",
+      "receiver": "qwen3",
+      "n": 400,
+      "acc_R": 0.56,
+      "acc_Text": 0.535,
+      "gain_Text_minus_R": -0.025000000000000022
+    },
+    {
+      "dataset": "NQ-passage",
+      "receiver": "llama",
+      "n": 400,
+      "acc_R": 0.5625,
+      "acc_Text": 0.57,
+      "gain_Text_minus_R": 0.007499999999999951
+    },
+    {
+      "dataset": "TriviaQA",
+      "receiver": "qwen3",
+      "n": 400,
+      "acc_R": 0.445,
+      "acc_Text": 0.4625,
+      "gain_Text_minus_R": 0.017500000000000016
+    },
+    {
+      "dataset": "TriviaQA",
+      "receiver": "llama",
+      "n": 400,
+      "acc_R": 0.62,
+      "acc_Text": 0.6,
+      "gain_Text_minus_R": -0.020000000000000018
+    },
+    {
+      "dataset": "NQ-Open",
+      "receiver": "qwen3",
+      "n": 400,
+      "acc_R": 0.1675,
+      "acc_Text": 0.165,
+      "gain_Text_minus_R": -0.0025000000000000022
+    },
+    {
+      "dataset": "NQ-Open",
+      "receiver": "llama",
+      "n": 400,
+      "acc_R": 0.23,
+      "acc_Text": 0.2725,
+      "gain_Text_minus_R": 0.04250000000000001
+    }
+  ]
+}

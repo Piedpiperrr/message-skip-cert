@@ -1,0 +1,10 @@
+item,check,expected,got,ok
+3,large/OBQA/Text dev correct R/b/policy at alpha=.05,617/645/638,617/645/638,True
+3,large/ARC/Text dev correct R/b/policy at alpha=.05,268/274/270,268/274/270,True
+3,large/MMLU-Pro/Text dev correct R/b/policy at alpha=.05,1282/1319/1321,1282/1319/1321,True
+3,large/OBQA/Text+fact dev correct R/b/policy at alpha=.05,617/670/660,617/670/660,True
+3,large/OBQA/Text alpha=.02 q (dev changed/omitted),0.65 (6/460),0.65 (6/460),True
+3,large/ARC/Text alpha=.02 q (dev changed/omitted),0.8 (0/233),0.8 (0/233),True
+3,large/MMLU-Pro/Text alpha=.02 deployed q,fallback,0.0,True
+3,"large/OBQA/Text held-out acc policy/ref, omitted/changed","86.02/86.96, 595/12","86.02/86.96, 595/12",True
+3,"large/OBQA/Text+fact held-out acc policy/ref, omitted/changed","89.65/91.13, 558/16","89.65/91.13, 558/16",True

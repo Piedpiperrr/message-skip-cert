@@ -1,0 +1,105 @@
+--- ../P2_R1_XFAM_20260919T095058Z/src/run_x2.py	2026-09-19 19:03:17.000000000 +0000
++++ src/run_x3.py	2026-09-21 06:10:30.000000000 +0000
+@@ -1,4 +1,6 @@
+-"""X2 receiver-only driver (approved changes A1 + A2). One GPU, one receiver; no helper, no fuser.
++"""X3 receiver-only driver = copy of X2 run_x2.py (approved changes A1 + A2) with the X3 changes marked "X3:" (receiver ids;
++R-path tokenization of the rendered chat template with add_special_tokens=False, approved 2026-09-21 (no double BOS); explicit
++add_special_tokens=False in the probe; per-row BOS counts; parsed-label comparison in validate mode). One GPU, one receiver; no helper, no fuser.
+ 
+ Per row, in order: R (runtime.Runner.request(q, 'receiver_only'), the paper's R path), Text-reading
+ (runtime T2TReceiverBundle.consume(q, format(q, use_template=False), saved helper message), the receiver half of the paper's
+@@ -9,7 +11,7 @@
+ Gold is never read. Each row's record is appended with fsync. Modes:
+   validate : receiver Qwen3-8B; compares every output with the saved large-pair records; writes VALIDATION.json; exit 3 on any diff
+   smoke/run: receiver as given; writes outputs only
+-usage: run_x2.py --mode {validate,smoke,run} --receiver {qwen3_8b,olmo2_7b} --rows <jsonl> --out <jsonl>
++usage: run_x3.py --mode {validate,smoke,run} --receiver {qwen3_8b,llama31_8b,mistral7b_v03} --rows <jsonl> --out <jsonl>
+ """
+ import sys
+ sys.dont_write_bytecode = True
+@@ -47,6 +49,19 @@
+     protocol_min.format_openbook = FMT[ds]; legacy_methods.format_openbook = FMT[ds]
+ 
+ 
++LAST = {}
++def receiver_prompt_tensors_x3(tokenizer, example, device):
++    # X3: protocol_min.receiver_prompt_tensors with add_special_tokens=False when tokenizing the rendered chat template (no second BOS)
++    prompt = protocol_min.format_openbook(example, use_template=True)
++    rendered = tokenizer.apply_chat_template([{"role": "user", "content": prompt}], tokenize=False, add_generation_prompt=True, enable_thinking=False)
++    tokenized = tokenizer(rendered, return_tensors="pt", add_special_tokens=False)
++    LAST['R_ids'] = tokenized['input_ids'][0].tolist()
++    return prompt, rendered, {key: value.to(device) for key, value in tokenized.items()}
++
++
++runtime.receiver_prompt_tensors = protocol_min.receiver_prompt_tensors = receiver_prompt_tensors_x3
++
++
+ # ---- receiver, loaded as runtime.Runner.__init__ loads it (bf16, sdpa, generation config do_sample False / 64 tokens)
+ spec = RECEIVERS[a.receiver]; DEV = 'cuda:0'; t0 = time.perf_counter()
+ tok = AutoTokenizer.from_pretrained(spec['path'], local_files_only=True)
+@@ -72,7 +87,10 @@
+ env = dict(utc=utc(), receiver=a.receiver, spec=spec, mode=a.mode, rows_file=a.rows, rows_sha256=sha(a.rows), n_rows=len(rows),
+            load_seconds=time.perf_counter() - t0, generation_config=gencfg, chat_template_sha256=hashlib.sha256(tok.chat_template.encode()).hexdigest(),
+            prefix_ids=prefix_ids, label_token_sets=sets, torch=torch.__version__, gpu=str(torch.cuda.get_device_properties(0)),
+-           job_id=os.environ.get('PBS_JOBID'), host=os.uname().nodename, CUDA_VISIBLE_DEVICES=os.environ.get('CUDA_VISIBLE_DEVICES'))
++           job_id=os.environ.get('PBS_JOBID'), host=os.uname().nodename, CUDA_VISIBLE_DEVICES=os.environ.get('CUDA_VISIBLE_DEVICES'),
++           bos_token_id=tok.bos_token_id, tokenizer_adds_bos_on_call=(tok('x')['input_ids'][:1] == [tok.bos_token_id]) if tok.bos_token_id is not None else False,
++           tokenizer_class=type(tok).__name__, transformers=__import__('transformers').__version__, PYTHONPATH=os.environ.get('PYTHONPATH'),
++           sentencepiece=(__import__('sentencepiece').__file__ if __import__('importlib').util.find_spec('sentencepiece') else None))
+ save(OUT.with_suffix('.env.json'), env)
+ 
+ 
+@@ -84,7 +102,9 @@
+     msgs = [{'role': 'user', 'content': body}]
+     rendered = tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True, enable_thinking=False)
+     native = tok.apply_chat_template(msgs, tokenize=True, add_generation_prompt=True, enable_thinking=False)
+-    ids = torch.tensor([native + prefix_ids], dtype=torch.long)
++    plain = tok(rendered, add_special_tokens=False)['input_ids']   # X3: explicit; equals apply_chat_template(tokenize=True)
++    assert plain == native
++    ids = torch.tensor([plain + prefix_ids], dtype=torch.long)
+     inp = {'input_ids': ids.to(DEV), 'attention_mask': torch.ones_like(ids).to(DEV)}
+     n = ids.shape[1]; pos = n - 1
+     with torch.inference_mode():
+@@ -98,7 +118,10 @@
+     assert all(np.isfinite(ps)) and abs(sum(ps) - 1) < 2e-6 and 0 <= u <= 1
+     return dict(ProbeMax=u, p_labels=dict(zip(labels, ps)), label_union_mass=mass, argmax_probe_label=labels[int(np.argmax(ps))],
+                 probe_ids_sha256=hashlib.sha256(ids.numpy().tobytes()).hexdigest(), rendered_sha256=hashlib.sha256(rendered.encode()).hexdigest(),
+-                input_tokens=n, native_ids_equal_retokenized_rendered=tok(rendered)['input_ids'] == native)
++                input_tokens=n, native_ids_equal_retokenized_rendered=tok(rendered)['input_ids'] == native, bos_count=bos_count(ids[0].tolist()))
++
++
++def bos_count(ids): return ids.count(tok.bos_token_id) if tok.bos_token_id is not None else 0
+ 
+ 
+ def v2(raw, legal):
+@@ -117,14 +140,17 @@
+         sync(); t = time.perf_counter(); res = runner.request(q, 'receiver_only'); sync()
+         o, why = v2(res['raw_answer'], legal)
+         rec['R'] = dict(raw=res['raw_answer'], generated_token_ids=res['generated_token_ids'], receiver_input_tokens=res['receiver_input_tokens'],
+-                        parsed=o, parse_reason=why, latency_ms=(time.perf_counter() - t) * 1000)
++                        parsed=o, parse_reason=why, latency_ms=(time.perf_counter() - t) * 1000,
++                        bos_count=bos_count(LAST['R_ids']), input_ids_sha256=hashlib.sha256(json.dumps(LAST['R_ids']).encode()).hexdigest())
++        assert res['receiver_input_tokens'] == len(LAST['R_ids'])
+         sync(); t = time.perf_counter()
+         with torch.inference_mode():
+             tr = runner.tr.consume(q, FMT[ds](q, use_template=False), r['helper_message'])
+         sync(); o, why = v2(tr['generated_text'], legal)
+         rec['T'] = dict(raw=tr['generated_text'], generated_token_ids=tr['generated_token_ids'], receiver_input_tokens=tr['receiver_input_token_count'],
+                         prompt_ids_sha256=hashlib.sha256(json.dumps(tr['receiver_prompt_token_ids']).encode()).hexdigest(),
+-                        helper_message_sha256=r['helper_message_sha256'], parsed=o, parse_reason=why, latency_ms=(time.perf_counter() - t) * 1000)
++                        helper_message_sha256=r['helper_message_sha256'], parsed=o, parse_reason=why, latency_ms=(time.perf_counter() - t) * 1000,
++                        bos_count=bos_count(tr['receiver_prompt_token_ids']))
+         sync(); t = time.perf_counter(); pr = probe(q, ds, legal); sync()
+         rec['P'] = dict(**pr, latency_ms=(time.perf_counter() - t) * 1000)
+     except Exception:
+@@ -158,8 +184,9 @@
+                  probe_ids_equal=ok and o['P']['probe_ids_sha256'] == sp['probe_ids_sha256'],
+                  ProbeMax_equal=ok and o['P']['ProbeMax'] == sp['ProbeMax'], p_labels_equal=ok and o['P']['p_labels'] == sp['p_labels'],
+                  R_raw_equal=ok and o['R']['raw'] == rawR, T_raw_equal=ok and o['T']['raw'] == rawT,
++                 R_parsed_equal=ok and ds in ('obqa', 'arc') and o['R']['parsed'] == lab[(ds, i)]['o_R'], T_parsed_equal=ok and ds in ('obqa', 'arc') and o['T']['parsed'] == lab[(ds, i)]['o_T'],
+                  ProbeMax_ClusterA=o['P']['ProbeMax'] if ok else None, ProbeMax_saved=sp['ProbeMax'])
+-        c['all_equal'] = all(c[k] for k in ['runtime_ok', 'probe_ids_equal', 'ProbeMax_equal', 'p_labels_equal', 'R_raw_equal', 'T_raw_equal'])
++        c['all_equal'] = all(c[k] for k in ['runtime_ok', 'probe_ids_equal', 'ProbeMax_equal', 'p_labels_equal', 'R_raw_equal', 'T_raw_equal', 'R_parsed_equal', 'T_parsed_equal'])
+         res.append(c)
+     verdict = 'PASS' if res and all(c['all_equal'] for c in res) and len(res) == len(rows) else 'FAIL'
+     save(OUT.parent / 'VALIDATION.json', dict(utc=utc(), verdict=verdict, n=len(res), rows=res, outputs_sha256=sha(OUT),

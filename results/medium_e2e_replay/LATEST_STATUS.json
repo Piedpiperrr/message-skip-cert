@@ -1,0 +1,70 @@
+{
+  "utc": "2026-09-15T21:09:57.905369+00:00",
+  "job_id": "run013",
+  "qstat_returncode": 0,
+  "job_state": "F",
+  "substate": 92,
+  "Exit_status": 0,
+  "stime": "Tue Sep 15 21:04:15 2026",
+  "mtime": "Tue Sep 15 21:09:49 2026",
+  "obittime": "Tue Sep 15 21:09:49 2026",
+  "exec_vnode": "REDACTED",
+  "resources_used": {
+    "cpupercent": 78,
+    "cput": "00:03:53",
+    "mem": "4280440kb",
+    "ncpus": 64,
+    "ngpus": 0,
+    "vmem": "28214612kb",
+    "walltime": "00:05:28"
+  },
+  "comment": "Job run at Tue Sep 15 at 21:04 on (ClusterB-gpu-06:ngpus=2:ncpus=64:mem=251658240kb:ngpu_pairs=1) and finished",
+  "progress": {
+    "utc": "2026-09-15T21:09:37.003593+00:00",
+    "successful_count": 512,
+    "attempts": 512,
+    "online_probe_attempts": 256,
+    "task": "arc",
+    "panel_ordinal": 127
+  },
+  "startup": {
+    "status": "PASS",
+    "startup_wall_seconds": 29.584209942026064,
+    "startup_total_including_runtime_import_seconds": 75.61143109202385
+  },
+  "REPLAY_COMPLETE.json": {
+    "status": "COMPLETE",
+    "utc": "2026-09-15T21:09:37.005678+00:00",
+    "job_id": "run013",
+    "complete_requests": 512,
+    "fixed_C2C_requests": 256,
+    "policy_requests": 256,
+    "online_ProbeMax_calls": 256,
+    "requests_sha256": "4ac786e1b45f8ec20c4f305a5bd1af0f85a999a7a82520b52ae95fc85d37f71e",
+    "attempts_sha256": "b9185f20394f9dd13f22480d98e93043c06810050d3f9aa90ee4746947f07aab",
+    "gold_read_by_execution": false,
+    "expected_answer_read_by_execution": false,
+    "retries": 0
+  },
+  "JOB_WORK_COMPLETE.json": {
+    "status": "COMPLETE_MEDIUM_STAGE2",
+    "utc": "2026-09-15T21:09:37.076174+00:00",
+    "job_id": "run013",
+    "entry_wall_seconds": 317.9226591559127,
+    "cpu_process_seconds": 232.686613856,
+    "success_counts": {
+      "status": "COMPLETE",
+      "utc": "2026-09-15T21:09:37.005678+00:00",
+      "job_id": "run013",
+      "complete_requests": 512,
+      "fixed_C2C_requests": 256,
+      "policy_requests": 256,
+      "online_ProbeMax_calls": 256,
+      "requests_sha256": "4ac786e1b45f8ec20c4f305a5bd1af0f85a999a7a82520b52ae95fc85d37f71e",
+      "attempts_sha256": "b9185f20394f9dd13f22480d98e93043c06810050d3f9aa90ee4746947f07aab",
+      "gold_read_by_execution": false,
+      "expected_answer_read_by_execution": false,
+      "retries": 0
+    }
+  }
+}

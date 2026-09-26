@@ -1,0 +1,7 @@
+quantity,n,settings,label
+deployed under V2 (frozen),7,medium/OBQA/C2C;medium/ARC/C2C;large/OBQA/Text;large/OBQA/C2C;large/ARC/Text;large/ARC/C2C;large/OBQA/Text+fact,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+deployed under official extractor,6,medium/OBQA/C2C;medium/ARC/C2C;large/OBQA/Text;large/OBQA/C2C;large/ARC/Text;large/OBQA/Text+fact,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+INTERSECTION (deployed under both),6,medium/OBQA/C2C;medium/ARC/C2C;large/OBQA/Text;large/OBQA/C2C;large/ARC/Text;large/OBQA/Text+fact,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+V2 only (flips to fallback under official),1,large/ARC/C2C,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+official only (would certify only under official),0,none,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+neither,12,small/OBQA/Text;small/OBQA/C2C;small/ARC/Text;small/ARC/C2C;medium/OBQA/Text;medium/ARC/Text;X1-Llama/OBQA/Text;X1-Llama/OBQA/C2C;X1-Llama/ARC/Text;X1-Llama/ARC/C2C;X2-OLMo/OBQA/Text;X2-OLMo/ARC/Text,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision

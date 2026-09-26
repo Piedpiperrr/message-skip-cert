@@ -1,0 +1,150 @@
+{
+  "utc": "2026-09-19T20:13:05.206236+00:00",
+  "verdict": "PASS",
+  "rows": [
+    {
+      "dataset": "obqa",
+      "id": "14-1371",
+      "runtime_ok": true,
+      "message_equal": true,
+      "token_ids_equal": true,
+      "input_tokens_equal": true,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:6638"
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-97",
+      "runtime_ok": true,
+      "message_equal": true,
+      "token_ids_equal": true,
+      "input_tokens_equal": true,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:7936"
+    },
+    {
+      "dataset": "obqa",
+      "id": "11-514",
+      "runtime_ok": true,
+      "message_equal": true,
+      "token_ids_equal": true,
+      "input_tokens_equal": true,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:2372"
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-1178",
+      "runtime_ok": true,
+      "message_equal": true,
+      "token_ids_equal": true,
+      "input_tokens_equal": true,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:292"
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-655",
+      "runtime_ok": true,
+      "message_equal": true,
+      "token_ids_equal": true,
+      "input_tokens_equal": true,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:1190"
+    },
+    {
+      "dataset": "obqa",
+      "id": "1000",
+      "runtime_ok": true,
+      "message_equal": true,
+      "token_ids_equal": true,
+      "input_tokens_equal": true,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:1686"
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-356",
+      "runtime_ok": true,
+      "message_equal": true,
+      "token_ids_equal": true,
+      "input_tokens_equal": true,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:7101"
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-743",
+      "runtime_ok": true,
+      "message_equal": true,
+      "token_ids_equal": true,
+      "input_tokens_equal": true,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:1323"
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7181965",
+      "runtime_ok": true,
+      "message_equal": true,
+      "token_ids_equal": true,
+      "input_tokens_equal": true,
+      "saved_record": "$DATA_DIR/P2_9_20260911T045010Z/results/small/train_cases.jsonl:1366"
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7009923",
+      "runtime_ok": true,
+      "message_equal": true,
+      "token_ids_equal": true,
+      "input_tokens_equal": true,
+      "saved_record": "$DATA_DIR/P2_9_20260911T045010Z/results/small/train_cases.jsonl:1186"
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7230195",
+      "runtime_ok": true,
+      "message_equal": true,
+      "token_ids_equal": true,
+      "input_tokens_equal": true,
+      "saved_record": "$DATA_DIR/P2_9_20260911T045010Z/results/small/train_cases.jsonl:2590"
+    },
+    {
+      "dataset": "arc",
+      "id": "NYSEDREGENTS_2016_4_13",
+      "runtime_ok": true,
+      "message_equal": true,
+      "token_ids_equal": true,
+      "input_tokens_equal": true,
+      "saved_record": "$DATA_DIR/P2_9_20260911T045010Z/results/small/train_cases.jsonl:2378"
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7133368",
+      "runtime_ok": true,
+      "message_equal": true,
+      "token_ids_equal": true,
+      "input_tokens_equal": true,
+      "saved_record": "$DATA_DIR/P2_9_20260911T045010Z/results/small/train_cases.jsonl:786"
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7228288",
+      "runtime_ok": true,
+      "message_equal": true,
+      "token_ids_equal": true,
+      "input_tokens_equal": true,
+      "saved_record": "$DATA_DIR/P2_9_20260911T045010Z/results/small/train_cases.jsonl:1868"
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_184293",
+      "runtime_ok": true,
+      "message_equal": true,
+      "token_ids_equal": true,
+      "input_tokens_equal": true,
+      "saved_record": "$DATA_DIR/P2_9_20260911T045010Z/results/small/train_cases.jsonl:2282"
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_SC_407691",
+      "runtime_ok": true,
+      "message_equal": true,
+      "token_ids_equal": true,
+      "input_tokens_equal": true,
+      "saved_record": "$DATA_DIR/P2_9_20260911T045010Z/results/small/train_cases.jsonl:2532"
+    }
+  ]
+}

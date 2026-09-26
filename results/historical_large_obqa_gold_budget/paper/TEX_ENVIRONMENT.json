@@ -1,0 +1,10 @@
+{
+  "engines": {
+    "pdflatex": null,
+    "xelatex": null,
+    "lualatex": null,
+    "tectonic": null
+  },
+  "compiled": false,
+  "status": "No TeX engine on PATH; sources and rendered figure supplied, not compiled; no install"
+}

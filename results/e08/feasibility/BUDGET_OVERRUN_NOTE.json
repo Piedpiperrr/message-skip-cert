@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-20T03:52:00Z",
+  "issue": "live cost exceeds the 30 productive GPU-hour stop rule",
+  "estimate_at_freeze": 27.57,
+  "refined_estimate_from_smoke": 29.17,
+  "live_measurement": 32.28,
+  "cause": "the 0.5B small helper runs to the 256-token Text cap on ~17% of MMLU-Pro requests (69 of 411 measured) vs ~2% (7 of 352) for the 1.5B medium helper; small Text mean 1801 ms vs median 963 ms",
+  "not_an_inefficiency": "the 256-token helper limit is part of the frozen protocol and was not changed",
+  "action": "supervisor cap lowered to at most 4 main jobs total until Work decides",
+  "committed_jobs_at_this_point": ["7638311 (running)", "7638315 (queued)"]
+}

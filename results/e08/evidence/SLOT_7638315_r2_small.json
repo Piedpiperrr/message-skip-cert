@@ -1,0 +1,38 @@
+{
+  "utc": "2026-09-20T05:09:19.268170+00:00",
+  "pair": "small",
+  "job_id": "run027",
+  "slot": "r2",
+  "host": "REDACTED",
+  "CUDA_VISIBLE_DEVICES": "0,1",
+  "lanes_worked": [
+    {
+      "lane": 2,
+      "rows_this_job": 597,
+      "complete": true,
+      "stopped": null
+    },
+    {
+      "lane": 4,
+      "rows_this_job": 261,
+      "complete": false,
+      "stopped": "DEADLINE"
+    }
+  ],
+  "counts": {
+    "R": 858,
+    "T": 858,
+    "C": 858,
+    "P": 858
+  },
+  "seconds_per_row_final": 3.424,
+  "mechanical_smoke": "$DATA_DIR/P2_R2_E8_20260920T012544Z/evidence/GPU_MECHANICAL_small_7638315_r2.json",
+  "load_seconds": {
+    "helper": 43.71381862391718,
+    "receiver": 18.15763720101677,
+    "fuser": 7.63285089796409
+  },
+  "CPU_seconds": 2598.643689,
+  "gold_read": false,
+  "scientific_analysis_performed": false
+}

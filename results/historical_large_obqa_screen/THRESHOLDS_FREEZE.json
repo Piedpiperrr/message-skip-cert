@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-14T04:51:13.022079+00:00",
+  "files": {
+    "models/thresholds.json": "b85910200142c03bbdff1f38c2d9bce7535632027ebb4d076a23085b0f295662",
+    "records/fit_scores.jsonl": "80d10afc097c698a9e95806733c1f011bac39754ba20eea9226df6d7d9d0c4f3",
+    "RANDOM_FREEZE.json": "be3cde00ca76d4e0500a5b3c9c5d7a4aaa5997ff827ba6cce8df4534775d1d76",
+    "models/disagreement.joblib": "6c09223762b2c9abd0b8f736946d3c02ce930cde2efc02e4cff18da1b21717d5",
+    "models/correctness_R.joblib": "5b0f3a51809ee594a870003a6639faee01588bc4e89e91a189040a568862ee47",
+    "models/correctness_T.joblib": "2f64538789f54beac6317f8928988653399af85a0073df1ef47f66959d00f4e7",
+    "models/harm.joblib": "827427a3a77ebf9cf7b963538e253eb14b002cd1ac0c1688434414e3185fe25a"
+  },
+  "M": 100,
+  "cal_d_read_by_calibrator": false,
+  "rule": "largest accepted q per family; no acceptance -> fixed Text"
+}

@@ -1,0 +1,17 @@
+ratio,population,n_resamples,n_defined,n_resamples_with_an_under_matched_stratum,boot_mean,ci_lo_2_5,ci_hi_97_5,label
+best_fixed,small/OBQA,2000,2000,0,0.787,0.709,0.873,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+best_fixed,small/ARC,2000,2000,116,0.730,0.592,0.873,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+best_fixed,medium/OBQA,2000,2000,1665,0.998,0.884,1.124,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+best_fixed,medium/ARC,2000,2000,1669,0.880,0.626,1.126,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+best_fixed,large/OBQA,2000,2000,7,1.090,0.946,1.280,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+best_fixed,large/ARC,2000,1995,1872,0.969,0.537,1.500,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+best_fixed,large/MMLU-Pro,2000,2000,545,1.016,0.923,1.108,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+best_fixed,MEDIAN of 7,2000,2000,,0.943,0.800,1.040,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+gain_over_R,small/OBQA,2000,2000,0,0.730,0.640,0.826,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+gain_over_R,small/ARC,2000,2000,116,0.756,0.626,0.904,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+gain_over_R,medium/OBQA,2000,2000,1665,0.934,0.791,1.083,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+gain_over_R,medium/ARC,2000,2000,1669,0.818,0.583,1.058,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+gain_over_R,large/OBQA,2000,2000,7,0.877,0.755,1.005,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+gain_over_R,large/ARC,2000,2000,1872,0.752,0.429,1.084,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+gain_over_R,large/MMLU-Pro,2000,2000,545,0.960,0.866,1.058,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+gain_over_R,MEDIAN of 7,2000,2000,,0.836,0.733,0.937,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision

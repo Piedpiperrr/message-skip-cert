@@ -1,0 +1,11 @@
+{
+  "status": "BLOCKED_MEDIUM_STAGE1",
+  "utc": "2026-09-15T14:54:32.512763+00:00",
+  "protocol_sha256": "c4b85ca697030ca115020fdb959143c8c4901135a5b876cf716bf4b6a4c94bf8",
+  "REPORT_sha256": "dfcfab5285ad670a122af2639b97733d8564105e7c21fc3afcf96ceb5072e21f",
+  "HANDOFF_sha256": "32a5651b14e6c645920ba8f6ca886395926ccd292039577c2cb86243ca75ac2d",
+  "GPU_allocation_hours": 0,
+  "outcomes_observed": false,
+  "MEDIUM_DEPLOY_COUNT": null,
+  "stopped_and_returned_to": "Work"
+}

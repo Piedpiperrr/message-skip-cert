@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-14T17:14:17.440088+00:00",
+  "files": {
+    "records/probe_records.jsonl": "8fed9b7fdf0824b1e922166d559829797fe403a2a884d5d06f61dd46a7739e35",
+    "records/probe_attempts.jsonl": "b4fb16291590ac926ea900194738ede19665e8edf0954ffb6758b2c156cc3c55",
+    "records/reused_probe_index_4208.csv": "7a533330038f129846f2f4abe3035cee429460d8ac41aef1010e75142e48f9ae"
+  },
+  "new_attempts": 7044,
+  "new_success": 7044,
+  "reused": 4208
+}

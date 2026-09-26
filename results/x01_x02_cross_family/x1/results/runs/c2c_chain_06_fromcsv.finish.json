@@ -1,0 +1,44 @@
+{
+  "utc": "2026-09-19T20:43:10.763755+00:00",
+  "script": "$DATA_DIR/P2_R1_XFAM_20260919T095058Z/x1/src/finish_x1_c2c_from_csv.py",
+  "script_sha256": "04596fa44a7b86ea95ccdc0d420350a81e9c5afe22d82c1c15ba878d80252318",
+  "csv": "$DATA_DIR/P2_R1_XFAM_20260919T095058Z/x1/results/runs/c2c_chain_06_work/eval_out/Rosetta_ai2-arc_generate_20260919_203410_cot.csv",
+  "csv_sha256": "26ca97bc75d9b497f662441ce10dabea269c2435253d0d1b117bcb333dda83c9",
+  "env": "../results/runs/c2c_chain_06.env.json",
+  "rows": "../records/work/run/P2R1_XFAM_X1RUN_chain_06.jsonl",
+  "out": "../results/runs/c2c_chain_06_fromcsv.jsonl",
+  "out_sha256": "baef4dab16899506e46ba92943a4ce1433b27080d3c6bb435f038c1c25769ab9",
+  "checks": {
+    "n": 1418,
+    "question_equal": 1418,
+    "logged_choices_equal": 1418,
+    "unlogged_columns_empty": 1418,
+    "evaluator_prompt_equal": 1418,
+    "aligned_input_length_equal": 1418,
+    "receiver_nonpad_ids_equal": 1418,
+    "llama_today_date": [
+      "19 Sep 2026"
+    ],
+    "pad_positions": [
+      27
+    ],
+    "K_gt_4": [
+      {
+        "id": "TIMSS_1995_8_N3",
+        "K": 5,
+        "csv_input_length": 211,
+        "aligned_len": 211,
+        "all_checks": true
+      },
+      {
+        "id": "TIMSS_2003_8_pg29",
+        "K": 5,
+        "csv_input_length": 140,
+        "aligned_len": 140,
+        "all_checks": true
+      }
+    ],
+    "partial_rows": 240,
+    "partial_prefix_identical": true
+  }
+}

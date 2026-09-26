@@ -1,0 +1,15 @@
+{
+  "stage": "P2_V2_BASELINES_FFR_E0_20260913T000052Z",
+  "frozen_utc": "2026-09-13T00:04:34.367927+00:00",
+  "config_sha256": "41239823e728796dd108aae24cc48401ec8093c38aca16f7a30a1352145ef797",
+  "folds_sha256": "ae29f34afa4898f0c4af17be0cc96b23f331015b0283e3cb7777fac328b6535a",
+  "groups_sha256": "918211ded00b51bf1d51c1d99b8458d028e571f0d4a5b56915ec2e0cbcead4c6",
+  "target_counts_sha256": "cc861eb203d757d2bab59a5128bc995c05f8763fbe01258f7907cfb43f85bf5f",
+  "source_manifest_sha256": "ca942d8d1d03b1b8c1b857b1f6578af3a2b28417a89b25cebc37a6287c5ff2fb",
+  "preparation_code_sha256": "070fafc992e1be8eb8390ac90642940aeb251af3617ac5b50b09c6a791b72a90",
+  "new_training_or_refitting_started": false,
+  "new_development_evaluation_started": false,
+  "prior_exposure": "V2 and old baseline development results already exposed; OOF outcomes not computed",
+  "node_training_eligible": false,
+  "not_a_scientific_result": true
+}

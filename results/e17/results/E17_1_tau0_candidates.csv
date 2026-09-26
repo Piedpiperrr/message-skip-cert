@@ -1,0 +1,93 @@
+setting,policy,q,tau,cal_n,cal_k,cal_p,accepted,equals_u0_rule_on_cal
+large/OBQA/Text,large/OBQA/Text [nominal],0.05,0.0,642,1,1.7378106481890661e-13,True,True
+large/OBQA/Text,large/OBQA/Text [nominal],0.1,0.0,642,1,1.7378106481890661e-13,True,True
+large/OBQA/Text,large/OBQA/Text [nominal],0.15,0.0,642,1,1.7378106481890661e-13,True,True
+large/OBQA/Text,large/OBQA/Text [nominal],0.2,0.0,642,1,1.7378106481890661e-13,True,True
+large/OBQA/Text,large/OBQA/Text [nominal],0.25,0.0,642,1,1.7378106481890661e-13,True,True
+large/OBQA/Text,large/OBQA/Text [nominal],0.3,0.0,642,1,1.7378106481890661e-13,True,True
+large/OBQA/Text,large/OBQA/Text [nominal],0.35,0.0,642,1,1.7378106481890661e-13,True,True
+large/OBQA/Text,large/OBQA/Text [nominal],0.4,0.0,642,1,1.7378106481890661e-13,True,True
+large/OBQA/Text,large/OBQA/Text [nominal],0.45,0.0,642,1,1.7378106481890661e-13,True,True
+large/OBQA/C2C,large/OBQA/C2C [nominal],0.05,0.0,642,2,3.0209317677572816e-12,True,True
+large/OBQA/C2C,large/OBQA/C2C [nominal],0.1,0.0,642,2,3.0209317677572816e-12,True,True
+large/OBQA/C2C,large/OBQA/C2C [nominal],0.15,0.0,642,2,3.0209317677572816e-12,True,True
+large/OBQA/C2C,large/OBQA/C2C [nominal],0.2,0.0,642,2,3.0209317677572816e-12,True,True
+large/OBQA/C2C,large/OBQA/C2C [nominal],0.25,0.0,642,2,3.0209317677572816e-12,True,True
+large/OBQA/C2C,large/OBQA/C2C [nominal],0.3,0.0,642,2,3.0209317677572816e-12,True,True
+large/OBQA/C2C,large/OBQA/C2C [nominal],0.35,0.0,642,2,3.0209317677572816e-12,True,True
+large/OBQA/C2C,large/OBQA/C2C [nominal],0.4,0.0,642,2,3.0209317677572816e-12,True,True
+large/OBQA/C2C,large/OBQA/C2C [nominal],0.45,0.0,642,2,3.0209317677572816e-12,True,True
+large/ARC/Text,large/ARC/Text,0.05,0.0,321,0,7.067686831570697e-08,True,True
+large/ARC/Text,large/ARC/Text,0.1,0.0,321,0,7.067686831570697e-08,True,True
+large/ARC/Text,large/ARC/Text,0.15,0.0,321,0,7.067686831570697e-08,True,True
+large/ARC/Text,large/ARC/Text,0.2,0.0,321,0,7.067686831570697e-08,True,True
+large/ARC/Text,large/ARC/Text,0.25,0.0,321,0,7.067686831570697e-08,True,True
+large/ARC/Text,large/ARC/Text,0.3,0.0,321,0,7.067686831570697e-08,True,True
+large/ARC/Text,large/ARC/Text,0.35,0.0,321,0,7.067686831570697e-08,True,True
+large/ARC/Text,large/ARC/Text,0.4,0.0,321,0,7.067686831570697e-08,True,True
+large/ARC/Text,large/ARC/Text,0.45,0.0,321,0,7.067686831570697e-08,True,True
+large/ARC/Text,large/ARC/Text,0.5,0.0,321,0,7.067686831570697e-08,True,True
+large/ARC/Text,large/ARC/Text,0.55,0.0,321,0,7.067686831570697e-08,True,True
+large/ARC/Text,large/ARC/Text,0.6,0.0,321,0,7.067686831570697e-08,True,True
+large/ARC/Text,large/ARC/Text,0.65,0.0,321,0,7.067686831570697e-08,True,True
+large/ARC/Text,large/ARC/Text,0.7,0.0,321,0,7.067686831570697e-08,True,True
+large/ARC/C2C,large/ARC/C2C,0.05,0.0,321,2,1.1320045778432438e-05,True,True
+large/ARC/C2C,large/ARC/C2C,0.1,0.0,321,2,1.1320045778432438e-05,True,True
+large/ARC/C2C,large/ARC/C2C,0.15,0.0,321,2,1.1320045778432438e-05,True,True
+large/ARC/C2C,large/ARC/C2C,0.2,0.0,321,2,1.1320045778432438e-05,True,True
+large/ARC/C2C,large/ARC/C2C,0.25,0.0,321,2,1.1320045778432438e-05,True,True
+large/ARC/C2C,large/ARC/C2C,0.3,0.0,321,2,1.1320045778432438e-05,True,True
+large/ARC/C2C,large/ARC/C2C,0.35,0.0,321,2,1.1320045778432438e-05,True,True
+large/ARC/C2C,large/ARC/C2C,0.4,0.0,321,2,1.1320045778432438e-05,True,True
+large/ARC/C2C,large/ARC/C2C,0.45,0.0,321,2,1.1320045778432438e-05,True,True
+large/ARC/C2C,large/ARC/C2C,0.5,0.0,321,2,1.1320045778432438e-05,True,True
+large/ARC/C2C,large/ARC/C2C,0.55,0.0,321,2,1.1320045778432438e-05,True,True
+large/ARC/C2C,large/ARC/C2C,0.6,0.0,321,2,1.1320045778432438e-05,True,True
+large/ARC/C2C,large/ARC/C2C,0.65,0.0,321,2,1.1320045778432438e-05,True,True
+large/ARC/C2C,large/ARC/C2C,0.7,0.0,321,2,1.1320045778432438e-05,True,True
+large/MMLU-Pro/Text,large/MMLU-Pro/Text,0.05,0.0,1442,14,2.091131197602028e-17,True,True
+large/MMLU-Pro/Text,large/MMLU-Pro/Text,0.1,0.0,1442,14,2.091131197602028e-17,True,True
+large/MMLU-Pro/Text,large/MMLU-Pro/Text,0.15,0.0,1442,14,2.091131197602028e-17,True,True
+large/MMLU-Pro/Text,large/MMLU-Pro/Text,0.2,0.0,1442,14,2.091131197602028e-17,True,True
+large/MMLU-Pro/C2C,large/MMLU-Pro/C2C,0.05,0.0,1442,9,1.9186834234091488e-21,True,True
+large/MMLU-Pro/C2C,large/MMLU-Pro/C2C,0.1,0.0,1442,9,1.9186834234091488e-21,True,True
+large/MMLU-Pro/C2C,large/MMLU-Pro/C2C,0.15,0.0,1442,9,1.9186834234091488e-21,True,True
+large/MMLU-Pro/C2C,large/MMLU-Pro/C2C,0.2,0.0,1442,9,1.9186834234091488e-21,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.55,0.05,0.0,601,7,3.164140331277832e-07,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.55,0.1,0.0,601,7,3.164140331277832e-07,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.55,0.15,0.0,601,7,3.164140331277832e-07,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.55,0.2,0.0,601,7,3.164140331277832e-07,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.55,0.25,0.0,601,7,3.164140331277832e-07,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.55,0.3,0.0,601,7,3.164140331277832e-07,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.55,0.35,0.0,601,7,3.164140331277832e-07,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.55,0.4,0.0,601,7,3.164140331277832e-07,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.55,0.45,0.0,601,7,3.164140331277832e-07,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.50,0.05,0.0,601,7,3.164140331277832e-07,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.50,0.1,0.0,601,7,3.164140331277832e-07,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.50,0.15,0.0,601,7,3.164140331277832e-07,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.50,0.2,0.0,601,7,3.164140331277832e-07,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.50,0.25,0.0,601,7,3.164140331277832e-07,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.50,0.3,0.0,601,7,3.164140331277832e-07,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.50,0.35,0.0,601,7,3.164140331277832e-07,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.50,0.4,0.0,601,7,3.164140331277832e-07,True,True
+medium/OBQA/C2C,medium/OBQA/C2C q=.50,0.45,0.0,601,7,3.164140331277832e-07,True,True
+medium/ARC/C2C,medium/ARC/C2C,0.05,0.0,256,1,2.869604513945975e-05,True,True
+medium/ARC/C2C,medium/ARC/C2C,0.1,0.0,256,1,2.869604513945975e-05,True,True
+medium/ARC/C2C,medium/ARC/C2C,0.15,0.0,256,1,2.869604513945975e-05,True,True
+medium/ARC/C2C,medium/ARC/C2C,0.2,0.0,256,1,2.869604513945975e-05,True,True
+medium/ARC/C2C,medium/ARC/C2C,0.25,0.0,256,1,2.869604513945975e-05,True,True
+medium/ARC/C2C,medium/ARC/C2C,0.3,0.0,256,1,2.869604513945975e-05,True,True
+medium/ARC/C2C,medium/ARC/C2C,0.35,0.0,256,1,2.869604513945975e-05,True,True
+medium/ARC/C2C,medium/ARC/C2C,0.4,0.0,256,1,2.869604513945975e-05,True,True
+medium/ARC/C2C,medium/ARC/C2C,0.45,0.0,256,1,2.869604513945975e-05,True,True
+medium/ARC/C2C,medium/ARC/C2C,0.5,0.0,256,1,2.869604513945975e-05,True,True
+medium/ARC/C2C,medium/ARC/C2C,0.55,0.0,256,1,2.869604513945975e-05,True,True
+large/OBQA/Text+fact,large/OBQA/Text+fact q=.75,0.05,0.0,642,2,3.0209317677572816e-12,True,True
+large/OBQA/Text+fact,large/OBQA/Text+fact q=.75,0.1,0.0,642,2,3.0209317677572816e-12,True,True
+large/OBQA/Text+fact,large/OBQA/Text+fact q=.75,0.15,0.0,642,2,3.0209317677572816e-12,True,True
+large/OBQA/Text+fact,large/OBQA/Text+fact q=.75,0.2,0.0,642,2,3.0209317677572816e-12,True,True
+large/OBQA/Text+fact,large/OBQA/Text+fact q=.75,0.25,0.0,642,2,3.0209317677572816e-12,True,True
+large/OBQA/Text+fact,large/OBQA/Text+fact q=.75,0.3,0.0,642,2,3.0209317677572816e-12,True,True
+large/OBQA/Text+fact,large/OBQA/Text+fact q=.75,0.35,0.0,642,2,3.0209317677572816e-12,True,True
+large/OBQA/Text+fact,large/OBQA/Text+fact q=.75,0.4,0.0,642,2,3.0209317677572816e-12,True,True
+large/OBQA/Text+fact,large/OBQA/Text+fact q=.75,0.45,0.0,642,2,3.0209317677572816e-12,True,True

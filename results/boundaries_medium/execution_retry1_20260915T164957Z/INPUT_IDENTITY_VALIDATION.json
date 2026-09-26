@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-15T19:35:12.386047+00:00",
+  "actual_action_inputs_checked": 16878,
+  "actual_probe_inputs_checked": 5626,
+  "Text_full_native_message_protocol": true,
+  "C2C_receiver_tokenizer_and_KV_shapes": true,
+  "no_KV_reuse_probe_input_identity": true,
+  "new_model_forwards": 0,
+  "project_answers_generated": 0
+}

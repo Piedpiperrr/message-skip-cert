@@ -1,0 +1,25 @@
+{
+  "utc": "2026-09-15T19:32:54.355047+00:00",
+  "job_id": "run002",
+  "actions": 16878,
+  "probes": 5626,
+  "attempts": 22504,
+  "retries": 0,
+  "gold_read": false,
+  "wall_seconds": 9263.145951071056,
+  "CPU_seconds": 8985.717917,
+  "files": {
+    "actions/arc_cal.jsonl": "5979d7091a91ce51b3c5699fe5868d9af75a89b4dbfb4241a68abb64abcd4eb6",
+    "actions/arc_dev.jsonl": "eba39bb583acf2328a49516b9122ad3f7f1766e9e1e6b806e531265519a1d934",
+    "actions/arc_fit.jsonl": "9d7c1b0475af4c26302eb707b0e465b2551057eca130373f3a06af0cfbe383e7",
+    "actions/obqa_cal.jsonl": "0a9e2a184d441584c5be169db94579831cb62ee71f9e7a1493461822ac78b22b",
+    "actions/obqa_dev.jsonl": "804759b23aa9ce072bc9a0fae6620c00fbb9883595a60acb16e14f6b31921240",
+    "actions/obqa_fit.jsonl": "f329e017f94676a9f8b75b7083a28a184781c8b284ab9fa48f76ba9ea424544d",
+    "probes/arc_cal.jsonl": "16a1cdf86911693fa9ac5d0274ade739b15775562cd63e6d2123a44e441e366a",
+    "probes/arc_dev.jsonl": "49b272aaf7ddd14489c180a7a7c1f617257ba3ee7ef15d9a8f1e99fa539eafc0",
+    "probes/arc_fit.jsonl": "4c27f36503b18b0dc0f15796cc1bd2706f451cb1e8949ce7c5374d43a0999c52",
+    "probes/obqa_cal.jsonl": "dcfccdb950fe487f387162b0ab3288c82b83a4e4213614b756a85e441b732577",
+    "probes/obqa_dev.jsonl": "8b2054b11fe4ce582e0f17944432c1bd71ef85848aca90cb96c4a96d526e7e25",
+    "probes/obqa_fit.jsonl": "f16db56d753f9377baa47d47526b9be7356766331392c67fb4c2c88ecd12c48e"
+  }
+}

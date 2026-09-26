@@ -1,0 +1,2 @@
+reference,N,paired_mean_saving_ms,paired_median_saving_ms,CI95_low_ms,CI95_high_ms,seed,resamples,unit,indices_sha256,interval
+C2C,2641,23.345869179772386,-37.3051599599421,14.540823772002156,32.163306376579854,0,2000,paired question,2fcad3d595752f2d0f0ace2dd7e295e996e569ba87af4767761954e6cb682612,percentile mean; exposed panel descriptive

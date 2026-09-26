@@ -1,0 +1,12 @@
+{
+  "steady_descriptive_probe_plus_controller_ms": 54.50349495852909,
+  "steady_descriptive_net_vs_empirical_risk_oracle_ms": -11.511569138216586,
+  "steady_homogeneous_gap_break_even_coverage": 0.8178253437166089,
+  "empirical_panel_max_risk_005_coverage": 0.5703125,
+  "oracle_DP_validation": {
+    "gross_ms": 42.9919258203125,
+    "routes": 60,
+    "disagreements": 3
+  },
+  "no_actual_E2E_or_confidence_guarantee": true
+}

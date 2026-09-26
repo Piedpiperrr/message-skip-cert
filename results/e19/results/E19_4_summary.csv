@@ -1,0 +1,3 @@
+predictor,prospective_correct,prospective_n,prospective_settings,nonprospective_correct,nonprospective_n,nonprospective_settings,label
+E15-1 fit-split plug-in (frozen e15_1.py),2,2,strong-helper/OBQA/Text;strong-helper/ARC/Text,2,2,X3-Llama8B/OBQA/Text;X3-Llama8B/ARC/Text,"POST-HOC re-analysis (E19, PREREG_E19.md); descriptive; does not change any deployed policy"
+E17-5 binormal (dev AUROC; certify iff P(certify) >= .5),2,2,strong-helper/OBQA/Text (E16-5);strong-helper/ARC/Text (E16-5),0,0,,"POST-HOC re-analysis (E19, PREREG_E19.md); descriptive; does not change any deployed policy"

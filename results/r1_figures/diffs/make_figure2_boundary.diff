@@ -1,0 +1,12 @@
+--- repro_original/figure2_source/make_figure2_boundary.py	2026-09-18 21:29:05.000000000 +0000
++++ figure2_source/make_figure2_boundary.py	2026-09-19 21:53:34.000000000 +0000
+@@ -97,6 +97,9 @@
+         else:
+             ax.add_patch(Rectangle(**rect, fc=DEPLOY, ec="none"))
+             t(x + CW / 2 - 0.066, yc, "deploy", fs=6.9, color="white", weight="bold")
++            if (name, j) == ("large", 0):  # R1: superscript double dagger after "deploy" (large / OBQA / Text), clear of the badge
++                ax.annotate("‡", xy=(1, 0), xycoords=ax.texts[-1], xytext=(-0.22, 5.14), textcoords="offset points",
++                            ha="left", va="baseline", fontsize=4.8, color="white", weight="bold")
+             badge(x + CW - 0.098, yc, c)
+     t(XC, yc, count, fs=7.6, weight="bold", ha="left")
+ 

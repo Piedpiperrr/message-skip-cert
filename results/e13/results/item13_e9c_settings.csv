@@ -1,0 +1,21 @@
+row,setting,pair,benchmark,reference,helper_prefill_variant,descriptive,in_hypothesis_H,label
+1,small/obqa/T,small,obqa,Text,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+2,small/obqa/C,small,obqa,C2C,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+3,small/arc/T,small,arc,Text,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+4,small/arc/C,small,arc,C2C,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+5,medium/obqa/T,medium,obqa,Text,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+6,medium/obqa/C,medium,obqa,C2C,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+7,medium/arc/T,medium,arc,Text,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+8,medium/arc/C,medium,arc,C2C,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+9,large/obqa/T,large,obqa,Text,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+10,large/obqa/C,large,obqa,C2C,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+11,large/arc/T,large,arc,Text,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+12,large/arc/C,large,arc,C2C,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+13,large/mmlu_pro/T,large,mmlu_pro,Text,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+14,large/mmlu_pro/C,large,mmlu_pro,C2C,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+15,small/mmlu_pro/T,small,mmlu_pro,Text,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+16,small/mmlu_pro/C,small,mmlu_pro,C2C,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+17,medium/mmlu_pro/T,medium,mmlu_pro,Text,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+18,medium/mmlu_pro/C,medium,mmlu_pro,C2C,plain,False,True,POST-HOC follow-up added after the E13 preregistration hash; counting only
+19,large/obqa/Text+fact,large,obqa,Text+fact,plain,False,False,POST-HOC follow-up added after the E13 preregistration hash; counting only
+20,"large/obqa/Text+fact [with-fact prefill, descriptive]",large,obqa,Text+fact,with_fact,True,False,POST-HOC follow-up added after the E13 preregistration hash; counting only

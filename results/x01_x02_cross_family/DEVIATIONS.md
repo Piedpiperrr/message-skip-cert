@@ -1,0 +1,72 @@
+# P2_R1_XFAM deviations and changes (X2)
+
+- **C1 (approved A1, A2): new code, recorded as diffs in `diffs/`.**
+  - A1 probe: `src/run_x2.py::probe` builds the input as `apply_chat_template(tokenize=True, add_generation_prompt=True)` + prefix IDs, instead of render → retokenize + prefix. For Qwen the paper asserted these are equal. The Qwen-specific role-marker asserts are dropped. Forward, label rule, renormalization and u are the paper's (MMLU stage-1 `native_runtime.probe`, BND `run_boundaries.probe_split`).
+  - A2 driver: receiver-only runner as in `P2_R1_EXP/src/e4_null.py` (R via `runtime.Runner.request`, Text-reading via `T2TReceiverBundle.consume`). Per-dataset receiver formatters are switched per row, as the paper's adapters patch them.
+- **C2 (2026-09-19T19:06Z): note on the frozen file.** `PROTOCOL_FREEZE.md` §9 says the hashes were appended by `src/freeze_hashes.py`; they were appended by an inline script run on the login node. The listed hashes are the ones computed then. The freeze itself is SHA-256 1bc9fae492732810ca73d54dc364ab4566c7f402b476c655bd650b736d5369e4 (`PROTOCOL_FREEZE.sha256`).
+- **C3 (supplementary, stated in the freeze):** the validation also covers 4 MMLU-Pro fit questions, beyond the required 8 OBQA + 8 ARC.
+- **C4: job 1 (7637624, debug, compute-node), 19:07–19:14Z.**
+  - Validation: **PASS 20/20** (`results/validation/VALIDATION.json`).
+  - OLMo smoke test: 0 runtime errors; INVALID R 2/16, INVALID Text 1/16, so the rule passes. Gold was not read.
+- **C5: full-run plan, recorded before submission (freeze §8).**
+  - Job `P2R1_XFAM_X2`: debug, 2 nodes, walltime 00:55:00, 8 single-GPU chains, driver deadline = walltime − 4 min.
+  - Shards `records/work/run/chain_00..07.jsonl` (`PLAN.json`) cover all 17,267 rows, in paper order.
+  - Sizing: the smoke warm latencies times a 1.3 safety factor, i.e. 0.55 s per OBQA/ARC row and 1.15 s per MMLU-Pro row. That is ≈ 34 min of requests per chain, plus model load.
+- **C6: E, X1 option B prepared (not run; no Llama files; no gold).**
+  - `x1_optionB/unified_evaluator_xfam.py` is a patched copy of the clean official evaluator (commit 113c3a9). The clone itself is unchanged. Diff: `diffs/X1B_unified_evaluator_local_rows_and_arc_labels.diff`.
+  - Patch 1: when `eval.local_rows_jsonl` is set, openbookqa/ai2-arc rows are read from our population rows. `answerKey` is left empty.
+  - Patch 2: for ARC items with K≠4, the instruction lists the displayed labels, as the paper's P2-8 v2 ARC prompt does. It is a no-op for K = 4.
+  - `x1_optionB/verify_prompts.py` → `x1_optionB/PROMPT_IDENTITY.json`: receiver-side (Qwen3-0.6B) user message, rendered text and token IDs are byte-identical to ours for OBQA 4,208/4,208 and ARC 1,418/1,418, including 6/6 K≠4 rows.
+  - The Llama-side aligned input cannot be checked without the gated tokenizer.
+- **C7: X2 full run and analysis.**
+  - Job 7637635 (debug, 2 nodes: compute-node, compute-node) ran 19:15–19:42Z, walltime 00:26:22, exit 0. All 8 chains exited 0 with 17,267/17,267 rows, 0 runtime errors, and no deadline stop.
+  - `src/analyze_x2.py` ran as frozen: output hashes → certification and routes (hashed 19:43:17Z) → gold. Summary: `results/analysis/X2_SUMMARY.md`.
+
+## X1 (Llama-3.2-1B → Qwen3-0.6B; OBQA and ARC)
+
+- **C8: access and downloads (2026-09-19T20:02Z).**
+  - Access granted: `config.json` downloads for user.
+  - Downloaded `meta-llama/Llama-3.2-1B-Instruct@9213176726f5` (10 files, 2.48 GB; `original/` skipped) and `nics-efc/C2C_Fuser@f01fc325/qwen3_0.6b+llam3.2_1b_Fuser` (59 files, 1.0 GB) to `$DATA_ROOT/hf_cache/hub`. Manifest: `x1/manifests/X1_DOWNLOAD_MANIFEST.json`.
+- **C9: new code (`x1/src/`); diffs in `x1/diffs/`.**
+  - `run_x1_helper.py`: the paper's `T2THelperBundle.run` unchanged. For Llama, `apply_chat_template` gets a fixed `date_string="26 Jul 2024"`.
+  - `run_x1_receiver.py`: the receiver half of the X2 driver, with the Qwen3-0.6B generation config asserted equal to the paper's frozen small config.
+  - `run_x1_c2c.py`: config-only wrapper around the option-B evaluator overlay.
+  - `analyze_x1.py`: the frozen analysis.
+- **C10: X1 freeze.** `x1/PROTOCOL_FREEZE_X1.md`, SHA-256 3b2d12c9345c61e79b28eab69b110da47de21924ecccf24d8709d6a968c034d0, frozen 20:11:05Z before any X1 output.
+- **C11: job X1-1 (7637746, debug, compute-node), submitted 20:11:38Z.** Validations run in parallel; the smoke test runs only if all pass.
+- **C12: job X1-1 attempt 1 (7637746) did not reach the D2 comparison; loader fixed before any X1 output (2026-09-19T20:20Z).**
+  - Attempt 1: helper validation **PASS 16/16** and receiver validation **PASS 16/16**, bit for bit against the saved small-pair records.
+  - The D2 C2C evaluator skipped all 8 rows ("processed 0 samples, skipped 8"). It skips any example whose `answerKey` is not A–D, and the loader had set it to "".
+  - Fix: `x1_optionB/unified_evaluator_xfam.py` now sets a constant placeholder `answerKey="A"` (not gold; only the evaluator's own `is_correct` uses it, and we never do). The overlay SHA-256 goes from 341b2bb9… (cited in `PROTOCOL_FREEZE_X1.md` §3) to 73d7ffcc47506f59629ed3b08c94b013e133e20267c60e229fcd33d0c540e770. Diff: `diffs/X1B_unified_evaluator_local_rows_and_arc_labels_v2.diff`.
+  - Prompt identity was re-verified with the new overlay: OBQA 4,208/4,208, ARC 1,418/1,418, K≠4 6/6 (`x1_optionB/PROMPT_IDENTITY_v2.json`).
+  - The frozen file is unchanged. No X1 output existed: the smoke test had not run.
+  - Attempt-1 validation outputs were moved to `x1/results/validation_attempt1_7637746/`. Job X1-1 was resubmitted unchanged.
+- **C13: job X1-1 attempt 2 (7637752, debug, compute-node), 20:15–20:19Z.**
+  - Validations: helper **PASS 16/16**, receiver **PASS 16/16**, D2 C2C **PASS** (OBQA 8/8, ARC 8/8).
+  - Smoke: 0 runtime errors; INVALID Text 2/16, INVALID C2C 0/16, so it passes. BOS count 1 on all 16 rows; date "26 Jul 2024". Gold was not read.
+- **C14: X1 full-run plan, recorded before submission.**
+  - Job `P2R1_XFAM_X1RUN`: debug, 2 nodes, walltime 00:45:00, 7 single-GPU chains (`x1/records/work/run/P2R1_XFAM_X1RUN_PLAN.json`):
+    - chains 00–03: Text (Llama helper, then receiver reading), 5,626 rows in 4 contiguous shards;
+    - chains 04–05: C2C OBQA, 4,208 rows in 2 shards;
+    - chain 06: C2C ARC, 1,418 rows.
+  - Sizing from smoke warm latencies times 1.3: 0.8 s per Text row (helper 355 + receiver 250 ms) and 0.7 s per C2C row (evaluator 532 ms).
+- **C15: X1 full run 7637758 (debug, 2 nodes, 20:20–20:37Z; MPIEXEC_EXIT=0). ARC C2C mapping check too strict; ARC C2C records recovered from the evaluator's CSV (CPU, no rerun).**
+  - Chains 00–05 exited 0.
+  - Chain 06 (ARC C2C): the evaluator exited 0 after 1,418/1,418 rows (0 skipped, 839.5 s). Then the harness assertion in `run_x1_c2c.py:63` failed on TIMSS_1995_8_N3 after 240 records had been written.
+    - Cause: the official evaluator's ai2-arc CSV writer logs choices A–D only, so column E is empty for the 2 K=5 rows (TIMSS_1995_8_N3, TIMSS_2003_8_pg29).
+    - Smoke and D2 only covered K=4 rows.
+  - Action:
+    - Moved the partial output (240 rows, sha e1d80885…) to `x1/results/runs_archive_7637758/c2c_chain_06_partial240.jsonl` (log copied there).
+    - New CPU script `x1/src/finish_x1_c2c_from_csv.py` (sha 04596fa44a7b86ea…; diffs `x1/diffs/finish_x1_c2c_from_csv_vs_run_x1_c2c.diff` and `_v1_to_v2.diff`).
+    - It builds records with the same code as `run_x1_c2c.py` lines 58–68. Only the mapping check differs: question equal; logged choices equal; unlogged columns empty; the evaluator's own prompt equal to ours; and, through the evaluator's own `prepare_model_inputs` with the aligner, the aligned receiver length equals the CSV `cot_input_length` and the receiver's non-pad IDs equal our rendered prompt IDs.
+    - v1 used a plain receiver token count, which ignores the 27 alignment pad positions. It failed on the first row before writing anything; the failing copy is archived.
+  - Result: ARC 1,418/1,418 on every check, including both K=5 rows (aligned lengths 211 and 140 equal the CSV). The first 240 records are identical to the archived partial.
+    - Output: `x1/results/runs/c2c_chain_06_fromcsv.jsonl` (sha baef4dab16899506…).
+  - The same checks, run read-only on OBQA chains 04/05: 2,104/2,104 each, and the records are identical to the harness outputs (`x1/notes/X1_RUN_CHECKS.json`).
+- **C16 (anomaly, no change): C2C Llama-side date.** The official TokenAligner renders the Llama chat template without `date_string`, so the teacher header carries the run date: "Today Date: 19 Sep 2026" on all 5,626 C2C rows (27 template pad positions on every row).
+  - Unlike C1 (fixed "26 Jul 2024"), the freeze did not pin this. Reproducing the X1 C2C outputs requires the same date.
+  - Kept as run, per the frozen pre-registration.
+- **C17: completeness before analysis** (`x1/notes/X1_RUN_CHECKS.json`, no gold):
+  - helper, Text and C2C 5,626/5,626 rows each, keys equal the population, 0 runtime errors;
+  - BOS≠1: 0; helper outputs at the 256-token cap: 0;
+  - smoke vs full run on the 16 shared rows: helper, Text and C2C raw outputs 16/16 identical.

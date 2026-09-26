@@ -1,0 +1,36 @@
+{
+  "dataset_revision": "388097ea7776314e93a529163e0fea805b8a6454",
+  "local_path": "$DATA_DIR/c2c_reproduction_assets/datasets/allenai--openbookqa",
+  "config": "additional",
+  "coverage": {
+    "cal": {
+      "n": 1366,
+      "missing_id": 0,
+      "missing_fact1": 0,
+      "question_stem_mismatch": 0,
+      "examples_missing": [],
+      "examples_nofact": [],
+      "stem_mismatch_examples": []
+    },
+    "dev": {
+      "n": 742,
+      "missing_id": 0,
+      "missing_fact1": 0,
+      "question_stem_mismatch": 0,
+      "examples_missing": [],
+      "examples_nofact": [],
+      "stem_mismatch_examples": []
+    },
+    "fit16": {
+      "n": 16,
+      "missing_id": 0,
+      "missing_fact1": 0,
+      "question_stem_mismatch": 0,
+      "examples_missing": [],
+      "examples_nofact": [],
+      "stem_mismatch_examples": []
+    }
+  },
+  "fact1_chars_mean": 53.19307400379507,
+  "fact1_chars_max": 142
+}

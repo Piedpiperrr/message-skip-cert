@@ -1,0 +1,13 @@
+{
+  "utc": "2026-09-14T07:09:18.080214+00:00",
+  "files": {
+    "records/probe_fit.jsonl": "42a6a994130e8cb29cf343fd7e0f4d26fb2f40b8df86130ae48e70e3dbedab5d",
+    "records/probe_cal.jsonl": "e8c96694f104d23835629bc075b2a96694040ee96636aebf68c850b1ddf77c5d",
+    "records/probe_dev.jsonl": "b79b269ab1687af61a9e23c47ddb266b2cb177db3d4ad658c8622615bd6c86d7",
+    "records/probe_records.jsonl": "2ecc6bd323be2868415042ff346c1d500ff98b796c25ea0f73ad755d234f1a7b",
+    "records/probe_attempts.jsonl": "2a4411736db9c8ee51c7f28aa2b267c4a2abb8d072bfde0aee5c05d1a689c9db"
+  },
+  "attempts": 4208,
+  "success": 4208,
+  "extra_forward": 0
+}

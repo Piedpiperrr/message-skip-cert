@@ -1,0 +1,14 @@
+{
+  "event": "HEAD_COMPLETE",
+  "key": "OOF/obqa/semantic/3/large/y_C",
+  "kind": "LR",
+  "n": 2773,
+  "positive": 2213,
+  "iterations": 29,
+  "warnings": [],
+  "CPU_seconds": 0.06465599999999938,
+  "protocol_sha256": "41239823e728796dd108aae24cc48401ec8093c38aca16f7a30a1352145ef797",
+  "model_sha256": "3074b76de0ae02768e7a89e59e49d9134c7d61e7d677ffc370d2d9ec0d1553bf",
+  "input_hash": "ba270b9f7ff8031427cd0d9b51b1cbeb",
+  "numerical_probability_check": true
+}

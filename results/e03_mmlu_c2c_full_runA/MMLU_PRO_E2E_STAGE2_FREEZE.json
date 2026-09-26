@@ -1,0 +1,160 @@
+{
+  "task": "P2_R1_E3_MMLU_C2C_FULL",
+  "status": "PASS",
+  "utc": "2026-09-19T06:55:07.605250+00:00",
+  "MMLU_PRO_STAGE2_RESULTS_OBSERVED": false,
+  "parent_Stage1_protocol_freeze_sha256": "c6300cff73ef096c81fb07cdab3eef68050265fec97ec2fcecfbf94e25a38624",
+  "Stage1_deployment_sha256": "df1be1b8cdad3222d5f9a5b25259597ff69316df73fc9078698f91f42c8a564a",
+  "deployments": {
+    "C": {
+      "reference": "C2C",
+      "q": 0.4,
+      "threshold": 3.838539123535156e-05,
+      "comparison": "u<=threshold; no panel quantile"
+    }
+  },
+  "panel_source_sha256": "848be2786457c2aa169281a7f2fc33b95988b5f6753bd830085e5894882642cd",
+  "panel_manifest_sha256": "25b7df13296bc35dd2ae01b42957bb725e5c7349fed9c821d4b01b5f459baed9",
+  "models": {
+    "helper": {
+      "repo_id": "Qwen/Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct",
+      "aggregate_sha256": "baa5817884f95989990a5c2be02e50488f690e087fb47c2af0de06f2ab17affb",
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f"
+    },
+    "receiver": {
+      "repo_id": "Qwen/Qwen3-8B",
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+      "aggregate_sha256": "3c2a639fb8fd70d88a7e96e86fe0d9fb96b84985858a254d413e52f1dbfa713b",
+      "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+    },
+    "fuser": {
+      "repo_id": "nics-efc/C2C_Fuser",
+      "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d",
+      "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final",
+      "aggregate_sha256": "21a7dbc33ae6e137da61cf535bcef21af24ef44f0393b44c27ff7ec5600f506d",
+      "chat_template_sha256": null
+    }
+  },
+  "model_file_hash_index_sha256": "92a8bb38e3c11f58c35130bd625d10277986707d7c2a88de899239dd58d3c819",
+  "source_hashes": {
+    "$DATA_DIR/P2_10_20260911T122423Z/runtime.py": "a6888586a8bd5f13c62ccc17079f4bd86e34bfa1ada2d804a4d502dfec726514",
+    "$DATA_DIR/P2_10_20260911T122423Z/legacy_methods.py": "91b03c146f56fe151dc399c4202411974afb61c4a195080cf8c54abd584bffdf",
+    "$DATA_DIR/P2_10_20260911T122423Z/protocol_min.py": "23c702e16ff5b2bb164ab25ef4e35f4105ac81becb83747c138d222faab2cd35",
+    "$DATA_DIR/P2_10_20260911T122423Z/arc_protocol.py": "b88840e37086c82dc6d485fe6ed3777bd99feb9718a47c901b4d4a5ad74ddbbe",
+    "$DATA_DIR/P2_10_20260911T122423Z/arc_runtime_adapter.py": "c6f6127037ec6e3a75aad6c5ccc78e005c95916fd57b89261684e15206d79f76",
+    "$DATA_DIR/P2_10_20260911T122423Z/scoring.py": "00bce157f5fb173e17a516994db7e8a8d051ce391b9b1f82506ff62138a95d16",
+    "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/baseline/multi_stage.py": "083ec6e789d11c935540bd659a7d73157b2d41adbb9e71ba10f008027536f538",
+    "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/train/__init__.py": "a0de932905b571c5ea35b02c56de6a103d69df295773e7fd932858d7d59d8a30",
+    "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/train/model_utils.py": "ed3d7fabdefaec563952a56bc49ef1483552471f238dc3615270faebe754f239",
+    "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/train/dataset_adapters.py": "00faa0949bed670a3dc2fbedbe3d7c53c4b63d4593701021dbc9544963415999",
+    "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/model/projector.py": "d4426933c1d788adb3ca4cc5e8ad75ba504b5b2e7d0e996c22a19866869238f6",
+    "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/model/ablation_projector.py": "e3c42cadf7d185c99af338d03deac77687e8436127fb250f28724677350e746a",
+    "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/model/wrapper.py": "26f5fbab8400f26a29e9a1343ee80698f496e74eb4971f0f835641560e49c72d",
+    "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/model/oracle.py": "e1bdf85e6a73d956519353d0a1893887e04b15e6250b76aee15b1698b1e45f78",
+    "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/model/aligner.py": "3aeae7edd24c75a501e0a48375ad6ef9fbd7c0200c9358ff549b34ecd198b9a6",
+    "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/model/sampling.py": "4d035e588efc2a14bc199cbfd643a8d811ac6600392374b8497d108df938abf0",
+    "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/utils/registry.py": "8a58f2c584366bef3b1eeb1327f55c12cc931f33e416d12e6374387f49b0049f",
+    "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/utils/core.py": "a07bb883da3f0abb9a4a51ecd4e841e249146edcb4b6cf2db9cde16805ae5ebd",
+    "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/utils/evaluate.py": "b341338aecf1cf07a5cb61664b8dac5f2ff96b32622e54eb37b32604deeddf16",
+    "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/utils/matheval.py": "1baf90d1c36221bdfcc29d923d9d275191731a232f2e2fa7036946615202eb27",
+    "$DATA_DIR/P2_5_20260910T072811Z/query_features.py": "1140468f1f0de884e680bba1ad2fb00c4bfc6fcd4409510194c8057f03aca173",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/MMLU_PRO_STAGE1_PROTOCOL_FREEZE.json": "c6300cff73ef096c81fb07cdab3eef68050265fec97ec2fcecfbf94e25a38624",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/MODEL_SOURCE_INDEX.json": "92a8bb38e3c11f58c35130bd625d10277986707d7c2a88de899239dd58d3c819",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/deployments/deployment_configs.json": "df1be1b8cdad3222d5f9a5b25259597ff69316df73fc9078698f91f42c8a564a",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/src/native_runtime.py": "f9158aef4dfab7b90a6233b8d1304dc26281240ba02d2b72211bd138095c4361",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/splits/dev_groups.json": "848be2786457c2aa169281a7f2fc33b95988b5f6753bd830085e5894882642cd",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/protocol/QUERY_IDENTITIES.json": "b2d32b3a896605a81228777c7b130ef48004616ddf33e2255cdcb2a08b544515",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/inputs/queries_only.jsonl": "a777b14d54e0773a0f3a7182ea8fde22c06f7111707aeefd51ea0cfda9a7fff6",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/FINAL_STATE.json": "4d9d328c18216da6d65f86be243455d55acc5d0dd41473b9cf13253f785a3d1d",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/ARTIFACT_SHA256SUMS": "82b915adf3ba9819e60d475271ef58407153b975d687fec522558d39a3b0a7f3",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/2/actions/dev.jsonl": "1b916bbe760f20d2daaed77fe4ef1d2639dd4b449f44362466efe75038358db5",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/2/probes/dev.jsonl": "e0b8e2546961927068cd3ecd3de1eb27fe3403c3274cf86ac33032a63429c67d"
+  },
+  "Stage1_native_runtime_file_unchanged": true,
+  "model_and_generation_semantics": "exact Stage1 dynamic-K R/C2C and FP32 ProbeMax, V2 parser, thinking off, receiver64 greedy",
+  "topology": {
+    "GPUs": 2,
+    "helper": "cuda:0",
+    "receiver_fuser": "cuda:1",
+    "batch": 1,
+    "one_residency": true,
+    "same_allocation": true,
+    "node": "exclusive node-queue 8-GPU node; GPUs 2-7 idle"
+  },
+  "execution_order": {
+    "question_order": "frozen Stage1 dev_groups representative order (all development group representatives)",
+    "arms": [
+      "fixed_C",
+      "policy_C"
+    ],
+    "rotation": "alternating per question ordinal: even fixed_C first, odd policy_C first",
+    "schedule_sha256": "aa57ab7b6da20ca4430c0441c32300fa8300162663d4583b65b637fa5ed90067"
+  },
+  "expected_counts": {
+    "questions": 2641,
+    "complete_action_requests": 5282,
+    "each_arm": 2641,
+    "online_ProbeMax": 2641,
+    "online_ProbeMax_each_policy": 2641,
+    "warmup": 0,
+    "synthetic_forwards": 0,
+    "retries": 0
+  },
+  "timing_boundary": "authoritative outer perf_counter: input preparation and entry hooks; independent unchanged online ProbeMax with tokenization/transfer/full prefill/last-position lm_head/FP32 label aggregation and diagnostics; selector; complete selected native R/Text/C2C generation/decode/V2 parser/hook removal; final cleanup and two-GPU sync. Pre-request drain sync precedes timer. Disk logging/JSON serialization, gold/identity analysis and startup are excluded; startup reported separately. No KV/prefill reuse, no shared policy probe.",
+  "bootstrap": {
+    "seed": 0,
+    "resamples": 2000,
+    "N": 2641,
+    "unit": "question-level paired fixed-policy saving",
+    "indices": "protocol/bootstrap_indices.npz",
+    "indices_sha256": "2fcad3d595752f2d0f0ace2dd7e295e996e569ba87af4767761954e6cb682612",
+    "generator": "numpy.random.default_rng(0).integers(0,2641,size=(2000,2641))",
+    "interval": "numpy.quantile(mean_savings,[.025,.975],method=linear); descriptive percentile 95%",
+    "numpy_version": "2.2.6"
+  },
+  "positive_gate": "E2E_POSITIVE iff paired mean(fixed-policy)>0 and descriptive bootstrap 95% lower>0; otherwise E2E_UNCERTAIN_OR_NEGATIVE; not population guarantee",
+  "identity": "route C compares same-round fixed C2C; route R compares saved Stage1 native R; raw/parsed/tokens retained; differences reported without reruns; gold only linked after complete replay",
+  "reporting": "records only inside the job; retain first formal request and all invalid/long/mismatched items; analysis later on the login node",
+  "positioning": "E3 reviewer request: full development-population E2E for the C2C reference; exposed development data; not sealed/test confirmation",
+  "budget": {
+    "max_formal_PBS_jobs": 1,
+    "queue": "REDACTED",
+    "select": 1,
+    "replay_GPUs": 2,
+    "walltime": "01:00:00",
+    "resubmission_allowed": false
+  },
+  "PBS_script_sha256": "433996952e3b96d4c3bd3d16f79b56a72b4330bdf56ef8646ef587de374f2c10",
+  "manuscript_or_supplement_changes": false,
+  "frozen_files": {
+    "DATASET_SOURCE_INDEX.json": "d2962a487f9f373c7d3ff2eada141b9b886f3a218ee40166d4dcc075917089e0",
+    "MODEL_SOURCE_INDEX.json": "92a8bb38e3c11f58c35130bd625d10277986707d7c2a88de899239dd58d3c819",
+    "RUNTIME_SOURCE_INDEX.json": "5bb03f4a7386d624fc1168145c2e7cee5eaba5afe067957375fc9f87f8bf0ef0",
+    "SOURCE_INDEX.json": "74815beb00bb5abec685e8bc088653f89214b802c5432eef1e26021a8092d9b5",
+    "evidence/CPU_PREFLIGHT.json": "7c0036b99d54344975153c53f276be166f65b3892603fcdd54f3525948416269",
+    "inputs/panel_ids.json": "2589d4268f22fbc9ee1e291d4c72e5327f955871df533d80c605abdb78a5e27a",
+    "inputs/panel_queries.jsonl": "350b846c741a5331e44427ac82de899adc2af3acc1e51ec92e9e5f4cd920bc0e",
+    "protocol/ARM_SCHEDULE.json": "aa57ab7b6da20ca4430c0441c32300fa8300162663d4583b65b637fa5ed90067",
+    "protocol/PANEL_MANIFEST.json": "25b7df13296bc35dd2ae01b42957bb725e5c7349fed9c821d4b01b5f459baed9",
+    "protocol/Stage1_deployment_configs.json": "df1be1b8cdad3222d5f9a5b25259597ff69316df73fc9078698f91f42c8a564a",
+    "protocol/bootstrap_indices.npz": "2fcad3d595752f2d0f0ace2dd7e295e996e569ba87af4767761954e6cb682612",
+    "protocol/generation_configs.json": "152066a86357f54d88d9ab83cedcd3b073ccab0eb5b33284497c26c366272676",
+    "protocol/label_token_sets.json": "6020e8383b77d175a0c9873113715c030570ff971f02f1387ca8a272041a5285",
+    "protocol/large_native_config.json": "41468da80c368f4e7c691230e0b0b5c548942559089f09672063395cf3b80d8f",
+    "protocol/prefix_ids.json": "ce218af11405dd5893ab42576be6829b89fc5ca3857c64b66337cb0d8f88418a",
+    "protocol/receiver_prompt.py": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66",
+    "protocol/scoring_v2.py": "d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9",
+    "run_mmlu_stage2.pbs": "433996952e3b96d4c3bd3d16f79b56a72b4330bdf56ef8646ef587de374f2c10",
+    "src/analyze.py": "e6cb93f2b752a60deec8df395860a6154cd4d5240d0500c932aa88ecbb093aa5",
+    "src/common.py": "22d7ad10115b10b1e38595285619e60d9bfb166e3aed640bf8db9b8b44ea0d1b",
+    "src/execute.py": "fdd917aaacaf7e0a3e6bec5be70e5fca1b5f8255c9d5f87d47d8a092aee8de16",
+    "src/guard_checks.py": "7a358035b85616b83984e7ea52ca216fd143895c2b38a8e61ff8352a4f15403a",
+    "src/native_runtime.py": "f9158aef4dfab7b90a6233b8d1304dc26281240ba02d2b72211bd138095c4361",
+    "src/pbs_entry.py": "bbb169e86c073ed2dc980a104ffd86238f478b668bb3bc28c36fde98fe54b4c2",
+    "src/prepare_freeze.py": "9d26d74a983865ac4af721a3a6f414435c67e40eabf2aeba476829568ebf528d",
+    "src/submit.py": "0e49a8e8d6413c9f79fffb54928be4b741a94824c58bb4ce1dc4fd948d96b74d"
+  }
+}

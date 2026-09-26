@@ -1,0 +1,15 @@
+{
+  "phase": "COMPLETE_STOPPED",
+  "job_id": "run011",
+  "utc": "2026-09-14T07:23:17.798046+00:00",
+  "budget_closed": true,
+  "actual_counts": {
+    "probes": 4208,
+    "fits": 1,
+    "new_calibration": 60,
+    "new_dev_evaluations": 2226
+  },
+  "CPU_charged": 362.10589300000004,
+  "all_remaining_execution_allowances": 0,
+  "unused_CPU_reserve_not_reusable": 537.894107
+}

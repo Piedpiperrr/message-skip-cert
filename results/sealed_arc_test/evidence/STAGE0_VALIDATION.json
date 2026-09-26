@@ -1,0 +1,25 @@
+{
+  "utc": "2026-09-14T21:31:36.903157+00:00",
+  "source_files": 155,
+  "all_weights_sha256": true,
+  "native_adapter_byte_identical": true,
+  "receiver_prompt_byte_identical": true,
+  "actual_thresholds_copied": {
+    "T": {
+      "q": 0.95,
+      "threshold": 0.01800704002380371,
+      "source": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/deployments/large_arc_T.json",
+      "source_sha256": "30028f08c5423f324ec9762e9a91d2228bcbd0ad4decd2ea067a3c2f615a865c"
+    },
+    "C": {
+      "q": 0.9,
+      "threshold": 0.0007095932960510254,
+      "source": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/deployments/large_arc_C.json",
+      "source_sha256": "a3391054c494b06edab5e67df330283ea611f34db5cdf2c14953c593221a18b5"
+    }
+  },
+  "test_content_opened": false,
+  "schema_not_inspected": true,
+  "throughput_estimate_seconds": 2617.910288937579,
+  "AST_valid": true
+}

@@ -1,0 +1,9 @@
+{
+  "utc": "2026-09-15T19:37:10.149646+00:00",
+  "archive": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/WORK_HANDOFF.tar.gz",
+  "bytes": 7627919,
+  "sha256": "074917147048a85125427a700115e498383981a0db3dff72091cfe1f2fb02db9",
+  "weights_excluded": true,
+  "all_generated_results_included": true,
+  "status": "COMPLETE_MEDIUM_STAGE1"
+}

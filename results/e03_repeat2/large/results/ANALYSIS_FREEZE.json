@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-19T09:31:37.965865+00:00",
+  "files": {
+    "summary/component_vs_e2e.csv": "efa34490302b2897473096ccd0b139cf8935e725e6292ff5cc8dfffd74d87974",
+    "summary/paired_bootstrap.csv": "2e5e1edac547491574c8f28758e60ba3b9dca7a0e015eefe1e6acdecaee247bc",
+    "summary/e2e_summary.csv": "8d98a3f20bcbab378fec3e394e3f13e8e7ce15714d63ad43b65330734b20ad3b",
+    "summary/output_diagnostics.csv": "41319a1f14088442be710310b23ec7dca758cb29b4ce20a0f63466651f56f89c",
+    "summary/paired_per_question.csv": "564422897ddee41512d77e714c4e69ba8557634117b1843fcacef79afc7ca33d",
+    "summary/arc_bootstrap_indices.npz": "d05b2b29d55fe872bc7ca472b6b1bae669cd6e24a6e6d7ffbf02ee78e0a77b07",
+    "summary/obqa_bootstrap_indices.npz": "03b4a79fa2e91a4121ff970be8365a1851a041b16b0abb07c34ade98157fd602",
+    "summary/diagnostics.json": "6325d9ffe6c2db47518e1a8c98d6908070fcad30e168f6d1ad8eb9ed6132c995",
+    "records/paired_e2e_512.jsonl": "3dd336e9ab041432476145f1204b86d738eaad29ef61b8a9b4e091ecc9306d55",
+    "NUMERICAL_VALIDATION.json": "1d5dee0ee62b51a74f99577d5932f0c97595a39063a05326c51ce27657562f9a"
+  }
+}

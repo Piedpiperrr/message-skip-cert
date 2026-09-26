@@ -1,0 +1,25 @@
+{
+  "utc": "2026-09-14T05:46:23.857668+00:00",
+  "files": {
+    "subsets/R128_r4.json": "47ca90105b7095e36105453b7b7c0d481a7a8a2876c10a0c0fd957fe4359b223",
+    "subsets/R32_r3.json": "ba608c576e40687f08eb9da5336df722cfba98c3c8765acf298caa5e013fb394",
+    "subsets/R128_r1.json": "0c55eba028ba6d466df936ae30f447a5e6fd6af0968d9021b542aa20458de43e",
+    "subsets/R128_r3.json": "9ddd9fb5fa050081b925a2f41b5148455908b25ce577c086a3ea912230fc2629",
+    "subsets/R32_r2.json": "b0354532861fd8e497c955c38dbbe0f5225113ddcfe9d3cb62a3923b2f4006d4",
+    "subsets/R128_r2.json": "e59cb11bb932f02a4bdcf49b4171048fd6872e9119faee81f139780d559661a4",
+    "subsets/rule.json": "381e472e5f40c02f94bfa510eb57eabd5e815a1554915405dc0f0619cdd1338d",
+    "subsets/R512_r4.json": "31343571c999153c2388602cf591193fa25d944217002d35d77cf9e433116208",
+    "subsets/R512_r0.json": "9b2af5b52a736f465c942022244c5319db095d88a1f941bcfa6063cc25e18877",
+    "subsets/R32_r0.json": "ca78cdf2ce2fe606f85813ca533c0bc9903d9790f245f3984cd345469fbbb282",
+    "subsets/R32_r4.json": "88fdda04ec59d7c6f4e176b74256b3d733c986d8209541f5cd98bfa10bc867ca",
+    "subsets/R128_r0.json": "12c0bd6bb9fc881db2e10bd97cb35dd3b27d79b841114295b64d1cb9f2540860",
+    "subsets/R32_r1.json": "c8ebc75b63fd9d58f4fd9f244923fa67225e5082130ed50b81dd0ddaaca7b34b",
+    "subsets/R512_r3.json": "75c48abdaf55bce5656ea8122dbcd1c1b93c7cc193a424f5caf41f8cfe09fe25",
+    "subsets/R512_r1.json": "618deb86b6078f639caf90f23fcb5df11c336f658c370d0d349a7d3e39bb347d",
+    "subsets/R512_r2.json": "0e2758cc67054c81374ef69aa3a6a02179fa82e4afdd9759bd3d3477f3f5b9cb"
+  },
+  "subset_lists": 15,
+  "subset_label_statistics_read": false,
+  "subset_label_interfaces_created": false,
+  "pre_freeze_schema_exposure": "Two historical baseline_fit example rows were viewed before materializing subsets; rule already fully user-specified; disclosed separately."
+}

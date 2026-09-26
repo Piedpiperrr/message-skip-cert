@@ -1,0 +1,39 @@
+{
+  "utc": "2026-09-14T23:10:23.639224+00:00",
+  "active_directory": "$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/paper",
+  "task_paper_symlink": "$DATA_DIR/P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/paper",
+  "edits": [
+    {
+      "path": "$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/paper/reference_preserving.tex",
+      "before_sha256": "80dcc9c8f6abf54e0baabc3aed443f94908d90003d8e1d2ecd773d11d006b31d",
+      "after_sha256": "b8b683c7b583db0f03d40e4399362cf049acd7cc447096e23f10cc414c90873a"
+    },
+    {
+      "path": "$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/paper/sealed_arc_confirmation.tex",
+      "before_sha256": null,
+      "after_sha256": "cb36440b1c15cbe7430d86f573d7f6f465fce72222c2bae156f4fbf754bad418",
+      "initial_after_sha256": "08899d5f31e245ec7b270e83c9aff877e35b984376c51d737a91b3794aacc74d",
+      "editorial_clarification": "Distinguish binomial intervals from paired bootstrap intervals; no numerical or scientific rule changes."
+    },
+    {
+      "path": "$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/paper/boundary_cost_limitations.tex",
+      "before_sha256": "e25dcd607d345773991609eb2fcb0287edb6e1ed6e8cf865461781b4225940ca",
+      "after_sha256": "d41170e409de7d7ded259f950c55f1d6df86d79cfbbec8b13d703ce43bdd94ae"
+    },
+    {
+      "path": "$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/paper/contribution_positioning.tex",
+      "before_sha256": "a47f248b157aea516a8c968a0211bce5bd67472897e91f3812442b9246f775b4",
+      "after_sha256": "f9826ec5bd21af22b69a3537f1c42ba26d6a1ef617ba568d2f11cd4cf6953aef"
+    },
+    {
+      "path": "$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/paper/e2e_appendix.tex",
+      "before_sha256": "b47f82ffc3add7e700ccfc11f672884d514e47ca18b6e93f1c10b8c478920723",
+      "after_sha256": "92f11f479328c80a9fce1a711c5ea72742c5e7dbc888a1b765e6d6a8ab9ac343",
+      "editorial_clarification": "Historical development appendix tense updated; original development numerical results unchanged."
+    }
+  ],
+  "historical_snapshot": "evidence/manuscript_snapshot",
+  "same_actual_manuscript": true,
+  "editorial_clarification_utc": "2026-09-14T23:10:58.985384+00:00",
+  "final_editorial_utc": "2026-09-14T23:14:16.434149+00:00"
+}

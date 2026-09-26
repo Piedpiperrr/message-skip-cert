@@ -1,0 +1,50 @@
+check,expected,observed,status,source
+"(i) sealed large/ARC/Text policy, parser V2 as executed: omitted/changed","[1100, 20]","[1100, 20]",PASS,$DATA_DIR/P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/records/e2e_requests.jsonl
+(i) sealed large/ARC/Text policy: same as summary/primary_sealed.csv,"[1100, 20]","[1100, 20]",PASS,$DATA_DIR/P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/summary/primary_sealed.csv
+"(i) sealed large/ARC/C2C policy, parser V2 as executed: omitted/changed","[1047, 11]","[1047, 11]",PASS,$DATA_DIR/P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/records/e2e_requests.jsonl
+(i) sealed large/ARC/C2C policy: same as summary/primary_sealed.csv,"[1047, 11]","[1047, 11]",PASS,$DATA_DIR/P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/summary/primary_sealed.csv
+(i) sealed: stored runtime parse == re-parse with frozen V2 (4688 outputs),0,0,PASS,$DATA_DIR/P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/records/e2e_requests.jsonl; $DATA_DIR/P2_SCORING_V2_20260912T191445Z/scoring_v2.py
+(i) V2 parser sha256 = sealed frozen_config parser_sha256,"""d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9""","""d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9""",PASS,$DATA_DIR/P2_SCORING_V2_20260912T191445Z/scoring_v2.py
+"(ii) dev large/OBQA/Text: omitted/changed, frozen record vs recomputed","[572, 19]","[572, 19]",PASS,$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/summary/main_dev.csv
+(ii) large/OBQA/Text: threshold in deployment json,0.001170039176940918,0.001170039176940918,PASS,deployments json
+"(ii) cal large/OBQA/Text: omitted/changed, stored calibration ledger vs recomputed","[1064, 18]","[1064, 18]",PASS,"stored calibration ledgers (common_r1.ledgers(), E6_LEDGER.csv)"
+"(ii) dev large/OBQA/C2C: omitted/changed, frozen record vs recomputed","[572, 13]","[572, 13]",PASS,$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/summary/main_dev.csv
+(ii) large/OBQA/C2C: threshold in deployment json,0.001170039176940918,0.001170039176940918,PASS,deployments json
+"(ii) cal large/OBQA/C2C: omitted/changed, stored calibration ledger vs recomputed","[1064, 22]","[1064, 22]",PASS,"stored calibration ledgers (common_r1.ledgers(), E6_LEDGER.csv)"
+"(ii) dev large/ARC/Text: omitted/changed, frozen record vs recomputed","[284, 9]","[284, 9]",PASS,$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/summary/main_dev.csv
+(ii) large/ARC/Text: threshold in deployment json,0.01800704002380371,0.01800704002380371,PASS,deployments json
+"(ii) cal large/ARC/Text: omitted/changed, stored calibration ledger vs recomputed","[422, 4]","[422, 4]",PASS,"stored calibration ledgers (common_r1.ledgers(), E6_LEDGER.csv)"
+"(ii) dev large/ARC/C2C: omitted/changed, frozen record vs recomputed","[270, 3]","[270, 3]",PASS,$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/summary/main_dev.csv
+(ii) large/ARC/C2C: threshold in deployment json,0.0007095932960510254,0.0007095932960510254,PASS,deployments json
+"(ii) cal large/ARC/C2C: omitted/changed, stored calibration ledger vs recomputed","[404, 7]","[404, 7]",PASS,"stored calibration ledgers (common_r1.ledgers(), E6_LEDGER.csv)"
+"(ii) dev medium/OBQA/C2C q=.55: omitted/changed, frozen record vs recomputed","[390, 11]","[390, 11]",PASS,$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/summary/compact_summary.csv
+(ii) medium/OBQA/C2C q=.55: threshold in frozen record,1.3113021850585938e-06,1.3113021850585938e-06,PASS,$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/summary/compact_summary.csv
+"(ii) cal medium/OBQA/C2C q=.55: omitted/changed, stored calibration ledger vs recomputed","[739, 19]","[739, 19]",PASS,"stored calibration ledgers (common_r1.ledgers(), E6_LEDGER.csv)"
+"(ii) dev medium/OBQA/C2C q=.50: omitted/changed, frozen record vs recomputed","[355, 7]","[355, 7]",PASS,$DATA_DIR/P2_R2_CPU_20260919T220412Z/followup/results/f1c_medium_obqa_C2C_dev.csv
+(ii) medium/OBQA/C2C q=.50: threshold in frozen record,2.384185791015625e-07,2.384185791015625e-07,PASS,$DATA_DIR/P2_R2_CPU_20260919T220412Z/followup/results/f1c_medium_obqa_C2C_dev.csv
+"(ii) cal medium/OBQA/C2C q=.50: omitted/changed, stored calibration ledger vs recomputed","[665, 10]","[665, 10]",PASS,"stored calibration ledgers (common_r1.ledgers(), E6_LEDGER.csv)"
+"(ii) dev medium/ARC/C2C: omitted/changed, frozen record vs recomputed","[189, 4]","[189, 4]",PASS,$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/summary/compact_summary.csv
+(ii) medium/ARC/C2C: threshold in frozen record,3.5762786865234375e-07,3.5762786865234375e-07,PASS,$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/summary/compact_summary.csv
+"(ii) cal medium/ARC/C2C: omitted/changed, stored calibration ledger vs recomputed","[290, 1]","[290, 1]",PASS,"stored calibration ledgers (common_r1.ledgers(), E6_LEDGER.csv)"
+"(ii) dev large/MMLU-Pro/Text: omitted/changed, frozen record vs recomputed","[1069, 40]","[1069, 40]",PASS,$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/summary/compact_table.csv
+(ii) large/MMLU-Pro/Text: threshold in frozen record,3.838539123535156e-05,3.838539123535156e-05,PASS,$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/summary/compact_table.csv
+"(ii) cal large/MMLU-Pro/Text: omitted/changed, stored calibration ledger vs recomputed","[2358, 67]","[2358, 67]",PASS,"stored calibration ledgers (common_r1.ledgers(), E6_LEDGER.csv)"
+"(ii) dev large/MMLU-Pro/C2C: omitted/changed, frozen record vs recomputed","[1069, 37]","[1069, 37]",PASS,$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/summary/compact_table.csv
+(ii) large/MMLU-Pro/C2C: threshold in frozen record,3.838539123535156e-05,3.838539123535156e-05,PASS,$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/summary/compact_table.csv
+"(ii) cal large/MMLU-Pro/C2C: omitted/changed, stored calibration ledger vs recomputed","[2358, 75]","[2358, 75]",PASS,"stored calibration ledgers (common_r1.ledgers(), E6_LEDGER.csv)"
+"(ii) dev large/OBQA/Text+fact: omitted/changed, frozen record vs recomputed","[536, 13]","[536, 13]",PASS,$DATA_DIR/P2_R2_GPU_20260919T220941Z/e6/analysis/E6_SUMMARY.csv
+(ii) large/OBQA/Text+fact: threshold in deployment json,0.0002611875534057617,0.0002611875534057617,PASS,deployments json
+"(ii) cal large/OBQA/Text+fact: omitted/changed, stored calibration ledger vs recomputed","[999, 22]","[999, 22]",PASS,"stored calibration ledgers (common_r1.ledgers(), E6_LEDGER.csv)"
+"(ii) no row mixes None and ""INVALID"" as the unparseable label (V2 labels as loaded)",[],[],PASS,e11_common.load
+(iii) large/ARC/C2C cal: official-port counts == E11b_two_conventions.csv,"{""cal_N"": 448, ""all_applicable"": true, ""cal_o_R_differs"": 0, ""cal_o_ref_differs"": 25, ""cal_d_label_differs"": 21, ""cal_rows_label_differs"": 25, ""cal_INVALID_R_official"": 0, ""cal_INVALID_ref_official"": 24}","{""cal_N"": 448, ""all_applicable"": true, ""cal_o_R_differs"": 0, ""cal_o_ref_differs"": 25, ""cal_d_label_differs"": 21, ""cal_rows_label_differs"": 25, ""cal_INVALID_R_official"": 0, ""cal_INVALID_ref_official"": 24}",PASS,$DATA_DIR/P2_R4_E11_20260920T224016Z/results/E11b_two_conventions.csv
+"(iii) large/ARC/C2C cal: 20-candidate OFFICIAL ledger (n,k) == E11b_grid.csv","[[321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [338, 20], [359, 21], [385, 22], [404, 27], [422, 31], [448, 42]]","[[321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [321, 19], [338, 20], [359, 21], [385, 22], [404, 27], [422, 31], [448, 42]]",PASS,$DATA_DIR/P2_R4_E11_20260920T224016Z/results/E11b_grid.csv
+(iii) large/ARC/C2C cal: per-row official labels (2 x 448) == E5-a follow-up f1b_differences.csv,0,0,PASS,$DATA_DIR/P2_R2_CPU_20260919T220412Z/followup/results/f1b_differences.csv
+(iii) official extractor source sha256 == E5-a record,"""b341338aecf1cf07a5cb61664b8dac5f2ff96b32622e54eb37b32604deeddf16""","""b341338aecf1cf07a5cb61664b8dac5f2ff96b32622e54eb37b32604deeddf16""",PASS,$DATA_DIR/c2c_reproduction_assets/official_C2C/rosetta/utils/evaluate.py
+E9b large/OBQA/Text: omitted/changed == E9B_RESULTS.json,"[595, 12]","[595, 12]",PASS,$DATA_DIR/P2_R3_E9BC_20260920T061042Z/analysis/E9B_RESULTS.json
+E9b large/OBQA/C2C: omitted/changed == E9B_RESULTS.json,"[595, 13]","[595, 13]",PASS,$DATA_DIR/P2_R3_E9BC_20260920T061042Z/analysis/E9B_RESULTS.json
+E9b medium/OBQA/C2C q=.55: omitted/changed == E9B_RESULTS.json,"[388, 8]","[388, 8]",PASS,$DATA_DIR/P2_R3_E9BC_20260920T061042Z/analysis/E9B_RESULTS.json
+E9b medium/OBQA/C2C q=.50: omitted/changed == E9B_RESULTS.json,"[346, 6]","[346, 6]",PASS,$DATA_DIR/P2_R3_E9BC_20260920T061042Z/analysis/E9B_RESULTS.json
+E9b large/OBQA/Text+fact: omitted/changed == E9B_RESULTS.json,"[558, 16]","[558, 16]",PASS,$DATA_DIR/P2_R3_E9BC_20260920T061042Z/analysis/E9B_RESULTS.json
+known-before value: large/OBQA dev u=0 count / N,"[354, 742]","[354, 742]",PASS,"paper (PREREG_E14.md ""Known before"")"
+known-before value: large/ARC dev u=0 count / N,"[217, 299]","[217, 299]",PASS,"paper (PREREG_E14.md ""Known before"")"
+known-before value: large/MMLU-Pro fit (groups) u=0 count / N,"[713, 3000]","[713, 3000]",PASS,"paper (PREREG_E14.md ""Known before"")"

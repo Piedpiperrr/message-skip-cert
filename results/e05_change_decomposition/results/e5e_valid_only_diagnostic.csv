@@ -1,0 +1,8 @@
+setting,N_cal,N_cal_valid_only,valid_only_deployed_q,valid_only_accepted_q,N_dev,N_dev_valid_only,dev_disagreement_valid_only,dev_disagreements_valid_only,dev_disagreement_all,valid_only_AUROC,valid_only_dev_coverage_pct,deployable,label
+X1-Llama/OBQA/Text,1366,1282,0.0,none,742,703,0.2248,158/703,0.2574,0.726,,False,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/OBQA/C2C,1366,1210,0.0,none,742,670,0.5358,359/670,0.5755,0.648,,False,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/ARC/Text,448,384,0.0,none,299,263,0.2357,62/263,0.2943,0.683,,False,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/ARC/C2C,448,378,0.0,none,299,251,0.5060,127/251,0.5819,0.637,,False,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/OBQA/Text,1366,1260,0.45,0.15;0.2;0.25;0.3;0.35;0.4;0.45,742,698,0.1877,131/698,0.2318,0.855,44.4,False,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/ARC/Text,448,386,0.4,0.4,299,258,0.1550,40/258,0.2241,0.881,34.1,False,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/MMLU-Pro/Text,6000,4611,0.05,0.05,2641,2016,0.3348,675/2016,0.4211,0.701,3.9,False,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision

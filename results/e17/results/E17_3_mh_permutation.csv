@@ -1,0 +1,4 @@
+item,OR_MH_dev_vs_cal,CI_lo,CI_hi,n_settings_d_cal_lt_d_dev,n_settings,label,contrast,n_a,n_b,settings_per_question,mean_x_a,mean_x_b,statistic,n_perm,n_abs_ge,p_two_sided,p_two_sided_plain,SYSTEMATIC,reverse_direction_significant
+MH common OR (dev vs cal),0.9797239121590298,0.8714275471554795,1.1014787714588241,5,10,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy",,,,,,,,,,,,,
+permutation cal vs dev,,,,,,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy",dev - cal,448,299,[10],0.2700892857142857,0.2668896321070234,-0.0031996536072623205,10000,8232,0.8232176782321767,0.8232,False,False
+permutation fit vs cal (control),,,,,,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy",cal - fit,670,448,[10],0.2725373134328359,0.2700892857142857,-0.002448027718550183,10000,8278,0.8278172182781722,0.8278,,

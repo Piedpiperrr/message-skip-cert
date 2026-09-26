@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-15T21:02:54.811582+00:00",
+  "real_scheduler_fixture": true,
+  "wrong_allocation_rejected": true,
+  "cgroup_legacy_nonfatal": true,
+  "rotation_64_64": true,
+  "unchanged_native_runtime": true,
+  "model_imports": 0,
+  "model_forwards": 0
+}

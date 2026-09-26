@@ -1,0 +1,14 @@
+{
+  "event": "HEAD_COMPLETE",
+  "key": "OOF/arc/word/3/large/f_C",
+  "kind": "LR",
+  "n": 895,
+  "positive": 37,
+  "iterations": 11,
+  "warnings": [],
+  "CPU_seconds": 0.007971000000001283,
+  "protocol_sha256": "41239823e728796dd108aae24cc48401ec8093c38aca16f7a30a1352145ef797",
+  "model_sha256": "a5f43c020621c227ae8bb2d09d405ebb9b9d4b58fca0f5d6784d20b7d80cac32",
+  "input_hash": "2313a7fb10aff41b694b713f8d54d1d3",
+  "numerical_probability_check": true
+}

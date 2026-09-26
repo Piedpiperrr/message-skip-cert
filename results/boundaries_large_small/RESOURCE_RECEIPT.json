@@ -1,0 +1,149 @@
+{
+  "utc": "2026-09-14T17:21:28.230577+00:00",
+  "status": "COMPLETE",
+  "job_id": "run018",
+  "job_state": "F",
+  "exit_status": 0,
+  "account": "project",
+  "queue": "REDACTED",
+  "GPU_allocation_count": 1,
+  "requested_seconds": 1800,
+  "requested_GPU_allocation_hours": 0.5,
+  "actual_allocation_seconds_stime_to_obittime": 580.0,
+  "actual_GPU_allocation_hours": 0.16111111111111112,
+  "scheduler_walltime_seconds": 575,
+  "CPU_supervised_seconds": 323.45149200000003,
+  "CPU_preparation_reporting_reserve": 150,
+  "CPU_charged_seconds": 473.45149200000003,
+  "CPU_cap": 900,
+  "CPU_scheduler_seconds_not_additive": 323,
+  "CPU_threads": 1,
+  "scheduler_memory": "4673036kb",
+  "CPU_phases": [
+    {
+      "args": [
+        "run_boundaries.py"
+      ],
+      "log": "$DATA_DIR/runs/iclr2027_p2/run019/run_boundaries.py.log",
+      "started_utc": "2026-09-14T17:05:16.819022+00:00",
+      "CPU_limit": 733,
+      "exit_code": 0,
+      "CPU_seconds": 312.176107,
+      "wall_seconds": 551.068329334259,
+      "ended_utc": "2026-09-14T17:14:27.887368+00:00"
+    },
+    {
+      "args": [
+        "analyze.py"
+      ],
+      "log": "$DATA_DIR/runs/iclr2027_p2/run019/analyze.py.log",
+      "started_utc": "2026-09-14T17:14:27.892012+00:00",
+      "CPU_limit": 421,
+      "exit_code": 0,
+      "CPU_seconds": 6.960192000000006,
+      "wall_seconds": 8.219662189483643,
+      "ended_utc": "2026-09-14T17:14:36.111693+00:00"
+    },
+    {
+      "args": [
+        "render.py"
+      ],
+      "log": "$DATA_DIR/runs/iclr2027_p2/run019/render.py.log",
+      "started_utc": "2026-09-14T17:14:36.116240+00:00",
+      "CPU_limit": 414,
+      "exit_code": 0,
+      "CPU_seconds": 2.952312999999947,
+      "wall_seconds": 10.163001775741577,
+      "ended_utc": "2026-09-14T17:14:46.279271+00:00"
+    }
+  ],
+  "counts": {
+    "attempts": 7044,
+    "success": 7044,
+    "new_cal": 140,
+    "new_evaluations": 3422
+  },
+  "reused_probe_records": 4208,
+  "reused_tests": 20,
+  "reused_evaluations": 742,
+  "fits": 0,
+  "helper": 0,
+  "answer_generation": 0,
+  "new_protocol_requests": 0,
+  "new_downloads_or_installs": 0,
+  "sbank": {
+    "charge": null,
+    "status": "NA: no matched facility charge receipt; not zero charge",
+    "queries": [
+      {
+        "command": [
+          "sbank-list-jobs",
+          "-p",
+          "project",
+          "-r",
+          "ClusterB",
+          "-j",
+          "185806",
+          "--no-totals"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "error: identifier(s) not found 185806\n"
+      },
+      {
+        "command": [
+          "sbank-list-jobs",
+          "-p",
+          "project",
+          "-r",
+          "ClusterB",
+          "-j",
+          "run018",
+          "--no-totals"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "error: identifier(s) not found run018\n"
+      }
+    ]
+  },
+  "this_budget_closed": true,
+  "all_old_budgets_closed": true,
+  "remaining_submissions": 0,
+  "unused_probe_attempts_not_reusable": 0,
+  "unused_CPU_not_reusable": 426.54850799999997,
+  "unused_wall_seconds_not_reusable": 1220.0,
+  "model_startup": {
+    "large": {
+      "tokenizer_mapping_check_wall_seconds": 1.9801625250838697,
+      "model_load_wall_seconds": 152.58615321898833,
+      "torch": "2.6.0+cu124",
+      "transformers": "4.52.4",
+      "GPU": "_CudaDeviceProperties(name='NVIDIA A100-SXM4-40GB', major=8, minor=0, total_memory=40441MB, multi_processor_count=108, uuid=5987fde9-b207-331e-62ec-40d01391e053, L2_cache_size=40MB)",
+      "CUDA_VISIBLE_DEVICES": null,
+      "model_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+      "dtype": "bfloat16",
+      "attention": "sdpa",
+      "receiver_only": true,
+      "helper_loaded": false,
+      "generation": false
+    },
+    "small": {
+      "tokenizer_mapping_check_wall_seconds": 1.4572546919807792,
+      "model_load_wall_seconds": 12.548994357930496,
+      "torch": "2.6.0+cu124",
+      "transformers": "4.52.4",
+      "GPU": "_CudaDeviceProperties(name='NVIDIA A100-SXM4-40GB', major=8, minor=0, total_memory=40441MB, multi_processor_count=108, uuid=5987fde9-b207-331e-62ec-40d01391e053, L2_cache_size=40MB)",
+      "CUDA_VISIBLE_DEVICES": null,
+      "model_path": "$DATA_DIR/c2c_reproduction_assets/models/Qwen--Qwen3-0.6B",
+      "dtype": "bfloat16",
+      "attention": "sdpa",
+      "receiver_only": true,
+      "helper_loaded": false,
+      "generation": false
+    }
+  },
+  "new_GPU_prefill_projection_event_seconds": 241.35524266433717,
+  "startup_CPU_separate": null,
+  "startup_CPU_note": "included in supervised phase CPU; separate startup CPU not instrumented"
+}

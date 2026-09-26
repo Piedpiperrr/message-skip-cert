@@ -1,0 +1,140 @@
+# E16 pre-registration (P2_R7_E16_20260921T184114Z)
+
+=== PRE-REGISTRATION (verbatim) ===
+General. Thresholds, parser V2, prompts, decoding (greedy, bf16, batch 1, receiver <=64 new tokens, helper <=256),
+ProbeMax prefix and label-token rules, alpha=.05, delta=.001, 20-candidate grid: all unchanged. Two unparseable answers
+count as agreement; exactly one unparseable counts as a change (paper convention). CP = two-sided 95% Clopper-Pearson.
+Selection rule (unchanged): test all 20 candidates, deploy the largest accepted q; fallback if none is accepted.
+"Frozen tau" = the numeric threshold stored in the original certificate; never recompute quantiles on a new population.
+Single prespecified test: exact binomial, H0 rho >= .05, one frozen threshold, one test per policy.
+Every number below is reported whatever it is.
+
+E16-1 Llama-3.1-8B frozen policies out of sample.
+ Populations: (a) the 744 held-out OBQA questions ("held out; an earlier project stage scored small-pair outputs on
+ them; never used with this receiver"); (b) the 1,172 ARC-Challenge test questions ("used before only for the large
+ pair's sealed test; never used with this receiver"). Helper messages: the stored Qwen2.5-7B Text messages.
+ Policies: OBQA/Text and ARC/Text at the numeric tau in the X3 certificates (q=.60 and q=.70).
+ Report per policy: N, omitted n and coverage n/N next to the dev coverage (438/742, 206/299), changed k, k/n with CP,
+ single-test p, always-omit change rate (disagreement over all N) next to cal and dev disagreement, R/Text/policy
+ accuracy and paired-bootstrap Delta acc (policy - Text; 2,000, seed 0), INVALID counts, u == 0 count, and the change
+ rate under the official C2C extraction as well (k/n [CP]; A-D items only).
+ Writing rule (Sec 4.5 out-of-sample paragraph, the abstract's Llama sentence, Fig. 2 marker, provenance table):
+  - CP upper < 5% -> "The frozen Llama-3.1-8B policy passes an out-of-sample test: it omits Text on X% of N held-out
+    questions and changes k/n = r% [CP]" (coverage stated next to the development coverage whatever it is).
+  - CP lower > 5% -> "fails the out-of-sample test (r% [CP])"; the abstract sentence says the Llama certificate did not
+    hold out of sample.
+  - otherwise -> "inconclusive: r% [CP]"; the abstract sentence says it holds on development data only.
+  Also state whether p <= .001 and p <= .025.
+
+E16-2 medium/ARC/C2C frozen policy on the 1,172 ARC test questions ("never used with this pair"). Same report as
+ E16-1 (reference = C2C; Delta acc = policy - C2C). Writing rule: same three branches, in Sec 4.5, Fig. 2 marker and
+ provenance table (no abstract sentence is specific to this policy).
+Out-of-sample summary rule (E16-1 and E16-2 together with the earlier sealed/held-out tests): if every test passes,
+ the abstract and Contribution 4 say all frozen out-of-sample tests have CP upper < 5% and list the policies; if any
+ does not pass, that sentence becomes "X of Y frozen out-of-sample tests have CP upper < 5%" and names the others.
+
+E16-3 Probe numerics.
+ Scope: all 23 settings whose receiver is a Qwen3 model: 14 main + 4 MMLU-Pro small/medium + Text+fact + the 4 X1
+     settings (Qwen3-0.6B receiver; their u is the small pair's). 9 are certified, 14 are fallbacks.
+     Receivers x benchmarks: Qwen3-0.6B, Qwen3-1.7B, Qwen3-8B x OBQA, ARC, MMLU-Pro; splits fit, cal, dev.
+ (a) Tie-breaking with a non-saturating score. From the deployed bf16 prefill (re-run only if G4 = logits not stored;
+     V4 must pass), keep the option-label logits l (the bf16 lm_head outputs, upcast). Score m = logsumexp over the
+     non-top labels minus logsumexp over all labels, in float64 (log of u without saturation); second score -gap with
+     gap = l_(1) - l_(2). Report per receiver x benchmark: share of u == 0 (FP32, as deployed), max exp(m) among
+     u == 0, min exp(m) among u > 0, min gap among u == 0, number of tied values of m and of gap. For all 23 settings
+     rerun the full 20-candidate procedure with s = m and with s = -gap (fit quantiles of s, same grid). Report deployed
+     q or fallback, dev coverage and changed/omitted with CP, and (certified settings only) the Jaccard index of the
+     dev omitted set vs the original policy.
+ (b) FP32 prefill. Load the receiver in float32 (weights, activations, attention; disable TF32:
+     torch.backends.cuda.matmul.allow_tf32=False, torch.backends.cudnn.allow_tf32=False); same prompts and label rule;
+     u32 = 1 - max softmax in FP32 as in the deployed code. Report per receiver x benchmark: share of u32 == 0.
+     For the certified policies (large OBQA Text [nominal], large OBQA C2C [nominal], large ARC Text, large ARC C2C,
+     large MMLU-Pro Text, large MMLU-Pro C2C, medium OBQA C2C at q=.55 and q=.50, medium ARC C2C, Text+fact q=.75):
+     (i) frozen numeric tau applied to u32: cal k/n/p of that candidate, dev coverage and changed/omitted with CP,
+     Jaccard vs original dev omitted set; (ii) full 20-candidate procedure with fp32 fit quantiles: deployed q or
+     fallback. Also for the 14 fallback settings among the 23: does any become certified under (ii)?
+     Timing tiers (part of this pre-registration): (1) cal+dev for the certified policies' receivers x benchmarks;
+     (2) their fit splits; (3) fallback-only receivers x benchmarks. If a token-count extrapolation shows the budget
+     cannot cover all tiers, tiers are dropped from (3) upward; dropped parts are reported as "not computed", and the
+     (b) sentence then names only the settings checked.
+ Definition: a MATERIAL CHANGE is any of: a certified policy's frozen tau is no longer accepted on cal under u32;
+     the full procedure (ii) gives a different deployed q or a fallback for any certified setting; a fallback setting
+     becomes certified; dev coverage at the frozen tau moves by more than 5 percentage points.
+ Writing rule (a): the deployed q is identical under both m and -gap for every setting, and every certified setting
+     has Jaccard >= .95 and dev coverage within 2 points -> "breaking the ties with a non-saturating score changes no
+     decision"; otherwise name each change. (b): no material change -> "recomputing the probe in FP32 changes no
+     certification decision for the N settings checked" with the u32 == 0 share range and max coverage shift (N = the
+     settings actually computed); any material change -> name the setting(s) in Sec 7 and state that certificates are
+     specific to the serving numerics. The sentence "u = 0 means the other labels have total probability below about
+     2^-24" is written iff max exp(m) among u == 0 <= 2^-23 and min exp(m) among u > 0 >= 2^-25; otherwise the paper
+     reports the observed ranges instead.
+
+E16-4 Llama-3.1-8B latency replay. Runs only if the driver change is <= 30 changed lines and touches no timing or
+ routing code, and the modified driver reproduces 16 stored X3 rows byte-identically.
+ E3 protocol on the second configuration: frozen 128-question OBQA and ARC development panels, arms = fixed Text and
+ the frozen policy, interleaved as in E3, no warm-up, batch 1, helper on GPU0 and receiver on GPU1, probe paid on every
+ policy request, omitted queries get a fresh receiver request. One run. Report mean paired saving (fixed - policy),
+ 95% paired bootstrap (2,000, seed 0) with (a) all requests and (b) excluding the first request after model load;
+ class from interval (b) as in E3 (lower > 0 -> positive; upper < 0 -> negative; else inconclusive); median saving;
+ share of queries slower;
+ cold-request latencies. Writing rule: the class and (b) mean go into Sec 4.3/4.4 for the Llama pair
+ ("second configuration"); if the replay cannot run, the paper keeps "latency not measured for this pair".
+
+E16-5 Strong-helper Text setting (new, post hoc; its own family of 40 tests).
+ Setting: helper Qwen2.5-7B-Instruct (the large pair's stored Text messages), receiver Qwen3-1.7B with the medium pair's
+ Text receiver prompt and decoding; OBQA and ARC; fit/cal/dev as in the paper. R and ProbeMax reused from the medium
+ pair (hash-check), so the 20 candidate thresholds are the medium pair's.
+ Report per benchmark: cal and dev disagreement with R, dev AUROC (ties 1/2), candidate k/n/p table, deployed q or
+ fallback, dev coverage kappa (= dev omitted / dev N) and changed/omitted with CP, accuracy of helper alone (E9c helper
+ argmax, if available), R, Text(strong) and policy (gold last), gain G = Text - R in points, kappa*alpha in points
+ (deploy only), retained gain (policy - R)/(Text - R) ("n/a" if Text - R <= 0), INVALID counts, 200-resplit
+ certification rate (E5-b seeds), and if fallback the calibration size needed (E5-b rule) or "unreachable".
+ Replay (only if deployed and the G5 change for (ii) meets the E16-4 limits): E16-4 protocol on the medium pair's
+ frozen 128-question OBQA/ARC panels, Qwen2.5-7B generating live on GPU0, Qwen3-1.7B on GPU1, arms = fixed strong-Text
+ vs policy.
+ Writing rule (Sec 4.3 one sentence, Fig. 2 points, all setting counts, provenance table as "post hoc extension"):
+  - deploy and kappa*alpha < G: "With a stronger helper whose messages raise the 1.7B receiver's accuracy by G points,
+    Text can be omitted on kappa of questions with r% [CP] changes, keeping p% of the gain" (+ replay class if run).
+  - deploy and kappa*alpha >= G: same, plus "the certificate does not protect this gain (kappa*alpha >= G)".
+  - fallback: "With a stronger helper the 1.7B receiver's Text path is not certified: its messages change d% of answers
+    and the probe ranks those changes with AUROC A" (+ needed N_cal or "unreachable"). The abstract and Sec 8 keep their
+    existing helpful-path examples (Text+fact, Llama-3.1-8B) and add no general claim either way.
+  - V3 smoke stop: one appendix line; no Fig. 2 point; counts unchanged.
+ Pattern check: AUROC >= .80 with deploy, or < .80 with fallback, is consistent with the Sec 5 pattern; otherwise the
+ setting is named as an exception.
+
+=== APPENDIX: Step 0 findings (login node, read-only; written before any E16 model output) ===
+Paths are relative to $DATA_DIR.
+
+G1 No prior outputs: PASS for E16-1 and E16-2.
+- Held-out ids: P2_R3_E9BC_20260920T061042Z/inputs/holdout_744_ids.json (744).
+- ARC test ids: P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/inputs/test_queries_no_gold.jsonl (1,172).
+- Llama-3.1-8B: the only records are X3 (P2_R6_X3_20260921T052602Z/results/**). Their 5,626 ids overlap neither the 744 nor the 1,172 ids.
+- Medium pair (Qwen3-1.7B / Qwen2.5-1.5B / medium fuser): records are the MEDIUM stage 1 and E2E stage 2 folders and E9BC medium. Of their 18,011 ids, 0 are ARC test ids; 744 are the held-out ids (E9b, by design).
+- Exact quoted-id grep over all *.json/*.jsonl in the repo: ARC test ids occur only in the sealed ARC run, its copies in the supplement packages, E14 (sealed re-check) and R1_CPU CSVs. None of these files names a medium or Llama model.
+G2 Stored Qwen2.5-7B Text messages (notes/STEP0_G2_G4.json):
+- 744: P2_R3_E9BC.../large/records/e9b_large_shard{0,1,2}.jsonl, action T. Message present 744/744.
+  - The records carry no helper token ids.
+  - T raw output equals analysis/SEALED_OUTPUTS.jsonl 744/744; that file's SHA-256 matches SEAL_RECEIPT.json.
+- 1,172: sealed run records/e2e_requests.jsonl, reference=T, mode=reference. Message present 1,172/1,172; decodes from the saved helper ids 1,172/1,172; 0 runtime failures; file SHA-256 matches SHA256SUMS.
+- OBQA/ARC fit/cal/dev: 5,626/5,626 equal their saved large-pair records and stored SHA-256 (P2_R6_X3.../notes/HELPER_AND_SPLIT_CHECK.json).
+G3 Frozen thresholds (numeric tau as stored):
+- Llama OBQA/Text: q=.60, tau = 0.009371757507324219.
+- Llama ARC/Text: q=.70, tau = 0.014996349811553955.
+- Source: P2_R6_X3.../results/analysis/dev_table.csv (hashed in CERT_HASHES.json).
+- medium/ARC/C2C: q=.60, tau = 3.5762786865234375e-07 (cal 1/290, p=5.64e-6). Source: P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1.../execution_retry1_20260915T164957Z/deployments/arc_C.json.
+G4 Raw option-label logits are NOT stored for any Qwen3 receiver x benchmark.
+- Stored fields: ProbeMax, p_labels, label_union_mass (BND small/large, ZG, MED, MMLU stage 1). E8 small/medium MMLU-Pro rows store u only.
+- So E16-3(a) re-runs the bf16 prefill (V4 must pass).
+- Deployed probe: attn_implementation='sdpa', bf16, TF32 off (run_boundaries.py, native_runtime.py, native_runtime_e8.py; BND frozen_config runtime.tf32=false).
+- The SDPA backend actually used was not recorded in any stored file. It will be recorded from the re-prefill (profiler kernel names) in bf16 and fp32.
+G5 E3 driver (P2_R1_E3POL_REPEAT1.../large/src/{native_adapter,execute}.py) for a Text-only policy. Estimate 15-25 changed code lines for each of (i) Llama-3.1-8B and (ii) Qwen3-1.7B + Qwen2.5-7B (medium panels):
+- skip building the C2C bundles and fuser traces (about 5 lines);
+- BOS change in the probe and the R path for Llama (about 5);
+- replace the hard-coded hidden size 4096 in the probe check (1);
+- adjust the attempt/probe count guards for two arms (3-4).
+- Configuration and data files are regenerated, not code: models, chat-template SHA, generation config, label-token sets, prefix ids, frozen tau, expected routes.
+- Open point: the arm rotation uses ordinal%4 for four arms. Changing it would touch ordering code. The final line count and whether any timing/routing line is touched are decided from the actual diff before Job C.
+G6 Medium Text path: the medium runtime (MEDIUM stage 1 execution_retry1.../src/native_runtime.py) uses the P2_10 native runtime.
+- request('text') = T2THelperBundle.run(row), then T2TReceiverBundle.consume(row, helper_body, helper_message).
+- helper_message is a plain string, so the large helper's stored message can be passed without other changes. Confirmed.

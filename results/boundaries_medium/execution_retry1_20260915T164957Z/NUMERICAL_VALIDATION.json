@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-15T19:33:46.421026+00:00",
+  "checks": {
+    "parent_freeze_identity": true,
+    "16878_unique_actions": true,
+    "5626_unique_probes": true,
+    "parser_replay": true,
+    "query_ID_identity": true,
+    "probe_token_ID_hashes": true,
+    "FP32_ProbeMax_reconstruction": true,
+    "integer_fit_thresholds": true,
+    "whole_tie_inclusion": true,
+    "80_calibration_tests_independent_CDF": true,
+    "CP999_independent_bisection": true,
+    "maximum_accepted_q": true,
+    "dev_route_reconstruction": true,
+    "AUROC_tie_rank_and_AP_independent": true,
+    "accuracy_benefit_harm_neutral": true,
+    "prevalence_counts": true,
+    "all_four_strata_retained": true
+  },
+  "new_inference_for_validation": 0,
+  "max_CDF_absolute_error": 1.5143442055887135e-12,
+  "max_CP_upper_absolute_error": 5.662137425588298e-15,
+  "action_success_count": 16878,
+  "ProbeMax_success_count": 5626,
+  "calibration_tests": 80
+}

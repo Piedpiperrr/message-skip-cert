@@ -1,0 +1,4 @@
+qwen3_0.6b+qwen2.5_0.5b_Fuser rev=8704f555c6b4a60b764de7d755e6f1daf21a57ef http=200 bytes=1644 sha256=e1efc0775c2c1daba6ba616576969e515aa5e7691814c2c279ddbc492df3b3b9 url=https://huggingface.co/nics-efc/C2C_Fuser/resolve/8704f555c6b4a60b764de7d755e6f1daf21a57ef/qwen3_0.6b%2Bqwen2.5_0.5b_Fuser/config.json
+qwen3_1.7b+qwen2.5_1.5b_Fuser rev=f01fc3258b305e280e04c7238f4f2cf31b7dc70d http=200 bytes=1619 sha256=9330f9fdaa87abaecc9c750e700bd8616b9238ab6a64d98e90257d30eefdd317 url=https://huggingface.co/nics-efc/C2C_Fuser/resolve/f01fc3258b305e280e04c7238f4f2cf31b7dc70d/qwen3_1.7b%2Bqwen2.5_1.5b_Fuser/config.json
+qwen3_8b+qwen2.5_7b_Fuser rev=f01fc3258b305e280e04c7238f4f2cf31b7dc70d http=200 bytes=1667 sha256=770dd208087c7930ea0fda6ed1e7e9856aae03fdd8c97198a5a09374e6585e15 url=https://huggingface.co/nics-efc/C2C_Fuser/resolve/f01fc3258b305e280e04c7238f4f2cf31b7dc70d/qwen3_8b%2Bqwen2.5_7b_Fuser/config.json
+2026-09-19T05:06:08Z

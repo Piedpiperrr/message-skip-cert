@@ -1,0 +1,119 @@
+{
+  "utc": "2026-09-22T00:38:46.658051+00:00",
+  "columns_read": {
+    "squad": [
+      "id",
+      "question",
+      "context"
+    ],
+    "nqp": [
+      "subset",
+      "qid",
+      "question",
+      "context"
+    ],
+    "triviaqa": [
+      "question_id",
+      "question"
+    ],
+    "nqopen": [
+      "question"
+    ]
+  },
+  "gold_read": false,
+  "datasets": {
+    "squad": {
+      "dataset": "SQuAD",
+      "repo": "rajpurkar/squad",
+      "revision": "7b6d24c440a36b6815f21b70d25016731768db1f",
+      "split": "train",
+      "raw_rows": 87599,
+      "distinct_ids_before_filter": 87599,
+      "after_length_filter": 87038,
+      "pool_after_dedup": 86830,
+      "removed_as_duplicates": 208,
+      "pilot_n": 400,
+      "POOL_ORDER": {
+        "path": "inputs/POOL_ORDER_squad.txt",
+        "sha256": "9754449546d370e2ab7c690ee99f44a50c240230850574f195f596664ffab7f3"
+      },
+      "PILOT": {
+        "path": "inputs/PILOT_squad.jsonl",
+        "sha256": "bcf2b0e2de5756a179893d7e4b711a667006007321842f325ac47b4d43937d9d"
+      },
+      "pilot_passage_words": {
+        "max": 282,
+        "min": 27
+      },
+      "full_run_reserve_after_pilot": 86430
+    },
+    "nqp": {
+      "dataset": "NQ-passage",
+      "repo": "mrqa-workshop/mrqa",
+      "revision": "f3178d9888471dfb2b67c93de14f0ddf499a8d9f",
+      "split": "train",
+      "raw_rows": 516819,
+      "rows_subset_NaturalQuestionsShort": 104071,
+      "distinct_ids_before_filter": 104071,
+      "after_length_filter": 98413,
+      "pool_after_dedup": 98071,
+      "removed_as_duplicates": 342,
+      "pilot_n": 400,
+      "POOL_ORDER": {
+        "path": "inputs/POOL_ORDER_nqp.txt",
+        "sha256": "ba6525fb9dd6693cfc88f3497dc300db10749e4e50d7b4e292121f04a5888036"
+      },
+      "PILOT": {
+        "path": "inputs/PILOT_nqp.jsonl",
+        "sha256": "eddf08f0701f08ca3fbcc08455a36273ab0fd251c4dd992ff03dc7884292088b"
+      },
+      "pilot_passage_words": {
+        "max": 299,
+        "min": 2
+      },
+      "full_run_reserve_after_pilot": 97671
+    },
+    "triviaqa": {
+      "dataset": "TriviaQA",
+      "repo": "mandarjoshi/trivia_qa",
+      "revision": "0f7faf33a3908546c6fd5b73a660e0f8ff173c2f",
+      "split": "train",
+      "raw_rows": 138384,
+      "distinct_ids_before_filter": 76523,
+      "pool_after_dedup": 76341,
+      "removed_as_duplicates": 62043,
+      "pilot_n": 400,
+      "POOL_ORDER": {
+        "path": "inputs/POOL_ORDER_triviaqa.txt",
+        "sha256": "3457e6978a7942344299c30859679c2103cf906b522790622a6e304386534b7e"
+      },
+      "PILOT": {
+        "path": "inputs/PILOT_triviaqa.jsonl",
+        "sha256": "fb0fe5a72f53f3bb38277380264c29387bb009abe7d3b6d0fe4a683af29f0a84"
+      },
+      "pilot_passage_words": null,
+      "full_run_reserve_after_pilot": 75941
+    },
+    "nqopen": {
+      "dataset": "NQ-Open",
+      "repo": "google-research-datasets/nq_open",
+      "revision": "5dd9790a83002ad084ddeb7c420dc716852c6f28",
+      "split": "train",
+      "raw_rows": 87925,
+      "distinct_ids_before_filter": 87925,
+      "pool_after_dedup": 87145,
+      "removed_as_duplicates": 780,
+      "pilot_n": 400,
+      "POOL_ORDER": {
+        "path": "inputs/POOL_ORDER_nqopen.txt",
+        "sha256": "f7ec7dfca52f2443f704a822dec14fb2690c841782fee1fe9d7190840558e6bf"
+      },
+      "PILOT": {
+        "path": "inputs/PILOT_nqopen.jsonl",
+        "sha256": "7cc1e18170835e8789a9583a7dd056a3e637af421882cfcbcceafb0f48394a91"
+      },
+      "pilot_passage_words": null,
+      "full_run_reserve_after_pilot": 86745
+    }
+  }
+}

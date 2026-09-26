@@ -1,0 +1,5 @@
+category,n,settings,label
+new certification under Rule D,0,none,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+lost certification under Rule D,0,none,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+"certified under both, q changed",0,none,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+unchanged,26,small/OBQA/Text;small/OBQA/C2C;small/ARC/Text;small/ARC/C2C;medium/OBQA/Text;medium/OBQA/C2C;medium/ARC/Text;medium/ARC/C2C;large/OBQA/Text;large/OBQA/C2C;large/ARC/Text;large/ARC/C2C;large/MMLU-Pro/Text;large/MMLU-Pro/C2C;small/MMLU-Pro/Text;small/MMLU-Pro/C2C;medium/MMLU-Pro/Text;medium/MMLU-Pro/C2C;X1-Llama/OBQA/Text;X1-Llama/OBQA/C2C;X1-Llama/ARC/Text;X1-Llama/ARC/C2C;X2-OLMo/OBQA/Text;X2-OLMo/ARC/Text;X2-OLMo/MMLU-Pro/Text;large/OBQA/Text+fact,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision

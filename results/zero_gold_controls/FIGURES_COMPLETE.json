@@ -1,0 +1,16 @@
+{
+  "utc": "2026-09-14T07:10:03.348581+00:00",
+  "source_files": [
+    "summary/calibration_comparison_100.csv",
+    "summary/grid_curves_dev.csv",
+    "summary/main_dev.csv"
+  ],
+  "files": {
+    "figures/risk_coverage_cost.pdf": "b631cbfbbf22338f62efb27a7794dffcf263d368434f6187f7a285fba8d62156",
+    "figures/risk_coverage_cost.png": "243454bdea31de61630516452687ccc06b8ddb1803773c48070694ee8678e880"
+  },
+  "Text_fallbacks": [
+    "WordD"
+  ],
+  "visual_inspection": "root viewed PNG; passed; see evidence/FIGURE_VISUAL_CHECK.json"
+}

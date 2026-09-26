@@ -1,0 +1,14 @@
+{
+  "event": "HEAD_COMPLETE",
+  "key": "baseline/small/obqa/semantic/C",
+  "kind": "LR",
+  "n": 3466,
+  "positive": 1804,
+  "iterations": 28,
+  "warnings": [],
+  "CPU_seconds": 0.09398600000000101,
+  "protocol_sha256": "41239823e728796dd108aae24cc48401ec8093c38aca16f7a30a1352145ef797",
+  "model_sha256": "5b01aec0457349eb822d21efdfa929981f085536bcf2a9edbb90e00eb136b155",
+  "input_hash": "6688eb9ef86826d647e859040c749e6b",
+  "numerical_probability_check": true
+}

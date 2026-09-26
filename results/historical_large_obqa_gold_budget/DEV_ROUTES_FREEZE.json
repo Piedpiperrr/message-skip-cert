@@ -1,0 +1,25 @@
+{
+  "utc": "2026-09-14T05:58:16.380468+00:00",
+  "files": {
+    "records/R32_r0_dev_routes.jsonl": "3e05d79a410a08b8c9f6a9639407d2023a40d910b4293e35e5d16d3e571b8499",
+    "records/R128_r0_dev_routes.jsonl": "019dca439b5304e8bed8f8255572b62a5cebad773ecedf2e880f0cb8ffa06ccb",
+    "records/R512_r0_dev_routes.jsonl": "3114e81b2390e2fcc1bfb7987d9874f55eb7a4e20902ab5041ad474c9ca56976",
+    "records/R32_r1_dev_routes.jsonl": "f3bd3ce0848386e55234d40bb151e733122691de0cb609471b58390b68182b4b",
+    "records/R128_r1_dev_routes.jsonl": "a195f6d1510690e9fb99e8cb9ea99c310c2fa79a92cde2f59021471025a82f72",
+    "records/R512_r1_dev_routes.jsonl": "dbc559581638b740cd4e95a79f6b3ae3426e11effd97bdd318a994230c605b2f",
+    "records/R32_r2_dev_routes.jsonl": "ec015d58186601d9a7f76dd1ce47a944acd5c1d83a41513c5603b33a7b13b430",
+    "records/R128_r2_dev_routes.jsonl": "845dcde042dba84f7aa2e01a03829da063ed7565ac746b637ef0bccc14eba347",
+    "records/R512_r2_dev_routes.jsonl": "0a2c9fd4bd3be18867b4bb52358d2cf9421200617b5a0d40a118119baa3a5ff9",
+    "records/R32_r3_dev_routes.jsonl": "acd2b6cd30d119b066ed4ad9bbf882546618dff24fa57195eeb4f285ee50306d",
+    "records/R128_r3_dev_routes.jsonl": "2d7c4d61a6c4264b30255ee482dccce14df4f4615d2fe05bdcc221c400d82aa4",
+    "records/R512_r3_dev_routes.jsonl": "0be43e1ed28cbcbfc4420d36e6a5d8a1cc15d392c1f5850e217df02b8e4d1dd5",
+    "records/R32_r4_dev_routes.jsonl": "102afa64f3918e7e2fa63267459064c3bb3b54b37f1895418d69888244ae3571",
+    "records/R128_r4_dev_routes.jsonl": "5b43afeb136c4e0759a124e2ce572cc41097fb9c6be98a65ecea33659864d059",
+    "records/R512_r4_dev_routes.jsonl": "74750606838ebc7bad9a414f70610fcd98082d18592289ed5d447477d6595f12"
+  },
+  "new_configs": 15,
+  "dev_per_config": 742,
+  "new_dev_route_records": 11130,
+  "dev_answers_gold_costs_associated": false,
+  "thresholds_changed": false
+}

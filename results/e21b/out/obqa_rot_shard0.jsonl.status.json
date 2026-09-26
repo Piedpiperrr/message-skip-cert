@@ -1,0 +1,21 @@
+{
+  "pair": "large",
+  "mode": "main",
+  "shard": 0,
+  "nshards": 4,
+  "actions": [
+    "probe",
+    "R",
+    "T",
+    "C",
+    "TF"
+  ],
+  "rows_done": 186,
+  "rows_requested": 186,
+  "rows_resumed": 0,
+  "errors": [],
+  "complete": true,
+  "job_id": "run044",
+  "utc": "2026-09-22T07:32:08.854747+00:00",
+  "gold_read": false
+}

@@ -1,0 +1,18 @@
+{
+  "phase": "NUMERICAL_COMPLETE",
+  "job_id": "run011",
+  "CPU_charged": 362.10589300000004,
+  "CPU_remaining": 537.894107,
+  "wall_remaining": 1276.7898025512695,
+  "prefill_progress": {
+    "split": "dev",
+    "split_success": 742,
+    "total_success": 4208,
+    "attempts": 4208,
+    "remaining_attempt_budget": 0,
+    "success_ids_file": "records/probe_records.jsonl",
+    "last_id": "919",
+    "utc": "2026-09-14T07:09:17.577324+00:00"
+  },
+  "utc": "2026-09-14T07:10:04.210326+00:00"
+}

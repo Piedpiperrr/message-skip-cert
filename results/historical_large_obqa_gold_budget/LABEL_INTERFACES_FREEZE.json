@@ -1,0 +1,27 @@
+{
+  "utc": "2026-09-14T05:57:03.191119+00:00",
+  "files": {
+    "inputs/R32_r0_labels.jsonl": "116750f02aafdba4db81017dbd14860e2a00b2e55da723edf009e1a17dd036ae",
+    "inputs/R128_r0_labels.jsonl": "94d21ead2beef8fd75cfc7a646eaece8205a4d994cbde42bb06cf4f0d392285b",
+    "inputs/R512_r0_labels.jsonl": "4f412e3d93a06b418ff69eec6e3a4a3e4ebf18303fbf9ee647485682291aac15",
+    "inputs/R32_r1_labels.jsonl": "dbb95e3af5f15ea4e34e22c7f8c79c9e9b55de393a8d0b2186deea64a48d07b0",
+    "inputs/R128_r1_labels.jsonl": "30c146911f0397fd2386055ac8cf112a039620603a4564b541a36701fda68164",
+    "inputs/R512_r1_labels.jsonl": "69cb05c5ba8a4695913f0ed522f74596186ba7b6e990707404dd32d9ebb9c086",
+    "inputs/R32_r2_labels.jsonl": "c663030c5f338eae52b5e2cde5d413ee52c8994c6953a58350869af130dbf8b0",
+    "inputs/R128_r2_labels.jsonl": "13ae6404f4aa9ec60893ed56fed30abb0b31a05a07353b3a01f7da3b6b61a573",
+    "inputs/R512_r2_labels.jsonl": "00a3eb15106bada1dde53ab66d8739199d06bbbdfe951a33f5f109509eb0fcb4",
+    "inputs/R32_r3_labels.jsonl": "40e02f208b0367dc8194b690c90c1c2c37e7cc062b8221575fcf5f444822aaf4",
+    "inputs/R128_r3_labels.jsonl": "e6d802a4b3e294ee0a1cc08dc8678ca6516b8cfa115056ae729ea3259c388b8b",
+    "inputs/R512_r3_labels.jsonl": "7210b1e6b81b58d75231eef0c04248e3afe985a2b41dcec1f9b9cbf25c001103",
+    "inputs/R32_r4_labels.jsonl": "3d0a48dab589e14733c509fe827c6fcd7cc8149456c7af513eac092744f64e21",
+    "inputs/R128_r4_labels.jsonl": "414f8a3245573cc980907c9c46ecb30e7c84080487b7ff78b1b653314f6e4f41",
+    "inputs/R512_r4_labels.jsonl": "7478746bc75ce9e26bc9491037041ef454edcad3491de065de30ba54210ea93c"
+  },
+  "columns": [
+    "id",
+    "y_R"
+  ],
+  "unique_gold_union": 1579,
+  "labels_after_subsets_freeze": true,
+  "preparation_preview_exception": "evidence/PREPARATION_DEVIATION.json"
+}

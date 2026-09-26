@@ -1,0 +1,62 @@
+{
+  "utc": "2026-09-21T18:58:29.008970+00:00",
+  "note": "tokenizer shared by Qwen3-0.6B/1.7B/8B (asserted)",
+  "counts": {
+    "obqa/fit": {
+      "rows": 2100,
+      "tokens": 254465,
+      "mean": 121.17380952380952,
+      "max": 190
+    },
+    "obqa/cal": {
+      "rows": 1366,
+      "tokens": 165453,
+      "mean": 121.12225475841873,
+      "max": 185
+    },
+    "obqa/dev": {
+      "rows": 742,
+      "tokens": 89863,
+      "mean": 121.10916442048517,
+      "max": 172
+    },
+    "arc/fit": {
+      "rows": 670,
+      "tokens": 96426,
+      "mean": 143.91940298507464,
+      "max": 267
+    },
+    "arc/cal": {
+      "rows": 448,
+      "tokens": 64020,
+      "mean": 142.90178571428572,
+      "max": 235
+    },
+    "arc/dev": {
+      "rows": 299,
+      "tokens": 43229,
+      "mean": 144.57859531772576,
+      "max": 237
+    },
+    "mmlu_pro/fit": {
+      "rows": 3000,
+      "tokens": 841163,
+      "mean": 280.3876666666667,
+      "max": 1570
+    },
+    "mmlu_pro/cal": {
+      "rows": 6000,
+      "tokens": 1664809,
+      "mean": 277.46816666666666,
+      "max": 1744
+    },
+    "mmlu_pro/dev": {
+      "rows": 2641,
+      "tokens": 745251,
+      "mean": 282.18515713744796,
+      "max": 1622
+    }
+  },
+  "total_rows": 17266,
+  "total_tokens": 3964679
+}

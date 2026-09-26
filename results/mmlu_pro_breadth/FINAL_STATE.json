@@ -1,0 +1,20 @@
+{
+  "utc": "2026-09-16T20:37:09.144775+00:00",
+  "status": "COMPLETE_MMLU_PRO_STAGE1",
+  "MMLU_PRO_DEPLOY_COUNT": 2,
+  "strata": 2,
+  "formal_PBS_jobs": 2,
+  "actual_GPUh": 13.904444444444444,
+  "E2E_jobs": 0,
+  "manuscript_modified": false,
+  "supplement_modified": false,
+  "next_task_started": false,
+  "final_review_utc": "2026-09-16T20:58:35.597607+00:00",
+  "final_review_status": "PASS",
+  "rows": 12032,
+  "actions": 36096,
+  "probes": 12032,
+  "primary_groups": 11641,
+  "calibration_tests": 40,
+  "final_delivery_audit": "evidence/FINAL_DELIVERY_AUDIT.json"
+}

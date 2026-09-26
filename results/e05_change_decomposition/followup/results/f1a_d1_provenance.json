@@ -1,0 +1,133 @@
+{
+  "label": "POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision",
+  "D1": {
+    "path": "$DATA_DIR/P2_SCORE_SENSITIVITY_20260912T055929Z/diagnostic_parser_v1.py",
+    "sha256": "6619cafdd9cffb9891eb2cc818053e5ce506be59c7ff2e75b51e5331c918cfab",
+    "version": "D1_EXPLICIT_20260912",
+    "frozen_utc": "2026-09-12T06:02:33.598062+00:00",
+    "rules_doc": "$DATA_DIR/P2_SCORE_SENSITIVITY_20260912T055929Z/DIAGNOSTIC_RULES_V1_ZH.md",
+    "rules_sha256": "933c3a6715263ff5788c9f530fbaa8cd4b36d07987517c09b73a725856dbda34",
+    "input_signature": [
+      "text",
+      "legal_labels"
+    ],
+    "declared_input_signature": [
+      "text",
+      "legal_labels"
+    ],
+    "docstring_line1": "\"\"\"D1：保守显式答案诊断。仅 text、legal_labels；不使用 gold、动作或题目。\"\"\"",
+    "parse_explicit_def_line": 13,
+    "synthetic_cases_line": 75,
+    "n_synthetic_cases": 24,
+    "declared_synthetic_checks": 24,
+    "known_case_disclosed_by_user": "C. 70 km/h",
+    "revision_policy": "不按准确率选择或调整；必要修订必须新增版本保留原因"
+  },
+  "developed_on": {
+    "project_records_used": 0,
+    "material": "24 synthetic (text, legal_labels, expected) triples inside diagnostic_parser_v1.py lines 75-99, plus the single real output \"C. 70 km/h\" that the user disclosed before the freeze",
+    "gold_used_in_development": false,
+    "gold_evidence": "parse_explicit(text, legal_labels) takes no gold (line 13); RULE_FREEZE_V1.json gold_statistics_started=false; ANALYSIS_COMPLETE.json gold_statistics_first_started_after=2026-09-12T06:02:33.598062+00:00",
+    "calibration_outputs_used_in_development": false,
+    "calibration_evidence": "no calibration split existed on 2026-09-12: the fit/calibration/development split files were first written 2026-09-14T16:52:45+00:00, 2.5 days after the D1 freeze"
+  },
+  "applied_after_freeze": {
+    "pairs": [
+      "large",
+      "small"
+    ],
+    "benchmarks": [
+      "arc",
+      "obqa"
+    ],
+    "splits": {
+      "obqa": [
+        "dev",
+        "train"
+      ],
+      "arc": [
+        "train",
+        "validation"
+      ]
+    },
+    "unique_source_records": 49616,
+    "source_index_entries": 18,
+    "review_records": 1663,
+    "changed_records": 191,
+    "ambiguous_records": 1478,
+    "selection_rule_line": 135,
+    "selection_rule": "if changed or diag['ambiguous'] or key=='P2_10|large|arc|train|Mercury_415080|c2c':"
+  },
+  "review_after_freeze": {
+    "case_review_written_utc": "2026-09-12T06:07:59.451238+00:00",
+    "after_D1_freeze": true,
+    "seconds_after_freeze": 325.853176,
+    "records_with_gold_field": 1663,
+    "distinct_calibration_questions": 341,
+    "pair_question_reviews": 355,
+    "review_rows_one_per_action": 543,
+    "per_pair_benchmark": {
+      "large/arc": 26,
+      "large/obqa": 30,
+      "small/arc": 113,
+      "small/obqa": 186
+    },
+    "review_rows_per_pair_benchmark": {
+      "large/arc": 33,
+      "large/obqa": 35,
+      "small/arc": 200,
+      "small/obqa": 275
+    },
+    "review_rows_per_action": {
+      "acw": 214,
+      "c2c": 65,
+      "receiver_only": 122,
+      "text": 142
+    },
+    "matches_e5a_exposed_ids": true
+  },
+  "timeline": [
+    {
+      "utc": "2026-09-12T06:01:03Z",
+      "event": "D1 source written",
+      "path": "$DATA_DIR/P2_SCORE_SENSITIVITY_20260912T055929Z/diagnostic_parser_v1.py",
+      "evidence": "file mtime",
+      "label": "POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision"
+    },
+    {
+      "utc": "2026-09-12T06:02:33.598062+00:00",
+      "event": "D1 FROZEN (rule doc + code hashes recorded)",
+      "path": "$DATA_DIR/P2_SCORE_SENSITIVITY_20260912T055929Z/RULE_FREEZE_V1.json",
+      "evidence": "RULE_FREEZE_V1.json field 'frozen_utc'; gold_statistics_started=False",
+      "label": "POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision"
+    },
+    {
+      "utc": "2026-09-12T06:07:46+00:00",
+      "event": "analysis script written (applies frozen D1, reads gold)",
+      "path": "$DATA_DIR/P2_SCORE_SENSITIVITY_20260912T055929Z/analyze_sensitivity.py",
+      "evidence": "file mtime; line 123 calls parse_explicit(txt,legal), line 120/123 compare to gold",
+      "label": "POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision"
+    },
+    {
+      "utc": "2026-09-12T06:07:59.451238+00:00",
+      "event": "case_review.jsonl written (gold-labelled review of 1663 records)",
+      "path": "$DATA_DIR/P2_SCORE_SENSITIVITY_20260912T055929Z/case_review.jsonl",
+      "evidence": "ANALYSIS_COMPLETE.json 'completed_utc'; 'gold_statistics_first_started_after'=2026-09-12T06:02:33.598062+00:00",
+      "label": "POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision"
+    },
+    {
+      "utc": "2026-09-12T19:19:38.860954+00:00",
+      "event": "V2 parser frozen",
+      "path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/RULE_FREEZE_V2.json",
+      "evidence": "RULE_FREEZE_V2.json 'frozen_utc'",
+      "label": "POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision"
+    },
+    {
+      "utc": "2026-09-14T16:52:45+00:00",
+      "event": "calibration/fit/development split first created",
+      "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/obqa_cal_representatives.json",
+      "evidence": "file mtime in P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z",
+      "label": "POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision"
+    }
+  ]
+}

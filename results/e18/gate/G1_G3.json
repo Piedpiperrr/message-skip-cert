@@ -1,0 +1,195 @@
+{
+ "record_counts": {
+  "cal R": 1000,
+  "cal T": 1000,
+  "dev R": 400,
+  "dev T": 400,
+  "fit R": 400
+ },
+ "split_sizes": {
+  "fit": 400,
+  "cal": 1000,
+  "dev": 400
+ },
+ "record_keys": [
+  "action",
+  "answer",
+  "answer_end",
+  "answer_raw",
+  "answer_start",
+  "extract_route",
+  "generated_token_ids",
+  "gold_read",
+  "helper_input_tokens",
+  "helper_message",
+  "id",
+  "invalid",
+  "job_id",
+  "latency_ms",
+  "n_gen_tokens",
+  "n_helper_tokens",
+  "raw_answer",
+  "receiver_input_tokens",
+  "rescore",
+  "s2",
+  "s3",
+  "split",
+  "u",
+  "u_is_invalid",
+  "u_is_rescore_empty"
+ ],
+ "query_keys": [
+  "id",
+  "qhash",
+  "question",
+  "row",
+  "split"
+ ],
+ "gold_like_keys": [
+  "gold_read"
+ ],
+ "duplicate_records": 0,
+ "receiver": {
+  "repo_id": "Qwen/Qwen3-8B",
+  "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+  "chat_template_sha256_expected": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+  "chat_template_sha256_actual": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "tf32": false,
+  "thinking": false,
+  "eos_token_id": [
+   151645,
+   151643
+  ]
+ },
+ "preflight_rows": {
+  "n": 37,
+  "first16": [
+   "gsm8k_train_01444",
+   "gsm8k_train_03992",
+   "gsm8k_train_01336",
+   "gsm8k_train_03505",
+   "gsm8k_train_02089",
+   "gsm8k_train_01513",
+   "gsm8k_train_03400",
+   "gsm8k_train_05091",
+   "gsm8k_train_06053",
+   "gsm8k_train_07406",
+   "gsm8k_train_02869",
+   "gsm8k_train_02403",
+   "gsm8k_train_01053",
+   "gsm8k_train_04151",
+   "gsm8k_train_06015",
+   "gsm8k_train_02126"
+  ],
+  "u_gt_0_fit_rows": 22,
+  "u_gt_0_in_first16": 1,
+  "ids": [
+   "gsm8k_train_01444",
+   "gsm8k_train_03992",
+   "gsm8k_train_01336",
+   "gsm8k_train_03505",
+   "gsm8k_train_02089",
+   "gsm8k_train_01513",
+   "gsm8k_train_03400",
+   "gsm8k_train_05091",
+   "gsm8k_train_06053",
+   "gsm8k_train_07406",
+   "gsm8k_train_02869",
+   "gsm8k_train_02403",
+   "gsm8k_train_01053",
+   "gsm8k_train_04151",
+   "gsm8k_train_06015",
+   "gsm8k_train_02126",
+   "gsm8k_train_01203",
+   "gsm8k_train_01416",
+   "gsm8k_train_06714",
+   "gsm8k_train_01753",
+   "gsm8k_train_02899",
+   "gsm8k_train_05549",
+   "gsm8k_train_02750",
+   "gsm8k_train_06755",
+   "gsm8k_train_03921",
+   "gsm8k_train_06123",
+   "gsm8k_train_01732",
+   "gsm8k_train_05894",
+   "gsm8k_train_04930",
+   "gsm8k_train_06251",
+   "gsm8k_train_02630",
+   "gsm8k_train_02916",
+   "gsm8k_train_05081",
+   "gsm8k_train_05101",
+   "gsm8k_train_07096",
+   "gsm8k_train_05545",
+   "gsm8k_train_05725"
+  ]
+ },
+ "G3": {
+  "token_id_source": "stored generated_token_ids (E10 main records)",
+  "n_R_rows": 1800,
+  "rows_ending_in_eos": 1604,
+  "rows_without_eos": 196,
+  "content_len_min": 61,
+  "content_len_max": 320,
+  "content_len_lt_32": 0,
+  "mismatch_counts": {
+   "n_gen_tokens_ne_len_ids": 0,
+   "eos_not_last": 0,
+   "decode_ne_raw_answer": 0,
+   "prompt_len_ne_receiver_input_tokens": 0,
+   "rescore_ids_ne_generated_prefix": 6,
+   "retokenized_raw_answer_ne_content_ids": 18
+  },
+  "mismatch_ids": {
+   "n_gen_tokens_ne_len_ids": [],
+   "eos_not_last": [],
+   "decode_ne_raw_answer": [],
+   "prompt_len_ne_receiver_input_tokens": [],
+   "rescore_ids_ne_generated_prefix": [
+    "gsm8k_train_05081",
+    "gsm8k_train_04565",
+    "gsm8k_train_00922",
+    "gsm8k_train_00399",
+    "gsm8k_train_03015",
+    "gsm8k_train_05393"
+   ],
+   "retokenized_raw_answer_ne_content_ids": [
+    "gsm8k_train_03400",
+    "gsm8k_train_06663",
+    "gsm8k_train_05914",
+    "gsm8k_train_02899",
+    "gsm8k_train_00338",
+    "gsm8k_train_01287",
+    "gsm8k_train_04565",
+    "gsm8k_train_04394",
+    "gsm8k_train_01955",
+    "gsm8k_train_03205",
+    "gsm8k_train_04848",
+    "gsm8k_train_03801",
+    "gsm8k_train_01282",
+    "gsm8k_train_04184",
+    "gsm8k_train_01927",
+    "gsm8k_train_05905",
+    "gsm8k_train_07021",
+    "gsm8k_train_00618"
+   ]
+  },
+  "preflight_rows_with_any_mismatch": [
+   "gsm8k_train_02899",
+   "gsm8k_train_03400",
+   "gsm8k_train_05081"
+  ],
+  "rescore_rows": 1800
+ },
+ "smoke_vs_main": {
+  "n": 16,
+  "generated_ids_equal": 16,
+  "s2_equal": 16,
+  "u_equal": 16
+ },
+ "timing_fields": [
+  "latency_ms"
+ ]
+}

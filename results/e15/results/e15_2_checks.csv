@@ -1,0 +1,5 @@
+setting,max_abs_busy_minus_GPU_forward_event_sum_fixed_ms,policy_busy_minus_GPU_forward_event_sum_min_ms,policy_busy_minus_GPU_forward_event_sum_max_ms,note
+large/OBQA/Text,0.0,0.9021415710449219,49.5042724609375,policy difference = probe prefill+projection event minus the probe backbone trace entry
+large/OBQA/C2C,0.0,0.9000968933105469,0.9441299438476562,policy difference = probe prefill+projection event minus the probe backbone trace entry
+large/ARC/Text,0.0,0.9011192321777344,0.9809951782226562,policy difference = probe prefill+projection event minus the probe backbone trace entry
+large/ARC/C2C,0.0,0.9011192321777344,0.9943046569824219,policy difference = probe prefill+projection event minus the probe backbone trace entry

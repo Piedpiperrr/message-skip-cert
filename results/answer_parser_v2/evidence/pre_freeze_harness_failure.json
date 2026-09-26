@@ -1,0 +1,4549 @@
+{
+  "checks": 297,
+  "passed": 261,
+  "failed": [
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B/A/C/D. Bnswer: B.",
+      "legal_labels": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: C.",
+      "legal_labels": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B/A/D/C. Bnswer: B.",
+      "legal_labels": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: D.",
+      "legal_labels": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B/C/A/D. Bnswer: B.",
+      "legal_labels": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: A.",
+      "legal_labels": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expected": "A",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B/C/D/A. Bnswer: B.",
+      "legal_labels": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: D.",
+      "legal_labels": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B/D/A/C. Bnswer: B.",
+      "legal_labels": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: A.",
+      "legal_labels": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expected": "A",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B/D/C/A. Bnswer: B.",
+      "legal_labels": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: C.",
+      "legal_labels": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C/A/B/D. Cnswer: C.",
+      "legal_labels": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: B.",
+      "legal_labels": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C/A/D/B. Cnswer: C.",
+      "legal_labels": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: D.",
+      "legal_labels": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C/B/A/D. Cnswer: C.",
+      "legal_labels": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: A.",
+      "legal_labels": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expected": "A",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C/B/D/A. Cnswer: C.",
+      "legal_labels": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: D.",
+      "legal_labels": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C/D/A/B. Cnswer: C.",
+      "legal_labels": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: A.",
+      "legal_labels": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expected": "A",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C/D/B/A. Cnswer: C.",
+      "legal_labels": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: B.",
+      "legal_labels": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D/A/B/C. Dnswer: D.",
+      "legal_labels": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: B.",
+      "legal_labels": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D/A/C/B. Dnswer: D.",
+      "legal_labels": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: C.",
+      "legal_labels": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D/B/A/C. Dnswer: D.",
+      "legal_labels": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: A.",
+      "legal_labels": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expected": "A",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D/B/C/A. Dnswer: D.",
+      "legal_labels": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: C.",
+      "legal_labels": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D/C/A/B. Dnswer: D.",
+      "legal_labels": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: A.",
+      "legal_labels": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "expected": "A",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D/C/B/A. Dnswer: D.",
+      "legal_labels": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: B.",
+      "legal_labels": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    }
+  ],
+  "parser_signature": [
+    "raw_answer",
+    "legal_labels"
+  ],
+  "real_population_accuracy_computed": false,
+  "cases": [
+    {
+      "kind": "syntax",
+      "text": "C. 70 km/h",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "C. v=d/t",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "A. 0°C",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "D. 120°C",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "C=d/t",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "sin x + cos y",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "A cat can run.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "Carbon dioxide",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "The correct order of a sequence is A.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "The correct scientific notation for this value is D.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "The best explanation for this phenomenon is B.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "I choose C.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "Option D is correct.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "The correct answer is A. The reason why this is the correct answer is because it follows.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "Answer: A. The answer is since the condition holds.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "The correct answer is A/B/C/D. The correct answer is A.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "D/B/A/C. The answer is C.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "Answer: A/B. The answer is A.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "A/B/C/D",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "The answer is A/B/C/D.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "Answer: A and B.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "Answer: A. Answer: B.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "unresolved_conflict",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "Answer: A. Final answer: B.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_revision",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "Answer: A. Actually, the answer is B.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_revision",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "Answer: A. Final answer: B. Answer: A.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "unresolved_conflict",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "Answer: A. Final answer: B. Answer: B.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_revision",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "Answer: A. Final answer: B or C.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "Answer: A. The answer is A/B/C/D.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "A. Option B is also correct.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "unresolved_conflict",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "Answer: A/B/C/D/E. Answer: A.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "illegal_label",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "Answer: E.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "illegal_label",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "Answer: A. Answer: E.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "illegal_label",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "He said \"The answer is A.\"",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "He said “The answer is A.”",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "> The answer is A.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "If the answer is A, proceed.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "Suppose the correct order is A.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "The correct order is A if the condition holds.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "The answer is not A.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "negated_declaration",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "Answer: C. C is incorrect.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "unresolved_conflict",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "The answer is A. The answer is not A.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "negated_declaration",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "The answer is A. Option B is wrong.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "C. Options A and B are wrong.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "C. He said \"The answer is A.\"",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "The answer is a chemical compound.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "The answer is c.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "The correct formula is C=d/t.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "A. The correct formula is C=d/t.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "The answer is 1. one hydrogen.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "I cannot provide an answer to this question.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "refusal",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "empty",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "A. apple\nB. banana",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "A. apple\nB. banana\nFinal answer: B.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_revision",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "**C.** 70 km/h",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "syntax",
+      "text": "```text\nAnswer: B.\n```",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A/B/C/D. Answer: A.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A. Answer: B.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "unresolved_conflict",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: C.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is D.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A. Final answer: B.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_revision",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "A/B/C/D",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: E.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "illegal_label",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A/B/D/C. Answer: A.",
+      "legal_labels": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A. Answer: B.",
+      "legal_labels": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "unresolved_conflict",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: D.",
+      "legal_labels": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is C.",
+      "legal_labels": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A. Final answer: B.",
+      "legal_labels": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_revision",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "A/B/D/C",
+      "legal_labels": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: E.",
+      "legal_labels": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "illegal_label",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A/C/B/D. Answer: A.",
+      "legal_labels": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A. Answer: C.",
+      "legal_labels": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "unresolved_conflict",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: B.",
+      "legal_labels": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is D.",
+      "legal_labels": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A. Final answer: C.",
+      "legal_labels": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_revision",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "A/C/B/D",
+      "legal_labels": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: E.",
+      "legal_labels": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "illegal_label",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A/C/D/B. Answer: A.",
+      "legal_labels": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A. Answer: C.",
+      "legal_labels": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "unresolved_conflict",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: D.",
+      "legal_labels": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is B.",
+      "legal_labels": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A. Final answer: C.",
+      "legal_labels": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_revision",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "A/C/D/B",
+      "legal_labels": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: E.",
+      "legal_labels": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "illegal_label",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A/D/B/C. Answer: A.",
+      "legal_labels": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A. Answer: D.",
+      "legal_labels": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "unresolved_conflict",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: B.",
+      "legal_labels": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is C.",
+      "legal_labels": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A. Final answer: D.",
+      "legal_labels": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_revision",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "A/D/B/C",
+      "legal_labels": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: E.",
+      "legal_labels": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "illegal_label",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A/D/C/B. Answer: A.",
+      "legal_labels": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A. Answer: D.",
+      "legal_labels": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "unresolved_conflict",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: C.",
+      "legal_labels": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is B.",
+      "legal_labels": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: A. Final answer: D.",
+      "legal_labels": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_revision",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "A/D/C/B",
+      "legal_labels": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Answer: E.",
+      "legal_labels": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "illegal_label",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B/A/C/D. Bnswer: B.",
+      "legal_labels": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B. Bnswer: A.",
+      "legal_labels": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: C.",
+      "legal_labels": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is D.",
+      "legal_labels": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B. Final answer: A.",
+      "legal_labels": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "B/A/C/D",
+      "legal_labels": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: E.",
+      "legal_labels": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B/A/D/C. Bnswer: B.",
+      "legal_labels": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B. Bnswer: A.",
+      "legal_labels": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: D.",
+      "legal_labels": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is C.",
+      "legal_labels": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B. Final answer: A.",
+      "legal_labels": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "B/A/D/C",
+      "legal_labels": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: E.",
+      "legal_labels": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B/C/A/D. Bnswer: B.",
+      "legal_labels": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B. Bnswer: C.",
+      "legal_labels": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: A.",
+      "legal_labels": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expected": "A",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is D.",
+      "legal_labels": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B. Final answer: C.",
+      "legal_labels": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "B/C/A/D",
+      "legal_labels": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: E.",
+      "legal_labels": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B/C/D/A. Bnswer: B.",
+      "legal_labels": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B. Bnswer: C.",
+      "legal_labels": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: D.",
+      "legal_labels": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is A.",
+      "legal_labels": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B. Final answer: C.",
+      "legal_labels": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "B/C/D/A",
+      "legal_labels": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: E.",
+      "legal_labels": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B/D/A/C. Bnswer: B.",
+      "legal_labels": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B. Bnswer: D.",
+      "legal_labels": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: A.",
+      "legal_labels": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expected": "A",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is C.",
+      "legal_labels": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B. Final answer: D.",
+      "legal_labels": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "B/D/A/C",
+      "legal_labels": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: E.",
+      "legal_labels": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B/D/C/A. Bnswer: B.",
+      "legal_labels": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B. Bnswer: D.",
+      "legal_labels": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: C.",
+      "legal_labels": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is A.",
+      "legal_labels": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: B. Final answer: D.",
+      "legal_labels": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "B/D/C/A",
+      "legal_labels": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Bnswer: E.",
+      "legal_labels": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C/A/B/D. Cnswer: C.",
+      "legal_labels": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C. Cnswer: A.",
+      "legal_labels": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: B.",
+      "legal_labels": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is D.",
+      "legal_labels": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C. Final answer: A.",
+      "legal_labels": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "C/A/B/D",
+      "legal_labels": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: E.",
+      "legal_labels": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C/A/D/B. Cnswer: C.",
+      "legal_labels": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C. Cnswer: A.",
+      "legal_labels": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: D.",
+      "legal_labels": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is B.",
+      "legal_labels": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C. Final answer: A.",
+      "legal_labels": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "C/A/D/B",
+      "legal_labels": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: E.",
+      "legal_labels": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C/B/A/D. Cnswer: C.",
+      "legal_labels": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C. Cnswer: B.",
+      "legal_labels": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: A.",
+      "legal_labels": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expected": "A",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is D.",
+      "legal_labels": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C. Final answer: B.",
+      "legal_labels": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "C/B/A/D",
+      "legal_labels": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: E.",
+      "legal_labels": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C/B/D/A. Cnswer: C.",
+      "legal_labels": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C. Cnswer: B.",
+      "legal_labels": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: D.",
+      "legal_labels": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is A.",
+      "legal_labels": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C. Final answer: B.",
+      "legal_labels": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "C/B/D/A",
+      "legal_labels": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: E.",
+      "legal_labels": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C/D/A/B. Cnswer: C.",
+      "legal_labels": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C. Cnswer: D.",
+      "legal_labels": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: A.",
+      "legal_labels": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expected": "A",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is B.",
+      "legal_labels": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C. Final answer: D.",
+      "legal_labels": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "C/D/A/B",
+      "legal_labels": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: E.",
+      "legal_labels": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C/D/B/A. Cnswer: C.",
+      "legal_labels": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C. Cnswer: D.",
+      "legal_labels": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: B.",
+      "legal_labels": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is A.",
+      "legal_labels": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: C. Final answer: D.",
+      "legal_labels": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "C/D/B/A",
+      "legal_labels": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Cnswer: E.",
+      "legal_labels": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D/A/B/C. Dnswer: D.",
+      "legal_labels": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D. Dnswer: A.",
+      "legal_labels": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: B.",
+      "legal_labels": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is C.",
+      "legal_labels": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D. Final answer: A.",
+      "legal_labels": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "D/A/B/C",
+      "legal_labels": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: E.",
+      "legal_labels": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D/A/C/B. Dnswer: D.",
+      "legal_labels": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D. Dnswer: A.",
+      "legal_labels": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: C.",
+      "legal_labels": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is B.",
+      "legal_labels": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D. Final answer: A.",
+      "legal_labels": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "D/A/C/B",
+      "legal_labels": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: E.",
+      "legal_labels": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D/B/A/C. Dnswer: D.",
+      "legal_labels": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D. Dnswer: B.",
+      "legal_labels": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: A.",
+      "legal_labels": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expected": "A",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is C.",
+      "legal_labels": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D. Final answer: B.",
+      "legal_labels": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "D/B/A/C",
+      "legal_labels": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: E.",
+      "legal_labels": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D/B/C/A. Dnswer: D.",
+      "legal_labels": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D. Dnswer: B.",
+      "legal_labels": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: C.",
+      "legal_labels": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expected": "C",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is A.",
+      "legal_labels": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D. Final answer: B.",
+      "legal_labels": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "D/B/C/A",
+      "legal_labels": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: E.",
+      "legal_labels": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D/C/A/B. Dnswer: D.",
+      "legal_labels": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D. Dnswer: C.",
+      "legal_labels": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: A.",
+      "legal_labels": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "expected": "A",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is B.",
+      "legal_labels": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D. Final answer: C.",
+      "legal_labels": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "D/C/A/B",
+      "legal_labels": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: E.",
+      "legal_labels": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D/C/B/A. Dnswer: D.",
+      "legal_labels": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expected": "D",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D. Dnswer: C.",
+      "legal_labels": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: B.",
+      "legal_labels": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expected": "B",
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": false
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "The correct arrangement is A.",
+      "legal_labels": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: D. Final answer: C.",
+      "legal_labels": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "D/C/B/A",
+      "legal_labels": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "letter_permutation",
+      "text": "Dnswer: E.",
+      "legal_labels": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "legal_set",
+      "text": "Answer: W/X/Y/Z. Answer: X.",
+      "legal_labels": [
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "expected": "X",
+      "actual": "X",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "legal_set",
+      "text": "Answer: W. Answer: X.",
+      "legal_labels": [
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "unresolved_conflict",
+      "pass_": true
+    },
+    {
+      "kind": "legal_set",
+      "text": "Answer: A/B/C/D/E. Answer: B.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "legal_set",
+      "text": "Answer: A. Answer: B.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "unresolved_conflict",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "A. 70 km/h",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "A. 70 kilometers per hour",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "A. 0°C",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "A. 120°C",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "A. v=d/t",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "A. sin(x)",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "A. tan(x)",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "A. cos(x)",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "A. x mod 3",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "A. using substances in an ecosystem model",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "synthetic_correct_wrong_symmetry",
+      "selected": "A",
+      "synthetic_gold": "A",
+      "pass_": true
+    },
+    {
+      "kind": "synthetic_correct_wrong_symmetry",
+      "selected": "A",
+      "synthetic_gold": "B",
+      "pass_": true
+    },
+    {
+      "kind": "synthetic_correct_wrong_symmetry",
+      "selected": "A",
+      "synthetic_gold": "C",
+      "pass_": true
+    },
+    {
+      "kind": "synthetic_correct_wrong_symmetry",
+      "selected": "A",
+      "synthetic_gold": "D",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "B. 70 km/h",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "B. 70 kilometers per hour",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "B. 0°C",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "B. 120°C",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "B. v=d/t",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "B. sin(x)",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "B. tan(x)",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "B. cos(x)",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "B. x mod 3",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "B. using substances in an ecosystem model",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "B",
+      "actual": "B",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "synthetic_correct_wrong_symmetry",
+      "selected": "B",
+      "synthetic_gold": "A",
+      "pass_": true
+    },
+    {
+      "kind": "synthetic_correct_wrong_symmetry",
+      "selected": "B",
+      "synthetic_gold": "B",
+      "pass_": true
+    },
+    {
+      "kind": "synthetic_correct_wrong_symmetry",
+      "selected": "B",
+      "synthetic_gold": "C",
+      "pass_": true
+    },
+    {
+      "kind": "synthetic_correct_wrong_symmetry",
+      "selected": "B",
+      "synthetic_gold": "D",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "C. 70 km/h",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "C. 70 kilometers per hour",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "C. 0°C",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "C. 120°C",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "C. v=d/t",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "C. sin(x)",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "C. tan(x)",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "C. cos(x)",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "C. x mod 3",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "C. using substances in an ecosystem model",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "C",
+      "actual": "C",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "synthetic_correct_wrong_symmetry",
+      "selected": "C",
+      "synthetic_gold": "A",
+      "pass_": true
+    },
+    {
+      "kind": "synthetic_correct_wrong_symmetry",
+      "selected": "C",
+      "synthetic_gold": "B",
+      "pass_": true
+    },
+    {
+      "kind": "synthetic_correct_wrong_symmetry",
+      "selected": "C",
+      "synthetic_gold": "C",
+      "pass_": true
+    },
+    {
+      "kind": "synthetic_correct_wrong_symmetry",
+      "selected": "C",
+      "synthetic_gold": "D",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "D. 70 km/h",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "D. 70 kilometers per hour",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "D. 0°C",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "D. 120°C",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "D. v=d/t",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "D. sin(x)",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "D. tan(x)",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "D. cos(x)",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "D. x mod 3",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "unit_formula_invariance",
+      "text": "D. using substances in an ecosystem model",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "synthetic_correct_wrong_symmetry",
+      "selected": "D",
+      "synthetic_gold": "A",
+      "pass_": true
+    },
+    {
+      "kind": "synthetic_correct_wrong_symmetry",
+      "selected": "D",
+      "synthetic_gold": "B",
+      "pass_": true
+    },
+    {
+      "kind": "synthetic_correct_wrong_symmetry",
+      "selected": "D",
+      "synthetic_gold": "C",
+      "pass_": true
+    },
+    {
+      "kind": "synthetic_correct_wrong_symmetry",
+      "selected": "D",
+      "synthetic_gold": "D",
+      "pass_": true
+    },
+    {
+      "kind": "exposed_boundary_raw",
+      "text": "I cannot provide an answer to this question as it is not clear or well-defined. The phrasing \"arrive at in final time length\" is ambiguous and does not make sense in the context of the question. Please rephrase or clarify the question for an accurate response.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "refusal",
+      "pass_": true
+    },
+    {
+      "kind": "exposed_boundary_raw",
+      "text": " Alan's study involves observing differences among sugar maple trees. Among the options, the **type of seeds** is the most consistent trait, as all sugar maple trees produce the same type of seeds. The other characteristics—height, number of leaves, and trunk width—can vary significantly depending on environmental factors, age, and",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "exposed_boundary_raw",
+      "text": " I'm sorry, but I cannot provide an answer to this question. Please provide the necessary information or context to allow me to assist you.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "refusal",
+      "pass_": true
+    },
+    {
+      "kind": "exposed_boundary_raw",
+      "text": "The safest to breathe around is the union carbide plant.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "exposed_boundary_raw",
+      "text": "The correct answer is A/B/C/D. The correct answer is A.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "exposed_boundary_raw",
+      "text": "The correct answer is A/B/C/D.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "exposed_boundary_raw",
+      "text": "The correct answer is A. \nThe reason why this is the correct answer is because when you scrape an object, small pieces or particles may break off of the object. This is an example of how rubbing an emery board across your nail can cause small pieces or particles to break off of the object.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "exposed_boundary_raw",
+      "text": "The correct order of the metamorphosis of a butterfly is A. egg, larva, pupa, adult.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "exposed_boundary_raw",
+      "text": "The correct scientific notation for this distance is D.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "D",
+      "actual": "D",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "exposed_boundary_raw",
+      "text": "The correct answer is 1. 1 hydrogen, 1 oxygen.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "exposed_boundary_raw",
+      "text": "The correct order of the metamorphosis of a butterfly is A. egg, larva, pupa, adult.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": "A",
+      "actual": "A",
+      "reason": "explicit_single",
+      "pass_": true
+    },
+    {
+      "kind": "exposed_boundary_raw",
+      "text": " The correct answer is A/B/C/D.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "multiple_options",
+      "pass_": true
+    },
+    {
+      "kind": "exposed_boundary_raw",
+      "text": "The best way for the students to determine why the results were different is to review the steps taken during the investigations.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    },
+    {
+      "kind": "exposed_boundary_raw",
+      "text": "The best way for the students to determine why the results were different is to review the steps taken during the investigations.",
+      "legal_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expected": null,
+      "actual": null,
+      "reason": "no_explicit_option",
+      "pass_": true
+    }
+  ]
+}

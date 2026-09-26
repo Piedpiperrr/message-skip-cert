@@ -1,0 +1,14 @@
+{
+  "phase": "COMPLETE_STOPPED",
+  "job_id": "run018",
+  "utc": "2026-09-14T17:22:39.547147+00:00",
+  "budget_closed": true,
+  "actual_counts": {
+    "attempts": 7044,
+    "success": 7044,
+    "new_cal": 140,
+    "new_evaluations": 3422
+  },
+  "all_remaining_execution_authorizations": 0,
+  "next_action": "Return to Work; no resubmission"
+}

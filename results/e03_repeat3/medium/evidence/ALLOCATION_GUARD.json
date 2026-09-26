@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "checks": {
+    "state_R": true,
+    "user": true,
+    "account": true,
+    "queue": true,
+    "nodect": true,
+    "requested_GPUs": true,
+    "allocated_GPUs": true,
+    "assigned_host": true,
+    "exec_host": true,
+    "nodefile": true,
+    "fsreq": true,
+    "budget": true
+  },
+  "assigned": [
+    {
+      "node": "compute-node",
+      "ngpus": 0
+    },
+    {
+      "node": "compute-node",
+      "ngpus": 0
+    }
+  ],
+  "walltime_seconds": 3300,
+  "job_id": "run020",
+  "host": "REDACTED",
+  "utc": "2026-09-19T08:57:22.715654+00:00"
+}

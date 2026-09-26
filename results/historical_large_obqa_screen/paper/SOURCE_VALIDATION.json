@@ -1,0 +1,16 @@
+{
+  "files": [
+    "13_binary_risk_methods.tex",
+    "table_calibration.tex",
+    "14_binary_risk_protocol_limits.tex",
+    "fragments_preview.tex",
+    "15_binary_risk_results.tex",
+    "table_supervision.tex",
+    "table_main.tex"
+  ],
+  "balanced_environments": true,
+  "inputs_exist": true,
+  "compiled": false,
+  "limitation": "Source checks do not replace TeX layout compilation.",
+  "utc": "2026-09-14T05:03:02.970973+00:00"
+}

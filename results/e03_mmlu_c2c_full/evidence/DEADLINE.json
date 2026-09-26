@@ -1,0 +1,9 @@
+{
+  "utc": "2026-09-19T08:42:55.584039+00:00",
+  "PBS_stime": "Sat Sep 19 08:42:48 2026",
+  "E3_replay_start_epoch": 1789807371.3620849,
+  "E3_replay_budget_seconds": 3600,
+  "walltime_seconds": 3300,
+  "deadline_epoch": 1789810926.3620849,
+  "safety_margin_seconds": 45
+}

@@ -1,0 +1,16 @@
+{
+  "utc": "2026-09-20T04:20:00Z",
+  "rule": "stop if the estimate exceeds 30 productive GPU-hours or 6 debug jobs",
+  "estimates_in_order": [
+    {"when": "at freeze, from the two prescribed logs", "productive_GPU_hours": 27.57, "main_jobs": 5},
+    {"when": "after the validation/smoke job 7638148", "productive_GPU_hours": 29.17, "main_jobs": 6},
+    {"when": "live, first ~400 rows per pair (understated)", "productive_GPU_hours": 32.28, "main_jobs": 6},
+    {"when": "live, 2757 rows and one complete medium lane", "productive_GPU_hours": 40.14, "main_jobs": 8}
+  ],
+  "why_the_early_estimates_were_low": "the Text helper's token use keeps rising past the first few hundred rows; the small pair's Text mean went from 1801 ms over the first 411 requests to 2888 ms over 552, because the 0.5B helper runs to the frozen 256-token cap far more often than the 1.5B helper",
+  "decision": "Work authorized finishing both pairs at approximately 40 productive GPU-hours and up to 8 main debug jobs, knowingly above both stated limits",
+  "decided_by": "Work (interactive answers, this session: budget convention, then the 32 GPU-h overrun, then this 40 GPU-h correction)",
+  "replay_decision": "if a setting deploys, build and submit its E3 replay job automatically",
+  "protocol_freeze_E8_sha256": "9a17d8a438a226aa556b699525f767ebf8217e682dca59a746891594dfee945e",
+  "note": "This authorization changes only the execution budget. No part of the pre-registered protocol was altered."
+}

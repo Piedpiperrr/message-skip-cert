@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-19T08:06:36.111356+00:00",
+  "seconds": 11.852728128433228,
+  "returncode": 0,
+  "stderr_tail": "",
+  "config": "main",
+  "n": 500,
+  "rows_identical_in_order_to_local_parquet": 500,
+  "fingerprint": "f412d851e9522d86",
+  "cache_files": [
+    "$DATA_DIR/P2_R1_EXP_20260919T050555Z/cache/hf_official/datasets/openbookqa/main/0.0.0/388097ea7776314e93a529163e0fea805b8a6454/openbookqa-test.arrow"
+  ],
+  "clean_usable": true
+}

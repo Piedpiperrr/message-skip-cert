@@ -1,0 +1,44 @@
+{
+  "utc": "2026-09-20T23:02:10Z",
+  "dataset": "openai/gsm8k",
+  "config": "main",
+  "split": "train",
+  "revision": "740312add88f781978c0658806c59bc2815b9866",
+  "revision_source": "huggingface.co/api/datasets/openai/gsm8k sha, verified 2026-09-20 against the local snapshot directory name",
+  "train_parquet": "$DATA_DIR/cache/huggingface/hub/datasets--openai--gsm8k/snapshots/740312add88f781978c0658806c59bc2815b9866/main/train-00000-of-00001.parquet",
+  "train_parquet_sha256": "ea82612ea9582142387730c793eb67d3b12849002bc0b7fa6f8efafa7351419d",
+  "train_rows": 7473,
+  "exact_duplicate_questions": 0,
+  "columns_in_file": [
+    "question",
+    "answer"
+  ],
+  "columns_read": [
+    "question"
+  ],
+  "gold_read": false,
+  "splits": {
+    "fit": {
+      "n": 400,
+      "first": "gsm8k_train_01444",
+      "last": "gsm8k_train_03612"
+    },
+    "cal": {
+      "n": 1000,
+      "first": "gsm8k_train_02919",
+      "last": "gsm8k_train_01277"
+    },
+    "dev": {
+      "n": 400,
+      "first": "gsm8k_train_06057",
+      "last": "gsm8k_train_00819"
+    }
+  },
+  "files": {
+    "inputs/gsm8k_queries.jsonl": "0bc013d2ba8713aadb6aa802c61aa0c044374a727b3dcb2afab703ff8e276d27",
+    "inputs/gsm8k_pool_order.json": "5acc6a54389b4a7d0b7e5b0ed029cffab878a39e9699ae29e3bde65651e475f1",
+    "splits/gsm8k_fit_ids.json": "a500dcc56b7364d0a0a53ea6004227b0bd7d22ef5ed90fcf343d9df06773aec7",
+    "splits/gsm8k_cal_ids.json": "ae437bcf08aacca4e0589a8e3a756a64e6332f924fafd27c615ee33cfbb94c5a",
+    "splits/gsm8k_dev_ids.json": "88357c81cd21ce24c66669fb4ef5c64b690cf52cc49734742b26a5f6e4403edf"
+  }
+}

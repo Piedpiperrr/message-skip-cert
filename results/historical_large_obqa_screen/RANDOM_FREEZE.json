@@ -1,0 +1,9 @@
+{
+  "utc": "2026-09-14T04:50:18.554873+00:00",
+  "files": {
+    "splits/random_cal.jsonl": "322e63386a8ad4cd0f00b39d0b424503f3baa1957da4cec176467792cb3569f7",
+    "splits/random_dev.jsonl": "46542c4da9e4827f4e6647919cb528ef2db6ffd02ac60ac37734f9c4654442f3"
+  },
+  "rng": "separate PCG64(seed=0), cal then dev, one coin/request",
+  "label_statistics_read": false
+}

@@ -1,0 +1,228 @@
+{
+  "status": "CANDIDATE_ONLY_NOT_EXECUTION_AUTHORIZED",
+  "decision": "GO_MMLU_PRO",
+  "recommended_plan": "C",
+  "created_at_utc": "2026-09-16T00:01:57.548477+00:00",
+  "dataset": {
+    "repo_id": "TIGER-Lab/MMLU-Pro",
+    "exact_revision": "b189ec765aa7ed75c8acfea42df31fdae71f97be",
+    "metadata_last_modified": "2026-05-02T06:26:05.000Z",
+    "fetched_at_utc": "2026-09-15T22:49:32.409899+00:00",
+    "files": [
+      {
+        "url": "https://huggingface.co/api/datasets/TIGER-Lab/MMLU-Pro",
+        "path": "$DATA_DIR/P2_MMLU_PRO_BREADTH_PROTOCOL_AND_COST_REVIEW_20260915T224801Z/evidence/hf_repo_metadata.json",
+        "bytes": 2378,
+        "sha256": "e3df7ff441a9df3f97ae3ced493fc51d143d6cdda0dcf48b020ace4f3c51d2fc"
+      },
+      {
+        "url": "https://datasets-server.huggingface.co/splits?dataset=TIGER-Lab/MMLU-Pro",
+        "path": "$DATA_DIR/P2_MMLU_PRO_BREADTH_PROTOCOL_AND_COST_REVIEW_20260915T224801Z/evidence/viewer_splits.json",
+        "bytes": 177,
+        "sha256": "b58170eb73e62fd7bce56f8fbcedee2a18e923aa81bd8f1a38b25cb84cd6292a"
+      },
+      {
+        "url": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro/raw/b189ec765aa7ed75c8acfea42df31fdae71f97be/README.md",
+        "path": "$DATA_DIR/P2_MMLU_PRO_BREADTH_PROTOCOL_AND_COST_REVIEW_20260915T224801Z/evidence/dataset_card.md",
+        "bytes": 11723,
+        "sha256": "4bd710f67da3fa359a33edce1b4b5816b3de416c823c2624ba5e89c2557d2a47"
+      },
+      {
+        "url": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro/resolve/b189ec765aa7ed75c8acfea42df31fdae71f97be/data/test-00000-of-00001.parquet",
+        "path": "$DATA_DIR/P2_MMLU_PRO_BREADTH_PROTOCOL_AND_COST_REVIEW_20260915T224801Z/dataset/test-00000-of-00001.parquet",
+        "bytes": 4144185,
+        "sha256": "0e24a191921c2f453518a537a8b2117bd137e7714d4ef1565e9ba06c1ecb9ad8"
+      },
+      {
+        "url": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro/resolve/b189ec765aa7ed75c8acfea42df31fdae71f97be/data/validation-00000-of-00001.parquet",
+        "path": "$DATA_DIR/P2_MMLU_PRO_BREADTH_PROTOCOL_AND_COST_REVIEW_20260915T224801Z/dataset/validation-00000-of-00001.parquet",
+        "bytes": 42857,
+        "sha256": "139423c23722e480c807ac4a191409a710cfce4eba744c1d641cf88e730e2078"
+      }
+    ],
+    "source": "公开Hub原始文件；Viewer仅交叉检查metadata，不用浮动converted revision替代原始parquet",
+    "inference_calls": 0,
+    "gpu_calls": 0,
+    "pbs_submissions": 0,
+    "dataset_config": "default",
+    "available_splits": {
+      "test": 12032,
+      "validation": 70
+    },
+    "main_evaluation_split": "test"
+  },
+  "population": {
+    "pairs": [
+      "large"
+    ],
+    "group_N": 11641,
+    "fit": 3000,
+    "cal": 6000,
+    "rows": 12032,
+    "splits": {
+      "fit": {
+        "rows": 3093,
+        "primary_groups": 3000,
+        "category_primary_counts": {
+          "biology": 163,
+          "business": 201,
+          "chemistry": 292,
+          "computer science": 105,
+          "economics": 216,
+          "engineering": 250,
+          "health": 176,
+          "history": 98,
+          "law": 247,
+          "math": 347,
+          "other": 238,
+          "philosophy": 128,
+          "physics": 334,
+          "psychology": 205
+        },
+        "category_row_counts": {
+          "biology": 181,
+          "business": 202,
+          "chemistry": 292,
+          "computer science": 105,
+          "economics": 216,
+          "engineering": 250,
+          "health": 211,
+          "history": 98,
+          "law": 284,
+          "math": 347,
+          "other": 238,
+          "philosophy": 128,
+          "physics": 335,
+          "psychology": 206
+        }
+      },
+      "cal": {
+        "rows": 6196,
+        "primary_groups": 6000,
+        "category_primary_counts": {
+          "biology": 327,
+          "business": 401,
+          "chemistry": 583,
+          "computer science": 211,
+          "economics": 432,
+          "engineering": 499,
+          "health": 352,
+          "history": 197,
+          "law": 495,
+          "math": 693,
+          "other": 476,
+          "philosophy": 257,
+          "physics": 667,
+          "psychology": 410
+        },
+        "category_row_counts": {
+          "biology": 357,
+          "business": 410,
+          "chemistry": 583,
+          "computer science": 212,
+          "economics": 438,
+          "engineering": 499,
+          "health": 415,
+          "history": 197,
+          "law": 572,
+          "math": 699,
+          "other": 476,
+          "philosophy": 258,
+          "physics": 669,
+          "psychology": 411
+        }
+      },
+      "dev": {
+        "rows": 2743,
+        "primary_groups": 2641,
+        "category_primary_counts": {
+          "biology": 144,
+          "business": 177,
+          "chemistry": 257,
+          "computer science": 93,
+          "economics": 190,
+          "engineering": 220,
+          "health": 155,
+          "history": 86,
+          "law": 217,
+          "math": 305,
+          "other": 210,
+          "philosophy": 113,
+          "physics": 293,
+          "psychology": 181
+        },
+        "category_row_counts": {
+          "biology": 179,
+          "business": 177,
+          "chemistry": 257,
+          "computer science": 93,
+          "economics": 190,
+          "engineering": 220,
+          "health": 192,
+          "history": 86,
+          "law": 245,
+          "math": 305,
+          "other": 210,
+          "philosophy": 113,
+          "physics": 295,
+          "psychology": 181
+        }
+      }
+    },
+    "excluded_groups": 0,
+    "excluded_rows": 0,
+    "categories": 14,
+    "repeated_stems_locked": true,
+    "calibration_counts_only_one_preselected_representative_per_stem": true,
+    "primary_population": "equal-weight minimum-question_id representative of each whitespace-normalized question-stem group; all selected group members retained for row-level descriptive reporting",
+    "e2e_panel_size": 128,
+    "new_strata": 2
+  },
+  "risk": {
+    "alpha": 0.05,
+    "p_cutoff": 0.001,
+    "CP_quantile": 0.999,
+    "q_grid": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "tests_per_stratum": 20
+  },
+  "code_scope": "只允许protocol-preserving adapter；本轮不授权模型执行",
+  "hashes": {
+    "candidates/PLAN_C/MANIFEST.json": "a309f5d54f6c7478fcf5b9514ea4f8521e14b48175836a2f65d9bdfd8dccb6cc",
+    "candidates/PLAN_C/STAGE1_CANDIDATE_SHARDS.json": "1daef1f02fdf33b2a446bc8e9fa1b152d162f4fc286a1175377a6e4ded707fb1",
+    "candidates/PLAN_C/cal_groups.json": "f6ecbfb4c2190b993c3f4888b061dd47d4d3809e028f880df5da9bfe8d89cbfa",
+    "candidates/PLAN_C/cal_ids.json": "b49a9b9e1468382990fa292cb402f6a630bcf87c6db8365783b708b1b98b82a0",
+    "candidates/PLAN_C/candidate_e2e128_ids.json": "0aff4667135fd51c63ecf0dc22099c1d36394537ba972ca7f51b11c5005a933d",
+    "candidates/PLAN_C/dev_groups.json": "848be2786457c2aa169281a7f2fc33b95988b5f6753bd830085e5894882642cd",
+    "candidates/PLAN_C/dev_ids.json": "040e556d520d94b1840712658e2fe8989e6103e3d3f891e1765c1e2145cd0707",
+    "candidates/PLAN_C/fit_groups.json": "0a03684d33083a2a5b22914e0600ab3f3c1a92971853b775e2ffb5102df21cb6",
+    "candidates/PLAN_C/fit_ids.json": "ed3e0862c7b2b50ab86e3c393d00db9553be3e309832381634a1527bea9c0852"
+  },
+  "query_only_content_sha256": "a777b14d54e0773a0f3a7182ea8fde22c06f7111707aeefd51ea0cfda9a7fff6",
+  "all_candidate_assignments_sha256": "1e3f08e27bbbd773ae821dac2b1d29c5c88150b912a30cdbd47a2a09baf94f5d",
+  "tokens_sha256": "be12179fca8de3f5821d84cbd8484d88fc0c2554eb25d9e7f8698f13010b1318",
+  "requested_future_max_GPUh": 58,
+  "actual_GPU": 0,
+  "actual_PBS": 0,
+  "actual_inference": 0
+}

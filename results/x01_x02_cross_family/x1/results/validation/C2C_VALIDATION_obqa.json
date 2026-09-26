@@ -1,0 +1,54 @@
+{
+  "utc": "2026-09-19T20:17:08.390344+00:00",
+  "verdict": "PASS",
+  "rows": [
+    {
+      "dataset": "obqa",
+      "id": "14-1371",
+      "C_raw_equal": true,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:6637"
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-97",
+      "C_raw_equal": true,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:7938"
+    },
+    {
+      "dataset": "obqa",
+      "id": "11-514",
+      "C_raw_equal": true,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:2371"
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-1178",
+      "C_raw_equal": true,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:293"
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-655",
+      "C_raw_equal": true,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:1191"
+    },
+    {
+      "dataset": "obqa",
+      "id": "1000",
+      "C_raw_equal": true,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:1685"
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-356",
+      "C_raw_equal": true,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:7099"
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-743",
+      "C_raw_equal": true,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:1321"
+    }
+  ]
+}

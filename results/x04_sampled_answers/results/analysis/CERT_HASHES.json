@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-21T07:40:10.635722+00:00",
+  "note": "certification and all gold-free results written before any gold read",
+  "files": {
+    "certification_ledger_40.csv": "ba1e764dfc6b1c33302c95576b92c3a17cd804c9e927ba92ec08d7d23754d1cc",
+    "dev_table_pre_gold.csv": "ff0ba0aeaec25944853a294fad36a14ad81f9034dd447ee0c3d5fea1563ce324",
+    "invalid_sampled.csv": "6936e536ac2e9d941a3a98430dfa47d31f65c526d9e67f87426c1e8fca72d74c",
+    "u0_split_E14_2.csv": "28736667f187887a784d0fa01b770252418084fdc42b5f0b8cc003669a49e421",
+    "resplit.csv": "9f692402bcb017e9174207df34794afd9fe274e9cdc5fafd7303e5e16ee673d4",
+    "resplit_per_seed.csv": "d2ccef1c939bc175faac7c7ace60c7a752c0871bc673c2ac93e439a2d1bb4630",
+    "input_checks.csv": "48ff4a3da50ec913d0078bf4cee8743a8ca930cb66e90ae0bb9b83078c97a3e6",
+    "X4_PRE_GOLD.json": "cb656db9c9ad2bf94faec6a04e938e48875a732d53b3ad096373e7394c1887fe"
+  }
+}

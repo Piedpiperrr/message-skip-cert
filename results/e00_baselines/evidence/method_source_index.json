@@ -1,0 +1,12 @@
+[
+  {
+    "path": "$DATA_DIR/P2_11_20260911T152130Z/P2_11_METHOD_DESIGN_REPORT.md",
+    "sha256": "f05cbe8ca93de79bffa60e4638d82c42739ac9feaf6b6bfa602c7637e642b267",
+    "authority_note": "current user prompt overrides draft hyperparameters, gates, costs and evaluation split"
+  },
+  {
+    "path": "$DATA_DIR/P2_11_20260911T152130Z/P2_11_NEXT_EXPERIMENT_DRAFT.md",
+    "sha256": "3308cfabe16bea4477c15e7a04ca964e1d7fb73578fd4c323db3534933d30686",
+    "authority_note": "current user prompt overrides draft hyperparameters, gates, costs and evaluation split"
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "utc": "2026-09-20T06:23:18Z",
+  "populations": [
+    {
+      "population": "small/obqa",
+      "rows": 4208,
+      "recorded_receiver_probe_core_ms_mean": 32.9347167511784,
+      "recorded_receiver_probe_core_ms_median": 32.0667193736881,
+      "estimated_lane_seconds": 138.5892880889587
+    },
+    {
+      "population": "small/arc",
+      "rows": 1417,
+      "recorded_receiver_probe_core_ms_mean": 34.37402610727517,
+      "recorded_receiver_probe_core_ms_median": 32.73152303881943,
+      "estimated_lane_seconds": 48.707994994008914
+    },
+    {
+      "population": "medium/obqa",
+      "rows": 4208,
+      "recorded_receiver_probe_core_ms_mean": 33.04053203926728,
+      "recorded_receiver_probe_core_ms_median": 32.89619309362024,
+      "estimated_lane_seconds": 139.03455882123671
+    },
+    {
+      "population": "medium/arc",
+      "rows": 1417,
+      "recorded_receiver_probe_core_ms_mean": 33.27234103291801,
+      "recorded_receiver_probe_core_ms_median": 33.28681900165975,
+      "estimated_lane_seconds": 47.14690724364482
+    },
+    {
+      "population": "large/obqa",
+      "rows": 4208,
+      "recorded_receiver_probe_core_ms_mean": 43.93669257524552,
+      "recorded_receiver_probe_core_ms_median": 43.45747048500925,
+      "estimated_lane_seconds": 184.88560235663317
+    },
+    {
+      "population": "large/arc",
+      "rows": 1417,
+      "recorded_receiver_probe_core_ms_mean": 47.13480331443366,
+      "recorded_receiver_probe_core_ms_median": 42.388528818264604,
+      "estimated_lane_seconds": 66.7900162965525
+    },
+    {
+      "population": "large/mmlu_pro",
+      "rows": 11641,
+      "recorded_receiver_probe_core_ms_mean": 46.00009435127607,
+      "recorded_receiver_probe_core_ms_median": 43.711635982617736,
+      "estimated_lane_seconds": 535.4870983432047
+    }
+  ],
+  "lane_estimated_seconds": {
+    "0": 187.29728308296765,
+    "1": 186.18146606488156,
+    "2": 569.0128811148909,
+    "3": 403.0354382381326
+  },
+  "lane_estimated_wall_seconds_incl_load_and_import": {
+    "0": 307.2972830829676,
+    "1": 336.18146606488153,
+    "2": 779.0128811148909,
+    "3": 613.0354382381327
+  },
+  "critical_path_seconds": 779.0128811148909,
+  "critical_path_minutes": 12.983548018581514,
+  "walltime_requested_seconds": 3000,
+  "headroom_factor": 3.8510274640215507,
+  "node_hours_estimate": 0.21639246697635858,
+  "A100_gpu_hours_estimate": 0.8655698679054343,
+  "nodes": 1,
+  "gpus": 4,
+  "queue": "REDACTED",
+  "basis": "recorded batch-1 receiver-probe component times of the same population, used as the per-row proxy for the helper prefill of the same pair; an estimate, not a helper measurement",
+  "feasible_E9C": true,
+  "E9B": "not executed; the E9b gate failed (see PROTOCOL_FREEZE_E9B.md section 4). Zero GPU hours."
+}

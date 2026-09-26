@@ -1,0 +1,57 @@
+[
+  {
+    "family": "D",
+    "accepted_q": [
+      0.15,
+      0.2,
+      0.25,
+      0.3
+    ],
+    "minimum_p": 0.0002585875876890614,
+    "n_max_empirical_risk_le_alpha": 920,
+    "n_max_zero_change": 132,
+    "zero_change_min_required_n": 135
+  },
+  {
+    "family": "R",
+    "accepted_q": [
+      0.25,
+      0.3,
+      0.35,
+      0.4
+    ],
+    "minimum_p": 0.0003172420151450698,
+    "n_max_empirical_risk_le_alpha": 852,
+    "n_max_zero_change": 129,
+    "zero_change_min_required_n": 135
+  },
+  {
+    "family": "Diff",
+    "accepted_q": [],
+    "minimum_p": 0.0015484581671877827,
+    "n_max_empirical_risk_le_alpha": 916,
+    "n_max_zero_change": 69,
+    "zero_change_min_required_n": 135
+  },
+  {
+    "family": "H",
+    "accepted_q": [
+      0.1,
+      0.15,
+      0.2,
+      0.25
+    ],
+    "minimum_p": 0.00023881525778559942,
+    "n_max_empirical_risk_le_alpha": 916,
+    "n_max_zero_change": 137,
+    "zero_change_min_required_n": 135
+  },
+  {
+    "family": "Random",
+    "accepted_q": [],
+    "minimum_p": 0.9994824951228579,
+    "n_max_empirical_risk_le_alpha": 0,
+    "n_max_zero_change": 0,
+    "zero_change_min_required_n": 135
+  }
+]

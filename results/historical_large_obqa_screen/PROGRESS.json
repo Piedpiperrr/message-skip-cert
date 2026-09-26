@@ -1,0 +1,15 @@
+{
+  "phase": "NUMERICAL_COMPLETE",
+  "job_id": "screen-run01",
+  "CPU_charged": 158.172706,
+  "CPU_remaining": 1041.827294,
+  "wall_remaining": 1447.2883281707764,
+  "prefill_progress": {
+    "completed": 742,
+    "attempts": 742,
+    "new_success": 742,
+    "cached": 0,
+    "utc": "2026-09-14T04:54:31.373841+00:00"
+  },
+  "utc": "2026-09-14T04:55:08.711810+00:00"
+}

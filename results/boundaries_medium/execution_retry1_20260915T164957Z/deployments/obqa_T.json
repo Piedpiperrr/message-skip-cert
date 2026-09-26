@@ -1,0 +1,13 @@
+{
+  "q": 0.0,
+  "threshold": null,
+  "mode": "fixed_reference",
+  "accepted_q": [],
+  "chosen_calibration": null,
+  "accuracy_used_for_selection": false,
+  "task": "obqa",
+  "reference": "T",
+  "utc": "2026-09-15T18:30:07.770590+00:00",
+  "fit_threshold_sha256": "e9a57c9fbede98cb626d5cfc69d7097996ec3d570946fa378db48f4836383d35",
+  "dev_project_inference_started": false
+}

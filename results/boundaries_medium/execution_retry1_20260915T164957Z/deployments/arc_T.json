@@ -1,0 +1,13 @@
+{
+  "q": 0.0,
+  "threshold": null,
+  "mode": "fixed_reference",
+  "accepted_q": [],
+  "chosen_calibration": null,
+  "accuracy_used_for_selection": false,
+  "task": "arc",
+  "reference": "T",
+  "utc": "2026-09-15T19:04:38.657165+00:00",
+  "fit_threshold_sha256": "3da87f5c00fcb65357f0fc46fa0eaae410456660952871807f239eff183e4ec8",
+  "dev_project_inference_started": false
+}

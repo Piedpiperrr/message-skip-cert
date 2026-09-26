@@ -1,0 +1,381 @@
+{
+  "utc_start": "2026-09-20T01:27:47.836178+00:00",
+  "pairs": {
+    "small": {
+      "pair": "small",
+      "models": {
+        "helper": {
+          "repo_id": "Qwen/Qwen2.5-0.5B-Instruct",
+          "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+          "path": "$DATA_DIR/c2c_reproduction_assets/models/Qwen--Qwen2.5-0.5B-Instruct",
+          "num_hidden_layers": 24,
+          "num_key_value_heads": 2,
+          "hidden_size": 896,
+          "head_dim": 64,
+          "model_type": "qwen2",
+          "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "strict_cpu_load_seconds": 20.21,
+          "loading_info_clean": true,
+          "n_files_hashed": 7
+        },
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "path": "$DATA_DIR/c2c_reproduction_assets/models/Qwen--Qwen3-0.6B",
+          "num_hidden_layers": 28,
+          "num_key_value_heads": 8,
+          "hidden_size": 1024,
+          "head_dim": 128,
+          "model_type": "qwen3",
+          "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+          "strict_cpu_load_seconds": 0.11,
+          "loading_info_clean": true,
+          "n_files_hashed": 7
+        },
+        "fuser": {
+          "repo_id": "nics-efc/C2C_Fuser",
+          "revision": "8704f555c6b4a60b764de7d755e6f1daf21a57ef",
+          "subfolder": "qwen3_0.6b+qwen2.5_0.5b_Fuser/final",
+          "path": "$DATA_DIR/c2c_reproduction_assets/fusers/nics-efc--C2C_Fuser/qwen3_0.6b+qwen2.5_0.5b_Fuser/final",
+          "projector_count": 28,
+          "strict_cpu_load_seconds": 11.78,
+          "parameters_total": 477848056,
+          "all_strict": true
+        }
+      },
+      "checks": {
+        "prefix_ids_match": true,
+        "prefix_ids_actual": [
+          785,
+          4396,
+          4226,
+          374
+        ],
+        "label_token_sets_valid_A_to_J": true,
+        "fuser_loads_for_pair": true,
+        "projector_count_equals_receiver_layers": true,
+        "mapping": {
+          "0": [
+            0,
+            0
+          ],
+          "1": [
+            0,
+            1
+          ],
+          "2": [
+            0,
+            2
+          ],
+          "3": [
+            0,
+            3
+          ],
+          "4": [
+            0,
+            4
+          ],
+          "5": [
+            1,
+            5
+          ],
+          "6": [
+            2,
+            6
+          ],
+          "7": [
+            3,
+            7
+          ],
+          "8": [
+            4,
+            8
+          ],
+          "9": [
+            5,
+            9
+          ],
+          "10": [
+            6,
+            10
+          ],
+          "11": [
+            7,
+            11
+          ],
+          "12": [
+            8,
+            12
+          ],
+          "13": [
+            9,
+            13
+          ],
+          "14": [
+            10,
+            14
+          ],
+          "15": [
+            11,
+            15
+          ],
+          "16": [
+            12,
+            16
+          ],
+          "17": [
+            13,
+            17
+          ],
+          "18": [
+            14,
+            18
+          ],
+          "19": [
+            15,
+            19
+          ],
+          "20": [
+            16,
+            20
+          ],
+          "21": [
+            17,
+            21
+          ],
+          "22": [
+            18,
+            22
+          ],
+          "23": [
+            19,
+            23
+          ],
+          "24": [
+            20,
+            24
+          ],
+          "25": [
+            21,
+            25
+          ],
+          "26": [
+            22,
+            26
+          ],
+          "27": [
+            23,
+            27
+          ]
+        },
+        "mapping_is_identity": false
+      }
+    },
+    "medium": {
+      "pair": "medium",
+      "models": {
+        "helper": {
+          "repo_id": "Qwen/Qwen2.5-1.5B-Instruct",
+          "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+          "path": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_20260915T152640Z/assets/helper",
+          "num_hidden_layers": 28,
+          "num_key_value_heads": 2,
+          "hidden_size": 1536,
+          "head_dim": 128,
+          "model_type": "qwen2",
+          "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "strict_cpu_load_seconds": 0.11,
+          "loading_info_clean": true,
+          "n_files_hashed": 7
+        },
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-1.7B",
+          "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "path": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_20260915T152640Z/assets/receiver",
+          "num_hidden_layers": 28,
+          "num_key_value_heads": 8,
+          "hidden_size": 2048,
+          "head_dim": 128,
+          "model_type": "qwen3",
+          "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+          "strict_cpu_load_seconds": 0.38,
+          "loading_info_clean": true,
+          "n_files_hashed": 9
+        },
+        "fuser": {
+          "repo_id": "nics-efc/C2C_Fuser",
+          "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d",
+          "subfolder": "qwen3_1.7b+qwen2.5_1.5b_Fuser/final",
+          "path": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_20260915T152640Z/assets/fuser/qwen3_1.7b+qwen2.5_1.5b_Fuser/final",
+          "projector_count": 28,
+          "strict_cpu_load_seconds": 14.03,
+          "parameters_total": 485188088,
+          "all_strict": true
+        }
+      },
+      "checks": {
+        "prefix_ids_match": true,
+        "prefix_ids_actual": [
+          785,
+          4396,
+          4226,
+          374
+        ],
+        "label_token_sets_valid_A_to_J": true,
+        "fuser_loads_for_pair": true,
+        "projector_count_equals_receiver_layers": true,
+        "mapping": {
+          "0": [
+            0,
+            0
+          ],
+          "1": [
+            1,
+            1
+          ],
+          "2": [
+            2,
+            2
+          ],
+          "3": [
+            3,
+            3
+          ],
+          "4": [
+            4,
+            4
+          ],
+          "5": [
+            5,
+            5
+          ],
+          "6": [
+            6,
+            6
+          ],
+          "7": [
+            7,
+            7
+          ],
+          "8": [
+            8,
+            8
+          ],
+          "9": [
+            9,
+            9
+          ],
+          "10": [
+            10,
+            10
+          ],
+          "11": [
+            11,
+            11
+          ],
+          "12": [
+            12,
+            12
+          ],
+          "13": [
+            13,
+            13
+          ],
+          "14": [
+            14,
+            14
+          ],
+          "15": [
+            15,
+            15
+          ],
+          "16": [
+            16,
+            16
+          ],
+          "17": [
+            17,
+            17
+          ],
+          "18": [
+            18,
+            18
+          ],
+          "19": [
+            19,
+            19
+          ],
+          "20": [
+            20,
+            20
+          ],
+          "21": [
+            21,
+            21
+          ],
+          "22": [
+            22,
+            22
+          ],
+          "23": [
+            23,
+            23
+          ],
+          "24": [
+            24,
+            24
+          ],
+          "25": [
+            25,
+            25
+          ],
+          "26": [
+            26,
+            26
+          ],
+          "27": [
+            27,
+            27
+          ]
+        },
+        "mapping_is_identity": true
+      }
+    }
+  },
+  "shared_protocol": {
+    "prefix_ids": [
+      785,
+      4396,
+      4226,
+      374
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J"
+    ],
+    "receiver_prompt_sha256": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66",
+    "scoring_v2_sha256": "d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9",
+    "label_token_sets_sha256": "6020e8383b77d175a0c9873113715c030570ff971f02f1387ca8a272041a5285",
+    "prefix_ids_sha256": "ce218af11405dd5893ab42576be6829b89fc5ca3857c64b66337cb0d8f88418a"
+  },
+  "utc_end": "2026-09-20T01:28:58.865429+00:00",
+  "generation_configs": {
+    "small": "c81c48a34803a515a693d04f2523aa82a277b1e3960b583f4ebe81b3b5443d35",
+    "medium": "c81c48a34803a515a693d04f2523aa82a277b1e3960b583f4ebe81b3b5443d35"
+  },
+  "model_source_index": {
+    "small": "e0070a3fac181c9a8ac9e662ef449fac53ffecd46233649e7fa12ed63f849b3c",
+    "medium": "7912f0e799fe637b803061bde1815ce7ead19285927546d310126abcffba3798"
+  },
+  "GPU_used": false,
+  "project_queries_read": 0,
+  "gold_read": false
+}

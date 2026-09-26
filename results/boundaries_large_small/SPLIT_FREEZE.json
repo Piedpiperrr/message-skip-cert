@@ -1,0 +1,29 @@
+{
+  "utc": "2026-09-14T16:52:46.089022+00:00",
+  "files": {
+    "splits/arc_fit_ids.json": "b3771328b85bbbe00cffe1cf6155bfa689d9de29c80fbdea7cc732488883a1e7",
+    "splits/arc_cal_representatives.json": "61781f830a784f82d8a9d4c426b8a2a824f1c0919bc6e3fd27209a5aed4bdfaa",
+    "splits/obqa_cal_representatives.json": "8b33a4d168131c5a0095c5eabcdea2f2b3bb272dfae8a41ab2a7e0e05d5ebaed",
+    "splits/obqa_dev_ids.json": "80d1bbdd9148df3037401881533a2137b0d4ce9ee90a8ebb424fb413440bfbab",
+    "splits/obqa_dev_representatives.json": "80d1bbdd9148df3037401881533a2137b0d4ce9ee90a8ebb424fb413440bfbab",
+    "splits/obqa_group_members.csv": "be43bbee6009f73481c6a89976d1efee650bc0ae71c879f119267630ba28e3c9",
+    "splits/arc_train_dev_overlap.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "splits/obqa_fit_representatives.json": "1559bc9668d88a986df0967b96fdf14c995f02f622b126f396819b69b58c4028",
+    "splits/arc_dev_ids.json": "588d16b38e5db04b26a0d48feb5b4b96f4caa6af3bd5352626e59aa40063419c",
+    "splits/arc_cal_ids.json": "61781f830a784f82d8a9d4c426b8a2a824f1c0919bc6e3fd27209a5aed4bdfaa",
+    "splits/obqa_train_dev_overlap.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "splits/arc_group_members.csv": "77f5f120fdd8e1153b15a61a358ee42241a59557a5b185bb8d3ca558d970a43a",
+    "splits/arc_fit_representatives.json": "6a347fc68fa467ffb6b605dba872d06f3ddc064077c8dbc740b12c607fa90d5a",
+    "splits/obqa_cal_ids.json": "8b33a4d168131c5a0095c5eabcdea2f2b3bb272dfae8a41ab2a7e0e05d5ebaed",
+    "splits/obqa_fit_ids.json": "1559bc9668d88a986df0967b96fdf14c995f02f622b126f396819b69b58c4028",
+    "splits/arc_dev_representatives.json": "588d16b38e5db04b26a0d48feb5b4b96f4caa6af3bd5352626e59aa40063419c",
+    "splits/populations.json": "d87127b433f5eef3c82adc24d6990f919333df437c6a27f21f4caf78a47351ae",
+    "inputs/arc_train_queries.jsonl": "bc039741db9e9932d29632699e91113f881b67aa6aff82c5261de9e8f4dbf928",
+    "inputs/arc_panel_ids.json": "513e403c67c8192c3685701f633512cd09340d621972bb12c76b163636745894",
+    "inputs/arc_dev_queries.jsonl": "b550cf4db8635d3c3926bc7c90643794f071bb16a8ed10b112d2399a04c4657f",
+    "inputs/obqa_panel_ids.json": "37aeeffcb1fec43da584b020227ec756d20eb4661f1b91e48bb360f385865666",
+    "inputs/obqa_train_queries.jsonl": "56a89982c5fbf8fc08edc322d08a11eaba5ef05ac3b0dfeb662ddb96477ea767",
+    "inputs/obqa_dev_queries.jsonl": "23c6a8039b63d176a63c820114a20def2ce6a785d8b8cd86a3b510ed68928094"
+  },
+  "outcomes_used": false
+}

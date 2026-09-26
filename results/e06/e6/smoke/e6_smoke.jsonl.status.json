@@ -1,0 +1,16 @@
+{
+  "mode": "smoke",
+  "shard": 0,
+  "nshards": 1,
+  "n_done": 16,
+  "n_requested": 16,
+  "invalid": 0,
+  "errors": [],
+  "load_seconds": {
+    "helper": 135.40076735499315,
+    "receiver": 10.072119950084016
+  },
+  "flag_off_byte_identical_5_fit_rows": true,
+  "PASS": true,
+  "gold_read": false
+}

@@ -1,0 +1,70 @@
+--- $TMPDIR	2026-09-19 20:42:39.747179566 +0000
++++ finish_x1_c2c_from_csv.py	2026-09-19 20:42:39.000000000 +0000
+@@ -1,13 +1,17 @@
+ """X1 C2C post-processing from an existing official-evaluator CSV (CPU, receiver tokenizer only; no model, no gold). DEVIATIONS C15.
+ Same record construction as run_x1_c2c.py lines 58-68; only the CSV->row mapping check differs: the official ai2-arc CSV writer
+ logs choices A-D only, so for K=5 rows columns E.. are empty. Check used here, per row: question equal; choices 1..min(K,4) equal;
+-CSV choice columns beyond them empty; and CSV cot_input_length (= Rosetta receiver input_ids length) equal to the token count of our
+-rendered receiver prompt (ids byte-identical per PROMPT_IDENTITY_v2), which for K=5 rows shows the fifth choice was in the prompt.
++CSV choice columns beyond them empty; the evaluator's own prompt (_format_*_example on the local-rows loader) equal to ours; and, through
++the evaluator's own prepare_model_inputs with the aligner (model_type rosetta, Llama tokenizer, strategy longest, as in the run):
++len(receiver input_ids) == CSV cot_input_length and the receiver's non-padding ids == our rendered receiver prompt ids. For K=5 rows
++this shows the fifth choice was in the prompt. The Llama-side 'Today Date' rendered by the aligner is recorded (not fixed by the
++official aligner; strftime_now at run time).
+ usage: finish_x1_c2c_from_csv.py --dataset {obqa,arc} --rows <jsonl> --env <c2c_chain_XX.env.json> --out <jsonl> [--partial <jsonl>]"""
+ import sys
+ sys.dont_write_bytecode = True
+-import argparse, csv
++import argparse, csv, importlib.util, yaml, torch
+ from x1_common import *
++sys.path.insert(0, str(CLEAN))
+ from transformers import AutoTokenizer
+ sys.path.insert(0, str(P210)); import protocol_min
+ FMT = {'obqa': protocol_min.format_openbook}
+@@ -23,20 +27,38 @@
+ assert meta['exit_code'] == 0 and len(meta['csv']) == 1 and meta['mode'] == 'run' and meta['dataset'] == a.dataset, meta
+ assert meta['rows_sha256'] == sha(a.rows) and meta['evaluator_sha256'] == sha(EVALUATOR), 'rows or evaluator changed since the run'
+ parse = parser()
+-tq = AutoTokenizer.from_pretrained(QWEN06['path'], local_files_only=True)
++spec = importlib.util.spec_from_file_location('ue_xfam', EVALUATOR); ue = importlib.util.module_from_spec(spec); spec.loader.exec_module(ue)
++dname, fmt = {'obqa': ('openbookqa', '_format_openbookqa_example'), 'arc': ('ai2-arc', '_format_ai2_arc_example')}[a.dataset]
++cfg = yaml.safe_load(open(read(a.env)['config']))
++assert cfg['model']['rosetta_config']['is_do_alignment'] is True and cfg['model']['rosetta_config']['teacher_model'] == LLAMA['path'] and cfg['eval']['dataset'] == dname
++cfg['output']['output_dir'] = str(X / 'cache/x1_finish_scratch')
++ev = ue.UnifiedEvaluator(cfg)
++tq = AutoTokenizer.from_pretrained(QWEN06['path'], local_files_only=True); ue.set_default_chat_template(tq, QWEN06['path'])
++tl = AutoTokenizer.from_pretrained(LLAMA['path'], local_files_only=True)
++if tl.pad_token is None: tl.pad_token = tl.eos_token
++ue.set_default_chat_template(tl, LLAMA['path'])
++data = ue._xfam_local_dataset(str(pathlib.Path(a.rows).resolve()), dname)['test']
+ with open(meta['csv'][0], newline='') as f:
+     got = {int(x['question_id']): x for x in csv.DictReader(f)}
+ assert sorted(got) == list(range(len(rows))), ('question_id coverage', len(got), len(rows))
+-chk = dict(n=0, question_equal=0, logged_choices_equal=0, unlogged_columns_empty=0, input_length_equal=0, K_gt_4=[])
+-for i, r in enumerate(rows):
+-    x = got[i]; q = r['query']; K = len(q['choice_text']); L = 'ABCDEFGHIJ'
+-    rendered = tq.apply_chat_template([{'role': 'user', 'content': FMT[a.dataset](q, use_template=True)}], tokenize=False, add_generation_prompt=True, enable_thinking=False)
++names = ['question_equal', 'logged_choices_equal', 'unlogged_columns_empty', 'evaluator_prompt_equal', 'aligned_input_length_equal', 'receiver_nonpad_ids_equal']
++chk = dict(n=0, **{k: 0 for k in names}, llama_today_date=set(), pad_positions=set(), K_gt_4=[])
++assert len(data) == len(rows)
++for i, (ex, r) in enumerate(zip(data, rows)):
++    x = got[i]; q = r['query']; K = len(q['choice_text']); L = 'ABCDEFGHIJ'; assert ex['id'] == r['id']
++    mine = FMT[a.dataset](q, use_template=True)
++    rendered = tq.apply_chat_template([{'role': 'user', 'content': mine}], tokenize=False, add_generation_prompt=True, enable_thinking=False)
++    prompt = getattr(ev, fmt)(ex, use_cot=cfg['eval']['use_cot'], use_template=cfg['eval']['use_template'])
++    prep = ev.prepare_model_inputs(prompt=prompt, tokenizer=tq, device=torch.device('cpu'), model_type='rosetta', llm_tokenizer=tl, answer_method=cfg['eval']['answer_method'])
++    slm = prep['inputs']['input_ids'][0][0].tolist(); keep = prep['inputs']['attention_mask'][0][0].bool().tolist()
+     c = [x['question'] == q['question_stem'], [x[k] for k in L[:min(K, 4)]] == q['choice_text'][:4], all(x[k] == '' for k in L[min(K, 4):]),
+-         int(x['cot_input_length']) == len(tq(rendered)['input_ids'])]
++         prompt == mine, int(x['cot_input_length']) == len(slm), [t for t, k in zip(slm, keep) if k] == tq(rendered)['input_ids']]
+     chk['n'] += 1
+-    for name, ok in zip(['question_equal', 'logged_choices_equal', 'unlogged_columns_empty', 'input_length_equal'], c): chk[name] += ok
+-    if K > 4: chk['K_gt_4'].append(dict(id=r['id'], K=K, csv_input_length=int(x['cot_input_length']), ours=len(tq(rendered)['input_ids']), all_checks=all(c)))
++    for name, ok in zip(names, c): chk[name] += ok
++    chk['llama_today_date'].add(prep['printable_text'][1].split('Today Date: ')[1].split('\n')[0]); chk['pad_positions'].add(len(slm) - sum(keep))
++    if K > 4: chk['K_gt_4'].append(dict(id=r['id'], K=K, csv_input_length=int(x['cot_input_length']), aligned_len=len(slm), all_checks=all(c)))
+     assert all(c), (r['id'], c)
++chk['llama_today_date'] = sorted(chk['llama_today_date']); chk['pad_positions'] = sorted(chk['pad_positions'])
+ for i, r in enumerate(rows):
+     x = got[i]; p = parse(x['cot_output'], r['legal_labels'])
+     append(OUT, dict(dataset=r['dataset'], split=r['split'], id=r['id'], representative=r['representative'], pair='x1', runtime_error=None,

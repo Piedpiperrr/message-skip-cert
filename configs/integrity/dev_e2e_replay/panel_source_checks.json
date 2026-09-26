@@ -1,0 +1,58 @@
+[
+  {
+    "pair": "large",
+    "dataset": "obqa",
+    "panel_rows": 128,
+    "panel_groups": 128,
+    "c_ref_train256_R_ms": 252.35370575390624,
+    "source_cost": "<private_path>/dev_cost_panel_matrix.npz",
+    "cost_sha256": "0f0f5e37d0b0ae5d38b82b8e86b4d9ccbcd2de1a5c746f1d4148622e4180a0bd",
+    "same_block_four_actions": true,
+    "raw_sha_matches_V2": true,
+    "original_action_names": [
+      "receiver_only",
+      "text",
+      "c2c",
+      "acw"
+    ],
+    "cost_definition": "full call incl tokenization/transfer/generation/decode/sync; excludes scoring/validation diagnostic; startup separate",
+    "full_vs_panel_answer_changed_rows": {
+      "R": 0,
+      "T": 0,
+      "C": 0,
+      "A": 0
+    },
+    "ordered_ids_sha256": "6ebbd7604ce342d43219288b4235053026449b1d9684cff73044be356b3263ac",
+    "query_sha256": "cbaee992cee5b5b956d2ae439fd3ce730dc90e73ad8e1b04cda407fabc04ce14",
+    "current_recheck": true,
+    "unique_groups": 128
+  },
+  {
+    "pair": "large",
+    "dataset": "arc",
+    "panel_rows": 128,
+    "panel_groups": 128,
+    "c_ref_train256_R_ms": 266.9407253203125,
+    "source_cost": "<private_path>/validation_cost_panel_matrix.npz",
+    "cost_sha256": "78ba5efb7ee5e7dd343d18abb8edf0e79222c5a375fb57d6bc0e21119fd66fcc",
+    "same_block_four_actions": true,
+    "raw_sha_matches_V2": true,
+    "original_action_names": [
+      "receiver_only",
+      "text",
+      "c2c",
+      "acw"
+    ],
+    "cost_definition": "full call incl tokenization/transfer/generation/decode/sync; excludes scoring/validation diagnostic; startup separate",
+    "full_vs_panel_answer_changed_rows": {
+      "R": 0,
+      "T": 0,
+      "C": 0,
+      "A": 0
+    },
+    "ordered_ids_sha256": "1fdb3fccdfa12769fe99d1a34da154881d877b6efcaf74902f0c73cd88473232",
+    "query_sha256": "5c7d26f92c7f05312af4348216b969c89bf8c26364d9a3e150473ea4f6ce5567",
+    "current_recheck": true,
+    "unique_groups": 128
+  }
+]

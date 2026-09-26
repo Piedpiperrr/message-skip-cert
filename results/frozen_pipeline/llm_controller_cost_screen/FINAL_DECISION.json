@@ -1,0 +1,15 @@
+{
+  "decision": "NO_GO_AGENT_ROUTER",
+  "reason_code": "NO_GO_COST",
+  "stage": "cost_screen",
+  "branch_closed": true,
+  "return_to": "Work",
+  "ARC_test_read": false,
+  "no_model_or_prompt_followup": true,
+  "GO_conditions": {
+    "contextual_signal_beyond_ProbeMax": "NOT_TESTED",
+    "strict_nonzero_calibration": "NOT_TESTED",
+    "reference_risk_preservation": "ORIGINAL_FIXED_C2C_RETAINED",
+    "material_positive_E2E_saving": "NOT_ESTABLISHED_COST_SCREEN_FAILED"
+  }
+}

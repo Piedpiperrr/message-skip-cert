@@ -1,0 +1,25 @@
+{
+  "utc": "2026-09-20T10:36:51Z",
+  "population": "held_out_744",
+  "N": 744,
+  "files": {
+    "SEALED_SCORES.jsonl": "66cf6393334e697f6732ddb5e0c2820c096a2ad49ccbb95546723dc70628d3a8",
+    "SEALED_ROUTES.jsonl": "9b497f777b215b6aa291e4b3e106112b657d9857a67953ab3aa6478dd40d13ed",
+    "SEALED_OUTPUTS.jsonl": "1a66eb15400bd10f7a641957407723af27ab92bbdf731c7b7305504204223592"
+  },
+  "counts": {
+    "scores": 1488,
+    "routes": 3720,
+    "outputs": 4464
+  },
+  "policies": [
+    "medium_obqa_C_q55",
+    "medium_obqa_C_q50",
+    "large_obqa_T_q80",
+    "large_obqa_C_q80",
+    "large_obqa_TF_q75"
+  ],
+  "gold_read": false,
+  "answer_key_opened": false,
+  "note": "written and hashed before the answer key was decoded, as PROTOCOL_FREEZE_E9B.md requires"
+}

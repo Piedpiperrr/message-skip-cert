@@ -1,0 +1,10 @@
+{
+  "fit_source": "$DATA_DIR/P2_RISK_CALIBRATION_BINARY_20260914T043954Z/splits/fit_ids.json",
+  "fit_sha256": "1559bc9668d88a986df0967b96fdf14c995f02f622b126f396819b69b58c4028",
+  "ordering": "sorted complete IDs, lexicographic, no prefixes",
+  "rng": "separate random.Random(r) for each r=0..4",
+  "nested": "prefixes 32/128/512 of same permutation per repeat",
+  "label_stratification": false,
+  "seeds_reselected": false,
+  "authority": "user pre-specified budgets and RNG before preparation"
+}

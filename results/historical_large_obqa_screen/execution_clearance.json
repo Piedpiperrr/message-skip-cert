@@ -1,0 +1,6 @@
+{
+  "job_id": "screen-run01",
+  "host": "REDACTED",
+  "strict_cgroup_match": true,
+  "GPU_count": 1
+}

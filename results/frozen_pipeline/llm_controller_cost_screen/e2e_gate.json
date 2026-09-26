@@ -1,0 +1,12 @@
+{
+  "status": "NOT_RUN_COST_STOP",
+  "new_complete_action_requests": 0,
+  "AgentGate_E2E_coverage": null,
+  "AgentGate_E2E_conditional_disagreement": null,
+  "AgentGate_E2E_correctness": null,
+  "AgentGate_policy_latency": null,
+  "AgentGate_paired_latency_saving": null,
+  "AgentGate_bootstrap_interval": null,
+  "AgentGate_utility": null,
+  "reason": "No new deployment exists. Historical economics and controller prefix costs are component screen evidence only."
+}

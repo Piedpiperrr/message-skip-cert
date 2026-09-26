@@ -1,0 +1,15 @@
+check,expected,observed,status
+large/OBQA/Text: panel ids subset of dev population,0,0,PASS
+large/OBQA/C2C: panel ids subset of dev population,0,0,PASS
+large/ARC/Text: panel ids subset of dev population,0,0,PASS
+large/ARC/C2C: panel ids subset of dev population,0,0,PASS
+large/MMLU-Pro/Text: panel ids subset of dev population,0,0,PASS
+large/MMLU-Pro/C2C: panel ids subset of dev population,0,0,PASS
+medium/OBQA/C2C q=.55: panel ids subset of dev population,0,0,PASS
+medium/ARC/C2C: panel ids subset of dev population,0,0,PASS
+large/OBQA/Text+fact: panel ids subset of dev population,0,0,PASS
+Llama-3.1-8B/OBQA/Text: panel ids subset of dev population,0,0,PASS
+Llama-3.1-8B/OBQA/Text: large-pair helper message sha256 == X3 T.helper_message_sha256 (dev),0,0,PASS
+Llama-3.1-8B/ARC/Text: panel ids subset of dev population,0,0,PASS
+Llama-3.1-8B/ARC/Text: large-pair helper message sha256 == X3 T.helper_message_sha256 (dev),0,0,PASS
+"MMLU-Pro panel ids inside the full 2,641 run",128,128,PASS

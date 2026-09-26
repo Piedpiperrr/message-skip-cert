@@ -1,0 +1,161 @@
+{
+  "utc": "2026-09-21T23:58:59.983596+00:00",
+  "gold_read": false,
+  "dry_run": false,
+  "rule": "eligible iff change rate among the 25% lowest-score pilot questions <= 4% (point estimate); rank eligible settings by P@3000, then P@1000, then the AUROC lower bound, then Qwen3 before Llama; take at most two settings with P@3000 >= .5: the top one, then the best one on a different dataset if its P@3000 >= .5, otherwise the next one with P@3000 >= .5; N_cal = smallest of {1000, 2000, 3000} with P >= .8 (else 3000).",
+  "selected": [
+    {
+      "setting": "SQuAD|llama",
+      "dataset": "SQuAD",
+      "receiver": "llama",
+      "score": "s2",
+      "d": 0.1425,
+      "d_CI": [
+        0.10974766154470904,
+        0.18065109731865608
+      ],
+      "AUROC": 0.8357628765792031,
+      "AUROC_CI": [
+        0.7707903244606229,
+        0.8910458370429156
+      ],
+      "low25_rate": 0.01,
+      "P": {
+        "1000": 0.598,
+        "2000": 0.975,
+        "3000": 1.0
+      },
+      "conservative_P": {
+        "1000": 0.013,
+        "2000": 0.081,
+        "3000": 0.217
+      },
+      "N_cal": 2000,
+      "P_at_N_cal": 0.975,
+      "conservative_P_at_N_cal": 0.081
+    }
+  ],
+  "none_selected": false,
+  "ranking": [
+    {
+      "setting": "SQuAD|llama",
+      "dataset": "SQuAD",
+      "receiver": "llama",
+      "score": "s2",
+      "d": 0.1425,
+      "d_CI": [
+        0.10974766154470904,
+        0.18065109731865608
+      ],
+      "AUROC": 0.8357628765792031,
+      "AUROC_CI": [
+        0.7707903244606229,
+        0.8910458370429156
+      ],
+      "low25_rate": 0.01,
+      "P": {
+        "1000": 0.598,
+        "2000": 0.975,
+        "3000": 1.0
+      },
+      "conservative_P": {
+        "1000": 0.013,
+        "2000": 0.081,
+        "3000": 0.217
+      }
+    },
+    {
+      "setting": "TriviaQA|llama",
+      "dataset": "TriviaQA",
+      "receiver": "llama",
+      "score": "s2",
+      "d": 0.29,
+      "d_CI": [
+        0.24597963492732822,
+        0.33715946950323056
+      ],
+      "AUROC": 0.8376639145216125,
+      "AUROC_CI": [
+        0.7935684734409041,
+        0.8766944657917622
+      ],
+      "low25_rate": 0.04,
+      "P": {
+        "1000": 0.035,
+        "2000": 0.162,
+        "3000": 0.413
+      },
+      "conservative_P": {
+        "1000": 0.0,
+        "2000": 0.001,
+        "3000": 0.004
+      }
+    },
+    {
+      "setting": "NQ-passage|llama",
+      "dataset": "NQ-passage",
+      "receiver": "llama",
+      "score": "s2",
+      "d": 0.2225,
+      "d_CI": [
+        0.1826735143818694,
+        0.2664876325191112
+      ],
+      "AUROC": 0.8080855522237075,
+      "AUROC_CI": [
+        0.7589483219362567,
+        0.8521327300269143
+      ],
+      "low25_rate": 0.03,
+      "P": {
+        "1000": 0.039,
+        "2000": 0.179,
+        "3000": 0.393
+      },
+      "conservative_P": {
+        "1000": 0.0,
+        "2000": 0.002,
+        "3000": 0.003
+      }
+    }
+  ],
+  "eligibility_failures": [
+    {
+      "setting": "SQuAD|qwen3",
+      "low25_rate": 0.07,
+      "low25_n": 100,
+      "low25_k": 7
+    },
+    {
+      "setting": "NQ-passage|qwen3",
+      "low25_rate": 0.12,
+      "low25_n": 100,
+      "low25_k": 12
+    },
+    {
+      "setting": "TriviaQA|qwen3",
+      "low25_rate": 0.09,
+      "low25_n": 100,
+      "low25_k": 9
+    },
+    {
+      "setting": "NQ-Open|qwen3",
+      "low25_rate": 0.3,
+      "low25_n": 100,
+      "low25_k": 30
+    },
+    {
+      "setting": "NQ-Open|llama",
+      "low25_rate": 0.09,
+      "low25_n": 100,
+      "low25_k": 9
+    }
+  ],
+  "not_rankable_no_prediction": [],
+  "inputs": {
+    "E20P_jobA_rows.jsonl": "598affd26d5d3d50b762005fc216c1a8b15da88deec4a292b0b80b3b8f718592",
+    "E20P_jobB_rows.jsonl": "24537c0814b5eb40db0b24115fe2c7544eb8820997da4e2f23373e37427d5523"
+  },
+  "pilot_stats_sha256": "6a64a682ce1a79cfbdb4aa1d82b084e2a5d7b19442e6901627382a782796477f",
+  "analysis_sha256": "7185a3696d0ec3a805126f3872921acb29881ae996cbc7eb908dc985b793abac"
+}

@@ -1,0 +1,7 @@
+pair,task,reference,N_fit,fit_positive,N_cal,cal_positive,N_dev,dev_positive,feature_dim,n_iter,converged,fit_warnings,cal_AUROC
+medium,OBQA,Text,2100,512,1366,348,742,174,4096,22,True,0,0.6991
+medium,OBQA,C2C,2100,353,1366,242,742,131,4096,18,True,0,0.6966
+medium,ARC,Text,670,134,448,67,299,52,4096,16,True,0,0.673
+medium,ARC,C2C,670,107,448,55,299,48,4096,16,True,0,0.6767
+large,MMLU-Pro,Text,3000,676,6000,1295,2641,561,8192,28,True,0,0.6545
+large,MMLU-Pro,C2C,3000,880,6000,1748,2641,756,8192,27,True,0,0.753

@@ -1,0 +1,10 @@
+{
+  "status": "BASELINE_PREDICTIONS_COMPLETE",
+  "protocol_sha256": "41239823e728796dd108aae24cc48401ec8093c38aca16f7a30a1352145ef797",
+  "source_bundle_sha256": "ba7a205134b5197ffc68106f83a24408a62e6dc8d492ec9320a7f1bd379e76fb",
+  "new_bundle_sha256": "c1f38646d6cbae26794790656aa33825627005597b999ff841e24ef3bb01aff0",
+  "preserved_component_hash": "4f4b570aea29f6a35380d50bfa3890ec",
+  "RTA_and_cost_components_unchanged": true,
+  "development": "fixed protocol baseline only; no FFR dev access",
+  "prediction_sha256": "145e44e637ceb370d453f2a42d1979bb8f5b07ad055329bbeada690715082a69"
+}

@@ -1,0 +1,10 @@
+{
+  "stop_conditions": [],
+  "omitted_recomputed": 92,
+  "omitted_recorded": 92,
+  "selected_recorded": {
+    "fixed_TF|TF": 128,
+    "policy_TF|TF": 36,
+    "policy_TF|R": 92
+  }
+}

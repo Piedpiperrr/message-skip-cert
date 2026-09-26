@@ -1,0 +1,31 @@
+{
+  "utc": "2026-09-21T19:40:35.922319+00:00",
+  "source": "$DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/large",
+  "dest": "$DATA_DIR/P2_R7_E16_20260921T184114Z/replay_llama",
+  "routes": {
+    "obqa": {
+      "q": 0.6,
+      "tau": 0.009371757507324219,
+      "n_panel": 128,
+      "routed_R": 76
+    },
+    "arc": {
+      "q": 0.7,
+      "tau": 0.014996349811553955,
+      "n_panel": 128,
+      "routed_R": 88
+    }
+  },
+  "code_diff_changed_lines": 22,
+  "code_diff_added": 11,
+  "code_diff_removed": 11,
+  "files": {
+    "frozen_config.json": "8ae71e35ce1feac84247240fd950c9aac432ed518a639307efb63628e9d12c19",
+    "protocol/label_token_sets.json": "6f97580ca72c53ee751ed9ca54150bd6549391d3bb93caffb66f67f452d35605",
+    "protocol/prefix_ids.json": "28b84cb547186838f742e3e9b55b15a01321d4562db2efaf0c83e23eae339a0b",
+    "protocol/large_obqa_T_deployment.json": "7a293d7c4173cc6baf4d45928df565a2aeb3e97cfe2e224c5398f375ca63612d",
+    "protocol/large_arc_T_deployment.json": "c70a009aa298190acfe37bf0e2776ae0bfb520330a768eedca9992224dca6152",
+    "inputs/large_obqa_T_expected_routes.jsonl": "b87bd451c00f7ef42bfbae0b5ab8adcc4c21269369561a9c7a6aa43eb6d21b74",
+    "inputs/large_arc_T_expected_routes.jsonl": "95d508888f52c676f2b4fca1346e471448d9307d015659dca3af486d3f6499c8"
+  }
+}

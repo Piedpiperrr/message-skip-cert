@@ -1,0 +1,7 @@
+setting,split,N,sampled_R_INVALID,sampled_R_INVALID_rate,sampled_T_INVALID,sampled_T_INVALID_rate,both_INVALID_counted_as_agreement
+large/obqa/Text sampled,fit,2100,2,0.0009523809523809524,1,0.0004761904761904762,0
+large/obqa/Text sampled,cal,1366,2,0.0014641288433382138,0,0.0,0
+large/obqa/Text sampled,dev,742,0,0.0,0,0.0,0
+large/arc/Text sampled,fit,670,0,0.0,0,0.0,0
+large/arc/Text sampled,cal,448,0,0.0,0,0.0,0
+large/arc/Text sampled,dev,299,0,0.0,0,0.0,0

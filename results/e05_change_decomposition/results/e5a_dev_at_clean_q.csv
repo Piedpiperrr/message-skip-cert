@@ -1,0 +1,3 @@
+setting,q,threshold,N_dev,omitted,coverage_pct,changed,change_rate_among_omitted,note,label
+medium/OBQA/C2C,0.55,1.3113021850585938e-06,742,390,52.6,11,0.0282,ORIGINAL frozen deployment,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/OBQA/C2C,0.5,2.384185791015625e-07,742,355,47.8,7,0.0197,largest clean-accepted q (C \ X),POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision

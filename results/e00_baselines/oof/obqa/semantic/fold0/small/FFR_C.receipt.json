@@ -1,0 +1,14 @@
+{
+  "event": "HEAD_COMPLETE",
+  "key": "OOF/obqa/semantic/0/small/f_C",
+  "kind": "LR",
+  "n": 2772,
+  "positive": 1304,
+  "iterations": 20,
+  "warnings": [],
+  "CPU_seconds": 0.05016600000000082,
+  "protocol_sha256": "41239823e728796dd108aae24cc48401ec8093c38aca16f7a30a1352145ef797",
+  "model_sha256": "a22417ff02121d9fbd78e3ee43fbbd99920a7a976565f8ebe519d080e2600848",
+  "input_hash": "fa0fc997493ba94a2c84d115871b2b56",
+  "numerical_probability_check": true
+}

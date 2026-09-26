@@ -1,0 +1,17 @@
+{
+  "n_pool": 7473,
+  "order_rule": "sha256(question utf-8) ascending, ties by id",
+  "first_10": [
+    "gsm8k_train_01444",
+    "gsm8k_train_03992",
+    "gsm8k_train_01336",
+    "gsm8k_train_03505",
+    "gsm8k_train_02089",
+    "gsm8k_train_01513",
+    "gsm8k_train_03400",
+    "gsm8k_train_05091",
+    "gsm8k_train_06053",
+    "gsm8k_train_07406"
+  ],
+  "ids_sha256": "3e6d7268cee7f051f22d2801a3d2345c2adae7c93fe1581a179884fc6fceccbe"
+}

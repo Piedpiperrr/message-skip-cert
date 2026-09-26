@@ -1,0 +1,134 @@
+# P2_R1_EXP E1FIX harness changes (DEVIATIONS.md D4, D5). Protocol content unchanged.
+# D5) src/e1_ours.py: optional --population e4_large_arc (large pair only); default behaviour unchanged.
+#     SHA-256 91eb3d8bc526a600a055386f4a5992a415a496e9fa4ba8411df7acd9d9337119 (freeze) -> 5e92c42c3e0077f098a32423b9ee2c06ab67cf9c6809bb130214bc2a39ef6030
+--- a/src/e1_ours.py
++++ b/src/e1_ours.py
+@@ -11,12 +11,22 @@
+ 
+ ap = argparse.ArgumentParser()
+ ap.add_argument('--pair', required=True, choices=['small', 'medium', 'large'])
+-pair = ap.parse_args().pair
+-OUT = NEW / f'results/e1/ours/{pair}.jsonl'
+-PROMPTS = NEW / f'results/e1/prompts/ours_{pair}.json'
++# R1 E1FIX (DEVIATIONS.md D5): optional ARC dev reproduction population; the default is unchanged
++ap.add_argument('--population', default='e1_obqa_test500', choices=['e1_obqa_test500', 'e4_large_arc'])
++args = ap.parse_args()
++pair = args.pair
++TAG = '' if args.population == 'e1_obqa_test500' else f'__{args.population}'
++OUT = NEW / f'results/e1/ours/{pair}{TAG}.jsonl'
++PROMPTS = NEW / f'results/e1/prompts/ours_{pair}{TAG}.json'
+ assert not OUT.exists(), f'refusing to overwrite {OUT}'
+-rows = jl(POP / 'e1_obqa_test500.jsonl')
+-assert len(rows) == 500
++if TAG:  # E4 large ARC dev rows: the saved query plus its legal labels (large pair only)
++    assert pair == 'large'
++    rows = [{**r['query'], 'id': r['id'], 'official_index': None, 'legal_labels': r['legal_labels']}
++            for r in jl(POP / f'{args.population}.jsonl')]
++    assert len(rows) == 299
++else:
++    rows = jl(POP / 'e1_obqa_test500.jsonl')
++    assert len(rows) == 500
+ parse = parser()
+ LABELS = ['A', 'B', 'C', 'D']
+ 
+@@ -72,7 +82,7 @@
+         return res
+ 
+ tok = runner.receiver_tok
+-save(NEW / f'results/e1/ours/{pair}_environment.json', {**env_record(), 'pair': pair, 'load': load,
++save(NEW / f'results/e1/ours/{pair}{TAG}_environment.json', {**env_record(), 'pair': pair, 'load': load,
+      'receiver_generation_config': runner.receiver.generation_config.to_dict()})
+ 
+ captured = {}
+@@ -101,7 +111,7 @@
+             sync(); t0 = time.perf_counter()
+             res = call(q, a)
+             sync(); rec['latency_ms'] = (time.perf_counter() - t0) * 1000
+-            p = parse(res['raw_answer'], LABELS)
++            p = parse(res['raw_answer'], r.get('legal_labels', LABELS))
+             rec.update(raw_output=res['raw_answer'], generated_token_ids=res['generated_token_ids'],
+                        receiver_input_tokens=res['receiver_input_tokens'], parsed_answer=p['answer'] if p['valid'] else INV,
+                        parse_reason=p['reason'], runtime_error=None,
+
+# D4) New job script src/ClusterA/run_e1fix_ClusterA.pbs. Its only environment change vs the frozen run_r1.pbs is
+#     TMPDIR/TMP/TEMP=/tmp/p2r1_<numeric job id> for the two e1_official.py chain processes (and their evaluator subprocesses).
+#     Its job_env block also logs compute-node evidence for the E3 ClusterA guards (logging only).
+--- a/src/ClusterA/run_e1fix_ClusterA.pbs
++++ b/src/ClusterA/run_e1fix_ClusterA.pbs
+@@ -0,0 +1,76 @@
++#!/bin/bash
++# [scheduler directive removed for anonymity]
++# [scheduler directive removed for anonymity]
++# [scheduler directive removed for anonymity]
++# [scheduler directive removed for anonymity]
++# [scheduler directive removed for anonymity]
++# P2_R1_EXP E1FIX on ClusterA (DEVIATIONS.md D4, D5): one debug node, 4 A100-40GB.
++# Submit: submit-job  -q debug -l select=1 -l walltime=00:40:00 -l fsreq=<fs> -N P2R1_E1FIX_POL run_e1fix_ClusterA.pbs
++#   GPUs 0-1: E1 OFFICIAL chains A and B (frozen), rerun with a short node-local TMPDIR (D4), then CPU prompt rendering.
++#   GPUs 2-3: E1 OURS large pair, R and C2C on the ARC dev population (299), reproduction check (D5).
++# analyze_r1.py is NOT run in this job.
++set -uo pipefail
++NEW=$DATA_DIR/P2_R1_EXP_20260919T050555Z
++source "$HOME/.config/ClusterB-storage.sh"
++PY="$DATA_ROOT/software/envs/c2c_official/bin/python"
++LOG="$NEW/logs/ClusterA_e1fix"
++START=$(date +%s)
++# Stop rule as frozen (drivers stop cleanly before each request / evaluator run), scaled to the 40-min walltime
++export R1_DEADLINE_EPOCH=$((START + 40 * 60 - 5 * 60))
++# Environment below is the frozen run_r1.pbs environment, unchanged
++export http_proxy=http://proxy.cluster.invalid:3128 https_proxy=http://proxy.cluster.invalid:3128
++export HTTP_PROXY=http://proxy.cluster.invalid:3128 HTTPS_PROXY=http://proxy.cluster.invalid:3128
++export PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 TOKENIZERS_PARALLELISM=false CUDA_DEVICE_ORDER=PCI_BUS_ID
++export HF_HOME="$NEW/cache/hf_home" HF_HUB_CACHE="$NEW/cache/hf_home/hub" HF_DATASETS_CACHE="$NEW/cache/hf_home/datasets" HF_ASSETS_CACHE="$NEW/cache/hf_home/assets"
++export HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1 TRANSFORMERS_OFFLINE=1
++export TRITON_CACHE_DIR="$NEW/cache/triton" TORCHINDUCTOR_CACHE_DIR="$NEW/cache/inductor" TORCH_EXTENSIONS_DIR="$NEW/cache/torch_ext"
++export CUDA_CACHE_PATH="$NEW/cache/cuda" XDG_CACHE_HOME="$NEW/cache/xdg" MPLCONFIGDIR="$NEW/cache/mpl" TORCH_HOME="$NEW/cache/torch"
++export TMPDIR="$NEW/cache/tmp" TMP="$NEW/cache/tmp" TEMP="$NEW/cache/tmp"
++export OMP_NUM_THREADS=4 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
++unset CUDA_VISIBLE_DEVICES
++# D4: short node-local TMPDIR for the official evaluator only (mp.Manager AF_UNIX socket path limit)
++OFFTMP="/tmp/p2r1_${PBS_JOBID%%.*}"
++mkdir -p "$TMPDIR" "$LOG" "$NEW/cache/hf_home" "$OFFTMP"
++ulimit -c 0
++cd "$NEW/src" || exit 3
++
++{
++  echo "JOB_START_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ) host=$(hostname) PBS_JOBID=${PBS_JOBID:-none} deadline_epoch=$R1_DEADLINE_EPOCH official_TMPDIR=$OFFTMP"
++  env | grep -E '^(PBS_|CUDA_|HF_|TRANSFORMERS_)' | sort
++  nvidia-smi -L
++  nvidia-smi --query-gpu=index,name,uuid,pci.bus_id,memory.total,memory.used --format=csv
++  sha256sum "$NEW/PROTOCOL_FREEZE.md" "$NEW"/src/*.py "$NEW"/src/ClusterA/* "$NEW"/records/populations/*
++  "$PY" -c "import torch;n=torch.cuda.device_count();print('torch_visible_gpus',n);assert n==4"
++  echo "GPU_CHECK_EXIT=$?"
++  # Logging only: compute-node evidence for the prepared E3 ClusterA guards (tools, cgroup layout, home-space check)
++  echo "## E3_PREFLIGHT_EVIDENCE"
++  for t in job-status myquota rg; do echo "$t=$(command -v $t || echo MISSING)"; done
++  echo "cgroup_job_shell:"; cat /proc/self/cgroup
++  echo "cgroup_mpiexec_rank:"; timeout 60 mpiexec -n 1 --ppn 1 cat /proc/self/cgroup; echo "mpiexec_probe_rc=$?"
++  timeout 60 "$HOME/bin/check-home-space" 15; echo "check_home_space_rc=$?"
++  timeout 30 job-status -f "$PBS_JOBID" | grep -E "queue =|exec_host"; echo "qstat_rc=$?"
++} > "$LOG/job_env.txt" 2>&1 &
++ENVCHK=$!
++nvidia-smi --query-gpu=timestamp,index,memory.used,utilization.gpu --format=csv -l 60 > "$LOG/gpu_monitor.csv" 2>&1 &
++MON=$!
++
++# GPUs 2-3: ARC dev reproduction, large pair R and C2C (helper logical cuda:0 = GPU2, receiver+fuser logical cuda:1 = GPU3)
++( export CUDA_VISIBLE_DEVICES=2,3
++  "$PY" e1_ours.py --pair large --population e4_large_arc; echo "EXIT e1_ours large arc $?" ) > "$LOG/gpu23_e1_ours_large_arc.log" 2>&1 &
++P_ARC=$!
++# E1 OFFICIAL: CPU prefetch (as frozen), then chains A (GPU0) and B (GPU1) with the short TMPDIR
++"$PY" e1_official.py --prefetch > "$LOG/e1_official_prefetch.log" 2>&1
++echo "EXIT prefetch $?" >> "$LOG/e1_official_prefetch.log"
++( export CUDA_VISIBLE_DEVICES=0 TMPDIR="$OFFTMP" TMP="$OFFTMP" TEMP="$OFFTMP"
++  "$PY" e1_official.py --chain A --gpu 0; echo "EXIT chainA $?" ) > "$LOG/gpu0_e1_official_chainA.log" 2>&1 &
++P_A=$!
++( export CUDA_VISIBLE_DEVICES=1 TMPDIR="$OFFTMP" TMP="$OFFTMP" TEMP="$OFFTMP"
++  "$PY" e1_official.py --chain B --gpu 1; echo "EXIT chainB $?" ) > "$LOG/gpu1_e1_official_chainB.log" 2>&1 &
++P_B=$!
++wait "$P_A" "$P_B"
++# CPU: official prompt rendering (first 3 questions of every valid official run + task7), as frozen
++CUDA_VISIBLE_DEVICES= "$PY" render_official_prompts.py > "$LOG/render_official.log" 2>&1
++echo "EXIT render $?" >> "$LOG/render_official.log"
++wait "$P_ARC" "$ENVCHK"
++kill "$MON" 2>/dev/null
++echo "JOB_END_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$LOG/job_env.txt"

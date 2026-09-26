@@ -1,0 +1,142 @@
+{
+  "helper_input_rebuilt_equals_saved": {
+    "obqa": 4208,
+    "arc": 1418,
+    "mmlu_pro": 11641
+  },
+  "saved_message_decodes_from_saved_ids": {
+    "obqa": 4208,
+    "arc": 1418,
+    "mmlu_pro": 11641
+  },
+  "examples": [
+    {
+      "id": "test:3284",
+      "split": "fit",
+      "saved_record": "P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/1/actions/fit.jsonl:2",
+      "helper_input_ids_sha256": "2c660e434893e7a205e9d996ee70efc4ec670c81afd6f915706cf26d13787848",
+      "helper_input_tokens_rebuilt": 419,
+      "helper_input_tokens_saved": 419,
+      "X2_equals_large_bytes": true,
+      "reason": "helper input is built from the question and the helper tokenizer only (T2THelperBundle.prepare)",
+      "saved_message_decodes_from_saved_ids": true
+    },
+    {
+      "id": "test:3031",
+      "split": "cal",
+      "saved_record": "P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/2/actions/cal.jsonl:563",
+      "helper_input_ids_sha256": "457764ea3e4316fa438b550f2c6bdd3d2c098e46fdc90a61a0c383c2b5956473",
+      "helper_input_tokens_rebuilt": 334,
+      "helper_input_tokens_saved": 334,
+      "X2_equals_large_bytes": true,
+      "reason": "helper input is built from the question and the helper tokenizer only (T2THelperBundle.prepare)",
+      "saved_message_decodes_from_saved_ids": true
+    },
+    {
+      "id": "test:3261",
+      "split": "dev",
+      "saved_record": "P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/2/actions/dev.jsonl:2",
+      "helper_input_ids_sha256": "bbe95bda889207a903c1da6c19f6dc2f67515b38c58b2fed33fc0d3f71490961",
+      "helper_input_tokens_rebuilt": 169,
+      "helper_input_tokens_saved": 169,
+      "X2_equals_large_bytes": true,
+      "reason": "helper input is built from the question and the helper tokenizer only (T2THelperBundle.prepare)",
+      "saved_message_decodes_from_saved_ids": true
+    }
+  ],
+  "olmo_label_sets_A_J": {
+    "nonempty": true,
+    "disjoint": true,
+    "counts": {
+      "A": 3,
+      "B": 3,
+      "C": 3,
+      "D": 3,
+      "E": 3,
+      "F": 3,
+      "G": 3,
+      "H": 3,
+      "I": 3,
+      "J": 3
+    },
+    "sets": {
+      "A": [
+        32,
+        362,
+        23845
+      ],
+      "B": [
+        33,
+        426,
+        13083
+      ],
+      "C": [
+        34,
+        356,
+        6391
+      ],
+      "D": [
+        35,
+        423,
+        11198
+      ],
+      "E": [
+        36,
+        469,
+        23626
+      ],
+      "F": [
+        37,
+        435,
+        13017
+      ],
+      "G": [
+        38,
+        480,
+        9796
+      ],
+      "H": [
+        39,
+        473,
+        13595
+      ],
+      "I": [
+        40,
+        358,
+        25494
+      ],
+      "J": [
+        41,
+        622,
+        17538
+      ]
+    }
+  },
+  "mmlu_missing_saved_T": {
+    "fit": 0,
+    "cal": 0,
+    "dev": 0
+  },
+  "counts": {
+    "obqa_fit": 2100,
+    "obqa_cal": 1366,
+    "obqa_dev": 742,
+    "arc_fit": 671,
+    "arc_cal": 448,
+    "arc_dev": 299,
+    "mmlu_pro_fit": 3000,
+    "mmlu_pro_cal": 6000,
+    "mmlu_pro_dev": 2641
+  },
+  "representatives": {
+    "obqa_fit": 2100,
+    "obqa_cal": 1366,
+    "obqa_dev": 742,
+    "arc_fit": 670,
+    "arc_cal": 448,
+    "arc_dev": 299,
+    "mmlu_pro_fit": 3000,
+    "mmlu_pro_cal": 6000,
+    "mmlu_pro_dev": 2641
+  }
+}

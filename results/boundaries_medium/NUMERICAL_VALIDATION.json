@@ -1,0 +1,40 @@
+{
+  "status": "PASS_PREFLIGHT_VALIDATION_ONLY",
+  "utc": "2026-09-15T14:54:32.505186+00:00",
+  "checks": {
+    "frozen_file_hashes_match": true,
+    "source_copies_and_originals_match": true,
+    "state_unchanged": true,
+    "model_index_frozen": true,
+    "80_test_family": true,
+    "multiple_testing_arithmetic": true,
+    "population_request_counts": true,
+    "no_outcomes_no_PBS": true,
+    "official_config_tokenizer_hashes": true,
+    "no_weight_files_downloaded": true,
+    "no_runnable_PBS_submission_artifact": true,
+    "independent_budget_recalculation": true,
+    "two_GPU_budget_exceeded_without_margin": true
+  },
+  "independent_budget_calculation": [
+    {
+      "pair": "small",
+      "independent_decimal_wall_seconds": "9553.609600742671830412",
+      "float_error_seconds": 0.0,
+      "inference_GPU_hours": "5.307560889301484350228888889",
+      "conservative_GPU_hours": "6.270361689363373669429888889"
+    },
+    {
+      "pair": "large",
+      "independent_decimal_wall_seconds": "9447.015175840111887181",
+      "float_error_seconds": 0.0,
+      "inference_GPU_hours": "5.248341764355617715100555556",
+      "conservative_GPU_hours": "6.202259695675627039032305556"
+    }
+  ],
+  "scientific_outcome_validation": "NOT_APPLICABLE_NOT_EXECUTED",
+  "local_checkpoint_weight_validation": "NOT_EXECUTED",
+  "strict_C2C_GPU_runtime_validation": "NOT_EXECUTED",
+  "accuracy_disagreement_AUROC_routing_calculated": false,
+  "scope": "只核验准备阶段的文件/人口/计数/预算算术，不表示 Stage 1 数值完成。"
+}

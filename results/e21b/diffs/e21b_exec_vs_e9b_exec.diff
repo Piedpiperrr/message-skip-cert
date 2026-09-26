@@ -1,0 +1,83 @@
+--- P2_R3_E9BC_20260920T061042Z/large/src/e9b_exec.py	2026-09-20 06:55:15.000000000 +0000
++++ P2_R9_E21B_20260922T065040Z/src/e21b_exec.py	2026-09-22 06:52:25.000000000 +0000
+@@ -8,12 +8,16 @@
+ import os, sys, json, time, hashlib, argparse, traceback
+ from pathlib import Path
+ sys.dont_write_bytecode = True
+-sys.path.insert(0, str(Path(__file__).resolve().parent))
++sys.path.insert(0, os.environ['E21B_STAGE'] + '/src')  # E21B: per-slot byte-identical copy of the E9B large stage
+ import common as C
+ import torch
+ P, CFG = C.P, C.CFG
+-sys.path.insert(0, str(P.parent / 'src'))
++sys.path.insert(0, str(P.parent.parent / 'P2_R3_E9BC_20260920T061042Z/src'))  # E21B: E9B helpers, read-only
+ import e9b_common as E9
++import ast  # E21B: E4 V1 rotation, exec'd from the frozen E4 file (its module body writes files, so no plain import)
++_E4 = P.parent.parent / 'P2_R1_EXP_20260919T050555Z/src/prepare_populations.py'
++assert C.sha(_E4) == 'f4941cf4f4efd5d7face281c63586b587037d5102b953538269c890c68b1213f'
++_V1 = {}; exec(compile(ast.Module([n for n in ast.parse(_E4.read_text()).body if isinstance(n, ast.FunctionDef) and n.name in ('labels', 'rotate')], []), str(_E4), 'exec'), _V1)
+ 
+ ap = argparse.ArgumentParser()
+ ap.add_argument('--mode', choices=['validate', 'main'], required=True)
+@@ -22,8 +26,12 @@
+ ap.add_argument('--nshards', type=int, default=1)
+ ap.add_argument('--out', required=True)
+ ap.add_argument('--deadline-epoch', type=float, default=float('inf'))
++ap.add_argument('--population', choices=['arc', 'obqa'], required=True)   # E21B
++ap.add_argument('--transform', choices=['v1', 'identity'], required=True)  # E21B: identity = preflight P1
++ap.add_argument('--ids', default=None)                                     # E21B: JSON id list (preflight rows)
+ a = ap.parse_args()
+ ACT = a.actions.split(',')
++TRANSFORM = {'v1': _V1['rotate'], 'identity': lambda q: (dict(q), {l: l for l in q['choice_labels']})}[a.transform]  # E21B
+ 
+ import importlib.util as _iu
+ _s = _iu.spec_from_file_location('frozen_parser', CFG['parser_path'])
+@@ -67,11 +75,12 @@
+ FACTS = E9.facts()
+ def run_action(rt, row, act):
+     q = {k: row[k] for k in ['question_stem', 'choice_labels', 'choice_text']}
++    q, back = TRANSFORM(q)  # E21B: rotate option contents before every frozen prompt builder
+     rt.begin(); sync(); t0 = time.perf_counter()
+     if act == 'probe':
+         u, meta = rt.probe(q); sync(); dt = (time.perf_counter() - t0) * 1000
+         rt.end()
+-        return {'action': 'probe', 'latency_ms': dt, **meta}
++        return {'action': 'probe', 'latency_ms': dt, **meta, 'back': back, 'choice_text_used': q['choice_text']}  # E21B
+     if act == 'TF':
+         res = action_text_plus_fact(rt, q, FACTS[row['id']])
+     else:
+@@ -85,7 +94,10 @@
+             'helper_message': res.get('helper_message'),
+             'helper_input_tokens': res.get('helper_input_tokens'),
+             'parsed': p, 'answer': p['answer'] if p['valid'] else 'INVALID', 'invalid': not p['valid'],
+-            'runtime_failure': False}
++            'runtime_failure': False,
++            'answer_original': back[p['answer']] if p['valid'] else 'INVALID',  # E21B: label of the original option index
++            'back': back, 'choice_text_used': q['choice_text'],  # E21B
++            'helper_generated_token_ids': res.get('helper_generated_token_ids')}  # E21B: for first-differing-token reports
+ 
+ OUT = Path(a.out); OUT.parent.mkdir(parents=True, exist_ok=True)
+ start = time.perf_counter(); rt = Runtime(); sync()
+@@ -122,7 +134,9 @@
+     print('E9B large VALIDATION PASS =', report['PASS'], flush=True)
+     sys.exit(0 if report['PASS'] else 4)
+ 
+-rows = E9.population()
++rows = E9.population() if a.population == 'obqa' else E9.jl(P.parent.parent / 'P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/inputs/test_queries_no_gold.jsonl')  # E21B
++if a.ids:  # E21B
++    keep = set(json.loads(Path(a.ids).read_text())); rows = [r for r in rows if r['id'] in keep]; assert len(rows) == len(keep)
+ work = [r for j, r in enumerate(rows) if j % a.nshards == a.shard]
+ # Resume: a row counts as done only when every requested action of it is already on disk.
+ have = {}
+@@ -147,8 +161,9 @@
+                 continue
+             try:
+                 rec = run_action(rt, row, act)
+-                f.write(json.dumps({'id': row['id'], 'pair': 'large', 'dataset': 'obqa',
+-                                    'population': 'held_out_744', **rec,
++                f.write(json.dumps({'id': row['id'], 'pair': 'large', 'dataset': a.population,  # E21B
++                                    'population': {'obqa': 'held_out_744', 'arc': 'sealed_arc_1172'}[a.population],
++                                    'transform': a.transform, 'utc': C.utc(), **rec,  # E21B
+                                     'job_id': os.environ.get('PBS_JOBID'), 'gold_read': False},
+                                    ensure_ascii=False) + '\n')
+                 f.flush()

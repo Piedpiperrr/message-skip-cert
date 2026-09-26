@@ -1,0 +1,10 @@
+{
+  "utc": "2026-09-15T16:56:52.621686+00:00",
+  "PBS_stime": "Tue Sep 15 16:56:51 2026",
+  "PBS_walltime": "03:29:50",
+  "parsed_walltime_seconds": 12590,
+  "safety_margin_seconds": 45,
+  "internal_deadline_epoch": 1789503956.0,
+  "attempt1_allocation_wall_seconds": 10,
+  "cumulative_max_GPU_hours": 7.0
+}

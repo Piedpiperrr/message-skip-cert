@@ -1,0 +1,50 @@
+item,check,expected,observed,status,source
+a,dev omitted/changed large/OBQA/Text (q=0.8),"[572, 19]","[572, 19]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+a,dev omitted/changed large/OBQA/C2C (q=0.8),"[572, 13]","[572, 13]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+a,dev omitted/changed large/ARC/Text (q=0.95),"[284, 9]","[284, 9]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+a,dev omitted/changed large/ARC/C2C (q=0.9),"[270, 3]","[270, 3]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+a,dev omitted/changed large/MMLU-Pro/Text (q=0.4),"[1069, 40]","[1069, 40]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+a,dev omitted/changed large/MMLU-Pro/C2C (q=0.4),"[1069, 37]","[1069, 37]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+a,dev omitted/changed medium/OBQA/C2C q=.55 (q=0.55),"[390, 11]","[390, 11]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+a,dev omitted/changed medium/OBQA/C2C q=.50 (q=0.5),"[355, 7]","[355, 7]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+a,dev omitted/changed medium/ARC/C2C (q=0.6),"[189, 4]","[189, 4]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+a,dev omitted/changed large/OBQA/Text+fact (q=0.75),"[536, 13]","[536, 13]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+a,dev omitted/changed Llama-3.1-8B/OBQA/Text (q=0.6),"[438, 7]","[438, 7]",PASS,$DATA_DIR/P2_R6_X3_20260921T052602Z/results/analysis/dev_table_pre_gold.csv
+a,frozen tau Llama-3.1-8B/OBQA/Text,0.009371757507324219,0.009371757507324219,PASS,$DATA_DIR/P2_R6_X3_20260921T052602Z/results/analysis/dev_table_pre_gold.csv
+a,dev omitted/changed Llama-3.1-8B/ARC/Text (q=0.7),"[206, 4]","[206, 4]",PASS,$DATA_DIR/P2_R6_X3_20260921T052602Z/results/analysis/dev_table_pre_gold.csv
+a,frozen tau Llama-3.1-8B/ARC/Text,0.014996349811553955,0.014996349811553955,PASS,$DATA_DIR/P2_R6_X3_20260921T052602Z/results/analysis/dev_table_pre_gold.csv
+a,request value Text+fact 536/13,"[536, 13]","[536, 13]",PASS,request
+a,request value medium OBQA C2C q=.50 355/7,"[355, 7]","[355, 7]",PASS,request
+b,"Table 2 saving large/OBQA/Text (ms, 1 dp)",517.1,517.1,PASS,$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/records/e2e_requests.jsonl
+b,Table 2 saving large/OBQA/Text == E15 recomputed (unrounded),517.1262959393061,517.1262959393061,PASS,$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/records/e2e_requests.jsonl
+b,"Table 2 saving large/OBQA/C2C (ms, 1 dp)",36.6,36.6,PASS,$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/records/e2e_requests.jsonl
+b,Table 2 saving large/OBQA/C2C == E15 recomputed (unrounded),36.57528850817471,36.57528850817471,PASS,$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/records/e2e_requests.jsonl
+b,"Table 2 saving large/ARC/Text (ms, 1 dp)",717.6,717.6,PASS,$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/records/e2e_requests.jsonl
+b,Table 2 saving large/ARC/Text == E15 recomputed (unrounded),717.6287613056047,717.6287613056047,PASS,$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/records/e2e_requests.jsonl
+b,"Table 2 saving large/ARC/C2C (ms, 1 dp)",110.9,110.9,PASS,$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/records/e2e_requests.jsonl
+b,Table 2 saving large/ARC/C2C == E15 recomputed (unrounded),110.93494467604614,110.93494467604614,PASS,$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/records/e2e_requests.jsonl
+b,"Table 2 saving large/MMLU-Pro/Text (ms, 1 dp)",346.3,346.3,PASS,$DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/records/four_arm_requests.jsonl
+b,Table 2 saving large/MMLU-Pro/Text == E15 recomputed (unrounded),346.3156871330284,346.3156871330284,PASS,$DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/records/four_arm_requests.jsonl
+b,"Table 2 saving large/MMLU-Pro/C2C (ms, 1 dp)",8.2,8.2,PASS,$DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/records/four_arm_requests.jsonl
+b,Table 2 saving large/MMLU-Pro/C2C == E15 recomputed (unrounded),8.242936348324292,8.242936348324292,PASS,$DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/records/four_arm_requests.jsonl
+b,"Table 2 saving medium/OBQA/C2C q=.55 (ms, 1 dp)",79.7,79.7,PASS,$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/records/e2e_requests.jsonl
+b,Table 2 saving medium/OBQA/C2C q=.55 == E15 recomputed (unrounded),79.6591089656431,79.6591089656431,PASS,$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/records/e2e_requests.jsonl
+b,"Table 2 saving medium/ARC/C2C (ms, 1 dp)",100.7,100.7,PASS,$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/records/e2e_requests.jsonl
+b,Table 2 saving medium/ARC/C2C == E15 recomputed (unrounded),100.66012487186526,100.66012487186526,PASS,$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/records/e2e_requests.jsonl
+b,"replay saving Llama-3.1-8B/OBQA/Text, all requests (ms, 1 dp)",318.6,318.6,PASS,$DATA_DIR/P2_R7_E16_20260921T184114Z/replay_llama/records/e2e_requests.jsonl
+b,"replay saving Llama-3.1-8B/OBQA/Text, 95% paired bootstrap (1 dp)","[261.1, 372.1]","[261.1, 372.1]",PASS,$DATA_DIR/P2_R7_E16_20260921T184114Z/replay_llama/records/e2e_requests.jsonl
+b,"replay saving Llama-3.1-8B/ARC/Text, all requests (ms, 1 dp)",418.9,418.9,PASS,$DATA_DIR/P2_R7_E16_20260921T184114Z/replay_llama/records/e2e_requests.jsonl
+b,"replay saving Llama-3.1-8B/ARC/Text, 95% paired bootstrap (1 dp)","[361.7, 473.7]","[361.7, 473.7]",PASS,$DATA_DIR/P2_R7_E16_20260921T184114Z/replay_llama/records/e2e_requests.jsonl
+b,"replay saving large/OBQA/Text+fact, all requests (ms, 1 dp)",343.4,343.4,PASS,$DATA_DIR/P2_R2_E7_20260919T231531Z/e6replay/records_e6/e6_replay_requests.jsonl
+b,"replay saving large/OBQA/Text+fact, 95% paired bootstrap (1 dp)","[297.7, 386.0]","[297.7, 386.0]",PASS,$DATA_DIR/P2_R2_E7_20260919T231531Z/e6replay/records_e6/e6_replay_requests.jsonl
+b-extra,"full MMLU-Pro C2C replay saving (all 2,641) vs results/e3_full_saving.csv (ms, 3 dp)","[23.346, 14.541, 32.163]","[23.346, 14.541, 32.163]",PASS,$DATA_DIR/P2_R1_E3POL_MMLU_C2C_FULL_20260919T075315Z/records/four_arm_requests.jsonl
+c,dev u=0 n0/n large/OBQA/Text,"[354, 572]","[354, 572]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+c,dev u=0 n0/n large/OBQA/C2C,"[354, 572]","[354, 572]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+c,dev u=0 n0/n large/ARC/Text,"[217, 284]","[217, 284]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+c,dev u=0 n0/n large/ARC/C2C,"[217, 270]","[217, 270]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+c,dev u=0 n0/n large/MMLU-Pro/Text,"[645, 1069]","[645, 1069]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+c,dev u=0 n0/n large/MMLU-Pro/C2C,"[645, 1069]","[645, 1069]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+c,dev u=0 n0/n medium/OBQA/C2C q=.55,"[321, 390]","[321, 390]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+c,dev u=0 n0/n medium/OBQA/C2C q=.50,"[321, 355]","[321, 355]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+c,dev u=0 n0/n medium/ARC/C2C,"[174, 189]","[174, 189]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+c,dev u=0 n0/n large/OBQA/Text+fact,"[354, 536]","[354, 536]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv

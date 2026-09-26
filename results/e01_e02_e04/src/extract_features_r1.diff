@@ -1,0 +1,50 @@
+--- ../../P2_E1_DIRECTION_20260913T053456Z/extract_features.py	2026-09-13 06:36:53.000000000 +0000
++++ extract_features_r1.py	2026-09-19 05:15:18.000000000 +0000
+@@ -1,16 +1,17 @@
+ """One independent receiver backbone prefill per uncached train item; never load labels."""
+-from common import *
++import sys;sys.dont_write_bytecode=True
++from extract_harness_r1 import *  # R1: harness replaces P2_E1_DIRECTION common.py
+ import sys,resource
+ require_compute()
+ import numpy as np
+ import torch,transformers
+ from transformers import AutoModelForCausalLM,AutoTokenizer
+ from receiver_prompt import receiver_prompt
+-pair=sys.argv[1];spec=CFG['models'][pair]
++pair=sys.argv[1];spec=CFG['models'][pair];SETTINGS=sys.argv[2].split(',')  # R1: explicit populations
+ torch.set_num_threads(1);torch.set_num_interop_threads(1)
+ torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False
+ assert torch.cuda.is_available() and torch.cuda.device_count()==1
+-if all(feature_path(pair,ds,i).exists() for ds in ['obqa','arc'] for i in range(CFG['data'][ds]['n'])):
++if all(feature_path(pair,ds,i).exists() for ds in SETTINGS for i in range(len(queries(ds)))):
+  print('ALL_FEATURES_CACHED',pair,flush=True);sys.exit(0)
+ print('MODEL_LOADING',pair,spec['path'],flush=True)
+ load_start=time.perf_counter();tok=AutoTokenizer.from_pretrained(spec['path'],local_files_only=True)
+@@ -34,9 +35,9 @@
+  state['final']=output[:,state['pos'],:].detach().clone();state['norm_shape']=list(output.shape);state['norm_calls']+=1
+ hooks=[model.layers[k].register_forward_hook(ac_hook),model.norm.register_forward_hook(final_hook)]
+ attempts=sum(r['event']=='START_PREFILL' for r in jl(O/'prefill_attempts.jsonl'));loaded_index=0
+-folds={(r['dataset'],r['id']):int(r['fold']) for r in csv.DictReader((O/'folds/group_folds.csv').open())}
++folds=FOLDS  # R1: no fold map for these populations
+ try:
+- for ds in ['obqa','arc']:
++ for ds in SETTINGS:
+   first_check=not (O/'evidence'/f'first_feature_{pair}_{ds}.json').exists()
+   rows=queries(ds)
+   for i,row in enumerate(rows):
+@@ -46,7 +47,7 @@
+      rec=json.loads(str(v['meta']));assert rec['id']==row['id'] and rec['config_sha256']==FREEZE['config_sha256']
+     continue
+    assert set(row)=={'id','question_stem','choice_labels','choice_text'}
+-   assert attempts<9210,'PREFILL_ATTEMPT_LIMIT';attempts+=1
++   assert attempts<LIMIT,'PREFILL_ATTEMPT_LIMIT';attempts+=1
+    append(O/'prefill_attempts.jsonl',{'event':'START_PREFILL','attempt':attempts,'pair':pair,'dataset':ds,'id':row['id'],'row':i,'job_id':os.environ['PBS_JOBID'],'utc':utc()})
+    state.clear();state.update(ac_calls=0,norm_calls=0)
+    validation_hook=None
+@@ -93,4 +94,4 @@
+     save(O/'FEATURE_PROGRESS.json',{'pair':pair,'dataset':ds,'row_completed':i+1,'prefill_attempts':attempts,'updated_utc':utc()})
+ finally:
+  for hook in hooks:hook.remove()
+-save(O/'features'/pair/'COMPLETE.json',{'pair':pair,'n':4585,'job_id':os.environ['PBS_JOBID'],'prefill_attempts_cumulative':attempts,'config_sha256':FREEZE['config_sha256'],'completed_utc':utc()})
++save(O/'features'/pair/'COMPLETE.json',{'pair':pair,'n':LIMIT,'settings':SETTINGS,'job_id':os.environ['PBS_JOBID'],'prefill_attempts_cumulative':attempts,'config_sha256':FREEZE['config_sha256'],'completed_utc':utc()})

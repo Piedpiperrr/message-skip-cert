@@ -1,0 +1,5 @@
+{
+  "path": "$DATA_DIR/P2_ZERO_GOLD_CONTROLS_20260914T065145Z/summary/historical_e2e_reference.csv",
+  "sha256": "6ac22d2cb4ae5f5ae4ca15cb4273a1e44d0198009d4a1a854101ac27338bf7fe",
+  "identity": "historical E2E FFR/IndepLR; never merged with panel128"
+}

@@ -1,0 +1,61 @@
+{
+  "prediction_diagnostics": {
+    "utc": "2026-09-14T22:18:44.598480+00:00",
+    "actions": 4688,
+    "probes": 2344,
+    "gold_read": false,
+    "score_identity_failures": 0,
+    "input_identity_failures": 0,
+    "reference_route_identity_checks": 197,
+    "reference_route_identity_failures": [],
+    "cold_request_count": 1
+  },
+  "output_diagnostics": [
+    {
+      "reference": "T",
+      "N": 1172,
+      "both_invalid": 0,
+      "policy_only_invalid": 0,
+      "reference_only_invalid": 0,
+      "runtime_failure_count": 0,
+      "reference_route_answer_changes": [],
+      "cold_pairs": [
+        "Mercury_7175875"
+      ],
+      "probe_record_count": 1172
+    },
+    {
+      "reference": "C",
+      "N": 1172,
+      "both_invalid": 1,
+      "policy_only_invalid": 0,
+      "reference_only_invalid": 0,
+      "runtime_failure_count": 0,
+      "reference_route_answer_changes": [],
+      "cold_pairs": [],
+      "probe_record_count": 1172
+    }
+  ],
+  "startup": {
+    "wall_seconds": 46.37729778396897,
+    "job_id": "run001",
+    "per_question_amortization": false
+  },
+  "all_raw_rows": 1172,
+  "primary_groups": 1172,
+  "cold_request": [
+    {
+      "key": "arc|Mercury_7175875|policy_T",
+      "attempt": 1,
+      "latency_ms": 2925.4032960161567,
+      "parts_ms": {
+        "input_prepare_ms": 0.0018130522221326828,
+        "probe_ms": 2362.305099144578,
+        "selector_ms": 0.0021238811314105988,
+        "action_ms": 562.1144259348512,
+        "parse_ms": 0.9102029725909233,
+        "cleanup_ms": 0.06963103078305721
+      }
+    }
+  ]
+}

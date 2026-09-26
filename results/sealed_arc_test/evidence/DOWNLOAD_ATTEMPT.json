@@ -1,0 +1,7 @@
+{
+  "utc": "2026-09-14T21:32:05.787882+00:00",
+  "url": "https://huggingface.co/datasets/allenai/ai2_arc/resolve/210d026faf9955653af8916fad021475a3f00453/ARC-Challenge/test-00000-of-00001.parquet",
+  "destination": "$DATA_DIR/P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/source/test-00000-of-00001.parquet",
+  "decode_columns": [],
+  "pre_test_freeze_sha256": "dc5762ee919d4b05b44b797bc97cdaf44dab3f03d9192c67e0c25a48bee155f9"
+}

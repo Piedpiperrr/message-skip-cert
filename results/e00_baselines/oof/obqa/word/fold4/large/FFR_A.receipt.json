@@ -1,0 +1,14 @@
+{
+  "event": "HEAD_COMPLETE",
+  "key": "OOF/obqa/word/4/large/f_A",
+  "kind": "LR",
+  "n": 2773,
+  "positive": 27,
+  "iterations": 13,
+  "warnings": [],
+  "CPU_seconds": 0.013106000000000506,
+  "protocol_sha256": "41239823e728796dd108aae24cc48401ec8093c38aca16f7a30a1352145ef797",
+  "model_sha256": "be80d435cfa48069560dfa52a0794872527cf82afc911de6ad09e239a65689cb",
+  "input_hash": "65905e6dfe5f9212cb69d2ceabdffcfa",
+  "numerical_probability_check": true
+}

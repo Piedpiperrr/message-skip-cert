@@ -1,0 +1,339 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-20T05:19:40.923392+00:00",
+  "pair": "small",
+  "synthetic_input": {
+    "id": "SYNTHETIC_MECHANICAL_ONLY",
+    "question_stem": "Synthetic mechanical check: select a placeholder.",
+    "choice_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J"
+    ],
+    "choice_text": [
+      "placeholder 0",
+      "placeholder 1",
+      "placeholder 2",
+      "placeholder 3",
+      "placeholder 4",
+      "placeholder 5",
+      "placeholder 6",
+      "placeholder 7",
+      "placeholder 8",
+      "placeholder 9"
+    ]
+  },
+  "native_action_checks": [
+    {
+      "action": "R",
+      "runtime_entered": true,
+      "receiver_input_tokens": 155,
+      "generation_tensor_nonempty": true
+    },
+    {
+      "action": "T",
+      "runtime_entered": true,
+      "receiver_input_tokens": 269,
+      "generation_tensor_nonempty": true
+    },
+    {
+      "action": "C",
+      "runtime_entered": true,
+      "receiver_input_tokens": 155,
+      "generation_tensor_nonempty": true,
+      "projected_shape": [
+        28,
+        2,
+        8,
+        154,
+        128
+      ],
+      "projected_dtype": "torch.float32"
+    }
+  ],
+  "parser_legal_synthetic_cases": 52,
+  "probe_structural_checks": [
+    {
+      "K": 3,
+      "probability_sum_valid": true,
+      "last_valid_position": 109,
+      "input_tokens": 110,
+      "LM_head_input_shapes": [
+        [
+          1,
+          1,
+          1024
+        ]
+      ],
+      "cache_reused": false
+    },
+    {
+      "K": 10,
+      "probability_sum_valid": true,
+      "last_valid_position": 158,
+      "input_tokens": 159,
+      "LM_head_input_shapes": null,
+      "cache_reused": false
+    }
+  ],
+  "model_loading_info": {
+    "helper": {
+      "missing_keys": [],
+      "unexpected_keys": [],
+      "mismatched_keys": [],
+      "error_msgs": []
+    },
+    "receiver": {
+      "missing_keys": [],
+      "unexpected_keys": [],
+      "mismatched_keys": [],
+      "error_msgs": []
+    }
+  },
+  "load_seconds": {
+    "helper": 22.68778082402423,
+    "receiver": 17.01533509301953,
+    "fuser": 4.159211746882647
+  },
+  "fuser_load_audit": [
+    {
+      "projector": 0,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 1,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 2,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 3,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 4,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 5,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 6,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 7,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 8,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 9,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 10,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 11,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 12,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 13,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 14,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 15,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 16,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 17,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 18,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 19,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 20,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 21,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 22,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 23,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 24,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 25,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 26,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 27,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17066002,
+      "missing_keys": [],
+      "unexpected_keys": []
+    }
+  ],
+  "helper_device": "cuda:0",
+  "receiver_device": "cuda:1",
+  "projectors_device": "cuda:1",
+  "projector_count": 28,
+  "project_question_reads": 0,
+  "scientific_metrics_computed": false,
+  "synthetic_generated_text_retained": false,
+  "MMLU_PRO_OUTCOMES_OBSERVED": false
+}

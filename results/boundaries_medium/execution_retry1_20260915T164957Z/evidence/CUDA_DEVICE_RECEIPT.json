@@ -1,0 +1,23 @@
+{
+  "utc": "2026-09-15T16:57:21.145173+00:00",
+  "CUDA_VISIBLE_DEVICES": null,
+  "torch_cuda_is_available": true,
+  "torch_cuda_device_count": 2,
+  "devices": [
+    {
+      "device_index": 0,
+      "device_name": "NVIDIA A100-SXM4-40GB",
+      "UUID": "1c836f54-6fbb-ab99-38a5-631077704e6f",
+      "total_memory_bytes": 42405855232
+    },
+    {
+      "device_index": 1,
+      "device_name": "NVIDIA A100-SXM4-40GB",
+      "UUID": "99a2d1a0-b31d-8f9d-28af-d1b4059d8c54",
+      "total_memory_bytes": 42405855232
+    }
+  ],
+  "status": "PASS",
+  "model_loads": 0,
+  "model_forwards": 0
+}

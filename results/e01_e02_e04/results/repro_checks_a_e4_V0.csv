@@ -1,0 +1,8 @@
+check,pair,population,N,table1_R,ClusterB_saved_R_correct,ClusterA_V0_correct,parsed_agreement,raw_exact_match,result,ClusterA_source,ClusterB_source
+a,small,obqa,742,285,285,285,742,742,PASS,results/e4/small_obqa__V0-V1-V2.jsonl,$DATA_DIR/P2_5_20260910T072811Z/results/dev_cases.jsonl
+a,small,arc,299,110,110,110,299,299,PASS,results/e4/small_arc__V0-V1-V2.jsonl,$DATA_DIR/P2_9_20260911T045010Z/results/small/validation_cases.jsonl
+a,medium,obqa,742,490,490,490,742,742,PASS,results/e4/medium_obqa__V0-V1-V2.jsonl,$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/actions/obqa_dev.jsonl
+a,medium,arc,299,217,217,217,299,299,PASS,results/e4/medium_arc__V0-V1-V2.jsonl,$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/actions/arc_dev.jsonl
+a,large,obqa,742,617,617,617,742,742,PASS,results/e4/large_obqa__V0-V1.jsonl,$DATA_DIR/P2_6_20260910T164138Z/results/dev_cases.jsonl
+a,large,arc,299,268,268,268,299,299,PASS,results/e4/large_arc__V0-V1.jsonl,$DATA_DIR/P2_9_20260911T045010Z/results/large/validation_cases.jsonl
+a,large,mmlu_pro,2641,1282,1282,1282,2641,2641,PASS,results/e4/large_mmlu_pro__V0-V1.jsonl,$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/2/actions/dev.jsonl

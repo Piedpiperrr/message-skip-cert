@@ -1,0 +1,51 @@
+check,expected,got,ok
+small/OBQA per-reference Text null gain mean (1000 draws) vs saved E9-a,97.815,97.815,True
+small/OBQA per-reference C2C null gain mean (1000 draws) vs saved E9-a,100.848,100.848,True
+small/OBQA independent (E5-c) null gain mean (1000 draws) vs saved E9-a,146.148,146.148,True
+small/OBQA joint-matched null gain mean (1000 draws) vs saved E9-a,141.458,141.458,True
+small/OBQA joint gain-over-R ratio vs paper,0.664,0.664,True
+small/OBQA real gain over R (questions) vs paper,213,213,True
+small/OBQA real best-fixed headroom (questions) vs paper,132,132,True
+small/ARC per-reference Text null gain mean (1000 draws) vs saved E9-a,46.820,46.820,True
+small/ARC per-reference C2C null gain mean (1000 draws) vs saved E9-a,51.542,51.542,True
+small/ARC independent (E5-c) null gain mean (1000 draws) vs saved E9-a,69.386,69.386,True
+small/ARC joint-matched null gain mean (1000 draws) vs saved E9-a,69.232,69.232,True
+small/ARC joint gain-over-R ratio vs paper,0.737,0.737,True
+small/ARC real gain over R (questions) vs paper,94,94,True
+small/ARC real best-fixed headroom (questions) vs paper,49,49,True
+medium/OBQA per-reference Text null gain mean (1000 draws) vs saved E9-a,65.589,65.589,True
+medium/OBQA per-reference C2C null gain mean (1000 draws) vs saved E9-a,49.496,49.496,True
+medium/OBQA independent (E5-c) null gain mean (1000 draws) vs saved E9-a,82.909,82.909,True
+medium/OBQA joint-matched null gain mean (1000 draws) vs saved E9-a,92.965,92.965,True
+medium/OBQA joint gain-over-R ratio vs paper,0.903,0.903,True
+medium/OBQA real gain over R (questions) vs paper,103,103,True
+medium/OBQA real best-fixed headroom (questions) vs paper,70,70,True
+medium/ARC per-reference Text null gain mean (1000 draws) vs saved E9-a,18.556,18.556,True
+medium/ARC per-reference C2C null gain mean (1000 draws) vs saved E9-a,17.050,17.050,True
+medium/ARC independent (E5-c) null gain mean (1000 draws) vs saved E9-a,23.946,23.946,True
+medium/ARC joint-matched null gain mean (1000 draws) vs saved E9-a,26.207,26.207,True
+medium/ARC joint gain-over-R ratio vs paper,0.845,0.845,True
+medium/ARC real gain over R (questions) vs paper,31,31,True
+medium/ARC real best-fixed headroom (questions) vs paper,27,27,True
+large/OBQA per-reference Text null gain mean (1000 draws) vs saved E9-a,25.170,25.170,True
+large/OBQA per-reference C2C null gain mean (1000 draws) vs saved E9-a,21.012,21.012,True
+large/OBQA independent (E5-c) null gain mean (1000 draws) vs saved E9-a,37.133,37.133,True
+large/OBQA joint-matched null gain mean (1000 draws) vs saved E9-a,40.313,40.313,True
+large/OBQA joint gain-over-R ratio vs paper,0.761,0.761,True
+large/OBQA real gain over R (questions) vs paper,53,53,True
+large/OBQA real best-fixed headroom (questions) vs paper,25,25,True
+large/ARC per-reference Text null gain mean (1000 draws) vs saved E9-a,4.984,4.984,True
+large/ARC per-reference C2C null gain mean (1000 draws) vs saved E9-a,3.945,3.945,True
+large/ARC independent (E5-c) null gain mean (1000 draws) vs saved E9-a,6.749,6.749,True
+large/ARC joint-matched null gain mean (1000 draws) vs saved E9-a,7.695,7.695,True
+large/ARC joint gain-over-R ratio vs paper,0.641,0.641,True
+large/ARC real gain over R (questions) vs paper,12,12,True
+large/ARC real best-fixed headroom (questions) vs paper,6,6,True
+large/MMLU-Pro per-reference Text null gain mean (1000 draws) vs saved E9-a,142.917,142.917,True
+large/MMLU-Pro per-reference C2C null gain mean (1000 draws) vs saved E9-a,193.057,193.057,True
+large/MMLU-Pro independent (E5-c) null gain mean (1000 draws) vs saved E9-a,243.910,243.910,True
+large/MMLU-Pro joint-matched null gain mean (1000 draws) vs saved E9-a,267.712,267.712,True
+large/MMLU-Pro joint gain-over-R ratio vs paper,0.970,0.970,True
+large/MMLU-Pro real gain over R (questions) vs paper,276,276,True
+large/MMLU-Pro real best-fixed headroom (questions) vs paper,239,239,True
+joint gain-over-R median vs paper,0.761,0.761,True

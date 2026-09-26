@@ -1,0 +1,21 @@
+{
+  "utc": "2026-09-14T05:58:04.174143+00:00",
+  "files": {
+    "models/deployment.json": "76274c95a1514322dedd4717471a9468c142821ed9a996ed5f6c1ee09e91794d",
+    "models/reference_deployment.json": "49c7fe7c367b5203038def0187ffc273da9f0fb618be6efc5d101de7e85f2531",
+    "summary/calibration_new_300.csv": "9bbbf8e2a98f7ad7127c0375e526ff28ebf6997ad1b046918bfa2d122e57c638",
+    "comparisons/shared_reference_40.csv": "747b8daa52ff98040881c60f5034dc2d2fee57075214780e115e865c631dc4a3",
+    "comparisons/r4_100.csv": "62bd954b54a31378ad38f26cb1f42bc7214e939e1ef2548009b3ec5f7ba562b8",
+    "comparisons/r1_100.csv": "4400ac4674a09d09625c1a98725654b9f1a82721e2d199d4bf9c4342d50ad26e",
+    "comparisons/r2_100.csv": "8d9feb157ba93455702a6d16473b3783bce8d3ebc44423011db77b8090e9e672",
+    "comparisons/r0_100.csv": "3776721a92b8302f3a33d912116e9bc3e8f64a3a988dcb276bba0311090e7c74",
+    "comparisons/r3_100.csv": "dec9b547f3d4c4470c0ae05bb76880d3ed4eaab8b8dfa565b4f883c7dbfd699c"
+  },
+  "new_tests": 300,
+  "shared_tests": 40,
+  "distinct_tests": 340,
+  "comparison_views": 5,
+  "per_repeat_FWER_nominal": 0.1,
+  "global_repeats_FWER_point10_claim": false,
+  "dev_answers_or_gold_associated": false
+}

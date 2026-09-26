@@ -1,0 +1,16 @@
+{
+  "mode": "main",
+  "shard": 0,
+  "nshards": 4,
+  "n_done": 527,
+  "n_requested": 527,
+  "invalid": 2,
+  "errors": [],
+  "load_seconds": {
+    "helper": 78.66832592780702,
+    "receiver": 51.85058261197992
+  },
+  "flag_off_byte_identical_5_fit_rows": true,
+  "PASS": true,
+  "gold_read": false
+}

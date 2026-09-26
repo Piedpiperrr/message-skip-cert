@@ -1,0 +1,135 @@
+{
+  "ProbeMax": {
+    "q": 0.8,
+    "threshold": 0.001170039176940918,
+    "mode": "selective",
+    "accepted_q": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8
+    ],
+    "calibration": {
+      "family": "ProbeMax",
+      "q": 0.8,
+      "threshold": 0.001170039176940918,
+      "N": 1366,
+      "n_R": 1064,
+      "changed": 18,
+      "conditional_risk": 0.016917293233082706,
+      "p_value": 1.1550466704560778e-08,
+      "CP_upper_0_999": 0.03295449557541666,
+      "accepted": true,
+      "coverage": 0.7789165446559297,
+      "marginal_change": 0.013177159590043924
+    }
+  },
+  "ProbeEntropy": {
+    "q": 0.8,
+    "threshold": 0.006618913263082504,
+    "mode": "selective",
+    "accepted_q": [
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8
+    ],
+    "calibration": {
+      "family": "ProbeEntropy",
+      "q": 0.8,
+      "threshold": 0.006618913263082504,
+      "N": 1366,
+      "n_R": 1065,
+      "changed": 18,
+      "conditional_risk": 0.016901408450704224,
+      "p_value": 1.1156795150097025e-08,
+      "CP_upper_0_999": 0.03292380584106124,
+      "accepted": true,
+      "coverage": 0.7796486090775988,
+      "marginal_change": 0.013177159590043924
+    }
+  },
+  "WordD": {
+    "q": 0.0,
+    "threshold": null,
+    "mode": "fixed_T",
+    "accepted_q": [],
+    "calibration": null
+  },
+  "D": {
+    "q": 0.3,
+    "threshold": 0.08307916184658852,
+    "mode": "selective",
+    "accepted_q": [
+      0.15,
+      0.2,
+      0.25,
+      0.3
+    ],
+    "calibration": {
+      "family": "D",
+      "q": 0.3,
+      "threshold": 0.08307916184658852,
+      "N": 1366,
+      "n_R": 380,
+      "changed": 6,
+      "conditional_risk": 0.015789473684210527,
+      "p_value": 0.00040960882929912964,
+      "CP_upper_0_999": 0.046781425415328697,
+      "accepted": true,
+      "coverage": 0.2781844802342606,
+      "marginal_change": 0.004392386530014641
+    },
+    "fallback_reason": null,
+    "provenance": "directly reused original deployment; unchanged"
+  },
+  "R2100": {
+    "q": 0.4,
+    "threshold": 0.16532099602212336,
+    "mode": "selective",
+    "accepted_q": [
+      0.25,
+      0.3,
+      0.35,
+      0.4
+    ],
+    "calibration": {
+      "family": "R",
+      "q": 0.4,
+      "threshold": 0.16532099602212336,
+      "N": 1366,
+      "n_R": 523,
+      "changed": 11,
+      "conditional_risk": 0.021032504780114723,
+      "p_value": 0.000563729079806503,
+      "CP_upper_0_999": 0.04824838475266088,
+      "accepted": true,
+      "coverage": 0.3828696925329429,
+      "marginal_change": 0.008052708638360176
+    },
+    "fallback_reason": null,
+    "provenance": "directly reused original deployment; unchanged"
+  }
+}

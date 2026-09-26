@@ -1,0 +1,143 @@
+# P2_R1_EXP ClusterA harness changes (DEVIATIONS.md D3). Protocol content unchanged.
+# 1) src/extract_harness_r1.py: host guard accepts ClusterA compute nodes (x3...).
+#    SHA-256 12f2a9632bb55f5c4d8032fc2096d1b14503d4bca95b58acaa6592de2dd078d9 (freeze) -> 4916764d8a56bdbdda8b001321a129c11f3287ef44befd90c797cee9c641b71d
+--- a/src/extract_harness_r1.py
++++ b/src/extract_harness_r1.py
+@@ -51,7 +51,8 @@
+ 
+ 
+ def require_compute():
+-    assert os.environ.get('PBS_JOBID') and socket.gethostname().startswith('ClusterB-gpu')
++    # R1 ClusterA (DEVIATIONS.md D3): also accept ClusterA compute nodes (x3...); login nodes are still refused
++    assert os.environ.get('PBS_JOBID') and socket.gethostname().startswith(('ClusterB-gpu', 'x3'))
+ 
+ 
+ def stop_check():
+
+# 2) records/populations/e2b_large_obqa_dev.jsonl: new relative symlink -> e2b_small_obqa_dev.jsonl
+#    (frozen rows, SHA-256 fcf0743c...; same 742 ids in the same order as P2_RISK_CALIBRATION_BINARY_*/features/DEV_FEATURE_INDEX.csv)
+
+# 3) New ClusterA job script and per-node chain script (frozen src/run_r1.pbs is not used and not changed)
+--- a/src/ClusterA/run_r1_ClusterA.pbs
++++ b/src/ClusterA/run_r1_ClusterA.pbs
+@@ -0,0 +1,25 @@
++#!/bin/bash
++# [scheduler directive removed for anonymity]
++# [scheduler directive removed for anonymity]
++# [scheduler directive removed for anonymity]
++# [scheduler directive removed for anonymity]
++# [scheduler directive removed for anonymity]
++# P2_R1_EXP on ClusterA (DEVIATIONS.md D3): one 2-node debug job, 4 A100-40GB per node, one shell per node.
++# Submit: submit-job  -q debug -l select=2 -l walltime=00:55:00 -l fsreq=<fs> -N P2R1_E1E4_POL run_r1_ClusterA.pbs
++# Per-node GPU chains: node_r1_ClusterA.sh. analyze_r1.py is NOT run in this job.
++set -uo pipefail
++NEW=$DATA_DIR/P2_R1_EXP_20260919T050555Z
++LOG="$NEW/logs/ClusterA"
++START=$(date +%s)
++# Stop rule as frozen (drivers stop cleanly before each request/prefill), scaled to the 55-min walltime: start + 50 min
++R1_DEADLINE_EPOCH=$((START + 55 * 60 - 5 * 60))
++mkdir -p "$LOG"
++{
++  echo "JOB_START_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ) head=$(hostname) PBS_JOBID=${PBS_JOBID:-none} deadline_epoch=$R1_DEADLINE_EPOCH"
++  echo "PBS_NODEFILE:"; cat "$PBS_NODEFILE"
++  sha256sum "$NEW/PROTOCOL_FREEZE.md" "$NEW"/src/*.py "$NEW"/src/*.pbs "$NEW"/src/ClusterA/* "$NEW"/records/populations/*
++} > "$LOG/job_env.txt" 2>&1
++
++mpiexec -n 2 --ppn 1 --hostfile "$PBS_NODEFILE" --cpu-bind none \
++  bash "$NEW/src/ClusterA/node_r1_ClusterA.sh" "$R1_DEADLINE_EPOCH" "${PBS_JOBID:-none}"
++echo "MPIEXEC_EXIT=$? JOB_END_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$LOG/job_env.txt"
+--- a/src/ClusterA/node_r1_ClusterA.sh
++++ b/src/ClusterA/node_r1_ClusterA.sh
+@@ -0,0 +1,92 @@
++#!/bin/bash
++# P2_R1_EXP on ClusterA: per-node GPU chains (harness only; see DEVIATIONS.md D3).
++# Launched once per node by run_r1_ClusterA.pbs: mpiexec -n 2 --ppn 1 ... node_r1_ClusterA.sh <R1_DEADLINE_EPOCH> <PBS_JOBID>
++# Rank 0 = node 1 (E1 OFFICIAL + E1 OURS + E4 large OBQA/ARC V2), rank 1 = node 2 (E4 + E2b).
++# Drivers, populations, prompts, generation settings and parser are the frozen ones in ../ (unchanged).
++set -uo pipefail
++NEW=$DATA_DIR/P2_R1_EXP_20260919T050555Z
++export R1_DEADLINE_EPOCH="$1" PBS_JOBID="$2"
++RANK="${PALS_RANKID:-${PMI_RANK:-unknown}}"
++source "$HOME/.config/ClusterB-storage.sh"
++PY="$DATA_ROOT/software/envs/c2c_official/bin/python"
++LOG="$NEW/logs/ClusterA"
++# Environment below is the frozen run_r1.pbs environment, unchanged
++export http_proxy=http://proxy.cluster.invalid:3128 https_proxy=http://proxy.cluster.invalid:3128
++export HTTP_PROXY=http://proxy.cluster.invalid:3128 HTTPS_PROXY=http://proxy.cluster.invalid:3128
++export PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 TOKENIZERS_PARALLELISM=false CUDA_DEVICE_ORDER=PCI_BUS_ID
++export HF_HOME="$NEW/cache/hf_home" HF_HUB_CACHE="$NEW/cache/hf_home/hub" HF_DATASETS_CACHE="$NEW/cache/hf_home/datasets" HF_ASSETS_CACHE="$NEW/cache/hf_home/assets"
++export HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1 TRANSFORMERS_OFFLINE=1
++export TRITON_CACHE_DIR="$NEW/cache/triton" TORCHINDUCTOR_CACHE_DIR="$NEW/cache/inductor" TORCH_EXTENSIONS_DIR="$NEW/cache/torch_ext"
++export CUDA_CACHE_PATH="$NEW/cache/cuda" XDG_CACHE_HOME="$NEW/cache/xdg" MPLCONFIGDIR="$NEW/cache/mpl" TORCH_HOME="$NEW/cache/torch"
++export TMPDIR="$NEW/cache/tmp" TMP="$NEW/cache/tmp" TEMP="$NEW/cache/tmp"
++export OMP_NUM_THREADS=4 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
++unset CUDA_VISIBLE_DEVICES
++mkdir -p "$TMPDIR" "$LOG" "$NEW/cache/hf_home"
++ulimit -c 0
++cd "$NEW/src" || exit 3
++
++# Node environment record (runs alongside the chains so its Python cold start does not delay them)
++{
++  echo "NODE_START_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ) rank=$RANK host=$(hostname) PBS_JOBID=$PBS_JOBID deadline_epoch=$R1_DEADLINE_EPOCH"
++  env | grep -E '^(PBS_|PALS_|PMI_|CUDA_|HF_|TRANSFORMERS_)' | sort
++  nvidia-smi -L
++  nvidia-smi --query-gpu=index,name,uuid,pci.bus_id,memory.total,memory.used --format=csv
++  "$PY" -c "import torch;n=torch.cuda.device_count();print('torch_visible_gpus',n);assert n==4"
++  echo "GPU_CHECK_EXIT=$?"
++} > "$LOG/node${RANK}_env.txt" 2>&1 &
++ENVCHK=$!
++nvidia-smi --query-gpu=timestamp,index,memory.used,utilization.gpu --format=csv -l 60 > "$LOG/gpu_monitor_node${RANK}.csv" 2>&1 &
++MON=$!
++
++if [ "$RANK" = "0" ]; then
++  # GPUs 2-3: E1 OURS on the 500 OBQA test questions, R and C2C per question; large -> medium -> small
++  # (helper logical cuda:0 = GPU2, receiver+fuser logical cuda:1 = GPU3, as frozen)
++  ( export CUDA_VISIBLE_DEVICES=2,3
++    for p in large medium small; do "$PY" e1_ours.py --pair $p; echo "EXIT e1_ours $p $?"; done ) > "$LOG/n1_gpu23_e1_ours.log" 2>&1 &
++  P_OURS=$!
++  # E1 OFFICIAL: CPU prefetch of load_dataset("openbookqa") through the proxy (as frozen), then chains A and B as frozen
++  "$PY" e1_official.py --prefetch > "$LOG/n1_e1_official_prefetch.log" 2>&1
++  echo "EXIT prefetch $?" >> "$LOG/n1_e1_official_prefetch.log"
++  ( export CUDA_VISIBLE_DEVICES=0; "$PY" e1_official.py --chain A --gpu 0; echo "EXIT chainA $?" ) > "$LOG/n1_gpu0_e1_official_chainA.log" 2>&1 &
++  P_A=$!
++  ( export CUDA_VISIBLE_DEVICES=1; "$PY" e1_official.py --chain B --gpu 1; echo "EXIT chainB $?" ) > "$LOG/n1_gpu1_e1_official_chainB.log" 2>&1 &
++  P_B=$!
++  wait "$P_A"
++  # GPU0 after chain A: E4 large OBQA+ARC V2 (moved from node 2 GPU1 to fit the 45-min budget)
++  ( export CUDA_VISIBLE_DEVICES=0
++    "$PY" e4_null.py --flavor p210 --pair large --datasets obqa,arc --variants V2; echo "EXIT e4 large p210 V2 $?" ) > "$LOG/n1_gpu0_e4_large_p210_V2.log" 2>&1 &
++  P_E4=$!
++  wait "$P_B"
++  # CPU: official prompt rendering (first 3 questions), as frozen, once both official chains have finished
++  CUDA_VISIBLE_DEVICES= "$PY" render_official_prompts.py > "$LOG/n1_render_official.log" 2>&1
++  echo "EXIT render $?" >> "$LOG/n1_render_official.log"
++  wait "$P_OURS" "$P_E4"
++elif [ "$RANK" = "1" ]; then
++  PIDS=()
++  # GPU0: E4 large MMLU-Pro dev (2,641 representatives), V0 then V1 per question
++  ( export CUDA_VISIBLE_DEVICES=0
++    "$PY" e4_null.py --flavor mmlu --pair large --datasets mmlu_pro --variants V0,V1; echo "EXIT e4 large mmlu V0V1 $?" ) > "$LOG/n2_gpu0_e4_large_mmlu_V0V1.log" 2>&1 &
++  PIDS+=($!)
++  # GPU1: E4 large OBQA dev + ARC dev, V0 then V1 -> E4 large MMLU-Pro V2
++  ( export CUDA_VISIBLE_DEVICES=1
++    "$PY" e4_null.py --flavor p210 --pair large --datasets obqa,arc --variants V0,V1; echo "EXIT e4 large p210 V0V1 $?"
++    "$PY" e4_null.py --flavor mmlu --pair large --datasets mmlu_pro --variants V2; echo "EXIT e4 large mmlu V2 $?" ) > "$LOG/n2_gpu1_e4_large.log" 2>&1 &
++  PIDS+=($!)
++  # GPU2: E4 small, then medium: OBQA dev + ARC dev, V0, V1, V2 per question
++  ( export CUDA_VISIBLE_DEVICES=2
++    "$PY" e4_null.py --flavor p210 --pair small --datasets obqa,arc --variants V0,V1,V2; echo "EXIT e4 small $?"
++    "$PY" e4_null.py --flavor medium --pair medium --datasets obqa,arc --variants V0,V1,V2; echo "EXIT e4 medium $?" ) > "$LOG/n2_gpu2_e4_small_medium.log" 2>&1 &
++  PIDS+=($!)
++  # GPU3: E2b features: large (OBQA dev reproduction first, MMLU-Pro fit/cal/dev, ARC dev) -> medium -> small
++  ( export CUDA_VISIBLE_DEVICES=3
++    "$PY" extract_features_r1.py large large_obqa_dev,large_mmlu_pro_fit,large_mmlu_pro_cal,large_mmlu_pro_dev,large_arc_dev; echo "EXIT e2b large $?"
++    "$PY" extract_features_r1.py medium medium_obqa_fit,medium_obqa_cal,medium_obqa_dev,medium_arc_fit,medium_arc_cal,medium_arc_dev; echo "EXIT e2b medium $?"
++    "$PY" extract_features_r1.py small small_obqa_dev,small_arc_dev; echo "EXIT e2b small $?" ) > "$LOG/n2_gpu3_e2b.log" 2>&1 &
++  PIDS+=($!)
++  wait "${PIDS[@]}"
++else
++  echo "UNKNOWN_RANK=$RANK host=$(hostname)" >> "$LOG/node_unknown_rank.txt"
++fi
++wait "$ENVCHK"
++kill "$MON" 2>/dev/null
++echo "NODE_END_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ) rank=$RANK" >> "$LOG/node${RANK}_env.txt"

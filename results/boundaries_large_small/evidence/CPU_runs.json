@@ -1,0 +1,47 @@
+{
+  "job_id": "run018",
+  "start_utc": "2026-09-14T17:05:16.818581+00:00",
+  "phases": [
+    {
+      "args": [
+        "run_boundaries.py"
+      ],
+      "log": "$DATA_DIR/runs/iclr2027_p2/run019/run_boundaries.py.log",
+      "started_utc": "2026-09-14T17:05:16.819022+00:00",
+      "CPU_limit": 733,
+      "exit_code": 0,
+      "CPU_seconds": 312.176107,
+      "wall_seconds": 551.068329334259,
+      "ended_utc": "2026-09-14T17:14:27.887368+00:00"
+    },
+    {
+      "args": [
+        "analyze.py"
+      ],
+      "log": "$DATA_DIR/runs/iclr2027_p2/run019/analyze.py.log",
+      "started_utc": "2026-09-14T17:14:27.892012+00:00",
+      "CPU_limit": 421,
+      "exit_code": 0,
+      "CPU_seconds": 6.960192000000006,
+      "wall_seconds": 8.219662189483643,
+      "ended_utc": "2026-09-14T17:14:36.111693+00:00"
+    },
+    {
+      "args": [
+        "render.py"
+      ],
+      "log": "$DATA_DIR/runs/iclr2027_p2/run019/render.py.log",
+      "started_utc": "2026-09-14T17:14:36.116240+00:00",
+      "CPU_limit": 414,
+      "exit_code": 0,
+      "CPU_seconds": 2.952312999999947,
+      "wall_seconds": 10.163001775741577,
+      "ended_utc": "2026-09-14T17:14:46.279271+00:00"
+    }
+  ],
+  "status": "NUMERICAL_COMPLETE",
+  "CPU_seconds": 323.45149200000003,
+  "preparation_reporting_reserve": 150,
+  "CPU_cap": 900,
+  "utc": "2026-09-14T17:14:46.287462+00:00"
+}

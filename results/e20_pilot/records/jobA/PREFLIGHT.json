@@ -1,0 +1,418 @@
+{
+  "job": "A",
+  "skipped": false,
+  "first_output_utc": "2026-09-21T23:37:03.318211+00:00",
+  "obqa": {
+    "source": "P2_10 results/large/obqa/train_historical_rtc.jsonl (first 16 fit representatives present)",
+    "per_action": {
+      "R": {
+        "n": 16,
+        "mismatches": 0,
+        "rows": [
+          {
+            "id": "14-1371",
+            "match": true,
+            "got": "The correct answer is A",
+            "expected": "The correct answer is A",
+            "token_ids_match": true
+          },
+          {
+            "id": "14-97",
+            "match": true,
+            "got": "The correct answer is B",
+            "expected": "The correct answer is B",
+            "token_ids_match": true
+          },
+          {
+            "id": "11-514",
+            "match": true,
+            "got": "The correct answer is D.",
+            "expected": "The correct answer is D.",
+            "token_ids_match": true
+          },
+          {
+            "id": "10-1178",
+            "match": true,
+            "got": "The correct answer is C",
+            "expected": "The correct answer is C",
+            "token_ids_match": true
+          },
+          {
+            "id": "10-655",
+            "match": true,
+            "got": "The correct answer is D",
+            "expected": "The correct answer is D",
+            "token_ids_match": true
+          },
+          {
+            "id": "1000",
+            "match": true,
+            "got": "The correct answer is C",
+            "expected": "The correct answer is C",
+            "token_ids_match": true
+          },
+          {
+            "id": "14-356",
+            "match": true,
+            "got": "The correct answer is D",
+            "expected": "The correct answer is D",
+            "token_ids_match": true
+          },
+          {
+            "id": "10-743",
+            "match": true,
+            "got": "The correct answer is A",
+            "expected": "The correct answer is A",
+            "token_ids_match": true
+          },
+          {
+            "id": "9-666",
+            "match": true,
+            "got": "The correct answer is D",
+            "expected": "The correct answer is D",
+            "token_ids_match": true
+          },
+          {
+            "id": "12-910",
+            "match": true,
+            "got": "The correct answer is C",
+            "expected": "The correct answer is C",
+            "token_ids_match": true
+          },
+          {
+            "id": "1045",
+            "match": true,
+            "got": "The correct answer is B",
+            "expected": "The correct answer is B",
+            "token_ids_match": true
+          },
+          {
+            "id": "12-1212",
+            "match": true,
+            "got": "The correct answer is D",
+            "expected": "The correct answer is D",
+            "token_ids_match": true
+          },
+          {
+            "id": "14-1364",
+            "match": true,
+            "got": "The correct answer is A",
+            "expected": "The correct answer is A",
+            "token_ids_match": true
+          },
+          {
+            "id": "14-1141",
+            "match": true,
+            "got": "The correct answer is D.",
+            "expected": "The correct answer is D.",
+            "token_ids_match": true
+          },
+          {
+            "id": "12-807",
+            "match": true,
+            "got": "The correct answer is A",
+            "expected": "The correct answer is A",
+            "token_ids_match": true
+          },
+          {
+            "id": "14-1412",
+            "match": true,
+            "got": "The correct answer is D.",
+            "expected": "The correct answer is D.",
+            "token_ids_match": true
+          }
+        ]
+      },
+      "T": {
+        "n": 16,
+        "mismatches": 0,
+        "rows": [
+          {
+            "id": "14-1371",
+            "match": true,
+            "got": "The correct answer is A",
+            "expected": "The correct answer is A",
+            "token_ids_match": true
+          },
+          {
+            "id": "14-97",
+            "match": true,
+            "got": "The correct answer is B",
+            "expected": "The correct answer is B",
+            "token_ids_match": true
+          },
+          {
+            "id": "11-514",
+            "match": true,
+            "got": "The correct answer is D.",
+            "expected": "The correct answer is D.",
+            "token_ids_match": true
+          },
+          {
+            "id": "10-1178",
+            "match": true,
+            "got": "The correct answer is C.",
+            "expected": "The correct answer is C.",
+            "token_ids_match": true
+          },
+          {
+            "id": "10-655",
+            "match": true,
+            "got": "The correct answer is D.",
+            "expected": "The correct answer is D.",
+            "token_ids_match": true
+          },
+          {
+            "id": "1000",
+            "match": true,
+            "got": "C",
+            "expected": "C",
+            "token_ids_match": true
+          },
+          {
+            "id": "14-356",
+            "match": true,
+            "got": "The correct answer is D.",
+            "expected": "The correct answer is D.",
+            "token_ids_match": true
+          },
+          {
+            "id": "10-743",
+            "match": true,
+            "got": "The correct answer is A.",
+            "expected": "The correct answer is A.",
+            "token_ids_match": true
+          },
+          {
+            "id": "9-666",
+            "match": true,
+            "got": "The correct answer is D",
+            "expected": "The correct answer is D",
+            "token_ids_match": true
+          },
+          {
+            "id": "12-910",
+            "match": true,
+            "got": "The correct answer is C",
+            "expected": "The correct answer is C",
+            "token_ids_match": true
+          },
+          {
+            "id": "1045",
+            "match": true,
+            "got": "The correct answer is B.",
+            "expected": "The correct answer is B.",
+            "token_ids_match": true
+          },
+          {
+            "id": "12-1212",
+            "match": true,
+            "got": "The correct answer is D.",
+            "expected": "The correct answer is D.",
+            "token_ids_match": true
+          },
+          {
+            "id": "14-1364",
+            "match": true,
+            "got": "The correct answer is A",
+            "expected": "The correct answer is A",
+            "token_ids_match": true
+          },
+          {
+            "id": "14-1141",
+            "match": true,
+            "got": "The correct answer is D.",
+            "expected": "The correct answer is D.",
+            "token_ids_match": true
+          },
+          {
+            "id": "12-807",
+            "match": true,
+            "got": "The correct answer is A",
+            "expected": "The correct answer is A",
+            "token_ids_match": true
+          },
+          {
+            "id": "14-1412",
+            "match": true,
+            "got": "The correct answer is D.",
+            "expected": "The correct answer is D.",
+            "token_ids_match": true
+          }
+        ]
+      }
+    },
+    "n": 32,
+    "matched": 32,
+    "PASS": true
+  },
+  "rates": {
+    "helper_tokens_per_s": 49.43284431100189,
+    "qwen3_frozen_R_tokens_per_s": 16.78766061222479,
+    "helper_tokens": 469,
+    "helper_s": 9.487619143445045,
+    "receiver_tokens": 99,
+    "receiver_s": 5.897188553353772,
+    "llama_frozen_R_tokens_per_s": 42.57271859710688
+  },
+  "x3": {
+    "source": "P2_R6_X3 records/work/run/chain_00.jsonl -> results/runs/chain_00.jsonl (first 16 OBQA rows)",
+    "n": 16,
+    "R_mismatches": 0,
+    "T_mismatches": 0,
+    "rows_all_equal": 16,
+    "rows": [
+      {
+        "id": "14-1371",
+        "R_match": true,
+        "T_match": true,
+        "R_got": "The correct answer is A.",
+        "R_expected": "The correct answer is A.",
+        "T_got": "The correct answer is A.",
+        "T_expected": "The correct answer is A."
+      },
+      {
+        "id": "14-97",
+        "R_match": true,
+        "T_match": true,
+        "R_got": "The correct answer is B.",
+        "R_expected": "The correct answer is B.",
+        "T_got": "The correct answer is B.",
+        "T_expected": "The correct answer is B."
+      },
+      {
+        "id": "11-514",
+        "R_match": true,
+        "T_match": true,
+        "R_got": "The correct answer is D.",
+        "R_expected": "The correct answer is D.",
+        "T_got": "The correct answer is D.",
+        "T_expected": "The correct answer is D."
+      },
+      {
+        "id": "10-1178",
+        "R_match": true,
+        "T_match": true,
+        "R_got": "The correct answer is C.",
+        "R_expected": "The correct answer is C.",
+        "T_got": "The correct answer is C.",
+        "T_expected": "The correct answer is C."
+      },
+      {
+        "id": "10-655",
+        "R_match": true,
+        "T_match": true,
+        "R_got": "The correct answer is D.",
+        "R_expected": "The correct answer is D.",
+        "T_got": "The correct answer is A.",
+        "T_expected": "The correct answer is A."
+      },
+      {
+        "id": "1000",
+        "R_match": true,
+        "T_match": true,
+        "R_got": "The correct answer is A.",
+        "R_expected": "The correct answer is A.",
+        "T_got": "The correct answer is C.",
+        "T_expected": "The correct answer is C."
+      },
+      {
+        "id": "14-356",
+        "R_match": true,
+        "T_match": true,
+        "R_got": "The correct answer is D.",
+        "R_expected": "The correct answer is D.",
+        "T_got": "The correct answer is D.",
+        "T_expected": "The correct answer is D."
+      },
+      {
+        "id": "10-743",
+        "R_match": true,
+        "T_match": true,
+        "R_got": "The correct answer is A.",
+        "R_expected": "The correct answer is A.",
+        "T_got": "The correct answer is A.",
+        "T_expected": "The correct answer is A."
+      },
+      {
+        "id": "9-666",
+        "R_match": true,
+        "T_match": true,
+        "R_got": "The correct answer is A.",
+        "R_expected": "The correct answer is A.",
+        "T_got": "The correct answer is A.",
+        "T_expected": "The correct answer is A."
+      },
+      {
+        "id": "12-910",
+        "R_match": true,
+        "T_match": true,
+        "R_got": "The correct answer is B.",
+        "R_expected": "The correct answer is B.",
+        "T_got": "The correct answer is C.",
+        "T_expected": "The correct answer is C."
+      },
+      {
+        "id": "1045",
+        "R_match": true,
+        "T_match": true,
+        "R_got": "The correct answer is B.",
+        "R_expected": "The correct answer is B.",
+        "T_got": "The correct answer is B.",
+        "T_expected": "The correct answer is B."
+      },
+      {
+        "id": "12-1212",
+        "R_match": true,
+        "T_match": true,
+        "R_got": "The correct answer is D.",
+        "R_expected": "The correct answer is D.",
+        "T_got": "The correct answer is D.",
+        "T_expected": "The correct answer is D."
+      },
+      {
+        "id": "14-1364",
+        "R_match": true,
+        "T_match": true,
+        "R_got": "The correct answer is A.",
+        "R_expected": "The correct answer is A.",
+        "T_got": "The correct answer is A.",
+        "T_expected": "The correct answer is A."
+      },
+      {
+        "id": "14-1141",
+        "R_match": true,
+        "T_match": true,
+        "R_got": "The correct answer is D.",
+        "R_expected": "The correct answer is D.",
+        "T_got": "The correct answer is D.",
+        "T_expected": "The correct answer is D."
+      },
+      {
+        "id": "12-807",
+        "R_match": true,
+        "T_match": true,
+        "R_got": "The correct answer is A.",
+        "R_expected": "The correct answer is A.",
+        "T_got": "The correct answer is A.",
+        "T_expected": "The correct answer is A."
+      },
+      {
+        "id": "14-1412",
+        "R_match": true,
+        "T_match": true,
+        "R_got": "The correct answer is B.",
+        "R_expected": "The correct answer is B.",
+        "T_got": "The correct answer is B.",
+        "T_expected": "The correct answer is B."
+      }
+    ],
+    "PASS": true
+  },
+  "PASS": true,
+  "load_seconds": {
+    "helper": 160.69572228612378,
+    "qwen3": 141.63338966597803,
+    "llama": 139.88909196201712
+  }
+}

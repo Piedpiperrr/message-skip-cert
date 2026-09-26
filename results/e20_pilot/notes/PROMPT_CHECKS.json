@@ -1,0 +1,121 @@
+{
+  "utc": "2026-09-21T23:08:27.831519+00:00",
+  "datasets": {
+    "squad": {
+      "helper": {
+        "n": 400,
+        "prompt_tokens_max": 476,
+        "prompt_tokens_median": 226.5,
+        "retokenized_equals_native_all": true,
+        "bos_counts": [
+          0
+        ]
+      },
+      "qwen3": {
+        "n": 400,
+        "prompt_tokens_max": 490,
+        "prompt_tokens_median": 240.5,
+        "retokenized_equals_native_all": true,
+        "bos_counts": [
+          0
+        ]
+      },
+      "llama": {
+        "n": 400,
+        "prompt_tokens_max": 478,
+        "prompt_tokens_median": 258.0,
+        "retokenized_equals_native_all": true,
+        "bos_counts": [
+          1
+        ]
+      }
+    },
+    "nqp": {
+      "helper": {
+        "n": 400,
+        "prompt_tokens_max": 1215,
+        "prompt_tokens_median": 191.0,
+        "retokenized_equals_native_all": true,
+        "bos_counts": [
+          0
+        ]
+      },
+      "qwen3": {
+        "n": 400,
+        "prompt_tokens_max": 1229,
+        "prompt_tokens_median": 205.0,
+        "retokenized_equals_native_all": true,
+        "bos_counts": [
+          0
+        ]
+      },
+      "llama": {
+        "n": 400,
+        "prompt_tokens_max": 807,
+        "prompt_tokens_median": 224.0,
+        "retokenized_equals_native_all": true,
+        "bos_counts": [
+          1
+        ]
+      }
+    },
+    "triviaqa": {
+      "helper": {
+        "n": 400,
+        "prompt_tokens_max": 164,
+        "prompt_tokens_median": 73.0,
+        "retokenized_equals_native_all": true,
+        "bos_counts": [
+          0
+        ]
+      },
+      "qwen3": {
+        "n": 400,
+        "prompt_tokens_max": 185,
+        "prompt_tokens_median": 94.0,
+        "retokenized_equals_native_all": true,
+        "bos_counts": [
+          0
+        ]
+      },
+      "llama": {
+        "n": 400,
+        "prompt_tokens_max": 203,
+        "prompt_tokens_median": 116.0,
+        "retokenized_equals_native_all": true,
+        "bos_counts": [
+          1
+        ]
+      }
+    },
+    "nqopen": {
+      "helper": {
+        "n": 400,
+        "prompt_tokens_max": 78,
+        "prompt_tokens_median": 68.0,
+        "retokenized_equals_native_all": true,
+        "bos_counts": [
+          0
+        ]
+      },
+      "qwen3": {
+        "n": 400,
+        "prompt_tokens_max": 99,
+        "prompt_tokens_median": 89.0,
+        "retokenized_equals_native_all": true,
+        "bos_counts": [
+          0
+        ]
+      },
+      "llama": {
+        "n": 400,
+        "prompt_tokens_max": 121,
+        "prompt_tokens_median": 112.0,
+        "retokenized_equals_native_all": true,
+        "bos_counts": [
+          1
+        ]
+      }
+    }
+  }
+}

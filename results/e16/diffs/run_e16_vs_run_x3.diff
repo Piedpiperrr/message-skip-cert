@@ -1,0 +1,59 @@
+--- ../P2_R6_X3_20260921T052602Z/src/run_x3.py	2026-09-21 06:10:30.000000000 +0000
++++ src/run_e16.py	2026-09-21 18:48:22.000000000 +0000
+@@ -1,4 +1,6 @@
+-"""X3 receiver-only driver = copy of X2 run_x2.py (approved changes A1 + A2) with the X3 changes marked "X3:" (receiver ids;
++"""E16 driver = copy of P2_R6_X3 src/run_x3.py; E16 changes marked "E16:" (receiver qwen3_1_7b with the medium frozen generation-config check;
++--text-only runs only the Text-reading path, for E16-5 where R and ProbeMax are reused from the medium pair). X3 docstring follows.
++X3 receiver-only driver = copy of X2 run_x2.py (approved changes A1 + A2) with the X3 changes marked "X3:" (receiver ids;
+ R-path tokenization of the rendered chat template with add_special_tokens=False, approved 2026-09-21 (no double BOS); explicit
+ add_special_tokens=False in the probe; per-row BOS counts; parsed-label comparison in validate mode). One GPU, one receiver; no helper, no fuser.
+ 
+@@ -22,6 +24,7 @@
+ ap.add_argument('--mode', required=True, choices=['validate', 'smoke', 'run'])
+ ap.add_argument('--receiver', required=True, choices=list(RECEIVERS))
+ ap.add_argument('--rows', required=True); ap.add_argument('--out', required=True)
++ap.add_argument('--text-only', action='store_true')   # E16
+ a = ap.parse_args()
+ OUT = pathlib.Path(a.out); assert not OUT.exists(), f'refusing to overwrite {OUT}'
+ rows = jl(a.rows)
+@@ -71,6 +74,8 @@
+ gencfg = model.generation_config.to_dict()
+ if a.receiver == 'qwen3_8b':
+     assert gencfg == read(P210 / 'frozen_config.json')['pair_configs']['large']['receiver_generation_config']
++if a.receiver == 'qwen3_1_7b':   # E16: as the medium runtime asserts
++    assert gencfg == read(MED.parent / 'protocol/generation_configs.json')['model_generation_config_after_native_cleanup']['receiver']
+ runner = runtime.Runner.__new__(runtime.Runner)
+ runner.receiver, runner.receiver_tok = model, tok
+ runner.tr = legacy_methods.T2TReceiverBundle(model, tok)
+@@ -137,12 +142,13 @@
+     use_format(ds)
+     rec = dict(dataset=ds, split=r['split'], id=r['id'], representative=r['representative'], receiver=a.receiver, utc=utc(), cold_first_after_load=first, runtime_error=None)
+     try:
+-        sync(); t = time.perf_counter(); res = runner.request(q, 'receiver_only'); sync()
+-        o, why = v2(res['raw_answer'], legal)
+-        rec['R'] = dict(raw=res['raw_answer'], generated_token_ids=res['generated_token_ids'], receiver_input_tokens=res['receiver_input_tokens'],
+-                        parsed=o, parse_reason=why, latency_ms=(time.perf_counter() - t) * 1000,
+-                        bos_count=bos_count(LAST['R_ids']), input_ids_sha256=hashlib.sha256(json.dumps(LAST['R_ids']).encode()).hexdigest())
+-        assert res['receiver_input_tokens'] == len(LAST['R_ids'])
++        if not a.text_only:   # E16: R skipped with --text-only
++            sync(); t = time.perf_counter(); res = runner.request(q, 'receiver_only'); sync()
++            o, why = v2(res['raw_answer'], legal)
++            rec['R'] = dict(raw=res['raw_answer'], generated_token_ids=res['generated_token_ids'], receiver_input_tokens=res['receiver_input_tokens'],
++                            parsed=o, parse_reason=why, latency_ms=(time.perf_counter() - t) * 1000,
++                            bos_count=bos_count(LAST['R_ids']), input_ids_sha256=hashlib.sha256(json.dumps(LAST['R_ids']).encode()).hexdigest())
++            assert res['receiver_input_tokens'] == len(LAST['R_ids'])
+         sync(); t = time.perf_counter()
+         with torch.inference_mode():
+             tr = runner.tr.consume(q, FMT[ds](q, use_template=False), r['helper_message'])
+@@ -151,8 +157,9 @@
+                         prompt_ids_sha256=hashlib.sha256(json.dumps(tr['receiver_prompt_token_ids']).encode()).hexdigest(),
+                         helper_message_sha256=r['helper_message_sha256'], parsed=o, parse_reason=why, latency_ms=(time.perf_counter() - t) * 1000,
+                         bos_count=bos_count(tr['receiver_prompt_token_ids']))
+-        sync(); t = time.perf_counter(); pr = probe(q, ds, legal); sync()
+-        rec['P'] = dict(**pr, latency_ms=(time.perf_counter() - t) * 1000)
++        if not a.text_only:   # E16: probe skipped with --text-only
++            sync(); t = time.perf_counter(); pr = probe(q, ds, legal); sync()
++            rec['P'] = dict(**pr, latency_ms=(time.perf_counter() - t) * 1000)
+     except Exception:
+         rec['runtime_error'] = traceback.format_exc(); print('RUNTIME_ERROR', ds, r['id'], flush=True)
+     append(OUT, rec); first = False

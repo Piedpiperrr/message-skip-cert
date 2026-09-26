@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-15T15:43:03.095027+00:00",
+  "cases": [
+    "integer_rank_nondivisible_N",
+    "all_ties_retained",
+    "n134_reject_n135_accept_zero_changes",
+    "n0_p1_CP1",
+    "all_changes_reject",
+    "q1_fixed_R",
+    "q0_fixed_reference"
+  ],
+  "project_questions_or_scores_used": false
+}

@@ -1,0 +1,8 @@
+{
+  "path": "$DATA_DIR/P2_1_20260910T041720Z/P2_STATE.md",
+  "only_append": true,
+  "original_prefix_preserved": true,
+  "before_sha256": "f5033d249434be944e51aed63cee4cc606154c62ea92c2c95a778de76fc0bed8",
+  "after_sha256": "0552a281fa40aed60370548a575d19a78643059179377ec3b3ebe4a32baca74f",
+  "final_state": "COMPLETE_BOUNDED_E0_VALIDATED"
+}

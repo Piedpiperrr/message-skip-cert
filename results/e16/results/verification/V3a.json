@@ -1,0 +1,192 @@
+{
+  "utc": "2026-09-21T18:59:08.513736+00:00",
+  "verdict": "PASS",
+  "n": 16,
+  "counts": {
+    "runtime_ok": 16,
+    "R_raw_equal": 16,
+    "T_raw_equal": 16,
+    "u_equal": 16,
+    "p_labels_equal": 16,
+    "probe_ids_equal": 16,
+    "all_equal": 16
+  },
+  "rows": [
+    {
+      "dataset": "obqa",
+      "id": "14-1371",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-97",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "11-514",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-1178",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-655",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "1000",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-356",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-743",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "9-666",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "12-910",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "1045",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "12-1212",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-1364",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-1141",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "12-807",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-1412",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    }
+  ]
+}

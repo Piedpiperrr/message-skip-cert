@@ -1,0 +1,20 @@
+{
+  "utc": "2026-09-19T23:29:15.292760+00:00",
+  "status": "COMPLETE",
+  "job_id": "run008",
+  "complete_requests": 8,
+  "questions": 4,
+  "arms": [
+    "fixed_TF",
+    "policy_TF"
+  ],
+  "q": 0.75,
+  "threshold": 0.0002611875534057617,
+  "requests_sha256": "adcf1b5b903d49689684f5584a1d4d48cd52aff65ded3a8f1dbac0e929bcbde1",
+  "attempts_sha256": "b44baed204e56f65b380cfbba4b86c5295b920c73eddab31ef4fc7e3822a6b1b",
+  "gold_read": false,
+  "retries": 0,
+  "warmup": 0,
+  "analysis_performed": false,
+  "elapsed_seconds": 5.035956351086497
+}

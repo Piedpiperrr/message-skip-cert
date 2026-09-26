@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-15T15:43:40.815640+00:00",
+  "questions_checked": 5626,
+  "native_receiver_prompt_matches_parent": true,
+  "native_helper_body_matches": true,
+  "model_forward_calls": 0,
+  "project_question_answers_generated": 0,
+  "outcomes_observed": false
+}

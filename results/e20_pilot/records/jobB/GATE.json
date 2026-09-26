@@ -1,0 +1,104 @@
+{
+  "job": "B",
+  "dry_run": false,
+  "utc_start": "2026-09-21T23:48:00.151981+00:00",
+  "datasets": [
+    "triviaqa",
+    "nqopen"
+  ],
+  "PASS": true,
+  "preflight_PASS": null,
+  "preflight_skipped": true,
+  "smoke": {
+    "qwen3": {
+      "triviaqa": {
+        "n": 8,
+        "invalid": 0,
+        "median_words": 2.0,
+        "fail": false,
+        "answers": [
+          "silvio berlusconi",
+          "john noakes",
+          "battle of culloden",
+          "italy",
+          "nissan",
+          "southdown is breed of which animal",
+          "gershwin",
+          "peter sellers"
+        ]
+      },
+      "nqopen": {
+        "n": 8,
+        "invalid": 0,
+        "median_words": 2.0,
+        "fail": false,
+        "answers": [
+          "wilt chamberlain 55 rebounds january 21 1960",
+          "california",
+          "tom hanks",
+          "one ring",
+          "james avery",
+          "1977",
+          "when umpire signals for new ball",
+          "122"
+        ]
+      }
+    },
+    "llama": {
+      "triviaqa": {
+        "n": 8,
+        "invalid": 0,
+        "median_words": 1.5,
+        "fail": false,
+        "answers": [
+          "silvio berlusconi",
+          "johnny morris",
+          "battle of culloden",
+          "italy",
+          "renault",
+          "sheep",
+          "gershwin",
+          "stuart holmes"
+        ]
+      },
+      "nqopen": {
+        "n": 8,
+        "invalid": 0,
+        "median_words": 2.0,
+        "fail": false,
+        "answers": [
+          "dennis rodman 34 rebounds",
+          "san francisco",
+          "anthony hopkins",
+          "one ring",
+          "jason scott lee",
+          "august 1975",
+          "when ball is lost or damaged beyond repair",
+          "57"
+        ]
+      }
+    }
+  },
+  "datasets_kept": [
+    "triviaqa",
+    "nqopen"
+  ],
+  "datasets_dropped": [],
+  "n_per_dataset": 400,
+  "reduced_to_300": false,
+  "projection": {
+    "elapsed_s": 352.21858763694763,
+    "load_s": {
+      "qwen3": 141.35251033608802,
+      "helper": 141.35251033608802,
+      "llama": 124.66819574893452
+    },
+    "helper_tokens_per_s": 49.43284431100189,
+    "qwen3_e20_tokens_per_s": 14.956474351378143,
+    "llama_e20_tokens_per_s": 41.70820847816461,
+    "questions_per_rank": 100,
+    "worst_case_projected_total_s": 1858.8214565579985,
+    "limit_s": 2700
+  },
+  "utc_gate": "2026-09-21T23:52:34.218600+00:00"
+}

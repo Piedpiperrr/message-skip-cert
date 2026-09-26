@@ -1,0 +1,7 @@
+item,check,expected,got,ok
+5,X2-OLMo/OBQA/Text original dev disagreement,172/742,172/742,True
+5,X2-OLMo/OBQA/Text original certification,fallback,fallback,True
+5,X2-OLMo/ARC/Text original dev disagreement,67/299,67/299,True
+5,X2-OLMo/ARC/Text original certification,fallback,fallback,True
+5,X2-OLMo/MMLU-Pro/Text original dev disagreement,1112/2641,1112/2641,True
+5,X2-OLMo/MMLU-Pro/Text original certification,fallback,fallback,True

@@ -1,0 +1,2 @@
+check,pair,population,N,dim,max_abs_dz,mean_abs_dz,n_vectors_bit_identical,max_abs_dp_historical_D,historical_D_q,historical_D_threshold,routed_ClusterA,routed_ClusterB,routing_decision_flips,result,ClusterA_source,ClusterB_source
+c,large,obqa_dev,742,8192,0.0,0.0,742,0.0,0.3,0.08307916184658852,230,230,0,PASS,results/e2b/large/features/large_obqa_dev (job 7634910),$DATA_DIR/P2_RISK_CALIBRATION_BINARY_20260914T043954Z/features/dev ; model $DATA_DIR/P2_RISK_CALIBRATION_BINARY_20260914T043954Z/models/disagreement.joblib

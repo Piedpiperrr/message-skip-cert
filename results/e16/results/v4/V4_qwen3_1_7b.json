@@ -1,0 +1,421 @@
+{
+  "utc": "2026-09-21T18:59:15.868303+00:00",
+  "receiver": "qwen3_1_7b",
+  "per_benchmark": {
+    "obqa": {
+      "n": 16,
+      "u_equal": 16,
+      "u_pos": 11,
+      "ids_checked": 16,
+      "ids_equal": 16,
+      "pass": true
+    },
+    "arc": {
+      "n": 16,
+      "u_equal": 16,
+      "u_pos": 8,
+      "ids_checked": 16,
+      "ids_equal": 16,
+      "pass": true
+    },
+    "mmlu_pro": {
+      "n": 16,
+      "u_equal": 16,
+      "u_pos": 11,
+      "ids_checked": 0,
+      "ids_equal": 0,
+      "pass": true
+    }
+  },
+  "rows": [
+    {
+      "dataset": "obqa",
+      "id": "14-97",
+      "stored_u": 0.008577525615692139,
+      "new_u": 0.008577525615692139,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "11-514",
+      "stored_u": 1.0132789611816406e-05,
+      "new_u": 1.0132789611816406e-05,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "1000",
+      "stored_u": 3.933906555175781e-06,
+      "new_u": 3.933906555175781e-06,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-356",
+      "stored_u": 1.71661376953125e-05,
+      "new_u": 1.71661376953125e-05,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-743",
+      "stored_u": 3.540515899658203e-05,
+      "new_u": 3.540515899658203e-05,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "9-666",
+      "stored_u": 1.1920928955078125e-07,
+      "new_u": 1.1920928955078125e-07,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "1045",
+      "stored_u": 1.1920928955078125e-07,
+      "new_u": 1.1920928955078125e-07,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "12-1212",
+      "stored_u": 2.384185791015625e-07,
+      "new_u": 2.384185791015625e-07,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-1371",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-1178",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-655",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "12-910",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-1364",
+      "stored_u": 1.430511474609375e-06,
+      "new_u": 1.430511474609375e-06,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-1141",
+      "stored_u": 3.5762786865234375e-06,
+      "new_u": 3.5762786865234375e-06,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "12-807",
+      "stored_u": 1.430511474609375e-06,
+      "new_u": 1.430511474609375e-06,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-1412",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7009923",
+      "stored_u": 0.18242573738098145,
+      "new_u": 0.18242573738098145,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7230195",
+      "stored_u": 8.797645568847656e-05,
+      "new_u": 8.797645568847656e-05,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_184293",
+      "stored_u": 0.0019378662109375,
+      "new_u": 0.0019378662109375,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7221743",
+      "stored_u": 0.022977352142333984,
+      "new_u": 0.022977352142333984,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "MCAS_2004_8_36",
+      "stored_u": 0.060183048248291016,
+      "new_u": 0.060183048248291016,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_402062",
+      "stored_u": 1.430511474609375e-06,
+      "new_u": 1.430511474609375e-06,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7234430",
+      "stored_u": 0.11920791864395142,
+      "new_u": 0.11920791864395142,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7120698",
+      "stored_u": 2.86102294921875e-06,
+      "new_u": 2.86102294921875e-06,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7181965",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "NYSEDREGENTS_2016_4_13",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7133368",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7228288",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_SC_407691",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7043995",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "TIMSS_1995_8_I17",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "TIMSS_2003_8_pg27",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": true
+    },
+    {
+      "dataset": "mmlu_pro",
+      "id": "test:2967",
+      "stored_u": 9.608268737792969e-05,
+      "new_u": 9.608268737792969e-05,
+      "u_equal": true,
+      "probe_ids_equal": null
+    },
+    {
+      "dataset": "mmlu_pro",
+      "id": "test:3499",
+      "stored_u": 6.139278411865234e-06,
+      "new_u": 6.139278411865234e-06,
+      "u_equal": true,
+      "probe_ids_equal": null
+    },
+    {
+      "dataset": "mmlu_pro",
+      "id": "test:3001",
+      "stored_u": 0.0027356743812561035,
+      "new_u": 0.0027356743812561035,
+      "u_equal": true,
+      "probe_ids_equal": null
+    },
+    {
+      "dataset": "mmlu_pro",
+      "id": "test:3164",
+      "stored_u": 0.327598512172699,
+      "new_u": 0.327598512172699,
+      "u_equal": true,
+      "probe_ids_equal": null
+    },
+    {
+      "dataset": "mmlu_pro",
+      "id": "test:3080",
+      "stored_u": 0.48078083992004395,
+      "new_u": 0.48078083992004395,
+      "u_equal": true,
+      "probe_ids_equal": null
+    },
+    {
+      "dataset": "mmlu_pro",
+      "id": "test:3029",
+      "stored_u": 1.1920928955078125e-07,
+      "new_u": 1.1920928955078125e-07,
+      "u_equal": true,
+      "probe_ids_equal": null
+    },
+    {
+      "dataset": "mmlu_pro",
+      "id": "test:3118",
+      "stored_u": 0.37797027826309204,
+      "new_u": 0.37797027826309204,
+      "u_equal": true,
+      "probe_ids_equal": null
+    },
+    {
+      "dataset": "mmlu_pro",
+      "id": "test:3136",
+      "stored_u": 0.00026732683181762695,
+      "new_u": 0.00026732683181762695,
+      "u_equal": true,
+      "probe_ids_equal": null
+    },
+    {
+      "dataset": "mmlu_pro",
+      "id": "test:3284",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": null
+    },
+    {
+      "dataset": "mmlu_pro",
+      "id": "test:3394",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": null
+    },
+    {
+      "dataset": "mmlu_pro",
+      "id": "test:3078",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": null
+    },
+    {
+      "dataset": "mmlu_pro",
+      "id": "test:3433",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": null
+    },
+    {
+      "dataset": "mmlu_pro",
+      "id": "test:3162",
+      "stored_u": 0.0,
+      "new_u": 0.0,
+      "u_equal": true,
+      "probe_ids_equal": null
+    },
+    {
+      "dataset": "mmlu_pro",
+      "id": "test:3247",
+      "stored_u": 0.0031789541244506836,
+      "new_u": 0.0031789541244506836,
+      "u_equal": true,
+      "probe_ids_equal": null
+    },
+    {
+      "dataset": "mmlu_pro",
+      "id": "test:3027",
+      "stored_u": 0.011784613132476807,
+      "new_u": 0.011784613132476807,
+      "u_equal": true,
+      "probe_ids_equal": null
+    },
+    {
+      "dataset": "mmlu_pro",
+      "id": "test:3241",
+      "stored_u": 0.06015026569366455,
+      "new_u": 0.06015026569366455,
+      "u_equal": true,
+      "probe_ids_equal": null
+    }
+  ],
+  "sdpa_kernels_first_row": [
+    "void (anonymous namespace)::softmax_warp_forward<float, float, float, 2, true, false>(float*, float const*, int, int, int, bool const*, int, bool)",
+    "void pytorch_flash::flash_fwd_splitkv_combine_kernel<pytorch_flash::Flash_fwd_kernel_traits<128, 64, 128, 4, false, false, cutlass::bfloat16_t, pytorch_flash::Flash_kernel_traits<128, 64, 128, 4, cutlass::bfloat16_t> >, 4, 1, true>(pytorch_flash::Flash_fwd_params)",
+    "void pytorch_flash::flash_fwd_splitkv_kernel<pytorch_flash::Flash_fwd_kernel_traits<128, 64, 128, 4, false, false, cutlass::bfloat16_t, pytorch_flash::Flash_kernel_traits<128, 64, 128, 4, cutlass::bfloat16_t> >, true, false, false, false, true, true, false>(pytorch_flash::Flash_fwd_params)"
+  ]
+}

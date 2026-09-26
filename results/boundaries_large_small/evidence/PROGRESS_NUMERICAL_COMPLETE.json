@@ -1,0 +1,20 @@
+{
+  "phase": "NUMERICAL_COMPLETE",
+  "job_id": "run018",
+  "CPU_charged": 473.45149200000003,
+  "CPU_remaining": 426.54850799999997,
+  "wall_remaining": 1164.7109982967377,
+  "prefill_progress": {
+    "split": "dev",
+    "split_success": 299,
+    "pair": "small",
+    "dataset": "arc",
+    "total_success": 7044,
+    "attempts": 7044,
+    "remaining_attempt_budget": 0,
+    "success_ids_file": "records/probe_records.jsonl",
+    "last_id": "Mercury_7082145",
+    "utc": "2026-09-14T17:14:17.133527+00:00"
+  },
+  "utc": "2026-09-14T17:14:46.289141+00:00"
+}

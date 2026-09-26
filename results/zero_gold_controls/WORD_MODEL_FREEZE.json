@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-14T07:03:17.230798+00:00",
+  "files": {
+    "models/word_tfidf.joblib": "98467c1283b3061485515b4f906544b5302c66556be17fff9e5f097e5bee63df",
+    "models/WordD.joblib": "8dfb9c503be1931c82dc5487b17f43fb466c06ddd4521fa95e6ec5fdbde8eb4a",
+    "models/WordD_receipt.json": "47dcc4781ab0eba015bbe050039c7bac2fa7465d11c166faa5ba39087d95d30b",
+    "inputs/word_fit_id_text_d.jsonl": "7639118f33fdfecb0833c7f5e8dc73c8eb4c787aff8efdd8370170315aa80479"
+  },
+  "cal_d_read": false,
+  "gold_read": false
+}

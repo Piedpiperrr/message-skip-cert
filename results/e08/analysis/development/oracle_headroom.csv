@@ -1,0 +1,3 @@
+pair,N,correct_R,correct_Text,correct_C2C,accuracy_R,accuracy_Text,accuracy_C2C,best_fixed_action,best_fixed_correct,best_fixed_accuracy,oracle_correct,oracle_accuracy,oracle_gain_over_best_fixed,oracle_gain_over_R,unit
+small,2641,403,516,462,0.15259371450208253,0.19538053767512306,0.17493373722074973,T,516,0.19538053767512306,822,0.3112457402499053,0.11586520257478228,0.1586520257478228,development group representatives
+medium,2641,813,913,530,0.3078379401741764,0.345702385460053,0.20068156001514578,T,913,0.345702385460053,1122,0.424839076107535,0.07913669064748201,0.11700113593335858,development group representatives

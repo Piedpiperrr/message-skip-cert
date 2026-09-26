@@ -1,0 +1,30 @@
+{
+  "rank": 1,
+  "helper_pair": "medium",
+  "utc": "2026-09-20T20:02:22Z",
+  "tasks_done": [
+    {
+      "file": "medium_mmlu_pro_fit_plain_rank1.jsonl",
+      "n": 3000,
+      "requested": 3000,
+      "seconds": 63.83693053992465
+    },
+    {
+      "file": "medium_mmlu_pro_cal_plain_rank1.jsonl",
+      "n": 6000,
+      "requested": 6000,
+      "seconds": 127.33648233721033
+    },
+    {
+      "file": "medium_mmlu_pro_dev_plain_rank1.jsonl",
+      "n": 2641,
+      "requested": 2641,
+      "seconds": 55.84061205899343
+    }
+  ],
+  "tasks_skipped": [],
+  "job_id": "run011",
+  "gold_read": false,
+  "generation": false,
+  "complete": true
+}

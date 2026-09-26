@@ -1,0 +1,110 @@
+{
+ "3d_X1_reuse_small_receiver_records": {
+  "receiver_local_path": "$DATA_DIR/c2c_reproduction_assets/models/Qwen--Qwen3-0.6B",
+  "receiver_revision_from_download_metadata": [
+   "c1899de289a04d12100db370d81485cdf75e47ca"
+  ],
+  "p210_small_receiver": {
+   "path": "$DATA_DIR/c2c_reproduction_assets/models/Qwen--Qwen3-0.6B",
+   "revision": "c1899de289a04d12100db370d81485cdf75e47ca"
+  },
+  "boundaries_small_model": {
+   "path": "$DATA_DIR/c2c_reproduction_assets/models/Qwen--Qwen3-0.6B",
+   "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+   "chat_template_sha256_match": true
+  },
+  "probemax_records_recomputed": {
+   "rows": 5626,
+   "rendered_sha_match": 5626,
+   "probe_ids_sha_match": 5626,
+   "generation_prefix_sha_match": 5626,
+   "bnd_prompt_equals_runtime_prompt": 5626
+  },
+  "R_outputs_input_token_counts": {
+   "rows": 5626,
+   "receiver_input_tokens_match": 5626,
+   "sources": [
+    "P2_5_20260910T072811Z/results/dev_cases.jsonl",
+    "P2_5_20260910T072811Z/results/train_cases.jsonl",
+    "P2_9_20260911T045010Z/results/small/train_cases.jsonl",
+    "P2_9_20260911T045010Z/results/small/validation_cases.jsonl"
+   ]
+  }
+ },
+ "3b_helper_input_examples": [
+  {
+   "dataset": "obqa",
+   "id": "10",
+   "saved_record": "P2_6_20260910T164138Z/results/train_cases.jsonl:2",
+   "helper_input_ids_sha256": "c67149bef7ec5af02194455f15c925d9b83faa70d32e7a9048e61493b32d6b0b",
+   "X2_equals_large_bytes": true,
+   "helper_input_tokens_rebuilt": 88,
+   "helper_input_tokens_saved": 88,
+   "saved_message_decodes_from_saved_ids": true
+  },
+  {
+   "dataset": "obqa",
+   "id": "10-100",
+   "saved_record": "P2_6_20260910T164138Z/results/train_cases.jsonl:4",
+   "helper_input_ids_sha256": "1a15fefc6e78bf74fe8b0f1ecac4808f3ab8b38701b29e7b7216af1acff72938",
+   "X2_equals_large_bytes": true,
+   "helper_input_tokens_rebuilt": 86,
+   "helper_input_tokens_saved": 86,
+   "saved_message_decodes_from_saved_ids": true
+  },
+  {
+   "dataset": "arc",
+   "id": "Mercury_SC_415702",
+   "saved_record": "P2_9_20260911T045010Z/results/large/train_cases.jsonl:2",
+   "helper_input_ids_sha256": "796e08a62ad702701839aeac768075f61320cfe61ce062ae2a62dc003fe3fcff",
+   "X2_equals_large_bytes": true,
+   "helper_input_tokens_rebuilt": 103,
+   "helper_input_tokens_saved": 103,
+   "saved_message_decodes_from_saved_ids": true
+  }
+ ],
+ "3a_OLMo_receiver": {
+  "chat_template_present": true,
+  "enable_thinking_kwarg_ignored": true,
+  "rendered_example": "<|endoftext|><|user|>\nAccurately answer the following question:\n\nSoil is produced naturally when, over a period of many years\n\nChoices:\nA. stones are rock solid\nB. stones are blown up\nC. stones are vaporized by storms\nD. stones are worn down\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is\n<|assistant|>\n",
+  "bos_token": "<|endoftext|>",
+  "add_bos_token": null,
+  "tokenizer_of_rendered_equals_native_ids": true,
+  "extra_leading_tokens_when_retokenized": 0,
+  "three_message_text_path_renders": true,
+  "qwen_role_markers_present": false,
+  "label_sets_nonempty_disjoint": true,
+  "label_token_counts": {
+   "A": 3,
+   "B": 3,
+   "C": 3,
+   "D": 3,
+   "E": 3
+  },
+  "prefix_roundtrip": true,
+  "generation_config": {
+   "eos_token_id": 100257,
+   "pad_token_id": 100277,
+   "bos_token_id": null,
+   "do_sample": null,
+   "temperature": null
+  },
+  "tokenizer_pad_token": "<|pad|>"
+ },
+ "3c_X1_fuser_config": {
+  "model.base_model": "Qwen/Qwen3-0.6B",
+  "model.teacher_model": "meta-llama/Llama-3.2-1B-Instruct",
+  "model.include_response": false,
+  "model.is_do_alignment": true,
+  "model.alignment_strategy": "longest",
+  "model.projector.type": "C2CProjector",
+  "model.projector.params.hidden_dim": 1024,
+  "model.projector.params.intermediate_dim": 1024,
+  "model.projector.params.num_layers": 3,
+  "model.projector.params.dropout": 0.1,
+  "model.projector.params.initial_temperature": 1.0,
+  "model.projector.params.final_temperature": 0.001,
+  "model.projector.params.anneal_steps": 1929,
+  "model.mapping": "last_aligned"
+ }
+}

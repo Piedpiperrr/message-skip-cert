@@ -1,0 +1,18 @@
+{
+  "utc": "2026-09-14T07:01:57.478658+00:00",
+  "files": {
+    "splits/cal_ids.json": "8b33a4d168131c5a0095c5eabcdea2f2b3bb272dfae8a41ab2a7e0e05d5ebaed",
+    "splits/population_metadata.json": "c45089a0e45d297f966582a301aa2d3a3bf6effad605782a1c34a9bc527daa14",
+    "splits/group_members.csv": "19773ac3d17ddb310e9039f5e7dd838f614b2719d9dc40905c41494828cdc0a2",
+    "splits/fit_ids.json": "1559bc9668d88a986df0967b96fdf14c995f02f622b126f396819b69b58c4028",
+    "splits/dev_ids.json": "80d1bbdd9148df3037401881533a2137b0d4ce9ee90a8ebb424fb413440bfbab",
+    "inputs/candidate_fit.jsonl": "07bc38c0621ddf18a11c587155c70fb2a13d5d65dd005b0d2054ee2804397dd8",
+    "inputs/train_queries.jsonl": "56a89982c5fbf8fc08edc322d08a11eaba5ef05ac3b0dfeb662ddb96477ea767",
+    "inputs/candidate_cal.jsonl": "f05b49a64ce52358a4255861b57eb65fef85778d3c1f5a5d13df808bd374ddc9",
+    "inputs/TRAIN_FEATURE_INDEX.csv": "6f72f6b681971ffa00c6e1073557dce54303d0028ea98118962cdbc4fffaeea4",
+    "inputs/DEV_FIXED_REQUEST_INDEX.csv": "58cfd5460c4d456eff45faf975f43c142c131959864b4304144e6e38316155d3",
+    "inputs/dev_queries.jsonl": "23c6a8039b63d176a63c820114a20def2ce6a785d8b8cd86a3b510ed68928094"
+  },
+  "no_new_split": true,
+  "no_label_preview": true
+}

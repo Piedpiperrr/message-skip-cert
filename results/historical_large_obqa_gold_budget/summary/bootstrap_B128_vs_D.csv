@@ -1,0 +1,16 @@
+name,B,repeat,reference,metric,difference,CI95_descriptive_low,CI95_descriptive_high,bootstrap_seed,replicates,uncertainty_scope
+R128_r0,128,0,D,accuracy,0.0,0.0,0.0,0,2000,questions conditional on fixed labels/model/threshold; not label-subset uncertainty
+R128_r0,128,0,D,mean_cost_ms,-32.170136287024285,-45.47814478604575,-19.208462830438275,0,2000,questions conditional on fixed labels/model/threshold; not label-subset uncertainty
+R128_r0,128,0,D,U,0.0012257040319462106,0.000731855473930753,0.0017327481901956861,0,2000,questions conditional on fixed labels/model/threshold; not label-subset uncertainty
+R128_r1,128,1,D,accuracy,0.0026954177897574125,-0.004043126684636119,0.009433962264150943,0,2000,questions conditional on fixed labels/model/threshold; not label-subset uncertainty
+R128_r1,128,1,D,mean_cost_ms,178.59774053534736,153.13714363141264,203.91256445024192,0,2000,questions conditional on fixed labels/model/threshold; not label-subset uncertainty
+R128_r1,128,1,D,U,-0.004109277369676964,-0.010457093909678859,0.0026928349598408815,0,2000,questions conditional on fixed labels/model/threshold; not label-subset uncertainty
+R128_r2,128,2,D,accuracy,0.0013477088948787063,0.0,0.004043126684636119,0,2000,questions conditional on fixed labels/model/threshold; not label-subset uncertainty
+R128_r2,128,2,D,mean_cost_ms,49.77033685345916,34.369636334287335,66.98810358946231,0,2000,questions conditional on fixed labels/model/threshold; not label-subset uncertainty
+R128_r2,128,2,D,U,-0.0005485747269352198,-0.00234564005090601,0.0025530992213835643,0,2000,questions conditional on fixed labels/model/threshold; not label-subset uncertainty
+R128_r3,128,3,D,accuracy,-0.004043126684636119,-0.01078167115902965,0.0013477088948787063,0,2000,questions conditional on fixed labels/model/threshold; not label-subset uncertainty
+R128_r3,128,3,D,mean_cost_ms,5.762409963435091,-16.863971635352296,29.029568310627944,0,2000,questions conditional on fixed labels/model/threshold; not label-subset uncertainty
+R128_r3,128,3,D,U,-0.004262678416182817,-0.010478082877704714,0.0010781464798769336,0,2000,questions conditional on fixed labels/model/threshold; not label-subset uncertainty
+R128_r4,128,4,D,accuracy,0.0,-0.004043126684636119,0.004043126684636119,0,2000,questions conditional on fixed labels/model/threshold; not label-subset uncertainty
+R128_r4,128,4,D,mean_cost_ms,13.182677201380377,-3.52742825087881,30.07247382165802,0,2000,questions conditional on fixed labels/model/threshold; not label-subset uncertainty
+R128_r4,128,4,D,U,-0.0005022689507254165,-0.004299005750068301,0.003405003508509183,0,2000,questions conditional on fixed labels/model/threshold; not label-subset uncertainty

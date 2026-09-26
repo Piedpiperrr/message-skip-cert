@@ -1,0 +1,16 @@
+{"event": "START", "utc": "2026-09-19T23:29:10.257790+00:00", "key": "obqa|9-782|fixed_TF", "attempt": 1, "arm": "fixed_TF", "panel_ordinal": 0, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:29:11.464987+00:00", "key": "obqa|9-782|fixed_TF", "attempt": 1}
+{"event": "START", "utc": "2026-09-19T23:29:11.468986+00:00", "key": "obqa|9-782|policy_TF", "attempt": 2, "arm": "policy_TF", "panel_ordinal": 0, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:29:12.184732+00:00", "key": "obqa|9-782|policy_TF", "attempt": 2}
+{"event": "START", "utc": "2026-09-19T23:29:12.187947+00:00", "key": "obqa|14-290|policy_TF", "attempt": 3, "arm": "policy_TF", "panel_ordinal": 1, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:29:12.428508+00:00", "key": "obqa|14-290|policy_TF", "attempt": 3}
+{"event": "START", "utc": "2026-09-19T23:29:12.431194+00:00", "key": "obqa|14-290|fixed_TF", "attempt": 4, "arm": "fixed_TF", "panel_ordinal": 1, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:29:13.224964+00:00", "key": "obqa|14-290|fixed_TF", "attempt": 4}
+{"event": "START", "utc": "2026-09-19T23:29:13.228728+00:00", "key": "obqa|13-823|fixed_TF", "attempt": 5, "arm": "fixed_TF", "panel_ordinal": 2, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:29:13.965239+00:00", "key": "obqa|13-823|fixed_TF", "attempt": 5}
+{"event": "START", "utc": "2026-09-19T23:29:13.968393+00:00", "key": "obqa|13-823|policy_TF", "attempt": 6, "arm": "policy_TF", "panel_ordinal": 2, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:29:14.200329+00:00", "key": "obqa|13-823|policy_TF", "attempt": 6}
+{"event": "START", "utc": "2026-09-19T23:29:14.203478+00:00", "key": "obqa|12-745|policy_TF", "attempt": 7, "arm": "policy_TF", "panel_ordinal": 3, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:29:14.436606+00:00", "key": "obqa|12-745|policy_TF", "attempt": 7}
+{"event": "START", "utc": "2026-09-19T23:29:14.439391+00:00", "key": "obqa|12-745|fixed_TF", "attempt": 8, "arm": "fixed_TF", "panel_ordinal": 3, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:29:15.289712+00:00", "key": "obqa|12-745|fixed_TF", "attempt": 8}

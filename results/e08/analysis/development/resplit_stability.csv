@@ -1,0 +1,5 @@
+setting,original_outcome,seeds,certification_rate,match_rate,stable,median_q,IQR_q,median_dev_coverage_pct,median_dev_changed,median_dev_omitted,n_deploying,seed0_reproduces_frozen_split
+small/MMLU-Pro/Text,fallback q=0,200,0.0,1.0,stable,,,,,,0,True
+small/MMLU-Pro/C2C,fallback q=0,200,0.0,1.0,stable,,,,,,0,True
+medium/MMLU-Pro/Text,fallback q=0,200,0.0,1.0,stable,,,,,,0,True
+medium/MMLU-Pro/C2C,fallback q=0,200,0.0,1.0,stable,,,,,,0,True

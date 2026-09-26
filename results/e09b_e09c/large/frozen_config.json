@@ -1,0 +1,600 @@
+{
+  "task": "P2_FROZEN_POLICY_E2E_VALIDATION",
+  "stage": "P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z",
+  "parent": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z",
+  "native_root": "$DATA_DIR/P2_10_20260911T122423Z",
+  "native": {
+    "models": {
+      "helper": {
+        "repo_id": "Qwen/Qwen2.5-7B-Instruct",
+        "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+        "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct",
+        "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+        "config": {
+          "vocab_size": 152064,
+          "max_position_embeddings": 32768,
+          "hidden_size": 3584,
+          "intermediate_size": 18944,
+          "num_hidden_layers": 28,
+          "num_attention_heads": 28,
+          "use_sliding_window": false,
+          "sliding_window": 131072,
+          "max_window_layers": 28,
+          "num_key_value_heads": 4,
+          "hidden_act": "silu",
+          "initializer_range": 0.02,
+          "rms_norm_eps": 1e-06,
+          "use_cache": true,
+          "rope_theta": 1000000.0,
+          "rope_scaling": null,
+          "attention_dropout": 0.0,
+          "return_dict": true,
+          "output_hidden_states": false,
+          "output_attentions": false,
+          "torchscript": false,
+          "torch_dtype": "bfloat16",
+          "use_bfloat16": false,
+          "tf_legacy_loss": false,
+          "pruned_heads": {},
+          "tie_word_embeddings": false,
+          "chunk_size_feed_forward": 0,
+          "is_encoder_decoder": false,
+          "is_decoder": false,
+          "cross_attention_hidden_size": null,
+          "add_cross_attention": false,
+          "tie_encoder_decoder": false,
+          "max_length": 20,
+          "min_length": 0,
+          "do_sample": false,
+          "early_stopping": false,
+          "num_beams": 1,
+          "num_beam_groups": 1,
+          "diversity_penalty": 0.0,
+          "temperature": 1.0,
+          "top_k": 50,
+          "top_p": 1.0,
+          "typical_p": 1.0,
+          "repetition_penalty": 1.0,
+          "length_penalty": 1.0,
+          "no_repeat_ngram_size": 0,
+          "encoder_no_repeat_ngram_size": 0,
+          "bad_words_ids": null,
+          "num_return_sequences": 1,
+          "output_scores": false,
+          "return_dict_in_generate": false,
+          "forced_bos_token_id": null,
+          "forced_eos_token_id": null,
+          "remove_invalid_values": false,
+          "exponential_decay_length_penalty": null,
+          "suppress_tokens": null,
+          "begin_suppress_tokens": null,
+          "architectures": [
+            "Qwen2ForCausalLM"
+          ],
+          "finetuning_task": null,
+          "id2label": {
+            "0": "LABEL_0",
+            "1": "LABEL_1"
+          },
+          "label2id": {
+            "LABEL_0": 0,
+            "LABEL_1": 1
+          },
+          "tokenizer_class": null,
+          "prefix": null,
+          "bos_token_id": 151643,
+          "pad_token_id": null,
+          "eos_token_id": 151645,
+          "sep_token_id": null,
+          "decoder_start_token_id": null,
+          "task_specific_params": null,
+          "problem_type": null,
+          "_name_or_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct",
+          "transformers_version": "4.52.4",
+          "model_type": "qwen2"
+        }
+      },
+      "receiver": {
+        "repo_id": "Qwen/Qwen3-8B",
+        "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+        "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+        "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+        "config": {
+          "vocab_size": 151936,
+          "max_position_embeddings": 40960,
+          "hidden_size": 4096,
+          "intermediate_size": 12288,
+          "num_hidden_layers": 36,
+          "num_attention_heads": 32,
+          "use_sliding_window": false,
+          "sliding_window": null,
+          "max_window_layers": 36,
+          "num_key_value_heads": 8,
+          "head_dim": 128,
+          "hidden_act": "silu",
+          "initializer_range": 0.02,
+          "rms_norm_eps": 1e-06,
+          "use_cache": true,
+          "rope_theta": 1000000,
+          "rope_scaling": null,
+          "attention_bias": false,
+          "attention_dropout": 0.0,
+          "return_dict": true,
+          "output_hidden_states": false,
+          "output_attentions": false,
+          "torchscript": false,
+          "torch_dtype": "bfloat16",
+          "use_bfloat16": false,
+          "tf_legacy_loss": false,
+          "pruned_heads": {},
+          "tie_word_embeddings": false,
+          "chunk_size_feed_forward": 0,
+          "is_encoder_decoder": false,
+          "is_decoder": false,
+          "cross_attention_hidden_size": null,
+          "add_cross_attention": false,
+          "tie_encoder_decoder": false,
+          "max_length": 20,
+          "min_length": 0,
+          "do_sample": false,
+          "early_stopping": false,
+          "num_beams": 1,
+          "num_beam_groups": 1,
+          "diversity_penalty": 0.0,
+          "temperature": 1.0,
+          "top_k": 50,
+          "top_p": 1.0,
+          "typical_p": 1.0,
+          "repetition_penalty": 1.0,
+          "length_penalty": 1.0,
+          "no_repeat_ngram_size": 0,
+          "encoder_no_repeat_ngram_size": 0,
+          "bad_words_ids": null,
+          "num_return_sequences": 1,
+          "output_scores": false,
+          "return_dict_in_generate": false,
+          "forced_bos_token_id": null,
+          "forced_eos_token_id": null,
+          "remove_invalid_values": false,
+          "exponential_decay_length_penalty": null,
+          "suppress_tokens": null,
+          "begin_suppress_tokens": null,
+          "architectures": [
+            "Qwen3ForCausalLM"
+          ],
+          "finetuning_task": null,
+          "id2label": {
+            "0": "LABEL_0",
+            "1": "LABEL_1"
+          },
+          "label2id": {
+            "LABEL_0": 0,
+            "LABEL_1": 1
+          },
+          "tokenizer_class": null,
+          "prefix": null,
+          "bos_token_id": 151643,
+          "pad_token_id": null,
+          "eos_token_id": 151645,
+          "sep_token_id": null,
+          "decoder_start_token_id": null,
+          "task_specific_params": null,
+          "problem_type": null,
+          "_name_or_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+          "transformers_version": "4.52.4",
+          "model_type": "qwen3"
+        }
+      }
+    },
+    "fuser": {
+      "repo_id": "nics-efc/C2C_Fuser",
+      "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d",
+      "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final",
+      "projector_config": {
+        "0": {
+          "1": {
+            "0": [
+              [
+                0,
+                0
+              ]
+            ],
+            "1": [
+              [
+                0,
+                1
+              ]
+            ],
+            "2": [
+              [
+                0,
+                2
+              ]
+            ],
+            "3": [
+              [
+                0,
+                3
+              ]
+            ],
+            "4": [
+              [
+                0,
+                4
+              ]
+            ],
+            "5": [
+              [
+                0,
+                5
+              ]
+            ],
+            "6": [
+              [
+                0,
+                6
+              ]
+            ],
+            "7": [
+              [
+                0,
+                7
+              ]
+            ],
+            "8": [
+              [
+                0,
+                8
+              ]
+            ],
+            "9": [
+              [
+                1,
+                9
+              ]
+            ],
+            "10": [
+              [
+                2,
+                10
+              ]
+            ],
+            "11": [
+              [
+                3,
+                11
+              ]
+            ],
+            "12": [
+              [
+                4,
+                12
+              ]
+            ],
+            "13": [
+              [
+                5,
+                13
+              ]
+            ],
+            "14": [
+              [
+                6,
+                14
+              ]
+            ],
+            "15": [
+              [
+                7,
+                15
+              ]
+            ],
+            "16": [
+              [
+                8,
+                16
+              ]
+            ],
+            "17": [
+              [
+                9,
+                17
+              ]
+            ],
+            "18": [
+              [
+                10,
+                18
+              ]
+            ],
+            "19": [
+              [
+                11,
+                19
+              ]
+            ],
+            "20": [
+              [
+                12,
+                20
+              ]
+            ],
+            "21": [
+              [
+                13,
+                21
+              ]
+            ],
+            "22": [
+              [
+                14,
+                22
+              ]
+            ],
+            "23": [
+              [
+                15,
+                23
+              ]
+            ],
+            "24": [
+              [
+                16,
+                24
+              ]
+            ],
+            "25": [
+              [
+                17,
+                25
+              ]
+            ],
+            "26": [
+              [
+                18,
+                26
+              ]
+            ],
+            "27": [
+              [
+                19,
+                27
+              ]
+            ],
+            "28": [
+              [
+                20,
+                28
+              ]
+            ],
+            "29": [
+              [
+                21,
+                29
+              ]
+            ],
+            "30": [
+              [
+                22,
+                30
+              ]
+            ],
+            "31": [
+              [
+                23,
+                31
+              ]
+            ],
+            "32": [
+              [
+                24,
+                32
+              ]
+            ],
+            "33": [
+              [
+                25,
+                33
+              ]
+            ],
+            "34": [
+              [
+                26,
+                34
+              ]
+            ],
+            "35": [
+              [
+                27,
+                35
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "receiver_generation_config": {
+      "max_length": 20,
+      "max_new_tokens": 64,
+      "min_length": 0,
+      "min_new_tokens": null,
+      "early_stopping": false,
+      "max_time": null,
+      "stop_strings": null,
+      "do_sample": false,
+      "num_beams": 1,
+      "num_beam_groups": 1,
+      "penalty_alpha": null,
+      "dola_layers": null,
+      "use_cache": true,
+      "cache_implementation": null,
+      "cache_config": null,
+      "return_legacy_cache": null,
+      "prefill_chunk_size": null,
+      "temperature": null,
+      "top_k": null,
+      "top_p": null,
+      "min_p": null,
+      "typical_p": 1.0,
+      "epsilon_cutoff": 0.0,
+      "eta_cutoff": 0.0,
+      "diversity_penalty": 0.0,
+      "repetition_penalty": null,
+      "encoder_repetition_penalty": 1.0,
+      "length_penalty": 1.0,
+      "no_repeat_ngram_size": 0,
+      "bad_words_ids": null,
+      "force_words_ids": null,
+      "renormalize_logits": false,
+      "constraints": null,
+      "forced_bos_token_id": null,
+      "forced_eos_token_id": null,
+      "remove_invalid_values": false,
+      "exponential_decay_length_penalty": null,
+      "suppress_tokens": null,
+      "begin_suppress_tokens": null,
+      "forced_decoder_ids": null,
+      "sequence_bias": null,
+      "token_healing": false,
+      "guidance_scale": null,
+      "low_memory": null,
+      "watermarking_config": null,
+      "num_return_sequences": 1,
+      "output_attentions": false,
+      "output_hidden_states": false,
+      "output_scores": false,
+      "output_logits": null,
+      "return_dict_in_generate": false,
+      "pad_token_id": 151643,
+      "bos_token_id": 151643,
+      "eos_token_id": [
+        151645,
+        151643
+      ],
+      "encoder_no_repeat_ngram_size": 0,
+      "decoder_start_token_id": null,
+      "is_assistant": false,
+      "num_assistant_tokens": 20,
+      "num_assistant_tokens_schedule": "constant",
+      "assistant_confidence_threshold": 0.4,
+      "prompt_lookup_num_tokens": null,
+      "max_matching_ngram_size": null,
+      "assistant_early_exit": null,
+      "assistant_lookbehind": 10,
+      "target_lookbehind": 10,
+      "disable_compile": false,
+      "generation_kwargs": {},
+      "_from_model_config": false,
+      "transformers_version": "4.52.4"
+    },
+    "dtype": "bfloat16",
+    "attention": "sdpa",
+    "tf32": false,
+    "thinking": false,
+    "generation_seed": 0,
+    "helper_text_max_new_tokens": 256,
+    "receiver_max_new_tokens": 64,
+    "R_T_C_calls": "P2-10 runtime.Runner.request using same native bundles and arc_runtime_adapter formatting",
+    "C_helper_tokenizer": "receiver tokenizer, exactly as P2-10"
+  },
+  "parser_path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/scoring_v2.py",
+  "parser_sha256": "d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9",
+  "strata": [
+    {
+      "dataset": "obqa",
+      "reference": "T",
+      "q": 0.8,
+      "threshold": 0.001170039176940918,
+      "N": 128
+    },
+    {
+      "dataset": "obqa",
+      "reference": "C",
+      "q": 0.8,
+      "threshold": 0.001170039176940918,
+      "N": 128
+    },
+    {
+      "dataset": "arc",
+      "reference": "T",
+      "q": 0.95,
+      "threshold": 0.01800704002380371,
+      "N": 128
+    },
+    {
+      "dataset": "arc",
+      "reference": "C",
+      "q": 0.9,
+      "threshold": 0.0007095932960510254,
+      "N": 128
+    }
+  ],
+  "prefix": "The correct answer is",
+  "probe_protocol": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/protocol/large/PROBE_PROTOCOL_FREEZE.json",
+  "score": "exact frozen FP32 ProbeMax; u<=threshold; all ties; no KV/prefill reuse",
+  "label_sets": "protocol/label_token_sets.json",
+  "topology": {
+    "GPU_count": 2,
+    "helper": "cuda:0",
+    "receiver_fuser": "cuda:1",
+    "single_node": true,
+    "one_residency": true
+  },
+  "order": {
+    "tasks": [
+      "obqa",
+      "arc"
+    ],
+    "paths": [
+      "policy_T",
+      "reference_T",
+      "policy_C",
+      "reference_C"
+    ],
+    "rotation": "left by canonical panel ordinal modulo 4; original panel order"
+  },
+  "counts": {
+    "complete_action_attempt_cap": 1024,
+    "online_policy_probe_cap": 512,
+    "fixed_reference_requests": 512,
+    "warmup": 0,
+    "retry": 0,
+    "new_fits": 0,
+    "new_calibration": 0,
+    "new_gold": 0,
+    "old_probe_reacquisition": 0
+  },
+  "timing": "outer synchronized wall: query fields, tokenization/prefix/transfer/backbone/last projection/FP32 score, selector, complete native action, decode, V2 parse, hook cleanup; I/O/diagnostics/gold excluded; startup separate",
+  "accuracy": "reuse existing V2 gold after all replay outputs; same parser, INVALID distinct from execution failure",
+  "bootstrap": {
+    "seed": 0,
+    "replicates": 2000,
+    "unit": "independent panel question group",
+    "shared_indices": "Text/C2C within each task",
+    "CI": "paired percentile 95%; descriptive exposed panel only"
+  },
+  "savings_confirmation": "positive paired mean AND positive lower descriptive 95% interval; no population/FWER/equivalence claim",
+  "lambda": 0.01,
+  "c_ref": {
+    "obqa": 252.35370575390624,
+    "arc": 266.9407253203125
+  },
+  "resources": {
+    "account": "project",
+    "queue": "REDACTED",
+    "select": 2,
+    "GPU_count": 2,
+    "wall_seconds": 1800,
+    "max_GPU_allocation_hours": 1.0,
+    "CPU_cap_seconds": 1500,
+    "preparation_reporting_reserve": 180,
+    "threads": 1,
+    "max_submissions": 1,
+    "python": "$DATA_DIR/software/envs/c2c_official/bin/python"
+  },
+  "failures": "zero retries; stop on identity/runtime failure, preserve completed keys and budgets, PARTIAL/BLOCKED; no second job",
+  "small": "all four fixed-reference fallbacks retained; no replay",
+  "ARC_test_read": false,
+  "D": "learned control only",
+  "ProbeMax": "ordinary confidence baseline"
+}

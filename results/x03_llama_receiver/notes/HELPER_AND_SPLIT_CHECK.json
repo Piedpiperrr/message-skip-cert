@@ -1,0 +1,86 @@
+{
+  "utc": "2026-09-21T06:11:09.240726+00:00",
+  "validate_rows": "c6b1f84aacd5683e258e8c92a89ae200471dc991a324039978931c322f2a62ae",
+  "smoke_rows": "c6b1f84aacd5683e258e8c92a89ae200471dc991a324039978931c322f2a62ae",
+  "ids": [
+    "14-1371",
+    "14-97",
+    "11-514",
+    "10-1178",
+    "10-655",
+    "1000",
+    "14-356",
+    "10-743",
+    "9-666",
+    "12-910",
+    "1045",
+    "12-1212",
+    "14-1364",
+    "14-1141",
+    "12-807",
+    "14-1412"
+  ],
+  "populations": {
+    "obqa_fit": {
+      "n": 2100,
+      "representatives": 2100,
+      "ids_equal_split_file": true,
+      "representatives_equal": true,
+      "helper_message_equals_saved_record": 2100,
+      "helper_message_sha256_ok": 2100,
+      "file_sha256": "6ad1b27f49e444d0102646c042d8bf20353cedace34fd44c46ae26830afcafd0",
+      "gold_field_present": false
+    },
+    "obqa_cal": {
+      "n": 1366,
+      "representatives": 1366,
+      "ids_equal_split_file": true,
+      "representatives_equal": true,
+      "helper_message_equals_saved_record": 1366,
+      "helper_message_sha256_ok": 1366,
+      "file_sha256": "23f6356348737b9f83ca87826ed39578f10dd0fe9b6c4a9b3b9b8667f4574d60",
+      "gold_field_present": false
+    },
+    "obqa_dev": {
+      "n": 742,
+      "representatives": 742,
+      "ids_equal_split_file": true,
+      "representatives_equal": true,
+      "helper_message_equals_saved_record": 742,
+      "helper_message_sha256_ok": 742,
+      "file_sha256": "38ab089008f979061c014637f725ce4e6a42fbddec6198990cc4950e4eea21c6",
+      "gold_field_present": false
+    },
+    "arc_fit": {
+      "n": 671,
+      "representatives": 670,
+      "ids_equal_split_file": true,
+      "representatives_equal": true,
+      "helper_message_equals_saved_record": 671,
+      "helper_message_sha256_ok": 671,
+      "file_sha256": "0caf16b66f502a079c9ce9770657d984448bcb25578424037bb684593b3a1a3f",
+      "gold_field_present": false
+    },
+    "arc_cal": {
+      "n": 448,
+      "representatives": 448,
+      "ids_equal_split_file": true,
+      "representatives_equal": true,
+      "helper_message_equals_saved_record": 448,
+      "helper_message_sha256_ok": 448,
+      "file_sha256": "039b23dde7db04f36c3aee0996316831b8c358eb1e626616aeca88333efb8bc5",
+      "gold_field_present": false
+    },
+    "arc_dev": {
+      "n": 299,
+      "representatives": 299,
+      "ids_equal_split_file": true,
+      "representatives_equal": true,
+      "helper_message_equals_saved_record": 299,
+      "helper_message_sha256_ok": 299,
+      "file_sha256": "97d8449a4fc42e1a7fe12456ae4d783eacc4c62804a3c3f1b8cc3276404afdba",
+      "gold_field_present": false
+    }
+  },
+  "all_ok": true
+}

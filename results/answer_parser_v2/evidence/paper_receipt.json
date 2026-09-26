@@ -1,0 +1,29 @@
+{
+  "status": "SOURCE_AND_SYNTAX_CHECKED",
+  "files": [
+    {
+      "path": "paper/01_evaluation_protocol.tex",
+      "sha256": "c1137f17d20807d8c23ce5d5fe7e7f4a2b1d8ee83d8f0e733a7594eb824477f4"
+    },
+    {
+      "path": "paper/02_complementarity.tex",
+      "sha256": "a25ab178003e0ba0d37933d4ca2f43bf633c0c5fc45c634193358b3f61b66b9b"
+    },
+    {
+      "path": "paper/03_flip_labels.tex",
+      "sha256": "eb9b3218158950c780663748b04bafb6bae36571ab94f162c02e60720b20dbe4"
+    },
+    {
+      "path": "paper/04_frozen_routing.tex",
+      "sha256": "f11dcc1ca69ad90a864f21a0278b085fc5b1c762eacc5cfcab78d9c9cea89340"
+    },
+    {
+      "path": "paper/README_ZH.md",
+      "sha256": "3aa55842fee2c664307670cdeb5f207fe6612529d69204b534be65ec2ce5df57"
+    }
+  ],
+  "tables_generated_from_current_CSV": true,
+  "tex_compiled": false,
+  "limitation": "pdflatex unavailable; layout reviewed when inserted into manuscript template",
+  "existing_manuscript_registered_in_P2_STATE": false
+}

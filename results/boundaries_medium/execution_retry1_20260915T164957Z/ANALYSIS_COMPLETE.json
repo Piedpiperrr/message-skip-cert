@@ -1,0 +1,12 @@
+{
+  "utc": "2026-09-15T19:33:42.567197+00:00",
+  "MEDIUM_DEPLOY_COUNT": 2,
+  "nontrivial_deployment_count": 2,
+  "strata_completed": 4,
+  "action_success_count": 16878,
+  "probe_success_count": 5626,
+  "accuracy_rows": 2082,
+  "all_four_results_retained": true,
+  "Stage2_started": false,
+  "new_E2E_or_component_cost_measurements": 0
+}

@@ -1,0 +1,19 @@
+{
+  "preview_ids": [
+    "14-1371",
+    "14-97"
+  ],
+  "membership": {
+    "14-1371": [
+      "R512_r0",
+      "R512_r2"
+    ],
+    "14-97": [
+      "R512_r1",
+      "R512_r3",
+      "R512_r4"
+    ]
+  },
+  "rule_changed": false,
+  "no_resampling": true
+}

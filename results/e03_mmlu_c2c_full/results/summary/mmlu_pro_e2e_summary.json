@@ -1,0 +1,33 @@
+[
+  {
+    "reference": "C2C",
+    "N": 2641,
+    "q": 0.4,
+    "threshold": 3.838539123535156e-05,
+    "route_to_R_count": 1069,
+    "coverage": 0.40477092010602045,
+    "fixed_reference_correct": 1233,
+    "policy_correct": 1257,
+    "fixed_reference_accuracy": 0.466868610374858,
+    "policy_accuracy": 0.4759560772434684,
+    "accuracy_difference_pp": 0.9087466868610375,
+    "policy_mean_ms": 299.64149284062097,
+    "policy_median_ms": 260.53087797481567,
+    "fixed_mean_ms": 322.98736202039333,
+    "fixed_median_ms": 225.6251369835809,
+    "paired_mean_saving_ms": 23.345869179772386,
+    "paired_median_saving_ms": -37.3051599599421,
+    "mean_saving_fraction": 0.07228106088651956,
+    "descriptive_bootstrap95_low_ms": 14.540823772002156,
+    "descriptive_bootstrap95_high_ms": 32.163306376579854,
+    "bootstrap_seed": 0,
+    "bootstrap_resamples": 2000,
+    "probe_mean_ms": 41.0186146125543,
+    "selector_mean_ms": 0.00028298995487564035,
+    "fixed_invalid": 20,
+    "policy_invalid": 19,
+    "runtime_failures": 0,
+    "identity_mismatches": 0,
+    "classification": "E2E_POSITIVE"
+  }
+]

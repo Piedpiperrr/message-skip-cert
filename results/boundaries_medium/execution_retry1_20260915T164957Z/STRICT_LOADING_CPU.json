@@ -1,0 +1,793 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-15T15:33:12.129915+00:00",
+  "results": {
+    "helper": {
+      "PASS": true,
+      "loading_info": {
+        "missing_keys": [],
+        "unexpected_keys": [],
+        "mismatched_keys": [],
+        "error_msgs": []
+      },
+      "device": "cpu",
+      "dtype": "bfloat16",
+      "parameters": 1543714304,
+      "layers": 28,
+      "hidden_size": 1536,
+      "seconds": 33.48461101099383,
+      "all_parameters_finite": true,
+      "LM_forward_calls": 0,
+      "generation_config_match": true
+    },
+    "receiver": {
+      "PASS": true,
+      "loading_info": {
+        "missing_keys": [],
+        "unexpected_keys": [],
+        "mismatched_keys": [],
+        "error_msgs": []
+      },
+      "device": "cpu",
+      "dtype": "bfloat16",
+      "parameters": 1720574976,
+      "layers": 28,
+      "hidden_size": 2048,
+      "seconds": 7.3609002369921654,
+      "all_parameters_finite": true,
+      "LM_forward_calls": 0,
+      "generation_config_match": true
+    },
+    "fuser": {
+      "PASS": true,
+      "strict_state_dict": true,
+      "load_audit": [
+        {
+          "projector": 0,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 1,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 2,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 3,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 4,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 5,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 6,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 7,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 8,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 9,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 10,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 11,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 12,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 13,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 14,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 15,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 16,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 17,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 18,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 19,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 20,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 21,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 22,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 23,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 24,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 25,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 26,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        },
+        {
+          "projector": 27,
+          "strict": true,
+          "state_tensors": 33,
+          "parameters": 17328146,
+          "missing_keys": [],
+          "unexpected_keys": []
+        }
+      ],
+      "projector_count": 28,
+      "mapping": {
+        "0": [
+          0,
+          0
+        ],
+        "1": [
+          1,
+          1
+        ],
+        "2": [
+          2,
+          2
+        ],
+        "3": [
+          3,
+          3
+        ],
+        "4": [
+          4,
+          4
+        ],
+        "5": [
+          5,
+          5
+        ],
+        "6": [
+          6,
+          6
+        ],
+        "7": [
+          7,
+          7
+        ],
+        "8": [
+          8,
+          8
+        ],
+        "9": [
+          9,
+          9
+        ],
+        "10": [
+          10,
+          10
+        ],
+        "11": [
+          11,
+          11
+        ],
+        "12": [
+          12,
+          12
+        ],
+        "13": [
+          13,
+          13
+        ],
+        "14": [
+          14,
+          14
+        ],
+        "15": [
+          15,
+          15
+        ],
+        "16": [
+          16,
+          16
+        ],
+        "17": [
+          17,
+          17
+        ],
+        "18": [
+          18,
+          18
+        ],
+        "19": [
+          19,
+          19
+        ],
+        "20": [
+          20,
+          20
+        ],
+        "21": [
+          21,
+          21
+        ],
+        "22": [
+          22,
+          22
+        ],
+        "23": [
+          23,
+          23
+        ],
+        "24": [
+          24,
+          24
+        ],
+        "25": [
+          25,
+          25
+        ],
+        "26": [
+          26,
+          26
+        ],
+        "27": [
+          27,
+          27
+        ]
+      },
+      "synthetic_tensor_shapes": [
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ],
+        [
+          [
+            1,
+            8,
+            2,
+            128
+          ],
+          [
+            1,
+            8,
+            2,
+            128
+          ]
+        ]
+      ],
+      "synthetic_tensor_only_forwards": 28,
+      "project_query_input": false,
+      "device": "cpu"
+    }
+  },
+  "torch": "2.6.0+cu124",
+  "transformers": "4.52.4",
+  "wall_seconds": 55.6889058870147,
+  "peak_rss_KiB": 4111960,
+  "CPU_seconds": 43.098945,
+  "LM_forward_calls": 0,
+  "project_questions_read": 0,
+  "MEDIUM_PAIR_OUTCOMES_OBSERVED": false,
+  "GPU_validation": "pending sole allocated job; mandatory before project inference"
+}

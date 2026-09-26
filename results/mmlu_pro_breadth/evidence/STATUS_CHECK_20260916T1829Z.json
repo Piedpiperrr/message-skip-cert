@@ -1,0 +1,10 @@
+{
+  "checked_utc": "2026-09-16T18:29:26.705827+00:00",
+  "ledger_utc": "2026-09-16T18:29:03.878823+00:00",
+  "shard1_PBS_terminal_exit": 0,
+  "shard1_complete_rows": 6016,
+  "shard2_state": "R",
+  "new_PBS_submissions": 0,
+  "scientific_outputs_read": false,
+  "E2E_submissions": 0
+}

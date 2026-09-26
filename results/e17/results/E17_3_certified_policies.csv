@@ -1,0 +1,11 @@
+policy,q,split,n,k,rate,CP_lo,CP_hi,label
+large/ARC/Text,0.95,cal,422,4,0.009478672985781991,0.0025884872745539043,0.024090194409203573,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy"
+large/ARC/Text,0.95,dev,284,9,0.03169014084507042,0.014591145519933221,0.05930334123334969,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy"
+large/ARC/Text,0.95,test (sealed),1100,20,0.01818181818181818,0.011140405943165652,0.027941229300566528,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy"
+large/ARC/C2C,0.9,cal,404,7,0.017326732673267328,0.006993907720796232,0.03537244710313863,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy"
+large/ARC/C2C,0.9,dev,270,3,0.011111111111111112,0.0022972658375898353,0.032126193689306796,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy"
+large/ARC/C2C,0.9,test (sealed),1047,11,0.010506208213944603,0.005256001612825276,0.018720593168345675,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy"
+medium/ARC/C2C,0.6,cal,290,1,0.0034482758620689655,8.729897537538666e-05,0.019061809229567652,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy"
+medium/ARC/C2C,0.6,dev,189,4,0.021164021164021163,0.005795879896893496,0.05329911773873677,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy"
+Llama-3.1-8B/ARC/Text,0.7,cal,320,4,0.0125,0.0034160469730762366,0.03169399020491867,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy"
+Llama-3.1-8B/ARC/Text,0.7,dev,206,4,0.019417475728155338,0.005315335388847767,0.048967585055972165,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy"

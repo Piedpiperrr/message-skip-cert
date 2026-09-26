@@ -1,0 +1,176 @@
+[
+  {
+    "task": "obqa",
+    "split": "fit",
+    "N_rows": 2100,
+    "N_groups": 2100,
+    "score_distribution": {
+      "N": 2100,
+      "mean": 0.03085867050148192,
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 2.980232238769531e-07,
+      "p95": 0.22981098890304547,
+      "max": 0.7120119333267212,
+      "exact_zero_count": 955
+    },
+    "label_union_mass_distribution": {
+      "N": 2100,
+      "mean": 0.9996864169552213,
+      "min": 0.5955985188484192,
+      "p05": 1.0,
+      "median": 1.0,
+      "p95": 1.0,
+      "max": 1.0000038146972656,
+      "exact_zero_count": 0
+    },
+    "label_argmax_agreement_with_native_R": 2056,
+    "invalid_probe_count": 0,
+    "argmax_is_only_diagnostic": true
+  },
+  {
+    "task": "obqa",
+    "split": "cal",
+    "N_rows": 1366,
+    "N_groups": 1366,
+    "score_distribution": {
+      "N": 1366,
+      "mean": 0.03105277111031126,
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 3.5762786865234375e-07,
+      "p95": 0.2689415216445923,
+      "max": 0.5807721018791199,
+      "exact_zero_count": 601
+    },
+    "label_union_mass_distribution": {
+      "N": 1366,
+      "mean": 0.9991472434541578,
+      "min": 0.042138807475566864,
+      "p05": 1.0,
+      "median": 1.0,
+      "p95": 1.0,
+      "max": 1.0000038146972656,
+      "exact_zero_count": 0
+    },
+    "label_argmax_agreement_with_native_R": 1334,
+    "invalid_probe_count": 0,
+    "argmax_is_only_diagnostic": true
+  },
+  {
+    "task": "obqa",
+    "split": "dev",
+    "N_rows": 742,
+    "N_groups": 742,
+    "score_distribution": {
+      "N": 742,
+      "mean": 0.028427676049204206,
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 4.76837158203125e-07,
+      "p95": 0.22529018521308888,
+      "max": 0.5524203181266785,
+      "exact_zero_count": 321
+    },
+    "label_union_mass_distribution": {
+      "N": 742,
+      "mean": 0.9999103471435948,
+      "min": 0.9473048448562622,
+      "p05": 1.0,
+      "median": 1.0,
+      "p95": 1.0,
+      "max": 1.0000038146972656,
+      "exact_zero_count": 0
+    },
+    "label_argmax_agreement_with_native_R": 720,
+    "invalid_probe_count": 0,
+    "argmax_is_only_diagnostic": true
+  },
+  {
+    "task": "arc",
+    "split": "fit",
+    "N_rows": 671,
+    "N_groups": 670,
+    "score_distribution": {
+      "N": 671,
+      "mean": 0.01947425525696551,
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 0.0,
+      "p95": 0.13458457589149475,
+      "max": 0.4635971784591675,
+      "exact_zero_count": 379
+    },
+    "label_union_mass_distribution": {
+      "N": 671,
+      "mean": 0.9999663044550025,
+      "min": 0.9773941040039062,
+      "p05": 1.0,
+      "median": 1.0,
+      "p95": 1.0,
+      "max": 1.0000038146972656,
+      "exact_zero_count": 0
+    },
+    "label_argmax_agreement_with_native_R": 665,
+    "invalid_probe_count": 0,
+    "argmax_is_only_diagnostic": true
+  },
+  {
+    "task": "arc",
+    "split": "cal",
+    "N_rows": 448,
+    "N_groups": 448,
+    "score_distribution": {
+      "N": 448,
+      "mean": 0.01721473370811769,
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 0.0,
+      "p95": 0.11920353472232818,
+      "max": 0.5069935321807861,
+      "exact_zero_count": 256
+    },
+    "label_union_mass_distribution": {
+      "N": 448,
+      "mean": 1.0,
+      "min": 1.0,
+      "p05": 1.0,
+      "median": 1.0,
+      "p95": 1.0,
+      "max": 1.0,
+      "exact_zero_count": 0
+    },
+    "label_argmax_agreement_with_native_R": 443,
+    "invalid_probe_count": 0,
+    "argmax_is_only_diagnostic": true
+  },
+  {
+    "task": "arc",
+    "split": "dev",
+    "N_rows": 299,
+    "N_groups": 299,
+    "score_distribution": {
+      "N": 299,
+      "mean": 0.023035439559847215,
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 0.0,
+      "p95": 0.15149191021919134,
+      "max": 0.6402244567871094,
+      "exact_zero_count": 174
+    },
+    "label_union_mass_distribution": {
+      "N": 299,
+      "mean": 1.0000000127581847,
+      "min": 1.0,
+      "p05": 1.0,
+      "median": 1.0,
+      "p95": 1.0,
+      "max": 1.0000038146972656,
+      "exact_zero_count": 0
+    },
+    "label_argmax_agreement_with_native_R": 294,
+    "invalid_probe_count": 0,
+    "argmax_is_only_diagnostic": true
+  }
+]

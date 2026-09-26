@@ -1,0 +1,7 @@
+{
+  "PBS_stime": "Tue Sep 15 21:04:15 2026",
+  "requested_walltime_seconds": 900,
+  "safety_seconds": 45,
+  "deadline_epoch": 1789507110.0,
+  "max_GPU_allocation_hours": 0.5
+}

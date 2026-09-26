@@ -1,0 +1,39 @@
+{
+  "utc": "2026-09-14T23:10:23.645435+00:00",
+  "status": "COMPLETE",
+  "freeze_checks": [
+    {
+      "file": "PRE_TEST_FREEZE.json",
+      "sha256": "dc5762ee919d4b05b44b797bc97cdaf44dab3f03d9192c67e0c25a48bee155f9",
+      "verified": true
+    },
+    {
+      "file": "PROTOCOL_FREEZE.json",
+      "sha256": "645a76634ac7ce7c7d832e0a9bf2ed41f67c2c3baea315f1f0da14262b6e7d8d",
+      "verified": true
+    },
+    {
+      "file": "TEST_POPULATION_FREEZE.json",
+      "sha256": "877b3806476437561aa3cd53ef4e3e2bf1ab705be0e501d9aad3b0fea2857ee0",
+      "verified": true
+    },
+    {
+      "file": "PREDICTION_TIMING_FREEZE.json",
+      "sha256": "ff6ba67d82309c8c924525f79bc1b6d2b879019f01afed22e71102e2423bfbd1",
+      "verified": true
+    },
+    {
+      "file": "GOLD_ASSOCIATION_FREEZE.json",
+      "sha256": "fcee01724b57bb8287d4fefa398550d999173cfe9244f48ac73c52820a47f9f9",
+      "verified": true
+    },
+    {
+      "file": "ANALYSIS_FREEZE.json",
+      "sha256": "a908adba0b611d05b41b4cb70baec1056d258521b049e016a73c591c14d44e4b",
+      "verified": true
+    }
+  ],
+  "freeze_access_prediction_gold_chronology_pass": true,
+  "core_source_immutable": true,
+  "manuscript_update_is_authorized_active_source_edit": true
+}

@@ -1,0 +1,14 @@
+{
+  "status": "OOF_FOLD_COMPLETE",
+  "pair": "large",
+  "dataset": "arc",
+  "family": "semantic",
+  "fold": 3,
+  "n_fit": 895,
+  "n_heldout": 224,
+  "fit_panel_n": 195,
+  "protocol_sha256": "41239823e728796dd108aae24cc48401ec8093c38aca16f7a30a1352145ef797",
+  "prediction_sha256": "cceed5ee5faabeebe5b721fce7850d9de20cda3a9d0a09dbe7d94dd168e9c42e",
+  "dev_used": false,
+  "full_train_pretrained_heads_used": false
+}

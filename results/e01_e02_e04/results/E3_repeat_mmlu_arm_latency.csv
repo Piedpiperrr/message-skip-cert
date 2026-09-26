@@ -1,0 +1,13 @@
+repeat,arm,N,median_ms,p90_ms,max_ms,mean_ms,median_input_preparation_and_entry_ms,median_online_probe_ms,median_selector_ms,median_complete_native_action_decode_parser_ms,median_final_cleanup_sync_ms
+REPEAT1,fixed_T,128,1061.9,1358.7,1801.8,1079.6,0.0,0.0,0.0,1061.8,0.0
+REPEAT1,policy_T,128,973.4,1344.8,1938.8,818.2,0.0,42.2,0.0,934.8,0.0
+REPEAT1,fixed_C,128,226.7,409.5,1232.5,286.6,0.0,0.0,0.0,226.6,0.0
+REPEAT1,policy_C,128,267.6,380.2,805.5,286.8,0.0,42.5,0.0,222.0,0.0
+REPEAT2,fixed_T,128,1043.1,1338.7,1863.5,1068.7,0.0,0.0,0.0,1043.0,0.0
+REPEAT2,policy_T,128,950.8,1344.3,1895.7,806.2,0.0,34.5,0.0,915.9,0.0
+REPEAT2,fixed_C,128,215.9,413.8,1230.4,279.6,0.0,0.0,0.0,215.9,0.0
+REPEAT2,policy_C,128,250.4,376.8,785.5,277.2,0.0,34.5,0.0,207.4,0.0
+REPEAT3,fixed_T,128,1045.1,1375.0,1842.1,1075.9,0.0,0.0,0.0,1045.0,0.0
+REPEAT3,policy_T,128,950.6,1368.9,1903.2,812.4,0.0,34.7,0.0,916.6,0.0
+REPEAT3,fixed_C,128,217.3,414.9,1220.1,281.8,0.0,0.0,0.0,217.2,0.0
+REPEAT3,policy_C,128,252.9,380.9,783.1,279.2,0.0,35.0,0.0,210.4,0.0

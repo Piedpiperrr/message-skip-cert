@@ -1,0 +1,22 @@
+setting,benchmark,n_X,dis_X,rate_X,n_clean,dis_clean,rate_clean,rate_full,label
+small/OBQA/Text,obqa,208,151,0.7260,1158,447,0.3860,0.4378,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+small/OBQA/C2C,obqa,208,150,0.7212,1158,490,0.4231,0.4685,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+small/ARC/Text,arc,133,87,0.6541,315,146,0.4635,0.5201,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+small/ARC/C2C,arc,133,107,0.8045,315,147,0.4667,0.5670,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/OBQA/Text,obqa,208,62,0.2981,1158,286,0.2470,0.2548,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/OBQA/C2C,obqa,208,38,0.1827,1158,204,0.1762,0.1772,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/ARC/Text,arc,133,25,0.1880,315,42,0.1333,0.1496,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/ARC/C2C,arc,133,16,0.1203,315,39,0.1238,0.1228,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/OBQA/Text,obqa,208,28,0.1346,1158,115,0.0993,0.1047,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/OBQA/C2C,obqa,208,24,0.1154,1158,103,0.0889,0.0930,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/ARC/Text,arc,133,5,0.0376,315,7,0.0222,0.0268,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/ARC/C2C,arc,133,10,0.0752,315,11,0.0349,0.0469,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/MMLU-Pro/Text,mmlu_pro,0,0,,6000,1295,0.2158,0.2158,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/MMLU-Pro/C2C,mmlu_pro,0,0,,6000,1748,0.2913,0.2913,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/OBQA/Text,obqa,208,98,0.4712,1158,274,0.2366,0.2723,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/OBQA/C2C,obqa,208,160,0.7692,1158,639,0.5518,0.5849,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/ARC/Text,arc,133,65,0.4887,315,95,0.3016,0.3571,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/ARC/C2C,arc,133,110,0.8271,315,163,0.5175,0.6094,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/OBQA/Text,obqa,208,51,0.2452,1158,269,0.2323,0.2343,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/ARC/Text,arc,133,25,0.1880,315,70,0.2222,0.2121,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/MMLU-Pro/Text,mmlu_pro,0,0,,6000,2457,0.4095,0.4095,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision

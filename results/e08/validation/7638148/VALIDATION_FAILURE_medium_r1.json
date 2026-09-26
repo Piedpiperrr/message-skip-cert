@@ -1,0 +1,7 @@
+{
+  "utc": "2026-09-20T01:42:59.832989+00:00",
+  "pair": "medium",
+  "slot": "r1",
+  "error": "RuntimeError('Error: cannot set number of interop threads after parallel work has started or set_num_interop_threads called')",
+  "traceback": "Traceback (most recent call last):\n  File \"$DATA_DIR/P2_R2_E8_20260920T012544Z/src/validate_smoke.py\", line 150, in <module>\n    main()\n  File \"$DATA_DIR/P2_R2_E8_20260920T012544Z/src/validate_smoke.py\", line 140, in main\n    t=time.perf_counter();rtl=Runtime('large');big['load_seconds']=round(time.perf_counter()-t,1)\n  File \"$DATA_DIR/P2_R2_E8_20260920T012544Z/src/native_runtime_e8.py\", line 29, in __init__\n    torch.set_num_threads(1);torch.set_num_interop_threads(1)\nRuntimeError: Error: cannot set number of interop threads after parallel work has started or set_num_interop_threads called\n"
+}

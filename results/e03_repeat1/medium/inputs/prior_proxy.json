@@ -1,0 +1,12 @@
+{
+  "obqa": {
+    "full_dev_N": 742,
+    "proxy_ms": 68.32206610626619,
+    "displayed_proxy_ms": 68.32
+  },
+  "arc": {
+    "full_dev_N": 299,
+    "proxy_ms": 105.38137622760067,
+    "displayed_proxy_ms": 105.38
+  }
+}

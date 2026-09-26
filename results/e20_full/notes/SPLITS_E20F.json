@@ -1,0 +1,80 @@
+{
+ "utc": "2026-09-22T00:39:53.715808+00:00",
+ "source": {
+  "repo": "rajpurkar/squad",
+  "revision": "7b6d24c440a36b6815f21b70d25016731768db1f",
+  "file": "plain_text/train-00000-of-00001.parquet",
+  "sha256": "ea7f52bac024f6b1bdc7aaa2a4ee302cba8c2fdc8d4a235cf18a9a5196b6175b",
+  "columns_read": [
+   "id",
+   "question",
+   "context"
+  ]
+ },
+ "gold_read": false,
+ "pool_order": {
+  "path": "pool/inputs/POOL_ORDER_squad.txt",
+  "sha256": "9754449546d370e2ab7c690ee99f44a50c240230850574f195f596664ffab7f3",
+  "n": 86830
+ },
+ "pilot_reconstruction_byte_identical": true,
+ "splits": {
+  "fit": {
+   "pool_positions": [
+    400,
+    900
+   ],
+   "n": 500,
+   "path": "inputs/FULL_fit.jsonl",
+   "sha256": "a3ac3e0cff3a78c973de46e5701fc7e3e9e68efa4ea66f5613623edd8d32ae57",
+   "first_id": "571a94a24faf5e1900b8aabe",
+   "last_id": "5727d9892ca10214002d9805"
+  },
+  "cal": {
+   "pool_positions": [
+    900,
+    2900
+   ],
+   "n": 2000,
+   "path": "inputs/FULL_cal.jsonl",
+   "sha256": "bf25118bbaae4da88cc651a71c994a7a0cea0684adaee3553cf5836cf5886553",
+   "first_id": "572981b3af94a219006aa4dd",
+   "last_id": "570cfdd0b3d812140066d38c"
+  },
+  "dev": {
+   "pool_positions": [
+    2900,
+    3900
+   ],
+   "n": 1000,
+   "path": "inputs/FULL_dev.jsonl",
+   "sha256": "13a98e661a2011c3cb7e0a765929a9ba41da9ea09146213d4c3e71f89d73c3a4",
+   "first_id": "56e170dbcd28a01900c67942",
+   "last_id": "572ea38403f989190075688d"
+  },
+  "test": {
+   "pool_positions": [
+    3900,
+    4900
+   ],
+   "n": 1000,
+   "path": "inputs/FULL_test.jsonl",
+   "sha256": "1ba0a728f908f4dd42ed79285e3af35572020e6f4f51a3ac0c095f988b6f119e",
+   "first_id": "5726bfb05951b619008f7d24",
+   "last_id": "5731e810e17f3d1400422537"
+  }
+ },
+ "pairwise_intersections": {
+  "pilot&fit": 0,
+  "pilot&cal": 0,
+  "pilot&dev": 0,
+  "pilot&test": 0,
+  "fit&cal": 0,
+  "fit&dev": 0,
+  "fit&test": 0,
+  "cal&dev": 0,
+  "cal&test": 0,
+  "dev&test": 0
+ },
+ "all_disjoint": true
+}

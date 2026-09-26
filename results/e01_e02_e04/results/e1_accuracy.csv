@@ -1,0 +1,13 @@
+pair,action,path,n_available,correct_v2_of_500,invalid_v2,correct_legacy_parser_of_500,source,correct_official_evaluator_reported,official_csv
+small,Receiver-only,OFFICIAL,500,191,28,198,clean clone evaluator (this job),198,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/e1/official/small_R__clean/Qwen--Qwen3-0.6B_openbookqa_generate_20260919_081326_cot.csv
+small,Receiver-only,OURS,500,191,28,198,results/e1/ours/small.jsonl,,
+small,C2C,OFFICIAL,500,263,0,263,"task7 (runtime-patch evaluator, job 164991, reused)",263,$HOME_DIR/c2c_reproduction_control/task7_full500/results/openbookqa_c2c_full500/Rosetta_openbookqa_generate_20260714_082810_cot.csv
+small,C2C,OURS,500,263,0,263,results/e1/ours/small.jsonl,,
+medium,Receiver-only,OFFICIAL,500,327,7,326,clean clone evaluator (this job),326,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/e1/official/medium_R__clean/receiver_openbookqa_generate_20260919_081126_cot.csv
+medium,Receiver-only,OURS,500,327,7,326,results/e1/ours/medium.jsonl,,
+medium,C2C,OFFICIAL,500,317,6,321,clean clone evaluator (this job),321,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/e1/official/medium_C__clean/Rosetta_openbookqa_generate_20260919_081515_cot.csv
+medium,C2C,OURS,500,317,6,321,results/e1/ours/medium.jsonl,,
+large,Receiver-only,OFFICIAL,500,425,0,425,clean clone evaluator (this job),425,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/e1/official/large_R__clean/b968826d9c46dd6066d109eabc6255188de91218_openbookqa_generate_20260919_080923_cot.csv
+large,Receiver-only,OURS,500,425,0,425,results/e1/ours/large.jsonl,,
+large,C2C,OFFICIAL,500,405,2,395,clean clone evaluator (this job),395,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/e1/official/large_C__clean/Rosetta_openbookqa_generate_20260919_081048_cot.csv
+large,C2C,OURS,500,405,2,395,results/e1/ours/large.jsonl,,

@@ -1,0 +1,9 @@
+{
+  "utc": "2026-09-15T19:37:06.015282+00:00",
+  "MEDIUM_PAIR_OUTCOMES_OBSERVED": true,
+  "counts": {
+    "actions": 16878,
+    "probes": 5626
+  },
+  "status": "COMPLETE_MEDIUM_STAGE1"
+}

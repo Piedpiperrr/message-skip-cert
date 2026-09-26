@@ -1,0 +1,260 @@
+{
+  "config": {
+    "model": {
+      "base_model": "Qwen/Qwen3-1.7B",
+      "teacher_model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "include_response": false,
+      "is_do_alignment": false,
+      "alignment_strategy": "first",
+      "projector": {
+        "type": "C2CProjector",
+        "params": {
+          "hidden_dim": 1024,
+          "intermediate_dim": 1024,
+          "num_layers": 3,
+          "dropout": 0.1,
+          "initial_temperature": 1.0,
+          "final_temperature": 0.001,
+          "anneal_steps": 1929
+        }
+      },
+      "mapping": "last_aligned"
+    },
+    "training": {
+      "learning_rate": 0.0001,
+      "weight_decay": 0.01,
+      "num_epochs": 1,
+      "max_length": 2048,
+      "device": "cuda",
+      "scheduler_type": "linear",
+      "warmup_ratio": 0.1,
+      "max_grad_norm": 1.0,
+      "gradient_accumulation_steps": 8,
+      "per_device_train_batch_size": 4,
+      "num_processes": 8,
+      "freeze": [
+        "teacher",
+        "base"
+      ],
+      "seed": 42
+    },
+    "output": {
+      "output_dir": "local/checkpoints/1.7B+1.5B_general",
+      "save_steps": 500,
+      "eval_steps": 100,
+      "wandb_config": {
+        "project": "Rosetta",
+        "mode": "online",
+        "entity": "nics-efc",
+        "run_name": "1.7B+1.5B_general_OpenHermes_500k"
+      }
+    },
+    "data": {
+      "type": "OpenHermesChatDataset",
+      "kwargs": {
+        "split": "train",
+        "max_word_count": 2048,
+        "num_samples": 5000
+      },
+      "train_ratio": 0.99
+    }
+  },
+  "projector": {
+    "class": "C2CProjector",
+    "init_args": {
+      "source_dim": 128,
+      "target_dim": 128,
+      "source_num_heads": 2,
+      "target_num_heads": 8,
+      "hidden_dim": 1024,
+      "intermediate_dim": 1024,
+      "num_layers": 3,
+      "dropout": 0.1,
+      "initial_temperature": 1.0,
+      "final_temperature": 0.001,
+      "anneal_steps": 1929,
+      "dtype": {
+        "__type__": "torch.dtype",
+        "value": "bfloat16"
+      }
+    }
+  },
+  "mapping": {
+    "0": {
+      "1": {
+        "0": [
+          [
+            0,
+            0
+          ]
+        ],
+        "1": [
+          [
+            1,
+            1
+          ]
+        ],
+        "2": [
+          [
+            2,
+            2
+          ]
+        ],
+        "3": [
+          [
+            3,
+            3
+          ]
+        ],
+        "4": [
+          [
+            4,
+            4
+          ]
+        ],
+        "5": [
+          [
+            5,
+            5
+          ]
+        ],
+        "6": [
+          [
+            6,
+            6
+          ]
+        ],
+        "7": [
+          [
+            7,
+            7
+          ]
+        ],
+        "8": [
+          [
+            8,
+            8
+          ]
+        ],
+        "9": [
+          [
+            9,
+            9
+          ]
+        ],
+        "10": [
+          [
+            10,
+            10
+          ]
+        ],
+        "11": [
+          [
+            11,
+            11
+          ]
+        ],
+        "12": [
+          [
+            12,
+            12
+          ]
+        ],
+        "13": [
+          [
+            13,
+            13
+          ]
+        ],
+        "14": [
+          [
+            14,
+            14
+          ]
+        ],
+        "15": [
+          [
+            15,
+            15
+          ]
+        ],
+        "16": [
+          [
+            16,
+            16
+          ]
+        ],
+        "17": [
+          [
+            17,
+            17
+          ]
+        ],
+        "18": [
+          [
+            18,
+            18
+          ]
+        ],
+        "19": [
+          [
+            19,
+            19
+          ]
+        ],
+        "20": [
+          [
+            20,
+            20
+          ]
+        ],
+        "21": [
+          [
+            21,
+            21
+          ]
+        ],
+        "22": [
+          [
+            22,
+            22
+          ]
+        ],
+        "23": [
+          [
+            23,
+            23
+          ]
+        ],
+        "24": [
+          [
+            24,
+            24
+          ]
+        ],
+        "25": [
+          [
+            25,
+            25
+          ]
+        ],
+        "26": [
+          [
+            26,
+            26
+          ]
+        ],
+        "27": [
+          [
+            27,
+            27
+          ]
+        ]
+      }
+    }
+  },
+  "weight_file_count": 28,
+  "model_identity_and_dimensions_static_check": true,
+  "strict_runtime_loading_test": "未执行",
+  "checkpoint_tensors_local_verified": false
+}

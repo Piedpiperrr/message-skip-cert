@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-19T19:43:14.683225+00:00",
+  "note": "computed before any gold read",
+  "files": {
+    "results/runs/chain_00.jsonl": "1907c83d72016c507586411b91b5dc7e6117324ddd6ad4033669dce7f3f27c21",
+    "results/runs/chain_01.jsonl": "1cc9c910c4fdc2b9703378ab83be619a6c37627e3d6cb37b12aed5ff19c065b9",
+    "results/runs/chain_02.jsonl": "55f69f42c9f9a3e3e1bc97c51d53a21ac138a22983920006b467c0fc9f2eb66d",
+    "results/runs/chain_03.jsonl": "0f74ed94daeb4c649d3f697f4f8bd2b9bd08cbbbafc91b357aadd64778d3ae05",
+    "results/runs/chain_04.jsonl": "dc3909c63cdd1b9ad2bdea8ac1e7b827db6942c90e9e016493d2cd70df969e94",
+    "results/runs/chain_05.jsonl": "bd3a53a5777983a62f26697c345f51694a1dd839cd2f1ee2a46cf6dca33a7128",
+    "results/runs/chain_06.jsonl": "ef3626135b32564e2aa7e14d10847558043ed9a11cd83ae53765c10f5ada04f5",
+    "results/runs/chain_07.jsonl": "85ee8cbfed234e2d3e3cfcb3f053f34bebcd85122fb031ece5646c58ba85261e"
+  }
+}

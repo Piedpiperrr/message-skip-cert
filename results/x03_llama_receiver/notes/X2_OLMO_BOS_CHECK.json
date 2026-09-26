@@ -1,0 +1,19 @@
+{
+  "utc": "2026-09-21T06:12:45.603391+00:00",
+  "olmo_bos_token": "<|endoftext|>",
+  "bos_id": 100257,
+  "eos_id": 100257,
+  "tokenizer_adds_bos_on_call": false,
+  "stored_x2_records": {
+    "rows": 17267,
+    "probe_native_equals_retokenized": 17267,
+    "R_len_equals_probe_len_minus_prefix": 17267
+  },
+  "tokenizer_render_all_x2_rows": {
+    "R_path_leading_bos=1": 17267,
+    "T_path_leading_bos=1": 17267,
+    "probe_leading_bos=1": 17267,
+    "rows": 17267
+  },
+  "duplicated_bos_rows": 0
+}

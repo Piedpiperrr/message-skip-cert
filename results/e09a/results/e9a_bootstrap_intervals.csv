@@ -1,0 +1,33 @@
+design,population,n_resamples,n_defined,n_undefined_real_gain_zero,boot_mean,ci_lo_2_5,ci_hi_97_5,label
+independent (E5-c),small/OBQA,2000,2000,0,0.688,0.595,0.782,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+independent (E5-c),small/ARC,2000,2000,0,0.740,0.608,0.889,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+independent (E5-c),medium/OBQA,2000,2000,0,0.807,0.692,0.937,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+independent (E5-c),medium/ARC,2000,2000,0,0.773,0.535,1.060,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+independent (E5-c),large/OBQA,2000,2000,0,0.709,0.578,0.856,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+independent (E5-c),large/ARC,2000,2000,0,0.569,0.334,0.803,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+independent (E5-c),large/MMLU-Pro,2000,2000,0,0.885,0.800,0.981,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+independent (E5-c),MEDIAN of 7,2000,2000,0,0.739,0.659,0.825,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+per-reference Text,small/OBQA,2000,2000,0,0.721,0.606,0.845,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+per-reference Text,small/ARC,2000,2000,0,0.855,0.671,1.080,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+per-reference Text,medium/OBQA,2000,2000,0,0.803,0.680,0.945,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+per-reference Text,medium/ARC,2000,2000,0,0.746,0.505,1.057,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+per-reference Text,large/OBQA,2000,2000,0,0.548,0.443,0.665,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+per-reference Text,large/ARC,2000,2000,0,0.507,0.263,0.778,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+per-reference Text,large/MMLU-Pro,2000,2000,0,0.863,0.769,0.969,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+per-reference Text,MEDIAN of 7,2000,2000,0,0.745,0.644,0.840,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+per-reference C2C,small/OBQA,2000,2000,0,0.689,0.584,0.804,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+per-reference C2C,small/ARC,2000,2000,0,0.754,0.598,0.953,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+per-reference C2C,medium/OBQA,2000,2000,0,1.137,0.880,1.464,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+per-reference C2C,medium/ARC,2000,2000,0,1.864,1.019,3.449,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+per-reference C2C,large/OBQA,2000,2000,0,1.371,0.882,2.175,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+per-reference C2C,large/ARC,2000,1963,37,1.157,0.490,2.970,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+per-reference C2C,large/MMLU-Pro,2000,2000,0,1.244,1.071,1.447,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+per-reference C2C,MEDIAN of 7,2000,2000,0,1.127,0.895,1.349,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+joint-matched,small/OBQA,2000,2000,0,0.665,0.573,0.759,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+joint-matched,small/ARC,2000,2000,0,0.739,0.605,0.893,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+joint-matched,medium/OBQA,2000,2000,0,0.899,0.769,1.048,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+joint-matched,medium/ARC,2000,2000,0,0.832,0.567,1.144,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+joint-matched,large/OBQA,2000,2000,0,0.765,0.613,0.935,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+joint-matched,large/ARC,2000,2000,0,0.631,0.369,0.900,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+joint-matched,large/MMLU-Pro,2000,2000,0,0.970,0.877,1.079,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+joint-matched,MEDIAN of 7,2000,2000,0,0.775,0.676,0.885,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision

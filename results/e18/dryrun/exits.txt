@@ -1,0 +1,4 @@
+rank=1 exit=0
+rank=3 exit=0
+rank=0 exit=0
+rank=2 exit=0

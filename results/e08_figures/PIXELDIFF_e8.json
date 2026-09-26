@@ -1,0 +1,29 @@
+{
+  "changed_px": 244265,
+  "regions": {
+    "MMLU-Pro cells": {
+      "clusters": 4,
+      "px": 151958,
+      "xmin": 3.433,
+      "xmax": 4.445,
+      "ymin": 0.383,
+      "ymax": 0.845
+    },
+    "legend row": {
+      "clusters": 86,
+      "px": 84388,
+      "xmin": 0.225,
+      "xmax": 5.268,
+      "ymin": 1.362,
+      "ymax": 1.487
+    },
+    "deployed count column": {
+      "clusters": 14,
+      "px": 7919,
+      "xmin": 4.582,
+      "xmax": 4.978,
+      "ymin": 0.445,
+      "ymax": 1.013
+    }
+  }
+}

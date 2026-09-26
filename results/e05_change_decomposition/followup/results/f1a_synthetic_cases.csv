@@ -1,0 +1,28 @@
+n,text,legal_labels,expected,label
+1,C. 70 km/h,ABCD,C,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+2,C. 70 kilometers per hour,ABCD,C,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+3,C. v = d/t,ABCD,C,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+4,C = d/t,ABCD,,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+5,Carbon dioxide,ABCD,,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+6,The correct answer is C.,ABCD,C,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+7,The correct answer is E.,ABCD,,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+8,The correct answer is E.,ABCDE,E,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+9,A/B/C/D,ABCD,,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+10,Answer: A or B,ABCD,,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+11,C. Options A and B are wrong.,ABCD,C,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+12,Answer: A. Answer: B.,ABCD,,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+13,Answer: A. Final answer: B.,ABCD,B,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+14,"Answer: A. Actually, the answer is B.",ABCD,B,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+15,"A. apple
+B. banana",ABCD,,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+16,"A. apple
+B. banana
+Final answer: B.",ABCD,B,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+17,"He said ""The answer is A.""",ABCD,,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+18,A cat can run.,ABCD,,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+19,Answer: C. C is incorrect.,ABCD,,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+20,**C.** 70 km/h,ABCD,C,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+21,Answer: A. Final answer: B or C.,ABCD,,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+22,,ABCD,,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+23,The answer is a chemical compound.,ABCD,,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+24,The answer is c.,ABCD,C,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision

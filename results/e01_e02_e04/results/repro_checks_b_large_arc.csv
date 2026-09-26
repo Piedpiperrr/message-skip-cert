@@ -1,0 +1,3 @@
+check,pair,population,action,N,table1,ClusterB_saved_correct,ClusterA_correct,parsed_agreement,raw_exact_match,result,ClusterA_source,ClusterB_source
+b,large,arc,R,299,268,268,268,299,299,PASS,results/e1/ours/large__e4_large_arc.jsonl (job 7635393),$DATA_DIR/P2_9_20260911T045010Z/results/large/validation_cases.jsonl
+b,large,arc,C2C,299,266,266,266,299,299,PASS,results/e1/ours/large__e4_large_arc.jsonl (job 7635393),$DATA_DIR/P2_9_20260911T045010Z/results/large/validation_cases.jsonl

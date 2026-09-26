@@ -1,0 +1,54 @@
+from common import *
+compute()
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+S=csvread(P/'summary/e2e_summary.csv');D=csvread(P/'summary/component_vs_e2e.csv')
+f=lambda r,k:float(r[k]);ref=lambda r:'Text' if r['reference']=='T' else 'C2C';name=lambda r:r['dataset'].upper()+'/'+ref(r)
+def ci(r,low,high,scale=1):return f"[{f(r,low)*scale:.2f}, {f(r,high)*scale:.2f}]"
+lines=['\\begin{table}[t]\\centering\\small','\\begin{tabular}{llrrrrr}\\toprule','Task & Ref. & R/128 & Correct P/B & Policy/Ref. ms & Saving [95\\% CI] ms & Comp. ms\\\\\\midrule']
+for r in S:lines.append(f"{r['dataset'].upper()} & {ref(r)} & {r['n_R']} & {r['policy_correct']}/{r['reference_correct']} & {f(r,'policy_mean_ms'):.1f}/{f(r,'reference_mean_ms'):.1f} & {f(r,'net_saving_ms'):.1f} [{f(r,'CI95_saving_low'):.1f}, {f(r,'CI95_saving_high'):.1f}] & {f(r,'component_net_saving_ms'):.1f} \\\\")
+lines+=['\\bottomrule\\end{tabular}','\\caption{True complete E2E replay on each original 128-question large-model panel. P/B are selective-policy/fixed-reference correct counts. Positive saving means faster policy. Intervals are seed-0 paired bootstrap descriptions (2,000 replicates), not independent confirmation. Comp. retains the prior component estimate on the same panel.}\\label{tab:e2e}','\\end{table}']
+(P/'paper/e2e_table.tex').write_text('\n'.join(lines)+'\n')
+confirmed=[name(r) for r in S if r['confirmed_descriptive_positive_saving']=='True'];other=[name(r) for r in S if r['confirmed_descriptive_positive_saving']!='True']
+prose=r'''\subsection{Frozen-policy E2E validation}
+The boundary experiment found deployable points for all four large-model strata and fixed-reference fallback for all four small-model strata across the two tasks and two predetermined references. The much different R--reference disagreement prevalences make this an empirical \emph{receiver/reference regime boundary}; two model-scale points do not identify a causal scale effect. Risk/coverage feasibility and economic value are separate: Text and C2C incur different communication costs even with the same receiver, questions, and confidence scores.
+
+We replayed the four frozen large-model deployments on the exact original 128-question panels without recalibration, score changes, new gold acquisition, or access to ARC test. Each independent policy paid its full online ProbeMax prefill before a complete native R or reference request, with no reuse of probe KV or prefill. Fixed Text and C2C were replayed in the same allocation and model residency. The four paths were rotated by question ordinal. Synchronized outer wall time includes query preparation, tokenization, prefix construction, transfer, prefill, last-position projection, FP32 scoring, selection, complete action execution, decoding, V2 parsing, and hook cleanup. Startup was recorded separately; all first formal requests remain in the results.
+\input{e2e_table.tex}
+'''
+prose+='\n'+ 'The mean E2E savings were '+', '.join(f"{f(r,'net_saving_ms'):.2f} ms for {name(r)}" for r in S)+'. '
+prose+=('The descriptive paired interval lay entirely above zero for '+', '.join(confirmed)+'. ') if confirmed else 'No paired interval lay entirely above zero. '
+if other:prose+='A positive saving was not established by this criterion for '+', '.join(other)+'. '
+prose+='The component table remains a prediction and accounting decomposition, while Table~\\ref{tab:e2e} reports actual complete replay. Their differences are reported per stratum and are not an implementation-independent causal attribution. The modest OBQA/C2C component margin is evaluated without optimizations intended to make it positive.\n\n'
+prose+='Accuracy differences (policy minus reference, percentage points) were '+', '.join(f"{name(r)} {100*f(r,'accuracy_diff'):+.2f} {ci(r,'CI95_accuracy_low','CI95_accuracy_high',100)}" for r in S)+'. Utility uses only these same 128 questions, the original task-specific train-panel R cost, and $\\lambda=.01$. All uncertainty statements describe exposed panels, without model-training uncertainty, equivalence, or independent generalization claims. D remains a learned control; ProbeMax remains an ordinary confidence baseline.\n'
+prose+=r'''
+\begin{figure}[t]\centering
+\includegraphics[width=.9\linewidth]{../figures/component_vs_e2e.pdf}
+\caption{Previous component savings and actual complete E2E savings on the same panels. Error bars describe paired bootstrap uncertainty for E2E savings; zero marks equal mean latency.}\label{fig:e2e_comparison}
+\end{figure}
+'''
+(P/'paper/e2e_validation.tex').write_text(prose)
+paper=P/'paper/reference_preserving.tex';text=paper.read_text();assert 'e2e_validation' not in text;paper.write_text(text+'\n\\input{e2e_validation.tex}\n')
+fig,ax=plt.subplots(figsize=(8.8,3.6));x=list(range(4))
+ax.bar([v-.18 for v in x],[f(r,'component_net_saving_ms') for r in S],width=.34,label='Component estimate',color='#899baa')
+y=[f(r,'net_saving_ms') for r in S]
+ax.bar([v+.18 for v in x],y,width=.34,label='Complete E2E',color='#187d87',yerr=[[f(r,'net_saving_ms')-f(r,'CI95_saving_low') for r in S],[f(r,'CI95_saving_high')-f(r,'net_saving_ms') for r in S]],capsize=4,error_kw={'elinewidth':1.2})
+ax.axhline(0,color='#333333',linewidth=.8);ax.set_xticks(x,[name(r) for r in S]);ax.set_ylabel('Mean saving vs fixed reference (ms)');ax.legend(frameon=False);ax.spines[['top','right']].set_visible(False);fig.tight_layout()
+fig.savefig(P/'figures/component_vs_e2e.pdf');fig.savefig(P/'figures/component_vs_e2e.png',dpi=180);plt.close(fig)
+report=['# 冻结策略真实 E2E 验证','',f'状态：COMPLETE（数值阶段）；PBS 终态与最终资源账另见 RESOURCE_LEDGER.json。唯一作业 {os.environ["PBS_JOBID"]}。','', '四个 large deployment 原样执行；small 四层仍为固定 reference fallback。完成 1,024 个真实完整动作请求，其中 512 个独立 policy 各执行一次完整在线 probe。未重采上一轮 probe、未校准、未拟合、未新增 gold、未读取 ARC test。','', '|分层|q|走R/128|正确 policy/ref|均时 policy/ref ms|净节省 ms [描述95%区间]|原组件净节省 ms|','|---|---:|---:|---:|---:|---:|---:|']
+for r in S:report.append(f"|{name(r)}|{r['q']}|{r['n_R']}|{r['policy_correct']}/{r['reference_correct']}|{f(r,'policy_mean_ms'):.3f}/{f(r,'reference_mean_ms'):.3f}|{f(r,'net_saving_ms'):.3f} {ci(r,'CI95_saving_low','CI95_saving_high')}|{f(r,'component_net_saving_ms'):.3f}|")
+report+=['', '本轮预先登记的“确认”仅指已曝光 panel 的配对均值与描述 95% 区间下界均为正，不是总体保证或独立确认。满足此描述标准：'+('、'.join(confirmed) or '无')+'；未满足：'+('、'.join(other) or '无')+'。','', '|分层|中位数 policy/ref ms|配对差均值/中位数 ms（policy−ref）|准确率差 pp [描述区间]|ΔU [描述区间]|','|---|---:|---:|---:|---:|']
+for r in S:report.append(f"|{name(r)}|{f(r,'policy_median_ms'):.3f}/{f(r,'reference_median_ms'):.3f}|{f(r,'paired_difference_mean_ms'):.3f}/{f(r,'paired_difference_median_ms'):.3f}|{100*f(r,'accuracy_diff'):+.3f} {ci(r,'CI95_accuracy_low','CI95_accuracy_high',100)}|{f(r,'delta_U'):+.6f} [{f(r,'CI95_U_low'):.6f}, {f(r,'CI95_U_high'):.6f}]|")
+report+=['','c_ref 原样为 OBQA 252.35370575390624 ms、ARC 266.9407253203125 ms，lambda=.01。准确率、latency 和 U 均来自对应同一 128 题，未拼接全量 742/299 准确率。两 panel 各 128 个独立组；每任务 Text/C2C 共用 seed0、2,000 次配对 bootstrap 索引。','', '|分层|E2E−组件节省 ms|reference时间变化 ms|所选动作时间变化 ms|在线控制时间变化 ms|','|---|---:|---:|---:|---:|']
+for r in D:report.append(f"|{name(r)}|{f(r,'saving_minus_component_ms'):+.3f}|{f(r,'reference_shift_ms'):+.3f}|{f(r,'selected_action_shift_ms'):+.3f}|{f(r,'online_control_shift_ms'):+.3f}|")
+report+=['','上述严格恒等式为：节省变化 = reference 时间变化 − 所选动作时间变化 − 在线控制时间变化。在线控制含完整 probe/selector、输入准备、解析和同步/清理；原组件动作时间不含 V2 解析。正的节省变化说明该层组件估计较保守，负值说明较乐观。该分解不是硬件、采集时段或 residency 的因果分离；同作业内策略/参考交错重放消除了本次比较对旧 acquisition timing 的依赖，仍不是多次独立环境复验。','', '执行沿用既有 E2E Runtime 的 stage 原生 R/T/C 调用，helper cuda:0、receiver/fuser cuda:1 同驻留。批大小1、BF16、SDPA、TF32关闭、thinking关闭、原模型/tokenizer/generation config 和 parser；没有探针 KV 抵扣，没有把 argmax 当答案。每个 policy 的 probe 与冻结输入 hash、FP32 score、route 均逐题严格一致。首正式请求及各动作首次使用保留，startup 单独记录、不摊销。实际输出的旧答案变化、INVALID 和执行失败分开记录于 summary/output_diagnostics.csv。','', 'large 四层可部署、small 四层回退是当前 receiver/reference regime 的经验边界。两规模的 R-reference 分歧基率差异很大；不能据两点识别因果规模效应。风险/覆盖可行性与经济价值分开；Text/C2C 成本差异是核心。ProbeMax 是普通置信度基线，D 只作学习型对照。','', '主正文为 paper/manuscript.tex → reference_preserving.tex 的原活跃输入续写，保留 boundary 表与组件表，并追加 e2e_validation.tex。实际编译状态在最终资源/交付回执记录，不安装 TeX。所有结论限已曝光 panel 的描述区间，不含训练不确定性、不作等价或非劣主张。','', '完成后交回 Work；不自动打开 ARC test，不自动启动下一实验。']
+(P/'REPORT_ZH.md').write_text('\n'.join(report)+'\n')
+save(P/'RENDER_COMPLETE.json',{'utc':utc(),'files':[str(p.relative_to(P)) for p in [paper,P/'paper/e2e_validation.tex',P/'paper/e2e_table.tex',P/'figures/component_vs_e2e.pdf',P/'REPORT_ZH.md']]})
+print('RENDER_COMPLETE',flush=True)
+# Keep historical component claims explicit within the continuing active manuscript.
+p=P/'paper/boundary_results.tex';s=p.read_text().replace('Within large/OBQA, the identical 572 routed questions yield\n518.891 ms net savings against Text but 28.175 ms against C2C.', 'Within large/OBQA, the full deployment routes the same 572 questions under both references. Its original 128-question component panel predicts\n518.891 ms net savings against Text but 28.175 ms against C2C.');p.write_text(s)
+p=P/'paper/boundary_cost_limitations.tex';s=p.read_text().replace('Each selective strategy independently pays','In the preceding component experiment, each selective strategy independently pays').replace('limitations because this is not an end-to-end policy replay.','limitations of component recomposition; the separate frozen-policy E2E replay below evaluates the four large deployments directly.').replace('All machine outputs are reused here: actual new','In that boundary experiment all machine outputs were reused: actual new');p.write_text(s)
+contribution='''P2 studies when communication can be omitted relative to a prespecified reference protocol. An ordinary fixed-format confidence baseline is compared against native Text and officially ported C2C across two model pairs and two exposed development tasks. Frozen calibration permits all four large-model deployments, whereas all four small-model strata fall back. These outcomes characterize receiver/reference regimes, not a causal model-scale effect. Matched component panels separate risk/coverage feasibility from economic value. Complete E2E replay then evaluates the four frozen large policies and their references under shared model residency, retaining online probe costs, cold requests, and paired uncertainty. Reference-dependent savings remain empirical observations on exposed panels. This work introduces no routing algorithm; D remains a learned control. Sealed-test generalization, broader robustness, repeated independent timing environments, and causal scale evidence remain missing.'''
+(P/'paper/contribution_positioning.tex').write_text(contribution+'\n')
+p=P/'paper/e2e_table.tex';s=p.read_text().replace('\\begin{tabular}', '\\resizebox{\\linewidth}{!}{\\begin{tabular}',1).replace('\\bottomrule\\end{tabular}', '\\bottomrule\\end{tabular}}');p.write_text(s)

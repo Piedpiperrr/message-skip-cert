@@ -1,0 +1,12 @@
+{
+  "utc": "2026-09-14T22:18:56.817311+00:00",
+  "event": "immediately before first gold-column projection",
+  "columns": [
+    "id",
+    "answerKey"
+  ],
+  "prediction_timing_freeze_sha256": "ff6ba67d82309c8c924525f79bc1b6d2b879019f01afed22e71102e2423bfbd1",
+  "pre_test_freeze_sha256": "dc5762ee919d4b05b44b797bc97cdaf44dab3f03d9192c67e0c25a48bee155f9",
+  "all_4688_raw_parsed_timing_and_2344_probe_records_hashed": true,
+  "job_id": "run001"
+}

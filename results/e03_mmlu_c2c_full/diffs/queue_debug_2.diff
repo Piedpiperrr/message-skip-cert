@@ -1,0 +1,27 @@
+--- a/full/src/guard_checks.py
++++ b/full/src/guard_checks.py
+@@ -21,7 +21,7 @@
+     checks={'current_job_state_R':job.get('job_state')=='R',
+         'current_user':job.get('Job_Owner','').split('@')[0]=='user',
+         'account_project':job.get('Account_Name')=='project',
+-        'queue_debug':job.get('queue')=='debug','nodect_2':int(r.get('nodect',0))==2,
++        'queue_debug_2':job.get('queue')=='debug-2','nodect_2':int(r.get('nodect',0))==2,
+         'requested_ngpus_0_ClusterA':int(r.get('ngpus',0))==0,  # E3 ClusterA: GPUs are not a PBS resource (2 exclusive nodes of 4 A100); the CUDA guard still asserts 2 visible devices
+         'allocated_ngpus_0_ClusterA':sum(item['ngpus'] for item in assigned)==0,
+         'assigned_host_matches_process':len(assigned)==2 and short in {item['node'].split('.')[0] for item in assigned},
+--- a/full/MMLU_PRO_E2E_STAGE2_FREEZE.json
++++ b/full/MMLU_PRO_E2E_STAGE2_FREEZE.json
+@@ -151,11 +151,11 @@
+     "src/analyze.py": "e6cb93f2b752a60deec8df395860a6154cd4d5240d0500c932aa88ecbb093aa5",
+     "src/common.py": "22d7ad10115b10b1e38595285619e60d9bfb166e3aed640bf8db9b8b44ea0d1b",
+     "src/execute.py": "fdd917aaacaf7e0a3e6bec5be70e5fca1b5f8255c9d5f87d47d8a092aee8de16",
+-    "src/guard_checks.py": "234fd7ed446fd0f30d2f9b17ae8a3e31080a1ac4c37d0a2cb20d3834b71d4557",
++    "src/guard_checks.py": "dc0c368a38bac3461fbd5e61554a3173ec4ce14e4efd339509b7c3a9a7b32e35",
+     "src/native_runtime.py": "f9158aef4dfab7b90a6233b8d1304dc26281240ba02d2b72211bd138095c4361",
+     "src/pbs_entry.py": "bbb169e86c073ed2dc980a104ffd86238f478b668bb3bc28c36fde98fe54b4c2",
+     "src/prepare_freeze.py": "9d26d74a983865ac4af721a3a6f414435c67e40eabf2aeba476829568ebf528d",
+     "src/submit.py": "0e49a8e8d6413c9f79fffb54928be4b741a94824c58bb4ce1dc4fd948d96b74d"
+   },
+-  "E3_manifest_recomputed": "frozen_files re-hashed over this copy after the E3 ClusterA harness edits; original hashes are in diffs/mmlu_full_ClusterA.diff"
++  "E3_manifest_recomputed": "frozen_files re-hashed over this copy after the E3 ClusterA harness edits; original hashes are in diffs/mmlu_full_ClusterA.diff; recomputed again after the queue-name edit (debug-2), see diffs/queue_debug_2.diff"
+ }

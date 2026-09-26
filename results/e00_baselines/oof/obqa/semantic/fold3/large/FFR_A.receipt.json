@@ -1,0 +1,14 @@
+{
+  "event": "HEAD_COMPLETE",
+  "key": "OOF/obqa/semantic/3/large/f_A",
+  "kind": "LR",
+  "n": 2773,
+  "positive": 34,
+  "iterations": 16,
+  "warnings": [],
+  "CPU_seconds": 0.03860300000000194,
+  "protocol_sha256": "41239823e728796dd108aae24cc48401ec8093c38aca16f7a30a1352145ef797",
+  "model_sha256": "a5109d1e9aef41c963e95df3a4c792aeab9874439468125f8b21f00c38968aa2",
+  "input_hash": "294b789fb9dfeb896936eef0e6b0c9c8",
+  "numerical_probability_check": true
+}

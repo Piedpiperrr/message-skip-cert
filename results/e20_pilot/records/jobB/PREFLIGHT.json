@@ -1,0 +1,14 @@
+{
+  "job": "B",
+  "skipped": true,
+  "skipped_because": "records/jobA/PREFLIGHT.json PASS",
+  "jobA_rates": {
+    "helper_tokens_per_s": 49.43284431100189,
+    "qwen3_frozen_R_tokens_per_s": 16.78766061222479,
+    "helper_tokens": 469,
+    "helper_s": 9.487619143445045,
+    "receiver_tokens": 99,
+    "receiver_s": 5.897188553353772,
+    "llama_frozen_R_tokens_per_s": 42.57271859710688
+  }
+}

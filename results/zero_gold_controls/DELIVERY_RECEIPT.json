@@ -1,0 +1,20 @@
+{
+  "utc": "2026-09-14T07:23:19.727543+00:00",
+  "status": "COMPLETE",
+  "archive": "$DATA_DIR/P2_ZERO_GOLD_CONTROLS_20260914T065145Z/P2_ZERO_GOLD_CONTROLS_20260914T065145Z_WORK_LIGHT.tar.gz",
+  "archive_sha256": "ad0b0a99b7307c602db7b2b04a5098d2e5a52ef00fa49dc1f912b1478b1fefae",
+  "archive_bytes": 5480221,
+  "files_in_manifest": 148,
+  "SHA256SUMS_sha256": "ad5f962c065a3e472c2e7214f2997c25c6e71daddf549b5fbea10e4e4dfcb0bf",
+  "excluded": [
+    "model weights",
+    "full-vocabulary per-question logits",
+    "all-layer hidden states",
+    "all old assets",
+    "E1 z",
+    "runtime matplotlib cache"
+  ],
+  "self_reference_note": "archive and this receipt are outside the internal SHA256SUMS; archive contains that manifest",
+  "TeX_compiled": false,
+  "budget_closed": true
+}

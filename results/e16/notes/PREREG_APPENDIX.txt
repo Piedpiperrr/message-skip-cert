@@ -1,0 +1,36 @@
+
+=== APPENDIX: Step 0 findings (login node, read-only; written before any E16 model output) ===
+Paths are relative to $DATA_DIR.
+
+G1 No prior outputs: PASS for E16-1 and E16-2.
+- Held-out ids: P2_R3_E9BC_20260920T061042Z/inputs/holdout_744_ids.json (744).
+- ARC test ids: P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/inputs/test_queries_no_gold.jsonl (1,172).
+- Llama-3.1-8B: the only records are X3 (P2_R6_X3_20260921T052602Z/results/**). Their 5,626 ids overlap neither the 744 nor the 1,172 ids.
+- Medium pair (Qwen3-1.7B / Qwen2.5-1.5B / medium fuser): records are the MEDIUM stage 1 and E2E stage 2 folders and E9BC medium. Of their 18,011 ids, 0 are ARC test ids; 744 are the held-out ids (E9b, by design).
+- Exact quoted-id grep over all *.json/*.jsonl in the repo: ARC test ids occur only in the sealed ARC run, its copies in the supplement packages, E14 (sealed re-check) and R1_CPU CSVs. None of these files names a medium or Llama model.
+G2 Stored Qwen2.5-7B Text messages (notes/STEP0_G2_G4.json):
+- 744: P2_R3_E9BC.../large/records/e9b_large_shard{0,1,2}.jsonl, action T. Message present 744/744.
+  - The records carry no helper token ids.
+  - T raw output equals analysis/SEALED_OUTPUTS.jsonl 744/744; that file's SHA-256 matches SEAL_RECEIPT.json.
+- 1,172: sealed run records/e2e_requests.jsonl, reference=T, mode=reference. Message present 1,172/1,172; decodes from the saved helper ids 1,172/1,172; 0 runtime failures; file SHA-256 matches SHA256SUMS.
+- OBQA/ARC fit/cal/dev: 5,626/5,626 equal their saved large-pair records and stored SHA-256 (P2_R6_X3.../notes/HELPER_AND_SPLIT_CHECK.json).
+G3 Frozen thresholds (numeric tau as stored):
+- Llama OBQA/Text: q=.60, tau = 0.009371757507324219.
+- Llama ARC/Text: q=.70, tau = 0.014996349811553955.
+- Source: P2_R6_X3.../results/analysis/dev_table.csv (hashed in CERT_HASHES.json).
+- medium/ARC/C2C: q=.60, tau = 3.5762786865234375e-07 (cal 1/290, p=5.64e-6). Source: P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1.../execution_retry1_20260915T164957Z/deployments/arc_C.json.
+G4 Raw option-label logits are NOT stored for any Qwen3 receiver x benchmark.
+- Stored fields: ProbeMax, p_labels, label_union_mass (BND small/large, ZG, MED, MMLU stage 1). E8 small/medium MMLU-Pro rows store u only.
+- So E16-3(a) re-runs the bf16 prefill (V4 must pass).
+- Deployed probe: attn_implementation='sdpa', bf16, TF32 off (run_boundaries.py, native_runtime.py, native_runtime_e8.py; BND frozen_config runtime.tf32=false).
+- The SDPA backend actually used was not recorded in any stored file. It will be recorded from the re-prefill (profiler kernel names) in bf16 and fp32.
+G5 E3 driver (P2_R1_E3POL_REPEAT1.../large/src/{native_adapter,execute}.py) for a Text-only policy. Estimate 15-25 changed code lines for each of (i) Llama-3.1-8B and (ii) Qwen3-1.7B + Qwen2.5-7B (medium panels):
+- skip building the C2C bundles and fuser traces (about 5 lines);
+- BOS change in the probe and the R path for Llama (about 5);
+- replace the hard-coded hidden size 4096 in the probe check (1);
+- adjust the attempt/probe count guards for two arms (3-4).
+- Configuration and data files are regenerated, not code: models, chat-template SHA, generation config, label-token sets, prefix ids, frozen tau, expected routes.
+- Open point: the arm rotation uses ordinal%4 for four arms. Changing it would touch ordering code. The final line count and whether any timing/routing line is touched are decided from the actual diff before Job C.
+G6 Medium Text path: the medium runtime (MEDIUM stage 1 execution_retry1.../src/native_runtime.py) uses the P2_10 native runtime.
+- request('text') = T2THelperBundle.run(row), then T2TReceiverBundle.consume(row, helper_body, helper_message).
+- helper_message is a plain string, so the large helper's stored message can be passed without other changes. Confirmed.

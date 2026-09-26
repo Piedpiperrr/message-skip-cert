@@ -1,0 +1,1 @@
+run043  submitted_utc: 2026-09-22T02:50:56Z  cmd: submit-job  -q debug -l select=1 -l walltime=00:40:00 -l fsreq=<fs> job.sh

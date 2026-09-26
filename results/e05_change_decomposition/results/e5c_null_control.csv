@@ -1,0 +1,8 @@
+population,N,R_correct,Text_correct,C2C_correct,V1_correct,V2_correct,oracle_R_Text_C2C,gain_over_R_questions,gain_over_R_pp,oracle_R_V1_V2,gain_R_V1_V2_questions,gain_R_V1_V2_pp,m_Text,m_C2C,n_eligible_P_nonempty,under_matched,matched_null_oracle_mean,matched_null_gain_mean,matched_null_gain_p2_5,matched_null_gain_p97_5,matched_null_gain_mean_pp,rho,missing_V1,missing_V2,label
+small/OBQA,742,285,346,366,290,316,498,213,28.71,488,203,27.36,339,350,590,no,431.03,146.03,135.0,157.0,19.68,0.686,0,0,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+small/ARC,299,110,126,155,123,130,204,94,31.44,200,90,30.10,145,160,231,no,179.34,69.34,62.0,75.0,23.19,0.738,0,0,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/OBQA,742,490,523,486,482,507,593,103,13.88,596,106,14.29,174,131,253,no,572.71,82.71,76.0,90.0,11.15,0.803,0,0,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/ARC,299,217,221,202,216,220,248,31,10.37,245,28,9.36,52,48,73,no,240.91,23.91,21.0,27.0,7.99,0.771,0,0,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/OBQA,742,617,645,598,599,624,670,53,7.14,679,62,8.36,72,60,166,no,654.31,37.31,31.0,44.0,5.03,0.704,0,0,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/ARC,299,268,274,266,260,271,280,12,4.01,277,9,3.01,15,12,27,no,274.77,6.77,5.0,9.0,2.26,0.564,0,0,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/MMLU-Pro,2641,1282,1319,1233,1286,1306,1558,276,10.45,1599,317,12.00,561,756,1115,no,1526.06,244.06,232.0,256.0,9.24,0.884,0,0,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision

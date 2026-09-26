@@ -1,0 +1,52 @@
+{
+  "utc": "2026-09-20T19:10:30.912436+00:00",
+  "family": "E8 small+medium MMLU-Pro; 4 settings x 20 candidates = 80 tests",
+  "deployments": {
+    "small/Text": {
+      "pair": "small",
+      "reference": "Text",
+      "q": 0.0,
+      "threshold": null,
+      "mode": "fixed_reference",
+      "accepted_q": [],
+      "chosen_calibration": null,
+      "accuracy_used_for_selection": false
+    },
+    "small/C2C": {
+      "pair": "small",
+      "reference": "C2C",
+      "q": 0.0,
+      "threshold": null,
+      "mode": "fixed_reference",
+      "accepted_q": [],
+      "chosen_calibration": null,
+      "accuracy_used_for_selection": false
+    },
+    "medium/Text": {
+      "pair": "medium",
+      "reference": "Text",
+      "q": 0.0,
+      "threshold": null,
+      "mode": "fixed_reference",
+      "accepted_q": [],
+      "chosen_calibration": null,
+      "accuracy_used_for_selection": false
+    },
+    "medium/C2C": {
+      "pair": "medium",
+      "reference": "C2C",
+      "q": 0.0,
+      "threshold": null,
+      "mode": "fixed_reference",
+      "accepted_q": [],
+      "chosen_calibration": null,
+      "accuracy_used_for_selection": false
+    }
+  },
+  "accuracy_used_for_selection": false,
+  "protocol_freeze_E8_sha256": "9a17d8a438a226aa556b699525f767ebf8217e682dca59a746891594dfee945e",
+  "per_setting_ideal_Bonferroni_bound": 0.02,
+  "family_ideal_Bonferroni_bound": 0.08,
+  "earlier_families_combined": false,
+  "ledger_sha256": "57a8d946c631773bb099c0f5d26c0931ff21134189ef8d69709edacf50f9c7a8"
+}

@@ -1,0 +1,82 @@
+--- a/large/src/pbs_entry.py
++++ b/large/src/pbs_entry.py
+@@ -3,7 +3,7 @@
+ jid=os.environ['PBS_JOBID'];host=socket.gethostname();user=pwd.getpwuid(os.getuid()).pw_name
+ assert host.startswith('x3') and user=='user'  # E3 ClusterA: compute node (original: ClusterB-gpu)
+ rec=json.loads(subprocess.check_output(['job-status','-f','-F','json',jid],text=True));assert list(rec['Jobs'])==[jid]
+-j=rec['Jobs'][jid];r=j['Resource_List'];assert j['Job_Owner'].split('@')[0]==user and j['job_state']=='R' and j['Account_Name']=='project' and j['queue']=='debug'
++j=rec['Jobs'][jid];r=j['Resource_List'];assert j['Job_Owner'].split('@')[0]==user and j['job_state']=='R' and j['Account_Name']=='project' and j['queue']=='debug-2'
+ assert int(r['nodect'])==2 and int(r.get('ngpus',0))==0 and r['fsreq']=='home:sharedfs' and r['walltime']=='00:55:00'  # E3 ClusterA: debug, 2 exclusive nodes of 4 A100 (GPUs are not a PBS resource); original: gpu-queue, 1 node, ngpus=2, 00:30:00
+ short=lambda x:x.split('.')[0];nodes=Path(os.environ['PBS_NODEFILE']).read_text().split();assert short(host) in {short(x) for x in nodes} and len({short(x) for x in nodes})==2  # E3 ClusterA: this node is one of the job's 2 nodes (original: the only node)
+ cgroup=Path('/proc/self/cgroup').read_text();match=any('jobs' in x and jid.split('.')[0] in x for x in [l.split(':',2)[2].split('/') for l in cgroup.splitlines()]);ClusterA_match=any(jid in x or jid.split('.')[0] in x or any(c.startswith(jid.split('.')[0]+'.') for c in x) for x in [l.split(':',2)[2].split('/') for l in cgroup.splitlines()])  # E3 ClusterA: cgroup layout unverified on ClusterA; both matches recorded, not fatal (as in the medium and MMLU-Pro guards)
+--- a/large/IMPLEMENTATION_FREEZE.json
++++ b/large/IMPLEMENTATION_FREEZE.json
+@@ -12,10 +12,10 @@
+     "src/native_adapter.py": "4709d439ec57f5e64dc79ba85f1295f73d1b08b29da2588c830b1e2daa22aab7",
+     "src/execute.py": "2c20e873d7d145433a8427ff7d2bd9437840416936c3ed961b9211e7de18dd61",
+     "src/receiver_prompt.py": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66",
+-    "src/pbs_entry.py": "8bff44fa584430a4bde12e0ff1fd04bc96f48c31d85d54307ad41dcf59e02e27",
++    "src/pbs_entry.py": "cdac64129ae08346ff78ec63794768eb3a8b65984305c984af05d28d5a29061b",
+     "src/build_adapter.py": "53bc90877b82549e9667d868ec1767d88cb1bceb7711d77bf972d666f4af694d",
+     "run_e2e.pbs": "2bb24ba32cfedadf2f435fbb490b55bbe0f824f189924156ba59b13668ca790b"
+   },
+   "no_model_or_scoring_execution": true,
+-  "E3_manifest_recomputed": "hashes recomputed over this copy after the E3 ClusterA harness edits; original hashes are in diffs/large.diff"
++  "E3_manifest_recomputed": "hashes recomputed over this copy after the E3 ClusterA harness edits; original hashes are in diffs/large.diff; recomputed again after the queue-name edit (debug-2), see diffs/queue_debug_2.diff"
+ }
+--- a/medium/src/guard_checks.py
++++ b/medium/src/guard_checks.py
+@@ -13,7 +13,7 @@
+         assigned.append(dict(node=node,ngpus=int(fields.get('ngpus',0))))
+     r=job['Resource_List'];short=host.split('.')[0]
+     checks=dict(state_R=job.get('job_state')=='R',user=job.get('Job_Owner','').split('@')[0]=='user',
+-        account=job.get('Account_Name')=='project',queue=job.get('queue')=='debug',nodect=int(r.get('nodect',0))==2,
++        account=job.get('Account_Name')=='project',queue=job.get('queue')=='debug-2',nodect=int(r.get('nodect',0))==2,
+         requested_GPUs=int(r.get('ngpus',0))==0,allocated_GPUs=sum(x['ngpus'] for x in assigned)==0,  # E3 ClusterA: GPUs are not a PBS resource (2 exclusive nodes of 4 A100); the CUDA guard still asserts 2 visible devices
+         assigned_host=len(assigned)==2 and short in {x['node'].split('.')[0] for x in assigned},
+         exec_host=len(job.get('exec_host','').split('+'))==2 and short in {x.split('/')[0].split('.')[0] for x in job.get('exec_host','').split('+')},
+--- a/medium/MEDIUM_PAIR_E2E_STAGE2_FREEZE.json
++++ b/medium/MEDIUM_PAIR_E2E_STAGE2_FREEZE.json
+@@ -813,7 +813,7 @@
+     "$DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/medium/src/native_runtime.py": "a585b34ae0e50db66b7e0f6adc158306a6029706628952adc55b451a4cdaacc0",
+     "$DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/medium/src/submit.py": "8890bea2d10be284d05384206543a7449755365bc84f342a04c6df4d72f4429b",
+     "$DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/medium/src/common.py": "396bcd0b5b80a34038fcefd6c7eafc2511d50893ff8491ec31e4cf1982297013",
+-    "$DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/medium/src/guard_checks.py": "1ddc734fdba46c7ebb5d0d6adaa79bd227c105a9c26e42d0b8295b88ec270006",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/medium/src/guard_checks.py": "7b9fecb231fdf24757f30e3241ca89b2480a031076eaad1302fc576bc1859d29",
+     "$DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/medium/src/prepare_freeze.py": "5756f1fae8d254524167e0fee1e700db6cd43899c814140a8491672864845b60",
+     "$DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/medium/src/analyze.py": "b870da5045edb48200fa4fcb5e4841344c9915097818540d29431f60fa470d20",
+     "$DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/medium/src/execute.py": "a2cb3eaba7a2ff1520c42ff694ae882b50b2cc8762213a140b800c89d79cf693",
+@@ -941,5 +941,5 @@
+   },
+   "preparation_wall_seconds": 29.473003310034983,
+   "source_index_sha256": "53611289c7794fa78d2ee9ace8cadbc8a1e8fae5e60767a458fb729bb13d4672",
+-  "E3_manifest_recomputed": "frozen_files/runtime_source_hashes entries of the original stage folder remapped to this copy and re-hashed after the E3 ClusterA harness edits; original paths and hashes are in diffs/medium.diff"
++  "E3_manifest_recomputed": "frozen_files/runtime_source_hashes entries of the original stage folder remapped to this copy and re-hashed after the E3 ClusterA harness edits; original paths and hashes are in diffs/medium.diff; recomputed again after the queue-name edit (debug-2), see diffs/queue_debug_2.diff"
+ }
+--- a/mmlu/src/guard_checks.py
++++ b/mmlu/src/guard_checks.py
+@@ -21,7 +21,7 @@
+     checks={'current_job_state_R':job.get('job_state')=='R',
+         'current_user':job.get('Job_Owner','').split('@')[0]=='user',
+         'account_project':job.get('Account_Name')=='project',
+-        'queue_debug':job.get('queue')=='debug','nodect_2':int(r.get('nodect',0))==2,
++        'queue_debug_2':job.get('queue')=='debug-2','nodect_2':int(r.get('nodect',0))==2,
+         'requested_ngpus_0_ClusterA':int(r.get('ngpus',0))==0,  # E3 ClusterA: GPUs are not a PBS resource (2 exclusive nodes of 4 A100); the CUDA guard still asserts 2 visible devices
+         'allocated_ngpus_0_ClusterA':sum(item['ngpus'] for item in assigned)==0,
+         'assigned_host_matches_process':len(assigned)==2 and short in {item['node'].split('.')[0] for item in assigned},
+--- a/mmlu/MMLU_PRO_E2E_STAGE2_FREEZE.json
++++ b/mmlu/MMLU_PRO_E2E_STAGE2_FREEZE.json
+@@ -1619,11 +1619,11 @@
+     "src/analyze.py": "6cf928659dd86328eb8e9325f60dcb30f844354c2258a6eb876f0577f5987c96",
+     "src/common.py": "0241d85c48c63780afe754095c76a8658eca38dc265a998c6b0fccf0f8cde284",
+     "src/execute.py": "869c0f73b99c43d0c3b59f4365dd6fca1db43252bfc2294da7f6828c5e9b7a9c",
+-    "src/guard_checks.py": "234fd7ed446fd0f30d2f9b17ae8a3e31080a1ac4c37d0a2cb20d3834b71d4557",
++    "src/guard_checks.py": "dc0c368a38bac3461fbd5e61554a3173ec4ce14e4efd339509b7c3a9a7b32e35",
+     "src/native_runtime.py": "f9158aef4dfab7b90a6233b8d1304dc26281240ba02d2b72211bd138095c4361",
+     "src/pbs_entry.py": "15a7ad2390a0d2dfbb0fa02b76fb03e3156e04a58d88e55e23395010db7d0282",
+     "src/prepare_freeze.py": "5e54efcd596baa90756b2cbbb092f5ec471088c6f889a7143d7899203d044303",
+     "src/submit.py": "0e49a8e8d6413c9f79fffb54928be4b741a94824c58bb4ce1dc4fd948d96b74d"
+   },
+-  "E3_manifest_recomputed": "frozen_files re-hashed over this copy after the E3 ClusterA harness edits; original hashes are in diffs/mmlu.diff"
++  "E3_manifest_recomputed": "frozen_files re-hashed over this copy after the E3 ClusterA harness edits; original hashes are in diffs/mmlu.diff; recomputed again after the queue-name edit (debug-2), see diffs/queue_debug_2.diff"
+ }

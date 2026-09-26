@@ -1,0 +1,46 @@
+--- a/official_C2C/script/evaluation/unified_evaluator.py
++++ b/XFAM/x1_optionB/unified_evaluator_xfam.py
+@@ -226,6 +226,22 @@
+ }
+ 
+ 
++def _xfam_local_dataset(path, dataset_name):
++    """XFAM X1 option B: our population rows -> HF schema of openbookqa / ai2_arc, split 'test'. answerKey is a constant placeholder "A" (no gold)."""
++    import json as _json
++    from datasets import Dataset, DatasetDict
++    recs = []
++    for line in open(path):
++        if not line.strip():
++            continue
++        r = _json.loads(line); q = r["query"]
++        # answerKey: constant placeholder "A" (NOT gold). The evaluator skips rows whose answerKey is not A-D; its own is_correct is unused.
++        rec = {"id": r["id"], "choices": {"text": list(q["choice_text"]), "label": list(q["choice_labels"])}, "answerKey": "A"}
++        rec["question_stem" if dataset_name == "openbookqa" else "question"] = q["question_stem"]
++        recs.append(rec)
++    return DatasetDict({"test": Dataset.from_list(recs)})
++
++
+ class UnifiedEvaluator:
+     """Unified evaluator for multiple benchmark datasets."""
+     
+@@ -565,6 +581,8 @@
+             use_cot=use_cot,
+             use_template=use_template
+         )
++        if len(choices_texts) != 4:  # XFAM X1 option B: instruction lists the displayed labels (paper P2-8 v2 ARC format)
++            prompt = prompt.replace('"The correct answer is A/B/C/D"', '"The correct answer is ' + "/".join(chr(65 + i) for i in range(len(choices_texts))) + '"')
+         return prompt
+     
+     def _format_mmlu_pro_example(self, example: Dict[str, Any], use_cot: bool, use_template: bool = True) -> str:
+@@ -1010,7 +1028,10 @@
+                 split_index = int(m.group(1))
+                 total_splits = max(1, int(m.group(2)))
+ 
+-        if self.dataset_name == "math-500":
++        _xfam_rows = self.eval_config.get("local_rows_jsonl")  # XFAM X1 option B: read our population rows (gold-free)
++        if _xfam_rows and self.dataset_name in ("openbookqa", "ai2-arc"):
++            dataset = _xfam_local_dataset(_xfam_rows, self.dataset_name)
++        elif self.dataset_name == "math-500":
+             dataset = load_dataset(self.dataset_config["dataset_name"])
+         elif self.dataset_name == "gsm8k":
+             base_subset = "main" if is_virtual_split else subject

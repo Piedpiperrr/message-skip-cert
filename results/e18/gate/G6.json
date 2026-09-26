@@ -1,0 +1,41 @@
+{
+ "tests_identical_to_SEALED_CAL_TESTS": true,
+ "thresholds_identical": true,
+ "deployment_identical": true,
+ "dev_summary_identical": true,
+ "p_all_1": true,
+ "p_values_3dp": [
+  "1.000"
+ ],
+ "n_thresholds_exactly_0": 18,
+ "thresholds_19_20": [
+  1.1920927533992653e-07,
+  "Infinity"
+ ],
+ "dev_disagreement": [
+  77,
+  400
+ ],
+ "cal_disagreement": [
+  174,
+  1000
+ ],
+ "cal_disagreement_rate": 0.174,
+ "dev_AUROC": {
+  "u": 0.579470065538177,
+  "s2": 0.64444533794379,
+  "s3": 0.568031040167263
+ },
+ "dev_AUROC_sealed": {
+  "u": 0.579470065538177,
+  "s2": 0.64444533794379,
+  "s3": 0.568031040167263
+ },
+ "fit_u_eq_0": 378,
+ "s2_range_all_R": [
+  0.009944217690262658,
+  0.22853521555814083
+ ],
+ "deployed": "fixed_reference",
+ "PASS": true
+}

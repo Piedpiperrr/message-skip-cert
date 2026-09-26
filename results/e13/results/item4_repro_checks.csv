@@ -1,0 +1,7 @@
+item,check,expected,got,ok
+4,medium/ARC/Text dev AUROC,0.742,0.742,True
+4,medium/ARC/C2C dev AUROC,0.91,0.91,True
+4,large/OBQA/Text dev AUROC,0.873,0.873,True
+4,large/ARC/Text dev AUROC,0.952,0.952,True
+4,large/MMLU-Pro/Text dev AUROC,0.821,0.821,True
+4,X2-OLMo/OBQA/Text dev AUROC,0.79,0.79,True

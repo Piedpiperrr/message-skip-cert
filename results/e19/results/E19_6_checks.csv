@@ -1,0 +1,26 @@
+check,status,detail
+"BACKGROUND_PROMPT identical in legacy_methods.py, arc_protocol.py and e10_prompts.py",PASS,
+"probe prefix == BOUNDARIES frozen_config.json[""prefix""] == X3 xfam_common.PREFIX == E9 e9_common.PREFIX",PASS,'The correct answer is'
+"E13 OBQA helper user message == BACKGROUND_PROMPT.format(question=question + ""\n\nChoices:\n"" + choices)",PASS,
+E13 OBQA receiver-only user message == receiver_prompt.receiver_prompt(question),PASS,
+"E13 OBQA Text+fact helper user message == BACKGROUND_PROMPT with ""Useful fact: <fact1>\n"" before the question (e9_common.question_body rule)",PASS,metal is a nonrenewable resource
+"""Useful fact: "" line rule present in e9_common.question_body and PROTOCOL_FREEZE_E6.md",PASS,
+E13 MMLU-Pro helper user message == frozen code,PASS,
+E13 MMLU-Pro receiver-only user message == receiver_prompt (A-J label list),PASS,
+E13 OBQA rendered helper input == Qwen2.5-7B apply_chat_template,PASS,
+E13 OBQA rendered receiver Text-reading input == Qwen3-8B apply_chat_template (saved helper message),PASS,
+E13 OBQA rendered receiver-only input == Qwen3-8B apply_chat_template,PASS,
+E13 OBQA probe input == rendered receiver-only + prefix,PASS,
+parser section: 8 quoted regexes found verbatim in scoring_v2.py,PASS,[]
+"parser section: cue words (hedges, corrections, explanations, joiners) present in scoring_v2.py",PASS,[]
+parser V2 SHA-256 == frozen d05978f4...,PASS,d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9
+parser V2 implementation string 2.0.0 in scoring_v2.py,PASS,IMPLEMENTATION = '2.0.0'
+saved large-helper message for 14-1371: sha256 == X3 and X2 records T.helper_message_sha256,PASS,
+"Qwen3-8B: rendered token counts (receiver-only, with-message, probe) == saved run records",PASS,"rendered (132, 258, 136) saved (132, 258, 136)"
+"Llama-3.1-8B-Instruct: rendered token counts (receiver-only, with-message, probe) == saved run records",PASS,"rendered (155, 281, 159) saved (155, 281, 159)"
+Llama-3.1-8B-Instruct: sha256(rendered receiver-only prompt) == saved probe rendered_sha256,PASS,
+"OLMo-2-1124-7B-Instruct: rendered token counts (receiver-only, with-message, probe) == saved run records",PASS,"rendered (132, 260, 136) saved (132, 260, 136)"
+OLMo-2-1124-7B-Instruct: sha256(rendered receiver-only prompt) == saved probe rendered_sha256,PASS,
+helper rendered token count == saved helper_input_tokens for 14-1371 (E13: 111),PASS,
+E9c question_body (no fact) == receiver_prompt (receiver-only user message),PASS,
+anonymity scan of PROMPTS_FOR_APPENDIX.md,PASS,no match

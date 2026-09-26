@@ -1,0 +1,9 @@
+pair,task,reference,expected_low,expected_high,repeat1,repeat2,repeat3,observed_min,observed_max,in_range
+large,OBQA,Text,419.6,430.2,419.62,430.16,423.1,419.62,430.16,True
+large,OBQA,C2C,27.4,29.3,27.41,29.26,27.82,27.41,29.26,True
+large,ARC,Text,573.2,585.0,573.15,584.99,573.8,573.15,584.99,True
+large,ARC,C2C,91.2,92.4,92.4,91.56,91.23,91.23,92.4,True
+medium,OBQA,C2C,45.6,50.0,47.28,49.98,45.63,45.63,49.98,True
+medium,ARC,C2C,76.6,82.5,79.31,82.53,76.58,76.58,82.53,True
+large,MMLU-Pro,Text,260.8,262.7,260.82,260.96,262.68,260.82,262.68,True
+large,MMLU-Pro,C2C,-0.0,2.8,-0.03,2.55,2.76,-0.03,2.76,True

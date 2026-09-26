@@ -1,0 +1,7 @@
+{
+  "utc": "2026-09-16T21:49:29.621741+00:00",
+  "PBS_stime": "Wed Sep 16 21:49:22 2026",
+  "walltime_seconds": 3600,
+  "deadline_epoch": 1789598917.0,
+  "safety_margin_seconds": 45
+}

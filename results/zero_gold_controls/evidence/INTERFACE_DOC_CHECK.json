@@ -1,0 +1,5 @@
+{
+  "url": "https://huggingface.co/docs/transformers/v4.52.3/chat_templating",
+  "checked_utc": "2026-09-14T07:01:57.470927+00:00",
+  "scope": "role boundaries and no duplicated special tokens; explicit user token-concatenation protocol is controlling; no framework changes"
+}

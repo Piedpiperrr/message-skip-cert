@@ -1,0 +1,406 @@
+[
+  {
+    "pair": "large",
+    "dataset": "obqa",
+    "split": "fit",
+    "N_rows": 2100,
+    "N_groups": 2100,
+    "argmax_agreement_count": 2091,
+    "argmax_agreement_fraction": 0.9957142857142857,
+    "label_mass": {
+      "N": 2100,
+      "mean": 0.9999999892427808,
+      "min": 0.9999809265136719,
+      "p05": 1.0,
+      "median": 1.0,
+      "p95": 1.0,
+      "max": 1.0000038146972656,
+      "sum": 2099.9999774098396
+    },
+    "exact_zero_count": 1049,
+    "score_dist": {
+      "N": 2100,
+      "mean": 0.025332029972757613,
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 1.1920928955078125e-07,
+      "p95": 0.22272828817367554,
+      "max": 0.5807713270187378,
+      "sum": 53.197262942790985
+    },
+    "legal_label_counts": [
+      4
+    ]
+  },
+  {
+    "pair": "large",
+    "dataset": "obqa",
+    "split": "cal",
+    "N_rows": 1366,
+    "N_groups": 1366,
+    "argmax_agreement_count": 1359,
+    "argmax_agreement_fraction": 0.9948755490483162,
+    "label_mass": {
+      "N": 1366,
+      "mean": 0.9999999918403597,
+      "min": 0.9999962449073792,
+      "p05": 1.0,
+      "median": 1.0,
+      "p95": 1.0,
+      "max": 1.0000038146972656,
+      "sum": 1365.9999888539314
+    },
+    "exact_zero_count": 642,
+    "score_dist": {
+      "N": 1366,
+      "mean": 0.026316684257582726,
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 1.7881393432617188e-07,
+      "p95": 0.22274215519428253,
+      "max": 0.6737682819366455,
+      "sum": 35.948590695858
+    },
+    "legal_label_counts": [
+      4
+    ]
+  },
+  {
+    "pair": "large",
+    "dataset": "obqa",
+    "split": "dev",
+    "N_rows": 742,
+    "N_groups": 742,
+    "argmax_agreement_count": 740,
+    "argmax_agreement_fraction": 0.9973045822102425,
+    "label_mass": {
+      "N": 742,
+      "mean": 0.9999999898784565,
+      "min": 0.9999962449073792,
+      "p05": 1.0,
+      "median": 1.0,
+      "p95": 1.0,
+      "max": 1.0,
+      "sum": 741.9999924898148
+    },
+    "exact_zero_count": 354,
+    "score_dist": {
+      "N": 742,
+      "mean": 0.024399476552587958,
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 1.1920928955078125e-07,
+      "p95": 0.22292012870311737,
+      "max": 0.5390275716781616,
+      "sum": 18.104411602020264
+    },
+    "legal_label_counts": [
+      4
+    ]
+  },
+  {
+    "pair": "large",
+    "dataset": "arc",
+    "split": "fit",
+    "N_rows": 671,
+    "N_groups": 670,
+    "argmax_agreement_count": 669,
+    "argmax_agreement_fraction": 0.9970193740685543,
+    "label_mass": {
+      "N": 671,
+      "mean": 0.9999999944925664,
+      "min": 0.9999962449073792,
+      "p05": 1.0,
+      "median": 1.0,
+      "p95": 1.0,
+      "max": 1.0000038146972656,
+      "sum": 670.999996304512
+    },
+    "exact_zero_count": 494,
+    "score_dist": {
+      "N": 671,
+      "mean": 0.008899109463045032,
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 0.0,
+      "p95": 0.01649150252342224,
+      "max": 0.6164116859436035,
+      "sum": 5.9713024497032166
+    },
+    "legal_label_counts": [
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "pair": "large",
+    "dataset": "arc",
+    "split": "cal",
+    "N_rows": 448,
+    "N_groups": 448,
+    "argmax_agreement_count": 448,
+    "argmax_agreement_fraction": 1.0,
+    "label_mass": {
+      "N": 448,
+      "mean": 1.0,
+      "min": 1.0,
+      "p05": 1.0,
+      "median": 1.0,
+      "p95": 1.0,
+      "max": 1.0,
+      "sum": 448.0
+    },
+    "exact_zero_count": 321,
+    "score_dist": {
+      "N": 448,
+      "mean": 0.006739135964640549,
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 0.0,
+      "p95": 0.029315972328186037,
+      "max": 0.43782496452331543,
+      "sum": 3.019132912158966
+    },
+    "legal_label_counts": [
+      4
+    ]
+  },
+  {
+    "pair": "large",
+    "dataset": "arc",
+    "split": "dev",
+    "N_rows": 299,
+    "N_groups": 299,
+    "argmax_agreement_count": 299,
+    "argmax_agreement_fraction": 1.0,
+    "label_mass": {
+      "N": 299,
+      "mean": 1.0,
+      "min": 1.0,
+      "p05": 1.0,
+      "median": 1.0,
+      "p95": 1.0,
+      "max": 1.0,
+      "sum": 299.0
+    },
+    "exact_zero_count": 217,
+    "score_dist": {
+      "N": 299,
+      "mean": 0.00906956076223316,
+      "min": 0.0,
+      "p05": 0.0,
+      "median": 0.0,
+      "p95": 0.01639534235000531,
+      "max": 0.43782472610473633,
+      "sum": 2.711798667907715
+    },
+    "legal_label_counts": [
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "pair": "small",
+    "dataset": "obqa",
+    "split": "fit",
+    "N_rows": 2100,
+    "N_groups": 2100,
+    "argmax_agreement_count": 1986,
+    "argmax_agreement_fraction": 0.9457142857142857,
+    "label_mass": {
+      "N": 2100,
+      "mean": 0.9999476707833154,
+      "min": 0.9981630444526672,
+      "p05": 0.9998092651367188,
+      "median": 0.999977171421051,
+      "p95": 0.9999962449073792,
+      "max": 1.0,
+      "sum": 2099.8901086449623
+    },
+    "exact_zero_count": 0,
+    "score_dist": {
+      "N": 2100,
+      "mean": 0.09323387892473312,
+      "min": 1.5497207641601562e-06,
+      "p05": 0.00014775395393371585,
+      "median": 0.023340880870819092,
+      "p95": 0.4378548562526703,
+      "max": 0.6117740869522095,
+      "sum": 195.79114574193954
+    },
+    "legal_label_counts": [
+      4
+    ]
+  },
+  {
+    "pair": "small",
+    "dataset": "obqa",
+    "split": "cal",
+    "N_rows": 1366,
+    "N_groups": 1366,
+    "argmax_agreement_count": 1297,
+    "argmax_agreement_fraction": 0.9494875549048316,
+    "label_mass": {
+      "N": 1366,
+      "mean": 0.9999499515157144,
+      "min": 0.9983039498329163,
+      "p05": 0.9997978806495667,
+      "median": 0.9999809265136719,
+      "p95": 0.9999962449073792,
+      "max": 1.0,
+      "sum": 1365.9316337704659
+    },
+    "exact_zero_count": 0,
+    "score_dist": {
+      "N": 1366,
+      "mean": 0.08515525479442379,
+      "min": 2.384185791015625e-07,
+      "p05": 0.0001777559518814087,
+      "median": 0.020580768585205078,
+      "p95": 0.3862038105726242,
+      "max": 0.6130406856536865,
+      "sum": 116.32207804918289
+    },
+    "legal_label_counts": [
+      4
+    ]
+  },
+  {
+    "pair": "small",
+    "dataset": "obqa",
+    "split": "dev",
+    "N_rows": 742,
+    "N_groups": 742,
+    "argmax_agreement_count": 711,
+    "argmax_agreement_fraction": 0.9582210242587601,
+    "label_mass": {
+      "N": 742,
+      "mean": 0.9999514112093378,
+      "min": 0.9989439249038696,
+      "p05": 0.9998211473226547,
+      "median": 0.9999809265136719,
+      "p95": 0.9999962449073792,
+      "max": 1.0,
+      "sum": 741.9639471173286
+    },
+    "exact_zero_count": 0,
+    "score_dist": {
+      "N": 742,
+      "mean": 0.08626990313478557,
+      "min": 1.9669532775878906e-06,
+      "p05": 0.0002042531967163086,
+      "median": 0.021093547344207764,
+      "p95": 0.40782988965511274,
+      "max": 0.5680522918701172,
+      "sum": 64.0122681260109
+    },
+    "legal_label_counts": [
+      4
+    ]
+  },
+  {
+    "pair": "small",
+    "dataset": "arc",
+    "split": "fit",
+    "N_rows": 671,
+    "N_groups": 670,
+    "argmax_agreement_count": 610,
+    "argmax_agreement_fraction": 0.9090909090909091,
+    "label_mass": {
+      "N": 671,
+      "mean": 0.9999566702657947,
+      "min": 0.9990010261535645,
+      "p05": 0.9998169541358948,
+      "median": 0.9999847412109375,
+      "p95": 1.0,
+      "max": 1.0,
+      "sum": 670.9709257483482
+    },
+    "exact_zero_count": 0,
+    "score_dist": {
+      "N": 671,
+      "mean": 0.10443248096770216,
+      "min": 2.384185791015625e-07,
+      "p05": 0.00011202692985534668,
+      "median": 0.03034907579421997,
+      "p95": 0.4379178583621979,
+      "max": 0.600525975227356,
+      "sum": 70.07419472932816
+    },
+    "legal_label_counts": [
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "pair": "small",
+    "dataset": "arc",
+    "split": "cal",
+    "N_rows": 448,
+    "N_groups": 448,
+    "argmax_agreement_count": 393,
+    "argmax_agreement_fraction": 0.8772321428571429,
+    "label_mass": {
+      "N": 448,
+      "mean": 0.9999570839905313,
+      "min": 0.9994202852249146,
+      "p05": 0.9998360276222229,
+      "median": 0.9999847412109375,
+      "p95": 1.0,
+      "max": 1.0,
+      "sum": 447.980773627758
+    },
+    "exact_zero_count": 0,
+    "score_dist": {
+      "N": 448,
+      "mean": 0.10871766920068435,
+      "min": 7.152557373046875e-07,
+      "p05": 0.00019087195396423344,
+      "median": 0.037721335887908936,
+      "p95": 0.43843874633312224,
+      "max": 0.6164116859436035,
+      "sum": 48.705515801906586
+    },
+    "legal_label_counts": [
+      4
+    ]
+  },
+  {
+    "pair": "small",
+    "dataset": "arc",
+    "split": "dev",
+    "N_rows": 299,
+    "N_groups": 299,
+    "argmax_agreement_count": 264,
+    "argmax_agreement_fraction": 0.882943143812709,
+    "label_mass": {
+      "N": 299,
+      "mean": 0.9999604659734362,
+      "min": 0.9995346665382385,
+      "p05": 0.9998207688331604,
+      "median": 0.9999847412109375,
+      "p95": 1.0,
+      "max": 1.0,
+      "sum": 298.98817932605743
+    },
+    "exact_zero_count": 0,
+    "score_dist": {
+      "N": 299,
+      "mean": 0.11305113400902636,
+      "min": 7.3909759521484375e-06,
+      "p05": 0.0001650989055633545,
+      "median": 0.04313474893569946,
+      "p95": 0.43806117177009585,
+      "max": 0.5986363291740417,
+      "sum": 33.80228906869888
+    },
+    "legal_label_counts": [
+      3,
+      4,
+      5
+    ]
+  }
+]

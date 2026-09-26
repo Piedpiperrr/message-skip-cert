@@ -1,0 +1,2 @@
+triggered,triggers,max_abs_SMD_length,max_abs_coverage_diff_points,label
+True,large/MMLU-Pro/Text R_output_len_tokens SMD +0.212;large/MMLU-Pro/C2C R_output_len_tokens SMD +0.212,0.2120218116311815,3.054452341137126,"POST-HOC re-analysis (E19, PREREG_E19.md); descriptive; does not change any deployed policy"

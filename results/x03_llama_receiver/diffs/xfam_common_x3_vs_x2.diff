@@ -1,0 +1,24 @@
+--- ../P2_R1_XFAM_20260919T095058Z/src/xfam_common.py	2026-09-19 18:57:34.000000000 +0000
++++ src/xfam_common.py	2026-09-21 06:09:25.000000000 +0000
+@@ -1,4 +1,4 @@
+-"""P2_R1_XFAM X2 shared definitions (paths, populations, saved-record access). Writes only under this folder."""
++"""P2_R6_X3 shared definitions (copy of P2_R1_XFAM X2 xfam_common.py; X3 changes: receivers Llama-3.1-8B / Mistral-7B-v0.3, datasets OBQA + ARC). Writes only under this folder."""
+ import sys
+ sys.dont_write_bytecode = True
+ import json, hashlib, pathlib, os, datetime
+@@ -19,10 +19,14 @@
+                      repo='Qwen/Qwen3-8B', revision='b968826d9c46dd6066d109eabc6255188de91218'),
+     'olmo2_7b': dict(path=str(DATA_ROOT / 'hf_cache/hub/models--allenai--OLMo-2-1124-7B-Instruct/snapshots/470b1fba1ae01581f270116362ee4aa1b97f4c84'),
+                      repo='allenai/OLMo-2-1124-7B-Instruct', revision='470b1fba1ae01581f270116362ee4aa1b97f4c84'),
++    'llama31_8b': dict(path=str(DATA_ROOT / 'hf_cache/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659'),
++                       repo='meta-llama/Llama-3.1-8B-Instruct', revision='0e9e39f249a16976918f6564b8830bc894c89659'),
++    'mistral7b_v03': dict(path=str(DATA_ROOT / 'hf_cache/hub/models--mistralai--Mistral-7B-Instruct-v0.3/snapshots/c170c708c41dac9275d15a8fff4eca08d52bab71'),
++                          repo='mistralai/Mistral-7B-Instruct-v0.3', revision='c170c708c41dac9275d15a8fff4eca08d52bab71'),
+ }
+ PREFIX = 'The correct answer is'
+ LABELS_ALL = list('ABCDEFGHIJ')
+-DATASETS = ['obqa', 'arc', 'mmlu_pro']
++DATASETS = ['obqa', 'arc']
+ 
+ 
+ def utc(): return datetime.datetime.now(datetime.timezone.utc).isoformat()

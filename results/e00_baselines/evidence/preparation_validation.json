@@ -1,0 +1,14 @@
+{
+  "status": "PREPARATION_CHECKS_PASS",
+  "fold_question_rows": 4585,
+  "all_duplicate_groups_isolated": true,
+  "scripts_AST_parse": true,
+  "training_executed": false,
+  "numerical_implementation_validated": false,
+  "fit_count": 0,
+  "source_sha256": {
+    "prepare_protocol.py": "070fafc992e1be8eb8390ac90642940aeb251af3617ac5b50b09c6a791b72a90",
+    "fit_stage.py": "b1e4f3a93d4b6a9936ea22bff966cb5ba14d7f139e997424aadef5c98cd6bb95",
+    "run_bounded.py": "c95a5109ca47fb9dcb7c17af88a2afa7dc3c7dc1c2a6e315d2f49af427a4a0d5"
+  }
+}

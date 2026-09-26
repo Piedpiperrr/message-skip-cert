@@ -1,0 +1,33 @@
+utc: 2026-09-20T23:10:36Z
+note: all code below frozen before any GSM8K model output exists
+a07185d35c84533e8a4d5c9054a60ab868a11a709c3f9ffb15276de532e0d785  PREREG_E10.md
+c7f5a0f2452da787c7af1620da668f3a9824094046b3d8766b58c81831ba984c  src/e10_extract.py
+03ea1b472ba1c521f0cc61d8a50b16cdf5d6f5cbb74a6599fb66f49c1e83bd83  src/e10_extract_test.py
+8d5809beb9451e1670a468a3213ccc8435fdc24694c0ddf8d7742c2a86c2afc7  src/e10_prompts.py
+f9bed56229deb3612919f0cc2171c4b50214bfd2e9dc56b67aaac64e4cc4f70a  src/e10_prep.py
+b3db2dd072839e90ddd0b89427961594755c6b6e390e1e1979004e3f04a58ab3  src/e10_exec.py
+1c9575599d14f03a1bb7dc06c72e6b8a9f7a100a1d22ef90b86c69194d485f1e  src/e10_gate.py
+9aeb385d1af6c1586206b372e7b7e24670151e168dc5e12610176dab955fee5a  src/e10_progress.py
+aaa0d7b1ae7095e9f53def91384bbbeab7bce44f96e7744420a74e37517c377c  src/slot_e10.sh
+3bbf5e54e65df850aad7ae243ed7e523b8117628ce36acb08044702d24b702ce  run_e10.pbs
+87fa87423daff217af6702411ceb83cad26285992b2951fecbc6f935b6ff0e9c  SPLIT_FREEZE_E10.json
+0bc013d2ba8713aadb6aa802c61aa0c044374a727b3dcb2afab703ff8e276d27  inputs/gsm8k_queries.jsonl
+a500dcc56b7364d0a0a53ea6004227b0bd7d22ef5ed90fcf343d9df06773aec7  splits/gsm8k_fit_ids.json
+ae437bcf08aacca4e0589a8e3a756a64e6332f924fafd27c615ee33cfbb94c5a  splits/gsm8k_cal_ids.json
+88357c81cd21ce24c66669fb4ef5c64b690cf52cc49734742b26a5f6e4403edf  splits/gsm8k_dev_ids.json
+
+## v2 after job 7640152 aborted in the OBQA pre-flight (no GSM8K output had been produced;
+##    records/ was empty). One-line fix: import arc_runtime_adapter, the adapter the frozen
+##    large-pair runtime uses. PREREG and extractor hashes unchanged.
+utc: 2026-09-20T23:16:08Z
+8cdc038b10fc45452d94c087f0ce1061da4c1aba50f8f5f6f80657eb88232620  src/e10_exec.py
+d3e28226777cccd6565dce9473b8354d6608ad022e990a936f0b9a0e0dfa0aa0  src/e10_seal.py
+c4b88e533e4cb00b7ac7515d87e7fdbdac2006cf1caddd647b2ee469a3a19b68  src/e10_decode.py
+
+## final outputs, after the gold decode (2026-09-21T00:11:35Z)
+utc: 2026-09-21T00:12:56Z
+a4b5acc8b0b033688f3cccd462960543352d721a03fc5d5ae799e12bf797fba5  SUMMARY.md
+7d21f110c1ae5e8403452bcdeef2dd4c53a8881371a8a6712ca56845a355f600  DEVIATIONS.md
+49b31f3561c1c885f61e234d92603c7ac5c1051e4967abb3017f8569c9dda8c8  analysis/SEAL_RECEIPT.json
+f533e818292033241e968f2e5f200895bc8ea6ba7ef6563be54fc1c2d9cee66a  analysis/E10_RESULTS.json
+8c8ed4f856b67e4296ac20000c3c62bb8f232d13e04ed4780a836a95ec7269a5  run_e10_finish.pbs

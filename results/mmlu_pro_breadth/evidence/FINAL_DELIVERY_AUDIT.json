@@ -1,0 +1,494 @@
+{
+  "utc": "2026-09-16T20:54:29.409838+00:00",
+  "status": "PASS",
+  "checks": "CPU only; no new inference; no frozen code/config/output changes",
+  "freeze_and_two_submissions_before_first_outcomes": true,
+  "analysis_after_both_terminal": true,
+  "fit_then_cal_then_deployment_order": true,
+  "representative_counts": [
+    3000,
+    6000,
+    2641
+  ],
+  "group_overlap": 0,
+  "independent_binomial_CP_checks": [
+    {
+      "reference": "Text",
+      "q": 0.05,
+      "routed": 1442,
+      "changed": 14,
+      "explicit_binomial_sum": 2.0911311975981858e-17,
+      "CP_betainc_root": 0.020587847450471028,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.1,
+      "routed": 1442,
+      "changed": 14,
+      "explicit_binomial_sum": 2.0911311975981858e-17,
+      "CP_betainc_root": 0.020587847450471028,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.15,
+      "routed": 1442,
+      "changed": 14,
+      "explicit_binomial_sum": 2.0911311975981858e-17,
+      "CP_betainc_root": 0.020587847450471028,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.2,
+      "routed": 1442,
+      "changed": 14,
+      "explicit_binomial_sum": 2.0911311975981858e-17,
+      "CP_betainc_root": 0.020587847450471028,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.25,
+      "routed": 1542,
+      "changed": 17,
+      "explicit_binomial_sum": 4.172687106248467e-17,
+      "CP_betainc_root": 0.021923137782671763,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.3,
+      "routed": 1817,
+      "changed": 26,
+      "explicit_binomial_sum": 2.9748901246464016e-16,
+      "CP_betainc_root": 0.025142525746184863,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.35,
+      "routed": 2105,
+      "changed": 43,
+      "explicit_binomial_sum": 1.8522091296527764e-12,
+      "CP_betainc_root": 0.03182055170621628,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.4,
+      "routed": 2358,
+      "changed": 67,
+      "explicit_binomial_sum": 1.3355779112794493e-07,
+      "CP_betainc_root": 0.040607356640867724,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.45,
+      "routed": 2654,
+      "changed": 105,
+      "explicit_binomial_sum": 0.00630333705637489,
+      "CP_betainc_root": 0.052649810781740164,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.5,
+      "routed": 2948,
+      "changed": 153,
+      "explicit_binomial_sum": 0.7001278994396597,
+      "CP_betainc_root": 0.06574103953247731,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.55,
+      "routed": 3269,
+      "changed": 203,
+      "explicit_binomial_sum": 0.9990726946745143,
+      "CP_betainc_root": 0.07621229085021088,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.6,
+      "routed": 3568,
+      "changed": 276,
+      "explicit_binomial_sum": 0.9999999999975318,
+      "CP_betainc_root": 0.09212135166061487,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.65,
+      "routed": 3868,
+      "changed": 361,
+      "explicit_binomial_sum": 1.0000000000026144,
+      "CP_betainc_root": 0.10862483552650935,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.7,
+      "routed": 4154,
+      "changed": 452,
+      "explicit_binomial_sum": 1.000000000001723,
+      "CP_betainc_root": 0.1244969410953813,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.75,
+      "routed": 4457,
+      "changed": 556,
+      "explicit_binomial_sum": 0.9999999999972142,
+      "CP_betainc_root": 0.14072079671688142,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.8,
+      "routed": 4730,
+      "changed": 660,
+      "explicit_binomial_sum": 0.9999999999941025,
+      "CP_betainc_root": 0.1557207018932135,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.85,
+      "routed": 5023,
+      "changed": 778,
+      "explicit_binomial_sum": 1.0000000000035616,
+      "CP_betainc_root": 0.17122161509463518,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.9,
+      "routed": 5378,
+      "changed": 940,
+      "explicit_binomial_sum": 1.0000000000047042,
+      "CP_betainc_root": 0.1912857768095169,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 0.95,
+      "routed": 5703,
+      "changed": 1119,
+      "explicit_binomial_sum": 0.9999999999962599,
+      "CP_betainc_root": 0.21290485866097703,
+      "pass_": true
+    },
+    {
+      "reference": "Text",
+      "q": 1.0,
+      "routed": 6000,
+      "changed": 1295,
+      "explicit_binomial_sum": 1.000000000000722,
+      "CP_betainc_root": 0.2326431035048782,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.05,
+      "routed": 1442,
+      "changed": 9,
+      "explicit_binomial_sum": 1.918683423408836e-21,
+      "CP_betainc_root": 0.015638180990088252,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.1,
+      "routed": 1442,
+      "changed": 9,
+      "explicit_binomial_sum": 1.918683423408836e-21,
+      "CP_betainc_root": 0.015638180990088252,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.15,
+      "routed": 1442,
+      "changed": 9,
+      "explicit_binomial_sum": 1.918683423408836e-21,
+      "CP_betainc_root": 0.015638180990088252,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.2,
+      "routed": 1442,
+      "changed": 9,
+      "explicit_binomial_sum": 1.918683423408836e-21,
+      "CP_betainc_root": 0.015638180990088252,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.25,
+      "routed": 1542,
+      "changed": 9,
+      "explicit_binomial_sum": 2.062742937376909e-23,
+      "CP_betainc_root": 0.014628529652122005,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.3,
+      "routed": 1817,
+      "changed": 24,
+      "explicit_binomial_sum": 2.1114560652334546e-17,
+      "CP_betainc_root": 0.023720418210699565,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.35,
+      "routed": 2105,
+      "changed": 45,
+      "explicit_binomial_sum": 1.1354143720851192e-11,
+      "CP_betainc_root": 0.0329789112952494,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.4,
+      "routed": 2358,
+      "changed": 75,
+      "explicit_binomial_sum": 1.012696335562808e-05,
+      "CP_betainc_root": 0.044578600723802445,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.45,
+      "routed": 2654,
+      "changed": 118,
+      "explicit_binomial_sum": 0.10142845539281492,
+      "CP_betainc_root": 0.058202250684872205,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.5,
+      "routed": 2948,
+      "changed": 186,
+      "explicit_binomial_sum": 0.9992922829553125,
+      "CP_betainc_root": 0.07811630425460055,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.55,
+      "routed": 3269,
+      "changed": 279,
+      "explicit_binomial_sum": 0.9999999999989022,
+      "CP_betainc_root": 0.10146263930944509,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.6,
+      "routed": 3568,
+      "changed": 393,
+      "explicit_binomial_sum": 0.9999999999987295,
+      "CP_betainc_root": 0.1272194046622701,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.65,
+      "routed": 3868,
+      "changed": 506,
+      "explicit_binomial_sum": 1.0000000000026144,
+      "CP_betainc_root": 0.1483417219584678,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.7,
+      "routed": 4154,
+      "changed": 632,
+      "explicit_binomial_sum": 1.000000000001723,
+      "CP_betainc_root": 0.17004329816629973,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.75,
+      "routed": 4457,
+      "changed": 786,
+      "explicit_binomial_sum": 0.9999999999972142,
+      "CP_betainc_root": 0.19458885025668932,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.8,
+      "routed": 4730,
+      "changed": 941,
+      "explicit_binomial_sum": 0.9999999999941025,
+      "CP_betainc_root": 0.21740819656451127,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.85,
+      "routed": 5023,
+      "changed": 1102,
+      "explicit_binomial_sum": 1.0000000000035616,
+      "CP_betainc_root": 0.23790392378286832,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.9,
+      "routed": 5378,
+      "changed": 1327,
+      "explicit_binomial_sum": 1.0000000000047042,
+      "CP_betainc_root": 0.26531575196753054,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 0.95,
+      "routed": 5703,
+      "changed": 1538,
+      "explicit_binomial_sum": 0.9999999999962599,
+      "CP_betainc_root": 0.28819540785849596,
+      "pass_": true
+    },
+    {
+      "reference": "C2C",
+      "q": 1.0,
+      "routed": 6000,
+      "changed": 1748,
+      "explicit_binomial_sum": 1.0000000000007216,
+      "CP_betainc_root": 0.3097710527854863,
+      "pass_": true
+    }
+  ],
+  "rank_sum_AUROC_and_tie_group_AP": [
+    {
+      "split": "fit",
+      "unit": "group_representatives",
+      "reference": "Text",
+      "AUROC_rank_sum": 0.8120366079703429,
+      "AP_tie_groups": 0.5173436949149666
+    },
+    {
+      "split": "fit",
+      "unit": "group_representatives",
+      "reference": "C2C",
+      "AUROC_rank_sum": 0.8436583404802744,
+      "AP_tie_groups": 0.6488169316056046
+    },
+    {
+      "split": "fit",
+      "unit": "raw_rows_descriptive",
+      "reference": "Text",
+      "AUROC_rank_sum": 0.8139012052332084,
+      "AP_tie_groups": 0.5197412358482951
+    },
+    {
+      "split": "fit",
+      "unit": "raw_rows_descriptive",
+      "reference": "C2C",
+      "AUROC_rank_sum": 0.8432168630596337,
+      "AP_tie_groups": 0.6440625451830009
+    },
+    {
+      "split": "cal",
+      "unit": "group_representatives",
+      "reference": "Text",
+      "AUROC_rank_sum": 0.8139185701566148,
+      "AP_tie_groups": 0.49984569115760463
+    },
+    {
+      "split": "cal",
+      "unit": "group_representatives",
+      "reference": "C2C",
+      "AUROC_rank_sum": 0.8404098031132475,
+      "AP_tie_groups": 0.6242947768532
+    },
+    {
+      "split": "cal",
+      "unit": "raw_rows_descriptive",
+      "reference": "Text",
+      "AUROC_rank_sum": 0.8136739293764087,
+      "AP_tie_groups": 0.4985478534350537
+    },
+    {
+      "split": "cal",
+      "unit": "raw_rows_descriptive",
+      "reference": "C2C",
+      "AUROC_rank_sum": 0.8417269724154172,
+      "AP_tie_groups": 0.6249724286361938
+    },
+    {
+      "split": "dev",
+      "unit": "group_representatives",
+      "reference": "Text",
+      "AUROC_rank_sum": 0.8214679315782257,
+      "AP_tie_groups": 0.5222871575558766
+    },
+    {
+      "split": "dev",
+      "unit": "group_representatives",
+      "reference": "C2C",
+      "AUROC_rank_sum": 0.8463998007101455,
+      "AP_tie_groups": 0.6289406730796265
+    },
+    {
+      "split": "dev",
+      "unit": "raw_rows_descriptive",
+      "reference": "Text",
+      "AUROC_rank_sum": 0.8235354051959053,
+      "AP_tie_groups": 0.5241997960567147
+    },
+    {
+      "split": "dev",
+      "unit": "raw_rows_descriptive",
+      "reference": "C2C",
+      "AUROC_rank_sum": 0.8471534555474033,
+      "AP_tie_groups": 0.6226587701230388
+    }
+  ],
+  "category_K_partitions": [
+    {
+      "file": "category_summaries.csv",
+      "rows": 168,
+      "partition_totals_match": true
+    },
+    {
+      "file": "K_summaries.csv",
+      "rows": 96,
+      "partition_totals_match": true
+    }
+  ],
+  "accuracy_decomposition_recomputed": true,
+  "mechanical_receipts": [
+    {
+      "shard": 1,
+      "status": "PASS",
+      "PBS_GPUs": 2,
+      "strict_projectors": 36
+    },
+    {
+      "shard": 2,
+      "status": "PASS",
+      "PBS_GPUs": 2,
+      "strict_projectors": 36
+    }
+  ],
+  "total_GPUh": 13.904444444444444,
+  "below_56_GPUh": true,
+  "CPU_extra_inference": 0,
+  "E2E_jobs": 0,
+  "new_PBS_jobs": 0
+}

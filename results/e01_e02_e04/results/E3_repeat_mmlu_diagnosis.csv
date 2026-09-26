@@ -1,0 +1,4 @@
+repeat,host,replay_start,replay_end,replay_exit,replay_wall_min,startup_total_s,asset_hash_recheck_s,request_span_min,sum_request_latency_min,n_requests,max_gap_between_requests_s,gaps_over_1s,source
+REPEAT1,compute-node,2026-09-19T08:34:48Z,2026-09-19T08:57:05Z,0,22.28,30.0,44.5,20.75,5.27,512,19.392,181,"P2_R1_E3POL_REPEAT1_20260919T075315Z/mmlu/records/four_arm_requests.jsonl; logs/replays.log; mmlu/evidence/STARTUP.json, ASSET_HASH_RECHECK.json"
+REPEAT2,compute-node,2026-09-19T08:28:10Z,2026-09-19T08:34:33Z,0,6.38,27.9,30.6,5.31,5.19,512,0.209,0,"P2_R1_E3POL_REPEAT2_20260919T075315Z/mmlu/records/four_arm_requests.jsonl; logs/replays.log; mmlu/evidence/STARTUP.json, ASSET_HASH_RECHECK.json"
+REPEAT3,compute-node,2026-09-19T09:00:30Z,2026-09-19T09:06:48Z,0,6.3,28.9,22.3,5.35,5.23,512,0.082,0,"P2_R1_E3POL_REPEAT3_20260919T075315Z/mmlu/records/four_arm_requests.jsonl; logs/replays.log; mmlu/evidence/STARTUP.json, ASSET_HASH_RECHECK.json"

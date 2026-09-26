@@ -1,0 +1,18 @@
+{
+  "utc": "2026-09-16T22:04:52.875791+00:00",
+  "status": "PASS",
+  "archive": "P2_MMLU_PRO_STAGE2_WORK_BUNDLE.zip",
+  "sha256": "cb5b57dff12202675f923663c8ebb0f78ea17c46221698535d8bcafaab6a95c4",
+  "bytes": 1245217,
+  "member_count": 88,
+  "hashed_artifacts": 87,
+  "zip_CRC_verified": true,
+  "all_member_SHA256_verified": true,
+  "records_materialized_in_archive": true,
+  "stage2_status": "COMPLETE_MMLU_PRO_STAGE2",
+  "MMLU_TEXT_E2E": "E2E_POSITIVE",
+  "MMLU_C2C_E2E": "E2E_UNCERTAIN_OR_NEGATIVE",
+  "no_additional_inference": true,
+  "no_additional_PBS": true,
+  "next_task_started": false
+}

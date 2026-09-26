@@ -1,0 +1,18 @@
+{
+  "q": 0.6,
+  "threshold": 0.009371757507324219,
+  "mode": "selective",
+  "accepted_q": [
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6
+  ],
+  "source": "P2_R6_X3 dev_table_pre_gold.csv (Llama-3.1-8B receiver)"
+}

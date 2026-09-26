@@ -1,0 +1,13 @@
+n,group,n_settings,mean_match_share,min_match_share,max_match_share,n_settings_match_ge_0_8,n_no_disagreement_draws,n_no_agreement_draws,worst_settings,label
+100,all,26,0.8801923076923076,0.28,1.0,21,2,0,medium/ARC/Text=0.280;medium/OBQA/Text=0.460;X2-OLMo/OBQA/Text=0.635;medium/MMLU-Pro/C2C=0.690,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+100,deployed,9,0.9288888888888889,0.705,1.0,8,2,0,large/MMLU-Pro/Text=0.705;large/MMLU-Pro/C2C=0.835;medium/OBQA/C2C=0.920;large/ARC/C2C=0.970,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+100,fallback,17,0.8544117647058824,0.28,1.0,13,0,0,medium/ARC/Text=0.280;medium/OBQA/Text=0.460;X2-OLMo/OBQA/Text=0.635;medium/MMLU-Pro/C2C=0.690,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+100,"all, fit-split settings only (excl. Text+fact)",25,0.8759999999999999,0.28,1.0,20,,,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+200,all,26,0.9107692307692308,0.145,1.0,21,0,0,medium/ARC/Text=0.145;medium/OBQA/Text=0.530;large/MMLU-Pro/Text=0.665;X2-OLMo/OBQA/Text=0.785,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+200,deployed,9,0.9500000000000001,0.665,1.0,8,0,0,large/MMLU-Pro/Text=0.665;large/MMLU-Pro/C2C=0.915;medium/OBQA/C2C=0.975;large/ARC/C2C=0.995,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+200,fallback,17,0.89,0.145,1.0,13,0,0,medium/ARC/Text=0.145;medium/OBQA/Text=0.530;X2-OLMo/OBQA/Text=0.785;medium/MMLU-Pro/C2C=0.790,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+200,"all, fit-split settings only (excl. Text+fact)",25,0.9072,0.145,1.0,20,,,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+400,all,26,0.9244230769230768,0.02,1.0,23,0,0,medium/ARC/Text=0.020;medium/OBQA/Text=0.555;large/MMLU-Pro/Text=0.725;medium/MMLU-Pro/C2C=0.860,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+400,deployed,9,0.9672222222222222,0.725,1.0,8,0,0,large/MMLU-Pro/Text=0.725;large/MMLU-Pro/C2C=0.980;medium/OBQA/C2C=1.000;medium/ARC/C2C=1.000,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+400,fallback,17,0.9017647058823529,0.02,1.0,15,0,0,medium/ARC/Text=0.020;medium/OBQA/Text=0.555;medium/MMLU-Pro/C2C=0.860;X2-OLMo/OBQA/Text=0.905,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+400,"all, fit-split settings only (excl. Text+fact)",25,0.9213999999999999,0.02,1.0,22,,,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision

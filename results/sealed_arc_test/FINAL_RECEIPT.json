@@ -1,0 +1,63 @@
+{
+  "utc": "2026-09-14T23:10:23.648137+00:00",
+  "task": "P2_FINAL_SEALED_ARC_CONFIRMATION",
+  "status": "COMPLETE",
+  "job_id": "run001",
+  "job_state": "F",
+  "exit_status": 0,
+  "counts": {
+    "complete_action_attempts": 4688,
+    "successful_complete_requests": 4688,
+    "online_probe_attempts": 2344,
+    "online_probe_records": 2344,
+    "per_path": {
+      "policy_T": 1172,
+      "reference_T": 1172,
+      "policy_C": 1172,
+      "reference_C": 1172
+    },
+    "native_selected_actions": {
+      "R": 2147,
+      "T": 1244,
+      "C": 1297
+    },
+    "extra_fixed_R": 0,
+    "warmup": 0,
+    "retry": 0,
+    "new_fit": 0,
+    "new_calibration": 0,
+    "small_requests": 0,
+    "OBQA_requests": 0,
+    "method_search": 0
+  },
+  "conclusions": {
+    "T": {
+      "reference_preservation": "经验条件变化率在5%目标以内（20/1100，1.818%）",
+      "economic_value": "保持正均值节省：685.633 ms，配对描述95%区间 [669.614, 700.802] ms",
+      "empirical_risk_within_5pct": true,
+      "positive_paired_mean_saving": true,
+      "saving_interval_position": "above_zero"
+    },
+    "C": {
+      "reference_preservation": "经验条件变化率在5%目标以内（11/1047，1.051%）",
+      "economic_value": "保持正均值节省：90.926 ms，配对描述95%区间 [80.980, 100.985] ms",
+      "empirical_risk_within_5pct": true,
+      "positive_paired_mean_saving": true,
+      "saving_interval_position": "above_zero"
+    }
+  },
+  "pre_test_freeze_sha256": "dc5762ee919d4b05b44b797bc97cdaf44dab3f03d9192c67e0c25a48bee155f9",
+  "resource_ledger_sha256": "3d71509f759ea6aa67a77dc8db44826e6fc76b5c0d893003cb85cfb1cbd2511a",
+  "manuscript_active_directory": "$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/paper",
+  "ARC_TEST_ACCESSED": true,
+  "gold_accessed": true,
+  "method_search": "CLOSED",
+  "budget_closed": true,
+  "remaining_submissions": 0,
+  "next_action": "STOP and return to Work for final manuscript review; no further experiments",
+  "TeX_compiled": false,
+  "TeX_source_validation": true,
+  "delivery_validation": "PASS",
+  "final_audit_sha256": "28e48af927439953328004ed5a7ed69a6be414aa3a1a323b88a6029089c63210",
+  "lightweight_package": "P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z_WORK_LIGHT.tar.gz"
+}

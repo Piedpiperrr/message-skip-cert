@@ -1,0 +1,26 @@
+anchor_frozen_family,family,n_R,coverage,changed_at_exact_n,risk_at_exact_n,tie_rule
+D,D,230,0.30997304582210244,6,0.02608695652173913,frozen dev order; diagnosis only
+D,R2100,230,0.30997304582210244,5,0.021739130434782608,frozen dev order; diagnosis only
+D,ProbeMax,230,0.30997304582210244,1,0.004347826086956522,frozen dev order; diagnosis only
+D,ProbeEntropy,230,0.30997304582210244,1,0.004347826086956522,frozen dev order; diagnosis only
+D,WordD,230,0.30997304582210244,21,0.09130434782608696,frozen dev order; diagnosis only
+R2100,D,291,0.3921832884097035,8,0.027491408934707903,frozen dev order; diagnosis only
+R2100,R2100,291,0.3921832884097035,7,0.024054982817869417,frozen dev order; diagnosis only
+R2100,ProbeMax,291,0.3921832884097035,1,0.003436426116838488,frozen dev order; diagnosis only
+R2100,ProbeEntropy,291,0.3921832884097035,1,0.003436426116838488,frozen dev order; diagnosis only
+R2100,WordD,291,0.3921832884097035,26,0.08934707903780069,frozen dev order; diagnosis only
+ProbeMax,D,572,0.77088948787062,32,0.055944055944055944,frozen dev order; diagnosis only
+ProbeMax,R2100,572,0.77088948787062,31,0.05419580419580419,frozen dev order; diagnosis only
+ProbeMax,ProbeMax,572,0.77088948787062,19,0.033216783216783216,frozen dev order; diagnosis only
+ProbeMax,ProbeEntropy,572,0.77088948787062,18,0.03146853146853147,frozen dev order; diagnosis only
+ProbeMax,WordD,572,0.77088948787062,50,0.08741258741258741,frozen dev order; diagnosis only
+ProbeEntropy,D,572,0.77088948787062,32,0.055944055944055944,frozen dev order; diagnosis only
+ProbeEntropy,R2100,572,0.77088948787062,31,0.05419580419580419,frozen dev order; diagnosis only
+ProbeEntropy,ProbeMax,572,0.77088948787062,19,0.033216783216783216,frozen dev order; diagnosis only
+ProbeEntropy,ProbeEntropy,572,0.77088948787062,18,0.03146853146853147,frozen dev order; diagnosis only
+ProbeEntropy,WordD,572,0.77088948787062,50,0.08741258741258741,frozen dev order; diagnosis only
+WordD,D,0,0.0,0,,frozen dev order; diagnosis only
+WordD,R2100,0,0.0,0,,frozen dev order; diagnosis only
+WordD,ProbeMax,0,0.0,0,,frozen dev order; diagnosis only
+WordD,ProbeEntropy,0,0.0,0,,frozen dev order; diagnosis only
+WordD,WordD,0,0.0,0,,frozen dev order; diagnosis only

@@ -1,0 +1,8 @@
+{
+  "status": "PARTIAL_PREPARED_NODE_CLEARANCE_REQUIRED",
+  "completed_heads": 0,
+  "LR_attempts": 0,
+  "task_complete": false,
+  "freeze": "PROTOCOL_FREEZE.json",
+  "next": "Return to Work with frozen preparation; do not regenerate folds or launch scheduler/FFR/E1 automatically."
+}

@@ -1,0 +1,5 @@
+benchmark,split,n_questions,source,label
+obqa,train,3466,$DATA_DIR/P2_5_20260910T072811Z/train_questions.jsonl,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+obqa,dev,742,$DATA_DIR/P2_5_20260910T072811Z/dev_questions.jsonl,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+arc,train,1119,$DATA_DIR/P2_8_20260911T032044Z/arc_challenge_train.jsonl,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+arc,validation,299,$DATA_DIR/P2_8_20260911T032044Z/arc_challenge_validation.jsonl,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision

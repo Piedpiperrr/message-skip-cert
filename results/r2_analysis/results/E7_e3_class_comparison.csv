@@ -1,0 +1,9 @@
+pair,task,reference,E7_ORIGINAL_class_a,E7_ORIGINAL_class_b,REPEAT1_a,REPEAT1_b,REPEAT2_a,REPEAT2_b,REPEAT3_a,REPEAT3_b,matches_all_three_a,matches_all_three_b,source,label
+large,OBQA,Text,+,+,+,+,+,+,+,+,yes,yes,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/E3_policy_savings.csv,descriptive only; no cross-run equality claimed
+large,OBQA,C2C,+,+,+,+,+,+,+,+,yes,yes,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/E3_policy_savings.csv,descriptive only; no cross-run equality claimed
+large,ARC,Text,+,+,+,+,+,+,+,+,yes,yes,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/E3_policy_savings.csv,descriptive only; no cross-run equality claimed
+large,ARC,C2C,+,+,+,+,+,+,+,+,yes,yes,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/E3_policy_savings.csv,descriptive only; no cross-run equality claimed
+medium,OBQA,C2C,+,+,+,+,+,+,+,+,yes,yes,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/E3_policy_savings.csv,descriptive only; no cross-run equality claimed
+medium,ARC,C2C,+,+,+,+,+,+,+,+,yes,yes,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/E3_policy_savings.csv,descriptive only; no cross-run equality claimed
+large,MMLU-Pro,Text,+,+,+,+,+,+,+,+,yes,yes,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/E3_policy_savings.csv,descriptive only; no cross-run equality claimed
+large,MMLU-Pro,C2C,?,?,?,?,?,?,?,?,yes,yes,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/E3_policy_savings.csv,descriptive only; no cross-run equality claimed

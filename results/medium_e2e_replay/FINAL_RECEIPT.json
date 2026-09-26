@@ -1,0 +1,17 @@
+{
+  "status": "COMPLETE_MEDIUM_STAGE2",
+  "utc": "2026-09-15T21:11:38.880303+00:00",
+  "job_id": "run013",
+  "terminal_state": "F",
+  "exit_status": 0,
+  "actual_GPU_allocation_hours": 0.18555555555555556,
+  "complete_requests": 512,
+  "online_probes": 256,
+  "freeze_sha256": "ad65edf75f08a11bff7378b34a4e2f66e2cc20d597086c1133289ab157f58165",
+  "classifications": {
+    "obqa": "E2E_POSITIVE",
+    "arc": "E2E_POSITIVE"
+  },
+  "NUMERICAL_VALIDATION": "PASS",
+  "next_task_started": false
+}

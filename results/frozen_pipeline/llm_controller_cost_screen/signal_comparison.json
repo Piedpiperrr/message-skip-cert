@@ -1,0 +1,47 @@
+{
+  "AgentGate": {
+    "AUROC": null,
+    "AP": null,
+    "reason": "NOT_RUN_COST_STOP; no cost-prefix score/outcome association"
+  },
+  "ProbeMax_frozen": [
+    {
+      "pair": "small",
+      "dataset": "obqa",
+      "reference": "C",
+      "split": "fit",
+      "scope": "all",
+      "N": "2100",
+      "d_count": "998",
+      "disagreement_rate": "0.47523809523809524",
+      "AUROC": "0.7223776045739392",
+      "AP": "0.6448984713064962"
+    },
+    {
+      "pair": "small",
+      "dataset": "obqa",
+      "reference": "C",
+      "split": "cal",
+      "scope": "all",
+      "N": "1366",
+      "d_count": "640",
+      "disagreement_rate": "0.4685212298682284",
+      "AUROC": "0.7067267131542699",
+      "AP": "0.6262667785536881"
+    },
+    {
+      "pair": "small",
+      "dataset": "obqa",
+      "reference": "C",
+      "split": "dev",
+      "scope": "all",
+      "N": "742",
+      "d_count": "350",
+      "disagreement_rate": "0.4716981132075472",
+      "AUROC": "0.7002332361516035",
+      "AP": "0.6167770584929302"
+    }
+  ],
+  "incremental_contextual_signal": "UNTESTED",
+  "score_correlation": null
+}

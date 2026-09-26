@@ -1,0 +1,143 @@
+diff -ruN '--exclude=__pycache__' $DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/src/common.py $DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/src/common.py
+--- $DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/src/common.py	2026-09-15 21:02:53.000000000 +0000
++++ $DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/src/common.py	2026-09-19 07:53:23.000000000 +0000
+@@ -1,7 +1,7 @@
+ import csv,datetime,hashlib,json,os,sys,time
+ from pathlib import Path
+ P=Path(__file__).resolve().parents[1]
+-ROOT=P.parent
++ROOT=P.parent.parent  # E3: stage copy nested one level below the project root
+ DATA_ROOT=ROOT.parent.parent
+ PARENT=ROOT/'P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z'
+ STAGE1=PARENT/'execution_retry1_20260915T164957Z'
+diff -ruN '--exclude=__pycache__' $DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/src/guard_checks.py $DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/src/guard_checks.py
+--- $DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/src/guard_checks.py	2026-09-15 20:55:46.000000000 +0000
++++ $DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/src/guard_checks.py	2026-09-19 07:53:23.000000000 +0000
+@@ -13,10 +13,10 @@
+         assigned.append(dict(node=node,ngpus=int(fields.get('ngpus',0))))
+     r=job['Resource_List'];short=host.split('.')[0]
+     checks=dict(state_R=job.get('job_state')=='R',user=job.get('Job_Owner','').split('@')[0]=='user',
+-        account=job.get('Account_Name')=='project',queue=job.get('queue')=='gpu-queue',nodect=int(r.get('nodect',0))==1,
+-        requested_GPUs=int(r.get('ngpus',0))==2,allocated_GPUs=sum(x['ngpus'] for x in assigned)==2,
+-        assigned_host=bool(assigned) and {x['node'].split('.')[0] for x in assigned}=={short},
+-        exec_host={x.split('/')[0].split('.')[0] for x in job.get('exec_host','').split('+')}=={short},
+-        nodefile={x.split('.')[0] for x in nodefile}=={short},fsreq=set(r.get('fsreq','').split(':'))>={'home','sharedfs'},
+-        budget=0<walltime_seconds(r['walltime'])<=900)
++        account=job.get('Account_Name')=='project',queue=job.get('queue')=='debug',nodect=int(r.get('nodect',0))==2,
++        requested_GPUs=int(r.get('ngpus',0))==0,allocated_GPUs=sum(x['ngpus'] for x in assigned)==0,  # E3 ClusterA: GPUs are not a PBS resource (2 exclusive nodes of 4 A100); the CUDA guard still asserts 2 visible devices
++        assigned_host=len(assigned)==2 and short in {x['node'].split('.')[0] for x in assigned},
++        exec_host=len(job.get('exec_host','').split('+'))==2 and short in {x.split('/')[0].split('.')[0] for x in job.get('exec_host','').split('+')},
++        nodefile=len({x.split('.')[0] for x in nodefile})==2 and short in {x.split('.')[0] for x in nodefile},fsreq=set(r.get('fsreq','').split(':'))>={'home','sharedfs'},
++        budget=0<walltime_seconds(r['walltime'])<=3300)  # E3 ClusterA: debug walltime 00:55:00 (original cap 900 s; the replay's own 900 s budget is kept in pbs_entry.py)
+     return dict(status='PASS' if all(checks.values()) else 'BLOCKED',checks=checks,assigned=assigned,walltime_seconds=walltime_seconds(r['walltime']))
+diff -ruN '--exclude=__pycache__' $DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/src/pbs_entry.py $DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/src/pbs_entry.py
+--- $DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/src/pbs_entry.py	2026-09-15 20:55:47.000000000 +0000
++++ $DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/src/pbs_entry.py	2026-09-19 07:53:23.000000000 +0000
+@@ -17,9 +17,9 @@
+     save(P/'evidence/ALLOCATION_GUARD.json',dict(**allocation,job_id=jid,host=host,utc=utc()))
+     assert allocation['status']=='PASS',allocation
+     stime=datetime.datetime.strptime(job['stime'],'%a %b %d %H:%M:%S %Y').replace(tzinfo=datetime.timezone.utc).timestamp()
+-    deadline=stime+allocation['walltime_seconds']-45
++    replay_start=float(os.environ['R1E3_REPLAY_START_EPOCH']);deadline=replay_start+900-45  # E3: own start + original 900 s budget, original 45 s margin
+     os.environ['P2_MEDIUM_DEADLINE']=str(deadline)
+-    save(P/'evidence/DEADLINE.json',dict(PBS_stime=job['stime'],requested_walltime_seconds=allocation['walltime_seconds'],
++    save(P/'evidence/DEADLINE.json',dict(PBS_stime=job['stime'],E3_replay_start_epoch=replay_start,E3_replay_budget_seconds=900,requested_walltime_seconds=allocation['walltime_seconds'],
+         safety_seconds=45,deadline_epoch=deadline,max_GPU_allocation_hours=2*allocation['walltime_seconds']/3600))
+     phase='FREEZE_AND_ASSET_RECHECK';verify_freeze(include_weights=True);stop_check()
+     print('RESOLVED_PATHS',json.dumps(paths()),flush=True)
+--- $DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/MEDIUM_PAIR_E2E_STAGE2_FREEZE.json	2026-09-15 21:03:36.000000000 +0000
++++ $DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/MEDIUM_PAIR_E2E_STAGE2_FREEZE.json	2026-09-19 07:53:23.000000000 +0000
+@@ -810,16 +810,16 @@
+     "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/protocol/generation_configs.json": "179bb080b51480cb2af26344ba2535aacf07fd34d9680e2fe572d287bde98ed9",
+     "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/protocol/prefix_ids.json": "9b1b9dbc8370e8c6f88ef5ab0516dbf8adc5de351351805c00dcc3f8c699a074",
+     "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/protocol/label_token_sets.json": "3a167b79464314e00ce9cb6a92e2fe121829e9808a5f7894211c080eb7a382ac",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/src/native_runtime.py": "a585b34ae0e50db66b7e0f6adc158306a6029706628952adc55b451a4cdaacc0",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/src/submit.py": "8890bea2d10be284d05384206543a7449755365bc84f342a04c6df4d72f4429b",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/src/common.py": "12eee4dc89fe3608fb8c4c6044bfedac5a6bdf4874b1305ec6004826790e1ecd",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/src/guard_checks.py": "4d105b52d8f8d33663d4d1375fa1284c6e0b0395919136f002a71c9cc5164d99",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/src/prepare_freeze.py": "5756f1fae8d254524167e0fee1e700db6cd43899c814140a8491672864845b60",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/src/analyze.py": "b870da5045edb48200fa4fcb5e4841344c9915097818540d29431f60fa470d20",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/src/execute.py": "a2cb3eaba7a2ff1520c42ff694ae882b50b2cc8762213a140b800c89d79cf693",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/src/validate_results.py": "7f7c95050e2a585555a505e9df9d654f45b486fe131288924de8b7f0b1f60c0a",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/src/test_preflight.py": "4be3d104fd52794e454dee7a2fc5f288366ad3dd56793fed3dba6443d2dfed30",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/src/pbs_entry.py": "ab0e569a18343971de62fdd54495c284c820f4316f98779d0bc736fdd29c3188"
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/src/native_runtime.py": "a585b34ae0e50db66b7e0f6adc158306a6029706628952adc55b451a4cdaacc0",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/src/submit.py": "8890bea2d10be284d05384206543a7449755365bc84f342a04c6df4d72f4429b",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/src/common.py": "396bcd0b5b80a34038fcefd6c7eafc2511d50893ff8491ec31e4cf1982297013",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/src/guard_checks.py": "1ddc734fdba46c7ebb5d0d6adaa79bd227c105a9c26e42d0b8295b88ec270006",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/src/prepare_freeze.py": "5756f1fae8d254524167e0fee1e700db6cd43899c814140a8491672864845b60",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/src/analyze.py": "b870da5045edb48200fa4fcb5e4841344c9915097818540d29431f60fa470d20",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/src/execute.py": "a2cb3eaba7a2ff1520c42ff694ae882b50b2cc8762213a140b800c89d79cf693",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/src/validate_results.py": "7f7c95050e2a585555a505e9df9d654f45b486fe131288924de8b7f0b1f60c0a",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/src/test_preflight.py": "4be3d104fd52794e454dee7a2fc5f288366ad3dd56793fed3dba6443d2dfed30",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/src/pbs_entry.py": "72bb296e964ba7c947aba53555158a58df6c0cc480fc924bccd4c431565dd01f"
+   },
+   "stage1_native_runtime_file_unchanged": true,
+   "probe": "exact original fixed-format prompt, thinking off, FP32 normalized labels; u=1-max p; no KV/prefill reuse",
+@@ -913,7 +913,7 @@
+     "requested_seconds": 900,
+     "estimate_identity": "existing Stage1 loading and full-dev action/probe arithmetic; scheduling budget estimate, not new E2E outcome"
+   },
+-  "PBS_script_sha256": "e15956a4c2f18335880c69f2523e6ff80833d1b20402762ae53ffcf4481a6e14",
++  "PBS_script_sha256": "a7c6177428e2b537d6fd2d0602f1884f529658eb7462f471f9aad2038a0ffa51",
+   "prohibited": [
+     "ARC test",
+     "Text replay",
+@@ -926,19 +926,20 @@
+   ],
+   "positioning": "development-panel E2E evidence; not sealed confirmation, independent test, or policy selection; medium extension remains post-hoc motivated but protocol-frozen before medium outcomes",
+   "frozen_files": {
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/MODEL_SOURCE_INDEX.json": "11f8789adab64771a5d591e911728f539aa6f402a68cd4d65fd8ebc5fec837af",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/run_medium_stage2.pbs": "e15956a4c2f18335880c69f2523e6ff80833d1b20402762ae53ffcf4481a6e14",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/inputs/prior_proxy.json": "9619a937b5e2c9ce53ca1ebf696aecff380d84809b4d84bdcdb4f2b3d5baf7c0",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/inputs/arc_panel_ids.json": "1fdb3fccdfa12769fe99d1a34da154881d877b6efcaf74902f0c73cd88473232",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/inputs/obqa_panel_ids.json": "6ebbd7604ce342d43219288b4235053026449b1d9684cff73044be356b3263ac",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/inputs/obqa_queries.jsonl": "cbaee992cee5b5b956d2ae439fd3ce730dc90e73ad8e1b04cda407fabc04ce14",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/inputs/arc_queries.jsonl": "5c7d26f92c7f05312af4348216b969c89bf8c26364d9a3e150473ea4f6ce5567",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/inputs/expected_Stage1_identity_ANALYSIS_ONLY.jsonl": "3ea5ebd3ab50d08af0499c78dda0684bcb6e3918cbd4e764947f4b8f5312fc94",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/inputs/large_C2C_E2E_summary.csv": "61a14a231473a67011410fd6949d38421511f68b7315bfc4a1192dbe7c762b46",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/inputs/existing_gold_ANALYSIS_ONLY.jsonl": "c170e37f397bfcbd71118f31a5d313a457146bb446ba8a69d77e2f94a3459ee5",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/protocol/arc_C_deployment.json": "dee8cb8c7e71f067c9b4cbdf3e53f3ec2dfaad575507f5584043a24395d660b5",
+-    "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/protocol/obqa_C_deployment.json": "b8035cb6fe74f6a4bf738343e08f0efb4e01d5bbbf4da97f1f99b425f5589050"
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/MODEL_SOURCE_INDEX.json": "11f8789adab64771a5d591e911728f539aa6f402a68cd4d65fd8ebc5fec837af",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/run_medium_stage2.pbs": "a7c6177428e2b537d6fd2d0602f1884f529658eb7462f471f9aad2038a0ffa51",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/inputs/prior_proxy.json": "9619a937b5e2c9ce53ca1ebf696aecff380d84809b4d84bdcdb4f2b3d5baf7c0",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/inputs/arc_panel_ids.json": "1fdb3fccdfa12769fe99d1a34da154881d877b6efcaf74902f0c73cd88473232",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/inputs/obqa_panel_ids.json": "6ebbd7604ce342d43219288b4235053026449b1d9684cff73044be356b3263ac",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/inputs/obqa_queries.jsonl": "cbaee992cee5b5b956d2ae439fd3ce730dc90e73ad8e1b04cda407fabc04ce14",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/inputs/arc_queries.jsonl": "5c7d26f92c7f05312af4348216b969c89bf8c26364d9a3e150473ea4f6ce5567",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/inputs/expected_Stage1_identity_ANALYSIS_ONLY.jsonl": "3ea5ebd3ab50d08af0499c78dda0684bcb6e3918cbd4e764947f4b8f5312fc94",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/inputs/large_C2C_E2E_summary.csv": "61a14a231473a67011410fd6949d38421511f68b7315bfc4a1192dbe7c762b46",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/inputs/existing_gold_ANALYSIS_ONLY.jsonl": "c170e37f397bfcbd71118f31a5d313a457146bb446ba8a69d77e2f94a3459ee5",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/protocol/arc_C_deployment.json": "dee8cb8c7e71f067c9b4cbdf3e53f3ec2dfaad575507f5584043a24395d660b5",
++    "$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/protocol/obqa_C_deployment.json": "b8035cb6fe74f6a4bf738343e08f0efb4e01d5bbbf4da97f1f99b425f5589050"
+   },
+   "preparation_wall_seconds": 29.473003310034983,
+-  "source_index_sha256": "53611289c7794fa78d2ee9ace8cadbc8a1e8fae5e60767a458fb729bb13d4672"
++  "source_index_sha256": "53611289c7794fa78d2ee9ace8cadbc8a1e8fae5e60767a458fb729bb13d4672",
++  "E3_manifest_recomputed": "frozen_files/runtime_source_hashes entries of the original stage folder remapped to this copy and re-hashed after the E3 ClusterA harness edits; original paths and hashes are in diffs/medium.diff"
+ }
+--- $DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/run_medium_stage2.pbs	2026-09-15 20:59:10.000000000 +0000
++++ $DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/run_medium_stage2.pbs	2026-09-19 07:53:23.000000000 +0000
+@@ -10,9 +10,9 @@
+ # [scheduler directive removed for anonymity]
+ set -uo pipefail
+ source "$HOME/.config/ClusterB-storage.sh"
+-export P2_MEDIUM_EXEC="$DATA_ROOT/projects/iclr2027_p2/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z"
+-export P2_RUN="$DATA_ROOT/runs/iclr2027_p2/${PBS_JOBID}_medium_stage2"
+-export TMPDIR="$DATA_ROOT/tmp/$PBS_JOBID"
++export P2_MEDIUM_EXEC="$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium"
++export P2_RUN="$P2_MEDIUM_EXEC/run_logs"
++export TMPDIR="$P2_MEDIUM_EXEC/tmp"
+ export TMP="$TMPDIR" TEMP="$TMPDIR" PYTHONDONTWRITEBYTECODE=1 TZ=UTC
+ export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 TOKENIZERS_PARALLELISM=false
+ export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 BLIS_NUM_THREADS=1
+@@ -26,7 +26,7 @@
+ if [ "$quota_rc" -eq 2 ]; then exit 2; fi
+ if [ "$quota_rc" -ne 0 ]; then
+     if command -v myquota >/dev/null 2>&1; then exit 92; fi
+-    if ! rg -q 'Home space check: PASSED' "$P2_MEDIUM_EXEC/evidence/pbs/home_check.txt"; then exit 92; fi
++    if ! grep -q 'Home space check: PASSED' "$P2_MEDIUM_EXEC/evidence/pbs/home_check.txt"; then exit 92; fi
+     printf 'Compute myquota unavailable; using successful pre-submission Home quota receipt.\n'
+ fi
+ cd "$P2_MEDIUM_EXEC" || exit 93

@@ -1,0 +1,21 @@
+{
+  "utc": "2026-09-14T21:33:46.723754+00:00",
+  "N": 1172,
+  "independent_groups": 1172,
+  "duplicate_groups": [],
+  "gold_read": false,
+  "columns_projected": [
+    "id",
+    "question",
+    "choices"
+  ],
+  "first_test_access_sha256": "f59550a97c73ea902583b2f569468212e2b44b68090f118f5335c477029beaa0",
+  "schema_validation": "PASSED expected schema",
+  "rows_deleted": 0,
+  "source_order_preserved": true,
+  "choice_count_distribution": {
+    "4": 1165,
+    "3": 4,
+    "5": 3
+  }
+}

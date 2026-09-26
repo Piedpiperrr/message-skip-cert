@@ -1,0 +1,257 @@
+pair,dataset,family,n_actions,lambda,n,version,panel_accuracy,action_cost_replay_ms,cost_scope
+large,obqa,word,3,0,128,old_V2_rescored,0.8828125,984.5594804296875,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,3,0,128,updated_V2,0.8828125,977.16000721875,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,3,0.01,128,old_V2_rescored,0.8671875,781.0336061015626,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,3,0.01,128,updated_V2,0.8671875,781.615878296875,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,3,0.03,128,old_V2_rescored,0.8046875,353.488190609375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,3,0.03,128,updated_V2,0.8046875,349.730926484375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,3,0.1,128,old_V2_rescored,0.8046875,256.330220625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,3,0.1,128,updated_V2,0.8046875,257.366797390625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,3,0.3,128,old_V2_rescored,0.8046875,255.2672376953125,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,3,0.3,128,updated_V2,0.8046875,255.2672376953125,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,3,1,128,old_V2_rescored,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,3,1,128,updated_V2,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,3,3,128,old_V2_rescored,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,3,3,128,updated_V2,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,4,0,128,old_V2_rescored,0.875,964.9858830078125,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,4,0,128,updated_V2,0.875,957.5864097968749,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,4,0.01,128,old_V2_rescored,0.8671875,775.9210286171876,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,4,0.01,128,updated_V2,0.8671875,776.02791740625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,4,0.03,128,old_V2_rescored,0.8125,338.551247265625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,4,0.03,128,updated_V2,0.8125,333.23898032812497,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,4,0.1,128,old_V2_rescored,0.8046875,257.349280203125,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,4,0.1,128,updated_V2,0.8046875,258.410736625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,4,0.3,128,old_V2_rescored,0.8046875,255.2672376953125,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,4,0.3,128,updated_V2,0.8046875,255.2672376953125,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,4,1,128,old_V2_rescored,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,4,1,128,updated_V2,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,4,3,128,old_V2_rescored,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,4,3,128,updated_V2,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,word,4,NA,128,fixed_R,0.8125,254.514272515625,old panel action-only replay; fixed action
+large,obqa,word,4,NA,128,fixed_T,0.8828125,993.8901472421874,old panel action-only replay; fixed action
+large,obqa,word,4,NA,128,fixed_C,0.7890625,347.017202890625,old panel action-only replay; fixed action
+large,obqa,word,4,NA,128,fixed_A,0.8203125,286.6951911015625,old panel action-only replay; fixed action
+large,obqa,semantic,3,0,128,old_V2_rescored,0.8828125,959.652895,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,3,0,128,updated_V2,0.8828125,954.9276013359374,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,3,0.01,128,old_V2_rescored,0.875,732.6695933515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,3,0.01,128,updated_V2,0.875,731.498051203125,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,3,0.03,128,old_V2_rescored,0.8125,284.069740234375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,3,0.03,128,updated_V2,0.8125,293.2230860078125,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,3,0.1,128,old_V2_rescored,0.8125,255.8999362890625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,3,0.1,128,updated_V2,0.8125,255.8999362890625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,3,0.3,128,old_V2_rescored,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,3,0.3,128,updated_V2,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,3,1,128,old_V2_rescored,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,3,1,128,updated_V2,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,3,3,128,old_V2_rescored,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,3,3,128,updated_V2,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,4,0,128,old_V2_rescored,0.8828125,953.6100142656251,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,4,0,128,updated_V2,0.8828125,948.8847206015625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,4,0.01,128,old_V2_rescored,0.875,735.1785958671876,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,4,0.01,128,updated_V2,0.875,733.8032131015625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,4,0.03,128,old_V2_rescored,0.8203125,287.9341649375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,4,0.03,128,updated_V2,0.8203125,292.8073058671875,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,4,0.1,128,old_V2_rescored,0.8125,257.1603401484375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,4,0.1,128,updated_V2,0.8125,257.1603401484375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,4,0.3,128,old_V2_rescored,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,4,0.3,128,updated_V2,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,4,1,128,old_V2_rescored,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,4,1,128,updated_V2,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,4,3,128,old_V2_rescored,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,4,3,128,updated_V2,0.8125,254.514272515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,obqa,semantic,4,NA,128,fixed_R,0.8125,254.514272515625,old panel action-only replay; fixed action
+large,obqa,semantic,4,NA,128,fixed_T,0.8828125,993.8901472421874,old panel action-only replay; fixed action
+large,obqa,semantic,4,NA,128,fixed_C,0.7890625,347.017202890625,old panel action-only replay; fixed action
+large,obqa,semantic,4,NA,128,fixed_A,0.8203125,286.6951911015625,old panel action-only replay; fixed action
+small,obqa,word,3,0,128,old_V2_rescored,0.5390625,495.3026569375,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,3,0,128,updated_V2,0.5390625,533.8414054609375,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,3,0.01,128,old_V2_rescored,0.515625,459.5593476875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,3,0.01,128,updated_V2,0.5078125,455.4262462109375,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,3,0.03,128,old_V2_rescored,0.5234375,425.600830734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,3,0.03,128,updated_V2,0.5234375,428.36531502343746,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,3,0.1,128,old_V2_rescored,0.515625,374.24942323437494,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,3,0.1,128,updated_V2,0.515625,375.21558246875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,3,0.3,128,old_V2_rescored,0.515625,354.3418359296875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,3,0.3,128,updated_V2,0.5078125,355.540090828125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,3,1,128,old_V2_rescored,0.453125,322.252294046875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,3,1,128,updated_V2,0.453125,322.62482915625003,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,3,3,128,old_V2_rescored,0.4375,295.94212253125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,3,3,128,updated_V2,0.4375,295.94212253125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,4,0,128,old_V2_rescored,0.5390625,493.64465085937496,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,4,0,128,updated_V2,0.5390625,532.1833993828125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,4,0.01,128,old_V2_rescored,0.515625,456.2782174609375,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,4,0.01,128,updated_V2,0.5078125,452.145115984375,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,4,0.03,128,old_V2_rescored,0.5234375,425.886058640625,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,4,0.03,128,updated_V2,0.5234375,428.6505429296875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,4,0.1,128,old_V2_rescored,0.5078125,374.70085888281244,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,4,0.1,128,updated_V2,0.5078125,375.66701811718747,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,4,0.3,128,old_V2_rescored,0.515625,354.91183303125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,4,0.3,128,updated_V2,0.5078125,355.03128703125003,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,4,1,128,old_V2_rescored,0.453125,322.252294046875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,4,1,128,updated_V2,0.453125,322.62482915625003,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,4,3,128,old_V2_rescored,0.4375,295.94212253125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,4,3,128,updated_V2,0.4375,295.94212253125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,word,4,NA,128,fixed_R,0.4375,295.2237855390625,old panel action-only replay; fixed action
+small,obqa,word,4,NA,128,fixed_T,0.515625,899.4116217734374,old panel action-only replay; fixed action
+small,obqa,word,4,NA,128,fixed_C,0.515625,361.868204640625,old panel action-only replay; fixed action
+small,obqa,word,4,NA,128,fixed_A,0.421875,312.516828953125,old panel action-only replay; fixed action
+small,obqa,semantic,3,0,128,old_V2_rescored,0.484375,471.20303235156246,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,3,0,128,updated_V2,0.484375,474.98773984375,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,3,0.01,128,old_V2_rescored,0.4765625,450.61165035937495,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,3,0.01,128,updated_V2,0.484375,451.865955296875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,3,0.03,128,old_V2_rescored,0.4921875,419.12468335156245,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,3,0.03,128,updated_V2,0.4921875,414.85445814062496,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,3,0.1,128,old_V2_rescored,0.5234375,358.5874115703125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,3,0.1,128,updated_V2,0.5234375,358.5874115703125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,3,0.3,128,old_V2_rescored,0.5078125,356.00543046093753,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,3,0.3,128,updated_V2,0.5078125,356.00543046093753,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,3,1,128,old_V2_rescored,0.4609375,315.8567750546875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,3,1,128,updated_V2,0.4609375,318.235531390625,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,3,3,128,old_V2_rescored,0.4453125,297.6518019921875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,3,3,128,updated_V2,0.4453125,297.6518019921875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,4,0,128,old_V2_rescored,0.484375,470.747663390625,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,4,0,128,updated_V2,0.484375,474.53237088281253,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,4,0.01,128,old_V2_rescored,0.4765625,450.7870899921875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,4,0.01,128,updated_V2,0.484375,451.4105863359375,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,4,0.03,128,old_V2_rescored,0.4921875,419.300122984375,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,4,0.03,128,updated_V2,0.4921875,415.0298977734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,4,0.1,128,old_V2_rescored,0.515625,358.3220439296875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,4,0.1,128,updated_V2,0.5234375,358.762851203125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,4,0.3,128,old_V2_rescored,0.5078125,356.140918515625,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,4,0.3,128,updated_V2,0.5078125,355.9244948203125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,4,1,128,old_V2_rescored,0.4609375,315.982525484375,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,4,1,128,updated_V2,0.4609375,318.36128182031246,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,4,3,128,old_V2_rescored,0.4453125,297.6518019921875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,4,3,128,updated_V2,0.4453125,297.6518019921875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,obqa,semantic,4,NA,128,fixed_R,0.4375,295.2237855390625,old panel action-only replay; fixed action
+small,obqa,semantic,4,NA,128,fixed_T,0.515625,899.4116217734374,old panel action-only replay; fixed action
+small,obqa,semantic,4,NA,128,fixed_C,0.515625,361.868204640625,old panel action-only replay; fixed action
+small,obqa,semantic,4,NA,128,fixed_A,0.421875,312.516828953125,old panel action-only replay; fixed action
+large,arc,word,3,0,128,old_V2_rescored,0.921875,996.636013765625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,3,0,128,updated_V2,0.9140625,993.573538171875,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,3,0.01,128,old_V2_rescored,0.8984375,304.53141265625004,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,3,0.01,128,updated_V2,0.8984375,304.10227747656245,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,3,0.03,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,3,0.03,128,updated_V2,0.8984375,267.49848825000004,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,3,0.1,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,3,0.1,128,updated_V2,0.8984375,267.6933713125,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,3,0.3,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,3,0.3,128,updated_V2,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,3,1,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,3,1,128,updated_V2,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,3,3,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,3,3,128,updated_V2,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,4,0,128,old_V2_rescored,0.921875,996.9760043203124,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,4,0,128,updated_V2,0.9140625,993.9135287265625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,4,0.01,128,old_V2_rescored,0.8984375,305.54352627343746,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,4,0.01,128,updated_V2,0.8984375,305.11439109375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,4,0.03,128,old_V2_rescored,0.8984375,267.109376,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,4,0.03,128,updated_V2,0.8984375,267.49848825000004,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,4,0.1,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,4,0.1,128,updated_V2,0.8984375,267.6933713125,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,4,0.3,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,4,0.3,128,updated_V2,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,4,1,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,4,1,128,updated_V2,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,4,3,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,4,3,128,updated_V2,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,word,4,NA,128,fixed_R,0.8984375,266.6171222734375,old panel action-only replay; fixed action
+large,arc,word,4,NA,128,fixed_T,0.9140625,1060.6606055078125,old panel action-only replay; fixed action
+large,arc,word,4,NA,128,fixed_C,0.890625,422.5938222109375,old panel action-only replay; fixed action
+large,arc,word,4,NA,128,fixed_A,0.8984375,297.05600934375,old panel action-only replay; fixed action
+large,arc,semantic,3,0,128,old_V2_rescored,0.90625,986.0328052890625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,3,0,128,updated_V2,0.90625,955.0604011171874,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,3,0.01,128,old_V2_rescored,0.890625,354.965364421875,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,3,0.01,128,updated_V2,0.8984375,337.06999374218753,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,3,0.03,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,3,0.03,128,updated_V2,0.90625,279.21945278906253,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,3,0.1,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,3,0.1,128,updated_V2,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,3,0.3,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,3,0.3,128,updated_V2,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,3,1,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,3,1,128,updated_V2,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,3,3,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,3,3,128,updated_V2,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,4,0,128,old_V2_rescored,0.90625,981.4944128750001,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,4,0,128,updated_V2,0.90625,950.522008703125,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,4,0.01,128,old_V2_rescored,0.890625,355.8148520390625,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,4,0.01,128,updated_V2,0.8984375,337.753207859375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,4,0.03,128,old_V2_rescored,0.8984375,267.2893558125,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,4,0.03,128,updated_V2,0.90625,279.39510524218747,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,4,0.1,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,4,0.1,128,updated_V2,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,4,0.3,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,4,0.3,128,updated_V2,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,4,1,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,4,1,128,updated_V2,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,4,3,128,old_V2_rescored,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,4,3,128,updated_V2,0.8984375,266.6171222734375,old panel action-only replay; new router overhead unmeasured; not new full latency
+large,arc,semantic,4,NA,128,fixed_R,0.8984375,266.6171222734375,old panel action-only replay; fixed action
+large,arc,semantic,4,NA,128,fixed_T,0.9140625,1060.6606055078125,old panel action-only replay; fixed action
+large,arc,semantic,4,NA,128,fixed_C,0.890625,422.5938222109375,old panel action-only replay; fixed action
+large,arc,semantic,4,NA,128,fixed_A,0.8984375,297.05600934375,old panel action-only replay; fixed action
+small,arc,word,3,0,128,old_V2_rescored,0.4765625,508.49881146875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,3,0,128,updated_V2,0.4765625,483.4357348125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,3,0.01,128,old_V2_rescored,0.4765625,456.3194697421875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,3,0.01,128,updated_V2,0.484375,452.63305996875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,3,0.03,128,old_V2_rescored,0.484375,444.43675439062497,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,3,0.03,128,updated_V2,0.484375,444.43675439062497,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,3,0.1,128,old_V2_rescored,0.484375,440.419399625,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,3,0.1,128,updated_V2,0.484375,440.419399625,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,3,0.3,128,old_V2_rescored,0.4921875,439.3341360703125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,3,0.3,128,updated_V2,0.4921875,439.3341360703125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,3,1,128,old_V2_rescored,0.4375,372.7560008125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,3,1,128,updated_V2,0.4375,371.912592984375,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,3,3,128,old_V2_rescored,0.390625,339.52760546093754,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,3,3,128,updated_V2,0.390625,339.52760546093754,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,4,0,128,old_V2_rescored,0.4765625,508.49881146875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,4,0,128,updated_V2,0.4765625,483.4357348125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,4,0.01,128,old_V2_rescored,0.4765625,456.3194697421875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,4,0.01,128,updated_V2,0.484375,452.63305996875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,4,0.03,128,old_V2_rescored,0.484375,444.43675439062497,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,4,0.03,128,updated_V2,0.484375,444.43675439062497,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,4,0.1,128,old_V2_rescored,0.484375,440.419399625,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,4,0.1,128,updated_V2,0.484375,440.419399625,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,4,0.3,128,old_V2_rescored,0.4921875,439.47256864843746,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,4,0.3,128,updated_V2,0.4921875,439.47256864843746,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,4,1,128,old_V2_rescored,0.421875,365.60962832812504,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,4,1,128,updated_V2,0.421875,365.60962832812504,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,4,3,128,old_V2_rescored,0.4140625,347.71102876562503,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,4,3,128,updated_V2,0.4140625,347.71102876562503,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,word,4,NA,128,fixed_R,0.375,340.99512340625,old panel action-only replay; fixed action
+small,arc,word,4,NA,128,fixed_T,0.3984375,1204.8778762031252,old panel action-only replay; fixed action
+small,arc,word,4,NA,128,fixed_C,0.484375,440.064044171875,old panel action-only replay; fixed action
+small,arc,word,4,NA,128,fixed_A,0.3828125,348.11612971093746,old panel action-only replay; fixed action
+small,arc,semantic,3,0,128,old_V2_rescored,0.4765625,494.648617125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,3,0,128,updated_V2,0.4765625,494.648617125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,3,0.01,128,old_V2_rescored,0.4765625,449.7730221484375,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,3,0.01,128,updated_V2,0.4765625,449.7730221484375,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,3,0.03,128,old_V2_rescored,0.4765625,443.75045394531253,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,3,0.03,128,updated_V2,0.4765625,443.75045394531253,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,3,0.1,128,old_V2_rescored,0.484375,440.064044171875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,3,0.1,128,updated_V2,0.484375,440.064044171875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,3,0.3,128,old_V2_rescored,0.484375,437.507433359375,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,3,0.3,128,updated_V2,0.484375,437.86278881249996,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,3,1,128,old_V2_rescored,0.40625,364.0666034765626,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,3,1,128,updated_V2,0.390625,369.61550867968754,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,3,3,128,old_V2_rescored,0.375,339.92643351562504,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,3,3,128,updated_V2,0.375,339.8117859296875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,4,0,128,old_V2_rescored,0.4765625,494.648617125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,4,0,128,updated_V2,0.4765625,494.648617125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,4,0.01,128,old_V2_rescored,0.4765625,449.7730221484375,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,4,0.01,128,updated_V2,0.4765625,449.7730221484375,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,4,0.03,128,old_V2_rescored,0.4765625,444.009472921875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,4,0.03,128,updated_V2,0.4765625,444.009472921875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,4,0.1,128,old_V2_rescored,0.484375,440.32306314843754,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,4,0.1,128,updated_V2,0.484375,440.32306314843754,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,4,0.3,128,old_V2_rescored,0.4765625,436.80685746875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,4,0.3,128,updated_V2,0.4765625,437.16221292187504,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,4,1,128,old_V2_rescored,0.40625,361.7938446171875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,4,1,128,updated_V2,0.3828125,365.29131046875,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,4,3,128,old_V2_rescored,0.3828125,337.7646002578125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,4,3,128,updated_V2,0.3828125,337.7646002578125,old panel action-only replay; new router overhead unmeasured; not new full latency
+small,arc,semantic,4,NA,128,fixed_R,0.375,340.99512340625,old panel action-only replay; fixed action
+small,arc,semantic,4,NA,128,fixed_T,0.3984375,1204.8778762031252,old panel action-only replay; fixed action
+small,arc,semantic,4,NA,128,fixed_C,0.484375,440.064044171875,old panel action-only replay; fixed action
+small,arc,semantic,4,NA,128,fixed_A,0.3828125,348.11612971093746,old panel action-only replay; fixed action

@@ -1,0 +1,65 @@
+check,expected,observed,status,source
+(0) small/OBQA/Text: certification recomputed (deployed q; 0 = fallback),0.0,0.0,PASS,stored thresholds + cal records
+(0) small/OBQA/C2C: certification recomputed (deployed q; 0 = fallback),0.0,0.0,PASS,stored thresholds + cal records
+(0) small/ARC/Text: certification recomputed (deployed q; 0 = fallback),0.0,0.0,PASS,stored thresholds + cal records
+(0) small/ARC/C2C: certification recomputed (deployed q; 0 = fallback),0.0,0.0,PASS,stored thresholds + cal records
+(0) medium/OBQA/Text: certification recomputed (deployed q; 0 = fallback),0.0,0.0,PASS,stored thresholds + cal records
+(0) medium/OBQA/C2C: certification recomputed (deployed q; 0 = fallback),0.55,0.55,PASS,stored thresholds + cal records
+(0) medium/ARC/Text: certification recomputed (deployed q; 0 = fallback),0.0,0.0,PASS,stored thresholds + cal records
+(0) medium/ARC/C2C: certification recomputed (deployed q; 0 = fallback),0.6,0.6,PASS,stored thresholds + cal records
+(0) large/OBQA/Text: certification recomputed (deployed q; 0 = fallback),0.8,0.8,PASS,stored thresholds + cal records
+(0) large/OBQA/C2C: certification recomputed (deployed q; 0 = fallback),0.8,0.8,PASS,stored thresholds + cal records
+(0) large/ARC/Text: certification recomputed (deployed q; 0 = fallback),0.95,0.95,PASS,stored thresholds + cal records
+(0) large/ARC/C2C: certification recomputed (deployed q; 0 = fallback),0.9,0.9,PASS,stored thresholds + cal records
+(0) large/MMLU-Pro/Text: certification recomputed (deployed q; 0 = fallback),0.4,0.4,PASS,stored thresholds + cal records
+(0) large/MMLU-Pro/C2C: certification recomputed (deployed q; 0 = fallback),0.4,0.4,PASS,stored thresholds + cal records
+(0) small/MMLU-Pro/Text: certification recomputed (deployed q; 0 = fallback),0.0,0.0,PASS,stored thresholds + cal records
+(0) small/MMLU-Pro/C2C: certification recomputed (deployed q; 0 = fallback),0.0,0.0,PASS,stored thresholds + cal records
+(0) medium/MMLU-Pro/Text: certification recomputed (deployed q; 0 = fallback),0.0,0.0,PASS,stored thresholds + cal records
+(0) medium/MMLU-Pro/C2C: certification recomputed (deployed q; 0 = fallback),0.0,0.0,PASS,stored thresholds + cal records
+(0) large/OBQA/Text+fact: certification recomputed (deployed q; 0 = fallback),0.75,0.75,PASS,stored thresholds + cal records
+(0) X1-Llama/OBQA/Text: certification recomputed (deployed q; 0 = fallback),0.0,0.0,PASS,stored thresholds + cal records
+(0) X1-Llama/OBQA/C2C: certification recomputed (deployed q; 0 = fallback),0.0,0.0,PASS,stored thresholds + cal records
+(0) X1-Llama/ARC/Text: certification recomputed (deployed q; 0 = fallback),0.0,0.0,PASS,stored thresholds + cal records
+(0) X1-Llama/ARC/C2C: certification recomputed (deployed q; 0 = fallback),0.0,0.0,PASS,stored thresholds + cal records
+(0) X2-OLMo/OBQA/Text: certification recomputed (deployed q; 0 = fallback),0.0,0.0,PASS,stored thresholds + cal records
+(0) X2-OLMo/ARC/Text: certification recomputed (deployed q; 0 = fallback),0.0,0.0,PASS,stored thresholds + cal records
+(0) X2-OLMo/MMLU-Pro/Text: certification recomputed (deployed q; 0 = fallback),0.0,0.0,PASS,stored thresholds + cal records
+(0) X3-Llama8B/OBQA/Text: certification recomputed (deployed q; 0 = fallback),0.6,0.6,PASS,stored thresholds + cal records
+(0) X3-Llama8B/OBQA/Text: thresholds = fit order statistics (X3 analyze_x3 rule),true,true,PASS,by construction
+(0) X3-Llama8B/ARC/Text: certification recomputed (deployed q; 0 = fallback),0.7,0.7,PASS,stored thresholds + cal records
+(0) X3-Llama8B/ARC/Text: thresholds = fit order statistics (X3 analyze_x3 rule),true,true,PASS,by construction
+(1) large/OBQA/Text: dev omitted/changed vs E14_2_zero_u.csv,"[572, 19]","[572, 19]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(1) large/OBQA/C2C: dev omitted/changed vs E14_2_zero_u.csv,"[572, 13]","[572, 13]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(1) large/ARC/Text: dev omitted/changed vs E14_2_zero_u.csv,"[284, 9]","[284, 9]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(1) large/ARC/C2C: dev omitted/changed vs E14_2_zero_u.csv,"[270, 3]","[270, 3]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(1) large/MMLU-Pro/Text: dev omitted/changed vs E14_2_zero_u.csv,"[1069, 40]","[1069, 40]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(1) large/MMLU-Pro/C2C: dev omitted/changed vs E14_2_zero_u.csv,"[1069, 37]","[1069, 37]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(1) medium/OBQA/C2C q=.55: dev omitted/changed vs E14_2_zero_u.csv,"[390, 11]","[390, 11]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(1) medium/OBQA/C2C q=.50: dev omitted/changed vs E14_2_zero_u.csv,"[355, 7]","[355, 7]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(1) medium/OBQA/C2C q=.50: dev omitted/changed vs value in the E17 request,"[355, 7]","[355, 7]",PASS,E17 request text
+(1) medium/ARC/C2C: dev omitted/changed vs E14_2_zero_u.csv,"[189, 4]","[189, 4]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(1) large/OBQA/Text+fact: dev omitted/changed vs E14_2_zero_u.csv,"[536, 13]","[536, 13]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(1) large/OBQA/Text+fact: dev omitted/changed vs value in the E17 request,"[536, 13]","[536, 13]",PASS,E17 request text
+(1) X3 obqa/Text: frozen q (X3 dev_table.csv),0.6,0.6,PASS,$DATA_DIR/P2_R6_X3_20260921T052602Z/results/analysis/dev_table.csv
+(1) X3 obqa/Text: dev omitted/changed vs X3 dev_table.csv,"[438, 7]","[438, 7]",PASS,$DATA_DIR/P2_R6_X3_20260921T052602Z/results/analysis/dev_table.csv
+(1) X3 obqa/Text: dev omitted/changed vs value in the E17 request,"[438, 7]","[438, 7]",PASS,E17 request text
+(1) X3 arc/Text: frozen q (X3 dev_table.csv),0.7,0.7,PASS,$DATA_DIR/P2_R6_X3_20260921T052602Z/results/analysis/dev_table.csv
+(1) X3 arc/Text: dev omitted/changed vs X3 dev_table.csv,"[206, 4]","[206, 4]",PASS,$DATA_DIR/P2_R6_X3_20260921T052602Z/results/analysis/dev_table.csv
+(1) X3 arc/Text: dev omitted/changed vs value in the E17 request,"[206, 4]","[206, 4]",PASS,E17 request text
+"(2) E14-2 dev n0/n range over the nine certified thresholds (%, 1 decimal)","[60.3, 92.1]","[60.3, 92.1]",PASS,recomputed; E14 RESULTS_E14.md
+(3) E14-1 sealed C2C official k/n,"[54, 1044]","[54, 1044]",PASS,$DATA_DIR/P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/records/e2e_requests.jsonl
+(3) E14-1 sealed C2C V2 k/n on the same subset,"[11, 1044]","[11, 1044]",PASS,$DATA_DIR/P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/records/e2e_requests.jsonl
+(3) E14-1 sealed C2C label differences (outputs),44,44,PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_1_label_diffs.csv
+(3) E14_1_label_diffs.csv rows,44,44,PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_1_label_diffs.csv
+(4) large/ARC/Text cal q=1: k/n,"[12, 448]","[12, 448]",PASS,stored cal records
+(5) large/OBQA/Text: dev u=0 rule n0/k0 == E14-2 n0/k0 (and every u=0 question is omitted),"[354, 2, 354]","[354, 2, 354]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(5) large/OBQA/C2C: dev u=0 rule n0/k0 == E14-2 n0/k0 (and every u=0 question is omitted),"[354, 1, 354]","[354, 1, 354]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(5) large/ARC/Text: dev u=0 rule n0/k0 == E14-2 n0/k0 (and every u=0 question is omitted),"[217, 0, 217]","[217, 0, 217]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(5) large/ARC/C2C: dev u=0 rule n0/k0 == E14-2 n0/k0 (and every u=0 question is omitted),"[217, 1, 217]","[217, 1, 217]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(5) large/MMLU-Pro/Text: dev u=0 rule n0/k0 == E14-2 n0/k0 (and every u=0 question is omitted),"[645, 8, 645]","[645, 8, 645]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(5) large/MMLU-Pro/C2C: dev u=0 rule n0/k0 == E14-2 n0/k0 (and every u=0 question is omitted),"[645, 5, 645]","[645, 5, 645]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(5) medium/OBQA/C2C q=.55: dev u=0 rule n0/k0 == E14-2 n0/k0 (and every u=0 question is omitted),"[321, 7, 321]","[321, 7, 321]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(5) medium/ARC/C2C: dev u=0 rule n0/k0 == E14-2 n0/k0 (and every u=0 question is omitted),"[174, 1, 174]","[174, 1, 174]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(5) large/OBQA/Text+fact: dev u=0 rule n0/k0 == E14-2 n0/k0 (and every u=0 question is omitted),"[354, 1, 354]","[354, 1, 354]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv
+(5) medium/OBQA/C2C q=.50: dev u=0 rule n0/k0 == E14-2 n0/k0 (and every u=0 question is omitted),"[321, 7, 321]","[321, 7, 321]",PASS,$DATA_DIR/P2_R6_E14_20260921T052241Z/results/E14_2_zero_u.csv

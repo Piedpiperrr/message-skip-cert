@@ -1,0 +1,10 @@
+{
+  "utc": "2026-09-14T17:52:05.659654+00:00",
+  "files": {
+    "inputs/evaluation_existing_gold.jsonl": "0754eaf8ad5e631dc12a1438001c798703f14ce145263cba13d6d8ade656d08b",
+    "inputs/component_estimates.jsonl": "8df2f85cf14284689d466ad58e9df459957c316e9738f90e231f3ffa79e21c74",
+    "evidence/panel_source_checks.json": "86cfe451ed2734c11375b2967370d03a8a8898ece199975d0d72058ed47afc70"
+  },
+  "new_requests": 0,
+  "scope": "identity validation only; existing gold isolated from runtime"
+}

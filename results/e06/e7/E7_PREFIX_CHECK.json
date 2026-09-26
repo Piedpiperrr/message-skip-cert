@@ -1,0 +1,82 @@
+{
+  "large_obqa": {
+    "receiver": "Qwen3-8B",
+    "n_questions": 128,
+    "exact_prefix_all": true,
+    "n_exact_prefix": 128,
+    "prefix_ids": [
+      785,
+      4396,
+      4226,
+      374
+    ],
+    "extra_tokens_in_probe": 4,
+    "R_tokens_mean": 117.9,
+    "lcp_min": 101,
+    "lcp_max": 143
+  },
+  "large_arc": {
+    "receiver": "Qwen3-8B",
+    "n_questions": 128,
+    "exact_prefix_all": true,
+    "n_exact_prefix": 128,
+    "prefix_ids": [
+      785,
+      4396,
+      4226,
+      374
+    ],
+    "extra_tokens_in_probe": 4,
+    "R_tokens_mean": 140,
+    "lcp_min": 105,
+    "lcp_max": 214
+  },
+  "large_mmlu_pro": {
+    "receiver": "Qwen3-8B",
+    "n_questions": 128,
+    "exact_prefix_all": true,
+    "n_exact_prefix": 128,
+    "prefix_ids": [
+      785,
+      4396,
+      4226,
+      374
+    ],
+    "extra_tokens_in_probe": 4,
+    "R_tokens_mean": 283.4,
+    "lcp_min": 122,
+    "lcp_max": 878
+  },
+  "medium_obqa": {
+    "receiver": "Qwen3-1.7B",
+    "n_questions": 128,
+    "exact_prefix_all": true,
+    "n_exact_prefix": 128,
+    "prefix_ids": [
+      785,
+      4396,
+      4226,
+      374
+    ],
+    "extra_tokens_in_probe": 4,
+    "R_tokens_mean": 117.9,
+    "lcp_min": 101,
+    "lcp_max": 143
+  },
+  "medium_arc": {
+    "receiver": "Qwen3-1.7B",
+    "n_questions": 128,
+    "exact_prefix_all": true,
+    "n_exact_prefix": 128,
+    "prefix_ids": [
+      785,
+      4396,
+      4226,
+      374
+    ],
+    "extra_tokens_in_probe": 4,
+    "R_tokens_mean": 140,
+    "lcp_min": 105,
+    "lcp_max": 214
+  }
+}

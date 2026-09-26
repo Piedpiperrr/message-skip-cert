@@ -1,0 +1,126 @@
+{
+ "repo": "meta-llama/Llama-3.1-8B-Instruct",
+ "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+ "cache_dir": "$DATA_DIR/hf_cache/hub",
+ "access_check_utc": "2026-09-21T06:33:29.952118+00:00",
+ "whoami": "user",
+ "access": "granted",
+ "snapshot": "$DATA_DIR/hf_cache/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659",
+ "download_seconds": 21.12506675720215,
+ "files": {
+  ".gitattributes": {
+   "size": 1519,
+   "size_hub": 1519,
+   "kind": "git_blob_sha1",
+   "hash": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+   "hub": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+   "ok": true
+  },
+  "LICENSE": {
+   "size": 7627,
+   "size_hub": 7627,
+   "kind": "git_blob_sha1",
+   "hash": "a7c3ca16cee30425ed6ad841a809590f2bcbf290",
+   "hub": "a7c3ca16cee30425ed6ad841a809590f2bcbf290",
+   "ok": true
+  },
+  "README.md": {
+   "size": 44044,
+   "size_hub": 44044,
+   "kind": "git_blob_sha1",
+   "hash": "bbd5630a05b65c1a8b25141bd11ec44844107d58",
+   "hub": "bbd5630a05b65c1a8b25141bd11ec44844107d58",
+   "ok": true
+  },
+  "USE_POLICY.md": {
+   "size": 4691,
+   "size_hub": 4691,
+   "kind": "git_blob_sha1",
+   "hash": "81ebb55902285e8dd5804ccf423d17ffb2a622ee",
+   "hub": "81ebb55902285e8dd5804ccf423d17ffb2a622ee",
+   "ok": true
+  },
+  "config.json": {
+   "size": 855,
+   "size_hub": 855,
+   "kind": "git_blob_sha1",
+   "hash": "0bb6fd75b3ad2fe988565929f329945262c2814e",
+   "hub": "0bb6fd75b3ad2fe988565929f329945262c2814e",
+   "ok": true
+  },
+  "generation_config.json": {
+   "size": 184,
+   "size_hub": 184,
+   "kind": "git_blob_sha1",
+   "hash": "cc7276afd599de091142c6ed3005faf8a74aa257",
+   "hub": "cc7276afd599de091142c6ed3005faf8a74aa257",
+   "ok": true
+  },
+  "model-00001-of-00004.safetensors": {
+   "size": 4976698672,
+   "size_hub": 4976698672,
+   "kind": "lfs_sha256",
+   "hash": "2b1879f356aed350030bb40eb45ad362c89d9891096f79a3ab323d3ba5607668",
+   "hub": "2b1879f356aed350030bb40eb45ad362c89d9891096f79a3ab323d3ba5607668",
+   "ok": true
+  },
+  "model-00002-of-00004.safetensors": {
+   "size": 4999802720,
+   "size_hub": 4999802720,
+   "kind": "lfs_sha256",
+   "hash": "09d433f650646834a83c580877bd60c6d1f88f7755305c12576b5c7058f9af15",
+   "hub": "09d433f650646834a83c580877bd60c6d1f88f7755305c12576b5c7058f9af15",
+   "ok": true
+  },
+  "model-00003-of-00004.safetensors": {
+   "size": 4915916176,
+   "size_hub": 4915916176,
+   "kind": "lfs_sha256",
+   "hash": "fc1cdddd6bfa91128d6e94ee73d0ce62bfcdb7af29e978ddcab30c66ae9ea7fa",
+   "hub": "fc1cdddd6bfa91128d6e94ee73d0ce62bfcdb7af29e978ddcab30c66ae9ea7fa",
+   "ok": true
+  },
+  "model-00004-of-00004.safetensors": {
+   "size": 1168138808,
+   "size_hub": 1168138808,
+   "kind": "lfs_sha256",
+   "hash": "92ecfe1a2414458b4821ac8c13cf8cb70aed66b5eea8dc5ad9eeb4ff309d6d7b",
+   "hub": "92ecfe1a2414458b4821ac8c13cf8cb70aed66b5eea8dc5ad9eeb4ff309d6d7b",
+   "ok": true
+  },
+  "model.safetensors.index.json": {
+   "size": 23950,
+   "size_hub": 23950,
+   "kind": "git_blob_sha1",
+   "hash": "0fd8120f1c6acddc268ebc2583058efaf699a771",
+   "hub": "0fd8120f1c6acddc268ebc2583058efaf699a771",
+   "ok": true
+  },
+  "special_tokens_map.json": {
+   "size": 296,
+   "size_hub": 296,
+   "kind": "git_blob_sha1",
+   "hash": "02ee80b6196926a5ad790a004d9efd6ab1ba6542",
+   "hub": "02ee80b6196926a5ad790a004d9efd6ab1ba6542",
+   "ok": true
+  },
+  "tokenizer.json": {
+   "size": 9085657,
+   "size_hub": 9085657,
+   "kind": "git_blob_sha1",
+   "hash": "5cc5f00a5b203e90a27a3bd60d1ec393b07971e8",
+   "hub": "5cc5f00a5b203e90a27a3bd60d1ec393b07971e8",
+   "ok": true
+  },
+  "tokenizer_config.json": {
+   "size": 55351,
+   "size_hub": 55351,
+   "kind": "git_blob_sha1",
+   "hash": "db88166e2bc4c799fd5d1ae643b75e84d03ee70e",
+   "hub": "db88166e2bc4c799fd5d1ae643b75e84d03ee70e",
+   "ok": true
+  }
+ },
+ "all_ok": true,
+ "verified_utc": "2026-09-21T06:34:09.734906+00:00"
+}

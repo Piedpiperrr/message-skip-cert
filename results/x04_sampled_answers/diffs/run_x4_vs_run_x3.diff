@@ -1,0 +1,88 @@
+--- ../P2_R6_X3_20260921T052602Z/src/run_x3.py	2026-09-21 06:10:30.000000000 +0000
++++ src/run_x4.py	2026-09-21 07:25:40.000000000 +0000
+@@ -1,4 +1,7 @@
+-"""X3 receiver-only driver = copy of X2 run_x2.py (approved changes A1 + A2) with the X3 changes marked "X3:" (receiver ids;
++"""X4 driver = byte copy of P2_R6_X3 src/run_x3.py plus the X4 change marked "X4:" (receiver Qwen3-8B only; --sampling on|off: a wrapper
++on model.generate seeds torch/cuda with the preregistered per-(question, path) seed immediately before each generation and, with
++--sampling on, passes the preregistered Qwen3 non-thinking sampling settings explicitly; seeds recorded per path).
++X3 docstring follows. X3 receiver-only driver = copy of X2 run_x2.py (approved changes A1 + A2) with the X3 changes marked "X3:" (receiver ids;
+ R-path tokenization of the rendered chat template with add_special_tokens=False, approved 2026-09-21 (no double BOS); explicit
+ add_special_tokens=False in the probe; per-row BOS counts; parsed-label comparison in validate mode). One GPU, one receiver; no helper, no fuser.
+ 
+@@ -11,7 +14,7 @@
+ Gold is never read. Each row's record is appended with fsync. Modes:
+   validate : receiver Qwen3-8B; compares every output with the saved large-pair records; writes VALIDATION.json; exit 3 on any diff
+   smoke/run: receiver as given; writes outputs only
+-usage: run_x3.py --mode {validate,smoke,run} --receiver {qwen3_8b,llama31_8b,mistral7b_v03} --rows <jsonl> --out <jsonl>
++usage: run_x4.py --mode {validate,smoke,run} --receiver qwen3_8b --sampling {off,on} --rows <jsonl> --out <jsonl>
+ """
+ import sys
+ sys.dont_write_bytecode = True
+@@ -22,7 +25,9 @@
+ ap.add_argument('--mode', required=True, choices=['validate', 'smoke', 'run'])
+ ap.add_argument('--receiver', required=True, choices=list(RECEIVERS))
+ ap.add_argument('--rows', required=True); ap.add_argument('--out', required=True)
++ap.add_argument('--sampling', required=True, choices=['off', 'on'])   # X4
+ a = ap.parse_args()
++assert a.receiver == 'qwen3_8b' and (a.mode != 'validate' or a.sampling == 'off')   # X4
+ OUT = pathlib.Path(a.out); assert not OUT.exists(), f'refusing to overwrite {OUT}'
+ rows = jl(a.rows)
+ parse = parser()
+@@ -74,6 +79,17 @@
+ runner = runtime.Runner.__new__(runtime.Runner)
+ runner.receiver, runner.receiver_tok = model, tok
+ runner.tr = legacy_methods.T2TReceiverBundle(model, tok)
++# X4: sampling switch. Both paths call model.generate (R: protocol_min.generate_receiver; Text: T2TReceiverBundle.consume).
++SAMPLING = dict(do_sample=True, temperature=0.7, top_p=0.8, top_k=20, min_p=0.0, repetition_penalty=1.0)
++CUR = dict(seed=None, calls=0)
++def x4_seed(qid, path): return int(hashlib.sha256(("X4|" + qid + "|" + path).encode("utf-8")).hexdigest()[:8], 16)
++_generate = model.generate
++def generate_x4(*args, **kw):
++    if a.sampling == 'on': kw.update(SAMPLING)
++    torch.manual_seed(CUR['seed']); torch.cuda.manual_seed_all(CUR['seed'])
++    CUR['calls'] += 1
++    return _generate(*args, **kw)
++model.generate = generate_x4
+ # ---- A1 probe setup: label-token rule on the receiver's own tokenizer
+ prefix_ids = tok.encode(PREFIX, add_special_tokens=False)
+ assert tok.decode(prefix_ids, skip_special_tokens=False, clean_up_tokenization_spaces=False) == PREFIX
+@@ -90,7 +106,8 @@
+            job_id=os.environ.get('PBS_JOBID'), host=os.uname().nodename, CUDA_VISIBLE_DEVICES=os.environ.get('CUDA_VISIBLE_DEVICES'),
+            bos_token_id=tok.bos_token_id, tokenizer_adds_bos_on_call=(tok('x')['input_ids'][:1] == [tok.bos_token_id]) if tok.bos_token_id is not None else False,
+            tokenizer_class=type(tok).__name__, transformers=__import__('transformers').__version__, PYTHONPATH=os.environ.get('PYTHONPATH'),
+-           sentencepiece=(__import__('sentencepiece').__file__ if __import__('importlib').util.find_spec('sentencepiece') else None))
++           sentencepiece=(__import__('sentencepiece').__file__ if __import__('importlib').util.find_spec('sentencepiece') else None),
++           sampling=a.sampling, sampling_kwargs=SAMPLING if a.sampling == 'on' else None, seed_rule='int(sha256(("X4|"+id+"|"+path).encode()).hexdigest()[:8],16), path in {R, Text}')
+ save(OUT.with_suffix('.env.json'), env)
+ 
+ 
+@@ -135,14 +152,18 @@
+         print('DEADLINE_STOP', r['dataset'], r['id'], flush=True); break
+     ds, q, legal = r['dataset'], r['query'], r['legal_labels']
+     use_format(ds)
+-    rec = dict(dataset=ds, split=r['split'], id=r['id'], representative=r['representative'], receiver=a.receiver, utc=utc(), cold_first_after_load=first, runtime_error=None)
++    rec = dict(dataset=ds, split=r['split'], id=r['id'], representative=r['representative'], receiver=a.receiver, utc=utc(), cold_first_after_load=first, runtime_error=None, sampling=a.sampling)
+     try:
++        CUR.update(seed=x4_seed(r['id'], 'R'), calls=0)   # X4
+         sync(); t = time.perf_counter(); res = runner.request(q, 'receiver_only'); sync()
++        assert CUR['calls'] == 1
+         o, why = v2(res['raw_answer'], legal)
+         rec['R'] = dict(raw=res['raw_answer'], generated_token_ids=res['generated_token_ids'], receiver_input_tokens=res['receiver_input_tokens'],
+                         parsed=o, parse_reason=why, latency_ms=(time.perf_counter() - t) * 1000,
+                         bos_count=bos_count(LAST['R_ids']), input_ids_sha256=hashlib.sha256(json.dumps(LAST['R_ids']).encode()).hexdigest())
+         assert res['receiver_input_tokens'] == len(LAST['R_ids'])
++        rec['R']['seed'] = CUR['seed']
++        CUR.update(seed=x4_seed(r['id'], 'Text'), calls=0)   # X4
+         sync(); t = time.perf_counter()
+         with torch.inference_mode():
+             tr = runner.tr.consume(q, FMT[ds](q, use_template=False), r['helper_message'])
+@@ -150,7 +171,8 @@
+         rec['T'] = dict(raw=tr['generated_text'], generated_token_ids=tr['generated_token_ids'], receiver_input_tokens=tr['receiver_input_token_count'],
+                         prompt_ids_sha256=hashlib.sha256(json.dumps(tr['receiver_prompt_token_ids']).encode()).hexdigest(),
+                         helper_message_sha256=r['helper_message_sha256'], parsed=o, parse_reason=why, latency_ms=(time.perf_counter() - t) * 1000,
+-                        bos_count=bos_count(tr['receiver_prompt_token_ids']))
++                        bos_count=bos_count(tr['receiver_prompt_token_ids']), seed=CUR['seed'])
++        assert CUR['calls'] == 1
+         sync(); t = time.perf_counter(); pr = probe(q, ds, legal); sync()
+         rec['P'] = dict(**pr, latency_ms=(time.perf_counter() - t) * 1000)
+     except Exception:

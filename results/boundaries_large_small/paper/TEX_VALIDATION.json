@@ -1,0 +1,55 @@
+{
+  "compiled": false,
+  "engines": {
+    "pdflatex": null,
+    "xelatex": null,
+    "lualatex": null,
+    "tectonic": null,
+    "latexmk": null
+  },
+  "installations": 0,
+  "reason": "No TeX compiler available on PATH; no compilation claimed",
+  "active_inputs": [
+    {
+      "source": "manuscript.tex",
+      "target": "reference_preserving.tex",
+      "sha256": "cbb9c836aac4e5f3640aca1a3a42e4a509b45485708e3991717fc3b71d8d81ce"
+    },
+    {
+      "source": "reference_preserving.tex",
+      "target": "boundary_methods.tex",
+      "sha256": "457bab1f97919ef1333c4b55a0f9106731fded3fdcdbb29d2b41152d8d9168e7"
+    },
+    {
+      "source": "reference_preserving.tex",
+      "target": "boundary_results.tex",
+      "sha256": "a78dce9ee069e939c0e3a8464b5b5339b0c6da2b3348f6d1651845f770e76b44"
+    },
+    {
+      "source": "boundary_results.tex",
+      "target": "boundary_main_table.tex",
+      "sha256": "447040380f6ab9748c51bac51f8346786408657bdf700724d216605580931a61"
+    },
+    {
+      "source": "boundary_results.tex",
+      "target": "boundary_panel_table.tex",
+      "sha256": "eec4056616260085fdefd8f8a5b091c3c0aef0d558871c59ddbbdbb04492e894"
+    },
+    {
+      "source": "reference_preserving.tex",
+      "target": "boundary_cost_limitations.tex",
+      "sha256": "764bb7f4b0a28196e691a678e916fa6895431d2b97b5da3bfc8c0da1bf445dfc"
+    },
+    {
+      "source": "boundary_cost_limitations.tex",
+      "target": "contribution_positioning.tex",
+      "sha256": "08258b99fad7f3c820637a02d95c819ec2568d68c26eedfd40370f61de726480"
+    },
+    {
+      "source": "manuscript.tex",
+      "target": "boundary_appendix.tex",
+      "sha256": "54800b594df21750f6c69fc84a936492890f3c163ec7d9a88e9e5b17e0e676f5"
+    }
+  ],
+  "environment_nesting_checked": true
+}

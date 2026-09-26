@@ -1,0 +1,20 @@
+{
+  "model": "$DATA_DIR/c2c_reproduction_assets/models/Qwen--Qwen3-0.6B",
+  "dataset": "openbookqa",
+  "answer_method": "generate",
+  "overall_accuracy": 0.396,
+  "subjects": {
+    "SPLIT_0_OF_1": 0.396
+  },
+  "length_statistics": {
+    "subjects": {
+      "SPLIT_0_OF_1": {
+        "avg_input_length": 117.926,
+        "avg_gen_length": 9.886,
+        "avg_length_ratio": 0.08413170793801686,
+        "accuracy": 0.396,
+        "total_samples": 500
+      }
+    }
+  }
+}

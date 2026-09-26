@@ -1,0 +1,5 @@
+item,check,expected,got,ok
+6,sealed ARC mean probe+selector T,42.55,42.55,True
+6,sealed ARC mean probe+selector C,40.51,40.51,True
+6,MMLU-Pro original replay mean probe(+selector) Text,48.4,48.4,True
+6,MMLU-Pro original replay mean probe(+selector) C2C,46.1,46.1,True

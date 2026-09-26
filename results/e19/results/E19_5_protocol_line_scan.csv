@@ -1,0 +1,49 @@
+file,line,text
+P2_R3_E9BC_20260920T061042Z/PROTOCOL_FREEZE_E9B.md,5,"section 4 — no E9b model output was ever produced, because the protocol's own gate failed."
+P2_R3_E9BC_20260920T061042Z/PROTOCOL_FREEZE_E9B.md,17,"n, changed k, conditional change rate with a two-sided Clopper-Pearson 95% interval, and the exact"
+P2_R3_E9BC_20260920T061042Z/PROTOCOL_FREEZE_E9B.md,34,"| frozen thresholds | medium/OBQA/C2C q=.55 `1.3113021850585938e-06` (`P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/deployments/obqa_C.json`); exposure-free q=.50 from `P2_R2_CPU_20260919T220412Z/followup/results/f1c_medium_obqa_C2C_dev.json`; large/OBQA/Text and /C2C q=.80 `1.170039176940918e-03` (`P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/deployments/large_obqa_{T,C}.json`); large/OBQA/Text+fact q=.75 `2.611875534057617e-04` (`P2_R2_GPU_20260919T220941Z/e6/analysis/E6_RESULTS.json`) |"
+P2_R3_E9BC_20260920T061042Z/PROTOCOL_FREEZE_E9B.md,38,"| statistics | Clopper-Pearson two-sided 95%; exact binomial p of H0: rho >= .05; paired bootstrap 2,000 resamples, seed 0, unit = question |"
+P2_R3_E9BC_20260920T061042Z/PROTOCOL_FREEZE_E9B.md,44,"1. `P2_R2_CPU_20260919T220412Z/{SUMMARY.md,results/facts_F1_F4.csv,scripts/facts.py}` — E5 fact F1, the"
+P2_R3_E9BC_20260920T061042Z/PROTOCOL_FREEZE_E9B.md,74,**FAILED — E9b is stopped and reported; no E9b model output was produced.**
+P2_R3_E9BC_20260920T061042Z/PROTOCOL_AMENDMENT_E9B.md,43,## 3. Check C1 — verdict: **PASS**
+P2_R3_E9BC_20260920T061042Z/PROTOCOL_AMENDMENT_E9B.md,53,"2. A first, deliberately looser pass also matched `question_id`, `example_id`, `qid`, `row_id` and"
+P2_R3_E9BC_20260920T061042Z/PROTOCOL_AMENDMENT_E9B.md,70,## 4. Check C2 — verdict: **PASS**
+P2_R3_E9BC_20260920T061042Z/PROTOCOL_AMENDMENT_E9B.md,83,"`…BOUNDARIES…/frozen_config.json` (ProbeMax, score choice, alpha=.05, delta, q-grid, p<=.001);"
+P2_R3_E9BC_20260920T061042Z/PROTOCOL_AMENDMENT_E9B.md,91,"`P2_R2_CPU_20260919T220412Z/{scripts/facts.py, results/facts_F1_F4.csv, SUMMARY.md}`. They cite the"
+P2_R3_E9BC_20260920T061042Z/PROTOCOL_AMENDMENT_E9B.md,106,"| `gate2c_selector_development_v5_20260727` | 2026-07-27 | none (CPU selector) | holdout feature rows decoded for role filtering only: 744 decoded, **0 retained, 0 used**; no fit/transform/metric | no |"
+P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/USER_PROMPT_ZH.md,50,- 补救任何失败结果。
+P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/USER_PROMPT_ZH.md,186,- CPU→GPU transfer；
+P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/USER_PROMPT_ZH.md,252,12. paired latency-saving descriptive 95% interval；
+P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/USER_PROMPT_ZH.md,269,本轮不重新做 calibration，也不在 test 上“通过/拒绝”新 threshold。
+P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/USER_PROMPT_ZH.md,273,`conditional answer-change ≤ 5%`
+P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/USER_PROMPT_ZH.md,281,冻结 policy 的 empirical conditional answer-change 是否仍处于预先指定的5%风险目标附近/以内？
+P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/USER_PROMPT_ZH.md,294,- seed0 paired bootstrap 95% descriptive interval。
+P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/USER_PROMPT_ZH.md,298,不设“两个都必须成功才能发表”的总体 post-hoc gate。
+P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/USER_PROMPT_ZH.md,300,Text 与 C2C 哪个成功、哪个失败都保留。
+P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/USER_PROMPT_ZH.md,369,CPU含准备、统计和报告设保守独立上限；保持BLAS/CPU线程限制，禁止无界并行。
+P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/USER_PROMPT_ZH.md,375,- 保存已经成功的test IDs；
+P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/USER_PROMPT_ZH.md,378,- 不自行resubmit或重新运行成功ID。
+P2_R7_E16_20260921T184114Z/PREREG.md,5,"ProbeMax prefix and label-token rules, alpha=.05, delta=.001, 20-candidate grid: all unchanged. Two unparseable answers"
+P2_R7_E16_20260921T184114Z/PREREG.md,6,count as agreement; exactly one unparseable counts as a change (paper convention). CP = two-sided 95% Clopper-Pearson.
+P2_R7_E16_20260921T184114Z/PREREG.md,17,"Report per policy: N, omitted n and coverage n/N next to the dev coverage (438/742, 206/299), changed k, k/n with CP,"
+P2_R7_E16_20260921T184114Z/PREREG.md,20,rate under the official C2C extraction as well (k/n [CP]; A-D items only).
+P2_R7_E16_20260921T184114Z/PREREG.md,22,"- CP upper < 5% -> ""The frozen Llama-3.1-8B policy passes an out-of-sample test: it omits Text on X% of N held-out"
+P2_R7_E16_20260921T184114Z/PREREG.md,23,"questions and changes k/n = r% [CP]"" (coverage stated next to the development coverage whatever it is)."
+P2_R7_E16_20260921T184114Z/PREREG.md,24,"- CP lower > 5% -> ""fails the out-of-sample test (r% [CP])""; the abstract sentence says the Llama certificate did not"
+P2_R7_E16_20260921T184114Z/PREREG.md,26,"- otherwise -> ""inconclusive: r% [CP]""; the abstract sentence says it holds on development data only."
+P2_R7_E16_20260921T184114Z/PREREG.md,27,Also state whether p <= .001 and p <= .025.
+P2_R7_E16_20260921T184114Z/PREREG.md,32,"Out-of-sample summary rule (E16-1 and E16-2 together with the earlier sealed/held-out tests): if every test passes,"
+P2_R7_E16_20260921T184114Z/PREREG.md,33,the abstract and Contribution 4 say all frozen out-of-sample tests have CP upper < 5% and list the policies; if any
+P2_R7_E16_20260921T184114Z/PREREG.md,34,"does not pass, that sentence becomes ""X of Y frozen out-of-sample tests have CP upper < 5%"" and names the others."
+P2_R7_E16_20260921T184114Z/PREREG.md,41,"V4 must pass), keep the option-label logits l (the bf16 lm_head outputs, upcast). Score m = logsumexp over the"
+P2_R7_E16_20260921T184114Z/PREREG.md,46,"q or fallback, dev coverage and changed/omitted with CP, and (certified settings only) the Jaccard index of the"
+P2_R7_E16_20260921T184114Z/PREREG.md,53,"(i) frozen numeric tau applied to u32: cal k/n/p of that candidate, dev coverage and changed/omitted with CP,"
+P2_R7_E16_20260921T184114Z/PREREG.md,77,"95% paired bootstrap (2,000, seed 0) with (a) all requests and (b) excluding the first request after model load;"
+P2_R7_E16_20260921T184114Z/PREREG.md,78,class from interval (b) as in E3 (lower > 0 -> positive; upper < 0 -> negative; else inconclusive); median saving;
+P2_R7_E16_20260921T184114Z/PREREG.md,88,"fallback, dev coverage kappa (= dev omitted / dev N) and changed/omitted with CP, accuracy of helper alone (E9c helper"
+P2_R7_E16_20260921T184114Z/PREREG.md,97,"Text can be omitted on kappa of questions with r% [CP] changes, keeping p% of the gain"" (+ replay class if run)."
+P2_R7_E16_20260921T184114Z/PREREG.md,109,G1 No prior outputs: PASS for E16-1 and E16-2.
+P2_R7_E16_20260921T184114Z/PREREG.md,114,"- Exact quoted-id grep over all *.json/*.jsonl in the repo: ARC test ids occur only in the sealed ARC run, its copies in the supplement packages, E14 (sealed re-check) and R1_CPU CSVs. None of these files names a medium or Llama model."
+P2_R7_E16_20260921T184114Z/PREREG.md,119,"- 1,172: sealed run records/e2e_requests.jsonl, reference=T, mode=reference. Message present 1,172/1,172; decodes from the saved helper ids 1,172/1,172; 0 runtime failures; file SHA-256 matches SHA256SUMS."
+P2_R7_E16_20260921T184114Z/PREREG.md,128,- So E16-3(a) re-runs the bf16 prefill (V4 must pass).
+P2_R7_E16_20260921T184114Z/PREREG.md,140,"- helper_message is a plain string, so the large helper's stored message can be passed without other changes. Confirmed."

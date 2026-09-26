@@ -1,0 +1,5 @@
+folder,host,job,gpu_count,gpu_model,driver,cuda_driver_api,torch,torch_cuda,topo_GPU0_to_GPU1,topo_GPU0_row,cpu_model,cpus,sockets,cores_per_socket,threads_per_core,source
+REPEAT1,compute-node,run019,4,NVIDIA A100-SXM4-40GB,580.65.06,13.0,2.6.0+cu124,12.4,NV4,X NV4 NV4 NV4,x86-64 CPU (model redacted),64,1,32,2,P2_R1_E3POL_REPEAT1_20260919T075315Z/logs/node_hardware.txt
+REPEAT2,compute-node,run019,4,NVIDIA A100-SXM4-40GB,580.65.06,13.0,2.6.0+cu124,12.4,NV4,X NV4 NV4 NV4,x86-64 CPU (model redacted),64,1,32,2,P2_R1_E3POL_REPEAT2_20260919T075315Z/logs/node_hardware.txt
+REPEAT3,compute-node,run020,4,NVIDIA A100-SXM4-40GB,580.65.06,13.0,2.6.0+cu124,12.4,NV4,X NV4 NV4 NV4,x86-64 CPU (model redacted),64,1,32,2,P2_R1_E3POL_REPEAT3_20260919T075315Z/logs/node_hardware.txt
+MMLU_C2C_FULL,compute-node,run020,4,NVIDIA A100-SXM4-40GB,580.65.06,13.0,2.6.0+cu124,12.4,NV4,X NV4 NV4 NV4,x86-64 CPU (model redacted),64,1,32,2,P2_R1_E3POL_MMLU_C2C_FULL_20260919T075315Z/logs/node_hardware.txt

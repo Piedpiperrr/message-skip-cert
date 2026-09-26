@@ -1,0 +1,16 @@
+{
+  "utc": "2026-09-14T18:07:35.421377+00:00",
+  "complete": true,
+  "new_complete_requests": 1024,
+  "new_online_probes": 512,
+  "all_frozen_input_score_route_matches": true,
+  "panel128_each": true,
+  "new_gold_acquisition": 0,
+  "ARC_test_read": false,
+  "all_timing_parts_sum": true,
+  "all_decompositions_sum": true,
+  "gold_association_after_replay": true,
+  "fixed_reference_same_job_residency": true,
+  "no_KV_reuse": true,
+  "small_fallback_unchanged": true
+}

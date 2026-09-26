@@ -1,0 +1,129 @@
+{
+  "populations": {
+    "obqa_fit.jsonl": {
+      "n": 2100,
+      "representatives": 2100,
+      "sha256": "3177e29c8ebe56c5af781f841ea8e4b6a508027a81936c601046ac1268664aea"
+    },
+    "obqa_cal.jsonl": {
+      "n": 1366,
+      "representatives": 1366,
+      "sha256": "d267fcb1237628a2d374d0e3ae8ec06a17bf8009d421d2c1ce5b2c649f86707e"
+    },
+    "obqa_dev.jsonl": {
+      "n": 742,
+      "representatives": 742,
+      "sha256": "8264a8e350722ba67bee8a179c52ccd5e231c84d8089029015779d87a4b78771"
+    },
+    "arc_fit.jsonl": {
+      "n": 671,
+      "representatives": 670,
+      "sha256": "989e41698dcfe1c9dbac1e7bbb5abfae3421ed5556abbd9d54aea3f799125717"
+    },
+    "arc_cal.jsonl": {
+      "n": 448,
+      "representatives": 448,
+      "sha256": "19075a48f40703315111b369b5a5a65716baae05b86ed71c12d3179c3b3fb0cd"
+    },
+    "arc_dev.jsonl": {
+      "n": 299,
+      "representatives": 299,
+      "sha256": "c12ae23dfb9d0c7de034cf5da5f048ee228887f04a2753bab93d830d66ddfa7b"
+    }
+  },
+  "sample16": {
+    "sample16_obqa.jsonl": "f4140378cd1ea8e65f70bfc363d93acf64deb30d30ba2bbd5fc333f0013b58fd",
+    "sample16_arc.jsonl": "a12d2c40c9e1426666cef76c5ffa99e6aa15050ce5e3edca7f09f35b7a4d6ca6",
+    "sample16_all.jsonl": "d884026c2cd75b9d0c836f9c8327eedd847674f9515c9836f19076f7e74e11bc"
+  },
+  "B_reuse": {
+    "probe_rows": 5626,
+    "probe_rendered_sha": 5626,
+    "probe_ids_sha": 5626,
+    "R_rows": 5626,
+    "R_input_tokens": 5626
+  },
+  "C_examples": [
+    {
+      "dataset": "obqa",
+      "id": "14-1371",
+      "llama_helper_prompt_rendered": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nIn one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nWhich relationship is true?\n\nChoices:\nA. wind is renewable; metal is nonrenewable\nB. wind is recyclable, metal is other\nC. wind is happy, metal is other\nD. wind is nonrenewable; metal is renewable\n\n\nDo NOT directly solve or give answer to the question.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "llama_bos_count": 1,
+      "llama_bos_id": 128000,
+      "fixed_date_present": true,
+      "default_render_differs_by_date_only": true,
+      "receiver_prompt_differs_only_in_message": true,
+      "small_pair_saved_T_input_tokens": 236,
+      "rebuilt_small_T_input_tokens": 236,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:6638"
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-97",
+      "llama_helper_prompt_rendered": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nIn one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nIf the source of a bean is very far away, and the bean becomes a source for another, separate bean, then the original bean was\n\nChoices:\nA. a bad seed\nB. a dispersed seed\nC. a fresh shell\nD. a meaty liver\n\n\nDo NOT directly solve or give answer to the question.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "llama_bos_count": 1,
+      "llama_bos_id": 128000,
+      "fixed_date_present": true,
+      "default_render_differs_by_date_only": true,
+      "receiver_prompt_differs_only_in_message": true,
+      "small_pair_saved_T_input_tokens": 233,
+      "rebuilt_small_T_input_tokens": 233,
+      "saved_record": "$DATA_DIR/P2_5_20260910T072811Z/results/train_cases.jsonl:7936"
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7181965",
+      "llama_helper_prompt_rendered": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nIn one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nFossils of the fern Glossopteris have been found in the continents of South America, Africa, Asia, and Antarctica. The seeds of this fern were too small to be dispersed by wind. Which is best indicated by the presence of Glossopteris fossils on these continents?\n\nChoices:\nA. Glossopteris was versatile enough to adapt to all climates.\nB. The landmasses were joined together in pre-historic times.\nC. Fossils were much better preserved in the southern continents.\nD. The northern climate regions were not suitable for plant growth.\n\n\nDo NOT directly solve or give answer to the question.<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "llama_bos_count": 1,
+      "llama_bos_id": 128000,
+      "fixed_date_present": true,
+      "default_render_differs_by_date_only": true,
+      "receiver_prompt_differs_only_in_message": true,
+      "small_pair_saved_T_input_tokens": 387,
+      "rebuilt_small_T_input_tokens": 387,
+      "saved_record": "$DATA_DIR/P2_9_20260911T045010Z/results/small/train_cases.jsonl:1366"
+    }
+  ],
+  "D1": {
+    "overlay_sha256_now": "341b2bb9ed3b68c68338a9a8a20db9e907027b449d12003df45be15d453cc27c",
+    "overlay_sha256_at_check": "341b2bb9ed3b68c68338a9a8a20db9e907027b449d12003df45be15d453cc27c",
+    "unchanged": true,
+    "results": {
+      "obqa": {
+        "n": 4208,
+        "user_message_equal": 4208,
+        "rendered_equal": 4208,
+        "ids_equal": 4208,
+        "K_not_4": 0,
+        "K_not_4_all_equal": 0
+      },
+      "arc": {
+        "n": 1418,
+        "user_message_equal": 1418,
+        "rendered_equal": 1418,
+        "ids_equal": 1418,
+        "K_not_4": 6,
+        "K_not_4_all_equal": 6
+      }
+    }
+  },
+  "freeze_inputs": {
+    "llama_chat_template_sha256": "5816fce10444e03c2e9ee1ef8a4a1ea61ae7e69e438613f3b17b69d0426223a4",
+    "llama_date_string": "26 Jul 2024",
+    "llama_generation_config": {
+      "do_sample": false,
+      "max_new_tokens": 64,
+      "eos_token_id": [
+        128001,
+        128008,
+        128009
+      ],
+      "pad_token_id": null,
+      "bos_token_id": 128000,
+      "temperature": null,
+      "top_p": null
+    },
+    "qwen06_chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+    "qwen06_generation_config_equals_frozen_small": true
+  }
+}

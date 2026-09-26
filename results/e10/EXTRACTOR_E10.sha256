@@ -1,0 +1,4 @@
+c7f5a0f2452da787c7af1620da668f3a9824094046b3d8766b58c81831ba984c  src/e10_extract.py
+03ea1b472ba1c521f0cc61d8a50b16cdf5d6f5cbb74a6599fb66f49c1e83bd83  src/e10_extract_test.py
+utc: 2026-09-20T23:01:04Z
+note: extractor frozen before any model output exists; 12/12 synthetic cases pass

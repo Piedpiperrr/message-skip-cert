@@ -1,0 +1,9 @@
+pair,task,reference,N_fit,fit_positive,feature_dim,n_iter,converged,fit_warnings,cal_AUROC,target_equals_historical,max_abs_prob_diff_vs_historical_fit,max_abs_prob_diff_vs_historical_cal,thresholds_equal_historical,ledger_equals_historical
+small,OBQA,Text,2100,977,2048,19,True,0,0.5673011601170568,,,,,
+small,OBQA,C2C,2100,998,2048,11,True,0,0.6175017217630854,,,,,
+small,ARC,Text,670,344,2048,9,True,0,0.513344645174169,,,,,
+small,ARC,C2C,670,360,2048,15,True,0,0.6777538761263091,,,,,
+large,OBQA,Text,2100,203,8192,19,True,0,0.7676697791170399,True,6.938893903907228e-16,7.494005416219807e-16,False,True
+large,OBQA,C2C,2100,160,8192,21,True,0,0.770967188423481,,,,,
+large,ARC,Text,670,32,8192,18,True,0,0.856460244648318,,,,,
+large,ARC,C2C,670,31,8192,18,True,0,0.8430913348946136,,,,,

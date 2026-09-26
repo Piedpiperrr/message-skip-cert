@@ -1,0 +1,57 @@
+# P2_R6_X3 — changes relative to X2 and events (post hoc cross-family extension X3)
+
+- **D1 (Step 0, 2026-09-21 05:26–05:31Z): receiver selection, blocked, then decided by the user.**
+  - `src/step0_receiver_check.py` / `src/step0_template_check.py` (tokenizer/config files only; no model output) → `notes/STEP0_*.json`.
+  - Llama-3.1-8B-Instruct: HF 403 for user. Readable copies in other users' shared filesystem areas were found and their tokenizer was read once for the label check (before the decision). User decision (2026-09-21): those copies are **not used**. Llama counts only if user's own token can download it at the single access check at 14:00 CDT; otherwise Mistral-7B-Instruct-v0.3. Granite is not used.
+- **D2 (approved 2026-09-21): no double BOS.** The paper R path (`protocol_min.receiver_prompt_tensors`: render, then `tokenizer(rendered)`) adds a second BOS for Llama-3.1 and Mistral-v0.3 tokenizers.
+  - `src/run_x3.py` replaces it (in `protocol_min` and `runtime`) with the same function tokenizing with `add_special_tokens=False`.
+  - The probe now tokenizes the rendered template explicitly with `add_special_tokens=False` and asserts equality with `apply_chat_template(tokenize=True)`.
+  - The Text path is unchanged paper code: `apply_chat_template(tokenize=True)` already calls `tokenizer(rendered, add_special_tokens=False)` (transformers 4.52.4, `tokenization_utils_base.py` l. 1666–1672).
+  - Per-row BOS counts for R, Text and probe are recorded.
+  - Qwen3-8B tokenizer: identical ids on the 16 check rows (CPU check); the bit-for-bit Step 2 check runs in the smoke job.
+  - Diff: `diffs/run_x3_vs_run_x2.diff`.
+- **D3 (descriptive, no rerun): X2's OLMo inputs had no duplicated BOS** (`notes/X2_OLMO_BOS_CHECK.json`):
+  - The OLMo tokenizer adds no BOS on call.
+  - All 17,267 X2 rows have exactly one leading BOS on the R, probe and Text paths.
+  - The stored X2 records show R-path ids = template ids on 17,267/17,267.
+- **D4: other X3 code changes (diffs in `diffs/`).**
+  - `xfam_common.py`: receiver entries; DATASETS = OBQA, ARC.
+  - `run_x3.py`: validate mode also compares parsed V2 labels with the stored `o_R`/`o_T`.
+  - `make_run_shards.py`: OBQA + ARC only (5,626 rows); receiver from `jobs/receiver.env`; proxy exports.
+- **D5: populations = X2 files, hash-checked.**
+  - `records/populations/{obqa,arc}_{fit,cal,dev}.jsonl` are byte copies of the X2 files; SHA-256 equals the X2 freeze on 6/6.
+  - IDs and representatives equal the paper split files. All 5,626 helper messages equal their saved large-pair Text records and stored SHA-256 (`notes/HELPER_AND_SPLIT_CHECK.json`).
+- **D6: work lists.**
+  - Step 2 check and smoke = the first 16 OBQA fit rows (`records/work/{validate,smoke}_rows.jsonl`). X2 used 8 OBQA + 8 ARC + 4 MMLU-Pro for its check.
+- **D7: analysis code check before any X3 output.**
+  - `src/analyze_x3.py` was run on the published X2 OLMo outputs → `results/analysis_code_check_on_X2/`.
+  - It reproduces the X2 table and accuracies, E11-a both-parse, the E5-b re-split rates and E13 item-5 argmax values for X2 OBQA/ARC exactly (see the README there).
+  - The deploying branch of the re-split loop is not exercised by X2.
+- **D8: Step 6 feasibility** (`notes/STEP6_FEASIBILITY.md`, written before any X3 output). The E3 driver cannot switch the receiver by model id + chat template alone, so the replay would not be run.
+- **D9: production job writes `results/runs/MANIFEST.sha256`** (all chain outputs and env files) after mpiexec. The analysis verifies it first.
+- **D10 (2026-09-21 06:33–06:36Z): receiver = Llama-3.1-8B-Instruct @ 0e9e39f249a16976918f6564b8830bc894c89659 (user update: HF access ACCEPTED for user on Sep 21; proceed without waiting for 14:00 CDT).**
+  - The scheduled 14:00 CDT check was cancelled before it ran (`logs/access_check_1400CDT.log`).
+  - Download with user's own token: access granted 06:33:30Z.
+    - 14 HF-format files went to `$DATA_ROOT/hf_cache/hub`; `original/` was skipped.
+    - All 14 verified: 4 safetensors against the HF LFS SHA-256, the rest against the git blob SHA-1 (`manifests/DOWNLOAD_llama31_8b.json`, `logs/download_llama31_8b.log`).
+    - The copies in other users' areas were not used or copied.
+  - Tokenizer-only check on the own copy (`notes/LLAMA_OWN_COPY_TOKENIZER_CHECK.json`):
+    - A–E single tokens 32–36; label sets A–J non-empty and disjoint; the prefix round-trips.
+    - On the 16 smoke rows the paper R path gives 2 leading BOS. The patched R path, the probe and the Text path give 1.
+  - Llama-3.1's default chat template emits its own system header with no system message: "Cutting Knowledge Date: December 2023 / Today Date: 26 Jul 2024", with a fixed default date and no `strftime`. This is the receiver's default template; no system prompt is added by us.
+  - Mistral and Granite are not used. The Mistral download and `pydeps/` (sentencepiece) stay on disk unused; `jobs/receiver.env` sets an empty `X3_PYTHONPATH`.
+  - `PREREG_X3.md` was written and hashed at 06:36:04Z (SHA-256 8a2f6c6db619ca39d27ef1ada579ff1944bdfbda098e3d88680567daed6eb27f), before any X3 model output. Files set read-only.
+- **D11: smoke job 7641942 (debug, 1 node, compute-node), 06:36:25–06:42:35Z.**
+  - Step 2 check (Qwen3-8B, 16 stored large-pair OBQA fit rows): **PASS 16/16** bit for bit. Probe ids, ProbeMax, p_labels, R raw, Text raw, R parsed and Text parsed are equal on every row (`results/validation/VALIDATION.json`).
+  - Llama smoke (same 16 rows): **PASS**. INVALID R 0/16, Text 0/16; 0 runtime errors; 0 NaN; leading BOS = 1 on R, Text and probe for 16/16 (`results/smoke/SMOKE_CHECK.json`). Gold was not read.
+- **D12: production plan, recorded before submission.**
+  - Job `P2R6_X3_RUN`: debug, 2 nodes, walltime 00:30:00, 8 single-GPU chains (4 per node); driver deadline = walltime − 4 min.
+  - Shards `records/work/run/chain_00..07.jsonl` cover all 5,626 rows in paper order (`PLAN.json`).
+  - Sizing: smoke warm latency 0.359 s/row × 1.3 = 0.47 s/row, about 5.5 min of requests per chain. The smoke measured about 146 s to load Llama.
+- **D13: production job 7641947 (debug, 2 nodes: compute-node, compute-node), 06:43:21–06:50:48Z.**
+  - Walltime used 00:07:21; Exit_status 0; MPIEXEC_EXIT=0.
+  - All 8 chains exited 0 with 5,626/5,626 rows (703×7 + 705). No DEADLINE_STOP and no RUNTIME_ERROR line in the chain logs.
+  - `results/runs/MANIFEST.sha256` (16 files) verified with `sha256sum -c`: 16/16 OK, 07:07Z, before any analysis or gold read.
+- **D14 (user decisions, 2026-09-21 ~07:05Z).**
+  - (a) Step 6 follows the preregistration: the E3 driver cannot switch the receiver by model id + chat template (`notes/STEP6_FEASIBILITY.md`), so **the X3 replay is not run**. No new replay driver is built.
+  - (b) Stated explicitly, as preregistered: Llama-3.1-8B-Instruct's default chat template inserts its own fixed system header ("Cutting Knowledge Date: December 2023 / Today Date: 26 Jul 2024") in every rendered prompt (R, Text, probe). We added no system prompt (see also D10).

@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-21T07:29:04.987065+00:00",
+  "note": "computed before any gold read",
+  "manifest_check": {
+    "chain_00.jsonl": {
+      "listed": "da0898e1658e8a2a62df34f56c7fe5c2b83cc952e78fed0e15b701dfc73894aa",
+      "now": "da0898e1658e8a2a62df34f56c7fe5c2b83cc952e78fed0e15b701dfc73894aa",
+      "ok": true
+    }
+  },
+  "files": {
+    "results/runs/chain_00.jsonl": "da0898e1658e8a2a62df34f56c7fe5c2b83cc952e78fed0e15b701dfc73894aa"
+  }
+}

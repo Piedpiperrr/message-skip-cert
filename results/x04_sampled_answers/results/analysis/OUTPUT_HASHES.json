@@ -1,0 +1,96 @@
+{
+  "utc": "2026-09-21T07:40:06.264929+00:00",
+  "note": "computed before any gold read",
+  "manifest_check": {
+    "chain_00.jsonl": {
+      "listed": "26b5153fee235515b21f5ff7b37813aa7217b608acb6bfc7f13ea19a42d59570",
+      "now": "26b5153fee235515b21f5ff7b37813aa7217b608acb6bfc7f13ea19a42d59570",
+      "ok": true
+    },
+    "chain_01.jsonl": {
+      "listed": "6d642c2c50cea6320f7297f61b4968751594bba2db5d76b7fe32b76d4d215ddf",
+      "now": "6d642c2c50cea6320f7297f61b4968751594bba2db5d76b7fe32b76d4d215ddf",
+      "ok": true
+    },
+    "chain_02.jsonl": {
+      "listed": "5d832cf1894111ca9be5b93825831a223bef6aca78c2b142bc5ecb508d57669c",
+      "now": "5d832cf1894111ca9be5b93825831a223bef6aca78c2b142bc5ecb508d57669c",
+      "ok": true
+    },
+    "chain_03.jsonl": {
+      "listed": "44c1b06bd511650dc601240330e4ed4922ea9a44d59dcc3027a501e4a277034b",
+      "now": "44c1b06bd511650dc601240330e4ed4922ea9a44d59dcc3027a501e4a277034b",
+      "ok": true
+    },
+    "chain_04.jsonl": {
+      "listed": "3eeaf09d0241a07aa7906fdf0ac55a9621c2c087692c484b06f086ad614c6a19",
+      "now": "3eeaf09d0241a07aa7906fdf0ac55a9621c2c087692c484b06f086ad614c6a19",
+      "ok": true
+    },
+    "chain_05.jsonl": {
+      "listed": "2ffa3564b6aadc37c67f9113b4e559627c135b5a106b91639c70e54935d40b5f",
+      "now": "2ffa3564b6aadc37c67f9113b4e559627c135b5a106b91639c70e54935d40b5f",
+      "ok": true
+    },
+    "chain_06.jsonl": {
+      "listed": "caec72cdf5ae6b3e854c8c7594bd73a7ea73efb6be3f00e67f6a6fba97870ae1",
+      "now": "caec72cdf5ae6b3e854c8c7594bd73a7ea73efb6be3f00e67f6a6fba97870ae1",
+      "ok": true
+    },
+    "chain_07.jsonl": {
+      "listed": "d0cd369619cdababe98393a6df5d369f7400af1b5d0623abd995f69215f3edd4",
+      "now": "d0cd369619cdababe98393a6df5d369f7400af1b5d0623abd995f69215f3edd4",
+      "ok": true
+    },
+    "chain_00.env.json": {
+      "listed": "6c9d38c96e12b72aa62b326ecbca017cff51162af454228b75ef217828cf136b",
+      "now": "6c9d38c96e12b72aa62b326ecbca017cff51162af454228b75ef217828cf136b",
+      "ok": true
+    },
+    "chain_01.env.json": {
+      "listed": "63a9259af958ca1a52e56bd6d61b0c25d954342b4b4d8c84dd79b932dc2f93c8",
+      "now": "63a9259af958ca1a52e56bd6d61b0c25d954342b4b4d8c84dd79b932dc2f93c8",
+      "ok": true
+    },
+    "chain_02.env.json": {
+      "listed": "8710f916fc6ab13210cc06f632a1f656130c7b80c167d8957002ab3b6ac524e8",
+      "now": "8710f916fc6ab13210cc06f632a1f656130c7b80c167d8957002ab3b6ac524e8",
+      "ok": true
+    },
+    "chain_03.env.json": {
+      "listed": "e5c91d635598c039984152126227986609b47614692ee898c2b8a55f54f2ba55",
+      "now": "e5c91d635598c039984152126227986609b47614692ee898c2b8a55f54f2ba55",
+      "ok": true
+    },
+    "chain_04.env.json": {
+      "listed": "e325865777595bca3e7c2c642434877985bbea08afeb069c63c389a34a06b4a3",
+      "now": "e325865777595bca3e7c2c642434877985bbea08afeb069c63c389a34a06b4a3",
+      "ok": true
+    },
+    "chain_05.env.json": {
+      "listed": "7e624a906fb08a427399b1756e790f2e3a0165f53935be303c989e096a09351c",
+      "now": "7e624a906fb08a427399b1756e790f2e3a0165f53935be303c989e096a09351c",
+      "ok": true
+    },
+    "chain_06.env.json": {
+      "listed": "e478f3bc9853638fc8414c411e04e8de170289def48fa8da9872e5919ea1cc3e",
+      "now": "e478f3bc9853638fc8414c411e04e8de170289def48fa8da9872e5919ea1cc3e",
+      "ok": true
+    },
+    "chain_07.env.json": {
+      "listed": "5d07fb2740b57f9b64b3610cde07b209a66055b79670dffcb18d2c33e0545bb1",
+      "now": "5d07fb2740b57f9b64b3610cde07b209a66055b79670dffcb18d2c33e0545bb1",
+      "ok": true
+    }
+  },
+  "files": {
+    "results/runs/chain_00.jsonl": "26b5153fee235515b21f5ff7b37813aa7217b608acb6bfc7f13ea19a42d59570",
+    "results/runs/chain_01.jsonl": "6d642c2c50cea6320f7297f61b4968751594bba2db5d76b7fe32b76d4d215ddf",
+    "results/runs/chain_02.jsonl": "5d832cf1894111ca9be5b93825831a223bef6aca78c2b142bc5ecb508d57669c",
+    "results/runs/chain_03.jsonl": "44c1b06bd511650dc601240330e4ed4922ea9a44d59dcc3027a501e4a277034b",
+    "results/runs/chain_04.jsonl": "3eeaf09d0241a07aa7906fdf0ac55a9621c2c087692c484b06f086ad614c6a19",
+    "results/runs/chain_05.jsonl": "2ffa3564b6aadc37c67f9113b4e559627c135b5a106b91639c70e54935d40b5f",
+    "results/runs/chain_06.jsonl": "caec72cdf5ae6b3e854c8c7594bd73a7ea73efb6be3f00e67f6a6fba97870ae1",
+    "results/runs/chain_07.jsonl": "d0cd369619cdababe98393a6df5d369f7400af1b5d0623abd995f69215f3edd4"
+  }
+}

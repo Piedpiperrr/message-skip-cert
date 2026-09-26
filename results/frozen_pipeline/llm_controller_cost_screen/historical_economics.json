@@ -1,0 +1,16 @@
+{
+  "N": 128,
+  "R_ms": 295.2237855390625,
+  "C2C_ms": 361.868204640625,
+  "mean_C2C_minus_R_ms": 66.6444191015625,
+  "unrestricted_latency_oracle_ms": 76.37321039062499,
+  "empirical_risk_005_oracle_gross_ms": 42.9919258203125,
+  "oracle_agreement_routes": 57,
+  "oracle_disagreement_routes": 3,
+  "agreement_only_original_gross_ms": 29.4928359453125,
+  "panel_disagreement_count": 58,
+  "existing_probe_mean_ms": 32.878533711482305,
+  "existing_probe_min_ms": 30.491359066218138,
+  "cost_prefix_historical_gap_ms": 51.44371687500001,
+  "caveat": "Historical component screen only. Empirical panel risk<=.05 is not calibration, a population bound, or proof of E2E impossibility. No AgentGate scores used to choose oracle routes."
+}

@@ -1,0 +1,61 @@
+{
+  "utc": "2026-09-13T04:20:11.374379+00:00",
+  "scientific_protocol_changed": false,
+  "new_LR_attempts_before_submission": 0,
+  "changes": [
+    {
+      "file": "run_bounded.py",
+      "original_sha256": "c95a5109ca47fb9dcb7c17af88a2afa7dc3c7dc1c2a6e315d2f49af427a4a0d5",
+      "new_sha256": "b3e127d5bb266d9c1be7b833c159e7daf08e9ea606ae0242f2d561c3ce82cee0",
+      "execution_or_reporting_change": "PBS-bound clearance, shared CPU ledger, fitting/aggregation/validation phases, reserved closeout budget and explicit targeted repair window"
+    },
+    {
+      "file": "fit_stage.py",
+      "original_sha256": "b1e4f3a93d4b6a9936ea22bff966cb5ba14d7f139e997424aadef5c98cd6bb95",
+      "new_sha256": "55ecb04a066ccba71b5fe9bb9539670ace252dab30bfeae3d0d9bf57a4a02d95",
+      "execution_or_reporting_change": "Input/model provenance, formal-head probability checks, first official fold audit and safe successful artifact reuse"
+    },
+    {
+      "file": "pbs_entry.py",
+      "original_sha256": null,
+      "new_sha256": "07466c4cea379be79449979f5fc851ff3521e9baa1ba2a1d479957a070d6e80f",
+      "execution_or_reporting_change": "Runtime owner/host/session/nodefile/sharedfs evidence; allowed clearance only inside actual allocation"
+    },
+    {
+      "file": "analyze_stage.py",
+      "original_sha256": null,
+      "new_sha256": "aac1534a8c9d3eb738a0d6eea823af06bbcb493516fd06912d3a121246d66e17",
+      "execution_or_reporting_change": "Implement already frozen output metrics, fixed development comparison, all lambda diagnostics, model index and English LaTeX tables"
+    },
+    {
+      "file": "validate_stage.py",
+      "original_sha256": null,
+      "new_sha256": "28c641cbecbeed1ac1f9df54a6ae859f00887fdd0146f90c53ef81a9e9fd0995",
+      "execution_or_reporting_change": "Independent formal first-fold numerical validation and all result-table consistency checks"
+    },
+    {
+      "file": "run_p2_v2_ffr_e0.pbs",
+      "original_sha256": null,
+      "new_sha256": "6cd6f741042a1796ebb2d1fc12677592dc44c4b2d739a9e8126a2fd21af1176a",
+      "execution_or_reporting_change": "Minimal authorized gpu-queue select=1 01:30:00 CPU-only entry"
+    }
+  ],
+  "finalized_utc": "2026-09-13T04:38:29.100348+00:00",
+  "final_code_sha256": {
+    "run_bounded.py": "b3e127d5bb266d9c1be7b833c159e7daf08e9ea606ae0242f2d561c3ce82cee0",
+    "pbs_entry.py": "44730793228e61a6e1dd0fdddf599706245ea8cadc37848050eec5762cea1bf2",
+    "fit_stage.py": "55ecb04a066ccba71b5fe9bb9539670ace252dab30bfeae3d0d9bf57a4a02d95",
+    "analyze_stage.py": "aac1534a8c9d3eb738a0d6eea823af06bbcb493516fd06912d3a121246d66e17",
+    "validate_stage.py": "28c641cbecbeed1ac1f9df54a6ae859f00887fdd0146f90c53ef81a9e9fd0995",
+    "run_p2_v2_ffr_e0.pbs": "6cd6f741042a1796ebb2d1fc12677592dc44c4b2d739a9e8126a2fd21af1176a",
+    "run_p2_v2_ffr_e0_resume.pbs": "3437d5bcfc30efad2c28b02f0543c0729c78bca5de66ef749515249a96fe77cf",
+    "submit_stage.py": "a4f4387fde50a37fa2a9f1a095c31ac88dd04cff5c548185dc14258707d18539",
+    "finalize_reporting.py": "d7059a0ea36e99d09b01b4901c152408a9ea570541f6d1221132a9d0f11770a1",
+    "finalize_delivery.py": "385eab05d8e5ee0815a6a3ccc7646beb23bb3959347a9891849e4a1caa027292"
+  },
+  "targeted_startup_fixes": [
+    "evidence/pbs/STARTUP_FAILURE_AND_TARGETED_RESUME.json",
+    "evidence/pbs/clearance_format_fix.json"
+  ],
+  "model_or_scientific_protocol_changes": false
+}

@@ -1,0 +1,16 @@
+{
+  "utc": "2026-09-14T05:58:19.479564+00:00",
+  "files": {
+    "summary/main_new15.csv": "770bc982bdb4e5ca681854ca0f705f813e130d683e3fae13274e68de3ca0931d",
+    "summary/budget_summary.csv": "0f2796fe4fe9322dbbe47ccd50bed25089301f6b470e5d939a6653acd36e2c93",
+    "summary/coverage_matched.csv": "1757d5d33c6cd052bb3fea2c61b5c739d647fdbfd5fc805860dbf7471351dc3b",
+    "summary/bootstrap_B128_vs_D.csv": "6b47576640812d0478874c8ec24902cee46118a40768753b4d0a76e1c4938821",
+    "records/dev_per_question_new.jsonl": "aa229d50050ec49f91fb548680c68f68cd5e09a39af589a00eb443e8c613073b",
+    "summary/algorithm_label_cost_ledger.csv": "31dc9a3a8d76e37d12b8eac8898dc702ceb8ffc1e1e25793bcbdedcb784a14bc",
+    "summary/experiment_ledger.json": "160bba28585959b95584a0a8225b5e1d875717b3c8afc2aad28ed7f4338e0ae7",
+    "evidence/NUMERICAL_VALIDATION.json": "713c7594a0cbb26fdc237a5dab41bb2af1a38f41facd884cdb46b8263e89c373"
+  },
+  "new_models": 15,
+  "new_cal_tests": 300,
+  "new_dev_evaluations": 11130
+}

@@ -1,0 +1,89 @@
+{
+  "helper_pair": "medium",
+  "helper": {
+    "repo_id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "path": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_20260915T152640Z/assets/helper"
+  },
+  "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+  "prefix_literal": "The correct answer is",
+  "prefix_ids": [
+    785,
+    4396,
+    4226,
+    374
+  ],
+  "prefix_encoding": "add_special_tokens=False",
+  "label_token_sets": {
+    "A": [
+      32,
+      362,
+      22985
+    ],
+    "B": [
+      33,
+      425,
+      12791
+    ],
+    "C": [
+      34,
+      356,
+      6258
+    ],
+    "D": [
+      35,
+      422,
+      10957
+    ],
+    "E": [
+      36,
+      468,
+      22784
+    ],
+    "F": [
+      37,
+      434,
+      12727
+    ],
+    "G": [
+      38,
+      479,
+      9600
+    ],
+    "H": [
+      39,
+      472,
+      13292
+    ],
+    "I": [
+      40,
+      358,
+      24486
+    ],
+    "J": [
+      41,
+      619,
+      17100
+    ]
+  },
+  "label_token_count": {
+    "A": 3,
+    "B": 3,
+    "C": 3,
+    "D": 3,
+    "E": 3,
+    "F": 3,
+    "G": 3,
+    "H": 3,
+    "I": 3,
+    "J": 3
+  },
+  "max_K_on_lane": 10,
+  "rule": "own tokenizer non-special single tokens decoding.strip()==displayed label; dynamic K",
+  "renormalization": "FP32 label logsumexp then softmax over the K displayed labels",
+  "score": "HelperMax = 1 - max p; argmax_helper_label = argmax p",
+  "generation": false,
+  "fuser_loaded": false,
+  "receiver_loaded": false,
+  "gold_read": false
+}

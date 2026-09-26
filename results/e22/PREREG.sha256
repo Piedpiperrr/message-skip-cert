@@ -1,0 +1,25 @@
+# E22 PREREG record
+
+Recorded (UTC): 2026-09-22T19:54:17Z
+Recorded before any E22 statistic was computed. The step-0 REPRO checks (REPRO.md) ran first, as the task allows.
+
+## PREREG
+
+```
+b85cd9974a9d995423053a99f8572ec8a23c8b93082fcd0f16bc0264e3bbe50f  PREREG.md
+bytes: 7474
+```
+
+## Scripts (SHA-256)
+
+```
+3930f9f763bd57c944fbb3e22ab3941dc1a883406cd2b255c0f886ef894f89ed  scripts/e22_1.py
+a0d476dbdcee112681a9a0df8c64042c40f014481ec0308fd071f039b2ec05e5  scripts/e22_2.py
+4dd894e0ac780ef22ef81ae82609d8b9dee651bf888d2319edce77da2d3c9370  scripts/e22_common.py
+f8785bd64ae08298e3963a9eb77dbdba7ddd616767fe5c1d8db1fe4e0fa2e182  scripts/make_summary.py
+004e169b140d0aade3523d9740aee498e0ad85d280acd044be4d356912a3d679  scripts/step0_repro.py
+```
+
+## Seed
+
+E9-a's stored seed, `numpy.random.default_rng(0)` (e9a_main.py / e9a_boot.py); SEED = 0 in scripts/e22_common.py.

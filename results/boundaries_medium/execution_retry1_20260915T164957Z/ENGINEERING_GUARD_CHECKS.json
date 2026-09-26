@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-15T16:55:14.774272+00:00",
+  "cases": [
+    {
+      "cgroup_raw": "0::/\n",
+      "legacy_match": false,
+      "scheduler_guard": "PASS"
+    },
+    {
+      "cgroup_raw": "0::/system.slice/pbs.service/task_185994\n",
+      "legacy_match": false,
+      "scheduler_guard": "PASS"
+    },
+    {
+      "cgroup_raw": "7:cpu:/pbs_jobs/run004\n",
+      "legacy_match": false,
+      "scheduler_guard": "PASS"
+    },
+    {
+      "cgroup_raw": "7:cpu:/jobs/185994\n",
+      "legacy_match": true,
+      "scheduler_guard": "PASS"
+    },
+    {
+      "mutation": "wrong_host",
+      "expected": "BLOCKED"
+    },
+    {
+      "mutation": "allocated_one_gpu",
+      "expected": "BLOCKED"
+    },
+    {
+      "mutation": "requested_one_gpu",
+      "expected": "BLOCKED"
+    },
+    {
+      "mutation": "not_running",
+      "expected": "BLOCKED"
+    },
+    {
+      "mutation": "wrong_account",
+      "expected": "BLOCKED"
+    },
+    {
+      "mutation": "wrong_queue",
+      "expected": "BLOCKED"
+    },
+    {
+      "mutation": "too_long",
+      "expected": "BLOCKED"
+    }
+  ],
+  "dynamic_deadline_wall_seconds": 12590,
+  "safety_margin_seconds": 45,
+  "cumulative_cap_GPU_hours": 7,
+  "project_question_reads": 0,
+  "model_loading_calls": 0,
+  "model_forwards": 0
+}

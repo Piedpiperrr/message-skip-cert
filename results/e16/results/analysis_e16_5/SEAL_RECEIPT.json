@@ -1,0 +1,10 @@
+{
+  "utc": "2026-09-21T19:12:50.839773+00:00",
+  "note": "certification and all gold-free results hashed before gold",
+  "gold_read": false,
+  "files": {
+    "ledger_40.csv": "51fb50811dc8a0237d935790b3f3bc45df239d901fa6de5d9b66f9981e2fbf7b",
+    "resplit_per_seed.csv": "509463e6679546e250ba2f0b6aae8dd2943b0e5f443c40347550ea33201044eb",
+    "E16_5_PRE_GOLD.json": "635791ce0f01f136038c3b7c8d37b8fe0c4327cad59767f909515bbea7e8df5b"
+  }
+}

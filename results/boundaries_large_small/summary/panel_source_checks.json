@@ -1,0 +1,98 @@
+[
+  {
+    "pair": "large",
+    "dataset": "obqa",
+    "panel_rows": 128,
+    "panel_groups": 128,
+    "c_ref_train256_R_ms": 252.35370575390624,
+    "source_cost": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/dev_cost_panel_matrix.npz",
+    "cost_sha256": "0f0f5e37d0b0ae5d38b82b8e86b4d9ccbcd2de1a5c746f1d4148622e4180a0bd",
+    "same_block_four_actions": true,
+    "raw_sha_matches_V2": true,
+    "original_action_names": [
+      "receiver_only",
+      "text",
+      "c2c",
+      "acw"
+    ],
+    "cost_definition": "full call incl tokenization/transfer/generation/decode/sync; excludes scoring/validation diagnostic; startup separate",
+    "full_vs_panel_answer_changed_rows": {
+      "R": 0,
+      "T": 0,
+      "C": 0,
+      "A": 0
+    }
+  },
+  {
+    "pair": "large",
+    "dataset": "arc",
+    "panel_rows": 128,
+    "panel_groups": 128,
+    "c_ref_train256_R_ms": 266.9407253203125,
+    "source_cost": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/validation_cost_panel_matrix.npz",
+    "cost_sha256": "78ba5efb7ee5e7dd343d18abb8edf0e79222c5a375fb57d6bc0e21119fd66fcc",
+    "same_block_four_actions": true,
+    "raw_sha_matches_V2": true,
+    "original_action_names": [
+      "receiver_only",
+      "text",
+      "c2c",
+      "acw"
+    ],
+    "cost_definition": "full call incl tokenization/transfer/generation/decode/sync; excludes scoring/validation diagnostic; startup separate",
+    "full_vs_panel_answer_changed_rows": {
+      "R": 0,
+      "T": 0,
+      "C": 0,
+      "A": 0
+    }
+  },
+  {
+    "pair": "small",
+    "dataset": "obqa",
+    "panel_rows": 128,
+    "panel_groups": 128,
+    "c_ref_train256_R_ms": 319.45334146875,
+    "source_cost": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/dev_cost_panel_matrix.npz",
+    "cost_sha256": "a996b116d059eeec0433526f08ad3d437306137823245ddc8b36c85f0203693d",
+    "same_block_four_actions": true,
+    "raw_sha_matches_V2": true,
+    "original_action_names": [
+      "receiver_only",
+      "text",
+      "c2c",
+      "acw"
+    ],
+    "cost_definition": "full call incl tokenization/transfer/generation/decode/sync; excludes scoring/validation diagnostic; startup separate",
+    "full_vs_panel_answer_changed_rows": {
+      "R": 0,
+      "T": 0,
+      "C": 0,
+      "A": 0
+    }
+  },
+  {
+    "pair": "small",
+    "dataset": "arc",
+    "panel_rows": 128,
+    "panel_groups": 128,
+    "c_ref_train256_R_ms": 341.14639092187497,
+    "source_cost": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/validation_cost_panel_matrix.npz",
+    "cost_sha256": "5d2400733fd85c1df2518e2e3229fe6ad808611e9b94c25e22bfa5abc006c669",
+    "same_block_four_actions": true,
+    "raw_sha_matches_V2": true,
+    "original_action_names": [
+      "receiver_only",
+      "text",
+      "c2c",
+      "acw"
+    ],
+    "cost_definition": "full call incl tokenization/transfer/generation/decode/sync; excludes scoring/validation diagnostic; startup separate",
+    "full_vs_panel_answer_changed_rows": {
+      "R": 0,
+      "T": 0,
+      "C": 0,
+      "A": 0
+    }
+  }
+]

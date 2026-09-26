@@ -1,0 +1,9 @@
+pair,task,reference,variant,deployed_q,fit_threshold,cal_n,cal_k,accepted_q,dev_status,historically_tested,label,dev_N,dev_omitted,dev_changed,dev_coverage_pct,dev_changed_over_omitted,dev_AUROC
+small,OBQA,Text,learned_D,0.0,,,,,pending features (no dev E1 features saved),,POST-HOC sensitivity analysis (reviewer R1); does not change any primary decision,,,,,,
+small,OBQA,C2C,learned_D,0.0,,,,,pending features (no dev E1 features saved),,POST-HOC sensitivity analysis (reviewer R1); does not change any primary decision,,,,,,
+small,ARC,Text,learned_D,0.0,,,,,pending features (no dev E1 features saved),,POST-HOC sensitivity analysis (reviewer R1); does not change any primary decision,,,,,,
+small,ARC,C2C,learned_D,0.0,,,,,pending features (no dev E1 features saved),,POST-HOC sensitivity analysis (reviewer R1); does not change any primary decision,,,,,,
+large,OBQA,Text,learned_D,0.3,0.08307916184658848,380,6,0.15;0.2;0.25;0.3,evaluated,historically tested (P2_RISK_CALIBRATION_BINARY D),POST-HOC sensitivity analysis (reviewer R1); does not change any primary decision,742,230,6,30.997304582210244,6/230,0.7631426202321725
+large,OBQA,C2C,learned_D,0.55,0.07698220411126118,698,15,0.15;0.2;0.25;0.3;0.35;0.4;0.45;0.5;0.55,evaluated,,POST-HOC sensitivity analysis (reviewer R1); does not change any primary decision,742,399,13,53.77358490566038,13/399,0.7600928641251221
+large,ARC,Text,learned_D,0.9,0.05049086658030989,401,7,0.3;0.35;0.4;0.45;0.5;0.55;0.6;0.65;0.7;0.75;0.8;0.85;0.9,pending features (no dev E1 features saved),,POST-HOC sensitivity analysis (reviewer R1); does not change any primary decision,,,,,,
+large,ARC,C2C,learned_D,0.65,0.047249153338723045,303,4,0.3;0.35;0.5;0.65,pending features (no dev E1 features saved),,POST-HOC sensitivity analysis (reviewer R1); does not change any primary decision,,,,,,

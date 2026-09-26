@@ -1,0 +1,26 @@
+item,check,expected,got,ok
+9,REPEAT1 large/OBQA/Text E3 (b) mean saving,419.623658,419.623658,True
+9,REPEAT1 large/OBQA/C2C E3 (b) mean saving,27.412944,27.412944,True
+9,REPEAT1 large/ARC/Text E3 (b) mean saving,573.152175,573.152175,True
+9,REPEAT1 large/ARC/C2C E3 (b) mean saving,92.397842,92.397842,True
+9,REPEAT1 medium/OBQA/C2C E3 (b) mean saving,47.28319,47.28319,True
+9,REPEAT1 medium/ARC/C2C E3 (b) mean saving,79.305363,79.305363,True
+9,REPEAT1 large/MMLU-Pro/Text E3 (b) mean saving,260.822341,260.822341,True
+9,REPEAT1 large/MMLU-Pro/C2C E3 (b) mean saving,-0.031307,-0.031307,True
+9,REPEAT2 large/OBQA/Text E3 (b) mean saving,430.16225,430.16225,True
+9,REPEAT2 large/OBQA/C2C E3 (b) mean saving,29.259979,29.259979,True
+9,REPEAT2 large/ARC/Text E3 (b) mean saving,584.986836,584.986836,True
+9,REPEAT2 large/ARC/C2C E3 (b) mean saving,91.561092,91.561092,True
+9,REPEAT2 medium/OBQA/C2C E3 (b) mean saving,49.979928,49.979928,True
+9,REPEAT2 medium/ARC/C2C E3 (b) mean saving,82.532074,82.532074,True
+9,REPEAT2 large/MMLU-Pro/Text E3 (b) mean saving,260.958573,260.958573,True
+9,REPEAT2 large/MMLU-Pro/C2C E3 (b) mean saving,2.55211,2.55211,True
+9,REPEAT3 large/OBQA/Text E3 (b) mean saving,423.095479,423.095479,True
+9,REPEAT3 large/OBQA/C2C E3 (b) mean saving,27.82456,27.82456,True
+9,REPEAT3 large/ARC/Text E3 (b) mean saving,573.795757,573.795757,True
+9,REPEAT3 large/ARC/C2C E3 (b) mean saving,91.230843,91.230843,True
+9,REPEAT3 medium/OBQA/C2C E3 (b) mean saving,45.628475,45.628475,True
+9,REPEAT3 medium/ARC/C2C E3 (b) mean saving,76.575234,76.575234,True
+9,REPEAT3 large/MMLU-Pro/Text E3 (b) mean saving,262.675709,262.675709,True
+9,REPEAT3 large/MMLU-Pro/C2C E3 (b) mean saving,2.755684,2.755684,True
+9,large/MMLU-Pro/C2C full replay (b) saving,22.0,22.0,True

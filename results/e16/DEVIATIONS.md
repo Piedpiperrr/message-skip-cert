@@ -1,0 +1,47 @@
+# P2_R7_E16 — implementation notes, events and deviations
+
+- **D1: code.** No existing file was modified. Diffs are in `diffs/`.
+  - `src/run_e16.py` = X3 driver `run_x3.py` plus:
+    - receiver `qwen3_1_7b` (medium receiver assets), with the medium runtime's frozen generation-config assert;
+    - `--text-only` (E16-5 production: Text path only; R and ProbeMax reused from the medium pair).
+  - `src/e16_medium.py` imports the MEDIUM stage-1 `native_runtime.Runtime` read-only and calls `action(q,'R')`, `action(q,'C')` and `probe(q)` exactly as its `execute.py` does.
+  - `src/e16_probe.py` = the X2/X3 probe, which also keeps the float32 option-label logits.
+    - It has an fp32 mode (weights, activations and attention fp32; TF32 off).
+    - It records the SDPA kernels on the first row with torch.profiler.
+  - Checks and analysis: `src/check_v.py`, `src/analyze_e16_oos.py` (+ `_gold.py`), `src/analyze_e16_5.py`, `src/analyze_e16_3.py`.
+- **D2: verification row choices** (`records/work/`, `notes/ROWS_MANIFEST.json`):
+  - V1: first 8 OBQA + first 8 ARC X3 fit rows.
+  - V2: first 16 medium ARC fit rows.
+  - V3a: first 16 OBQA fit rows with the medium helper's stored messages.
+  - V3b: first 8 OBQA + first 8 ARC fit rows with the Qwen2.5-7B messages.
+  - V4: per receiver x benchmark, the first 8 fit rows with stored u > 0, then the first 8 others.
+  - V5: first 16 held-out rows; 16 ARC test rows = all 7 items with K != 4 (3 with an E option) plus 9 of the 22 numeric-label items. The ARC test parquet was read for columns id and choices only.
+- **D3: medium ARC stored prompts.** In MEDIUM stage 1, `arc_runtime_adapter` is imported globally, so OBQA was also formatted by `arc_protocol`. On all 4,208 OBQA rows `arc_protocol.receiver_prompt` / `helper_body` equal P2_10 `format_openbook` (use_template True/False). V3a confirms byte identity.
+- **D4: E16-1/E16-2 gold stage re-run.**
+  - `analyze_e16_oos.py` wrote `SEAL_RECEIPT.json` (19:11:41Z) and `GOLD_ACCESS.json` (19:11:44Z). It then aborted inside pyarrow's threaded parquet read (login-node thread limit, core dump).
+  - The answer key is treated as first accessed at 19:11:44Z.
+  - `analyze_e16_oos_gold.py` verified every sealed file against `SEAL_RECEIPT.json` and recomputed only the gold stage from the sealed routes files, reading single-threaded. Nothing sealed was rewritten.
+- **D5: E16-5 retained gain for fallback settings.** Formula (policy − R)/(Text − R); with a fallback the policy equals fixed Text, so it is 1.0 by construction (reported as computed).
+- **D6: E16-3 Job B plan.**
+  - Probe tokens were counted on the login node (`notes/TOKEN_COUNTS.json`: 17,266 units and 3,964,679 tokens per receiver).
+  - bf16 time was extrapolated from the V4 latencies (Job A). fp32 time was not measured before submission. Qwen3-8B fp32 is dealt round-robin in tier order over 5 GPUs, so a deadline stop drops rows from tier (3) and then (2) first (`notes/JOBB_PLAN.json`). The plan was rebalanced once before submission.
+- **D7 (approved by the requesters 2026-09-21, option A): E16-4 arm rotation.** `execute.py` rotation `k=ordinal%4` → `k=ordinal%len(paths)`.
+  - Reason: it restores E3's balanced interleaving for two arms (policy_T, reference_T). It does not touch what is timed or how queries are routed.
+- **D8: E16-4 replay stage** `replay_llama/`, built by `src/build_e164.py` from P2_R1_E3POL_REPEAT1.../large (code and configs only).
+  - Code diff: 22 changed lines (`diffs/e164_replay_code.diff`).
+    - native_adapter: R path and probe tokenize with add_special_tokens=False; C2C bundles and fuser traces are not built.
+    - execute: D7, plus the final count assert for 2 arms and the REPLAY_COMPLETE count.
+    - supervise: EXECUTION_COMPLETE counts (record only).
+  - Config/data (not code), all from the hashed X3 records:
+    - frozen_config receiver = Llama-3.1-8B (path, chat-template SHA, config, post-cleanup generation config); order.paths = policy_T, reference_T;
+    - label_token_sets / prefix_ids = the X3 receiver's;
+    - T deployments = X3 q/tau (OBQA .60 / 0.009371757507324219; ARC .70 / 0.014996349811553955);
+    - T expected routes = X3 dev u, probe ids and route on the 128 panel ids each (routed to R: OBQA 76, ARC 88).
+  - Left as copied: the C deployments and C expected routes (read by the loops in execute.py and validate_sources.py, never used by a Text-only order), and protocol records the runtime does not read (PROBE_PROTOCOL_FREEZE, FIRST_INPUT_CHECK, token_decode_mapping).
+  - PROTOCOL/IMPLEMENTATION freezes recomputed over the copy.
+  - `validate_sources.py` dry run on a scratch copy: PASSED.
+  - The 16-row byte-identical check (`src/check_e164.py`: R, u, probe ids, Text with the live helper; 8 OBQA + 8 ARC panel rows) runs inside Job C before the replay. The replay runs only on PASS. It runs inside Job C, not as a separate job, to stay within the 4-job budget.
+- **D9: E17-5 add-on on the two E16-5 settings** (`src/e17_5_on_e16_5.py`).
+  - Imports `draws`/`run`/`summarize`/`bisect` from P2_R7_E17.../scripts/e17_5.py and `ledger`/`auroc` from e17_common.py unchanged; the source SHA-256s are recorded in the output JSON.
+  - The per-setting (a)/(b) lines of e17_5.py's `__main__` are repeated verbatim with the E16-5 arrays (medium u and thresholds; labels medium R vs strong Text).
+  - Outputs go to `results/analysis_e16_5/`; nothing was written into the E17 folder.

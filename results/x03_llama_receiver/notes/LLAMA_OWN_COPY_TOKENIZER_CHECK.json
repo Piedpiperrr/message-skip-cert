@@ -1,0 +1,74 @@
+{
+  "utc": "2026-09-21T06:35:47.625075+00:00",
+  "path": "$DATA_DIR/hf_cache/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659",
+  "tokenizer_class": "PreTrainedTokenizerFast",
+  "bos_id": 128000,
+  "eos": "<|eot_id|>",
+  "label_sets_A_E": {
+    "A": [
+      32,
+      362,
+      23845,
+      118586
+    ],
+    "B": [
+      33,
+      426,
+      13083,
+      108693
+    ],
+    "C": [
+      34,
+      356,
+      6391,
+      116545
+    ],
+    "D": [
+      35,
+      423,
+      11198,
+      113661
+    ],
+    "E": [
+      36,
+      469,
+      23626,
+      124813
+    ]
+  },
+  "nonempty": true,
+  "disjoint": true,
+  "label_sets_A_J_nonempty_disjoint": true,
+  "encode_label_alone": {
+    "A": [
+      32
+    ],
+    "B": [
+      33
+    ],
+    "C": [
+      34
+    ],
+    "D": [
+      35
+    ],
+    "E": [
+      36
+    ]
+  },
+  "prefix_ids": [
+    791,
+    4495,
+    4320,
+    374
+  ],
+  "prefix_roundtrip": true,
+  "chat_template_sha256": "e10ca381b1ccc5cf9db52e371f3b6651576caee0a630b452e2816b2d404d4b65",
+  "R_rendered_example": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nAccurately answer the following question:\n\nThis organ will help in providing nutrients to your body\n\nChoices:\nA. lungs\nB. esophagus\nC. kidney\nD. bladder\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "bos_checks_16_smoke_rows": {
+    "paper_R_bos2": 16,
+    "fixed_R_bos1": 16,
+    "probe_bos1": 16,
+    "T_bos1": 16
+  }
+}

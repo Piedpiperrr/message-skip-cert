@@ -1,0 +1,8 @@
+receiver,pair,benchmark,split,N,N_u0,share_u0,label
+Qwen3-1.7B,medium,OBQA,dev,742,321,0.4326145552560647,"POST-HOC re-analysis (E14, PREREG_E14.md); descriptive, not a new certificate"
+Qwen3-1.7B,medium,ARC,dev,299,174,0.5819397993311036,"POST-HOC re-analysis (E14, PREREG_E14.md); descriptive, not a new certificate"
+Qwen3-1.7B,medium,MMLU-Pro,dev,2641,324,0.12268080272624006,"POST-HOC re-analysis (E14, PREREG_E14.md); descriptive, not a new certificate"
+Qwen3-8B,large,OBQA,dev,742,354,0.477088948787062,"POST-HOC re-analysis (E14, PREREG_E14.md); descriptive, not a new certificate"
+Qwen3-8B,large,ARC,dev,299,217,0.725752508361204,"POST-HOC re-analysis (E14, PREREG_E14.md); descriptive, not a new certificate"
+Qwen3-8B,large,MMLU-Pro,dev,2641,645,0.24422567209390383,"POST-HOC re-analysis (E14, PREREG_E14.md); descriptive, not a new certificate"
+Qwen3-8B,large,MMLU-Pro,fit (groups),3000,713,0.23766666666666666,"POST-HOC re-analysis (E14, PREREG_E14.md); descriptive, not a new certificate"

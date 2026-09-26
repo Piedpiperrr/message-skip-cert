@@ -1,0 +1,20 @@
+{
+  "id": "14-1371",
+  "attempt": 1,
+  "LM_head_input_shapes": [
+    [
+      1,
+      1,
+      4096
+    ]
+  ],
+  "output_vocab_shape": [
+    151936
+  ],
+  "dtype_projection_input": "torch.bfloat16",
+  "stable_probability_dtype": "torch.float32",
+  "backbone_calls": 1,
+  "extra_warmup_or_check_forward": 0,
+  "kept_as_formal_sample": true,
+  "past_key_values": null
+}

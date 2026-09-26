@@ -1,0 +1,102 @@
+{
+ "meta-llama/Llama-3.1-8B-Instruct": {
+  "tokenizer_source": "$DATA_DIR/otheruser1/hf_cache/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659",
+  "bos_token": "<|begin_of_text|>",
+  "bos_id": 128000,
+  "add_bos_on_call": true,
+  "R_rendered": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nAccurately answer the following question:\n\nWhich relationship is true?\n\nChoices:\nA. wind is renewable; metal is nonrenewable\nB. wind is recyclable, metal is other\nC. wind is happy, metal is other\nD. wind is nonrenewable; metal is renewable\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+  "T_rendered_head": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nIn one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nWhich relationship is true?\n\nChoices:\nA. wind is renewable; metal is nonrenewable\nB. wind is recyclable, metal is other\n",
+  "R_rendered_sha256": "98dfd444c3fe46a14fbfb22f522d57cf1d6783835a73dae004534bf27dcb08ca",
+  "bos_count_paper_R_path": 2,
+  "bos_count_native": 1,
+  "paper_R_ids_equal_native": false,
+  "paper_R_ids_equal_native_without_added_special": true,
+  "tokenizer_class": "PreTrainedTokenizerFast",
+  "chat_template_sha256": "e10ca381b1ccc5cf9db52e371f3b6651576caee0a630b452e2816b2d404d4b65"
+ },
+ "mistralai/Mistral-7B-Instruct-v0.3": {
+  "tokenizer_source": "$DATA_DIR/hf_cache/hub/models--mistralai--Mistral-7B-Instruct-v0.3/snapshots/c170c708c41dac9275d15a8fff4eca08d52bab71",
+  "bos_token": "<s>",
+  "bos_id": 1,
+  "add_bos_on_call": true,
+  "R_rendered": "<s>[INST] Accurately answer the following question:\n\nWhich relationship is true?\n\nChoices:\nA. wind is renewable; metal is nonrenewable\nB. wind is recyclable, metal is other\nC. wind is happy, metal is other\nD. wind is nonrenewable; metal is renewable\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is[/INST]",
+  "T_rendered_head": "<s>[INST] In one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nWhich relationship is true?\n\nChoices:\nA. wind is renewable; metal is nonrenewable\nB. wind is recyclable, metal is other\nC. wind is happy, metal is other\nD. wind is nonrenewable; metal is renewable\n\n\nDo NOT directly solve or give answer to the question.[/INST] The essential background k",
+  "R_rendered_sha256": "88d8f0a9d8d1b4f407d0884e97dc978ca96fb4dd903dda75a176d5f700747dd4",
+  "bos_count_paper_R_path": 2,
+  "bos_count_native": 1,
+  "paper_R_ids_equal_native": false,
+  "paper_R_ids_equal_native_without_added_special": true,
+  "tokenizer_class": "LlamaTokenizerFast",
+  "chat_template_sha256": "e16746b40344d6c5b5265988e0328a0bf7277be86f1c335156eae07e29c82826",
+  "label_rule_with_sentencepiece_overlay": {
+   "sets": {
+    "A": [
+     836,
+     1098,
+     29509
+    ],
+    "B": [
+     837,
+     1133,
+     29528
+    ],
+    "C": [
+     838,
+     1102,
+     29511
+    ],
+    "D": [
+     839,
+     1152,
+     29525
+    ],
+    "E": [
+     840,
+     1181,
+     29517
+    ]
+   },
+   "nonempty": true,
+   "disjoint": true,
+   "encode_label_alone": {
+    "A": [
+     1098
+    ],
+    "B": [
+     1133
+    ],
+    "C": [
+     1102
+    ],
+    "D": [
+     1152
+    ],
+    "E": [
+     1181
+    ]
+   },
+   "prefix_ids": [
+    1183,
+    5482,
+    5140,
+    1117
+   ],
+   "prefix_roundtrip": true
+  }
+ },
+ "ibm-granite/granite-3.1-8b-instruct": {
+  "tokenizer_source": "$DATA_DIR/hf_cache/hub/models--ibm-granite--granite-3.1-8b-instruct/snapshots/4009206d5fc95d2e65a7b7633e159d6e97e25d35",
+  "bos_token": "<|end_of_text|>",
+  "bos_id": 0,
+  "add_bos_on_call": false,
+  "R_rendered": "<|start_of_role|>system<|end_of_role|>Knowledge Cutoff Date: April 2024.\nToday's Date: September 21, 2026.\nYou are Granite, developed by IBM. You are a helpful AI assistant.<|end_of_text|>\n<|start_of_role|>user<|end_of_role|>Accurately answer the following question:\n\nWhich relationship is true?\n\nChoices:\nA. wind is renewable; metal is nonrenewable\nB. wind is recyclable, metal is other\nC. wind is happy, metal is other\nD. wind is nonrenewable; metal is renewable\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|end_of_text|>\n<|start_of_role|>assistant<|end_of_role|>",
+  "T_rendered_head": "<|start_of_role|>system<|end_of_role|>Knowledge Cutoff Date: April 2024.\nToday's Date: September 21, 2026.\nYou are Granite, developed by IBM. You are a helpful AI assistant.<|end_of_text|>\n<|start_of_role|>user<|end_of_role|>In one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nWhich relationship is true?\n\nChoices:\nA. wind is renewable; metal is no",
+  "R_rendered_sha256": "2b854a0c998d143200c9282d125299e33c978fa7f70693226882c888035ddc5a",
+  "bos_count_paper_R_path": 2,
+  "bos_count_native": 2,
+  "paper_R_ids_equal_native": true,
+  "paper_R_ids_equal_native_without_added_special": true,
+  "tokenizer_class": "GPT2TokenizerFast",
+  "chat_template_sha256": "08962c2f15d56767854b46dfc4070b37f4c443551833bba65b417191735f3187"
+ }
+}

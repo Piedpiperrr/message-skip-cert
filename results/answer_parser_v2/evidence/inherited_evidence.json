@@ -1,0 +1,52 @@
+[
+  {
+    "path": "$DATA_DIR/P2_SCORE_SENSITIVITY_20260912T055929Z/RULE_FREEZE_V1.json",
+    "sha256": "1fe2f353190eb87d36600ef407eb1d4809e693c1aaf93782003fd218c964dfe7",
+    "role": "Reuse completed D1/old scoring verification; no old-parser rerun"
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORE_SENSITIVITY_20260912T055929Z/FINAL_RECEIPT.json",
+    "sha256": "964911e95120a8570f7239eac640db9f52a0e537728359814fad69cc4a0c7296",
+    "role": "Reuse completed D1/old scoring verification; no old-parser rerun"
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORE_SENSITIVITY_20260912T055929Z/ANALYSIS_COMPLETE.json",
+    "sha256": "274d53f119711f1a1d852f19a09b78ea458b27a95d38740917a5110cfb5104ff",
+    "role": "Reuse completed D1/old scoring verification; no old-parser rerun"
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORE_SENSITIVITY_20260912T055929Z/action_accuracy_sensitivity.csv",
+    "sha256": "59ece16fca728e7525ccce1dff86b2e00a734bab26c8465fca0852f90a317093",
+    "role": "Reuse completed D1/old scoring verification; no old-parser rerun"
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORE_SENSITIVITY_20260912T055929Z/population_complementarity.csv",
+    "sha256": "4181f1ce3f6378119c094de4a2a86d064154911f15d3a73008d455699f3cf868",
+    "role": "Reuse completed D1/old scoring verification; no old-parser rerun"
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORE_SENSITIVITY_20260912T055929Z/pairwise_answer_agreement.csv",
+    "sha256": "46bc46689b940422390d802c5d1ec9565e87da1897cf5b80ecac17af20a4fd78",
+    "role": "Reuse completed D1/old scoring verification; no old-parser rerun"
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORE_SENSITIVITY_20260912T055929Z/ffr_label_sensitivity.csv",
+    "sha256": "2bd83a7bf269e9114c7aa51ad50f1bc93488c44fa4d8bff42f72e7b814d22752",
+    "role": "Reuse completed D1/old scoring verification; no old-parser rerun"
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORE_SENSITIVITY_20260912T055929Z/changed_records.csv",
+    "sha256": "efab8a55f7f1cb77175326493f8ebaf66e7ca4e79dabb2f0b94f9a6a59ba2176",
+    "role": "Reuse completed D1/old scoring verification; no old-parser rerun"
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORE_SENSITIVITY_20260912T055929Z/record_branch_flags.csv",
+    "sha256": "d345fa0d776ae75b88586bd3d9c796d4767fce76ae388e7e60f7c1519f603977",
+    "role": "Reuse completed D1/old scoring verification; no old-parser rerun"
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORE_SENSITIVITY_20260912T055929Z/evidence/input_manifest.json",
+    "sha256": "5ce8d83c96c19da2f48f62903a2ba87bb4ad22c819def6d21506679e02dd9bc7",
+    "role": "Reuse completed D1/old scoring verification; no old-parser rerun"
+  }
+]

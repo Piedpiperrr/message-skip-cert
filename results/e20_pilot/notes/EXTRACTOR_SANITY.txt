@@ -1,0 +1,19 @@
+'Paris' -> 'paris' OK
+'**Answer:** The Eiffel Tower.' -> 'eiffel tower' OK
+'Final answer: 1889' -> '1889' OK
+'The answer is: Gustave Eiffel.' -> 'gustave eiffel' OK
+'  \n\n' -> 'INVALID' OK
+'"Café"' -> 'cafe' OK
+'The' -> 'INVALID' OK
+'# Rome\nIt is in Italy' -> 'rome' OK
+'12,000 people' -> '12000 people' OK
+'answer: \n\nLondon\nmore' -> 'london' OK
+'```\nOslo\n```' -> 'oslo' OK
+'The Beatles' -> 'beatles' OK
+'the answer is the Nile.' -> 'nile' OK
+'“Paris”' -> '“paris”' OK
+14 / 14
+changed INVALID/INVALID False changed paris/rome True
+{'s1': 0.05, 's1_pos': 1, 's1_missing': False, 's2': 0.45118836390597356, 's3': 0.2591817793182821, 'span': [0, 2], 'span_missing': False} expect s1=0.05 pos1, span [0,2), s2= 0.45118836390597356 s3= 0.2591817793182821
+{'s1': 0.15, 's1_pos': 1, 's1_missing': False, 's2': 0.18126924692201815, 's3': 0.18126924692201815, 'span': [1, 2], 'span_missing': False} expect span [1,2) s2= 0.18126924692201815
+{'s1': 1.0, 's1_pos': None, 's1_missing': True, 's2': 1.0, 's3': 1.0, 'span': None, 'span_missing': True} expect missing -> 1.0

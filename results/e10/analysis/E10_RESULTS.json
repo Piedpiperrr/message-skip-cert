@@ -1,0 +1,175 @@
+{
+  "utc": "2026-09-21T00:12:57Z",
+  "seal_receipt_utc": "2026-09-21T00:11:27Z",
+  "seal_verified": true,
+  "gold_source": "$DATA_DIR/cache/huggingface/hub/datasets--openai--gsm8k/snapshots/740312add88f781978c0658806c59bc2815b9866/main/train-00000-of-00001.parquet",
+  "gold_column": "answer",
+  "gold_rule": "text after '####', normalized by the frozen normalizer",
+  "accuracy": {
+    "cal": {
+      "N": 1000,
+      "accuracy_receiver_only": 0.888,
+      "accuracy_Text": 0.876,
+      "accuracy_oracle_receiver_or_Text": 0.951,
+      "both_correct": 813,
+      "neither_correct": 49,
+      "receiver_only_correct_Text_wrong": 75,
+      "Text_correct_receiver_only_wrong": 63
+    },
+    "dev": {
+      "N": 400,
+      "accuracy_receiver_only": 0.8775,
+      "accuracy_Text": 0.865,
+      "accuracy_oracle_receiver_or_Text": 0.9475,
+      "both_correct": 318,
+      "neither_correct": 21,
+      "receiver_only_correct_Text_wrong": 33,
+      "Text_correct_receiver_only_wrong": 28
+    },
+    "fit_receiver_only": {
+      "N": 400,
+      "accuracy_receiver_only": 0.86
+    }
+  },
+  "policy_vs_reference_dev": {
+    "N": 400,
+    "omitted": 0,
+    "accuracy_policy": 0.865,
+    "accuracy_reference_Text": 0.865,
+    "accuracy_diff": 0.0,
+    "boot95_lo": 0.0,
+    "boot95_hi": 0.0,
+    "bootstrap": {
+      "seed": 0,
+      "resamples": 2000,
+      "paired": true,
+      "unit": "dev question"
+    }
+  },
+  "deployment": {
+    "q": 0.0,
+    "threshold": null,
+    "mode": "fixed_reference",
+    "accepted_q": [],
+    "calibration": null,
+    "smallest_p_value": 1.0,
+    "smallest_p_candidate": 0.05,
+    "smallest_p_n": 954,
+    "smallest_p_k": 146,
+    "alpha": 0.05,
+    "delta_per_test": 0.001,
+    "tests": 20,
+    "family_wise_bound": 0.02,
+    "rule": "largest accepted q; no acceptance -> always communicate (Text)"
+  },
+  "dev": {
+    "N": 400,
+    "coverage": 0.0,
+    "omitted": 0,
+    "changed_among_omitted": 0,
+    "conditional_change_rate": null,
+    "CP95": null,
+    "always_omit_change_rate": 0.1925
+  },
+  "dev_AUROC": {
+    "u": 0.579470065538177,
+    "s2": 0.64444533794379,
+    "s3": 0.568031040167263
+  },
+  "cal_disagreement_rate": 0.174,
+  "dev_disagreement_rate": 0.1925,
+  "invalid_counts": {
+    "fit_R": {
+      "n": 400,
+      "invalid": 0
+    },
+    "cal_R": {
+      "n": 1000,
+      "invalid": 0
+    },
+    "cal_T": {
+      "n": 1000,
+      "invalid": 0
+    },
+    "dev_R": {
+      "n": 400,
+      "invalid": 0
+    },
+    "dev_T": {
+      "n": 400,
+      "invalid": 0
+    }
+  },
+  "u_eq_1_from_INVALID": {
+    "fit": 0,
+    "cal": 0,
+    "dev": 0
+  },
+  "extract_routes": {
+    "fit_R": {
+      "after_last_answer_is": 338,
+      "last_number_in_generation": 62
+    },
+    "cal_R": {
+      "after_last_answer_is": 851,
+      "last_number_in_generation": 149
+    },
+    "cal_T": {
+      "after_last_answer_is": 994,
+      "last_number_in_generation": 6
+    },
+    "dev_R": {
+      "after_last_answer_is": 339,
+      "last_number_in_generation": 61
+    },
+    "dev_T": {
+      "after_last_answer_is": 398,
+      "last_number_in_generation": 2
+    }
+  },
+  "generation_length": {
+    "fit_R": {
+      "at_cap_320": 43,
+      "mean_gen_tokens": 215.1575
+    },
+    "cal_R": {
+      "at_cap_320": 106,
+      "mean_gen_tokens": 208.612
+    },
+    "cal_T": {
+      "at_cap_320": 5,
+      "mean_gen_tokens": 139.313
+    },
+    "dev_R": {
+      "at_cap_320": 49,
+      "mean_gen_tokens": 210.6825
+    },
+    "dev_T": {
+      "at_cap_320": 1,
+      "mean_gen_tokens": 140.6075
+    }
+  },
+  "row_counts": {
+    "fit R": [
+      400,
+      400
+    ],
+    "cal R": [
+      1000,
+      1000
+    ],
+    "cal T": [
+      1000,
+      1000
+    ],
+    "dev R": [
+      400,
+      400
+    ],
+    "dev T": [
+      400,
+      400
+    ]
+  },
+  "complete": true
+}

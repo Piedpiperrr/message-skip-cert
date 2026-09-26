@@ -1,0 +1,14 @@
+{
+  "event": "HEAD_COMPLETE",
+  "key": "OOF/obqa/word/3/small/y_R",
+  "kind": "LR",
+  "n": 2773,
+  "positive": 1091,
+  "iterations": 9,
+  "warnings": [],
+  "CPU_seconds": 0.01129800000000003,
+  "protocol_sha256": "41239823e728796dd108aae24cc48401ec8093c38aca16f7a30a1352145ef797",
+  "model_sha256": "23bf2d069a74c6dd01c2b5a1ec28f664320e406c62a75b07dff06164fcba3a9a",
+  "input_hash": "730e8e4a05c3c6c86052e4eebcf523de",
+  "numerical_probability_check": true
+}

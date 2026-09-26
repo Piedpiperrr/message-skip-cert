@@ -1,0 +1,9 @@
+check,setting,N,expected_ms,recomputed_ms,n_omitted,source,ok
+(ii) Table 2 saving,medium/OBQA/C2C,128,79.7,79.6591089656431,66,$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/records/e2e_requests.jsonl,True
+(ii) Table 2 saving,medium/ARC/C2C,128,100.7,100.66012487186526,77,$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/records/e2e_requests.jsonl,True
+(ii) Table 2 saving,large/OBQA/Text,128,517.1,517.1262959393061,97,$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/records/e2e_requests.jsonl,True
+(ii) Table 2 saving,large/OBQA/C2C,128,36.6,36.57528850817471,97,$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/records/e2e_requests.jsonl,True
+(ii) Table 2 saving,large/ARC/Text,128,717.6,717.6287613056047,120,$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/records/e2e_requests.jsonl,True
+(ii) Table 2 saving,large/ARC/C2C,128,110.9,110.93494467604614,115,$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/records/e2e_requests.jsonl,True
+(ii) Table 2 saving,large/MMLU-Pro/Text,128,346.3,346.3156871330284,48,$DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/records/four_arm_requests.jsonl,True
+(ii) Table 2 saving,large/MMLU-Pro/C2C,128,8.2,8.242936348324292,48,$DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/records/four_arm_requests.jsonl,True

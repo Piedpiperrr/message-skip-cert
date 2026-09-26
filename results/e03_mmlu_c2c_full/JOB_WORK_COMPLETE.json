@@ -1,0 +1,9 @@
+{
+  "utc": "2026-09-19T09:14:27.799190+00:00",
+  "job_id": "run020",
+  "status": "COLLECTION_COMPLETE",
+  "entry_wall_seconds": 1892.363710206002,
+  "complete_requests": 5282,
+  "online_ProbeMax": 2641,
+  "scientific_analysis_performed": false
+}

@@ -1,0 +1,22 @@
+check,observed,status,expected
+medium/OBQA/C2C q=.55 (i) vs paper 0.84 (|diff|<=5e-4),0.8401069451905898,PASS,
+medium/OBQA/C2C q=.55 (vi) u=0 block n0/k0 vs E17_1_u0_rule.csv,"[321, 7]",PASS,"[321, 7]"
+medium/ARC/C2C (i) vs paper 0.91 (|diff|<=5e-4),0.9097360557768924,PASS,
+medium/ARC/C2C (vi) u=0 block n0/k0 vs E17_1_u0_rule.csv,"[174, 1]",PASS,"[174, 1]"
+large/OBQA/Text (i) vs paper 0.873 (|diff|<=5e-4),0.8727300995024876,PASS,
+large/OBQA/Text (vi) u=0 block n0/k0 vs E17_1_u0_rule.csv,"[354, 2]",PASS,"[354, 2]"
+large/OBQA/C2C (i) vs paper 0.883 (|diff|<=5e-4),0.8826490713587488,PASS,
+large/OBQA/C2C (vi) u=0 block n0/k0 vs E17_1_u0_rule.csv,"[354, 1]",PASS,"[354, 1]"
+large/ARC/Text (i) vs paper 0.952 (|diff|<=5e-4),0.9518779342723005,PASS,
+large/ARC/Text (vi) u=0 block n0/k0 vs E17_1_u0_rule.csv,"[217, 0]",PASS,"[217, 0]"
+large/ARC/C2C (i) vs paper 0.909 (|diff|<=5e-4),0.9088269454123112,PASS,
+large/ARC/C2C (vi) u=0 block n0/k0 vs E17_1_u0_rule.csv,"[217, 1]",PASS,"[217, 1]"
+large/MMLU-Pro/Text (i) vs paper 0.821 (|diff|<=5e-4),0.8214679315782257,PASS,
+large/MMLU-Pro/Text (vi) u=0 block n0/k0 vs E17_1_u0_rule.csv,"[645, 8]",PASS,"[645, 8]"
+large/MMLU-Pro/C2C (i) vs paper 0.846 (|diff|<=5e-4),0.8463998007101454,PASS,
+large/MMLU-Pro/C2C (vi) u=0 block n0/k0 vs E17_1_u0_rule.csv,"[645, 5]",PASS,"[645, 5]"
+large/OBQA/Text+fact (i) vs paper 0.889 (|diff|<=5e-4),0.8885925399083293,PASS,
+large/OBQA/Text+fact (vi) u=0 block n0/k0 vs E17_1_u0_rule.csv,"[354, 1]",PASS,"[354, 1]"
+Llama-3.1-8B/OBQA/Text (i) vs paper 0.8745,0.8744859614293817,PASS,
+Llama-3.1-8B/ARC/Text (i) vs paper 0.8804,0.8804415102125026,PASS,
+SQuAD/Llama (s2) (i) vs paper .811,0.8108516778729544,PASS,

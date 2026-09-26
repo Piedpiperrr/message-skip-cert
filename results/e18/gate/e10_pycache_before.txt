@@ -1,0 +1,5 @@
+total 16
+drwxr-sr-x. 2 user project 4096 2026-09-20 23:04:56.000000000 +0000 .
+drwxr-sr-x. 3 user project 4096 2026-09-20 23:14:12.000000000 +0000 ..
+-rw-r--r--. 1 user project 3295 2026-09-20 23:00:55.000000000 +0000 e10_extract.cpython-310.pyc
+-rw-r--r--. 1 user project 3129 2026-09-20 23:04:56.000000000 +0000 e10_prompts.cpython-310.pyc

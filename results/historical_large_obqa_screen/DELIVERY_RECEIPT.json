@@ -1,0 +1,16 @@
+{
+  "status": "COMPLETE",
+  "bundle": "$DATA_DIR/P2_RISK_CALIBRATION_BINARY_20260914T043954Z/P2_RISK_CALIBRATION_BINARY_20260914T043954Z_WORK_LIGHT.tar.gz",
+  "bytes": 2187104,
+  "sha256": "1b295bb73ee66a2b47e535c5fa5f70530dac375439c72320f9be4bf40cf0e4b0",
+  "portable_file_count": 140,
+  "bundle_content_hashes_verified": true,
+  "full_manifest_sha256": "b72f0af9b52f8133da9c03cca259d7dab1d0171053d8f5ec2a66b23d60e65f88",
+  "portable_manifest_sha256": "3a7687265d0acfc3735018f7ddd29e6c212232e71b98d553822ddbc49c74ba99",
+  "full_manifest_includes_omitted_ClusterB_dev_z": true,
+  "portable_manifest_only_bundle_members": true,
+  "omitted_dev_z_files": 742,
+  "dev_feature_index": "$DATA_DIR/P2_RISK_CALIBRATION_BINARY_20260914T043954Z/features/DEV_FEATURE_INDEX.csv",
+  "large_model_checkpoints_included": false,
+  "utc": "2026-09-14T05:05:52.772437+00:00"
+}

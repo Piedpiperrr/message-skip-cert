@@ -1,0 +1,23 @@
+{
+  "utc": "2026-09-19T20:45:24.586751+00:00",
+  "note": "computed before any gold read",
+  "files": {
+    "Text": {
+      "results/runs/text_chain_00.jsonl": "99684dd092a04c4236ab8d8c37949085fd26c052eb9ac066c5840fe27c1586e0",
+      "results/runs/text_chain_01.jsonl": "1f796353b7c26afb2430cb5e473c509089673e0f1ba523f401e87c1f7e210834",
+      "results/runs/text_chain_02.jsonl": "b39f551fa062691914f3fab4c560fa7c58acd7c1e4e93c33a848e9a17e85b0e5",
+      "results/runs/text_chain_03.jsonl": "cd217bd1ea43cbd2a420083f128468f0ee4aec9f1ad364a9266ee83c901be1b1"
+    },
+    "C2C": {
+      "results/runs/c2c_chain_04.jsonl": "09785ad1d6b75c1ffb4834b7372166fa732d80f99d21e41971397df0324cc00f",
+      "results/runs/c2c_chain_05.jsonl": "306684873a34f81de92daf945e1187c4d341ef7ac4548638edb5daaa823fa229",
+      "results/runs/c2c_chain_06_fromcsv.jsonl": "baef4dab16899506e46ba92943a4ce1433b27080d3c6bb435f038c1c25769ab9"
+    },
+    "helper": {
+      "results/runs/helper_chain_00.jsonl": "d3a296bfb1e494b2637affe9f4042d69eee7e2a35dd10a7c64f8fdcead8d72c6",
+      "results/runs/helper_chain_01.jsonl": "5a81dbb05a94e65fd26abe6cec2e0d352b0ca7e9827ad823cf08845af5e89e73",
+      "results/runs/helper_chain_02.jsonl": "0394f6c43951c02f20509d8f7028bf587130c080d1277675a7a11c626fb48c68",
+      "results/runs/helper_chain_03.jsonl": "1a4e793bd80241d5d5fe3b37bc04d3fa42fc923a635ce673d1cbe08caf745f3c"
+    }
+  }
+}

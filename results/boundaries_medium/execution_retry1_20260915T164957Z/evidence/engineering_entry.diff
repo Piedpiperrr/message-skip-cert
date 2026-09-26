@@ -1,0 +1,103 @@
+--- attempt1/pbs_entry.py
++++ retry1/pbs_entry.py
+@@ -1,42 +1,71 @@
++"""Replacement入口：先保存原始cgroup；以真实PBS分配和CUDA可见设备为准。"""
+ from common import *
+ import subprocess,socket,fcntl,traceback,resource
+-jid=os.environ['PBS_JOBID'];host=socket.gethostname()
+-lock=(P/'evidence/execution.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+-assert host.startswith('ClusterB-gpu')
+-rec=json.loads(subprocess.check_output(['job-status','-f','-F','json',jid],text=True))
+-assert list(rec['Jobs'])==[jid]
+-j=rec['Jobs'][jid];r=j['Resource_List']
+-assert j['Job_Owner'].split('@')[0]=='user' and j['job_state']=='R'
+-assert j['Account_Name']=='project' and j['queue']=='gpu-queue'
+-assert int(r['nodect'])==1 and int(r['ngpus'])==2 and r['fsreq']=='home:sharedfs' and r['walltime']=='03:30:00'
+-cgroup=Path('/proc/self/cgroup').read_text()
+-match=any('jobs' in x and jid.split('.')[0] in x for x in [l.split(':',2)[2].split('/') for l in cgroup.splitlines()])
+-assert match,'STRICT_JOB_CGROUP_MISMATCH'
+-assert {x.split('.')[0] for x in Path(os.environ['PBS_NODEFILE']).read_text().split()}=={host.split('.')[0]}
+-j.pop('Variable_List',None)
+-save(P/'evidence/pbs/allocation.json',{'job_id':jid,'utc':utc(),'host':host,'cgroup':cgroup,
+-    'strict_cgroup_match':match,'scheduler':rec,'paths':paths(),'CUDA_VISIBLE_DEVICES':os.environ.get('CUDA_VISIBLE_DEVICES')})
+-print('RESOLVED_PATHS',json.dumps(paths()),flush=True)
+-validate_parent()
+-ex=read(P/'MEDIUM_PAIR_EXECUTION_FREEZE.json');assert ex['status']=='PASS' and not ex['MEDIUM_PAIR_OUTCOMES_OBSERVED']
+-for f,h in ex['frozen_files'].items():assert sha(f)==h,f
+-for role,m in read(P/'MODEL_SOURCE_INDEX.json')['local_verification']['models'].items():
+-    for f in m['weight_files']:assert sha(f['path'])==f['sha256'],f['path']
+-stime=datetime.datetime.strptime(j['stime'],'%a %b %d %H:%M:%S %Y').replace(tzinfo=datetime.timezone.utc).timestamp()
+-os.environ['P2_MEDIUM_DEADLINE']=str(stime+12600-45)
+-phase_records=[]
++from guard_checks import walltime_seconds,legacy_cgroup_pattern_match,allocation_identity
++
++# This receipt precedes every assertion and every model/device check.
++raw=Path('/proc/self/cgroup').read_text()
++(P/'evidence/cgroup_raw.txt').write_text(raw)
++jid=os.environ.get('PBS_JOBID','');host=socket.gethostname()
++save(P/'evidence/CGROUP_RECEIPT.json',{'utc':utc(),'job_id':jid,'host':host,'cgroup_raw':raw,
++    'legacy_cgroup_pattern_match':legacy_cgroup_pattern_match(raw,jid),
++    'legacy_match_is_fatal':False,'CUDA_VISIBLE_DEVICES':os.environ.get('CUDA_VISIBLE_DEVICES')})
++phase='SCHEDULER_ALLOCATION_GUARD';phase_records=[]
+ try:
++    lock=(P/'evidence/execution.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
++    rec=json.loads(subprocess.check_output(['job-status','-f','-F','json',jid],text=True,timeout=30))
++    assert list(rec['Jobs'])==[jid],'CURRENT_JOB_ID_MISMATCH'
++    j=rec['Jobs'][jid];j.pop('Variable_List',None)
++    nodefile=Path(os.environ['PBS_NODEFILE']).read_text().split()
++    identity=allocation_identity(j,host,nodefile)
++    save(P/'evidence/pbs/allocation.json',{'job_id':jid,'utc':utc(),'host':host,'scheduler':rec,
++        'nodefile_nodes':nodefile,'allocation_identity':identity,'cgroup_receipt':'evidence/CGROUP_RECEIPT.json',
++        'paths':paths(),'CUDA_VISIBLE_DEVICES':os.environ.get('CUDA_VISIBLE_DEVICES')})
++    assert identity['status']=='PASS',identity
++    started=datetime.datetime.strptime(j['stime'],'%a %b %d %H:%M:%S %Y').replace(tzinfo=datetime.timezone.utc).timestamp()
++    seconds=walltime_seconds(j['Resource_List']['walltime'])
++    os.environ['P2_MEDIUM_DEADLINE']=str(started+seconds-45)
++    save(P/'evidence/DEADLINE_RECEIPT.json',{'utc':utc(),'PBS_stime':j['stime'],
++        'PBS_walltime':j['Resource_List']['walltime'],'parsed_walltime_seconds':seconds,
++        'safety_margin_seconds':45,'internal_deadline_epoch':started+seconds-45,
++        'attempt1_allocation_wall_seconds':10,'cumulative_max_GPU_hours':(10+seconds)*2/3600})
++    stop_check();phase='CUDA_DEVICE_GUARD'
++    import torch
++    available=torch.cuda.is_available();count=torch.cuda.device_count();devices=[]
++    for i in range(count):
++        prop=torch.cuda.get_device_properties(i);uuid=getattr(prop,'uuid',None)
++        devices.append({'device_index':i,'device_name':prop.name,'UUID':str(uuid) if uuid is not None else None,
++            'total_memory_bytes':int(prop.total_memory)})
++    cuda={'utc':utc(),'CUDA_VISIBLE_DEVICES':os.environ.get('CUDA_VISIBLE_DEVICES'),
++        'torch_cuda_is_available':available,'torch_cuda_device_count':count,'devices':devices,
++        'status':'PASS' if available and count==2 else 'BLOCKED','model_loads':0,'model_forwards':0}
++    save(P/'evidence/CUDA_DEVICE_RECEIPT.json',cuda)
++    try:
++        smi=subprocess.run(['nvidia-smi','--query-gpu=index,name,uuid,memory.total','--format=csv'],capture_output=True,text=True,timeout=10)
++        save(P/'evidence/NVIDIA_SMI_RECEIPT.json',{'utc':utc(),'returncode':smi.returncode,'stdout':smi.stdout,'stderr':smi.stderr,'auxiliary_only':True})
++    except Exception as error:
++        save(P/'evidence/NVIDIA_SMI_RECEIPT.json',{'utc':utc(),'error':repr(error),'auxiliary_only':True})
++    assert cuda['status']=='PASS','PBS_HAS_TWO_GPUS_BUT_PROCESS_CANNOT_SEE_EXACTLY_TWO'
++    phase='PRESUBMISSION_IDENTITY_RECHECK';validate_parent()
++    pre=read(P/'MEDIUM_PAIR_EXECUTION_PRECHECK_RETRY1.json');assert pre['status']=='PASS'
++    for f,h in pre['frozen_files'].items():assert sha(f)==h,f
++    for role,m in read(P/'MODEL_SOURCE_INDEX.json')['local_verification']['models'].items():
++        for f in m['weight_files']:assert sha(f['path'])==f['sha256'],f['path']
++    print('RESOLVED_PATHS',json.dumps(paths()),flush=True)
++    print('SCHEDULER_AND_CUDA_GUARDS_PASS',json.dumps(cuda),flush=True)
+     for name in ['execute.py','analyze.py','validate_results.py']:
+-        t=time.perf_counter();env=os.environ.copy()
++        stop_check();phase=name;t=time.perf_counter();env=os.environ.copy()
+         if name!='execute.py':env['CUDA_VISIBLE_DEVICES']=''
+         log=Path(os.environ['P2_RUN'])/name.replace('.py','.log')
+         with log.open('w') as out:
+             proc=subprocess.run([sys.executable,'-u',str(P/'src'/name)],stdout=out,stderr=subprocess.STDOUT,env=env,cwd=P)
+         phase_records.append({'phase':name,'exit_code':proc.returncode,'wall_seconds':time.perf_counter()-t,'log':str(log)})
+         save(P/'evidence/job_phases.json',phase_records)
+-        if proc.returncode:raise RuntimeError(f'{name} failed exit={proc.returncode}; no resubmission')
++        if proc.returncode:raise RuntimeError(f'{name} failed exit={proc.returncode}; no third submission')
+     save(P/'JOB_WORK_COMPLETE.json',{'utc':utc(),'job_id':jid,'status':'COMPLETE_MEDIUM_STAGE1',
+         'phases':phase_records,'CPU_children_seconds':resource.getrusage(resource.RUSAGE_CHILDREN).ru_utime+resource.getrusage(resource.RUSAGE_CHILDREN).ru_stime})
+-except BaseException as e:
+-    save(P/'JOB_FAILURE.json',{'utc':utc(),'job_id':jid,'error':repr(e),'traceback':traceback.format_exc(),'phases':phase_records,'resubmit_allowed':False})
++except BaseException as error:
++    save(P/'JOB_FAILURE.json',{'utc':utc(),'job_id':jid,'phase':phase,'error':repr(error),'traceback':traceback.format_exc(),
++        'phases':phase_records,'resubmit_allowed':False,'no_third_submission':True,
++        'MEDIUM_PAIR_OUTCOMES_OBSERVED':(P/'OUTCOMES_OBSERVED.json').exists()})
+     raise

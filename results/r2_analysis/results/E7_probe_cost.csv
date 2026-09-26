@@ -1,0 +1,25 @@
+setting,arm,mean_probe_ms,median_probe_ms,mean_selector_ms,label
+large/obqa/T,ORIGINAL,33.80994104009005,32.095279078930616,0.000480506059830077,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/obqa/T,REUSE,33.47935149213299,33.48093351814896,0.0006122791091911495,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/obqa/T,ARGMAX,32.07055965867767,32.02698053792119,0.0005248057277640328,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/obqa/C,ORIGINAL,32.002909063521656,31.95868746843189,0.0004751473170472309,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/obqa/C,REUSE,33.42428037831269,33.38624304160476,0.0006030259100953117,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/obqa/C,ARGMAX,31.955597607520758,31.95929410867393,0.0005207493813941255,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/arc/T,ORIGINAL,31.990093331842218,31.954537611454725,0.00050381277105771,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/arc/T,REUSE,33.284183798969025,33.281408017501235,0.0006290047167567536,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/arc/T,ARGMAX,31.910162906569894,31.89780388493091,0.0005498550308402628,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/arc/C,ORIGINAL,31.918961631163256,31.888270983472466,0.0004827033990295604,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/arc/C,REUSE,33.34607003853307,33.21727644652128,0.0006157642928883433,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/arc/C,ARGMAX,31.893095681880368,31.850354396738112,0.0005454985512187704,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+medium/obqa/C,ORIGINAL,26.394942151455325,26.119446964003146,0.0004403282218845561,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+medium/obqa/C,REUSE,26.186994602539926,26.176413986831903,0.0006028458301443607,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+medium/obqa/C,ARGMAX,26.163285318034468,26.127842953428626,0.000497524524689652,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+medium/arc/C,ORIGINAL,26.287159400453675,26.265689521096647,0.00043457475840114057,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+medium/arc/C,REUSE,26.312727719414397,26.310348534025252,0.0006081681931391358,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+medium/arc/C,ARGMAX,26.284171452061855,26.283988845534623,0.0005025958671467379,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/mmlu_pro/T,ORIGINAL,41.7952490515745,34.46452657226473,0.00047372486733365804,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/mmlu_pro/T,REUSE,40.75959241527016,34.52385636046529,0.0006374066288117319,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/mmlu_pro/T,ARGMAX,40.811232747728354,34.59884051699191,0.0005333404260454699,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/mmlu_pro/C,ORIGINAL,40.75482568441657,34.39014754258096,0.0004695739335147664,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/mmlu_pro/C,REUSE,40.74250726807804,34.3486734200269,0.000649883077130653,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/mmlu_pro/C,ARGMAX,40.74460199808527,34.45860557258129,0.0005253077688394114,POST-HOC analysis of completed E6/E7 records; changes no frozen decision

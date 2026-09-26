@@ -1,0 +1,143 @@
+--- run_x1_c2c.py	2026-09-19 20:07:17.000000000 +0000
++++ finish_x1_c2c_from_csv.py	2026-09-19 20:42:39.000000000 +0000
+@@ -1,81 +1,74 @@
+-"""X1 C2C reference via option B: the official evaluator (clean clone 113c3a9 + XFAM local-rows loader + ARC K!=4 label patch,
+-x1_optionB/unified_evaluator_xfam.py) on our rows. Configuration-only changes to the official recipe unified_eval.yaml:
+-model_name Rosetta; rosetta_config base_model / teacher_model / checkpoints_dir / is_do_alignment (+ alignment_strategy
+-'longest', as in the recipe and the X1 fuser config); eval.dataset openbookqa|ai2-arc; eval.gpu_ids; eval.local_rows_jsonl;
+-output.output_dir. All other recipe keys unchanged (generate, greedy, max_new_tokens 64, use_cot false, use_template true).
+-The evaluator's per-question CSV (question_id = row index) is mapped back to our ids and parsed with the frozen V2 parser.
+-Modes: validate (pair small: helper Qwen2.5-0.5B, small fuser 8704f555, no alignment; raw outputs must equal the saved small-pair
+-       C2C raw outputs; exit 3 on diff), smoke/run (pair x1: helper Llama-3.2-1B, X1 fuser f01fc325, is_do_alignment true).
+-usage: run_x1_c2c.py --mode {validate,smoke,run} --dataset {obqa,arc} --rows <jsonl> --gpu <physical id> --workdir <dir> --out <jsonl>"""
++"""X1 C2C post-processing from an existing official-evaluator CSV (CPU, receiver tokenizer only; no model, no gold). DEVIATIONS C15.
++Same record construction as run_x1_c2c.py lines 58-68; only the CSV->row mapping check differs: the official ai2-arc CSV writer
++logs choices A-D only, so for K=5 rows columns E.. are empty. Check used here, per row: question equal; choices 1..min(K,4) equal;
++CSV choice columns beyond them empty; the evaluator's own prompt (_format_*_example on the local-rows loader) equal to ours; and, through
++the evaluator's own prepare_model_inputs with the aligner (model_type rosetta, Llama tokenizer, strategy longest, as in the run):
++len(receiver input_ids) == CSV cot_input_length and the receiver's non-padding ids == our rendered receiver prompt ids. For K=5 rows
++this shows the fifth choice was in the prompt. The Llama-side 'Today Date' rendered by the aligner is recorded (not fixed by the
++official aligner; strftime_now at run time).
++usage: finish_x1_c2c_from_csv.py --dataset {obqa,arc} --rows <jsonl> --env <c2c_chain_XX.env.json> --out <jsonl> [--partial <jsonl>]"""
+ import sys
+ sys.dont_write_bytecode = True
+-import argparse, csv, glob, os, subprocess, time, yaml
++import argparse, csv, importlib.util, yaml, torch
+ from x1_common import *
++sys.path.insert(0, str(CLEAN))
++from transformers import AutoTokenizer
++sys.path.insert(0, str(P210)); import protocol_min
++FMT = {'obqa': protocol_min.format_openbook}
++import arc_runtime_adapter; FMT['arc'] = protocol_min.format_openbook
+ 
+ ap = argparse.ArgumentParser()
+-ap.add_argument('--mode', required=True, choices=['validate', 'smoke', 'run'])
+-ap.add_argument('--dataset', required=True, choices=DS1)
+-ap.add_argument('--rows', required=True); ap.add_argument('--gpu', type=int, required=True)
+-ap.add_argument('--workdir', required=True); ap.add_argument('--out', required=True)
++ap.add_argument('--dataset', required=True, choices=DS1); ap.add_argument('--rows', required=True)
++ap.add_argument('--env', required=True); ap.add_argument('--out', required=True); ap.add_argument('--partial')
+ a = ap.parse_args()
+ OUT = pathlib.Path(a.out); assert not OUT.exists(), f'refusing to overwrite {OUT}'
+-W = pathlib.Path(a.workdir); W.mkdir(parents=True, exist_ok=False)
+ rows = jl(a.rows); assert all(r['dataset'] == a.dataset for r in rows)
++meta = read(a.env)
++assert meta['exit_code'] == 0 and len(meta['csv']) == 1 and meta['mode'] == 'run' and meta['dataset'] == a.dataset, meta
++assert meta['rows_sha256'] == sha(a.rows) and meta['evaluator_sha256'] == sha(EVALUATOR), 'rows or evaluator changed since the run'
+ parse = parser()
+-small = a.mode == 'validate'
+-cfg = yaml.safe_load(open(CLEAN / 'recipe/eval_recipe/unified_eval.yaml'))
+-rc = cfg['model']['rosetta_config']
+-cfg['model']['model_name'] = 'Rosetta'
+-rc['base_model'] = QWEN06['path']
+-rc['teacher_model'] = SMALL_HELPER['path'] if small else LLAMA['path']
+-rc['checkpoints_dir'] = SMALL_FUSER if small else X1_FUSER
+-rc['is_do_alignment'] = (not small)
+-assert rc['alignment_strategy'] == 'longest'
+-cfg['output']['output_dir'] = str(W / 'eval_out')
+-cfg['eval']['dataset'] = {'obqa': 'openbookqa', 'arc': 'ai2-arc'}[a.dataset]
+-cfg['eval']['gpu_ids'] = [a.gpu]
+-cfg['eval']['local_rows_jsonl'] = str(pathlib.Path(a.rows).resolve())
+-cfgp = W / 'eval_config.yaml'; cfgp.write_text(yaml.safe_dump(cfg, sort_keys=False))
+-jid = (os.environ.get('PBS_JOBID') or 'nojob').split('.')[0]
+-tmp = f'/tmp/xfam_{jid}_{a.gpu}_{os.getpid()}'; os.makedirs(tmp, exist_ok=True)
+-env = dict(os.environ, PYTHONPATH=str(CLEAN), TMPDIR=tmp, TMP=tmp, TEMP=tmp, PYTHONDONTWRITEBYTECODE='1', PYTHONUNBUFFERED='1',
+-           HF_HUB_OFFLINE='1', HF_DATASETS_OFFLINE='1', TRANSFORMERS_OFFLINE='1')
+-deadline = float(os.environ.get('XFAM_DEADLINE_EPOCH', time.time() + 3 * 3600))
+-t = time.time()
+-with open(W / 'evaluator.log', 'w') as f:
+-    try:
+-        proc = subprocess.run([str(DATA_ROOT / 'software/envs/c2c_official/bin/python'), str(EVALUATOR), '--config', str(cfgp)], cwd=W, env=env,
+-                              stdout=f, stderr=subprocess.STDOUT, timeout=max(60, deadline - time.time() - 60))
+-        rcode = proc.returncode
+-    except subprocess.TimeoutExpired:
+-        rcode = 'TIMEOUT'
+-meta = dict(utc=utc(), mode=a.mode, dataset=a.dataset, rows_file=a.rows, rows_sha256=sha(a.rows), evaluator=str(EVALUATOR), evaluator_sha256=sha(EVALUATOR),
+-            config=str(cfgp), config_sha256=sha(cfgp), exit_code=rcode, seconds=time.time() - t, gpu=a.gpu, job_id=os.environ.get('PBS_JOBID'), host=os.uname().nodename)
+-csvs = sorted(glob.glob(str(W / 'eval_out/**/*_cot.csv'), recursive=True))
+-meta['csv'] = csvs
+-save(OUT.with_suffix('.env.json'), meta)
+-assert rcode == 0 and len(csvs) == 1, meta
+-with open(csvs[0], newline='') as f:
++spec = importlib.util.spec_from_file_location('ue_xfam', EVALUATOR); ue = importlib.util.module_from_spec(spec); spec.loader.exec_module(ue)
++dname, fmt = {'obqa': ('openbookqa', '_format_openbookqa_example'), 'arc': ('ai2-arc', '_format_ai2_arc_example')}[a.dataset]
++cfg = yaml.safe_load(open(read(a.env)['config']))
++assert cfg['model']['rosetta_config']['is_do_alignment'] is True and cfg['model']['rosetta_config']['teacher_model'] == LLAMA['path'] and cfg['eval']['dataset'] == dname
++cfg['output']['output_dir'] = str(X / 'cache/x1_finish_scratch')
++ev = ue.UnifiedEvaluator(cfg)
++tq = AutoTokenizer.from_pretrained(QWEN06['path'], local_files_only=True); ue.set_default_chat_template(tq, QWEN06['path'])
++tl = AutoTokenizer.from_pretrained(LLAMA['path'], local_files_only=True)
++if tl.pad_token is None: tl.pad_token = tl.eos_token
++ue.set_default_chat_template(tl, LLAMA['path'])
++data = ue._xfam_local_dataset(str(pathlib.Path(a.rows).resolve()), dname)['test']
++with open(meta['csv'][0], newline='') as f:
+     got = {int(x['question_id']): x for x in csv.DictReader(f)}
+ assert sorted(got) == list(range(len(rows))), ('question_id coverage', len(got), len(rows))
++names = ['question_equal', 'logged_choices_equal', 'unlogged_columns_empty', 'evaluator_prompt_equal', 'aligned_input_length_equal', 'receiver_nonpad_ids_equal']
++chk = dict(n=0, **{k: 0 for k in names}, llama_today_date=set(), pad_positions=set(), K_gt_4=[])
++assert len(data) == len(rows)
++for i, (ex, r) in enumerate(zip(data, rows)):
++    x = got[i]; q = r['query']; K = len(q['choice_text']); L = 'ABCDEFGHIJ'; assert ex['id'] == r['id']
++    mine = FMT[a.dataset](q, use_template=True)
++    rendered = tq.apply_chat_template([{'role': 'user', 'content': mine}], tokenize=False, add_generation_prompt=True, enable_thinking=False)
++    prompt = getattr(ev, fmt)(ex, use_cot=cfg['eval']['use_cot'], use_template=cfg['eval']['use_template'])
++    prep = ev.prepare_model_inputs(prompt=prompt, tokenizer=tq, device=torch.device('cpu'), model_type='rosetta', llm_tokenizer=tl, answer_method=cfg['eval']['answer_method'])
++    slm = prep['inputs']['input_ids'][0][0].tolist(); keep = prep['inputs']['attention_mask'][0][0].bool().tolist()
++    c = [x['question'] == q['question_stem'], [x[k] for k in L[:min(K, 4)]] == q['choice_text'][:4], all(x[k] == '' for k in L[min(K, 4):]),
++         prompt == mine, int(x['cot_input_length']) == len(slm), [t for t, k in zip(slm, keep) if k] == tq(rendered)['input_ids']]
++    chk['n'] += 1
++    for name, ok in zip(names, c): chk[name] += ok
++    chk['llama_today_date'].add(prep['printable_text'][1].split('Today Date: ')[1].split('\n')[0]); chk['pad_positions'].add(len(slm) - sum(keep))
++    if K > 4: chk['K_gt_4'].append(dict(id=r['id'], K=K, csv_input_length=int(x['cot_input_length']), aligned_len=len(slm), all_checks=all(c)))
++    assert all(c), (r['id'], c)
++chk['llama_today_date'] = sorted(chk['llama_today_date']); chk['pad_positions'] = sorted(chk['pad_positions'])
+ for i, r in enumerate(rows):
+-    x = got[i]; q = r['query']
+-    assert x['question'] == q['question_stem'] and [x[k] for k in 'ABCDEFGHIJ'[:len(q['choice_text'])]] == q['choice_text'], r['id']
+-    p = parse(x['cot_output'], r['legal_labels'])
+-    append(OUT, dict(dataset=r['dataset'], split=r['split'], id=r['id'], representative=r['representative'], pair='small' if small else 'x1', runtime_error=None,
++    x = got[i]; p = parse(x['cot_output'], r['legal_labels'])
++    append(OUT, dict(dataset=r['dataset'], split=r['split'], id=r['id'], representative=r['representative'], pair='x1', runtime_error=None,
+                      C=dict(raw=x['cot_output'], parsed=p['answer'] if p['valid'] else 'INVALID', parse_reason=p['reason'], question_id=i,
+                             official_pred=x['pred'], official_input_length=x.get('cot_input_length'), official_gen_length=x.get('cot_gen_length'),
+                             answer_latency_ms=float(x['answer_latency_ms']) if x.get('answer_latency_ms') else None)))
+-print('DONE', a.mode, a.dataset, len(rows), 'seconds', round(meta['seconds'], 1), flush=True)
+-if small:
+-    lab = {}
+-    for name in ['full_train', 'full_development']:
+-        for x in jl(V2L / f'{name}_P2_SCORING_V2.jsonl'):
+-            if x['pair'] == 'small': lab[(x['dataset'], x['id'])] = x
+-    res = []
+-    for o in jl(OUT):
+-        s = lab[(o['dataset'], o['id'])]['source_C']; saved = rawline(s['source_path'], s['source_line'])
+-        res.append(dict(dataset=o['dataset'], id=o['id'], C_raw_equal=o['C']['raw'] == saved['raw_answer'], saved_record=f"{s['source_path']}:{s['source_line']}"))
+-    v = all(c['C_raw_equal'] for c in res) and len(res) == len(rows)
+-    save(OUT.parent / f'C2C_VALIDATION_{a.dataset}.json', dict(utc=utc(), verdict='PASS' if v else 'FAIL', rows=res))
+-    print('C2C_VALIDATION', a.dataset, 'PASS' if v else 'FAIL', sum(c['C_raw_equal'] for c in res), '/', len(res), flush=True); sys.exit(0 if v else 3)
++if a.partial:
++    old, new = jl(a.partial), jl(OUT)
++    chk['partial_rows'] = len(old); chk['partial_prefix_identical'] = old == new[:len(old)]
++    assert chk['partial_prefix_identical']
++save(OUT.with_suffix('.finish.json'), dict(utc=utc(), script=__file__, script_sha256=sha(__file__), csv=meta['csv'][0], csv_sha256=sha(meta['csv'][0]),
++                                           env=a.env, rows=a.rows, out=str(OUT), out_sha256=sha(OUT), checks=chk))
++print('FINISH', a.dataset, len(rows), json.dumps(chk), flush=True)

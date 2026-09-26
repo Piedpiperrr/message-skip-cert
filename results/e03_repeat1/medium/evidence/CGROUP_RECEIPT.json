@@ -1,0 +1,8 @@
+{
+  "cgroup_raw": "0::/jobs/7635399\n",
+  "utc": "2026-09-19T08:31:31.973216+00:00",
+  "job_id": "run019",
+  "host": "REDACTED",
+  "legacy_cgroup_pattern_match": true,
+  "legacy_match_is_fatal": false
+}

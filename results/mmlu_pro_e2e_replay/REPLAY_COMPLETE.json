@@ -1,0 +1,18 @@
+{
+  "utc": "2026-09-16T21:58:42.935940+00:00",
+  "status": "COMPLETE",
+  "job_id": "run016",
+  "complete_requests": 512,
+  "fixed_Text": 128,
+  "policy_Text": 128,
+  "fixed_C2C": 128,
+  "policy_C2C": 128,
+  "online_ProbeMax": 256,
+  "retries": 0,
+  "requests_sha256": "75118c5f4342f86fe5f84d77993e715d85f10b7d41c5ae476e9b69c053cef70c",
+  "probes_sha256": "3922055cc151073cc28f748574715850487d513fcd6405262b6fa08c986ab045",
+  "attempts_sha256": "bd10df42af11527f1b17ed51debaa9598f7a5e31834b49147e99342ea26a9b31",
+  "gold_read": false,
+  "Stage1_outputs_read": false,
+  "scientific_analysis_performed": false
+}

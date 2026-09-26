@@ -1,0 +1,65 @@
+{
+  "utc": "2026-09-14T23:11:13.823542+00:00",
+  "compiled": false,
+  "engines": {
+    "pdflatex": null,
+    "xelatex": null,
+    "lualatex": null,
+    "tectonic": null,
+    "latexmk": null
+  },
+  "reason": "No installed TeX engine; no environment installation or upgrade",
+  "active_input_graph": [
+    {
+      "source": "manuscript.tex",
+      "target": "reference_preserving.tex"
+    },
+    {
+      "source": "reference_preserving.tex",
+      "target": "boundary_methods.tex"
+    },
+    {
+      "source": "reference_preserving.tex",
+      "target": "boundary_results.tex"
+    },
+    {
+      "source": "boundary_results.tex",
+      "target": "boundary_main_table.tex"
+    },
+    {
+      "source": "boundary_results.tex",
+      "target": "boundary_panel_table.tex"
+    },
+    {
+      "source": "reference_preserving.tex",
+      "target": "boundary_cost_limitations.tex"
+    },
+    {
+      "source": "boundary_cost_limitations.tex",
+      "target": "contribution_positioning.tex"
+    },
+    {
+      "source": "reference_preserving.tex",
+      "target": "e2e_validation.tex"
+    },
+    {
+      "source": "e2e_validation.tex",
+      "target": "e2e_table.tex"
+    },
+    {
+      "source": "reference_preserving.tex",
+      "target": "sealed_arc_confirmation.tex"
+    },
+    {
+      "source": "manuscript.tex",
+      "target": "boundary_appendix.tex"
+    },
+    {
+      "source": "manuscript.tex",
+      "target": "e2e_appendix.tex"
+    }
+  ],
+  "active_files_count": 13,
+  "historical_figures_exist": true,
+  "sealed_subsection_connected": true
+}

@@ -1,0 +1,7 @@
+{
+  "job_id": "run001",
+  "host": "REDACTED",
+  "strict_cgroup_match": true,
+  "GPU_allocated": 1,
+  "GPU_compute_allowed": false
+}

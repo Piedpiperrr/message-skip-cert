@@ -1,0 +1,4 @@
+parser,path,sha256,label
+V2,$DATA_DIR/P2_SCORING_V2_20260912T191445Z/scoring_v2.py,d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+OFFICIAL,$DATA_DIR/c2c_reproduction_assets/official_C2C/rosetta/utils/evaluate.py,b341338aecf1cf07a5cb61664b8dac5f2ff96b32622e54eb37b32604deeddf16,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+D1,$DATA_DIR/P2_SCORE_SENSITIVITY_20260912T055929Z/diagnostic_parser_v1.py,6619cafdd9cffb9891eb2cc818053e5ce506be59c7ff2e75b51e5331c918cfab,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision

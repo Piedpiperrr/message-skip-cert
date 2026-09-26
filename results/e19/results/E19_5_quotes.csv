@@ -1,0 +1,47 @@
+test_family,file,lines,sha256,hashed_utc,quote,reading,label
+"held-out 744 OBQA (E9b), 5 tests",P2_R3_E9BC_20260920T061042Z/PROTOCOL_FREEZE_E9B.md,16-20,d211e4ad6eb267f389ec449482b21e4637e732383552678bea2f81d4cb8d0bbe,2026-09-20T06:21:01Z,"and hash all scores, routes, and outputs before decoding the answer key. Statistics per policy: omitted
+n, changed k, conditional change rate with a two-sided Clopper-Pearson 95% interval, and the exact
+binomial p-value of the single prespecified test H0: rho >= .05 at the frozen threshold; the change rate
+of always omitting (receiver alone on all 744); accuracy of policy and reference with a paired bootstrap
+interval (2,000 resamples, seed 0). No latency is measured. Every policy is reported whatever its outcome.","Defines the statistics (CP 95% interval; exact binomial p of the single prespecified test H0: rho >= .05). No sentence defines ""pass""; no significance level or CP-upper criterion is stated.","POST-HOC re-analysis (E19, PREREG_E19.md); descriptive; does not change any deployed policy"
+"held-out 744 OBQA (E9b), amendment",P2_R3_E9BC_20260920T061042Z/PROTOCOL_AMENDMENT_E9B.md,18-22,bd951a3fc35e4bb080db847f0aa4c87901791588687d86263bf609fb82d65506,2026-09-20T06:44:34Z,"earlier project stage scored small-pair outputs on them"", never as sealed. Everything else in
+PROTOCOL_FREEZE_E9B.md is unchanged: policies and thresholds, runs, frozen prompts, parser, decoding,
+runtimes, the sealing order (project only id, question, choices, and fact1 for Text+fact; write and hash
+all scores, routes, and outputs before decoding the answer key), statistics, and the commitment to report
+every policy whatever its outcome.",Keeps the statistics unchanged; adds no pass criterion.,"POST-HOC re-analysis (E19, PREREG_E19.md); descriptive; does not change any deployed policy"
+"held-out 744 OBQA (E9b), amendment (the only ""p<=.001"" in either E9b file)",P2_R3_E9BC_20260920T061042Z/PROTOCOL_AMENDMENT_E9B.md,83,bd951a3fc35e4bb080db847f0aa4c87901791588687d86263bf609fb82d65506,2026-09-20T06:44:34Z,"  `…BOUNDARIES…/frozen_config.json` (ProbeMax, score choice, alpha=.05, delta, q-grid, p<=.001);",Lists the calibration design artifact (per-candidate acceptance p<=.001 in BOUNDARIES frozen_config.json) searched by check C2; not a pass criterion for the held-out test. No separate p <= .001 sentence for large OBQA Text exists in either file.,"POST-HOC re-analysis (E19, PREREG_E19.md); descriptive; does not change any deployed policy"
+sealed ARC (2 tests),P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/USER_PROMPT_ZH.md,267-287,4dcdff6387da0ed1050f56d957929186306053c10b7e37108fc9e15205fa93b8,2026-09-14T21:31:36.907790+00:00,"# 9. Test 结果的解释规则必须事先冻结
+
+本轮不重新做 calibration，也不在 test 上“通过/拒绝”新 threshold。
+
+现有目标风险仍是：
+
+`conditional answer-change ≤ 5%`
+
+sealed test 只报告冻结 policy 在独立 population 上的实际经验结果。
+
+每个 reference 单独回答两个核心问题：
+
+### Reference preservation
+
+冻结 policy 的 empirical conditional answer-change 是否仍处于预先指定的5%风险目标附近/以内？
+
+完整报告 numerator / denominator，不用四舍五入后的百分比替代。
+
+可以提供预先指定的描述性 binomial interval，但不得把 test 再当 calibration set，也不得基于 interval 改 q。
+
+### Economic value","States that the sealed test does not ""pass/reject"" a threshold; the question is whether the empirical conditional answer-change rate stays near/within the prespecified 5% risk target, with a prespecified descriptive binomial interval allowed. No p-value or CP-upper pass criterion. (Translation: ""This round does not redo calibration, nor pass/reject a new threshold on test. The target risk is still conditional answer-change <= 5%. The sealed test only reports the frozen policy's actual empirical result on an independent population. ... Is the frozen policy's empirical conditional answer-change still near/within the prespecified 5% risk target? Report numerator/denominator in full ... A prespecified descriptive binomial interval may be given, but the test must not be used as a calibration set again, and q must not be changed based on the interval."")","POST-HOC re-analysis (E19, PREREG_E19.md); descriptive; does not change any deployed policy"
+E16 out-of-sample (E16-1 Llama OBQA/ARC; E16-2 medium ARC C2C),P2_R7_E16_20260921T184114Z/PREREG.md,21-27; 29-34,17ca47138a351a80ac8d5282dacb39109330d433bf31b4d390cdfd384b25c02a,# utc=2026-09-21T18:44:07.771704221Z," Writing rule (Sec 4.5 out-of-sample paragraph, the abstract's Llama sentence, Fig. 2 marker, provenance table):
+  - CP upper < 5% -> ""The frozen Llama-3.1-8B policy passes an out-of-sample test: it omits Text on X% of N held-out
+    questions and changes k/n = r% [CP]"" (coverage stated next to the development coverage whatever it is).
+  - CP lower > 5% -> ""fails the out-of-sample test (r% [CP])""; the abstract sentence says the Llama certificate did not
+    hold out of sample.
+  - otherwise -> ""inconclusive: r% [CP]""; the abstract sentence says it holds on development data only.
+  Also state whether p <= .001 and p <= .025.
+...
+E16-2 medium/ARC/C2C frozen policy on the 1,172 ARC test questions (""never used with this pair""). Same report as
+ E16-1 (reference = C2C; Delta acc = policy - C2C). Writing rule: same three branches, in Sec 4.5, Fig. 2 marker and
+ provenance table (no abstract sentence is specific to this policy).
+Out-of-sample summary rule (E16-1 and E16-2 together with the earlier sealed/held-out tests): if every test passes,
+ the abstract and Contribution 4 say all frozen out-of-sample tests have CP upper < 5% and list the policies; if any
+ does not pass, that sentence becomes ""X of Y frozen out-of-sample tests have CP upper < 5%"" and names the others.","Pass = two-sided 95% CP upper < 5%; fail = CP lower > 5%; otherwise inconclusive. p <= .001 and p <= .025 are to be stated, not criteria.","POST-HOC re-analysis (E19, PREREG_E19.md); descriptive; does not change any deployed policy"

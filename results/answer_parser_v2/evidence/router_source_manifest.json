@@ -1,0 +1,266 @@
+[
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/train_mixture_receipt.json",
+    "sha256": "df35d59d03e73a85759bafd9c3eb7498e9a90186b9ead5927182d64a592ca338",
+    "size_bytes": 4622,
+    "role": "unchanged train-frozen mixture probabilities"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/router_overhead.jsonl",
+    "sha256": "a54ae3d9db1080c31bf17e2aaebac302fb412790b1fd3f7d4ddf2b68cb7a5d9f",
+    "size_bytes": 833885,
+    "role": "saved per-question choices and original online overhead; read-only"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/router_replay.csv",
+    "sha256": "140e090a3788956a981ec25f6808c135c28e68b2f744b522ab5d1fce85ebed06",
+    "size_bytes": 421362,
+    "role": "saved original dev panel action/overhead/total latency"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/full_dev_all_policy_results.csv",
+    "sha256": "bc72b72a99cb168d6c107c2fef3ad234596f09ad2aa2221708cb61b4547967c9",
+    "size_bytes": 7671,
+    "role": "old fixed-policy summary for exact arithmetic consistency"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/cost_panel_all_policy_results.csv",
+    "sha256": "4db9bc30fea9e1cc1389d4bb833264370075b206a1ebe6aa2e5cc59959491fcf",
+    "size_bytes": 8879,
+    "role": "old fixed-policy summary for exact arithmetic consistency"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/train_predictions_word.npz",
+    "sha256": "298e30bc18415a7a0e7aaf6e113f6a6692c5c132c5d7ab9c58b828016a8be24c",
+    "size_bytes": 708334,
+    "role": "saved choices/probabilities; no estimator loaded"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/train_predictions_semantic.npz",
+    "sha256": "c6634a8e741fd71d344c659b4df4533aa189edcf3af26ea5efa5275dbe2449d0",
+    "size_bytes": 652878,
+    "role": "saved choices/probabilities; no estimator loaded"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/dev_predictions_word.npz",
+    "sha256": "542eae2567121775eb4b8d170494bc63f9ffdfeca1e3d5affafc4054ebe128f7",
+    "size_bytes": 152940,
+    "role": "saved choices/probabilities; no estimator loaded"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/dev_predictions_semantic.npz",
+    "sha256": "41f57e5ed6b641d07a0ca8a3e87c8fcbb1960698f2aece08ba64679e2df9b4d6",
+    "size_bytes": 141068,
+    "role": "saved choices/probabilities; no estimator loaded"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/query_independent_mixtures_286.csv",
+    "sha256": "c0c70a5ba013bb5c74aa702b5483dd4b14acfd60f27ed0936d24e9db3b06d1fc",
+    "size_bytes": 37595,
+    "role": "saved mixture probabilities; rescored without reoptimizing envelope"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/continuous_mixture_comparisons.csv",
+    "sha256": "e6130cc240636c5bb63d26f0b800ec48a2fde0cc5d998681d50192d2892e0294",
+    "size_bytes": 5708,
+    "role": "saved mixture probabilities; rescored without reoptimizing envelope"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/train_mixture_receipt.json",
+    "sha256": "aafaf408da3e5af7a371a323028a58b40bb6e7bab26c94cbb5a2248a5105bf6b",
+    "size_bytes": 7171,
+    "role": "unchanged train-frozen mixture probabilities"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/router_overhead.jsonl",
+    "sha256": "e76a278f7ab2fc307abf9df563a862db5092fa3a468b3ba4d397ccea0200aebd",
+    "size_bytes": 869937,
+    "role": "saved per-question choices and original online overhead; read-only"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/router_replay.csv",
+    "sha256": "5032e8e151cd3b1d9370a26c8f65d9419e453fa34095f4631cf2a0e1d27ce9bf",
+    "size_bytes": 461496,
+    "role": "saved original dev panel action/overhead/total latency"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/full_dev_all_policy_results.csv",
+    "sha256": "9a215009cf4d82830eb72eaf2fc6c847578fc3d9b8ed8255a82d4aca1c7309c3",
+    "size_bytes": 7113,
+    "role": "old fixed-policy summary for exact arithmetic consistency"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/cost_panel_all_policy_results.csv",
+    "sha256": "268e43c18f452bd45b638427c01c3fda26a8f45aae56292177ce9a69d0d7ad86",
+    "size_bytes": 8811,
+    "role": "old fixed-policy summary for exact arithmetic consistency"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/train_predictions_word.npz",
+    "sha256": "a64067fff80145e2d2080b23206acb5069153eb27c7d424a7390918022e64728",
+    "size_bytes": 296686,
+    "role": "saved choices/probabilities; no estimator loaded"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/train_predictions_semantic.npz",
+    "sha256": "c924142a4566a6f415b555d07d42556f7a2ef5fb5cadd8e3f219d5aaf6239f6a",
+    "size_bytes": 278782,
+    "role": "saved choices/probabilities; no estimator loaded"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/dev_predictions_word.npz",
+    "sha256": "48169df5dd7d6d7333313072ef0371072a1d950e58d4b111231be25ffd4e6bf7",
+    "size_bytes": 80508,
+    "role": "saved choices/probabilities; no estimator loaded"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/dev_predictions_semantic.npz",
+    "sha256": "f800be3c1601ada85d5e07b002d7cc5a498234e3bbc13c0077904b876cee3f18",
+    "size_bytes": 75724,
+    "role": "saved choices/probabilities; no estimator loaded"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/query_independent_mixtures_286.csv",
+    "sha256": "0eba584ec590eea14b43ba37858d3dfbfc4aecaf4e27bf4b3023e17ad9261350",
+    "size_bytes": 39226,
+    "role": "saved mixture probabilities; rescored without reoptimizing envelope"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/continuous_mixture_comparisons.csv",
+    "sha256": "92211b4ab8597f042da039573c4cf3d4d6dfbf69d03a50eb8833dd1072befeb8",
+    "size_bytes": 5856,
+    "role": "saved mixture probabilities; rescored without reoptimizing envelope"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/train_mixture_receipt.json",
+    "sha256": "22c61fd57f880ed56b28e7101292a68513d6d4d77c85d38f8450c530ff1e5b20",
+    "size_bytes": 4627,
+    "role": "unchanged train-frozen mixture probabilities"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/router_overhead.jsonl",
+    "sha256": "14e28da04cb51fd1f6c5fc41c58c51cccc6ccdc6190ae385314583daccfd58a6",
+    "size_bytes": 834862,
+    "role": "saved per-question choices and original online overhead; read-only"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/router_replay.csv",
+    "sha256": "3ea5deb192458de0b3a41a6063fcb6cf8eccaed2d1cd36a5432b350f14200db8",
+    "size_bytes": 404725,
+    "role": "saved original dev panel action/overhead/total latency"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/full_dev_all_policy_results.csv",
+    "sha256": "ad6610d31338716ec546d3ca186872ec754f639ff29467a23715b3a8511700e1",
+    "size_bytes": 8260,
+    "role": "old fixed-policy summary for exact arithmetic consistency"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/cost_panel_all_policy_results.csv",
+    "sha256": "49b173b7d34fd8b97f5dc48a12eb1c86e8580f305c0f8d1efec335a8c9e61ec9",
+    "size_bytes": 9194,
+    "role": "old fixed-policy summary for exact arithmetic consistency"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/train_predictions_word.npz",
+    "sha256": "d2c75fe08c195067704f4fe416f2ab3c39394c5dea50208e139181312cad58f7",
+    "size_bytes": 708334,
+    "role": "saved choices/probabilities; no estimator loaded"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/train_predictions_semantic.npz",
+    "sha256": "5936d48c2ff4697ad14438a15816a706eaae4f29f479d0559c94920268c4ea35",
+    "size_bytes": 652878,
+    "role": "saved choices/probabilities; no estimator loaded"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/dev_predictions_word.npz",
+    "sha256": "6266a7ce6196049f67af233d3cfad332e40103e3caffee34de93a04169b60744",
+    "size_bytes": 152940,
+    "role": "saved choices/probabilities; no estimator loaded"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/dev_predictions_semantic.npz",
+    "sha256": "9f7d9b0c0472049d920f90684ca4f4543255156487164c3f9659543c761a23b6",
+    "size_bytes": 141068,
+    "role": "saved choices/probabilities; no estimator loaded"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/query_independent_mixtures_286.csv",
+    "sha256": "5ed023db960414a71bcd6276b5072d7a9f052d8a74d9033654fe22197af13a2e",
+    "size_bytes": 37119,
+    "role": "saved mixture probabilities; rescored without reoptimizing envelope"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/continuous_mixture_comparisons.csv",
+    "sha256": "0c6c3dd23d9a1276d0461aedab01b8e927c58476317c4a1dbb2ae612dd9ba4aa",
+    "size_bytes": 4797,
+    "role": "saved mixture probabilities; rescored without reoptimizing envelope"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/train_mixture_receipt.json",
+    "sha256": "7f3795a93bfa3fb432491c4b72d102218bba181d250375915b402b59739ece24",
+    "size_bytes": 7132,
+    "role": "unchanged train-frozen mixture probabilities"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/router_overhead.jsonl",
+    "sha256": "645a4dee08138d253a48d5046fd6215676d0bf7340592044a4df883cbec94d1e",
+    "size_bytes": 871336,
+    "role": "saved per-question choices and original online overhead; read-only"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/router_replay.csv",
+    "sha256": "346a0ac61130bd82bb51a730eb04b7fcc1474677f694b4eb64c682027c1547d1",
+    "size_bytes": 436370,
+    "role": "saved original dev panel action/overhead/total latency"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/full_dev_all_policy_results.csv",
+    "sha256": "6843a004e30d7205c3450503c594859a04444b51a5819fa4fc28eb5d06fdce37",
+    "size_bytes": 7841,
+    "role": "old fixed-policy summary for exact arithmetic consistency"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/cost_panel_all_policy_results.csv",
+    "sha256": "8caeb40dd9338d917a9f813622d4502326b92bdf6da58037e2d2a6a506a5a572",
+    "size_bytes": 9072,
+    "role": "old fixed-policy summary for exact arithmetic consistency"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/train_predictions_word.npz",
+    "sha256": "f2424223ed94ff36809800382dbac2419d0028d7f3665e47a6bea7c496432940",
+    "size_bytes": 296686,
+    "role": "saved choices/probabilities; no estimator loaded"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/train_predictions_semantic.npz",
+    "sha256": "c0a57f4d207b30e140ed7ea08808e53c79d04559885b5d4e7305563991ca8231",
+    "size_bytes": 278782,
+    "role": "saved choices/probabilities; no estimator loaded"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/dev_predictions_word.npz",
+    "sha256": "b6a909d8be8026196d4b1e4278ac8727171f6e5e0a72e1f7b507af67aee10c86",
+    "size_bytes": 80508,
+    "role": "saved choices/probabilities; no estimator loaded"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/dev_predictions_semantic.npz",
+    "sha256": "69e3e3ede75a10919afe6160e8f3d7303efe787a157d06e6a048d67d617f7f46",
+    "size_bytes": 75724,
+    "role": "saved choices/probabilities; no estimator loaded"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/query_independent_mixtures_286.csv",
+    "sha256": "c47e7335adf95b70c6a5c9999382f9b610132fa1739aeb1f5e97d73068544ec3",
+    "size_bytes": 37487,
+    "role": "saved mixture probabilities; rescored without reoptimizing envelope"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/continuous_mixture_comparisons.csv",
+    "sha256": "4e451273f90133c0a8eaf6ab2654a86470f6990f842ca807f9382702747da634",
+    "size_bytes": 4724,
+    "role": "saved mixture probabilities; rescored without reoptimizing envelope"
+  }
+]

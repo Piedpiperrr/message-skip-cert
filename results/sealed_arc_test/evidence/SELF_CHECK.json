@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-14T21:29:49.218261+00:00",
+  "AST_all_pass": true,
+  "native_adapter_byte_identical": true,
+  "parser_syntax_cases": 3,
+  "group_rule_case_and_order_preserved": true,
+  "threshold_ties_included": true,
+  "gold_column_projection_isolated": true,
+  "test_content_access": false,
+  "model_forwards": 0
+}

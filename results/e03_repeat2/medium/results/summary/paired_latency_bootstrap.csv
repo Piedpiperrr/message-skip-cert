@@ -1,0 +1,5 @@
+task,metric,N,mean,median,CI95_low,CI95_high,seed,resamples,unit,indices_sha256,interpretation
+obqa,saving_ms,128,52.23224450855923,63.892901642248034,37.710291897474235,67.94315700835796,0,2000,paired question,03b4a79fa2e91a4121ff970be8365a1851a041b16b0abb07c34ade98157fd602,descriptive exposed panel; no population guarantee
+obqa,accuracy_difference,128,0.0078125,0.0,0.0,0.0234375,0,2000,paired question,03b4a79fa2e91a4121ff970be8365a1851a041b16b0abb07c34ade98157fd602,descriptive exposed panel; no population guarantee
+arc,saving_ms,128,82.41235471723485,66.31660554558039,61.40878639489529,108.3596926401242,0,2000,paired question,d05b2b29d55fe872bc7ca472b6b1bae669cd6e24a6e6d7ffbf02ee78e0a77b07,descriptive exposed panel; no population guarantee
+arc,accuracy_difference,128,0.0,0.0,0.0,0.0,0,2000,paired question,d05b2b29d55fe872bc7ca472b6b1bae669cd6e24a6e6d7ffbf02ee78e0a77b07,descriptive exposed panel; no population guarantee

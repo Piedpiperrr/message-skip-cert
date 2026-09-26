@@ -1,0 +1,13 @@
+{
+  "utc": "2026-09-14T07:09:18.097665+00:00",
+  "files": {
+    "records/dev_scored_routes.jsonl": "19e9ce1f74a23cd144406dd170768f41244c7bf171c59a9be15fce30009f44a2",
+    "records/dev_grid_routes.jsonl": "fa134e765e5c3dc4801bdde44fa1933c3c8c1a193975596dec191d30622cb4be",
+    "records/word_dev_scores.jsonl": "a7aeacabf8e7072c0b58e19407afaef390320db38be7889a6cb1da2e0a531360",
+    "DEPLOYMENT_FREEZE.json": "d9fe10ee2885ae8572f4f66a6afb90f84b4dbf6659ef0c96ba2241a01b9bdac4",
+    "PROBES_COMPLETE.json": "d39add8d90470148de751f8a26309b206055c4c74e8c5c33a66bab7e43616c00"
+  },
+  "N": 742,
+  "new_families": 3,
+  "dev_gold_or_answers_read": false
+}

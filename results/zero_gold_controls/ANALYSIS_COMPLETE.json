@@ -1,0 +1,13 @@
+{
+  "utc": "2026-09-14T07:09:52.865466+00:00",
+  "files": {
+    "summary/main_dev.csv": "2026f85d92e61dbd56fbb0df7bdce0759aac7f870a3dd9d320bb6f82f1a31764",
+    "summary/ranking.csv": "0bac6e4a1c6fa30ca9e167179eff2861e44706c12b9ba3210632192bab4c9f69",
+    "summary/bootstrap_new_vs_D.csv": "aace20ff88496ce06db8457984d277971a2a721f2f8f93499168c89f83bc67a0",
+    "records/dev_per_question_new.jsonl": "40c65e96aa02d072350cb25984bf9965ccc70a90305dea3c049bdd7f799ab88b",
+    "summary/probe_diagnostics.json": "47cb6c74214c005c53bdd89527df867e3bec87111a3adb365c2305a4ceb04d4d"
+  },
+  "evaluations": 2226,
+  "cal_tests_new": 60,
+  "original_reference_working_points_unchanged": true
+}

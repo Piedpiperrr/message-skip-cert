@@ -1,0 +1,25 @@
+{
+  "utc": "2026-09-14T05:57:40.423787+00:00",
+  "files": {
+    "models/MODEL_INDEX.csv": "2c821577617706093c05c789573bbb3560995263591933363ed0c63f569d80e1",
+    "models/R32_r0.joblib": "40b526a613fbb7ef465b02fcc39887e4b40aef04c979e23cf99fcb218ba97e74",
+    "models/R128_r0.joblib": "5abeb8e12d2690f109ea800b99053f7ffee85dd3e293ae7e5241f845e9cceeee",
+    "models/R512_r0.joblib": "10cff71c7fc0ed75bb0e63d2e7ad130c0e1569343cc6d040aaf4ecc9a5f019f2",
+    "models/R32_r1.joblib": "25e483759e1cee7cd9774637f1dc834f7abde1986713660bdb0b48c7a9842a7f",
+    "models/R128_r1.joblib": "9ca88710d4546026ccd8829823eb822766159816d697e528cd1aaedb210ea930",
+    "models/R512_r1.joblib": "82aa8d0e5bea63fa683b7765ef40924b88996113bb2c9e40bd9144ee3fe12ed0",
+    "models/R32_r2.joblib": "423372937b515609498d4a2419ae9d5ffdb0ab23e61ce495dcadc77d4c87f3e2",
+    "models/R128_r2.joblib": "75a10ef6f62f06264bc966da2c2e9d5d1097466700034b114e49053875b39f11",
+    "models/R512_r2.joblib": "60f53d32ef03cccc79b03ea9c308919eee15fadf88ad33e7db1c06d6c14bfa85",
+    "models/R32_r3.joblib": "1ac78fafbe141e59f10bc5920e8226559989237809c6c646fe467c2ee06f4dfa",
+    "models/R128_r3.joblib": "61fc38f9b000e14823a28afb174daa3eff7b3f83affde8490eaac951002c8167",
+    "models/R512_r3.joblib": "531e0892f233b61d3038ed6d9d6d12f64c9f4d98c55f9ad77bbfcde8dc4fd576",
+    "models/R32_r4.joblib": "ffd44b60780da0e2e14925c2bdf6c4511a27dc2bbc1f12b32644a1ea99aba943",
+    "models/R128_r4.joblib": "b6b201cd2caae4a7e8b2ed323486aa7a16ad435d9c254c58b932ba60808ec606",
+    "models/R512_r4.joblib": "e131eaffb5cf58a2c6e56be3d75a9138d9914d7875d5e67e539922af20aba5db"
+  },
+  "model_outcomes": 15,
+  "actual_LR_fits": 15,
+  "constant_fallbacks": 0,
+  "cal_labels_read": false
+}

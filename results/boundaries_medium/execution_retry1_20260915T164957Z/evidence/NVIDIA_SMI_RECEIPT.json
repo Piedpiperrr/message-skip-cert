@@ -1,0 +1,7 @@
+{
+  "utc": "2026-09-15T16:57:21.241589+00:00",
+  "returncode": 0,
+  "stdout": "index, name, uuid, memory.total [MiB]\n0, NVIDIA A100-SXM4-40GB, GPU-1c836f54-6fbb-ab99-38a5-631077704e6f, 40960 MiB\n1, NVIDIA A100-SXM4-40GB, GPU-99a2d1a0-b31d-8f9d-28af-d1b4059d8c54, 40960 MiB\n",
+  "stderr": "",
+  "auxiliary_only": true
+}

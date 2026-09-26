@@ -1,0 +1,8 @@
+{
+  "utc": "2026-09-14T18:10:18.626572+00:00",
+  "path": "$DATA_DIR/P2_1_20260910T041720Z/P2_STATE.md",
+  "prefix_bytes": 76085,
+  "prefix_sha256": "68a78840ff5ee1553984fa3cdac08b5b263a80c82bd1a3be201fc4a4d7441469",
+  "append_sha256": "d3ae1b516d2f7259679f3a69a1cd7f152d7b67494a982e66015cde45fc3849af",
+  "append_only_verified": true
+}

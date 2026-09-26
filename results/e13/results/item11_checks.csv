@@ -1,0 +1,16 @@
+check,ok,detail,label
+OBQA helper Text instruction equals saved E6 example,True,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+OBQA helper Text+fact instruction equals saved E6 example,True,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+OBQA helper rendered input tokens == saved helper_input_tokens,True,111 vs 111,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+OBQA receiver Text-reading rendered tokens == saved receiver_input_tokens,True,258 vs 258,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+OBQA receiver-only rendered tokens == saved receiver_input_tokens,True,132 vs 132,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+OBQA probe input ids == saved probe_ids,True,136 ids,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"probe prefix tokenizes to [785, 4396, 4226, 374]",True,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+OBQA Text+fact helper rendered tokens == saved (E6 smoke) helper_input_tokens,True,124 vs 124,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+OBQA Text+fact receiver rendered tokens == saved (E6 smoke) receiver_input_tokens,True,247 vs 247,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+MMLU-Pro helper rendered == decoded saved helper input ids,True,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+MMLU-Pro receiver Text-reading rendered == decoded saved receiver input ids,True,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+MMLU-Pro receiver-only rendered == decoded saved receiver input ids,True,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+MMLU-Pro probe input ids == saved probe_ids,True,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+anonymity: no denylisted string in PROMPTS_AND_PARSER.md,True,{},POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+anonymity: no file-system path pattern in PROMPTS_AND_PARSER.md,True,[],POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision

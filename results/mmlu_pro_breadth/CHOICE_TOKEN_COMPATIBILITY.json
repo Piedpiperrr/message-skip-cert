@@ -1,0 +1,2556 @@
+{
+  "status": "PROBEMAX_PROTOCOL_COMPATIBLE",
+  "models": {
+    "small": {
+      "repo": "Qwen/Qwen3-0.6B",
+      "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "path": "$DATA_DIR/c2c_reproduction_assets/models/Qwen--Qwen3-0.6B",
+      "tokenizer_class": "Qwen2TokenizerFast",
+      "labels": {
+        "A": {
+          "no_space": [
+            32
+          ],
+          "leading_space": [
+            362
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 32,
+              "decoded": "A"
+            },
+            {
+              "id": 362,
+              "decoded": " A"
+            },
+            {
+              "id": 22985,
+              "decoded": "\tA"
+            }
+          ]
+        },
+        "B": {
+          "no_space": [
+            33
+          ],
+          "leading_space": [
+            425
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 33,
+              "decoded": "B"
+            },
+            {
+              "id": 425,
+              "decoded": " B"
+            },
+            {
+              "id": 12791,
+              "decoded": "\tB"
+            }
+          ]
+        },
+        "C": {
+          "no_space": [
+            34
+          ],
+          "leading_space": [
+            356
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 34,
+              "decoded": "C"
+            },
+            {
+              "id": 356,
+              "decoded": " C"
+            },
+            {
+              "id": 6258,
+              "decoded": "\tC"
+            }
+          ]
+        },
+        "D": {
+          "no_space": [
+            35
+          ],
+          "leading_space": [
+            422
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 35,
+              "decoded": "D"
+            },
+            {
+              "id": 422,
+              "decoded": " D"
+            },
+            {
+              "id": 10957,
+              "decoded": "\tD"
+            }
+          ]
+        },
+        "E": {
+          "no_space": [
+            36
+          ],
+          "leading_space": [
+            468
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 36,
+              "decoded": "E"
+            },
+            {
+              "id": 468,
+              "decoded": " E"
+            },
+            {
+              "id": 22784,
+              "decoded": "\tE"
+            }
+          ]
+        },
+        "F": {
+          "no_space": [
+            37
+          ],
+          "leading_space": [
+            434
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 37,
+              "decoded": "F"
+            },
+            {
+              "id": 434,
+              "decoded": " F"
+            },
+            {
+              "id": 12727,
+              "decoded": "\tF"
+            }
+          ]
+        },
+        "G": {
+          "no_space": [
+            38
+          ],
+          "leading_space": [
+            479
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 38,
+              "decoded": "G"
+            },
+            {
+              "id": 479,
+              "decoded": " G"
+            },
+            {
+              "id": 9600,
+              "decoded": "\tG"
+            }
+          ]
+        },
+        "H": {
+          "no_space": [
+            39
+          ],
+          "leading_space": [
+            472
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 39,
+              "decoded": "H"
+            },
+            {
+              "id": 472,
+              "decoded": " H"
+            },
+            {
+              "id": 13292,
+              "decoded": "\tH"
+            }
+          ]
+        },
+        "I": {
+          "no_space": [
+            40
+          ],
+          "leading_space": [
+            358
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 40,
+              "decoded": "I"
+            },
+            {
+              "id": 358,
+              "decoded": " I"
+            },
+            {
+              "id": 24486,
+              "decoded": "\tI"
+            }
+          ]
+        },
+        "J": {
+          "no_space": [
+            41
+          ],
+          "leading_space": [
+            619
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 41,
+              "decoded": "J"
+            },
+            {
+              "id": 619,
+              "decoded": " J"
+            },
+            {
+              "id": 17100,
+              "decoded": "\tJ"
+            }
+          ]
+        }
+      },
+      "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+      "prefix_ids": [
+        785,
+        4396,
+        4226,
+        374
+      ],
+      "last_position_by_K": {
+        "9": {
+          "example_id": "test:70",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 237,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ],
+            "F": [
+              374,
+              37
+            ],
+            "G": [
+              374,
+              38
+            ],
+            "H": [
+              374,
+              39
+            ],
+            "I": [
+              374,
+              40
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ],
+            "F": [
+              374,
+              434
+            ],
+            "G": [
+              374,
+              479
+            ],
+            "H": [
+              374,
+              472
+            ],
+            "I": [
+              374,
+              358
+            ]
+          }
+        },
+        "10": {
+          "example_id": "test:71",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 255,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ],
+            "F": [
+              374,
+              37
+            ],
+            "G": [
+              374,
+              38
+            ],
+            "H": [
+              374,
+              39
+            ],
+            "I": [
+              374,
+              40
+            ],
+            "J": [
+              374,
+              41
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ],
+            "F": [
+              374,
+              434
+            ],
+            "G": [
+              374,
+              479
+            ],
+            "H": [
+              374,
+              472
+            ],
+            "I": [
+              374,
+              358
+            ],
+            "J": [
+              374,
+              619
+            ]
+          }
+        },
+        "7": {
+          "example_id": "test:134",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 137,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ],
+            "F": [
+              374,
+              37
+            ],
+            "G": [
+              374,
+              38
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ],
+            "F": [
+              374,
+              434
+            ],
+            "G": [
+              374,
+              479
+            ]
+          }
+        },
+        "6": {
+          "example_id": "test:193",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 132,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ],
+            "F": [
+              374,
+              37
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ],
+            "F": [
+              374,
+              434
+            ]
+          }
+        },
+        "8": {
+          "example_id": "test:195",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 161,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ],
+            "F": [
+              374,
+              37
+            ],
+            "G": [
+              374,
+              38
+            ],
+            "H": [
+              374,
+              39
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ],
+            "F": [
+              374,
+              434
+            ],
+            "G": [
+              374,
+              479
+            ],
+            "H": [
+              374,
+              472
+            ]
+          }
+        },
+        "4": {
+          "example_id": "test:431",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 226,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ]
+          }
+        },
+        "5": {
+          "example_id": "test:1034",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 273,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ]
+          }
+        },
+        "3": {
+          "example_id": "test:1054",
+          "legal_labels": [
+            "A",
+            "B",
+            "C"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 159,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ]
+          }
+        }
+      },
+      "all_row_chat_template_tokenization_equal": true,
+      "label_mass_rule": "先每个label的所有非special单token variants做FP32 logsumexp，再只在当前合法label集合做log_softmax.exp，u=1-max(p)",
+      "parser_synthetic_checks": 188,
+      "parser_all_pass": true,
+      "files": {
+        "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+        "config.json": "660db3b73d788119c04535e48cf9be5f55bc3100841a718637ae695b442f27dd"
+      }
+    },
+    "medium": {
+      "repo": "Qwen/Qwen3-1.7B",
+      "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+      "path": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/assets/receiver",
+      "tokenizer_class": "Qwen2TokenizerFast",
+      "labels": {
+        "A": {
+          "no_space": [
+            32
+          ],
+          "leading_space": [
+            362
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 32,
+              "decoded": "A"
+            },
+            {
+              "id": 362,
+              "decoded": " A"
+            },
+            {
+              "id": 22985,
+              "decoded": "\tA"
+            }
+          ]
+        },
+        "B": {
+          "no_space": [
+            33
+          ],
+          "leading_space": [
+            425
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 33,
+              "decoded": "B"
+            },
+            {
+              "id": 425,
+              "decoded": " B"
+            },
+            {
+              "id": 12791,
+              "decoded": "\tB"
+            }
+          ]
+        },
+        "C": {
+          "no_space": [
+            34
+          ],
+          "leading_space": [
+            356
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 34,
+              "decoded": "C"
+            },
+            {
+              "id": 356,
+              "decoded": " C"
+            },
+            {
+              "id": 6258,
+              "decoded": "\tC"
+            }
+          ]
+        },
+        "D": {
+          "no_space": [
+            35
+          ],
+          "leading_space": [
+            422
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 35,
+              "decoded": "D"
+            },
+            {
+              "id": 422,
+              "decoded": " D"
+            },
+            {
+              "id": 10957,
+              "decoded": "\tD"
+            }
+          ]
+        },
+        "E": {
+          "no_space": [
+            36
+          ],
+          "leading_space": [
+            468
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 36,
+              "decoded": "E"
+            },
+            {
+              "id": 468,
+              "decoded": " E"
+            },
+            {
+              "id": 22784,
+              "decoded": "\tE"
+            }
+          ]
+        },
+        "F": {
+          "no_space": [
+            37
+          ],
+          "leading_space": [
+            434
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 37,
+              "decoded": "F"
+            },
+            {
+              "id": 434,
+              "decoded": " F"
+            },
+            {
+              "id": 12727,
+              "decoded": "\tF"
+            }
+          ]
+        },
+        "G": {
+          "no_space": [
+            38
+          ],
+          "leading_space": [
+            479
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 38,
+              "decoded": "G"
+            },
+            {
+              "id": 479,
+              "decoded": " G"
+            },
+            {
+              "id": 9600,
+              "decoded": "\tG"
+            }
+          ]
+        },
+        "H": {
+          "no_space": [
+            39
+          ],
+          "leading_space": [
+            472
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 39,
+              "decoded": "H"
+            },
+            {
+              "id": 472,
+              "decoded": " H"
+            },
+            {
+              "id": 13292,
+              "decoded": "\tH"
+            }
+          ]
+        },
+        "I": {
+          "no_space": [
+            40
+          ],
+          "leading_space": [
+            358
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 40,
+              "decoded": "I"
+            },
+            {
+              "id": 358,
+              "decoded": " I"
+            },
+            {
+              "id": 24486,
+              "decoded": "\tI"
+            }
+          ]
+        },
+        "J": {
+          "no_space": [
+            41
+          ],
+          "leading_space": [
+            619
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 41,
+              "decoded": "J"
+            },
+            {
+              "id": 619,
+              "decoded": " J"
+            },
+            {
+              "id": 17100,
+              "decoded": "\tJ"
+            }
+          ]
+        }
+      },
+      "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+      "prefix_ids": [
+        785,
+        4396,
+        4226,
+        374
+      ],
+      "last_position_by_K": {
+        "9": {
+          "example_id": "test:70",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 237,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ],
+            "F": [
+              374,
+              37
+            ],
+            "G": [
+              374,
+              38
+            ],
+            "H": [
+              374,
+              39
+            ],
+            "I": [
+              374,
+              40
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ],
+            "F": [
+              374,
+              434
+            ],
+            "G": [
+              374,
+              479
+            ],
+            "H": [
+              374,
+              472
+            ],
+            "I": [
+              374,
+              358
+            ]
+          }
+        },
+        "10": {
+          "example_id": "test:71",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 255,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ],
+            "F": [
+              374,
+              37
+            ],
+            "G": [
+              374,
+              38
+            ],
+            "H": [
+              374,
+              39
+            ],
+            "I": [
+              374,
+              40
+            ],
+            "J": [
+              374,
+              41
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ],
+            "F": [
+              374,
+              434
+            ],
+            "G": [
+              374,
+              479
+            ],
+            "H": [
+              374,
+              472
+            ],
+            "I": [
+              374,
+              358
+            ],
+            "J": [
+              374,
+              619
+            ]
+          }
+        },
+        "7": {
+          "example_id": "test:134",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 137,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ],
+            "F": [
+              374,
+              37
+            ],
+            "G": [
+              374,
+              38
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ],
+            "F": [
+              374,
+              434
+            ],
+            "G": [
+              374,
+              479
+            ]
+          }
+        },
+        "6": {
+          "example_id": "test:193",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 132,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ],
+            "F": [
+              374,
+              37
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ],
+            "F": [
+              374,
+              434
+            ]
+          }
+        },
+        "8": {
+          "example_id": "test:195",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 161,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ],
+            "F": [
+              374,
+              37
+            ],
+            "G": [
+              374,
+              38
+            ],
+            "H": [
+              374,
+              39
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ],
+            "F": [
+              374,
+              434
+            ],
+            "G": [
+              374,
+              479
+            ],
+            "H": [
+              374,
+              472
+            ]
+          }
+        },
+        "4": {
+          "example_id": "test:431",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 226,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ]
+          }
+        },
+        "5": {
+          "example_id": "test:1034",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 273,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ]
+          }
+        },
+        "3": {
+          "example_id": "test:1054",
+          "legal_labels": [
+            "A",
+            "B",
+            "C"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 159,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ]
+          }
+        }
+      },
+      "all_row_chat_template_tokenization_equal": true,
+      "label_mass_rule": "先每个label的所有非special单token variants做FP32 logsumexp，再只在当前合法label集合做log_softmax.exp，u=1-max(p)",
+      "parser_synthetic_checks": 188,
+      "parser_all_pass": true,
+      "files": {
+        "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+        "config.json": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197"
+      }
+    },
+    "large": {
+      "repo": "Qwen/Qwen3-8B",
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+      "tokenizer_class": "Qwen2TokenizerFast",
+      "labels": {
+        "A": {
+          "no_space": [
+            32
+          ],
+          "leading_space": [
+            362
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 32,
+              "decoded": "A"
+            },
+            {
+              "id": 362,
+              "decoded": " A"
+            },
+            {
+              "id": 22985,
+              "decoded": "\tA"
+            }
+          ]
+        },
+        "B": {
+          "no_space": [
+            33
+          ],
+          "leading_space": [
+            425
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 33,
+              "decoded": "B"
+            },
+            {
+              "id": 425,
+              "decoded": " B"
+            },
+            {
+              "id": 12791,
+              "decoded": "\tB"
+            }
+          ]
+        },
+        "C": {
+          "no_space": [
+            34
+          ],
+          "leading_space": [
+            356
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 34,
+              "decoded": "C"
+            },
+            {
+              "id": 356,
+              "decoded": " C"
+            },
+            {
+              "id": 6258,
+              "decoded": "\tC"
+            }
+          ]
+        },
+        "D": {
+          "no_space": [
+            35
+          ],
+          "leading_space": [
+            422
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 35,
+              "decoded": "D"
+            },
+            {
+              "id": 422,
+              "decoded": " D"
+            },
+            {
+              "id": 10957,
+              "decoded": "\tD"
+            }
+          ]
+        },
+        "E": {
+          "no_space": [
+            36
+          ],
+          "leading_space": [
+            468
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 36,
+              "decoded": "E"
+            },
+            {
+              "id": 468,
+              "decoded": " E"
+            },
+            {
+              "id": 22784,
+              "decoded": "\tE"
+            }
+          ]
+        },
+        "F": {
+          "no_space": [
+            37
+          ],
+          "leading_space": [
+            434
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 37,
+              "decoded": "F"
+            },
+            {
+              "id": 434,
+              "decoded": " F"
+            },
+            {
+              "id": 12727,
+              "decoded": "\tF"
+            }
+          ]
+        },
+        "G": {
+          "no_space": [
+            38
+          ],
+          "leading_space": [
+            479
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 38,
+              "decoded": "G"
+            },
+            {
+              "id": 479,
+              "decoded": " G"
+            },
+            {
+              "id": 9600,
+              "decoded": "\tG"
+            }
+          ]
+        },
+        "H": {
+          "no_space": [
+            39
+          ],
+          "leading_space": [
+            472
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 39,
+              "decoded": "H"
+            },
+            {
+              "id": 472,
+              "decoded": " H"
+            },
+            {
+              "id": 13292,
+              "decoded": "\tH"
+            }
+          ]
+        },
+        "I": {
+          "no_space": [
+            40
+          ],
+          "leading_space": [
+            358
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 40,
+              "decoded": "I"
+            },
+            {
+              "id": 358,
+              "decoded": " I"
+            },
+            {
+              "id": 24486,
+              "decoded": "\tI"
+            }
+          ]
+        },
+        "J": {
+          "no_space": [
+            41
+          ],
+          "leading_space": [
+            619
+          ],
+          "all_single_token_variants": [
+            {
+              "id": 41,
+              "decoded": "J"
+            },
+            {
+              "id": 619,
+              "decoded": " J"
+            },
+            {
+              "id": 17100,
+              "decoded": "\tJ"
+            }
+          ]
+        }
+      },
+      "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+      "prefix_ids": [
+        785,
+        4396,
+        4226,
+        374
+      ],
+      "last_position_by_K": {
+        "9": {
+          "example_id": "test:70",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 237,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ],
+            "F": [
+              374,
+              37
+            ],
+            "G": [
+              374,
+              38
+            ],
+            "H": [
+              374,
+              39
+            ],
+            "I": [
+              374,
+              40
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ],
+            "F": [
+              374,
+              434
+            ],
+            "G": [
+              374,
+              479
+            ],
+            "H": [
+              374,
+              472
+            ],
+            "I": [
+              374,
+              358
+            ]
+          }
+        },
+        "10": {
+          "example_id": "test:71",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 255,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ],
+            "F": [
+              374,
+              37
+            ],
+            "G": [
+              374,
+              38
+            ],
+            "H": [
+              374,
+              39
+            ],
+            "I": [
+              374,
+              40
+            ],
+            "J": [
+              374,
+              41
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ],
+            "F": [
+              374,
+              434
+            ],
+            "G": [
+              374,
+              479
+            ],
+            "H": [
+              374,
+              472
+            ],
+            "I": [
+              374,
+              358
+            ],
+            "J": [
+              374,
+              619
+            ]
+          }
+        },
+        "7": {
+          "example_id": "test:134",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 137,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ],
+            "F": [
+              374,
+              37
+            ],
+            "G": [
+              374,
+              38
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ],
+            "F": [
+              374,
+              434
+            ],
+            "G": [
+              374,
+              479
+            ]
+          }
+        },
+        "6": {
+          "example_id": "test:193",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 132,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ],
+            "F": [
+              374,
+              37
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ],
+            "F": [
+              374,
+              434
+            ]
+          }
+        },
+        "8": {
+          "example_id": "test:195",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 161,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ],
+            "F": [
+              374,
+              37
+            ],
+            "G": [
+              374,
+              38
+            ],
+            "H": [
+              374,
+              39
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ],
+            "F": [
+              374,
+              434
+            ],
+            "G": [
+              374,
+              479
+            ],
+            "H": [
+              374,
+              472
+            ]
+          }
+        },
+        "4": {
+          "example_id": "test:431",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 226,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ]
+          }
+        },
+        "5": {
+          "example_id": "test:1034",
+          "legal_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 273,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ],
+            "D": [
+              374,
+              35
+            ],
+            "E": [
+              374,
+              36
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ],
+            "D": [
+              374,
+              422
+            ],
+            "E": [
+              374,
+              468
+            ]
+          }
+        },
+        "3": {
+          "example_id": "test:1054",
+          "legal_labels": [
+            "A",
+            "B",
+            "C"
+          ],
+          "chat_tail": "ation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+          "suffix_ids": [
+            785,
+            4396,
+            4226,
+            374
+          ],
+          "last_valid_position": 159,
+          "contextual_next_no_space": {
+            "A": [
+              374,
+              32
+            ],
+            "B": [
+              374,
+              33
+            ],
+            "C": [
+              374,
+              34
+            ]
+          },
+          "contextual_next_space": {
+            "A": [
+              374,
+              362
+            ],
+            "B": [
+              374,
+              425
+            ],
+            "C": [
+              374,
+              356
+            ]
+          }
+        }
+      },
+      "all_row_chat_template_tokenization_equal": true,
+      "label_mass_rule": "先每个label的所有非special单token variants做FP32 logsumexp，再只在当前合法label集合做log_softmax.exp，u=1-max(p)",
+      "parser_synthetic_checks": 188,
+      "parser_all_pass": true,
+      "files": {
+        "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+        "config.json": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30"
+      }
+    }
+  },
+  "model_inference": 0
+}

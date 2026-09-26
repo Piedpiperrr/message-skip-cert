@@ -1,0 +1,11 @@
+{
+  "literal": "The correct answer is",
+  "ids": [
+    791,
+    4495,
+    4320,
+    374
+  ],
+  "encoding": "add_special_tokens=False",
+  "chat_template_sha256": "e10ca381b1ccc5cf9db52e371f3b6651576caee0a630b452e2816b2d404d4b65"
+}

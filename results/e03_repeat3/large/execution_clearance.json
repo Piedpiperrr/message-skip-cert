@@ -1,0 +1,8 @@
+{
+  "job_id": "run020",
+  "host": "REDACTED",
+  "strict_cgroup_match": true,
+  "ClusterA_cgroup_match": true,
+  "cgroup_match_fatal": false,
+  "GPU_count": 2
+}

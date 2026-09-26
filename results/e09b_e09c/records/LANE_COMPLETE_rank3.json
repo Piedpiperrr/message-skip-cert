@@ -1,0 +1,48 @@
+{
+  "rank": 3,
+  "helper_pair": "large",
+  "utc": "2026-09-20T10:16:42Z",
+  "tasks_done": [
+    {
+      "file": "large_mmlu_pro_fit_plain_rank3.jsonl",
+      "n": 1740,
+      "requested": 1740,
+      "seconds": 60.392891597002745
+    },
+    {
+      "file": "large_mmlu_pro_cal_plain_rank3.jsonl",
+      "n": 3480,
+      "requested": 3480,
+      "seconds": 120.30626933206804
+    },
+    {
+      "file": "large_mmlu_pro_dev_plain_rank3.jsonl",
+      "n": 1532,
+      "requested": 1532,
+      "seconds": 53.3467518161051
+    },
+    {
+      "file": "large_obqa_fit_with_fact_rank3.jsonl",
+      "n": 1050,
+      "requested": 1050,
+      "seconds": 28.46244107815437
+    },
+    {
+      "file": "large_obqa_cal_with_fact_rank3.jsonl",
+      "n": 683,
+      "requested": 683,
+      "seconds": 18.516663033049554
+    },
+    {
+      "file": "large_obqa_dev_with_fact_rank3.jsonl",
+      "n": 371,
+      "requested": 371,
+      "seconds": 10.059276537038386
+    }
+  ],
+  "tasks_skipped": [],
+  "job_id": "run010",
+  "gold_read": false,
+  "generation": false,
+  "complete": true
+}

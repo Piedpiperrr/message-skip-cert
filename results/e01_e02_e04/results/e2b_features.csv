@@ -1,0 +1,13 @@
+setting,split,pair,expected,written,dimension,ids_match_population_order,all_finite,unit_norm,dir
+small_obqa,dev,small,742,742,2048,742,True,True,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/e2b/small/features/small_obqa_dev
+small_arc,dev,small,299,299,2048,299,True,True,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/e2b/small/features/small_arc_dev
+large_arc,dev,large,299,299,8192,299,True,True,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/e2b/large/features/large_arc_dev
+medium_obqa,fit,medium,2100,2100,4096,2100,True,True,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/e2b/medium/features/medium_obqa_fit
+medium_obqa,cal,medium,1366,1366,4096,1366,True,True,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/e2b/medium/features/medium_obqa_cal
+medium_obqa,dev,medium,742,742,4096,742,True,True,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/e2b/medium/features/medium_obqa_dev
+medium_arc,fit,medium,671,671,4096,671,True,True,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/e2b/medium/features/medium_arc_fit
+medium_arc,cal,medium,448,448,4096,448,True,True,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/e2b/medium/features/medium_arc_cal
+medium_arc,dev,medium,299,299,4096,299,True,True,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/e2b/medium/features/medium_arc_dev
+large_mmlu_pro,fit,large,3000,3000,8192,3000,True,True,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/e2b/large/features/large_mmlu_pro_fit
+large_mmlu_pro,cal,large,6000,6000,8192,6000,True,True,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/e2b/large/features/large_mmlu_pro_cal
+large_mmlu_pro,dev,large,2641,2641,8192,2641,True,True,$DATA_DIR/P2_R1_EXP_20260919T050555Z/results/e2b/large/features/large_mmlu_pro_dev

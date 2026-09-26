@@ -1,0 +1,79 @@
+{
+ "M": 6,
+ "M_populations": [
+  "small/OBQA",
+  "small/ARC",
+  "medium/OBQA",
+  "medium/ARC",
+  "large/OBQA",
+  "large/MMLU-Pro"
+ ],
+ "M_of": 6,
+ "K": 2,
+ "K_populations": [
+  "small/OBQA",
+  "large/OBQA"
+ ],
+ "K_of": 6,
+ "T_sig": 2,
+ "T_sig_populations": [
+  "small/OBQA",
+  "large/OBQA"
+ ],
+ "T_sig_of": 6,
+ "C_sig": 0,
+ "C_sig_populations": [],
+ "C_sig_of": 5,
+ "undetermined_Text": [
+  "large/ARC"
+ ],
+ "undetermined_C2C_medium_large": [],
+ "undetermined_C2C_all": [],
+ "Text_range_stratified": [
+  "0.787",
+  "0.969"
+ ],
+ "Text_range_unstratified": [
+  "0.498",
+  "0.861"
+ ],
+ "C2C5_range_stratified": [
+  "1.077",
+  "1.475"
+ ],
+ "C2C5_range_unstratified": [
+  "0.986",
+  "1.705"
+ ],
+ "R2_C2C_at_null_allowed": [
+  "medium/OBQA",
+  "medium/ARC",
+  "large/OBQA",
+  "large/ARC",
+  "large/MMLU-Pro"
+ ],
+ "R2_C2C_at_null_excluded": [],
+ "R2_C2C_reach_allowed": false,
+ "R2_C2C_intervals_above_1": [
+  "large/MMLU-Pro"
+ ],
+ "R2_Text_not_in_M": [],
+ "R3": "branch 3: the abstract, Contribution 1 (title included), the Sec. 4.1 heading and the conclusion must state that whether the null separates Text from C2C depends on how it is matched, giving K, C_sig and both ranges.",
+ "medians": {
+  "Text7": [
+   "0.854",
+   "0.769",
+   "0.936"
+  ],
+  "C2C7": [
+   "1.138",
+   "0.947",
+   "1.331"
+  ],
+  "C2C5": [
+   "1.232",
+   "1.059",
+   "1.448"
+  ]
+ }
+}

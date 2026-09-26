@@ -1,0 +1,16 @@
+[
+  {
+    "source": "table_gold_budget_all15.tex",
+    "source_sha256": "546fe8e55ab5f5bada76fd544dba10a9a3fa6191a1dda109db360cbc5141cab7",
+    "formatted": "table_gold_budget_all15_readable.tex",
+    "formatted_sha256": "24d543ed6d31bc9e73c307b7d3d74d58fecc76d3a4f89a9a866ebcb963bbd19e",
+    "change": "Unambiguous cost/accuracy table heading only; values unchanged."
+  },
+  {
+    "source": "table_gold_budget_summary.tex",
+    "source_sha256": "f56bf78da4e8c43dde2450b39988c9c84b8d34a1ea2a212d6b61d461324697d9",
+    "formatted": "table_gold_budget_summary_readable.tex",
+    "formatted_sha256": "4c83ad7ea31d89caac9ce9131b544e2094275ce67d31f78ef3d5d2d3a9058f30",
+    "change": "Unambiguous cost/accuracy table heading only; values unchanged."
+  }
+]

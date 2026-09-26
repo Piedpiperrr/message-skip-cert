@@ -1,0 +1,15 @@
+check,expected,observed,status
+SHA-256 of P2_R3_E9BC_20260920T061042Z/PROTOCOL_FREEZE_E9B.md == stored hash,d211e4ad6eb267f389ec449482b21e4637e732383552678bea2f81d4cb8d0bbe,d211e4ad6eb267f389ec449482b21e4637e732383552678bea2f81d4cb8d0bbe,PASS
+SHA-256 of P2_R3_E9BC_20260920T061042Z/PROTOCOL_AMENDMENT_E9B.md == stored hash,bd951a3fc35e4bb080db847f0aa4c87901791588687d86263bf609fb82d65506,bd951a3fc35e4bb080db847f0aa4c87901791588687d86263bf609fb82d65506,PASS
+SHA-256 of P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/USER_PROMPT_ZH.md == stored hash,4dcdff6387da0ed1050f56d957929186306053c10b7e37108fc9e15205fa93b8,4dcdff6387da0ed1050f56d957929186306053c10b7e37108fc9e15205fa93b8,PASS
+SHA-256 of P2_R7_E16_20260921T184114Z/PREREG.md == stored hash,17ca47138a351a80ac8d5282dacb39109330d433bf31b4d390cdfd384b25c02a,17ca47138a351a80ac8d5282dacb39109330d433bf31b4d390cdfd384b25c02a,PASS
+held-out OBQA (E9b) large/OBQA/Text: n/k == stored,"[595, 12]","[595, 12]",PASS
+held-out OBQA (E9b) large/OBQA/C2C: n/k == stored,"[595, 13]","[595, 13]",PASS
+held-out OBQA (E9b) medium/OBQA/C2C q=.55: n/k == stored,"[388, 8]","[388, 8]",PASS
+held-out OBQA (E9b) medium/OBQA/C2C q=.50: n/k == stored,"[346, 6]","[346, 6]",PASS
+held-out OBQA (E9b) large/OBQA/Text+fact: n/k == stored,"[558, 16]","[558, 16]",PASS
+sealed ARC large/ARC/Text: n/k == stored,"[1100, 20]","[1100, 20]",PASS
+sealed ARC large/ARC/C2C: n/k == stored,"[1047, 11]","[1047, 11]",PASS
+E16 Llama-3.1-8B/OBQA/Text: n/k == stored,"[440, 3]","[440, 3]",PASS
+E16 Llama-3.1-8B/ARC/Text: n/k == stored,"[794, 15]","[794, 15]",PASS
+E16 medium/ARC/C2C: n/k == stored,"[733, 15]","[733, 15]",PASS

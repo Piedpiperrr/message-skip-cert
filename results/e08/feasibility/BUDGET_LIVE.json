@@ -1,0 +1,47 @@
+{
+  "utc": "2026-09-20T19:11:59.273209+00:00",
+  "basis": "E8 live records, all recorded requests",
+  "per_pair": {
+    "small": {
+      "pair": "small",
+      "rows_complete": 12032,
+      "rows_remaining": 0,
+      "measured_mean_latency_ms": {
+        "R": 360.4,
+        "T": 2242.6,
+        "C": 482.7,
+        "P": 26.6
+      },
+      "sample_rows": 12032,
+      "warmup_rows_excluded_per_lane": 0,
+      "seconds_per_row": 3.1122,
+      "projected_pair_wall_hours": 10.402,
+      "productive_GPU_hours": 20.8,
+      "remaining_pair_wall_hours": 0.0
+    },
+    "medium": {
+      "pair": "medium",
+      "rows_complete": 12032,
+      "rows_remaining": 0,
+      "measured_mean_latency_ms": {
+        "R": 214.0,
+        "T": 1684.1,
+        "C": 471.2,
+        "P": 26.6
+      },
+      "sample_rows": 12032,
+      "warmup_rows_excluded_per_lane": 0,
+      "seconds_per_row": 2.3958,
+      "projected_pair_wall_hours": 8.007,
+      "productive_GPU_hours": 16.01,
+      "remaining_pair_wall_hours": 0.0
+    }
+  },
+  "total_productive_GPU_hours": 36.82,
+  "total_pair_wall_hours": 18.409,
+  "remaining_pair_wall_hours": 0.0,
+  "estimate_at_freeze_productive_GPU_hours": 27.57,
+  "refined_estimate_productive_GPU_hours": 29.17,
+  "limit_GPU_hours": 30,
+  "overrun_vs_limit_GPU_hours": 6.82
+}

@@ -1,0 +1,10 @@
+{
+ "rank": 1,
+ "utc": "2026-09-22T02:47:53Z",
+ "rows": 450,
+ "expected": 450,
+ "complete": true,
+ "seconds": 0.2449183464050293,
+ "dry_run": true,
+ "gold_read": false
+}

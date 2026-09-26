@@ -1,0 +1,48 @@
+E20-pilot (label-free). Candidates: SQuAD v1.1 (passage given), NQ-passage (MRQA NaturalQuestionsShort, passage given), TriviaQA
+(closed-book), NQ-Open (closed-book); 400 pilot questions each, the first 400 of each dataset's fixed SHA order, disjoint from all later
+full-run questions. Helper Qwen2.5-7B-Instruct writes the Text message (shared by both receivers). Receivers: Qwen3-8B (primary) and
+Llama-3.1-8B-Instruct. Settings = dataset x receiver (up to 8).
+Answer extraction (frozen): strip whitespace; strip leading markdown/quote characters (* _ " ' ` #); remove a leading "Answer:",
+"Final answer:" or "The answer is" (case-insensitive); keep the first line that is non-empty after this; remove a trailing period; Unicode
+NFKD with accents removed; then the official SQuAD normalization (lowercase, remove punctuation, remove articles a/an/the, collapse
+whitespace). INVALID = empty after this. Change = 1[normalized o_R != normalized o_b]; two INVALIDs agree. The system's output is this
+normalized answer; the certificate covers changes of it only.
+Scores (larger = more uncertain; from raw logits in float64; 1 - max p computed as the total non-argmax probability):
+  s1 = 1 - max_v p(v) at the first generated token whose text contains an alphanumeric character (the analogue of ProbeMax);
+  s2 = 1 - P(answer) = -expm1(sum of log-probabilities of the answer tokens), where the answer tokens run from the first generated token
+       containing a non-whitespace character up to, but excluding, the first later token whose text contains a newline, and exclude
+       EOS/end-of-turn;
+  s3 = -expm1(mean of the same log-probabilities) (length-normalized s2).
+  With direct answering there is no derivation before the answer, so these scores read the model's confidence in the answer itself, as
+  ProbeMax reads the chosen label.
+Per setting report: disagreement rate d with two-sided 95% Clopper-Pearson interval; AUROC of s1, s2, s3 for disagreement (ties 1/2) with
+bootstrap 95% intervals (seed 0, 2,000; N/A if d = 0); INVALID rates (R and reference); shares of s1 == 0 and s2 == 0; share of positions
+where s1's token differs from the first generated token; median answer length in words; the empirical change rate among the 10%, 25% and
+50% lowest-score questions (chosen score) with Clopper-Pearson upper bounds; the E17-5(a) check (max empirical TPR/FPR vs C(pi, alpha));
+the share of changes where one normalized answer contains the other (descriptive).
+Prediction: for each setting, its score is the one with the highest pilot AUROC (ties: s1, then s2). Feed (d, AUROC) into the frozen E17-5
+binormal code (verify its hash; inputs only) with alpha = .05, delta = .001, N_fit = 500, the paper's 20 quantile levels, 1,000
+simulations, seed 0. Report P(certify) at N_cal in {1,000, 2,000, 3,000}; a conservative P at the AUROC lower bound and d upper bound; the
+AUROC needed for P = .5 at each N_cal; expected coverage only if the frozen code returns it (else N/A).
+Eligibility and selection (label-free): a setting is eligible if its empirical change rate among the 25% lowest-score pilot questions is
+<= 4% (point estimate; this guards against a floor of confident changes that the binormal model does not represent). Rank eligible settings by P@3000, then P@1000, then the AUROC lower bound, then Qwen3 before Llama. The full run
+takes at most two settings with P@3000 >= .5: the top one, then the best one on a different dataset if its P@3000 >= .5, otherwise the next
+one with P@3000 >= .5. If none qualifies, nothing is selected and the paper reports the pilot only.
+Full-run design (frozen now): pool = the same deduplicated, length-filtered split minus the pilot, continuing the SHA order: fit 500
+(receiver-only outputs only), calibration N_cal, dev 1,000, with N_cal the smallest of {1,000, 2,000, 3,000} whose P >= .8 (else 3,000).
+Identical prompts, extractor, score code and decoding, verified by hash; nothing is edited after seeing the pilot. Certification exactly as
+the paper (20 fit quantiles, alpha = .05, delta = .001, per-setting Bonferroni; each selected setting is its own family, as for every other
+setting in the paper). Selected settings are run and reported whatever the outcome. If the full run is not complete by Sep 23 06:00 CDT,
+the paper reports the pilot and states that the full run was not completed.
+Writing rules (Paper A):
+(1) A selected setting certifies with dev coverage >= 10% and a dev change-rate CP lower bound <= 5%: the abstract says certification
+    extends to direct short-answer question answering on that dataset, predicted in advance by the label-free rule; the title drops
+    "on Multiple Choice"; the main text reports d, AUROC, q, coverage, change rate [CI], the Text path's accuracy gain G with kappa*alpha vs
+    G, and the split of certified changes into both-parse vs exactly-one-INVALID.
+(2) Certifies with dev coverage < 10%, or with dev CP lower bound > 5%: reported as such in Sec. 4 and the appendix; abstract and title
+    unchanged.
+(3) Fallback: Sec. 7 reports it in one sentence with d and AUROC; title keeps "on Multiple Choice".
+(4) Always: the full-run settings join the certification-outcome count and are reported as prospective tests of the binormal prediction;
+    the pilot settings are not certification outcomes; an appendix reports every pilot setting, the selection rule and the order of
+    events; the provenance table gets a row (later extension, run after the GSM8K fallback, label-free pilot on disjoint questions, rule
+    hashed before selection); the main text notes that the selected setting's predicted P is inflated by choosing the best of eight.

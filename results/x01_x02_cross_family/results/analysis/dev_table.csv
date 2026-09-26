@@ -1,0 +1,4 @@
+setting,N_dev,dis,dis_over_N,AUROC,min_UCB,q,threshold,accepted_q,coverage_pct,changed_over_omitted,correct_policy,correct_reference,correct_P_over_B
+X2 obqa/Text,742,172,172/742,0.7896419828641371,0.11829809634846454,0.0,,,0.0,N/A,516,516,516/516
+X2 arc/Text,299,67,67/299,0.7491636644364384,0.1694102305704648,0.0,,,0.0,N/A,222,222,222/222
+X2 mmlu_pro/Text,2641,1112,1112/2641,0.6326074196234902,0.2515957956238184,0.0,,,0.0,N/A,664,664,664/664

@@ -1,0 +1,371 @@
+{
+  "stage": "P2_V2_BASELINES_FFR_E0_20260913T000052Z",
+  "scoring_version": "P2_SCORING_V2",
+  "primary_input_authority": "current user prompt, overrides P2-11 draft",
+  "combinations": [
+    [
+      "large",
+      "obqa"
+    ],
+    [
+      "large",
+      "arc"
+    ],
+    [
+      "small",
+      "obqa"
+    ],
+    [
+      "small",
+      "arc"
+    ]
+  ],
+  "features": [
+    "word",
+    "semantic"
+  ],
+  "feature_input_fields": [
+    "question_stem",
+    "choice_labels",
+    "choice_text"
+  ],
+  "LR": {
+    "penalty": "l2",
+    "C": 1,
+    "class_weight": null,
+    "max_iter": 1000,
+    "random_state": 0,
+    "solver": "lbfgs"
+  },
+  "tfidf": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_features": 20000,
+    "min_df": 2
+  },
+  "new_standardization": null,
+  "single_class": "constant exact training class probability; logged; counts as a completed head but no LR fit",
+  "probability_clipping": "log loss only, epsilon=1e-15; no clipping for choices or AUC/AP",
+  "lambdas": [
+    0,
+    0.01,
+    0.03,
+    0.1,
+    0.3,
+    1,
+    3
+  ],
+  "tie_order": [
+    "R",
+    "T",
+    "C",
+    "A"
+  ],
+  "n_actions": [
+    3,
+    4
+  ],
+  "folds": {
+    "n": 5,
+    "seed": 0,
+    "assignment": "group IDs sorted, Python random.Random(0) shuffle, stable largest-group-first, assign smallest fold, tie lowest fold index",
+    "group_definition": "registered groups plus exact whitespace-normalized question + ordered label/text duplicates; no gold/answer/score used",
+    "shared_between": [
+      "model_pairs",
+      "feature_families",
+      "methods"
+    ],
+    "label_stratification": false,
+    "posthoc_movement": false,
+    "fold_file": "folds/group_folds.csv",
+    "fold_file_sha256": "ae29f34afa4898f0c4af17be0cc96b23f331015b0283e3cb7777fac328b6535a"
+  },
+  "baseline": {
+    "fit": "8 full-train C correctness heads only",
+    "reuse": "24 R/T/A correctness heads, all original cost Ridge, c_ref, frozen full-train features",
+    "dev": "one fixed post-refit evaluation; original word lambda .01 remains focus; all lambdas appended",
+    "panel": "original panel action-cost replay only, no new total router latency",
+    "old_mixture": "historical probabilities/B_train retained; new budget/overhead matched mixture pending separate freeze"
+  },
+  "OOF": {
+    "methods": [
+      "FFR_E0",
+      "IndepLR",
+      "FFR_constant_flip_rate",
+      "FFR_true_flip_DIAGNOSTIC"
+    ],
+    "FFR_heads": [
+      "f_T",
+      "f_C",
+      "f_A"
+    ],
+    "IndepLR_heads": [
+      "y_R",
+      "y_T",
+      "y_C",
+      "y_A"
+    ],
+    "FFR_delta": "(fit_gain-fit_harm)/(fit_flips+2); zero gain flips included; zero flips -> zero; shrinkage to zero, not standard binary Beta posterior",
+    "FFR_gain": "[0,m_T*delta_T,m_C*delta_C,m_A*delta_A]",
+    "IndepLR_gain": "[0,p_T-p_R,p_C-p_R,p_A-p_R]",
+    "cost_proxy": "mean original per-action train panel cost only among training-fold questions; c_ref is same rows R mean",
+    "score": "gain - lambda*mean_action_cost/c_ref",
+    "query_independent": "choose max training-fold mean correctness minus same lambda cost proxy; same tie order; also report all fixed actions",
+    "TFIDF": "fit vocabulary/IDF only on training fold; same transformed matrices for both pairs and methods",
+    "semantic": "existing frozen query-independent per-item cache reused by IDs, no new scaling",
+    "dev_usage": "NONE; train OOF only",
+    "old_full_train_heads_in_OOF": false,
+    "C_or_lambda_search": false,
+    "G1_G2_gates": false
+  },
+  "statistics": {
+    "flip": [
+      "positive_rate",
+      "ROC_AUC",
+      "AP",
+      "log_loss"
+    ],
+    "single_class_evaluation": "ROC_AUC/AP NA; log loss defined with labels [0,1]",
+    "flip_scopes": [
+      "all",
+      "both_R_and_action_valid_diagnostic_only"
+    ],
+    "aggregation": [
+      "each fold",
+      "pooled one-prediction-per-question OOF"
+    ],
+    "uncertainty": "exploratory point estimates; no best-point bootstrap or cross-combination pooled significance",
+    "decision": [
+      "accuracy",
+      "proxy_utility",
+      "action_proportions",
+      "gain_harm_vs_R",
+      "FFR_minus_IndepLR_paired",
+      "true_flip_minus_learned"
+    ],
+    "overhead": "unmeasured; for lambda>0 per-fold admissible added ms=utility_advantage*c_ref/lambda; pooled common-ms threshold=pooled_utility_advantage/(lambda*mean(1/c_ref_i)); negative means no nonnegative headroom",
+    "lambda_zero": "accuracy only; overhead headroom NA"
+  },
+  "budget": {
+    "CPU_seconds_total": 3600,
+    "RSS_GiB": 4,
+    "threads": 1,
+    "nice": 10,
+    "planned_LR": 288,
+    "max_LR_with_targeted_retries": 320,
+    "GPU": 0,
+    "PBS": 0,
+    "LLM_forward": 0,
+    "new_semantic_features": 0,
+    "ARC_test": 0,
+    "installation": 0
+  },
+  "resume": "save each successful head and each OOF fold, skip by frozen-config/input hash; no successful fit repeated",
+  "execution_gate": "must resolve current login-node eligibility before any LR fit; no automatic PBS or other node",
+  "dataset_inputs": {
+    "obqa": {
+      "query_train": "$DATA_DIR/P2_10_20260911T122423Z/data/obqa_train.jsonl",
+      "n": 3466,
+      "group_n": 3466,
+      "fold_sizes": [
+        694,
+        693,
+        693,
+        693,
+        693
+      ],
+      "semantic_train": "$DATA_DIR/P2_10_20260911T122423Z/data/obqa_train_semantic.npy",
+      "semantic_row_ids_reference": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/features/row_ids.json"
+    },
+    "arc": {
+      "query_train": "$DATA_DIR/P2_10_20260911T122423Z/data/arc_train.jsonl",
+      "n": 1119,
+      "group_n": 1118,
+      "fold_sizes": [
+        224,
+        224,
+        224,
+        224,
+        223
+      ],
+      "semantic_train": "$DATA_DIR/P2_10_20260911T122423Z/data/arc_train_semantic.npy",
+      "semantic_row_ids_reference": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/features/row_ids.json"
+    }
+  },
+  "baseline_assets": [
+    {
+      "pair": "large",
+      "dataset": "obqa",
+      "family": "word",
+      "source_bundle": {
+        "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/models/word.joblib",
+        "role": "old bundle; only C replaced, R/T/A and costs unchanged",
+        "sha256": "5e2e4a2a3d04b877982566b5d2a874def09e2a909e375bd09e3d98ac46b1d6e3",
+        "size_bytes": 1266046
+      },
+      "output_bundle": "baseline/large/obqa/word_V2.joblib",
+      "output_C_head": "baseline/large/obqa/word_C_V2.joblib",
+      "old_component_order": [
+        "R",
+        "T",
+        "C",
+        "A"
+      ]
+    },
+    {
+      "pair": "large",
+      "dataset": "obqa",
+      "family": "semantic",
+      "source_bundle": {
+        "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/models/semantic.joblib",
+        "role": "old bundle; only C replaced, R/T/A and costs unchanged",
+        "sha256": "ba7a205134b5197ffc68106f83a24408a62e6dc8d492ec9320a7f1bd379e76fb",
+        "size_bytes": 84401
+      },
+      "output_bundle": "baseline/large/obqa/semantic_V2.joblib",
+      "output_C_head": "baseline/large/obqa/semantic_C_V2.joblib",
+      "old_component_order": [
+        "R",
+        "T",
+        "C",
+        "A"
+      ]
+    },
+    {
+      "pair": "small",
+      "dataset": "obqa",
+      "family": "word",
+      "source_bundle": {
+        "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/models/word.joblib",
+        "role": "old bundle; only C replaced, R/T/A and costs unchanged",
+        "sha256": "708961761dfb6413142002fcbd11acc3deffd236bf61a26f62f3e61fd400de78",
+        "size_bytes": 1266046
+      },
+      "output_bundle": "baseline/small/obqa/word_V2.joblib",
+      "output_C_head": "baseline/small/obqa/word_C_V2.joblib",
+      "old_component_order": [
+        "R",
+        "T",
+        "C",
+        "A"
+      ]
+    },
+    {
+      "pair": "small",
+      "dataset": "obqa",
+      "family": "semantic",
+      "source_bundle": {
+        "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/models/semantic.joblib",
+        "role": "old bundle; only C replaced, R/T/A and costs unchanged",
+        "sha256": "bdebfc5b017afe0d705b5af8f11bc3c2d4e05eb18d5426fbbf314b372a00e725",
+        "size_bytes": 84401
+      },
+      "output_bundle": "baseline/small/obqa/semantic_V2.joblib",
+      "output_C_head": "baseline/small/obqa/semantic_C_V2.joblib",
+      "old_component_order": [
+        "R",
+        "T",
+        "C",
+        "A"
+      ]
+    },
+    {
+      "pair": "large",
+      "dataset": "arc",
+      "family": "word",
+      "source_bundle": {
+        "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/models/word.joblib",
+        "role": "old bundle; only C replaced, R/T/A and costs unchanged",
+        "sha256": "87337b954ea8923284ea1dac08057ef3bf4becd9466b454c4ea6dccee6060ec6",
+        "size_bytes": 785491
+      },
+      "output_bundle": "baseline/large/arc/word_V2.joblib",
+      "output_C_head": "baseline/large/arc/word_C_V2.joblib",
+      "old_component_order": [
+        "R",
+        "T",
+        "C",
+        "A"
+      ]
+    },
+    {
+      "pair": "large",
+      "dataset": "arc",
+      "family": "semantic",
+      "source_bundle": {
+        "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/models/semantic.joblib",
+        "role": "old bundle; only C replaced, R/T/A and costs unchanged",
+        "sha256": "b746a7926b33acb12f5bfe7b0b30f14e9a3975380a1cf9e9772e3d9a5b01296a",
+        "size_bytes": 77539
+      },
+      "output_bundle": "baseline/large/arc/semantic_V2.joblib",
+      "output_C_head": "baseline/large/arc/semantic_C_V2.joblib",
+      "old_component_order": [
+        "R",
+        "T",
+        "C",
+        "A"
+      ]
+    },
+    {
+      "pair": "small",
+      "dataset": "arc",
+      "family": "word",
+      "source_bundle": {
+        "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/models/word.joblib",
+        "role": "old bundle; only C replaced, R/T/A and costs unchanged",
+        "sha256": "7a61f9445c38124569b70479d832b5664b4faa46d2839f3852b948e266b43082",
+        "size_bytes": 785491
+      },
+      "output_bundle": "baseline/small/arc/word_V2.joblib",
+      "output_C_head": "baseline/small/arc/word_C_V2.joblib",
+      "old_component_order": [
+        "R",
+        "T",
+        "C",
+        "A"
+      ]
+    },
+    {
+      "pair": "small",
+      "dataset": "arc",
+      "family": "semantic",
+      "source_bundle": {
+        "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/models/semantic.joblib",
+        "role": "old bundle; only C replaced, R/T/A and costs unchanged",
+        "sha256": "23b2d0d54e32fe407765e8c34a9cfddfb190ca6c57339d6ede3eab1f8cf4c85b",
+        "size_bytes": 77539
+      },
+      "output_bundle": "baseline/small/arc/semantic_V2.joblib",
+      "output_C_head": "baseline/small/arc/semantic_C_V2.joblib",
+      "old_component_order": [
+        "R",
+        "T",
+        "C",
+        "A"
+      ]
+    }
+  ],
+  "output_plan": [
+    "baseline/*/*/*_C_V2.joblib",
+    "baseline/*/*/*_V2.joblib",
+    "baseline_dev_predictions.npz per combination/family",
+    "baseline_update_summary.csv",
+    "baseline_changed_selections.csv",
+    "oof/<dataset>/<family>/fold<k>/<pair>/*head.joblib",
+    "oof_predictions.csv",
+    "flip_metrics.csv",
+    "decision_metrics.csv",
+    "paired_method_differences.csv",
+    "overhead_headroom.csv",
+    "fit_receipts.jsonl",
+    "source_manifest.json",
+    "MODEL_INDEX.tsv",
+    "P2_V2_BASELINES_FFR_E0_REPORT_ZH.md",
+    "paper/*.tex",
+    "HANDOFF_ZH.md",
+    "light bundle"
+  ]
+}

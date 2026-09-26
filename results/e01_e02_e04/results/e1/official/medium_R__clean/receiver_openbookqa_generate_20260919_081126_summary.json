@@ -1,0 +1,20 @@
+{
+  "model": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_20260915T152640Z/assets/receiver",
+  "dataset": "openbookqa",
+  "answer_method": "generate",
+  "overall_accuracy": 0.652,
+  "subjects": {
+    "SPLIT_0_OF_1": 0.652
+  },
+  "length_statistics": {
+    "subjects": {
+      "SPLIT_0_OF_1": {
+        "avg_input_length": 117.926,
+        "avg_gen_length": 6.952,
+        "avg_length_ratio": 0.05952124539846307,
+        "accuracy": 0.652,
+        "total_samples": 500
+      }
+    }
+  }
+}

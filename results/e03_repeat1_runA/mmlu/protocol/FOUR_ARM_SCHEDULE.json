@@ -1,0 +1,1282 @@
+[
+  {
+    "ordinal": 0,
+    "id": "test:3074",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 1,
+    "id": "test:3502",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 2,
+    "id": "test:3459",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 3,
+    "id": "test:2955",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 4,
+    "id": "test:3232",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 5,
+    "id": "test:3202",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 6,
+    "id": "test:2979",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 7,
+    "id": "test:297",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 8,
+    "id": "test:481",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 9,
+    "id": "test:673",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 10,
+    "id": "test:205",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 11,
+    "id": "test:429",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 12,
+    "id": "test:413",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 13,
+    "id": "test:289",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 14,
+    "id": "test:770",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 15,
+    "id": "test:402",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 16,
+    "id": "test:4181",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 17,
+    "id": "test:3885",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 18,
+    "id": "test:3996",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 19,
+    "id": "test:4133",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 20,
+    "id": "test:4665",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 21,
+    "id": "test:4076",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 22,
+    "id": "test:4073",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 23,
+    "id": "test:4334",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 24,
+    "id": "test:3783",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 25,
+    "id": "test:3934",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 26,
+    "id": "test:3957",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 27,
+    "id": "test:4214",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 28,
+    "id": "test:10489",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 29,
+    "id": "test:10675",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 30,
+    "id": "test:10373",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 31,
+    "id": "test:10764",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 32,
+    "id": "test:6990",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 33,
+    "id": "test:7268",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 34,
+    "id": "test:6958",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 35,
+    "id": "test:7440",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 36,
+    "id": "test:7050",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 37,
+    "id": "test:7242",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 38,
+    "id": "test:7635",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 39,
+    "id": "test:7309",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 40,
+    "id": "test:7272",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 41,
+    "id": "test:11584",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 42,
+    "id": "test:11872",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 43,
+    "id": "test:11446",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 44,
+    "id": "test:12100",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 45,
+    "id": "test:11735",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 46,
+    "id": "test:12076",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 47,
+    "id": "test:12032",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 48,
+    "id": "test:11967",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 49,
+    "id": "test:11316",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 50,
+    "id": "test:11631",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 51,
+    "id": "test:11977",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 52,
+    "id": "test:6472",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 53,
+    "id": "test:6082",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 54,
+    "id": "test:6346",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 55,
+    "id": "test:6561",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 56,
+    "id": "test:6557",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 57,
+    "id": "test:6446",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 58,
+    "id": "test:6394",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 59,
+    "id": "test:6608",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 60,
+    "id": "test:4983",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 61,
+    "id": "test:4746",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 62,
+    "id": "test:4980",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 63,
+    "id": "test:4781",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 64,
+    "id": "test:1023",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 65,
+    "id": "test:1794",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 66,
+    "id": "test:959",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 67,
+    "id": "test:1329",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 68,
+    "id": "test:1223",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 69,
+    "id": "test:1657",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 70,
+    "id": "test:1540",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 71,
+    "id": "test:1043",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 72,
+    "id": "test:1100",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 73,
+    "id": "test:872",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 74,
+    "id": "test:1670",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 75,
+    "id": "test:8725",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 76,
+    "id": "test:8505",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 77,
+    "id": "test:8006",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 78,
+    "id": "test:8026",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 79,
+    "id": "test:8264",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 80,
+    "id": "test:9037",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 81,
+    "id": "test:8072",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 82,
+    "id": "test:8356",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 83,
+    "id": "test:8343",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 84,
+    "id": "test:8856",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 85,
+    "id": "test:8878",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 86,
+    "id": "test:8137",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 87,
+    "id": "test:7941",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 88,
+    "id": "test:7962",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 89,
+    "id": "test:8261",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 90,
+    "id": "test:5417",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 91,
+    "id": "test:5739",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 92,
+    "id": "test:5109",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 93,
+    "id": "test:5929",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 94,
+    "id": "test:5351",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 95,
+    "id": "test:5069",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 96,
+    "id": "test:5533",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 97,
+    "id": "test:5258",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 98,
+    "id": "test:5446",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 99,
+    "id": "test:5830",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 100,
+    "id": "test:11017",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 101,
+    "id": "test:10836",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 102,
+    "id": "test:11046",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 103,
+    "id": "test:10973",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 104,
+    "id": "test:11106",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 105,
+    "id": "test:10143",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 106,
+    "id": "test:9413",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 107,
+    "id": "test:9925",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 108,
+    "id": "test:9048",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 109,
+    "id": "test:9980",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 110,
+    "id": "test:9222",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 111,
+    "id": "test:10310",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 112,
+    "id": "test:9978",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 113,
+    "id": "test:9975",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 114,
+    "id": "test:9753",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 115,
+    "id": "test:10269",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 116,
+    "id": "test:9345",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 117,
+    "id": "test:9591",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 118,
+    "id": "test:9392",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 119,
+    "id": "test:2177",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 120,
+    "id": "test:2443",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 121,
+    "id": "test:2370",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 122,
+    "id": "test:2703",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 123,
+    "id": "test:2744",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  },
+  {
+    "ordinal": 124,
+    "id": "test:2398",
+    "arms": [
+      "fixed_T",
+      "policy_T",
+      "fixed_C",
+      "policy_C"
+    ]
+  },
+  {
+    "ordinal": 125,
+    "id": "test:2090",
+    "arms": [
+      "policy_T",
+      "fixed_C",
+      "policy_C",
+      "fixed_T"
+    ]
+  },
+  {
+    "ordinal": 126,
+    "id": "test:2633",
+    "arms": [
+      "fixed_C",
+      "policy_C",
+      "fixed_T",
+      "policy_T"
+    ]
+  },
+  {
+    "ordinal": 127,
+    "id": "test:2001",
+    "arms": [
+      "policy_C",
+      "fixed_T",
+      "policy_T",
+      "fixed_C"
+    ]
+  }
+]

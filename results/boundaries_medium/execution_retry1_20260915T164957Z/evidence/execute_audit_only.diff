@@ -1,0 +1,27 @@
+--- attempt1/execute.py
++++ retry1/execute.py
+@@ -2,12 +2,13 @@
+ import resource,signal,traceback
+ from native_runtime import Runtime
+ from risk import thresholds,calibrate,mask
++from retry_audit import freeze_after_gpu_smoke
+ 
+ def interrupted(signum,frame):raise RuntimeError(f'FACILITY_SIGNAL_{signum}_NO_RETRY')
+ signal.signal(signal.SIGTERM,interrupted);signal.signal(signal.SIGINT,interrupted)
+ assert os.environ.get('PBS_JOBID')
+-freeze=read(P/'MEDIUM_PAIR_EXECUTION_FREEZE.json');assert freeze['status']=='PASS'
+-EXEC_HASH=sha(P/'MEDIUM_PAIR_EXECUTION_FREEZE.json')
++freeze=read(P/'MEDIUM_PAIR_EXECUTION_PRECHECK_RETRY1.json');assert freeze['status']=='PASS'
++EXEC_HASH=None  # Set after synthetic smoke; before any project inference.
+ assert read(P/'evidence/pbs/allocation.json')['job_id']==os.environ['PBS_JOBID']
+ assert not (P/'records/attempts.jsonl').exists(),'Only one execution; no retry/resume'
+ started=time.perf_counter();success=[];action_count=0;probe_count=0;attempts=0
+@@ -53,6 +54,8 @@
+     progress();rt=Runtime();phase='SYNTHETIC_MECHANICAL_SMOKE'
+     smoke=rt.mechanical_smoke();save(P/'GPU_MECHANICAL_PASS.json',smoke)
+     assert smoke['status']=='PASS' and not smoke['MEDIUM_PAIR_OUTCOMES_OBSERVED']
++    freeze_after_gpu_smoke(smoke)
++    EXEC_HASH=sha(P/'MEDIUM_PAIR_EXECUTION_FREEZE_RETRY1.json')
+     # First access to project queries occurs only after mechanical PASS.
+     qmap={ds:query_map(ds) for ds in ['obqa','arc']}
+     for ds in ['obqa','arc']:

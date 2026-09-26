@@ -1,0 +1,22 @@
+setting,benchmark,distinct_label_sets,union_of_labels,max_options,official_hardcodes,official_can_read_every_label_set,label
+small/OBQA/Text,obqa,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+small/OBQA/C2C,obqa,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+small/ARC/Text,arc,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+small/ARC/C2C,arc,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/OBQA/Text,obqa,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/OBQA/C2C,obqa,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/ARC/Text,arc,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/ARC/C2C,arc,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/OBQA/Text,obqa,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/OBQA/C2C,obqa,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/ARC/Text,arc,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/ARC/C2C,arc,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/MMLU-Pro/Text,mmlu_pro,8,ABCDEFGHIJ,10,A-D,False,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/MMLU-Pro/C2C,mmlu_pro,8,ABCDEFGHIJ,10,A-D,False,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/OBQA/Text,obqa,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/OBQA/C2C,obqa,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/ARC/Text,arc,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/ARC/C2C,arc,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/OBQA/Text,obqa,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/ARC/Text,arc,1,ABCD,4,A-D,True,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/MMLU-Pro/Text,mmlu_pro,8,ABCDEFGHIJ,10,A-D,False,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision

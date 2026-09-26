@@ -1,0 +1,10 @@
+{
+  "status": "BLOCKED_MEDIUM_STAGE1",
+  "MEDIUM_PAIR_OUTCOMES_OBSERVED": false,
+  "MEDIUM_DEPLOY_COUNT": null,
+  "strata_completed": 0,
+  "strata_planned": 4,
+  "GPU_jobs_submitted": 0,
+  "Stage2_started": false,
+  "stop_and_return_to": "Work"
+}

@@ -1,0 +1,12 @@
+{
+  "archive": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/P2_SCORING_V2_BUNDLE.tar.gz",
+  "sha256": "fdedef1ecd65fd1288d9f1bd3145dad157dd3e1b82b9b03e2585a9045b759d03",
+  "size_bytes": 167828,
+  "member_count": 54,
+  "all_members_match_delivered_bytes": true,
+  "no_complete_raw_answers_or_large_labels_or_arrays": true,
+  "index_note": "FILE_INDEX excludes itself, archive and this receipt to avoid recursive hashes.",
+  "finalization_self_cpu_seconds_at_receipt": 0.9841709999999999,
+  "finalization_self_peak_RSS_KiB": 1385728,
+  "finalization_charged_within_reserved_30_CPU_seconds": true
+}

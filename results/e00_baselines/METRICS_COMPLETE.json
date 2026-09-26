@@ -1,0 +1,30 @@
+{
+  "status": "METRICS_COMPLETE_VALIDATION_PENDING",
+  "table_rows": {
+    "paired_method_differences.csv": 5712,
+    "baseline_changed_selections.csv": 944,
+    "flip_metrics.csv": 576,
+    "oof_predictions.csv": 18340,
+    "overhead_headroom.csv": 5712,
+    "decision_metrics.csv": 5712,
+    "baseline_update_summary.csv": 112,
+    "baseline_panel_replay.csv": 256,
+    "direction_diagnostics.csv": 120,
+    "invalid_analysis.csv": 720
+  },
+  "protocol_sha256": "41239823e728796dd108aae24cc48401ec8093c38aca16f7a30a1352145ef797",
+  "tables_sha256": {
+    "paired_method_differences.csv": "26104d1ed9cc51f7a889f78062802b519f254a2ace31d19f20db42c34b931a71",
+    "baseline_changed_selections.csv": "7e0ab17a4099a61753e27a9ff677e314c491f87ce5e2d86f3555214951bf7ffd",
+    "flip_metrics.csv": "2c2eccc8fc97c1596e28705d27f2fa354fcfd2ecbed634d820c8614473b5ab13",
+    "oof_predictions.csv": "adc7b3453b3e91f7bd6d886bbdc2d5981499787f4fd257afce4c665ef78e3cda",
+    "overhead_headroom.csv": "2b88fec195e1258a341cfc2a96b6941eefcc95adf107cb8f8d3575591b5aa44d",
+    "decision_metrics.csv": "837a9aefd1d585f512f1d166e86f040540b2a586a2e54d8e870d7722e3750e18",
+    "baseline_update_summary.csv": "9dd0e0a9c1541c13644966daa40454c91b878646078dd0dc0bfb672aafa20965",
+    "baseline_panel_replay.csv": "2d3e2b2da746817e9afe6b63bc18b463683818ee7f236fcd0d41d03175f5e403",
+    "direction_diagnostics.csv": "e44e1bb03d321be4539233e1b34555b34b0cd8a19750d71b17eaf5e9075e30be",
+    "invalid_analysis.csv": "7f8a750ba9aad18de13cbc79b8fd9106f617ef7d467475d1427aeabd180a69ba"
+  },
+  "final_status": "METRICS_COMPLETE_VALIDATED",
+  "validation_receipt": "NUMERICAL_VALIDATION.json"
+}

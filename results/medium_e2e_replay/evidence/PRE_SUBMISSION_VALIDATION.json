@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-15T21:03:36.727671+00:00",
+  "freeze_sha256": "ad65edf75f08a11bff7378b34a4e2f66e2cc20d597086c1133289ab157f58165",
+  "historical_panel_identity": true,
+  "exact_threshold_identity": true,
+  "unchanged_native_runtime": true,
+  "local_model_hashes_match": true,
+  "formal_requests": 0,
+  "formal_probes": 0,
+  "MEDIUM_STAGE2_RESULTS_OBSERVED": false
+}

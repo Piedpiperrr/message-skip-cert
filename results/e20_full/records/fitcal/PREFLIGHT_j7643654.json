@@ -1,0 +1,281 @@
+{
+  "job": "7643654",
+  "phase": "fitcal",
+  "utc_start": "2026-09-22T03:10:17.412374+00:00",
+  "n": 16,
+  "pilot_rows": "$DATA_DIR/P2_R8_E20P_20260921T224653Z/results/E20P_jobA_rows.jsonl",
+  "pilot_rows_sha256": "598affd26d5d3d50b762005fc216c1a8b15da88deec4a292b0b80b3b8f718592",
+  "rows": [
+    {
+      "id": "570d260cfed7b91900d45c5c",
+      "helper_ids": true,
+      "helper_text": true,
+      "R_ids": true,
+      "T_ids": true,
+      "s123": true,
+      "logp_nonmax": true,
+      "answers": true,
+      "wall_ms": {
+        "helper": 4329.503836110234,
+        "R": 458.4869211539626,
+        "T": 181.16084788925946
+      },
+      "all": true
+    },
+    {
+      "id": "57323fc4e99e3014001e65d0",
+      "helper_ids": true,
+      "helper_text": true,
+      "R_ids": true,
+      "T_ids": true,
+      "s123": true,
+      "logp_nonmax": true,
+      "answers": true,
+      "wall_ms": {
+        "helper": 1236.1226230859756,
+        "R": 147.84733392298222,
+        "T": 164.96436903253198
+      },
+      "all": true
+    },
+    {
+      "id": "570d1a97b3d812140066d411",
+      "helper_ids": true,
+      "helper_text": true,
+      "R_ids": true,
+      "T_ids": true,
+      "s123": true,
+      "logp_nonmax": true,
+      "answers": true,
+      "wall_ms": {
+        "helper": 663.5030470788479,
+        "R": 191.78786710835993,
+        "T": 207.0165080949664
+      },
+      "all": true
+    },
+    {
+      "id": "56cec79caab44d1400b88a37",
+      "helper_ids": true,
+      "helper_text": true,
+      "R_ids": true,
+      "T_ids": true,
+      "s123": true,
+      "logp_nonmax": true,
+      "answers": true,
+      "wall_ms": {
+        "helper": 733.2644399721175,
+        "R": 60.98839687183499,
+        "T": 88.11272890307009
+      },
+      "all": true
+    },
+    {
+      "id": "57342bbc4776f419006619f3",
+      "helper_ids": true,
+      "helper_text": true,
+      "R_ids": true,
+      "T_ids": true,
+      "s123": true,
+      "logp_nonmax": true,
+      "answers": true,
+      "wall_ms": {
+        "helper": 643.1836229749024,
+        "R": 732.4065449647605,
+        "T": 750.3626539837569
+      },
+      "all": true
+    },
+    {
+      "id": "56e762fb37bdd419002c3f26",
+      "helper_ids": true,
+      "helper_text": true,
+      "R_ids": true,
+      "T_ids": true,
+      "s123": true,
+      "logp_nonmax": true,
+      "answers": true,
+      "wall_ms": {
+        "helper": 823.0892161373049,
+        "R": 80.38320601917803,
+        "T": 95.84947396069765
+      },
+      "all": true
+    },
+    {
+      "id": "5730322404bcaa1900d77348",
+      "helper_ids": true,
+      "helper_text": true,
+      "R_ids": true,
+      "T_ids": true,
+      "s123": true,
+      "logp_nonmax": true,
+      "answers": true,
+      "wall_ms": {
+        "helper": 650.3141720313579,
+        "R": 240.10064196772873,
+        "T": 256.05017598718405
+      },
+      "all": true
+    },
+    {
+      "id": "5728d04f2ca10214002da890",
+      "helper_ids": true,
+      "helper_text": true,
+      "R_ids": true,
+      "T_ids": true,
+      "s123": true,
+      "logp_nonmax": true,
+      "answers": true,
+      "wall_ms": {
+        "helper": 559.662695042789,
+        "R": 102.67381905578077,
+        "T": 117.34791100025177
+      },
+      "all": true
+    },
+    {
+      "id": "5727c73cff5b5019007d94fb",
+      "helper_ids": true,
+      "helper_text": true,
+      "R_ids": true,
+      "T_ids": true,
+      "s123": true,
+      "logp_nonmax": true,
+      "answers": true,
+      "wall_ms": {
+        "helper": 1108.7174550630152,
+        "R": 169.80360890738666,
+        "T": 187.01503006741405
+      },
+      "all": true
+    },
+    {
+      "id": "572a332b1d0469140077983b",
+      "helper_ids": true,
+      "helper_text": true,
+      "R_ids": true,
+      "T_ids": true,
+      "s123": true,
+      "logp_nonmax": true,
+      "answers": true,
+      "wall_ms": {
+        "helper": 853.4351240377873,
+        "R": 150.31952294521034,
+        "T": 166.91907704807818
+      },
+      "all": true
+    },
+    {
+      "id": "56ce75d4aab44d1400b887c1",
+      "helper_ids": true,
+      "helper_text": true,
+      "R_ids": true,
+      "T_ids": true,
+      "s123": true,
+      "logp_nonmax": true,
+      "answers": true,
+      "wall_ms": {
+        "helper": 815.9987418912351,
+        "R": 117.46382806450129,
+        "T": 146.0671341046691
+      },
+      "all": true
+    },
+    {
+      "id": "56e162f1e3433e1400422e51",
+      "helper_ids": true,
+      "helper_text": true,
+      "R_ids": true,
+      "T_ids": true,
+      "s123": true,
+      "logp_nonmax": true,
+      "answers": true,
+      "wall_ms": {
+        "helper": 579.314777161926,
+        "R": 78.15225003287196,
+        "T": 83.0024708993733
+      },
+      "all": true
+    },
+    {
+      "id": "572e867adfa6aa1500f8d0a1",
+      "helper_ids": true,
+      "helper_text": true,
+      "R_ids": true,
+      "T_ids": true,
+      "s123": true,
+      "logp_nonmax": true,
+      "answers": true,
+      "wall_ms": {
+        "helper": 723.640362964943,
+        "R": 58.23388020507991,
+        "T": 73.74401902779937
+      },
+      "all": true
+    },
+    {
+      "id": "56fb7b7f8ddada1400cd6450",
+      "helper_ids": true,
+      "helper_text": true,
+      "R_ids": true,
+      "T_ids": true,
+      "s123": true,
+      "logp_nonmax": true,
+      "answers": true,
+      "wall_ms": {
+        "helper": 791.3862830027938,
+        "R": 82.98176201060414,
+        "T": 101.62662412039936
+      },
+      "all": true
+    },
+    {
+      "id": "5726bb53f1498d1400e8e93e",
+      "helper_ids": true,
+      "helper_text": true,
+      "R_ids": true,
+      "T_ids": true,
+      "s123": true,
+      "logp_nonmax": true,
+      "answers": true,
+      "wall_ms": {
+        "helper": 682.2061999700963,
+        "R": 59.9781209602952,
+        "T": 100.03681294620037
+      },
+      "all": true
+    },
+    {
+      "id": "56f74e42aef2371900625ae9",
+      "helper_ids": true,
+      "helper_text": true,
+      "R_ids": true,
+      "T_ids": true,
+      "s123": true,
+      "logp_nonmax": true,
+      "answers": true,
+      "wall_ms": {
+        "helper": 720.8384559489787,
+        "R": 101.72264697030187,
+        "T": 105.97588703967631
+      },
+      "all": true
+    }
+  ],
+  "first_output_utc": "2026-09-22T03:12:49.761728+00:00",
+  "n_helper_ids": 16,
+  "n_helper_text": 16,
+  "n_R_ids": 16,
+  "n_T_ids": 16,
+  "n_s123": 16,
+  "n_logp_nonmax": 16,
+  "n_answers": 16,
+  "n_all": 16,
+  "load_seconds": {
+    "helper": 152.34453312214464,
+    "llama": 143.3613564381376
+  },
+  "PASS": true,
+  "utc_end": "2026-09-22T03:15:34.935932+00:00"
+}

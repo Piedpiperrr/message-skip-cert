@@ -1,0 +1,10 @@
+{
+  "utc": "2026-09-14T18:07:44.583028+00:00",
+  "files": [
+    "paper/reference_preserving.tex",
+    "paper/e2e_validation.tex",
+    "paper/e2e_table.tex",
+    "figures/component_vs_e2e.pdf",
+    "REPORT_ZH.md"
+  ]
+}

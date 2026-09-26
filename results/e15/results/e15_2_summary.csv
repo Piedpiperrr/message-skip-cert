@@ -1,0 +1,2 @@
+sources_qualifying_for_all_eight,paper_rule_branch,X_policies_with_busy_time,policies_with_busy_time,sec7_phrase,label
+none,(2),4,large/OBQA/Text;large/OBQA/C2C;large/ARC/Text;large/ARC/C2C,busy GPU time is available for 4 of eight policies (Appendix),POST-HOC re-analysis (E15); does not change any primary decision

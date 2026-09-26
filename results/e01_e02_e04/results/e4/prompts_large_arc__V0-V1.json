@@ -1,0 +1,38 @@
+[
+  {
+    "variant": "V0",
+    "pos": 0,
+    "id": "Mercury_SC_407695",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nJuan and LaKeisha roll a few objects down a ramp. They want to see which object rolls the farthest. What should they do so they can repeat their investigation?\n\nChoices:\nA. Put the objects in groups.\nB. Change the height of the ramp.\nC. Choose different objects to roll.\nD. Record the details of the investigation.\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V1",
+    "pos": 0,
+    "id": "Mercury_SC_407695",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nJuan and LaKeisha roll a few objects down a ramp. They want to see which object rolls the farthest. What should they do so they can repeat their investigation?\n\nChoices:\nA. Record the details of the investigation.\nB. Put the objects in groups.\nC. Change the height of the ramp.\nD. Choose different objects to roll.\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V0",
+    "pos": 1,
+    "id": "Mercury_7103565",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nHigh-pressure systems stop air from rising into the colder regions of the atmosphere where water can condense. What will most likely result if a high-pressure system remains in an area for a long period of time?\n\nChoices:\nA. fog\nB. rain\nC. drought\nD. tornado\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V1",
+    "pos": 1,
+    "id": "Mercury_7103565",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nHigh-pressure systems stop air from rising into the colder regions of the atmosphere where water can condense. What will most likely result if a high-pressure system remains in an area for a long period of time?\n\nChoices:\nA. tornado\nB. fog\nC. rain\nD. drought\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V0",
+    "pos": 2,
+    "id": "MDSA_2009_5_16",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nStudents visited the Morris W. Offit telescope located at the Maryland Space Grant Observatory in Baltimore. They learned about the stars, planets, and moon. The students recorded the information below. • Star patterns stay the same, but their locations in the sky seem to change. • The sun, planets, and moon appear to move in the sky. • Proxima Centauri is the nearest star to our solar system. • Polaris is a star that is part of a pattern of stars called the Little Dipper. Which statement best explains why the sun appears to move across the sky each day?\n\nChoices:\nA. The sun revolves around Earth.\nB. Earth rotates around the sun.\nC. The sun revolves on its axis.\nD. Earth rotates on its axis.\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V1",
+    "pos": 2,
+    "id": "MDSA_2009_5_16",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nStudents visited the Morris W. Offit telescope located at the Maryland Space Grant Observatory in Baltimore. They learned about the stars, planets, and moon. The students recorded the information below. • Star patterns stay the same, but their locations in the sky seem to change. • The sun, planets, and moon appear to move in the sky. • Proxima Centauri is the nearest star to our solar system. • Polaris is a star that is part of a pattern of stars called the Little Dipper. Which statement best explains why the sun appears to move across the sky each day?\n\nChoices:\nA. Earth rotates on its axis.\nB. The sun revolves around Earth.\nC. Earth rotates around the sun.\nD. The sun revolves on its axis.\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  }
+]

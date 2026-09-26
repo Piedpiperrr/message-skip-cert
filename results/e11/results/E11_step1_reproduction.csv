@@ -1,0 +1,27 @@
+setting,deployed_q,q_recomputed_from_records,cal_N,cal_n_at_q0,cal_k_at_q0,cal_p_at_q0,cal_CP999_at_q0,ledger_20_rows_match_stored,ledger_20_pvalues_match_stored,dev_N,dev_disagreements,dev_disagreement_rate,dev_AUROC,paper_dev_disagreements,paper_dev_N,paper_dev_AUROC,paper_q,status,label
+small/OBQA/Text,0.0,0.0,1366,,,,,True,True,742,339,0.45687,0.64143,339,742,0.641,0.0,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+small/OBQA/C2C,0.0,0.0,1366,,,,,True,True,742,350,0.47170,0.70023,350,742,0.7,0.0,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+small/ARC/Text,0.0,0.0,448,,,,,True,True,299,145,0.48495,0.63399,145,299,0.634,0.0,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+small/ARC/C2C,0.0,0.0,448,,,,,True,True,299,160,0.53512,0.64065,160,299,0.641,0.0,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+medium/OBQA/Text,0.0,0.0,1366,,,,,True,True,742,174,0.23450,0.78654,174,742,0.787,0.0,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+medium/OBQA/C2C,0.55,0.55,1366,739,19,0.000694187,0.0490693,True,True,742,131,0.17655,0.84011,131,742,0.84,0.55,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+medium/ARC/Text,0.0,0.0,448,,,,,True,True,299,52,0.17391,0.74218,52,299,0.742,0.0,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+medium/ARC/C2C,0.6,0.6,448,290,1,5.63703e-06,0.0313913,True,True,299,48,0.16054,0.90974,48,299,0.91,0.6,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+large/OBQA/Text,0.8,0.8,1366,1064,18,1.15505e-08,0.0329545,True,True,742,72,0.09704,0.87273,72,742,0.873,0.8,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+large/OBQA/C2C,0.8,0.8,1366,1064,22,6.7085e-07,0.0379162,True,True,742,60,0.08086,0.88265,60,742,0.883,0.8,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+large/ARC/Text,0.95,0.95,448,422,4,4.8015e-06,0.0346117,True,True,299,15,0.05017,0.95188,15,299,0.952,0.95,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+large/ARC/C2C,0.9,0.9,448,404,7,0.000539697,0.0478253,True,True,299,12,0.04013,0.90883,12,299,0.909,0.9,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+large/MMLU-Pro/Text,0.4,0.4,6000,2358,67,1.33558e-07,0.0406074,True,True,2641,561,0.21242,0.82147,561,2641,0.821,0.4,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+large/MMLU-Pro/C2C,0.4,0.4,6000,2358,75,1.0127e-05,0.0445786,True,True,2641,756,0.28626,0.84640,756,2641,0.846,0.4,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+small/MMLU-Pro/Text,0.0,0.0,6000,,,,,True,True,2641,1235,0.46763,0.64385,1235,2641,0.6438,0.0,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+small/MMLU-Pro/C2C,0.0,0.0,6000,,,,,True,True,2641,1591,0.60242,0.62582,1591,2641,0.6258,0.0,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+medium/MMLU-Pro/Text,0.0,0.0,6000,,,,,True,True,2641,1128,0.42711,0.71655,1128,2641,0.7166,0.0,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+medium/MMLU-Pro/C2C,0.0,0.0,6000,,,,,True,True,2641,1410,0.53389,0.76524,1410,2641,0.7652,0.0,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+X1-Llama/OBQA/Text,0.0,0.0,1366,,,,,True,True,742,191,0.25741,0.69268,191,742,0.6927,0.0,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+X1-Llama/OBQA/C2C,0.0,0.0,1366,,,,,True,True,742,427,0.57547,0.61789,427,742,0.6179,0.0,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+X1-Llama/ARC/Text,0.0,0.0,448,,,,,True,True,299,88,0.29431,0.67789,88,299,0.6779,0.0,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+X1-Llama/ARC/C2C,0.0,0.0,448,,,,,True,True,299,174,0.58194,0.61457,174,299,0.6146,0.0,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+X2-OLMo/OBQA/Text,0.0,0.0,1366,,,,,True,True,742,172,0.23181,0.78964,172,742,0.7896,0.0,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+X2-OLMo/ARC/Text,0.0,0.0,448,,,,,True,True,299,67,0.22408,0.74916,67,299,0.7492,0.0,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+X2-OLMo/MMLU-Pro/Text,0.0,0.0,6000,,,,,True,True,2641,1112,0.42105,0.63261,1112,2641,0.6326,0.0,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+large/OBQA/Text+fact,0.75,0.75,1366,999,22,4.83045e-06,0.0403599,True,True,742,76,0.10243,0.88859,76,742,0.88859,0.75,PASS,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision

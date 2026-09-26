@@ -1,0 +1,42 @@
+{
+ "u0_lines": {
+  "medium/OBQA": {
+   "n": 321,
+   "changes": 19,
+   "rate": 0.059190031152647975,
+   "CP95_hi": 0.09089160193644392
+  },
+  "medium/ARC": {
+   "n": 174,
+   "changes": 11,
+   "rate": 0.06321839080459771,
+   "CP95_hi": 0.11029828962260883
+  },
+  "large/OBQA": {
+   "n": 354,
+   "changes": 9,
+   "rate": 0.025423728813559324,
+   "CP95_hi": 0.04771200400054601
+  },
+  "large/ARC": {
+   "n": 217,
+   "changes": 4,
+   "rate": 0.018433179723502304,
+   "CP95_hi": 0.04652119795992247
+  },
+  "large/MMLU-Pro": {
+   "n": 645,
+   "changes": 23,
+   "rate": 0.03565891472868217,
+   "CP95_hi": 0.05302721335011322
+  }
+ },
+ "failing_populations": [
+  "medium/OBQA",
+  "medium/ARC",
+  "large/MMLU-Pro"
+ ],
+ "label": "POST HOC (E21, PREREG.md); stored outputs only; creates no deployment and changes no count in the paper",
+ "branch": "otherwise (>= 1 of the five u = 0 CP upper ends >= 5%)",
+ "sentence": "Sec. 6 gives the numbers (medium/OBQA: 19/321 = 5.9% [CP upper 9.1%]; medium/ARC: 11/174 = 6.3% [CP upper 11.0%]; large/OBQA: 9/354 = 2.5% [CP upper 4.8%]; large/ARC: 4/217 = 1.8% [CP upper 4.7%]; large/MMLU-Pro: 23/645 = 3.6% [CP upper 5.3%]), names medium/OBQA, medium/ARC, large/MMLU-Pro; Limitations adds \"part of the receiver's confident answers follow option position; the certificate covers the deployed prompt format\"."
+}

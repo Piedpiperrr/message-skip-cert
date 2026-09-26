@@ -1,0 +1,12 @@
+{
+  "helper_pair": "medium",
+  "model_load_wall_seconds": 50.7081584171392,
+  "torch": "2.6.0+cu124",
+  "transformers": "4.52.4",
+  "GPU": "_CudaDeviceProperties(name='NVIDIA A100-SXM4-40GB', major=8, minor=0, total_memory=40441MB, multi_processor_count=108, uuid=babb2aec-49fc-48c4-5b0d-5922c07bbb0a, L2_cache_size=40MB)",
+  "CUDA_VISIBLE_DEVICES": "2",
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "hidden_size": 1536,
+  "num_hidden_layers": 28
+}

@@ -1,0 +1,92 @@
+{
+  "utc": "2026-09-14T07:23:17.681387+00:00",
+  "TeX_compiled": false,
+  "AST_all_python": true,
+  "local_inputs_resolved": [
+    {
+      "source": "reference_preserving.tex",
+      "input": "methods.tex",
+      "sha256": "25b1d896f028e9dae26b8f4346dc371a7bec280da5cea54175b14103be75e50b"
+    },
+    {
+      "source": "reference_preserving.tex",
+      "input": "results.tex",
+      "sha256": "4e0e331abd8b02136ef05e8810352f9b37a34eee06b3de241246aca837531f58"
+    },
+    {
+      "source": "reference_preserving.tex",
+      "input": "supervision.tex",
+      "sha256": "fcab877dca037680db668a19b6d6cf70ec24506be34bc1f380891eba4ee3f768"
+    },
+    {
+      "source": "reference_preserving.tex",
+      "input": "limitations.tex",
+      "sha256": "a3024bfc3f13e0404aec6f90592d056184c10830ec2752fa74d156aab0e14e3e"
+    },
+    {
+      "source": "results.tex",
+      "input": "table_main.tex",
+      "sha256": "e059cfecb092ab72fee35ab5525b53e49dea35a76ffb7f8e3b7dae54dcebae30"
+    },
+    {
+      "source": "results.tex",
+      "input": "table_calibration.tex",
+      "sha256": "8fe500d14a8c4edadaa0885f81f1c7bed47e54eb2ffce5aa3e4a4e01c94e0332"
+    },
+    {
+      "source": "results.tex",
+      "input": "table_ranking.tex",
+      "sha256": "38950e3d7fdb42123bfdecd7c12e0fca687168114d9807b652a761636df049a2"
+    },
+    {
+      "source": "appendix.tex",
+      "input": "table_calibration_all.tex",
+      "sha256": "80dd2bfe9fcb94e60834d0e7eedd6fe4baa8aa4579be5897f8a748424d766f4c"
+    },
+    {
+      "source": "appendix.tex",
+      "input": "table_dev_diagnostics.tex",
+      "sha256": "af031959516dc46ed36e4a82b24ae0170b446be87054c3b6ec22d239ed5efa3b"
+    },
+    {
+      "source": "appendix.tex",
+      "input": "table_bootstrap.tex",
+      "sha256": "fbd7d1de21bf5903cd5b831e5e8b93e329902c50f1a70f957f1a50418e108581"
+    },
+    {
+      "source": "appendix.tex",
+      "input": "table_gold_all15.tex",
+      "sha256": "24d543ed6d31bc9e73c307b7d3d74d58fecc76d3a4f89a9a866ebcb963bbd19e"
+    },
+    {
+      "source": "appendix.tex",
+      "input": "table_historical_e2e.tex",
+      "sha256": "d98195b1f4d97cf127350ab855fbbca73c2d19df8617c3737565b27cdc5fbe32"
+    },
+    {
+      "source": "limitations.tex",
+      "input": "contribution_positioning.tex",
+      "sha256": "805c5e13b69d5e777f962f5038706d4889571b3dec2ad59b745a7401575a6595"
+    },
+    {
+      "source": "supervision.tex",
+      "input": "table_acquisition.tex",
+      "sha256": "9f914b056d842654fa8ed98ce2eb9345b7ef0058935342335eb71afe5b08caf2"
+    },
+    {
+      "source": "manuscript.tex",
+      "input": "reference_preserving.tex",
+      "sha256": "305303a63a770675bfb687d019dfae09302c928423c734f443898d8ee4beead7"
+    },
+    {
+      "source": "manuscript.tex",
+      "input": "appendix.tex",
+      "sha256": "5d414c21b4b9e5d83cb5c220313f660e975abc903203fab2fa9a47aa630519eb"
+    }
+  ],
+  "TeX_environment_nesting_passed": true,
+  "labels_unique_and_references_resolved": true,
+  "bibliography_keys_resolved": true,
+  "contribution_words": 132,
+  "scope": "source structure, not TeX layout compilation; independent rendered figure visually checked"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "COMPLETE",
+  "job_id": "run001",
+  "successful_requests": 4688,
+  "successful_keys_file": "records/successful_request_keys.jsonl",
+  "core_protocol_sha256": "dc5762ee919d4b05b44b797bc97cdaf44dab3f03d9192c67e0c25a48bee155f9",
+  "do_not_resubmit": true,
+  "method_search_closed": true,
+  "next": "只允许完成交付核验与打包，然后交回Work；无后续实验授权"
+}

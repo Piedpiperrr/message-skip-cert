@@ -1,0 +1,2 @@
+protocols_with_criterion_other_than_CP_upper,protocols_specifying_p_le_001,tests_failing_own_protocol_criterion,tests_failing_p_le_001,tests_failing_CP_upper_lt_5,n_pass_CP_upper,n_pass_p001,n_tests,label
+"E9b (none stated); sealed ARC (no pass/reject, descriptive 5% target)",none,none,held-out OBQA (E9b) medium/OBQA/C2C q=.55;held-out OBQA (E9b) medium/OBQA/C2C q=.50;held-out OBQA (E9b) large/OBQA/Text+fact,none,10,7,10,"POST-HOC re-analysis (E19, PREREG_E19.md); descriptive; does not change any deployed policy"

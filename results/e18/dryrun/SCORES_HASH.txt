@@ -1,0 +1,5 @@
+1e325a00ab9130080aafa10103d690567c3ba7d7a4be2a92cb7ef27982819b59  SCORES_E18.parquet
+utc: 2026-09-22T00:42:54Z
+rows: 1800
+dry_run: True
+placeholder parquet removed (dry-run values were constants -1)

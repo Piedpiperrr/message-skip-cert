@@ -1,0 +1,6 @@
+{
+  "utc": "2026-09-14T17:21:30.620219+00:00",
+  "file": "paper/boundary_main_table.tex",
+  "changed": true,
+  "reason": "normalize escaped percent in table header; no data or scientific changes"
+}

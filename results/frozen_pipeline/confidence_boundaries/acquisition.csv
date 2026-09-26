@@ -1,0 +1,9 @@
+pair,dataset,reference,N_fit_representatives,N_cal_representatives,independent_machine_protocol_requests,offline_probe_rows,gold_for_thresholds,actual_new_protocol_requests
+large,obqa,T,2100,1366,2732,3466,0,0
+large,obqa,C,2100,1366,2732,3466,0,0
+large,arc,T,670,448,896,1119,0,0
+large,arc,C,670,448,896,1119,0,0
+small,obqa,T,2100,1366,2732,3466,0,0
+small,obqa,C,2100,1366,2732,3466,0,0
+small,arc,T,670,448,896,1119,0,0
+small,arc,C,670,448,896,1119,0,0

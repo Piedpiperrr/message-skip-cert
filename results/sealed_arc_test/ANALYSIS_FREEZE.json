@@ -1,0 +1,20 @@
+{
+  "utc": "2026-09-14T22:18:58.247320+00:00",
+  "files": {
+    "summary/runtime_diagnostics.json": "82364732d0f75dd6aef0e469646dd4b88854266d13c97c83d421c51a63afc637",
+    "summary/T_bootstrap_replicates.npz": "c621a8c051ba3b006de6f7e46b051b04bad23b713b2875021429bc118b5314d4",
+    "summary/paired_bootstrap.csv": "ef60d1bbe7f059e0ac92d857dc7f9f31bc537fcb4dee4a8db24b65ea082b0158",
+    "summary/output_diagnostics.csv": "b03f2130b72487a283268862d99bfd38206263737a137234cde14cafa7a120de",
+    "summary/e2e_latency_utility.csv": "2c9179fa57f5c31583171e9092f1a1ed8af7011c4ce406e89723b8ce6ae05089",
+    "summary/raw_row_sealed.csv": "819a35eaac3f3b6492b9b8b45aca09e6e5038875b4a0932635c3d29fd782cb27",
+    "summary/paired_bootstrap_indices.npz": "3351a9c4c58d3cf726b026fff3fd33249d41818e1c1ee6a4efb7e5578837f936",
+    "summary/large_arc_C_primary.json": "aa64ebc4188796e705c4f187ac9c2278e7ba81edb029de639d2bede8b616f596",
+    "summary/large_arc_T_primary.json": "d625db1cb453210e986c07dfeee43fe80d228455e7ef6fe5780b016d677b72db",
+    "summary/primary_sealed.csv": "bd602c1322924ac9dc19911ab46766da711256b76d87159ee39c5147b0641b1c",
+    "summary/C_bootstrap_replicates.npz": "f47c6bae51b6bb8dbb88d4f08082b576c93d5f13a87c9a3cf3aee73fad9e9a99",
+    "summary/accuracy_decomposition.csv": "79f202601f993cda98880a24055ff17c1b4ba8bd3cbbf5be8c14a08128b37a49",
+    "records/paired_sealed_2344.jsonl": "8a890c319b9fee23848379c1e3ff82ccea34532ede7624a16d58731291f3bc31",
+    "NUMERICAL_VALIDATION.json": "6abef97e37de294c2e6d484f3c26bce2c1c546f326db377af63be41777054c2f",
+    "GOLD_ASSOCIATION_FREEZE.json": "fcee01724b57bb8287d4fefa398550d999173cfe9244f48ac73c52820a47f9f9"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-14T04:55:07.928057+00:00",
+  "files": {
+    "figures/risk_coverage.pdf": "18f078a8a60bea7a41c0cb82433cac0e7dd9c259c1e0711e3271541e478c1fae",
+    "figures/risk_coverage.png": "9580c9ce779d3bdb244d6620e2b47e288e691600038dddc08e1dc2c010a0629f",
+    "paper/table_main.tex": "f9d50d137d7b071bce2c825022626ddaa805add6b64a52a0542a6ec72aef314d",
+    "paper/table_calibration.tex": "adbabe8889bc64b64f1fb54c7473a392fc547f30a720e4bfb89416cb403f7018"
+  },
+  "source": "494df22bc3bd12b9c4db822e842f0645d592f644adf13dcea2f900a0f48cd2c3",
+  "final_points_from": "models/deployment.json"
+}

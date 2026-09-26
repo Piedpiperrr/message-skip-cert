@@ -1,0 +1,444 @@
+{
+  "utc": "2026-09-20T09:12:00Z",
+  "nodes": 1,
+  "gpus_per_node": 4,
+  "lanes": [
+    {
+      "rank": 0,
+      "helper_pair": "small",
+      "tasks": [
+        {
+          "pair": "small",
+          "dataset": "obqa",
+          "split": "fit",
+          "slice": [
+            0,
+            2100
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "small",
+          "dataset": "obqa",
+          "split": "cal",
+          "slice": [
+            0,
+            1366
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "small",
+          "dataset": "obqa",
+          "split": "dev",
+          "slice": [
+            0,
+            742
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "small",
+          "dataset": "arc",
+          "split": "fit",
+          "slice": [
+            0,
+            670
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "small",
+          "dataset": "arc",
+          "split": "cal",
+          "slice": [
+            0,
+            448
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "small",
+          "dataset": "arc",
+          "split": "dev",
+          "slice": [
+            0,
+            299
+          ],
+          "optional": false,
+          "variant": "plain"
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "helper_pair": "medium",
+      "tasks": [
+        {
+          "pair": "medium",
+          "dataset": "obqa",
+          "split": "fit",
+          "slice": [
+            0,
+            2100
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "medium",
+          "dataset": "obqa",
+          "split": "cal",
+          "slice": [
+            0,
+            1366
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "medium",
+          "dataset": "obqa",
+          "split": "dev",
+          "slice": [
+            0,
+            742
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "medium",
+          "dataset": "arc",
+          "split": "fit",
+          "slice": [
+            0,
+            670
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "medium",
+          "dataset": "arc",
+          "split": "cal",
+          "slice": [
+            0,
+            448
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "medium",
+          "dataset": "arc",
+          "split": "dev",
+          "slice": [
+            0,
+            299
+          ],
+          "optional": false,
+          "variant": "plain"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "helper_pair": "large",
+      "tasks": [
+        {
+          "pair": "large",
+          "dataset": "obqa",
+          "split": "fit",
+          "slice": [
+            0,
+            2100
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "large",
+          "dataset": "obqa",
+          "split": "cal",
+          "slice": [
+            0,
+            1366
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "large",
+          "dataset": "obqa",
+          "split": "dev",
+          "slice": [
+            0,
+            742
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "large",
+          "dataset": "arc",
+          "split": "fit",
+          "slice": [
+            0,
+            670
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "large",
+          "dataset": "arc",
+          "split": "cal",
+          "slice": [
+            0,
+            448
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "large",
+          "dataset": "arc",
+          "split": "dev",
+          "slice": [
+            0,
+            299
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "large",
+          "dataset": "mmlu_pro",
+          "split": "fit",
+          "slice": [
+            0,
+            1260
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "large",
+          "dataset": "mmlu_pro",
+          "split": "cal",
+          "slice": [
+            0,
+            2520
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "large",
+          "dataset": "mmlu_pro",
+          "split": "dev",
+          "slice": [
+            0,
+            1109
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "large",
+          "dataset": "obqa",
+          "split": "fit",
+          "slice": [
+            0,
+            1050
+          ],
+          "optional": true,
+          "variant": "with_fact",
+          "facts": "$DATA_DIR/P2_R3_E9BC_20260920T061042Z/inputs/obqa_fact1.json"
+        },
+        {
+          "pair": "large",
+          "dataset": "obqa",
+          "split": "cal",
+          "slice": [
+            0,
+            683
+          ],
+          "optional": true,
+          "variant": "with_fact",
+          "facts": "$DATA_DIR/P2_R3_E9BC_20260920T061042Z/inputs/obqa_fact1.json"
+        },
+        {
+          "pair": "large",
+          "dataset": "obqa",
+          "split": "dev",
+          "slice": [
+            0,
+            371
+          ],
+          "optional": true,
+          "variant": "with_fact",
+          "facts": "$DATA_DIR/P2_R3_E9BC_20260920T061042Z/inputs/obqa_fact1.json"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "helper_pair": "large",
+      "tasks": [
+        {
+          "pair": "large",
+          "dataset": "mmlu_pro",
+          "split": "fit",
+          "slice": [
+            1260,
+            3000
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "large",
+          "dataset": "mmlu_pro",
+          "split": "cal",
+          "slice": [
+            2520,
+            6000
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "large",
+          "dataset": "mmlu_pro",
+          "split": "dev",
+          "slice": [
+            1109,
+            2641
+          ],
+          "optional": false,
+          "variant": "plain"
+        },
+        {
+          "pair": "large",
+          "dataset": "obqa",
+          "split": "fit",
+          "slice": [
+            1050,
+            2100
+          ],
+          "optional": true,
+          "variant": "with_fact",
+          "facts": "$DATA_DIR/P2_R3_E9BC_20260920T061042Z/inputs/obqa_fact1.json"
+        },
+        {
+          "pair": "large",
+          "dataset": "obqa",
+          "split": "cal",
+          "slice": [
+            683,
+            1366
+          ],
+          "optional": true,
+          "variant": "with_fact",
+          "facts": "$DATA_DIR/P2_R3_E9BC_20260920T061042Z/inputs/obqa_fact1.json"
+        },
+        {
+          "pair": "large",
+          "dataset": "obqa",
+          "split": "dev",
+          "slice": [
+            371,
+            742
+          ],
+          "optional": true,
+          "variant": "with_fact",
+          "facts": "$DATA_DIR/P2_R3_E9BC_20260920T061042Z/inputs/obqa_fact1.json"
+        }
+      ]
+    }
+  ],
+  "sizes": {
+    "small/obqa": {
+      "fit": 2100,
+      "cal": 1366,
+      "dev": 742
+    },
+    "small/arc": {
+      "fit": 670,
+      "cal": 448,
+      "dev": 299
+    },
+    "medium/obqa": {
+      "fit": 2100,
+      "cal": 1366,
+      "dev": 742
+    },
+    "medium/arc": {
+      "fit": 670,
+      "cal": 448,
+      "dev": 299
+    },
+    "large/obqa": {
+      "fit": 2100,
+      "cal": 1366,
+      "dev": 742
+    },
+    "large/arc": {
+      "fit": 670,
+      "cal": 448,
+      "dev": 299
+    },
+    "large/mmlu_pro": {
+      "fit": 3000,
+      "cal": 6000,
+      "dev": 2641
+    },
+    "small/mmlu_pro": {
+      "fit": 3000,
+      "cal": 6000,
+      "dev": 2641
+    },
+    "medium/mmlu_pro": {
+      "fit": 3000,
+      "cal": 6000,
+      "dev": 2641
+    }
+  },
+  "E8_lanes_complete_at_plan_time": false,
+  "required_populations": [
+    "small/obqa",
+    "small/arc",
+    "medium/obqa",
+    "medium/arc",
+    "large/obqa",
+    "large/arc",
+    "large/mmlu_pro"
+  ],
+  "conditional_populations": [
+    "small/mmlu_pro",
+    "medium/mmlu_pro"
+  ],
+  "rows_per_lane": [
+    5625,
+    5625,
+    12618,
+    8856
+  ],
+  "rows_per_lane_required": [
+    5625,
+    5625,
+    10514,
+    6752
+  ],
+  "gold_read": false,
+  "generation": false,
+  "receiver_forward": false,
+  "fuser_loaded": false
+}

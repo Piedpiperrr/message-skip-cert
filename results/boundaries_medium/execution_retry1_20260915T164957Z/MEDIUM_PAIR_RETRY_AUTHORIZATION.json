@@ -1,0 +1,22 @@
+{
+  "utc": "2026-09-15T16:50:16.765741+00:00",
+  "task": "P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1",
+  "authorization_source": "Work user instruction in current the execution agent session",
+  "parent_scientific_protocol_freeze_SHA256": "c4b85ca697030ca115020fdb959143c8c4901135a5b876cf716bf4b6a4c94bf8",
+  "failed_attempt_job_id": "run001",
+  "failed_reason": "STRICT_JOB_CGROUP_MISMATCH",
+  "formal_scientific_outputs_observed": 0,
+  "MEDIUM_PAIR_OUTCOMES_OBSERVED": false,
+  "Work_authorizes_exactly_one_replacement_submission": true,
+  "maximum_replacement_submissions": 1,
+  "no_third_submission": true,
+  "cumulative_Stage1_GPU_allocation_cap_hours": 7,
+  "attempt1_GPU_allocation_hours": 0.005555555555555556,
+  "attempt1_GPU_allocation_hours_rounded": 0.005556,
+  "replacement_GPU_count": 2,
+  "replacement_walltime_cap": "03:29:50",
+  "replacement_max_GPU_allocation_hours": 6.9944444444444445,
+  "engineering_guard_repair_only": true,
+  "scientific_protocol_unchanged": true,
+  "attempt1_immutable_index_sha256": "19ff2133467616cd77761f1b75d765d045fb2b649a445fbf074ba3d9142b1e2b"
+}

@@ -1,0 +1,20 @@
+{
+  "model": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+  "dataset": "openbookqa",
+  "answer_method": "generate",
+  "overall_accuracy": 0.85,
+  "subjects": {
+    "SPLIT_0_OF_1": 0.85
+  },
+  "length_statistics": {
+    "subjects": {
+      "SPLIT_0_OF_1": {
+        "avg_input_length": 117.926,
+        "avg_gen_length": 6.202,
+        "avg_length_ratio": 0.05306675765419554,
+        "accuracy": 0.85,
+        "total_samples": 500
+      }
+    }
+  }
+}

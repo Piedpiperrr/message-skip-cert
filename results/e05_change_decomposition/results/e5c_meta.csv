@@ -1,0 +1,2 @@
+median_rho,n_pops_rho_ge_0_8,repetitions,rng,label
+0.738,2,1000,"numpy default_rng(0), one fresh stream per population",POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision

@@ -1,0 +1,5 @@
+setting,G_pts,largest_alpha_kappa_alpha_lt_G,its_q,its_kappa,its_retention,its_ret_lo,its_ret_hi,largest_deployed_alpha_kappa_alpha_lt_G,deployed_q,deployed_kappa,deployed_retention,label
+large/OBQA/Text,3.7735849056603774,0.04,0.8,0.77088948787062,0.75,0.4666666666666674,1.0667857142857122,0.04,0.8,0.77088948787062,0.75,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+large/ARC/Text,2.0066889632107023,0.02,0.8,0.7792642140468228,1.0,1.0,1.0,0.02,0.8,0.7792642140468228,1.0,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+large/MMLU-Pro/Text,1.4009844755774328,0.03,0.3,0.3074592957213177,0.972972972972973,0.6666666666666504,1.3333333333333401,0.03,0.3,0.3074592957213177,0.972972972972973,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+large/OBQA/Text+fact,7.142857142857142,0.05,0.75,0.7223719676549866,0.8113207547169812,0.6862605042016813,0.927272727272726,0.05,0.75,0.7223719676549866,0.8113207547169812,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision

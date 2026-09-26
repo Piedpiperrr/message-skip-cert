@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-14T05:58:27.017051+00:00",
+  "files": {
+    "figures/gold_budget_crossover.png": "061c6ac9d8a83190c2fa59dd1d6a2228231032b5db95051420e600ec7f66c8a7",
+    "figures/gold_budget_crossover.pdf": "0770bac826db9ab49b4aac1210a3d44c1af09eadffd4b460743fd1e533a8b438",
+    "paper/table_gold_budget_all15.tex": "546fe8e55ab5f5bada76fd544dba10a9a3fa6191a1dda109db360cbc5141cab7",
+    "paper/table_gold_budget_summary.tex": "f56bf78da4e8c43dde2450b39988c9c84b8d34a1ea2a212d6b61d461324697d9"
+  },
+  "data_sha256": "770bc982bdb4e5ca681854ca0f705f813e130d683e3fae13274e68de3ca0931d",
+  "five_repeats_not_confidence_intervals": true
+}

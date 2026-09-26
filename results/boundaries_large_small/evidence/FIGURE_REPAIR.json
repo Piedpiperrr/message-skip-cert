@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-14T17:17:16.271742+00:00",
+  "issue": "initial shared y limits stopped autoscaling after first column and clipped small curves",
+  "repair": "common0to70 percent axis set after all curves; every finite point asserted in range",
+  "new_statistics": 0,
+  "source_hashes": {
+    "calibration": "b3038de19871c55222e69243299c1da7e459c382cc688d8d22ca5e20a7a896cc",
+    "curves": "940eaddb68c0bfbf56f3a0d4cd32ed5d45d829800630c915a4b821a710509f89"
+  },
+  "computation_role": "lightweight document rendering using frozen reviewed values; covered by preparation/reporting CPU reserve"
+}

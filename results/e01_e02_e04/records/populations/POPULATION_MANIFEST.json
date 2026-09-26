@@ -1,0 +1,188 @@
+{
+  "files": {
+    "e1_obqa_test500.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e1_obqa_test500.jsonl",
+    "e4_small_obqa.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e4_small_obqa.jsonl",
+    "e4_small_arc.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e4_small_arc.jsonl",
+    "e4_large_obqa.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e4_large_obqa.jsonl",
+    "e4_large_arc.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e4_large_arc.jsonl",
+    "e4_medium_obqa.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e4_medium_obqa.jsonl",
+    "e4_medium_arc.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e4_medium_arc.jsonl",
+    "e4_large_mmlu_pro.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e4_large_mmlu_pro.jsonl",
+    "e2b_small_obqa_dev.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e2b_small_obqa_dev.jsonl",
+    "e2b_small_arc_dev.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e2b_small_arc_dev.jsonl",
+    "e2b_large_arc_dev.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e2b_large_arc_dev.jsonl",
+    "e2b_medium_obqa_fit.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e2b_medium_obqa_fit.jsonl",
+    "e2b_medium_obqa_cal.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e2b_medium_obqa_cal.jsonl",
+    "e2b_medium_obqa_dev.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e2b_medium_obqa_dev.jsonl",
+    "e2b_medium_arc_fit.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e2b_medium_arc_fit.jsonl",
+    "e2b_medium_arc_cal.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e2b_medium_arc_cal.jsonl",
+    "e2b_medium_arc_dev.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e2b_medium_arc_dev.jsonl",
+    "e2b_large_mmlu_pro_fit.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e2b_large_mmlu_pro_fit.jsonl",
+    "e2b_large_mmlu_pro_cal.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e2b_large_mmlu_pro_cal.jsonl",
+    "e2b_large_mmlu_pro_dev.jsonl": "$DATA_DIR/P2_R1_EXP_20260919T050555Z/records/populations/e2b_large_mmlu_pro_dev.jsonl"
+  },
+  "counts": {
+    "e1_obqa_test500": 500,
+    "e4_small_obqa": 742,
+    "e4_small_arc": 299,
+    "e4_large_obqa": 742,
+    "e4_large_arc": 299,
+    "e4_medium_obqa": 742,
+    "e4_medium_arc": 299,
+    "e4_large_mmlu_pro": 2641,
+    "e2b_small_obqa_dev": 742,
+    "e2b_small_arc_dev": 299,
+    "e2b_large_arc_dev": 299,
+    "e2b_medium_obqa_fit": 2100,
+    "e2b_medium_obqa_cal": 1366,
+    "e2b_medium_obqa_dev": 742,
+    "e2b_medium_arc_fit": 671,
+    "e2b_medium_arc_cal": 448,
+    "e2b_medium_arc_dev": 299,
+    "e2b_large_mmlu_pro_fit": 3000,
+    "e2b_large_mmlu_pro_cal": 6000,
+    "e2b_large_mmlu_pro_dev": 2641
+  },
+  "rules": {
+    "E4_order": "frozen development order: OBQA/ARC = P2_CONFIDENCE_REFERENCE_BOUNDARIES splits/<ds>_dev_ids.json (== medium splits); MMLU-Pro = P2_MMLU_PRO_BREADTH_STAGE1 splits/dev_groups.json representative order",
+    "V1": "choice_text rotated so original option i sits at position (i+1) mod K; labels re-assigned by position (A..); parsed displayed label L at position p maps back to original label at index (p-1) mod K",
+    "V2": "position i carries helper_message of position (i + floor(N/2)) mod N from the same pair/population saved Text outputs",
+    "E2b_rows": "exactly {id, question_stem, choice_labels, choice_text}; MMLU-Pro group representatives; medium fit/cal/dev all rows (ARC fit 671 rows incl. MEA_2012_5_8)"
+  },
+  "file_sha256": {
+    "e1_obqa_test500.jsonl": "666dcb2b553909c84b037feb4481bc9b9df6614a93373336cdc9f8e8913afa5c",
+    "e4_small_obqa.jsonl": "f4bd682269e00fcc86aa530ee84c49a74fd625b2a35f8fc0ee4c65c6cda29c11",
+    "e4_small_arc.jsonl": "fb46aa57411694be94d7d718c7bf2df3a83bc86f04e74faa40e469ecd2a65a91",
+    "e4_large_obqa.jsonl": "4f86690f1640c0eb3ff1ead834d7e12988ab8ac6492d8f63e35bdeb47f07ace3",
+    "e4_large_arc.jsonl": "27c5de49c084bf7bd982a2512a8e1c6f643dfbbef677d50c7dcfe426e8470831",
+    "e4_medium_obqa.jsonl": "95da52d179ef3c212de578333c7e605580b39dfca4d7a650ca85443cdfa57691",
+    "e4_medium_arc.jsonl": "8a0de98c55a8764916cdee9cd3c3473d275ff61b3da43724ed691a514062bef0",
+    "e4_large_mmlu_pro.jsonl": "8c85b336d53e9d84a3d3133e1e576e4f0006064e0d9f1bc9972bfc712e56e01b",
+    "e2b_small_obqa_dev.jsonl": "fcf0743c6473c410832c71cf1258572fdb6dccab0e7225af16d6a762fce91ba5",
+    "e2b_small_arc_dev.jsonl": "86eba62873d0cc054ac04cc96d936acb83f9019dd215390a3de364fd6af2b8d7",
+    "e2b_large_arc_dev.jsonl": "86eba62873d0cc054ac04cc96d936acb83f9019dd215390a3de364fd6af2b8d7",
+    "e2b_medium_obqa_fit.jsonl": "bbf0377bb42b66ca0c244bcc48bdd3cb2fc3db9cde69f4961e56951fb26d0695",
+    "e2b_medium_obqa_cal.jsonl": "5012c1ea05db3d1f530980a93ec9d8d2e7e83f3fc9de3f5467e10a566a48bc8e",
+    "e2b_medium_obqa_dev.jsonl": "fcf0743c6473c410832c71cf1258572fdb6dccab0e7225af16d6a762fce91ba5",
+    "e2b_medium_arc_fit.jsonl": "a3c06c6b70ac7f4dfe400b3ffab640953c277c3291a045cba08ed39381523415",
+    "e2b_medium_arc_cal.jsonl": "aa64ff277f5691fc81769b99b9b5da956053b9fec953702a58a4c137d7c54d24",
+    "e2b_medium_arc_dev.jsonl": "86eba62873d0cc054ac04cc96d936acb83f9019dd215390a3de364fd6af2b8d7",
+    "e2b_large_mmlu_pro_fit.jsonl": "dd09efd2ee134ad97082fb34ecf5b2704773a87454e75a3333272e887306af86",
+    "e2b_large_mmlu_pro_cal.jsonl": "fabfc1ea370459b67b2e8268d24a8ac024bcb2d7959d060e7e4e4b97ce68f675",
+    "e2b_large_mmlu_pro_dev.jsonl": "87cc69ee5bd14e182c481350d00e220aa160e12f7e4822bb4d28cb265535c50c"
+  },
+  "sources": {
+    "$DATA_DIR/c2c_reproduction_assets/datasets/allenai--openbookqa/main/test-00000-of-00001.parquet": {
+      "role": "E1 official OpenBookQA test split (main config, rev 388097ea)",
+      "sha256": "cd5483e366daa230c1c87bbdc512d8b7229f14f6dd04d19fc8b1a3855aaaa8a3"
+    },
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/obqa_dev_ids.json": {
+      "role": "frozen development ID order",
+      "sha256": "80d1bbdd9148df3037401881533a2137b0d4ce9ee90a8ebb424fb413440bfbab"
+    },
+    "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/splits/obqa_dev_ids.json": {
+      "role": "medium frozen split IDs (all rows)",
+      "sha256": "80d1bbdd9148df3037401881533a2137b0d4ce9ee90a8ebb424fb413440bfbab"
+    },
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/arc_dev_ids.json": {
+      "role": "frozen development ID order",
+      "sha256": "588d16b38e5db04b26a0d48feb5b4b96f4caa6af3bd5352626e59aa40063419c"
+    },
+    "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/splits/arc_dev_ids.json": {
+      "role": "medium frozen split IDs (all rows)",
+      "sha256": "588d16b38e5db04b26a0d48feb5b4b96f4caa6af3bd5352626e59aa40063419c"
+    },
+    "$DATA_DIR/P2_10_20260911T122423Z/data/obqa_dev.jsonl": {
+      "role": "P2_10 OBQA dev rows (query fields only used)",
+      "sha256": "fddc1d889c02c31014885fb9932baa6c4d27757dbbc5187e8aeb0f964acaa296"
+    },
+    "$DATA_DIR/P2_10_20260911T122423Z/data/arc_validation.jsonl": {
+      "role": "P2_10 ARC validation rows (query fields only used)",
+      "sha256": "8b0244ccb07aa1c77003e82908ba0955ab9255361ec32dd75b2006221248f481"
+    },
+    "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/inputs/obqa_train_queries.jsonl": {
+      "role": "medium query-only inputs",
+      "sha256": "56a89982c5fbf8fc08edc322d08a11eaba5ef05ac3b0dfeb662ddb96477ea767"
+    },
+    "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/inputs/obqa_dev_queries.jsonl": {
+      "role": "medium query-only inputs",
+      "sha256": "23c6a8039b63d176a63c820114a20def2ce6a785d8b8cd86a3b510ed68928094"
+    },
+    "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/inputs/arc_train_queries.jsonl": {
+      "role": "medium query-only inputs",
+      "sha256": "bc039741db9e9932d29632699e91113f881b67aa6aff82c5261de9e8f4dbf928"
+    },
+    "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/inputs/arc_dev_queries.jsonl": {
+      "role": "medium query-only inputs",
+      "sha256": "b550cf4db8635d3c3926bc7c90643794f071bb16a8ed10b112d2399a04c4657f"
+    },
+    "$DATA_DIR/P2_RISK_CALIBRATION_BINARY_20260914T043954Z/inputs/dev_queries.jsonl": {
+      "role": "historical D dev query rows (large/OBQA dev)",
+      "sha256": "23c6a8039b63d176a63c820114a20def2ce6a785d8b8cd86a3b510ed68928094"
+    },
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/inputs/queries_only.jsonl": {
+      "role": "MMLU-Pro query-only inputs",
+      "sha256": "a777b14d54e0773a0f3a7182ea8fde22c06f7111707aeefd51ea0cfda9a7fff6"
+    },
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/splits/fit_groups.json": {
+      "role": "MMLU-Pro frozen group splits",
+      "sha256": "0a03684d33083a2a5b22914e0600ab3f3c1a92971853b775e2ffb5102df21cb6"
+    },
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/splits/cal_groups.json": {
+      "role": "MMLU-Pro frozen group splits",
+      "sha256": "f6ecbfb4c2190b993c3f4888b061dd47d4d3809e028f880df5da9bfe8d89cbfa"
+    },
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/splits/dev_groups.json": {
+      "role": "MMLU-Pro frozen group splits",
+      "sha256": "848be2786457c2aa169281a7f2fc33b95988b5f6753bd830085e5894882642cd"
+    },
+    "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/labels/full_development_P2_SCORING_V2.jsonl": {
+      "role": "frozen V2 development labels: R/Text raw source pointers (small/large)",
+      "sha256": "6fde2e0a58f9be88ef14edf7aeab0ac7202b594a17b94d1d18f034f8984d9aa8"
+    },
+    "$DATA_DIR/P2_5_20260910T072811Z/results/dev_cases.jsonl": {
+      "role": "saved development raw action outputs",
+      "sha256": "1ed5231d198a01cc82ecc61fb5b3b72967f369b57cfc2d18bd79ba441e583255"
+    },
+    "$DATA_DIR/P2_9_20260911T045010Z/results/small/validation_cases.jsonl": {
+      "role": "saved development raw action outputs",
+      "sha256": "4b2e400fd006a71fa7d1896b80328d770e851db47af868b83408f5ce2dc42947"
+    },
+    "$DATA_DIR/P2_6_20260910T164138Z/results/dev_cases.jsonl": {
+      "role": "saved development raw action outputs",
+      "sha256": "8bbbfbc2a52c22bd578bd8ef161286d845adc5fb188ee4c763ef14d545040d7e"
+    },
+    "$DATA_DIR/P2_9_20260911T045010Z/results/large/validation_cases.jsonl": {
+      "role": "saved development raw action outputs",
+      "sha256": "a6509a137ceff1a9f5219d82eefe5294b429b561b6a4370c7fc795c0c9990f5b"
+    },
+    "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/actions/obqa_dev.jsonl": {
+      "role": "medium saved development action outputs",
+      "sha256": "804759b23aa9ce072bc9a0fae6620c00fbb9883595a60acb16e14f6b31921240"
+    },
+    "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/actions/arc_dev.jsonl": {
+      "role": "medium saved development action outputs",
+      "sha256": "eba39bb583acf2328a49516b9122ad3f7f1766e9e1e6b806e531265519a1d934"
+    },
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/2/actions/dev.jsonl": {
+      "role": "MMLU-Pro saved development action outputs",
+      "sha256": "1b916bbe760f20d2daaed77fe4ef1d2639dd4b449f44362466efe75038358db5"
+    },
+    "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/splits/obqa_fit_ids.json": {
+      "role": "medium frozen split IDs (all rows)",
+      "sha256": "1559bc9668d88a986df0967b96fdf14c995f02f622b126f396819b69b58c4028"
+    },
+    "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/splits/obqa_cal_ids.json": {
+      "role": "medium frozen split IDs (all rows)",
+      "sha256": "8b33a4d168131c5a0095c5eabcdea2f2b3bb272dfae8a41ab2a7e0e05d5ebaed"
+    },
+    "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/splits/arc_fit_ids.json": {
+      "role": "medium frozen split IDs (all rows)",
+      "sha256": "b3771328b85bbbe00cffe1cf6155bfa689d9de29c80fbdea7cc732488883a1e7"
+    },
+    "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/splits/arc_cal_ids.json": {
+      "role": "medium frozen split IDs (all rows)",
+      "sha256": "61781f830a784f82d8a9d4c426b8a2a824f1c0919bc6e3fd27209a5aed4bdfaa"
+    }
+  }
+}

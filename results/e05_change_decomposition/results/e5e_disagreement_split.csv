@@ -1,0 +1,15 @@
+setting,split,N,disagreements,both_valid_and_different,only_R_INVALID,only_reference_INVALID,both_INVALID_counted_as_agreement,R_INVALID,ref_INVALID,R_INVALID_pct,ref_INVALID_pct,disagreement_rate,label
+X1-Llama/OBQA/Text,cal,1366,372,302,47,23,14,61,37,4.47,2.71,0.2723,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/OBQA/Text,dev,742,191,158,19,14,6,25,20,3.37,2.70,0.2574,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/OBQA/C2C,cal,1366,799,650,54,95,7,61,102,4.47,7.47,0.5849,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/OBQA/C2C,dev,742,427,359,21,47,4,25,51,3.37,6.87,0.5755,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/ARC/Text,cal,448,160,108,38,14,12,50,26,11.16,5.80,0.3571,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/ARC/Text,dev,299,88,62,22,4,10,32,14,10.70,4.68,0.2943,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/ARC/C2C,cal,448,273,208,45,20,5,50,25,11.16,5.58,0.6094,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/ARC/C2C,dev,299,174,127,31,16,1,32,17,10.70,5.69,0.5819,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/OBQA/Text,cal,1366,320,248,25,47,34,59,81,4.32,5.93,0.2343,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/OBQA/Text,dev,742,172,131,18,23,3,21,26,2.83,3.50,0.2318,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/ARC/Text,cal,448,95,48,26,21,15,41,36,9.15,8.04,0.2121,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/ARC/Text,dev,299,67,40,22,5,14,36,19,12.04,6.35,0.2241,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/MMLU-Pro/Text,cal,6000,2457,1489,604,364,421,1025,785,17.08,13.08,0.4095,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/MMLU-Pro/Text,dev,2641,1112,675,262,175,188,450,363,17.04,13.74,0.4211,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision

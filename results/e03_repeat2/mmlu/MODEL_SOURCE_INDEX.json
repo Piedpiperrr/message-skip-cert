@@ -1,0 +1,716 @@
+{
+  "utc": "2026-09-16T00:26:58.666908+00:00",
+  "models": {
+    "helper": {
+      "repo_id": "Qwen/Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct",
+      "files": [
+        {
+          "name": "config.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/config.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/config.json",
+          "bytes": 663,
+          "sha256": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c"
+        },
+        {
+          "name": "generation_config.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/generation_config.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/generation_config.json",
+          "bytes": 243,
+          "sha256": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f"
+        },
+        {
+          "name": "merges.txt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/merges.txt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/merges.txt",
+          "bytes": 1671839,
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+        },
+        {
+          "name": "model-00001-of-00004.safetensors",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model-00001-of-00004.safetensors",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model-00001-of-00004.safetensors",
+          "bytes": 3945441440,
+          "sha256": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7"
+        },
+        {
+          "name": "model-00002-of-00004.safetensors",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model-00002-of-00004.safetensors",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model-00002-of-00004.safetensors",
+          "bytes": 3864726352,
+          "sha256": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185"
+        },
+        {
+          "name": "model-00003-of-00004.safetensors",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model-00003-of-00004.safetensors",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model-00003-of-00004.safetensors",
+          "bytes": 3864726424,
+          "sha256": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5"
+        },
+        {
+          "name": "model-00004-of-00004.safetensors",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model-00004-of-00004.safetensors",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model-00004-of-00004.safetensors",
+          "bytes": 3556377672,
+          "sha256": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd"
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model.safetensors.index.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model.safetensors.index.json",
+          "bytes": 27752,
+          "sha256": "624bf7c47cd12468fdc16e38a47cf4f19e0415b859a223ba3c027eed2f0e1028"
+        },
+        {
+          "name": "tokenizer.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/tokenizer.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/tokenizer.json",
+          "bytes": 7031645,
+          "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/tokenizer_config.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/tokenizer_config.json",
+          "bytes": 7305,
+          "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+        },
+        {
+          "name": "vocab.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/vocab.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/vocab.json",
+          "bytes": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+        }
+      ],
+      "aggregate_sha256": "baa5817884f95989990a5c2be02e50488f690e087fb47c2af0de06f2ab17affb",
+      "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f"
+    },
+    "receiver": {
+      "repo_id": "Qwen/Qwen3-8B",
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+      "files": [
+        {
+          "name": "config.json",
+          "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/config.json",
+          "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/d46195ac87f837ad233d02b2f80f148bf7c005e0",
+          "bytes": 728,
+          "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30"
+        },
+        {
+          "name": "generation_config.json",
+          "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json",
+          "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/20a8a9156fc8c3f25295ca067f61fdf120d517c5",
+          "bytes": 239,
+          "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
+        },
+        {
+          "name": "merges.txt",
+          "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/merges.txt",
+          "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+          "bytes": 1671853,
+          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+        },
+        {
+          "name": "model-00001-of-00005.safetensors",
+          "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/model-00001-of-00005.safetensors",
+          "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f",
+          "bytes": 3996250744,
+          "sha256": "31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f"
+        },
+        {
+          "name": "model-00002-of-00005.safetensors",
+          "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/model-00002-of-00005.safetensors",
+          "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282",
+          "bytes": 3993160032,
+          "sha256": "5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282"
+        },
+        {
+          "name": "model-00003-of-00005.safetensors",
+          "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/model-00003-of-00005.safetensors",
+          "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836",
+          "bytes": 3959604768,
+          "sha256": "c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836"
+        },
+        {
+          "name": "model-00004-of-00005.safetensors",
+          "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/model-00004-of-00005.safetensors",
+          "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a",
+          "bytes": 3187841392,
+          "sha256": "b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a"
+        },
+        {
+          "name": "model-00005-of-00005.safetensors",
+          "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/model-00005-of-00005.safetensors",
+          "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff",
+          "bytes": 1244659840,
+          "sha256": "20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff"
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/model.safetensors.index.json",
+          "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/2b85c00f1b118961cd7a477e2bba0fe197a4ce1a",
+          "bytes": 32878,
+          "sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc"
+        },
+        {
+          "name": "tokenizer.json",
+          "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/tokenizer.json",
+          "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "bytes": 11422654,
+          "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        {
+          "name": "tokenizer_config.json",
+          "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/tokenizer_config.json",
+          "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/417d038a63fa3de29cfde265caedae14d1a58d92",
+          "bytes": 9732,
+          "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+        },
+        {
+          "name": "vocab.json",
+          "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/vocab.json",
+          "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/4783fe10ac3adce15ac8f358ef5462739852c569",
+          "bytes": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+        }
+      ],
+      "aggregate_sha256": "3c2a639fb8fd70d88a7e96e86fe0d9fb96b84985858a254d413e52f1dbfa713b",
+      "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+    },
+    "fuser": {
+      "repo_id": "nics-efc/C2C_Fuser",
+      "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d",
+      "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final",
+      "files": [
+        {
+          "name": "aggregator_config.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/aggregator_config.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/aggregator_config.json",
+          "bytes": 2,
+          "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "name": "projector_0.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_0.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_0.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_0.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_0.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_0.pt",
+          "bytes": 35718087,
+          "sha256": "fe39a8e9e60727ac074344236354d1c70ed4a841e917724501ad876bc109c328"
+        },
+        {
+          "name": "projector_1.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_1.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_1.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_1.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_1.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_1.pt",
+          "bytes": 35718087,
+          "sha256": "244c324cbd6285f71ebcf0297d8273324cc291866b64fc9f22c8cc6236fa1b6e"
+        },
+        {
+          "name": "projector_10.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_10.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_10.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_10.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_10.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_10.pt",
+          "bytes": 35718124,
+          "sha256": "6ba6fdf8ea07ef52a9eb0d4db9185c72618431d6f6e2a118657edd4418c1d7ff"
+        },
+        {
+          "name": "projector_11.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_11.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_11.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_11.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_11.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_11.pt",
+          "bytes": 35718124,
+          "sha256": "e843712bfff97da39e388b16a0dcd1db0131880aea98fbabb4cbb9157c07cfe9"
+        },
+        {
+          "name": "projector_12.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_12.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_12.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_12.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_12.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_12.pt",
+          "bytes": 35718124,
+          "sha256": "a68b5a0ee41078e96a966f26eb4f47145ef19e84d4962998fa8b64273886f4ab"
+        },
+        {
+          "name": "projector_13.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_13.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_13.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_13.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_13.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_13.pt",
+          "bytes": 35718124,
+          "sha256": "b8dec1e15d7c4e46ca43be02aeaf25b5956f05917abb2507a94c99c0abb49c61"
+        },
+        {
+          "name": "projector_14.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_14.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_14.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_14.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_14.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_14.pt",
+          "bytes": 35718124,
+          "sha256": "055d8c24c5338fdb44233c3b576bc960dff17625a911c20396fdcd7b5cdd01fe"
+        },
+        {
+          "name": "projector_15.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_15.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_15.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_15.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_15.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_15.pt",
+          "bytes": 35718124,
+          "sha256": "55da942a8d412896a0b0eb6ae7e8277038b4fe26978c0db120f57f7107165852"
+        },
+        {
+          "name": "projector_16.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_16.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_16.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_16.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_16.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_16.pt",
+          "bytes": 35718124,
+          "sha256": "df78950347c8feef5571b0744facbb96f487b7cb41ec90e696a6f4b144f240c6"
+        },
+        {
+          "name": "projector_17.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_17.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_17.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_17.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_17.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_17.pt",
+          "bytes": 35718124,
+          "sha256": "6952d46dd43bfc08c748d3ec6d5016d750d616a487137d0fede5d2ee61b5faa8"
+        },
+        {
+          "name": "projector_18.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_18.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_18.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_18.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_18.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_18.pt",
+          "bytes": 35718124,
+          "sha256": "10bbda67ad64451ecb99819db4de9f41b0c89e05803f3fa555f2fa354e6a82d9"
+        },
+        {
+          "name": "projector_19.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_19.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_19.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_19.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_19.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_19.pt",
+          "bytes": 35718124,
+          "sha256": "73788a835995a3028aaa523dac095698983a4bd864fe5e139e1d154d0f0f77df"
+        },
+        {
+          "name": "projector_2.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_2.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_2.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_2.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_2.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_2.pt",
+          "bytes": 35718087,
+          "sha256": "653b668cd029ab7675abcc7c6a4c70fb8bde61d38ef80c00224a36dc8812839a"
+        },
+        {
+          "name": "projector_20.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_20.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_20.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_20.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_20.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_20.pt",
+          "bytes": 35718124,
+          "sha256": "ab33baa6fb40c717c5d91fc18e7c90751fe37363d71937110c841dbaa78546d3"
+        },
+        {
+          "name": "projector_21.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_21.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_21.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_21.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_21.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_21.pt",
+          "bytes": 35718124,
+          "sha256": "107004b912c7974bd54650ef467e840aef5338af94cd8ae0214509ff95ad5b92"
+        },
+        {
+          "name": "projector_22.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_22.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_22.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_22.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_22.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_22.pt",
+          "bytes": 35718124,
+          "sha256": "b0ec72c167b7e359aa9284e9baef9eaacea9d4fa98c2d4a60199abee75c395a6"
+        },
+        {
+          "name": "projector_23.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_23.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_23.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_23.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_23.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_23.pt",
+          "bytes": 35718124,
+          "sha256": "6f9d5f9235dcd5adc88d2a267c146a15d8a22cc1b35a35b95da14a8bc607b820"
+        },
+        {
+          "name": "projector_24.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_24.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_24.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_24.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_24.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_24.pt",
+          "bytes": 35718124,
+          "sha256": "2e281dd147a49937ba10889dd28b385ca17a9a1a5c0a2a2a7ddbda189325bf72"
+        },
+        {
+          "name": "projector_25.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_25.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_25.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_25.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_25.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_25.pt",
+          "bytes": 35718124,
+          "sha256": "04ffb4ab8c3407109cf2a400ea189368797bb34eb84086819807cd3882d098fa"
+        },
+        {
+          "name": "projector_26.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_26.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_26.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_26.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_26.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_26.pt",
+          "bytes": 35718124,
+          "sha256": "06e62b0fd6cb2aeaf8f5f626535ea97242df260138afbda0b9ca7fce37ce58c4"
+        },
+        {
+          "name": "projector_27.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_27.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_27.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_27.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_27.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_27.pt",
+          "bytes": 35718124,
+          "sha256": "1b95d8380f1b39848218c33f0ff99fd3d97168eb08d35d3ae159cafae4ed7f0f"
+        },
+        {
+          "name": "projector_28.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_28.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_28.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_28.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_28.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_28.pt",
+          "bytes": 35718124,
+          "sha256": "a27a01fc641bc9819085441ffedc7a7105e2c10849f3d39f7bb664ab7a5866e5"
+        },
+        {
+          "name": "projector_29.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_29.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_29.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_29.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_29.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_29.pt",
+          "bytes": 35718124,
+          "sha256": "3719886bb59c1cf039ded4d31330d04ca155acf73e10592b0f0973910c184740"
+        },
+        {
+          "name": "projector_3.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_3.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_3.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_3.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_3.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_3.pt",
+          "bytes": 35718087,
+          "sha256": "38f4d25fd433d7cd1aabe1903697d81449002a67af47eda307739aef2ec04b42"
+        },
+        {
+          "name": "projector_30.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_30.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_30.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_30.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_30.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_30.pt",
+          "bytes": 35718124,
+          "sha256": "30c5ae191549f80b56f67dda61716060ebdbf6c19753c1d512c81b6846a98507"
+        },
+        {
+          "name": "projector_31.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_31.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_31.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_31.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_31.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_31.pt",
+          "bytes": 35718124,
+          "sha256": "9e6b0dc9c41c30539b97130c1f53afe03e063d50f2aa7bf0ccd6eb3639a8ada5"
+        },
+        {
+          "name": "projector_32.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_32.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_32.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_32.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_32.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_32.pt",
+          "bytes": 35718124,
+          "sha256": "8aa1865a72ea515af24a159b3d3361036835ad5fe776785c6125ff5957ff317b"
+        },
+        {
+          "name": "projector_33.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_33.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_33.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_33.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_33.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_33.pt",
+          "bytes": 35718124,
+          "sha256": "1f46c5fd97b3f3b6366e4e713487666c4268472ffc4df4395b67fdada2ea890e"
+        },
+        {
+          "name": "projector_34.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_34.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_34.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_34.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_34.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_34.pt",
+          "bytes": 35718124,
+          "sha256": "00142757d273de0cd3778e9102e0290a4f02a120318d80cc4f3f88ffa5108adc"
+        },
+        {
+          "name": "projector_35.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_35.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_35.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_35.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_35.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_35.pt",
+          "bytes": 35718124,
+          "sha256": "42a3f38457cba63485f817ff47159eae3d07116996a93d6b159b618bdebd09b6"
+        },
+        {
+          "name": "projector_4.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_4.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_4.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_4.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_4.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_4.pt",
+          "bytes": 35718087,
+          "sha256": "427180f4ecc47dc45fa2c45574ef009216195227dea3cf8f51f2d87f395619ca"
+        },
+        {
+          "name": "projector_5.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_5.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_5.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_5.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_5.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_5.pt",
+          "bytes": 35718087,
+          "sha256": "e14b22c5ae850cbbad637537cf4a0a7d558d420fbdeb95caa702a22b3db25e05"
+        },
+        {
+          "name": "projector_6.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_6.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_6.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_6.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_6.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_6.pt",
+          "bytes": 35718087,
+          "sha256": "c362e6a2c6e5b5dcacb9f3f9758a7f7ec8d120aa0f927a5c25256d2f08094f4e"
+        },
+        {
+          "name": "projector_7.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_7.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_7.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_7.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_7.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_7.pt",
+          "bytes": 35718087,
+          "sha256": "75b9405e489313a72ae3e249b25d09def19f8ed2eefbc387b651e6ee3e407c22"
+        },
+        {
+          "name": "projector_8.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_8.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_8.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_8.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_8.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_8.pt",
+          "bytes": 35718087,
+          "sha256": "358797ed8a9fabce00e6a38a472c81242862994da717915c54e4311ca8dac098"
+        },
+        {
+          "name": "projector_9.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_9.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_9.json",
+          "bytes": 416,
+          "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5"
+        },
+        {
+          "name": "projector_9.pt",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_9.pt",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_9.pt",
+          "bytes": 35718087,
+          "sha256": "569b8ce27bd784fa1447f60040f8c1da7245d6b4af2aeb983dd36833ac3d374c"
+        },
+        {
+          "name": "projector_config.json",
+          "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_config.json",
+          "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_config.json",
+          "bytes": 624,
+          "sha256": "d8904f6e5b2d7762b84c7517ccbc900f531755366365e4a97f2f97c5f28d783b"
+        }
+      ],
+      "aggregate_sha256": "21a7dbc33ae6e137da61cf535bcef21af24ef44f0393b44c27ff7ec5600f506d",
+      "chat_template_sha256": null
+    }
+  },
+  "model_loads": 0,
+  "model_forwards": 0,
+  "identity_source": "$DATA_DIR/P2_10_20260911T122423Z/frozen_config.json",
+  "identity_source_sha256": "0361e5f81a1ad919d2ac7546252fdef0a26552e546fafa478b25539cac6f49ed",
+  "policy": "本地历史冻结revision；所有实际加载的weights/config/tokenizer/映射逐文件SHA256；正式job加载前再次核对"
+}

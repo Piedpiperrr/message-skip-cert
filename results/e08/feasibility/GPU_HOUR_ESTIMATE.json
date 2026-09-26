@@ -1,0 +1,110 @@
+{
+  "utc": "2026-09-20T01:30:32.524584+00:00",
+  "inputs": {
+    "large_MMLU_Pro": {
+      "source": "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/RESOURCE_LEDGER.json",
+      "mean_latency_ms": {
+        "R": 275.3,
+        "T": 1297.8,
+        "C": 377.7,
+        "P": 46.1
+      },
+      "n_requests": {
+        "R": 12032,
+        "T": 12032,
+        "C": 12032,
+        "P": 12032
+      },
+      "measured_wall_seconds": 24712.9,
+      "rows": 12032,
+      "measured_seconds_per_row": 2.0539,
+      "allocation_GPU_hours": 13.904444444444444,
+      "machine": "REDACTED"
+    },
+    "medium_OBQA_ARC": {
+      "source": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/RESOURCE_LEDGER.json",
+      "measured_wall_seconds": 9263.1,
+      "requests": 22504,
+      "measured_seconds_per_request": 0.4116,
+      "allocation_GPU_hours": 5.233888888888889,
+      "machine": "REDACTED"
+    },
+    "cross_pair_scaling_source": "$DATA_DIR/P2_MMLU_PRO_BREADTH_PROTOCOL_AND_COST_REVIEW_20260915T224801Z/evidence/HISTORICAL_TIMING_SUMMARY.json"
+  },
+  "projection": [
+    {
+      "pair": "small",
+      "per_row_projected_ms": 2157.1,
+      "per_action_projected_ms": {
+        "R": 345.3,
+        "T": 1366.1,
+        "C": 399.7,
+        "P": 46.1
+      },
+      "scaling_vs_large": {
+        "R": 1.2543,
+        "T": 1.0526,
+        "C": 1.0583,
+        "P": 1.0
+      },
+      "rows": 12032,
+      "projected_pair_wall_seconds": 25954.8,
+      "projected_pair_wall_hours": 7.21,
+      "projected_GPU_hours_2_GPUs": 14.419
+    },
+    {
+      "pair": "medium",
+      "per_row_projected_ms": 1967.4,
+      "per_action_projected_ms": {
+        "R": 237.3,
+        "T": 1263.9,
+        "C": 420.2,
+        "P": 46.1
+      },
+      "scaling_vs_large": {
+        "R": 0.8618,
+        "T": 0.9739,
+        "C": 1.1125,
+        "P": 1.0
+      },
+      "rows": 12032,
+      "projected_pair_wall_seconds": 23671.3,
+      "projected_pair_wall_hours": 6.575,
+      "projected_GPU_hours_2_GPUs": 13.151
+    }
+  ],
+  "totals": {
+    "projected_pair_wall_hours_both_pairs": 13.785,
+    "projected_productive_GPU_hours_both_pairs": 27.57
+  },
+  "debug_queue_packing": {
+    "walltime_cap_seconds": 3000,
+    "startup_reserve_seconds_per_process": 400,
+    "usable_collection_seconds_per_slot": 2600,
+    "pair_slots_per_node": 2,
+    "select_1": {
+      "nodes": 1,
+      "GPUs": 4,
+      "pair_slots": 2,
+      "pair_seconds_per_job": 5200,
+      "main_jobs_needed": 10,
+      "allocated_GPU_hours": 33.33
+    },
+    "select_2": {
+      "nodes": 2,
+      "GPUs": 8,
+      "pair_slots": 4,
+      "pair_seconds_per_job": 10400,
+      "main_jobs_needed": 5,
+      "allocated_GPU_hours": 33.33
+    }
+  },
+  "gate": {
+    "limit_GPU_hours": 30,
+    "limit_debug_jobs": 6,
+    "estimate_productive_GPU_hours": 27.57,
+    "estimate_allocated_GPU_hours_select2": 33.33,
+    "estimate_main_debug_jobs_select2": 5,
+    "note": "productive = 2 GPUs x pair-wall; allocated = every GPU in the reservation x walltime cap"
+  }
+}

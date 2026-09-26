@@ -1,0 +1,704 @@
+{
+ "utc": "2026-09-21T05:29:13.262963+00:00",
+ "whoami": "user",
+ "models": {
+  "meta-llama/Llama-3.1-8B-Instruct": {
+   "sha": "0e9e39f249a16976918f6564b8830bc894c89659",
+   "gated": "manual",
+   "hub_files": {
+    ".gitattributes": {
+     "blob_id": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+     "lfs_sha256": null,
+     "size": 1519
+    },
+    "LICENSE": {
+     "blob_id": "a7c3ca16cee30425ed6ad841a809590f2bcbf290",
+     "lfs_sha256": null,
+     "size": 7627
+    },
+    "README.md": {
+     "blob_id": "bbd5630a05b65c1a8b25141bd11ec44844107d58",
+     "lfs_sha256": null,
+     "size": 44044
+    },
+    "USE_POLICY.md": {
+     "blob_id": "81ebb55902285e8dd5804ccf423d17ffb2a622ee",
+     "lfs_sha256": null,
+     "size": 4691
+    },
+    "config.json": {
+     "blob_id": "0bb6fd75b3ad2fe988565929f329945262c2814e",
+     "lfs_sha256": null,
+     "size": 855
+    },
+    "generation_config.json": {
+     "blob_id": "cc7276afd599de091142c6ed3005faf8a74aa257",
+     "lfs_sha256": null,
+     "size": 184
+    },
+    "model-00001-of-00004.safetensors": {
+     "blob_id": "a59dca28867995c0d05384251ac5f4d62461a226",
+     "lfs_sha256": "2b1879f356aed350030bb40eb45ad362c89d9891096f79a3ab323d3ba5607668",
+     "size": 4976698672
+    },
+    "model-00002-of-00004.safetensors": {
+     "blob_id": "4ab0726caf5e75dd1e5700c7e7899ac8c0798428",
+     "lfs_sha256": "09d433f650646834a83c580877bd60c6d1f88f7755305c12576b5c7058f9af15",
+     "size": 4999802720
+    },
+    "model-00003-of-00004.safetensors": {
+     "blob_id": "5864b15557563e7700a3f95236afdee36f5fdb74",
+     "lfs_sha256": "fc1cdddd6bfa91128d6e94ee73d0ce62bfcdb7af29e978ddcab30c66ae9ea7fa",
+     "size": 4915916176
+    },
+    "model-00004-of-00004.safetensors": {
+     "blob_id": "b8babcaa5a888d6efd5c05206361b4685492ad13",
+     "lfs_sha256": "92ecfe1a2414458b4821ac8c13cf8cb70aed66b5eea8dc5ad9eeb4ff309d6d7b",
+     "size": 1168138808
+    },
+    "model.safetensors.index.json": {
+     "blob_id": "0fd8120f1c6acddc268ebc2583058efaf699a771",
+     "lfs_sha256": null,
+     "size": 23950
+    },
+    "original/consolidated.00.pth": {
+     "blob_id": "419e2d2c8b3fcbea2955c1177110fe777df351f7",
+     "lfs_sha256": "ab33d910f405204e5d388bc3521503584800461dc96808e287821dd451c1edac",
+     "size": 16060617592
+    },
+    "original/params.json": {
+     "blob_id": "f1131204e79d0c09d2bac93f11569a8a655d68ba",
+     "lfs_sha256": null,
+     "size": 199
+    },
+    "original/tokenizer.model": {
+     "blob_id": "a097ce5a06fce0fa3d685a8cfb175cef243dfde9",
+     "lfs_sha256": "82e9d31979e92ab929cd544440f129d9ecd797b69e327f80f17e1c50d5551b55",
+     "size": 2183982
+    },
+    "special_tokens_map.json": {
+     "blob_id": "02ee80b6196926a5ad790a004d9efd6ab1ba6542",
+     "lfs_sha256": null,
+     "size": 296
+    },
+    "tokenizer.json": {
+     "blob_id": "5cc5f00a5b203e90a27a3bd60d1ec393b07971e8",
+     "lfs_sha256": null,
+     "size": 9085657
+    },
+    "tokenizer_config.json": {
+     "blob_id": "db88166e2bc4c799fd5d1ae643b75e84d03ee70e",
+     "lfs_sha256": null,
+     "size": 55351
+    }
+   },
+   "download": "DENIED/FAILED GatedRepoError: 403 Client Error. (Request ID: Root=1-6ab0c0a9-5972eb3e6dc17e6c02a504ab;76a9fd7d-91a0-42f9-b32e-65e93bf7db72)\n\nCannot access gated repo for url https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/0e9e39f249a16976918f6564b8830bc894c89659/config.json.\nAccess to model meta-llama/Llama-3.1-8",
+   "sharedfs_copies": [
+    {
+     "path": "$DATA_DIR/otheruser1/hf_cache/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659",
+     "owner_area": "otheruser1",
+     "this_user": false,
+     "files": {
+      "config.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "generation_config.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "model-00001-of-00004.safetensors": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "model-00002-of-00004.safetensors": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "model-00003-of-00004.safetensors": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "model-00004-of-00004.safetensors": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "model.safetensors.index.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "special_tokens_map.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "tokenizer.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "tokenizer_config.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      }
+     },
+     "required_files_present_size_ok": true
+    },
+    {
+     "path": "$DATA_DIR/otheruser2/BenchmarkDir/.hf-cache/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659",
+     "owner_area": "otheruser2",
+     "this_user": false,
+     "files": {
+      ".gitattributes": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "LICENSE": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "README.md": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "USE_POLICY.md": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "config.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "generation_config.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "model-00001-of-00004.safetensors": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "model-00002-of-00004.safetensors": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "model-00003-of-00004.safetensors": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "model-00004-of-00004.safetensors": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "model.safetensors.index.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "original/consolidated.00.pth": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "original/params.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "original/tokenizer.model": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "special_tokens_map.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "tokenizer.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "tokenizer_config.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      }
+     },
+     "required_files_present_size_ok": true
+    },
+    {
+     "path": "$DATA_DIR/otheruser3/Llama-3.1-8B-Instruct",
+     "owner_area": "otheruser3",
+     "this_user": false,
+     "files": {
+      ".gitattributes": {
+       "size_ok": true,
+       "blob_name_matches_hub": null
+      },
+      "LICENSE": {
+       "size_ok": true,
+       "blob_name_matches_hub": null
+      },
+      "README.md": {
+       "size_ok": true,
+       "blob_name_matches_hub": null
+      },
+      "USE_POLICY.md": {
+       "size_ok": true,
+       "blob_name_matches_hub": null
+      },
+      "config.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": null
+      },
+      "generation_config.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": null
+      },
+      "model-00001-of-00004.safetensors": {
+       "size_ok": true,
+       "blob_name_matches_hub": null
+      },
+      "model-00002-of-00004.safetensors": {
+       "size_ok": true,
+       "blob_name_matches_hub": null
+      },
+      "model-00003-of-00004.safetensors": {
+       "size_ok": true,
+       "blob_name_matches_hub": null
+      },
+      "model-00004-of-00004.safetensors": {
+       "size_ok": true,
+       "blob_name_matches_hub": null
+      },
+      "model.safetensors.index.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": null
+      },
+      "original/consolidated.00.pth": {
+       "size_ok": true,
+       "blob_name_matches_hub": null
+      },
+      "original/params.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": null
+      },
+      "original/tokenizer.model": {
+       "size_ok": true,
+       "blob_name_matches_hub": null
+      },
+      "special_tokens_map.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": null
+      },
+      "tokenizer.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": null
+      },
+      "tokenizer_config.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": null
+      }
+     },
+     "required_files_present_size_ok": true
+    }
+   ],
+   "tokenizer_source": "$DATA_DIR/otheruser1/hf_cache/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659",
+   "label_rule": {
+    "label_token_sets_A_E": {
+     "A": [
+      32,
+      362,
+      23845,
+      118586
+     ],
+     "B": [
+      33,
+      426,
+      13083,
+      108693
+     ],
+     "C": [
+      34,
+      356,
+      6391,
+      116545
+     ],
+     "D": [
+      35,
+      423,
+      11198,
+      113661
+     ],
+     "E": [
+      36,
+      469,
+      23626,
+      124813
+     ]
+    },
+    "counts_A_E": {
+     "A": 4,
+     "B": 4,
+     "C": 4,
+     "D": 4,
+     "E": 4
+    },
+    "nonempty": true,
+    "disjoint": true,
+    "encode_label_alone": {
+     "A": [
+      32
+     ],
+     "B": [
+      33
+     ],
+     "C": [
+      34
+     ],
+     "D": [
+      35
+     ],
+     "E": [
+      36
+     ]
+    },
+    "each_label_single_token": true,
+    "decoded_set_members": {
+     "A": [
+      "A",
+      " A",
+      "\tA",
+      "\u00a0A"
+     ],
+     "B": [
+      "B",
+      " B",
+      "\tB",
+      "\u00a0B"
+     ],
+     "C": [
+      "C",
+      " C",
+      "\tC",
+      "\u00a0C"
+     ],
+     "D": [
+      "D",
+      " D",
+      "\tD",
+      "\u00a0D"
+     ],
+     "E": [
+      "E",
+      " E",
+      "\tE",
+      "\u00a0E"
+     ]
+    },
+    "prefix_ids": [
+     791,
+     4495,
+     4320,
+     374
+    ],
+    "prefix_roundtrip": true,
+    "chat_template_sha256": "e10ca381b1ccc5cf9db52e371f3b6651576caee0a630b452e2816b2d404d4b65",
+    "passes": true
+   },
+   "tokenizer_class": "PreTrainedTokenizerFast",
+   "vocab_size": 128256
+  },
+  "mistralai/Mistral-7B-Instruct-v0.3": {
+   "sha": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+   "gated": false,
+   "hub_files": {
+    ".gitattributes": {
+     "blob_id": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+     "lfs_sha256": null,
+     "size": 1519
+    },
+    "README.md": {
+     "blob_id": "2160488d137e4f9228cb407048093babea8958ef",
+     "lfs_sha256": null,
+     "size": 7893
+    },
+    "config.json": {
+     "blob_id": "9f913dc05d66cfb23c16e3c93b3cc4899813dfa6",
+     "lfs_sha256": null,
+     "size": 601
+    },
+    "consolidated.safetensors": {
+     "blob_id": "2218d03445a4e3602acef7a38d41f5f778644309",
+     "lfs_sha256": "76d5729be995fb6510c7f103c5b8825d3d82f8126ac949db6be367a638694d1f",
+     "size": 14496078512
+    },
+    "generation_config.json": {
+     "blob_id": "b6bea2642bc3fe80f392111d52af91d1563a8de2",
+     "lfs_sha256": null,
+     "size": 116
+    },
+    "model-00001-of-00003.safetensors": {
+     "blob_id": "cafc3eb94d702d9cd4f1a9810a369f572943faab",
+     "lfs_sha256": "ce6fb6f6f4d0183f4813cbf4ece24109da629a08d4210da46f77e1d8b0bd5c19",
+     "size": 4949453792
+    },
+    "model-00002-of-00003.safetensors": {
+     "blob_id": "efb567b14fb746e080edbdf1096383909ac3cf23",
+     "lfs_sha256": "8c0e72f148366b6a3709e002a98706a33d31aec8515090c856c95b2044f92ae0",
+     "size": 4999819336
+    },
+    "model-00003-of-00003.safetensors": {
+     "blob_id": "cb8d2d7a8006ba57034a2195f6e5339577d1aeb4",
+     "lfs_sha256": "905dd405363e43d95779c1c1155a2dbfd36155914ae95dbd934e12e490cfb4ca",
+     "size": 4546807800
+    },
+    "model.safetensors.index.json": {
+     "blob_id": "050e5515d49376fc01e4837d031902c63af98111",
+     "lfs_sha256": null,
+     "size": 23950
+    },
+    "params.json": {
+     "blob_id": "00dc7d10b86d793afaf3d6733a45ee4d8c557194",
+     "lfs_sha256": null,
+     "size": 202
+    },
+    "special_tokens_map.json": {
+     "blob_id": "451134b2ddc2e78555d1e857518c54b4bdc2e87d",
+     "lfs_sha256": null,
+     "size": 414
+    },
+    "tokenizer.json": {
+     "blob_id": "8d7d23136b474a3df1182ed829db19984e295ee7",
+     "lfs_sha256": null,
+     "size": 1961548
+    },
+    "tokenizer.model": {
+     "blob_id": "029a2451811177349803d8a4789f6861a7afb0e0",
+     "lfs_sha256": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+     "size": 587404
+    },
+    "tokenizer.model.v3": {
+     "blob_id": "d8233e5b061987d32b63dbfb38fe86d7d4fc8a18",
+     "lfs_sha256": null,
+     "size": 587404
+    },
+    "tokenizer_config.json": {
+     "blob_id": "940a9c375c745ccbf0bebc5bedcec924d71827aa",
+     "lfs_sha256": null,
+     "size": 140874
+    }
+   },
+   "download": "ok",
+   "sharedfs_copies": [
+    {
+     "path": "$DATA_DIR/hf_cache/hub/models--mistralai--Mistral-7B-Instruct-v0.3/snapshots/c170c708c41dac9275d15a8fff4eca08d52bab71",
+     "owner_area": "user",
+     "this_user": true,
+     "files": {
+      "config.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "generation_config.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "special_tokens_map.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "tokenizer.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "tokenizer.model": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      },
+      "tokenizer_config.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      }
+     },
+     "required_files_present_size_ok": false
+    }
+   ],
+   "tokenizer_source": "$DATA_DIR/hf_cache/hub/models--mistralai--Mistral-7B-Instruct-v0.3/snapshots/c170c708c41dac9275d15a8fff4eca08d52bab71",
+   "tokenizer_load_error": "ValueError: Cannot instantiate this tokenizer from a slow version. If it's based on sentencepiece, make sure you have sentencepiece installed."
+  },
+  "ibm-granite/granite-3.1-8b-instruct": {
+   "sha": "4009206d5fc95d2e65a7b7633e159d6e97e25d35",
+   "gated": false,
+   "hub_files": {
+    ".gitattributes": {
+     "blob_id": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+     "lfs_sha256": null,
+     "size": 1519
+    },
+    "README.md": {
+     "blob_id": "ce555925e7283897b32f5d515974e3c948728355",
+     "lfs_sha256": null,
+     "size": 20468
+    },
+    "added_tokens.json": {
+     "blob_id": "183eb810668f005a1ed0e0c8be060e5f47c23f2f",
+     "lfs_sha256": null,
+     "size": 87
+    },
+    "config.json": {
+     "blob_id": "9e06dd77173ab8d7abcb7c5d8104c9979a09158f",
+     "lfs_sha256": null,
+     "size": 790
+    },
+    "generation_config.json": {
+     "blob_id": "0e7ca8f1a4cf587858c703b962bf0730b90ce699",
+     "lfs_sha256": null,
+     "size": 132
+    },
+    "merges.txt": {
+     "blob_id": "f8479fb696fe07332c55300a6accf8cc191acc6a",
+     "lfs_sha256": null,
+     "size": 441810
+    },
+    "model-00001-of-00004.safetensors": {
+     "blob_id": "6083f51bb86c3fb0e001e28d381c1d732ee1bb90",
+     "lfs_sha256": "191c4e9c6263d9cf591104f2d16ab2c39dcc43c1ad0680cc5a34d5c86d61ee41",
+     "size": 4974661520
+    },
+    "model-00002-of-00004.safetensors": {
+     "blob_id": "9340fad59189b8f57ae5ddb7c4d83078f6c647ae",
+     "lfs_sha256": "c7c38b0d5a436775b09d764465ed6e6eb7a8c4e302d05e301e151c96e3076f22",
+     "size": 4991447808
+    },
+    "model-00003-of-00004.safetensors": {
+     "blob_id": "06d26e6d7505f895fa68e980a4786e5c53137f8e",
+     "lfs_sha256": "f02784b72391fa04e9b986313c1a1720ce88f0eb40f7ae81fa0daadc93049457",
+     "size": 4970460032
+    },
+    "model-00004-of-00004.safetensors": {
+     "blob_id": "c2983728cc7eff357e121c00d76c360d8f367939",
+     "lfs_sha256": "9d86d201ff8e73d8a46e92b543c9dd44f133e60b35ccada4a76439af62f22212",
+     "size": 1405169256
+    },
+    "model.safetensors.index.json": {
+     "blob_id": "6e06d9ba85709934f6a8cad738d36225c8044890",
+     "lfs_sha256": null,
+     "size": 29836
+    },
+    "special_tokens_map.json": {
+     "blob_id": "386500a5040da66c6db3d8b9c44ccd1ee202c744",
+     "lfs_sha256": null,
+     "size": 701
+    },
+    "tokenizer.json": {
+     "blob_id": "11f3f2c66235d30bc9bf04ad7e1b4a19d80e84da",
+     "lfs_sha256": null,
+     "size": 3475806
+    },
+    "tokenizer_config.json": {
+     "blob_id": "3e1e4c1b08817b77f3010e7aab1b87ad645e6a42",
+     "lfs_sha256": null,
+     "size": 8072
+    },
+    "vocab.json": {
+     "blob_id": "0a11f2016e660fd490f7bf168e6d1f9c86a8f744",
+     "lfs_sha256": null,
+     "size": 776995
+    }
+   },
+   "download": "ok",
+   "sharedfs_copies": [
+    {
+     "path": "$DATA_DIR/hf_cache/hub/models--ibm-granite--granite-3.1-8b-instruct/snapshots/4009206d5fc95d2e65a7b7633e159d6e97e25d35",
+     "owner_area": "user",
+     "this_user": true,
+     "files": {
+      "config.json": {
+       "size_ok": true,
+       "blob_name_matches_hub": true
+      }
+     },
+     "required_files_present_size_ok": false
+    }
+   ],
+   "tokenizer_source": "$DATA_DIR/hf_cache/hub/models--ibm-granite--granite-3.1-8b-instruct/snapshots/4009206d5fc95d2e65a7b7633e159d6e97e25d35",
+   "label_rule": {
+    "label_token_sets_A_E": {
+     "A": [
+      51,
+      399
+     ],
+     "B": [
+      52,
+      551
+     ],
+     "C": [
+      53,
+      390
+     ],
+     "D": [
+      54,
+      475
+     ],
+     "E": [
+      55,
+      516
+     ]
+    },
+    "counts_A_E": {
+     "A": 2,
+     "B": 2,
+     "C": 2,
+     "D": 2,
+     "E": 2
+    },
+    "nonempty": true,
+    "disjoint": true,
+    "encode_label_alone": {
+     "A": [
+      51
+     ],
+     "B": [
+      52
+     ],
+     "C": [
+      53
+     ],
+     "D": [
+      54
+     ],
+     "E": [
+      55
+     ]
+    },
+    "each_label_single_token": true,
+    "decoded_set_members": {
+     "A": [
+      "A",
+      " A"
+     ],
+     "B": [
+      "B",
+      " B"
+     ],
+     "C": [
+      "C",
+      " C"
+     ],
+     "D": [
+      "D",
+      " D"
+     ],
+     "E": [
+      "E",
+      " E"
+     ]
+    },
+    "prefix_ids": [
+     1318,
+     3809,
+     7592,
+     438
+    ],
+    "prefix_roundtrip": true,
+    "chat_template_sha256": "08962c2f15d56767854b46dfc4070b37f4c443551833bba65b417191735f3187",
+    "passes": true
+   },
+   "tokenizer_class": "GPT2TokenizerFast",
+   "vocab_size": 49155
+  }
+ }
+}

@@ -1,0 +1,36 @@
+{
+  "utc": "2026-09-16T22:00:15.653202+00:00",
+  "status": "PASS",
+  "independent_math_fsum_and_linear_percentiles": [
+    {
+      "reference": "Text",
+      "N": 128,
+      "mean_saving_ms": 346.3156871330284,
+      "bootstrap_low_ms": 249.8286115142946,
+      "bootstrap_high_ms": 442.9725224629692,
+      "classification": "E2E_POSITIVE",
+      "status": "PASS"
+    },
+    {
+      "reference": "C2C",
+      "N": 128,
+      "mean_saving_ms": 8.242936348324292,
+      "bootstrap_low_ms": -20.510967994323437,
+      "bootstrap_high_ms": 44.02031206291207,
+      "classification": "E2E_UNCERTAIN_OR_NEGATIVE",
+      "status": "PASS"
+    }
+  ],
+  "bootstrap_seed": 0,
+  "resamples": 2000,
+  "accuracy_recomputed": true,
+  "all_first_requests_retained": true,
+  "all_128_items_retained": true,
+  "identity_differences_retained": true,
+  "one_allocation_one_residency": true,
+  "models_and_runtime_parent_hashes_unchanged": true,
+  "V4_and_existing_sources_unchanged": 116,
+  "extra_model_requests": 0,
+  "extra_PBS": 0,
+  "no_next_task": true
+}

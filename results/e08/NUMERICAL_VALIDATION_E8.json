@@ -1,0 +1,318 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-20T19:10:49.697030+00:00",
+  "protocol_freeze_E8_sha256": "9a17d8a438a226aa556b699525f767ebf8217e682dca59a746891594dfee945e",
+  "pairs": [
+    "small",
+    "medium"
+  ],
+  "rows_per_pair": 12032,
+  "actions_per_pair": 36096,
+  "probes_per_pair": 12032,
+  "duplicate_request_keys": 0,
+  "missing_IDs": 0,
+  "input_hash_mismatches": 0,
+  "reparsed_actions": 72192,
+  "fit_reps": 3000,
+  "cal_reps": 6000,
+  "dev_reps": 2641,
+  "calibration_tests": 80,
+  "group_leakage": 0,
+  "resplit_seed0_reproduces_frozen_split": true,
+  "deploy_count": 0,
+  "output_files": {
+    "small": [
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_00/actions/fit.jsonl",
+        "sha256": "8c2de7c5091164a0b11704b251c4478bdc5bb18b39af1867ac142268d8aa6ce5"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_00/probes/fit.jsonl",
+        "sha256": "ed566f2d7fa1f4e2f0a0f023550fc2ecd2aca31f61c88ba6f903c1ec2d27c119"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_01/actions/fit.jsonl",
+        "sha256": "c7159693b1b2e627e76d24f9bc68fb370792eb9b90535763fdd5ced206750c73"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_01/probes/fit.jsonl",
+        "sha256": "6fa50c2f970bcd0ff3e2a0421bbfe934d12c467b5f6b65d501ba0cce9e7381cc"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_02/actions/fit.jsonl",
+        "sha256": "14b6699588a53f8229011d34c09186c515b8a4c61cd9cd3064547ad600a55b7e"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_02/probes/fit.jsonl",
+        "sha256": "4e795f44fa0aaaf7c48ce3c6c98e8e1674961377b738299b75e5dfe4ad09e365"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_03/actions/fit.jsonl",
+        "sha256": "d088075b0a9d4361fd1cfbf2d813876f945dcc9558da33e520f6d5a3c1cc334a"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_03/probes/fit.jsonl",
+        "sha256": "21ce8633430d09b476df17f0ec5fe2a5d4603882d6149ba375b146c270a454ff"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_04/actions/cal.jsonl",
+        "sha256": "2c66a363ca27a549c6a9d875a2f8f816b8835e04be0068191108b94c86fcc94e"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_04/actions/fit.jsonl",
+        "sha256": "a256b996ec0146ddfc040f9a1992bf62461a55559210a8bca16d921918083cc2"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_04/probes/cal.jsonl",
+        "sha256": "6db449415e3904c24898086f38a6b5ca14859a61327db9ab9a6d3d40582b7ee6"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_04/probes/fit.jsonl",
+        "sha256": "07d83155697d0dfeb5aa33f23e9b83c06c047a44aeb6843cb487b4454452c784"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_05/actions/cal.jsonl",
+        "sha256": "2d7163945c5a75ad634c8565b9edde05212d50ff4177257f64e76597f43c4db4"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_05/probes/cal.jsonl",
+        "sha256": "eff8368aa97641132c9c3226d76a8559cf1d53d84d41f60adbbd66a013489b9f"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_06/actions/cal.jsonl",
+        "sha256": "22bb4dd1663f295bb69b0fbac9fcae02e5eceb4a6290ac376c725db888f4921f"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_06/probes/cal.jsonl",
+        "sha256": "ef10f416e9bf7b80e8fc5a310024751b0aeeee9117b1b9a0030459f9527b0dcf"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_07/actions/cal.jsonl",
+        "sha256": "96072cd8ac4b98aa31239ac827b47f48d8b946c256f3e64d7bb6998ad9a940db"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_07/probes/cal.jsonl",
+        "sha256": "272379fa8ae96dad5882d4a97cd4c6584b00505bed2d7163e5739fb9073f9dca"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_08/actions/cal.jsonl",
+        "sha256": "c0f598c3e759686595b1627396208392ff3c06ad5feeb82c751c5f27e8bab8f4"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_08/probes/cal.jsonl",
+        "sha256": "d3be1d104d7e716d01a705d7fb305ff4a358b2c9c7d5087cbbd393c7249f10d0"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_09/actions/cal.jsonl",
+        "sha256": "c126a5572593cacf11e18f65ed93d59569bbb54b290261adb338fa7099aee776"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_09/probes/cal.jsonl",
+        "sha256": "4de9eafd0f16022bb3eb8c740e18686101f2b8c3389f109a3396a9f8aa7bdd1d"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_10/actions/cal.jsonl",
+        "sha256": "86602d6cf72de1a76661524069e621736d78338d78c3a23aa7781cba633fed56"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_10/probes/cal.jsonl",
+        "sha256": "ddbab739302a3980dae5267db458d772dc5fc54327061f89b1b9f85842f9dd04"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_11/actions/cal.jsonl",
+        "sha256": "7dc914d60dcdd4158bb463e92cf79c4767602e32464164f9e9f2a36daf86e9c9"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_11/probes/cal.jsonl",
+        "sha256": "a8e99a86f43d9aa929819da933ed15c9590276a03a5c56e9aff35adc38ca77b8"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_12/actions/cal.jsonl",
+        "sha256": "3afa6e4235c2900469c59a16bdda616844f34eccaf417674dfde42b2511e3b84"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_12/actions/dev.jsonl",
+        "sha256": "2b8171330f7404c41a3fe7ec0b510470336a1a64aa81d7ecb8e86908086f2d90"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_12/probes/cal.jsonl",
+        "sha256": "c8141d20336cd8a04404bbc658791482ccf717a9157c9c631a07706b06350187"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_12/probes/dev.jsonl",
+        "sha256": "b086b5fe971a013be5bc84a6bbdce4b25d82c96a713d643bb5655ccfd7942610"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_13/actions/dev.jsonl",
+        "sha256": "5ecaa931153e5f422432c87590a1f71762be9957f876a78c8ac3e31e9e76cb41"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_13/probes/dev.jsonl",
+        "sha256": "6e5f7293f222ea49fc96ad064a7a0fa7b15359d37ad8ad325391b7320440d2ca"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_14/actions/dev.jsonl",
+        "sha256": "ac6f41410443d6113419f868c0ae69c472f57fd2a5abf2f32c9efe3655bef1cc"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_14/probes/dev.jsonl",
+        "sha256": "88589adcc282287cb03cfa232d7ce6401a9bdb3aebb3a6c7d40a46bf36d83c14"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_15/actions/dev.jsonl",
+        "sha256": "dc67a3579bd87984b2a5860e1aeea0516527f6c4a5399fbc7a26776f22fa567b"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/small/lane_15/probes/dev.jsonl",
+        "sha256": "6c56b8e1ce2543ec95b6f526f7057a56ffbabfce6930ad80e2141703a5360a39"
+      }
+    ],
+    "medium": [
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_00/actions/fit.jsonl",
+        "sha256": "3441a27c2ba62bd60ec03360213547628f397019c5f036daa109c9881de04439"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_00/probes/fit.jsonl",
+        "sha256": "1c81b620c7e35f0a458572c8deee83795c31e59613af5de902571f26c8c72110"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_01/actions/fit.jsonl",
+        "sha256": "c7adf7f267420b38ebf8de69b3a80535d04f112559d4744573dd032c124ab54c"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_01/probes/fit.jsonl",
+        "sha256": "e4adb7d9a1983b7f07175dbe89c87b64ffe73359648600800af29653aaf35f83"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_02/actions/fit.jsonl",
+        "sha256": "583e5f5e03e4ff243d9f64a79a0606c7f20b46ad795467f6898baf27ed1e5077"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_02/probes/fit.jsonl",
+        "sha256": "37728d31df5c8b930fb1b9bbd193f5995b9d04a190aa2c52e4979f7852b0274f"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_03/actions/fit.jsonl",
+        "sha256": "0d5fff0e07330c71dccb6247d82083095c7adfd574c145b74e0a4f58424b95a1"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_03/probes/fit.jsonl",
+        "sha256": "2cd3012d61dad1e58364ae6b0e143b6fd4ff4f58c3713b998f51597c2a51ea45"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_04/actions/cal.jsonl",
+        "sha256": "168b1ffcf807c2e6ea581b4a69eec71a7afc68854cbb9f1ac267ab146c59d7c7"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_04/actions/fit.jsonl",
+        "sha256": "f9c854fe5d501d4d02e38cf77cd7c0d064c37f591f581e5cd33524d3309ac34f"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_04/probes/cal.jsonl",
+        "sha256": "9b2082a56caa7d0437ecc956099d19e273222aa83768c696a117800dfe6eca12"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_04/probes/fit.jsonl",
+        "sha256": "69665201f6ca441efa4800516f22d534de8e63c8137642e8f5fc125529925b0c"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_05/actions/cal.jsonl",
+        "sha256": "a461d857eaea4cb310569e766189c35e05eeaf2cee956a867064e956cdfa2e8b"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_05/probes/cal.jsonl",
+        "sha256": "34679146cc27a66d6750aadb3937161d06c3dbae8b5852460a3ddb7e26b82666"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_06/actions/cal.jsonl",
+        "sha256": "b16fadacf0a1d65023fec741970c54829bebe6efc08cd44510b9749dfd024a46"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_06/probes/cal.jsonl",
+        "sha256": "ce9c889e359b8da92a4d72d4aaf6d4fdefe46f3741b417c29a4e2238e5bd3bf7"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_07/actions/cal.jsonl",
+        "sha256": "81f0d4adb1b1593995d08a15ac97fa206cd44edb280a80282b48cd4200cfbf72"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_07/probes/cal.jsonl",
+        "sha256": "d389899ec85afa6a7fd4baea677de1c7c9978884e0819c6384ab5c164806a12d"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_08/actions/cal.jsonl",
+        "sha256": "1d8c51e1394c523170ae4ac6ed995e1169e9958b3bfc9fd3f0e87e4919c41397"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_08/probes/cal.jsonl",
+        "sha256": "e727e79b874a5ddacfb83142120f6ae5254e35e1e66714a121515cc073aaa5c8"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_09/actions/cal.jsonl",
+        "sha256": "a489c35f2a60d7503f8dbcad7e6f25c4ea1e1262c0cf4b97b5a87fbc224fce75"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_09/probes/cal.jsonl",
+        "sha256": "5c92589e78f793a2cfd4cb687108f42d2d71982fafd3ed54c58e71acb9383fe8"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_10/actions/cal.jsonl",
+        "sha256": "5ff562f7fdb7f6854617b032c5b9426f6d2df60415623affa2f4ec08c5a30f1c"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_10/probes/cal.jsonl",
+        "sha256": "44262ca6ddff72f0f4d0e4bee9b79c8de3b27a03bfd1722c7004392f2d481fd9"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_11/actions/cal.jsonl",
+        "sha256": "3c066adbf1eb3a82de097864a4c8e4cc6930d73bf4d3e75c3142437d6a49a26f"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_11/probes/cal.jsonl",
+        "sha256": "9ad56469f9587e169b9c218a13c333f2f89ed95f2989a8667559369273b50d84"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_12/actions/cal.jsonl",
+        "sha256": "8ab5382fdb661bc3569aab17c6278b6963f129c614be4f56c9147c2be95183ce"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_12/actions/dev.jsonl",
+        "sha256": "2b427e514a5f0a025e8988ceac768006e9795a7a8a0500deb47cad1c2851ed5c"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_12/probes/cal.jsonl",
+        "sha256": "deadb95f6433262db399bff38784500fa2b2b4dbac320dfe11ff3e20cbf621de"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_12/probes/dev.jsonl",
+        "sha256": "958a519020df087fc14917da52f32a3d2ec3a12e1369b7f5857a51bce2eb61a5"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_13/actions/dev.jsonl",
+        "sha256": "6bb48d5894274e7b4d02633731c54f936eef41d6b2f26224368e93eb2770189f"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_13/probes/dev.jsonl",
+        "sha256": "f0187553ba0d1a4a6b1c087b5fab9311112162ad8cf0918df43961db786d26b3"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_14/actions/dev.jsonl",
+        "sha256": "a339177249dd64416d286dda6a73b68acc8a9c9dc5521638f11a2d34ece1b3c3"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_14/probes/dev.jsonl",
+        "sha256": "a46ed8fe9eca5b33f5de1409f3cb355c13de1046ca959e74227b7835404572e4"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_15/actions/dev.jsonl",
+        "sha256": "e843a30d1b4d6204bd27be0b76df082312a086646710d402bb2e286270a7bc8f"
+      },
+      {
+        "path": "$DATA_DIR/runs/iclr2027_p2/P2_R2_E8_20260920T012544Z/shards/medium/lane_15/probes/dev.jsonl",
+        "sha256": "e883c8ce3cddd8ff1c00f36a8bce9c192eb95abf2972d7af9f9afe027664cb4f"
+      }
+    ]
+  },
+  "scientific_analysis_complete": true
+}

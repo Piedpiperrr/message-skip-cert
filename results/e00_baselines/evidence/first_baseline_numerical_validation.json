@@ -1,0 +1,11 @@
+{
+  "pair": "large",
+  "dataset": "obqa",
+  "family": "word",
+  "formal_head_reused": true,
+  "probability_sigmoid_check": true,
+  "finite_outputs": true,
+  "unchanged_components": true,
+  "source": "$DATA_DIR/P2_V2_BASELINES_FFR_E0_20260913T000052Z/baseline/large/obqa/word_COMPLETE.json",
+  "CPU_in_main_ledger": true
+}

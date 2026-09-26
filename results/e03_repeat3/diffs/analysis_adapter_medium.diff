@@ -1,0 +1,39 @@
+--- a/analyze.py
++++ b/analyze_adapted.py
+@@ -14,7 +14,7 @@
+ for ds in ['obqa','arc']:
+     ids=read(P/f'inputs/{ds}_panel_ids.json');assert len(ids)==len(set(ids))==128
+     idx=np.random.default_rng(0).integers(0,128,size=(2000,128))
+-    np.savez_compressed(P/f'summary/{ds}_bootstrap_indices.npz',ids=np.array(ids),indices=idx,seed=0)
++    np.savez_compressed(R/f'summary/{ds}_bootstrap_indices.npz',ids=np.array(ids),indices=idx,seed=0)
+     pairs=[]
+     for ordinal,i in enumerate(ids):
+         c=rm[ds,i,'fixed_C'];p=rm[ds,i,'policy_C'];e=old[ds,i];g=gold[ds,i]['gold']
+@@ -78,7 +78,7 @@
+         vals=arr(metric);low,high=map(float,np.quantile(vals[idx].mean(axis=1),[.025,.975]))
+         boots.append(dict(task=ds,metric=metric,N=128,mean=float(vals.mean()),median=float(np.median(vals)),
+             CI95_low=low,CI95_high=high,seed=0,resamples=2000,unit='paired question',
+-            indices_sha256=sha(P/f'summary/{ds}_bootstrap_indices.npz'),interpretation='descriptive exposed panel; no population guarantee'))
++            indices_sha256=sha(R/f'summary/{ds}_bootstrap_indices.npz'),interpretation='descriptive exposed panel; no population guarantee'))
+     oldproxy=cfg['prior_proxy'][ds];delta=float(savings.mean()-oldproxy['proxy_ms'])
+     proxyrows.append(dict(task=ds,actual_E2E_panel_N=128,proxy_full_dev_N=oldproxy['full_dev_N'],
+         prior_proxy_ms=oldproxy['proxy_ms'],prior_displayed_proxy_ms=oldproxy['displayed_proxy_ms'],
+@@ -99,13 +99,13 @@
+             online_probe_invalid_count=sum(r['probe']['invalid_probe'] for r in selected if r['probe']))
+         for part in selected[0]['parts_ms']:diag[part+'_mean']=float(np.mean([r['parts_ms'][part] for r in selected]))
+         runtime.append(diag)
+-write_rows(P/'records/fixed_C2C_requests_with_correctness.jsonl',fixedrows)
+-write_rows(P/'records/policy_requests_with_correctness.jsonl',policyrows)
+-write_rows(P/'records/paired_per_question.jsonl',paired)
++write_rows(R/'records/fixed_C2C_requests_with_correctness.jsonl',fixedrows)
++write_rows(R/'records/policy_requests_with_correctness.jsonl',policyrows)
++write_rows(R/'records/paired_per_question.jsonl',paired)
+ for name,data in [('medium_e2e_summary',summary),('paired_latency_bootstrap',boots),('proxy_vs_e2e',proxyrows),
+         ('runtime_diagnostics',runtime),('output_identity_checks',ident),('probe_timing',probetiming),('paired_per_question',paired)]:
+-    csvout(P/f'summary/{name}.csv',data)
+-save(P/'ANALYSIS_COMPLETE.json',dict(status='PASS',utc=utc(),actual_requests=512,online_probes=256,pairs=256,
++    csvout(R/f'summary/{name}.csv',data)
++save(R/'ANALYSIS_COMPLETE.json',dict(status='PASS',utc=utc(),actual_requests=512,online_probes=256,pairs=256,
+     gold_associated_after_replay=True,CPU_process_seconds=time.process_time()-start,
+     classifications={r['task']:r['classification'] for r in summary}))
+ print(json.dumps(summary,ensure_ascii=False,indent=2))

@@ -1,0 +1,9 @@
+population,e5c_rho_saved,e9a_independent_ratio,abs_diff,label
+small/OBQA,0.686,0.686,0.000,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+small/ARC,0.738,0.738,0.000,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+medium/OBQA,0.803,0.805,0.002,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+medium/ARC,0.771,0.772,0.001,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+large/OBQA,0.704,0.701,0.003,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+large/ARC,0.564,0.562,0.002,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+large/MMLU-Pro,0.884,0.884,0.000,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision
+MEDIAN,0.738,0.738,0.000,POST-HOC re-analysis (reviewer R3/E9-a); does not change any primary decision

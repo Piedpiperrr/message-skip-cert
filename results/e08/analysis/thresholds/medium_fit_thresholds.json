@@ -1,0 +1,129 @@
+{
+  "utc": "2026-09-20T19:10:30.835858+00:00",
+  "pair": "medium",
+  "unit": "frozen group representative",
+  "N_fit": 3000,
+  "thresholds": [
+    {
+      "q": 0.05,
+      "threshold": 0.0,
+      "fit_routed": 359,
+      "fixed_R": false
+    },
+    {
+      "q": 0.1,
+      "threshold": 0.0,
+      "fit_routed": 359,
+      "fixed_R": false
+    },
+    {
+      "q": 0.15,
+      "threshold": 3.5762786865234375e-07,
+      "fit_routed": 459,
+      "fixed_R": false
+    },
+    {
+      "q": 0.2,
+      "threshold": 3.6954879760742188e-06,
+      "fit_routed": 601,
+      "fixed_R": false
+    },
+    {
+      "q": 0.25,
+      "threshold": 2.962350845336914e-05,
+      "fit_routed": 751,
+      "fixed_R": false
+    },
+    {
+      "q": 0.3,
+      "threshold": 0.00015848875045776367,
+      "fit_routed": 902,
+      "fixed_R": false
+    },
+    {
+      "q": 0.35,
+      "threshold": 0.0006114840507507324,
+      "fit_routed": 1050,
+      "fixed_R": false
+    },
+    {
+      "q": 0.4,
+      "threshold": 0.0024725794792175293,
+      "fit_routed": 1200,
+      "fixed_R": false
+    },
+    {
+      "q": 0.45,
+      "threshold": 0.0064078569412231445,
+      "fit_routed": 1350,
+      "fixed_R": false
+    },
+    {
+      "q": 0.5,
+      "threshold": 0.013566672801971436,
+      "fit_routed": 1500,
+      "fixed_R": false
+    },
+    {
+      "q": 0.55,
+      "threshold": 0.02499610185623169,
+      "fit_routed": 1650,
+      "fixed_R": false
+    },
+    {
+      "q": 0.6,
+      "threshold": 0.04742586612701416,
+      "fit_routed": 1800,
+      "fixed_R": false
+    },
+    {
+      "q": 0.65,
+      "threshold": 0.07798856496810913,
+      "fit_routed": 1950,
+      "fixed_R": false
+    },
+    {
+      "q": 0.7,
+      "threshold": 0.12178897857666016,
+      "fit_routed": 2100,
+      "fixed_R": false
+    },
+    {
+      "q": 0.75,
+      "threshold": 0.17995208501815796,
+      "fit_routed": 2250,
+      "fixed_R": false
+    },
+    {
+      "q": 0.8,
+      "threshold": 0.24514222145080566,
+      "fit_routed": 2400,
+      "fixed_R": false
+    },
+    {
+      "q": 0.85,
+      "threshold": 0.32272833585739136,
+      "fit_routed": 2550,
+      "fixed_R": false
+    },
+    {
+      "q": 0.9,
+      "threshold": 0.3980329632759094,
+      "fit_routed": 2700,
+      "fixed_R": false
+    },
+    {
+      "q": 0.95,
+      "threshold": 0.49085742235183716,
+      "fit_routed": 2850,
+      "fixed_R": false
+    },
+    {
+      "q": 1.0,
+      "threshold": "Infinity",
+      "fit_routed": 3000,
+      "fixed_R": true
+    }
+  ],
+  "gold_used": false
+}

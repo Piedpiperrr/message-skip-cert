@@ -1,0 +1,60 @@
+{
+  "stage": "P2_V2_BASELINES_FFR_E0_20260913T000052Z",
+  "authorized_utc_recorded": "2026-09-13T04:08:15.679924+00:00",
+  "authority": "2026-09-13 user continuation prompt: explicit ClusterB PBS resource authorization",
+  "original_freeze": {
+    "path": "PROTOCOL_FREEZE.json",
+    "sha256": "39538775de956f9f5f816d44f8ffd8e536a871cfd53830c17f798e5a43c65110"
+  },
+  "original_receipt": {
+    "path": "history/resource_resume_20260913/FINAL_RECEIPT.json",
+    "sha256": "193611a09afa63b81aee90ea18009a8baed5a36e0da294098acca7e9811389d7"
+  },
+  "config_sha256": "41239823e728796dd108aae24cc48401ec8093c38aca16f7a30a1352145ef797",
+  "folds_sha256": "ae29f34afa4898f0c4af17be0cc96b23f331015b0283e3cb7777fac328b6535a",
+  "supersedes_only": [
+    "budget.PBS=0",
+    "execution_gate requiring login-node exception; PBS execution now authorized"
+  ],
+  "scientific_protocol_unchanged": true,
+  "scheduler": {
+    "account": "project",
+    "queue": "REDACTED",
+    "select": 1,
+    "max_jobs": 2,
+    "max_in_flight": 1,
+    "walltime_first_seconds": 5400,
+    "walltime_second_seconds": 1800,
+    "total_requested_walltime_seconds_max": 7200,
+    "second_job_condition": "first confirmed terminated; targeted failure recovery or unfinished closeout only",
+    "submission": "submit-job; inspect scheduler on ambiguous response; never duplicate queued job"
+  },
+  "compute": {
+    "CPU_only": true,
+    "threads": 1,
+    "nice": 10,
+    "CPU_seconds_total": 3600,
+    "peak_RSS_GiB_max": 4,
+    "LR_attempts_max": 320,
+    "prior_charged_CPU_seconds": 31.608204,
+    "latest_ledger_authoritative": true,
+    "GPU_compute": 0,
+    "LLM_forward": 0,
+    "tokenizer_loads": 0,
+    "new_semantic_features": 0,
+    "ARC_test_reads": 0
+  },
+  "accounting": {
+    "GPU_quota_occupancy_separate_from_compute": true,
+    "queue_wait_and_actual_allocation_and_scheduler_resources_required": true,
+    "shared_GPU_quota_not_whole_node": true
+  },
+  "paths": {
+    "artifacts": "$DATA_DIR/P2_V2_BASELINES_FFR_E0_20260913T000052Z",
+    "run_root": "$DATA_DIR/runs/iclr2027_p2",
+    "temporary_root": "$DATA_DIR/tmp",
+    "pbs_logs": "$DATA_DIR/logs/pbs"
+  },
+  "node_clearance": "only inside actual PBS allocation after owner, host, exec_host/nodefile, process session/cgroup, and path checks",
+  "no_automatic_followon_science": true
+}

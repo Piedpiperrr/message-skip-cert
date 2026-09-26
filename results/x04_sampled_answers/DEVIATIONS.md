@@ -1,0 +1,33 @@
+# P2_R6_X4 — implementation notes and events (sampled receiver answers; large pair; OBQA + ARC; Text reference)
+
+- **E1: PREREG_X4.md** was copied verbatim and hashed at 2026-09-21T07:24:48Z (SHA-256 9f3a4ce09cedd0eecc2cf5593e366ef5bd2fc6498f644efb9581dedb84ce3636), before any X4 code or model output existed. File set read-only.
+- **E2: driver.** The X3 driver `P2_R6_X3.../src/run_x3.py` is a top-level script and cannot be imported without executing it. X4 therefore uses a byte copy, `src/run_x4.py`, plus a recorded diff (`diffs/run_x4_vs_run_x3.diff`); X3 files are unchanged.
+  - The only functional change is a wrapper on `model.generate`, which both paths call (R: `protocol_min.generate_receiver`; Text: `T2TReceiverBundle.consume`).
+  - Immediately before each generation it runs `torch.manual_seed(seed)` and `torch.cuda.manual_seed_all(seed)`, with seed = int(sha256(("X4|"+id+"|"+path).encode("utf-8")).hexdigest()[:8], 16) and path ∈ {R, Text}.
+  - With `--sampling on` it passes do_sample=True, temperature=0.7, top_p=0.8, top_k=20, min_p=0.0, repetition_penalty=1.0 explicitly. These override the paper code's `do_sample=False` and any generation_config value.
+  - transformers 4.52.4: min_p=0.0 builds a MinP warper that removes nothing; repetition_penalty=1.0 adds no processor.
+  - One generate call per path is asserted; seeds are recorded per path.
+  - Everything else is the X3 driver, which passed the 16-row Qwen3-8B check (X3 D11): prompts, template, BOS handling, parser V2. For the Qwen3 tokenizer the BOS change is the identity.
+  - The probe still runs per row as in X3, as a consistency record only. The analysis uses the stored ProbeMax scores, as preregistered.
+- **E3: populations.** Byte copies of the X3 (= X2) files; SHA-256 equals the X2 freeze on 6/6. IDs and representatives equal the paper split files. 5,626/5,626 helper messages equal their saved large-pair Text records (`notes/HELPER_AND_SPLIT_CHECK.json`). Smoke rows = the first 16 OBQA fit rows (identical to the X3 check rows).
+- **E4: smoke job layout.**
+  - GPU0: (a) the X4 path with `--sampling off` in validate mode vs the stored greedy outputs.
+  - GPU1: (b) the sampled run twice, sequentially, in two processes on the same GPU with the same seeds.
+  - Then `src/smoke_check_x4.py` evaluates (a), (b), (c) and the stop rules.
+- **E5: analysis code check before any production output.**
+  - `src/analyze_x4.py` was run on synthetic outputs equal to the stored greedy labels → `results/analysis_code_check_greedy/`.
+  - It reproduces the paper's greedy q (.80 / .95), the dev u == 0 counts (354/742, 217/299) and the E14-2 split exactly. Added disagreement = 0.
+- **E6: smoke job 7642097 (debug, 1 node, compute-node), 07:26:52–07:29:57Z → PASS** (`results/smoke/SMOKE_CHECK_X4.json`).
+  - (a) Sampling off vs stored greedy: 16/16 bit for bit on probe ids, ProbeMax, p_labels, R/Text raw and R/Text parsed (`results/validation/VALIDATION.json`).
+  - (b) Sampled run 1 = run 2 (same seeds): 16/16 on R and Text text, token ids and seeds.
+  - (c) Sampled vs stored greedy: R label 0/16, R text 0/16; Text label 0/16, Text text 2/16.
+  - Sampled INVALID: R 0/16, Text 0/16. 0 runtime errors, 0 NaN. Gold was not read.
+- **E7: production plan, recorded before submission.**
+  - Job `P2R6_X4_RUN`: debug, 2 nodes, walltime 00:30:00, 8 single-GPU chains, driver deadline = walltime − 4 min.
+  - Both paths sampled (`run_x4.py --mode run --sampling on`); all 5,626 rows (`records/work/run/PLAN.json`).
+  - Sizing: smoke warm latency 0.425 s/row × 1.3 = 0.55 s/row.
+- **E8: production job 7642101 (debug, 2 nodes), 07:31:00–07:39:53Z.**
+  - Walltime used 00:08:48; Exit_status 0; MPIEXEC_EXIT=0.
+  - All 8 chains exited 0 with 5,626/5,626 rows. No DEADLINE_STOP and no RUNTIME_ERROR line.
+  - `results/runs/MANIFEST.sha256` verified 16/16 OK at 07:40Z, before analysis and gold.
+- **E9: Step 4 done** (`results/analysis/X4_SUMMARY.md`). Certification hashed 07:40:10.64Z before gold. Both sampled settings deploy (OBQA q .80, nominal; ARC q .95).

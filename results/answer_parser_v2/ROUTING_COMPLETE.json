@@ -1,0 +1,18 @@
+{
+  "status": "ROUTING_COMPLETE",
+  "utc": "2026-09-12T19:26:35.880244+00:00",
+  "policy_rows": 528,
+  "saved_mixture_rows": 1273,
+  "primary_paired_comparisons": 48,
+  "primary_per_question_rows": 38364,
+  "missing_items": [],
+  "all_old_dev_correctness_matched": true,
+  "all_original_panel_latency_matched": true,
+  "choices_changed": false,
+  "parameters_changed": false,
+  "mixture_probabilities_changed": false,
+  "router_refits": 0,
+  "new_feature_extractions": 0,
+  "script_sha256": "e566db60abeac3fffe8f021647188728f188009dc65c2c96b9379dc0712076d3",
+  "bootstrap_note": "20000 paired question resamples, seed0, 95% percentile, identical population and original timing, mixture expectations"
+}

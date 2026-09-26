@@ -1,0 +1,589 @@
+{
+ "start_utc": "2026-09-22T06:59:13.374097+00:00",
+ "end_utc": "2026-09-22T07:01:55.086548+00:00",
+ "files_scanned": 13466,
+ "keyword_regex": "corrections_lost|lost_correct|lost correction|lost-correction|corrections lost|reference_corrects|reference_breaks|corrective|harmful|corrections_kept|lost_gain|gain_lost|corrections_total|lost corrections",
+ "hits": [
+  {
+   "file": "P2_1_20260910T041720Z/evidence/workshop.txt",
+   "n_hit_lines": 1,
+   "header": "    Choosing How LLM Agents Communicate:",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "penalize harmful no-solution predictions. These are possible            the five frozen primary query-only policies improves routed"
+   ]
+  },
+  {
+   "file": "P2_1_20260910T041720Z/evidence/cipher_commit.json",
+   "n_hit_lines": 1,
+   "header": "{",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "      \"patch\": \"@@ -0,0 +1,201 @@\\n+\\\"If you were hired by a large company to develop a new training program, your first step would probably be to conduct a:\\\",needs analysis.,job evaluation.,summative evaluation.,formative evaluation.,A\\n+\\\"In regard to memory, aging is most closely associated with a decline in\\\",the efficiency of controlled memory processes,\\\"metamemory skills, or knowledge abou"
+   ]
+  },
+  {
+   "file": "P2_1_20260910T041720Z/evidence/interlat_acl.txt",
+   "n_hit_lines": 1,
+   "header": "                  Enabling Agents to Communicate Entirely in Latent Space",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "tings with larger teams, dynamic role assignments,        any harmful instructions, and no harmful actions"
+   ]
+  },
+  {
+   "file": "P2_6_20260910T164138Z/results/dev_matrix.csv",
+   "n_hit_lines": 1,
+   "header": "id,action,correct,valid,latency_ms,raw_answer,answer,job_id",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "12-1078,c2c,1,True,462.330493,C. harmful contaminants flowing within it,C,run004"
+   ]
+  },
+  {
+   "file": "P2_AGENT_ROUTER_FEASIBILITY_20260914T183124Z/paper/frozen_main/methods.tex",
+   "n_hit_lines": 1,
+   "header": "\\section{Reference-preserving routing}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "conditional/marginal change, beneficial/harmful/neutral changes, correct"
+   ]
+  },
+  {
+   "file": "P2_AGENT_ROUTER_FEASIBILITY_20260914T183124Z/paper/frozen_main/results.tex",
+   "n_hit_lines": 2,
+   "header": "\\section{Frozen results and ordinary zero-gold controls}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "ProbeMax makes 6 beneficial and 13 harmful Text-to-R changes, with no neutral",
+    "is $-.9434$ percentage points. D makes 2 beneficial and 4 harmful changes,"
+   ]
+  },
+  {
+   "file": "P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/methods.tex",
+   "n_hit_lines": 1,
+   "header": "\\section{Reference-preserving routing}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "conditional/marginal change, beneficial/harmful/neutral changes, correct"
+   ]
+  },
+  {
+   "file": "P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/results.tex",
+   "n_hit_lines": 2,
+   "header": "\\section{Frozen results and ordinary zero-gold controls}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "ProbeMax makes 6 beneficial and 13 harmful Text-to-R changes, with no neutral",
+    "is $-.9434$ percentage points. D makes 2 beneficial and 4 harmful changes,"
+   ]
+  },
+  {
+   "file": "P2_E1_DIRECTION_20260913T053456Z/frozen_config.json",
+   "n_hit_lines": 1,
+   "header": "{",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "      \"conditional recovered beneficial/added harmful action selections, especially large C\","
+   ]
+  },
+  {
+   "file": "P2_E1_DIRECTION_20260913T053456Z/paper/05_results_and_limitations.tex",
+   "n_hit_lines": 2,
+   "header": "\\paragraph{Receiver states predict some flips substantially better than E0.}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "C had 74 beneficial and 144 harmful cases on large-pair OpenBookQA,",
+    "and 16 beneficial and 24 harmful cases on large-pair ARC. The fixed"
+   ]
+  },
+  {
+   "file": "P2_E1_E2E_OBQA_20260913T174210Z/records/dev/0499_T.json",
+   "n_hit_lines": 1,
+   "header": "{",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "  \"helper_message\": \"The most essential background knowledge needed to answer the question is an understanding of the temperature ranges that are lethal, comfortable, and potentially harmful to a cat's body temperature.\","
+   ]
+  },
+  {
+   "file": "P2_E1_E2E_OBQA_20260913T174210Z/records/dev/0499_IndepLR_E1.json",
+   "n_hit_lines": 1,
+   "header": "{",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "  \"helper_message\": \"The most essential background knowledge needed to answer the question is an understanding of the temperature ranges that are lethal, comfortable, and potentially harmful to a cat's body temperature.\","
+   ]
+  },
+  {
+   "file": "P2_E1_E2E_OBQA_20260913T174210Z/records/dev/0503_FFR_E1.json",
+   "n_hit_lines": 1,
+   "header": "{",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "  \"helper_message\": \"The most essential background knowledge needed to answer the question is an understanding of how pesticides can be harmful when consumed and the benefits of washing produce to remove residues.\","
+   ]
+  },
+  {
+   "file": "P2_E1_E2E_OBQA_20260913T174210Z/records/dev/0499_FFR_E1.json",
+   "n_hit_lines": 1,
+   "header": "{",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "  \"helper_message\": \"The most essential background knowledge needed to answer the question is an understanding of the temperature ranges that are lethal, comfortable, and potentially harmful to a cat's body temperature.\","
+   ]
+  },
+  {
+   "file": "P2_E1_E2E_OBQA_20260913T174210Z/records/dev/0222_C.json",
+   "n_hit_lines": 1,
+   "header": "{",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "  \"raw_answer\": \"C. harmful contaminants flowing within it\","
+   ]
+  },
+  {
+   "file": "P2_E1_E2E_OBQA_20260913T174210Z/records/dev/0499_FFR_E1_D.json",
+   "n_hit_lines": 1,
+   "header": "{",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "  \"helper_message\": \"The most essential background knowledge needed to answer the question is an understanding of the temperature ranges that are lethal, comfortable, and potentially harmful to a cat's body temperature.\","
+   ]
+  },
+  {
+   "file": "P2_E1_E2E_OBQA_20260913T174210Z/records/dev/0503_T.json",
+   "n_hit_lines": 1,
+   "header": "{",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "  \"helper_message\": \"The most essential background knowledge needed to answer the question is an understanding of how pesticides can be harmful when consumed and the benefits of washing produce to remove residues.\","
+   ]
+  },
+  {
+   "file": "P2_E1_E2E_OBQA_20260913T174210Z/records/train_fixed/0154_T.json",
+   "n_hit_lines": 1,
+   "header": "{",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "  \"helper_message\": \"The most essential background knowledge needed to answer the question is an understanding of what constitutes pollution, specifically environmental pollution caused by waste or harmful substances.\","
+   ]
+  },
+  {
+   "file": "P2_E1_E2E_OBQA_20260913T174210Z/paper/05_inherited_E1_results.tex",
+   "n_hit_lines": 2,
+   "header": "\\paragraph{Receiver states predict some flips substantially better than E0.}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "C had 74 beneficial and 144 harmful cases on large-pair OpenBookQA,",
+    "and 16 beneficial and 24 harmful cases on large-pair ARC. The fixed"
+   ]
+  },
+  {
+   "file": "P2_FINAL_MANUSCRIPT_WORK_REVIEW_BUNDLE_20260915T000145Z/fact_check/D5_D_description/P2_E1_DIRECTION/frozen_config.json",
+   "n_hit_lines": 1,
+   "header": "{",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "      \"conditional recovered beneficial/added harmful action selections, especially large C\","
+   ]
+  },
+  {
+   "file": "P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/evidence/manuscript_snapshot/methods.tex",
+   "n_hit_lines": 1,
+   "header": "\\section{Reference-preserving routing}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "conditional/marginal change, beneficial/harmful/neutral changes, correct"
+   ]
+  },
+  {
+   "file": "P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/evidence/manuscript_snapshot/results.tex",
+   "n_hit_lines": 2,
+   "header": "\\section{Frozen results and ordinary zero-gold controls}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "ProbeMax makes 6 beneficial and 13 harmful Text-to-R changes, with no neutral",
+    "is $-.9434$ percentage points. D makes 2 beneficial and 4 harmful changes,"
+   ]
+  },
+  {
+   "file": "P2_FOCUSED_REVISION_ROUND1B_AUDIT_FIX_AND_MANUSCRIPT_20260918T072631Z/audit_v2/outputs/T3_omit_keep_help_harm.csv",
+   "n_hit_lines": 1,
+   "header": "pair,task,reference,other_action,q,N,n_omit,n_keep,omit_changed,omit_Rwrong_refright,omit_Rright_refwrong,omit_Rwrong_refwrong_otherright,omit_bothwrong_changed,keep_changed,keep_Rwrong_refright,keep_Rright_refwrong,keep_Rwrong_refwrong_otherright,keep_bothwrong_changed,policy_correct,reference_correct,diff,identity_rhs,identity_holds,ref_corrections_total,oracle3_correct,unused_3action_opportunit",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "pair,task,reference,other_action,q,N,n_omit,n_keep,omit_changed,omit_Rwrong_refright,omit_Rright_refwrong,omit_Rwrong_refwrong_otherright,omit_bothwrong_changed,keep_changed,keep_Rwrong_refright,keep_Rright_refwrong,keep_Rwrong_refwrong_otherright,keep_bothwrong_changed,policy_correct,reference_correct,diff,identity_rhs,identity_holds,ref_corrections_total,oracle3_correct,unused_3action_opportunit"
+   ]
+  },
+  {
+   "file": "P2_FOCUSED_REVISION_ROUND1_CPU_EVIDENCE_AUDIT_20260918T065337Z/outputs/T3_omit_keep_help_harm.csv",
+   "n_hit_lines": 1,
+   "header": "pair,task,reference,other_action,q,N,n_omit,n_keep,omit_changed,omit_Rwrong_refright,omit_Rright_refwrong,omit_Rwrong_refwrong_otherright,omit_bothwrong_changed,keep_changed,keep_Rwrong_refright,keep_Rright_refwrong,keep_Rwrong_refwrong_otherright,keep_bothwrong_changed,policy_correct,reference_correct,diff,identity_rhs,identity_holds,ref_corrections_total,oracle3_correct,unused_3action_opportunit",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "pair,task,reference,other_action,q,N,n_omit,n_keep,omit_changed,omit_Rwrong_refright,omit_Rright_refwrong,omit_Rwrong_refwrong_otherright,omit_bothwrong_changed,keep_changed,keep_Rwrong_refright,keep_Rright_refwrong,keep_Rwrong_refwrong_otherright,keep_bothwrong_changed,policy_correct,reference_correct,diff,identity_rhs,identity_holds,ref_corrections_total,oracle3_correct,unused_3action_opportunit"
+   ]
+  },
+  {
+   "file": "P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/paper/methods.tex",
+   "n_hit_lines": 1,
+   "header": "\\section{Reference-preserving routing}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "conditional/marginal change, beneficial/harmful/neutral changes, correct"
+   ]
+  },
+  {
+   "file": "P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/paper/results.tex",
+   "n_hit_lines": 2,
+   "header": "\\section{Frozen results and ordinary zero-gold controls}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "ProbeMax makes 6 beneficial and 13 harmful Text-to-R changes, with no neutral",
+    "is $-.9434$ percentage points. D makes 2 beneficial and 4 harmful changes,"
+   ]
+  },
+  {
+   "file": "P2_R1_EXP_20260919T050555Z/results/e1_per_question.csv",
+   "n_hit_lines": 2,
+   "header": "pair,action,official_index,id,gold,official_raw,official_parsed_v2,official_pred_official_evaluator,ours_raw,ours_parsed_v2,ours_runtime_error",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "small,R,494,8-183,A,The correct answer is A. UV rays are harmful.,A,A,The correct answer is A. UV rays are harmful.,A,False",
+    "medium,C,494,8-183,A,A. UV rays are harmful,A,A,A. UV rays are harmful,A,False"
+   ]
+  },
+  {
+   "file": "P2_R1_EXP_20260919T050555Z/results/e1/official/medium_R__clean/receiver_openbookqa_generate_20260919_081126_cot.csv",
+   "n_hit_lines": 1,
+   "header": "subject,question_id,question,A,B,C,D,E,F,G,H,I,J,true_answer,pred,is_correct,answer_method,cot_pred,cot_input_length,cot_gen_length,cot_output,answer_latency_ms,extraction_method_used,ground_truth_normalized,extracted_normalized",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "SPLIT_0_OF_1,494,\"A woman, with a pale complexion, wants to spend the bright, sunny day at the beach. She makes sure that she stops at the store to pick up some sunblock before she begins to enjoy her day filled with sand and surf. She applies the sunblock carefully and thoroughly, because she knows that\",UV rays are harmful,sunlight will be fun,the sun is close,the sun is in space,,,,,,,A,A,True,"
+   ]
+  },
+  {
+   "file": "P2_R1_EXP_20260919T050555Z/results/e1/official/large_C__clean/Rosetta_openbookqa_generate_20260919_081048_cot.csv",
+   "n_hit_lines": 1,
+   "header": "subject,question_id,question,A,B,C,D,E,F,G,H,I,J,true_answer,pred,is_correct,answer_method,cot_pred,cot_input_length,cot_gen_length,cot_output,answer_latency_ms,extraction_method_used,ground_truth_normalized,extracted_normalized",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "SPLIT_0_OF_1,494,\"A woman, with a pale complexion, wants to spend the bright, sunny day at the beach. She makes sure that she stops at the store to pick up some sunblock before she begins to enjoy her day filled with sand and surf. She applies the sunblock carefully and thoroughly, because she knows that\",UV rays are harmful,sunlight will be fun,the sun is close,the sun is in space,,,,,,,A,A,True,"
+   ]
+  },
+  {
+   "file": "P2_R1_EXP_20260919T050555Z/results/e1/official/small_R__clean/Qwen--Qwen3-0.6B_openbookqa_generate_20260919_081326_cot.csv",
+   "n_hit_lines": 1,
+   "header": "subject,question_id,question,A,B,C,D,E,F,G,H,I,J,true_answer,pred,is_correct,answer_method,cot_pred,cot_input_length,cot_gen_length,cot_output,answer_latency_ms,extraction_method_used,ground_truth_normalized,extracted_normalized",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "SPLIT_0_OF_1,494,\"A woman, with a pale complexion, wants to spend the bright, sunny day at the beach. She makes sure that she stops at the store to pick up some sunblock before she begins to enjoy her day filled with sand and surf. She applies the sunblock carefully and thoroughly, because she knows that\",UV rays are harmful,sunlight will be fun,the sun is close,the sun is in space,,,,,,,A,A,True,"
+   ]
+  },
+  {
+   "file": "P2_R1_EXP_20260919T050555Z/results/e1/official/large_R__clean/b968826d9c46dd6066d109eabc6255188de91218_openbookqa_generate_20260919_080923_cot.csv",
+   "n_hit_lines": 1,
+   "header": "subject,question_id,question,A,B,C,D,E,F,G,H,I,J,true_answer,pred,is_correct,answer_method,cot_pred,cot_input_length,cot_gen_length,cot_output,answer_latency_ms,extraction_method_used,ground_truth_normalized,extracted_normalized",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "SPLIT_0_OF_1,494,\"A woman, with a pale complexion, wants to spend the bright, sunny day at the beach. She makes sure that she stops at the store to pick up some sunblock before she begins to enjoy her day filled with sand and surf. She applies the sunblock carefully and thoroughly, because she knows that\",UV rays are harmful,sunlight will be fun,the sun is close,the sun is in space,,,,,,,A,A,True,"
+   ]
+  },
+  {
+   "file": "P2_R1_EXP_20260919T050555Z/results/e1/official/medium_C__clean/Rosetta_openbookqa_generate_20260919_081515_cot.csv",
+   "n_hit_lines": 1,
+   "header": "subject,question_id,question,A,B,C,D,E,F,G,H,I,J,true_answer,pred,is_correct,answer_method,cot_pred,cot_input_length,cot_gen_length,cot_output,answer_latency_ms,extraction_method_used,ground_truth_normalized,extracted_normalized",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "SPLIT_0_OF_1,494,\"A woman, with a pale complexion, wants to spend the bright, sunny day at the beach. She makes sure that she stops at the store to pick up some sunblock before she begins to enjoy her day filled with sand and surf. She applies the sunblock carefully and thoroughly, because she knows that\",UV rays are harmful,sunlight will be fun,the sun is close,the sun is in space,,,,,,,A,A,True,"
+   ]
+  },
+  {
+   "file": "P2_R2_ANALYSIS_20260920T002850Z/results/E6_dev_reference_corrections.csv",
+   "n_hit_lines": 1,
+   "header": "setting,N,q,other_communication_action,omitted,omitted_over_N,kept_questions,policy_correct,fixed_TextFact_correct,R_correct,Text_correct,C2C_correct,delta_accuracy_pp,delta_CI_low_pp,delta_CI_high_pp,bootstrap,ref_corrections_total,lost,kept,gained,net,other,unused_on_omit,unused_on_keep,oracle3_correct,unused_3action_opportunity,changed_on_omitted,definitions,label",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "setting,N,q,other_communication_action,omitted,omitted_over_N,kept_questions,policy_correct,fixed_TextFact_correct,R_correct,Text_correct,C2C_correct,delta_accuracy_pp,delta_CI_low_pp,delta_CI_high_pp,bootstrap,ref_corrections_total,lost,kept,gained,net,other,unused_on_omit,unused_on_keep,oracle3_correct,unused_3action_opportunity,changed_on_omitted,definitions,label"
+   ]
+  },
+  {
+   "file": "P2_R2_CPU_20260919T220412Z/SUMMARY.md",
+   "n_hit_lines": 2,
+   "header": "# P2_R2_CPU_20260919T220412Z \u2014 E5 re-analysis (CPU, saved records only)",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "Change decomposition vs R (`results/e5c_change_decomposition.csv`): changed = corrective + harmful + neutral(both wrong).",
+    "| population | N | action | correct | changed | corrective | harmful | neutral (both wrong) |"
+   ]
+  },
+  {
+   "file": "P2_R2_CPU_20260919T220412Z/PREREG_R2_E5.md",
+   "n_hit_lines": 1,
+   "header": "E5-a (parser exposure). X = the calibration questions whose raw outputs were reviewed with gold labels during parser rule development",
+   "header_mentions_cal": true,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "corrective (R wrong -> action correct), harmful (R correct -> action wrong), neutral. Rate-matched null as specified in task E5-c,"
+   ]
+  },
+  {
+   "file": "P2_R2_CPU_20260919T220412Z/results/e5c_change_decomposition.csv",
+   "n_hit_lines": 1,
+   "header": "population,N,action,correct,changed,corrective,harmful,neutral_both_wrong,label",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "population,N,action,correct,changed,corrective,harmful,neutral_both_wrong,label"
+   ]
+  },
+  {
+   "file": "P2_R2_GPU_20260919T220941Z/e6/E6_RESULTS.md",
+   "n_hit_lines": 4,
+   "header": "# E6 \"Text+fact\" \u2014 every pre-registered quantity of `PROTOCOL_FREEZE_E6.md` section 5",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "| 7. corrective vs R, whole split | 122 | 62 |",
+    "| 7. harmful vs R, whole split | 20 | 9 |",
+    "| 7. corrective / harmful / neutral on omitted questions only | 18 / 2 / 2 | 11 / 1 / 1 |",
+    "action (+3.4 pp on development), and its corrective changes outnumber the harmful ones roughly 6:1 on"
+   ]
+  },
+  {
+   "file": "P2_R2_GPU_20260919T220941Z/e6/PROTOCOL_FREEZE_E6.md",
+   "n_hit_lines": 1,
+   "header": "# PROTOCOL FREEZE \u2014 E6 \"Text+fact\" (large pair, OpenBookQA)",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "7. corrective and harmful change counts of Text+fact relative to R (omitted questions only, and over"
+   ]
+  },
+  {
+   "file": "P2_R2_GPU_20260919T220941Z/e6/analysis/E6_RESULTS.json",
+   "n_hit_lines": 8,
+   "header": "{",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "      \"corrective\": 122,",
+    "      \"harmful\": 20,",
+    "      \"corrective_on_omitted\": 18,",
+    "      \"harmful_on_omitted\": 2,"
+   ]
+  },
+  {
+   "file": "P2_R2_GPU_20260919T220941Z/e6/analysis/E6_SUMMARY.csv",
+   "n_hit_lines": 1,
+   "header": "split,N,disagree_R_vs_TF,disagree_rate,AUROC,acc_R,acc_Text,acc_TF,inv_R,inv_Text,inv_TF,corrective,harmful,omitted,changed_on_omitted",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "split,N,disagree_R_vs_TF,disagree_rate,AUROC,acc_R,acc_Text,acc_TF,inv_R,inv_Text,inv_TF,corrective,harmful,omitted,changed_on_omitted"
+   ]
+  },
+  {
+   "file": "P2_R3_E9BC_20260920T061042Z/inputs/obqa_fact1.json",
+   "n_hit_lines": 8,
+   "header": "{",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "  \"274\": \"treating water is used to remove harmful substances before drinking\",",
+    "  \"10-650\": \"treating water is used to remove harmful substances before drinking\",",
+    "  \"11-210\": \"skin is used for protecting the body from harmful substances\",",
+    "  \"12-239\": \"skin is used for protecting the body from harmful substances\","
+   ]
+  },
+  {
+   "file": "P2_R5_E13_20260921T031606Z/results/item3_alpha_sweep.csv",
+   "n_hit_lines": 1,
+   "header": "setting,alpha,deployed_q,threshold,cal_n,cal_k,cal_p,cal_row_note,dev_N,dev_correct_R,dev_correct_b,dev_correct_policy,dev_acc_policy_pct,dev_acc_R_pct,dev_acc_b_pct,dev_omitted,dev_changed,dev_kappa,dev_G_pts,dev_G_lo,dev_G_hi,dev_P_pts,dev_P_lo,dev_P_hi,dev_retention,dev_ret_lo,dev_ret_hi,dev_share_boot_G_le_0,dev_n_boot_G_eq_0_undefined,dev_corrections_total,dev_corrections_lost_omitted,dev_cor",
+   "header_mentions_cal": true,
+   "hit_lines_mentioning_cal": [
+    "setting,alpha,deployed_q,threshold,cal_n,cal_k,cal_p,cal_row_note,dev_N,dev_correct_R,dev_correct_b,dev_correct_policy,dev_acc_policy_pct,dev_acc_R_pct,dev_acc_b_pct,dev_omitted,dev_changed,dev_kappa,dev_G_pts,dev_G_lo,dev_G_hi,dev_P_pts,dev_P_lo,dev_P_hi,dev_retention,dev_ret_lo,dev_ret_hi,dev_share_boot_G_le_0,dev_n_boot_G_eq_0_undefined,dev_corrections_total,dev_corrections_lost_omitted,dev_cor"
+   ],
+   "first_hits": [
+    "setting,alpha,deployed_q,threshold,cal_n,cal_k,cal_p,cal_row_note,dev_N,dev_correct_R,dev_correct_b,dev_correct_policy,dev_acc_policy_pct,dev_acc_R_pct,dev_acc_b_pct,dev_omitted,dev_changed,dev_kappa,dev_G_pts,dev_G_lo,dev_G_hi,dev_P_pts,dev_P_lo,dev_P_hi,dev_retention,dev_ret_lo,dev_ret_hi,dev_share_boot_G_le_0,dev_n_boot_G_eq_0_undefined,dev_corrections_total,dev_corrections_lost_omitted,dev_cor"
+   ]
+  },
+  {
+   "file": "P2_R8_E20F_20260922T003652Z/RESULTS_E20F.md",
+   "n_hit_lines": 2,
+   "header": "# RESULTS_E20F \u2014 E20-full (SQuAD v1.1, helper Qwen2.5-7B-Instruct Text, receiver Llama-3.1-8B-Instruct, score s2)",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "- dev: R 659/1000 [0.6290, 0.6890]; Text 669/1000 [0.6390, 0.6990]; policy 673/1000 [0.6440, 0.7030]; G 0.0100 [-0.0090, 0.0290]; changes {'n': 154, 'reference_corrects': 49, 'reference_breaks': 39, 'both_wrong': 66, 'both_right': 0}; omitted changes {'n': 16, 'reference_corrects': 4, 'reference_breaks': 8, 'both_wrong': 4, 'both_right': 0}",
+    "- test: R 664/1000 [0.6350, 0.6940]; Text 682/1000 [0.6540, 0.7120]; policy 686/1000 [0.6580, 0.7150]; G 0.0180 [-0.0000, 0.0380]; changes {'n': 155, 'reference_corrects': 54, 'reference_breaks': 36, 'both_wrong': 65, 'both_right': 0}; omitted changes {'n': 9, 'reference_corrects': 2, 'reference_breaks': 6, 'both_wrong': 1, 'both_right': 0}"
+   ]
+  },
+  {
+   "file": "P2_R8_E20F_20260922T003652Z/notes/dryrun/RESULTS_E20F.md",
+   "n_hit_lines": 2,
+   "header": "# RESULTS_E20F \u2014 E20-full (SQuAD v1.1, helper Qwen2.5-7B-Instruct Text, receiver Llama-3.1-8B-Instruct, score s2)",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "- dev: R 129/1000 [0.1080, 0.1500]; Text 124/1000 [0.1040, 0.1450]; policy 123/1000 [0.1030, 0.1440]; G -0.0050 [-0.0180, 0.0070]; changes {'n': 171, 'reference_corrects': 19, 'reference_breaks': 24, 'both_wrong': 128, 'both_right': 0}; omitted changes {'n': 4, 'reference_corrects': 1, 'reference_breaks': 0, 'both_wrong': 3, 'both_right': 0}",
+    "- test: R 105/1000 [0.0860, 0.1240]; Text 106/1000 [0.0880, 0.1250]; policy 106/1000 [0.0880, 0.1250]; G 0.0010 [-0.0110, 0.0130]; changes {'n': 183, 'reference_corrects': 20, 'reference_breaks': 19, 'both_wrong': 144, 'both_right': 0}; omitted changes {'n': 10, 'reference_corrects': 1, 'reference_breaks': 1, 'both_wrong': 8, 'both_right': 0}"
+   ]
+  },
+  {
+   "file": "P2_R8_E20F_20260922T003652Z/notes/dryrun/results/ACCURACY_E20F.json",
+   "n_hit_lines": 8,
+   "header": "{",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "    \"reference_corrects\": 19,",
+    "    \"reference_breaks\": 24,",
+    "    \"reference_corrects\": 1,",
+    "    \"reference_breaks\": 0,"
+   ]
+  },
+  {
+   "file": "P2_R8_E20F_20260922T003652Z/results/ACCURACY_E20F.json",
+   "n_hit_lines": 8,
+   "header": "{",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "    \"reference_corrects\": 49,",
+    "    \"reference_breaks\": 39,",
+    "    \"reference_corrects\": 4,",
+    "    \"reference_breaks\": 8,"
+   ]
+  },
+  {
+   "file": "P2_RISK_CALIBRATION_BINARY_20260914T043954Z/paper/14_binary_risk_protocol_limits.tex",
+   "n_hit_lines": 1,
+   "header": "\\paragraph{Frozen development evaluation.}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "and report coverage, conditional and marginal changes, beneficial/harmful/"
+   ]
+  },
+  {
+   "file": "P2_SUBMISSION_MANUSCRIPT_V1_20260914T232502Z/evidence/pre_edit_snapshot/methods.tex",
+   "n_hit_lines": 1,
+   "header": "\\section{Reference-preserving routing}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "conditional/marginal change, beneficial/harmful/neutral changes, correct"
+   ]
+  },
+  {
+   "file": "P2_SUBMISSION_MANUSCRIPT_V1_20260914T232502Z/evidence/pre_edit_snapshot/results.tex",
+   "n_hit_lines": 2,
+   "header": "\\section{Frozen results and ordinary zero-gold controls}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "ProbeMax makes 6 beneficial and 13 harmful Text-to-R changes, with no neutral",
+    "is $-.9434$ percentage points. D makes 2 beneficial and 4 harmful changes,"
+   ]
+  },
+  {
+   "file": "P2_SUBMISSION_MANUSCRIPT_V2_20260915T061601Z/evidence/pre_edit_snapshot/methods.tex",
+   "n_hit_lines": 1,
+   "header": "\\section{Reference-preserving routing}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "conditional/marginal change, beneficial/harmful/neutral changes, correct"
+   ]
+  },
+  {
+   "file": "P2_SUBMISSION_MANUSCRIPT_V2_20260915T061601Z/evidence/pre_edit_snapshot/results.tex",
+   "n_hit_lines": 2,
+   "header": "\\section{Frozen results and ordinary zero-gold controls}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "ProbeMax makes 6 beneficial and 13 harmful Text-to-R changes, with no neutral",
+    "is $-.9434$ percentage points. D makes 2 beneficial and 4 harmful changes,"
+   ]
+  },
+  {
+   "file": "P2_SUBMISSION_MANUSCRIPT_V3_FINAL_TEXT_20260915T064902Z/evidence/pre_edit_snapshot/methods.tex",
+   "n_hit_lines": 1,
+   "header": "\\section{Reference-preserving routing}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "conditional/marginal change, beneficial/harmful/neutral changes, correct"
+   ]
+  },
+  {
+   "file": "P2_SUBMISSION_MANUSCRIPT_V3_FINAL_TEXT_20260915T064902Z/evidence/pre_edit_snapshot/results.tex",
+   "n_hit_lines": 2,
+   "header": "\\section{Frozen results and ordinary zero-gold controls}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "ProbeMax makes 6 beneficial and 13 harmful Text-to-R changes, with no neutral",
+    "is $-.9434$ percentage points. D makes 2 beneficial and 4 harmful changes,"
+   ]
+  },
+  {
+   "file": "P2_ZERO_GOLD_CONTROLS_20260914T065145Z/paper/methods.tex",
+   "n_hit_lines": 1,
+   "header": "\\section{Reference-preserving routing}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "conditional/marginal change, beneficial/harmful/neutral changes, correct"
+   ]
+  },
+  {
+   "file": "P2_ZERO_GOLD_CONTROLS_20260914T065145Z/paper/results.tex",
+   "n_hit_lines": 2,
+   "header": "\\section{Frozen results and ordinary zero-gold controls}",
+   "header_mentions_cal": false,
+   "hit_lines_mentioning_cal": [],
+   "first_hits": [
+    "ProbeMax makes 6 beneficial and 13 harmful Text-to-R changes, with no neutral",
+    "is $-.9434$ percentage points. D makes 2 beneficial and 4 harmful changes,"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,753 @@
+{
+  "utc": "2026-09-14T17:21:30.702927+00:00",
+  "status": "PASS",
+  "source_integrity_checks": [
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "file": "frozen_config.json",
+      "sha256": "e84c015eb04ef92dfc252917e2f1ae3cfb0e86d2e830bf283afbaba0e9073f22"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "file": "SOURCE_INDEX.csv",
+      "sha256": "9f17532e3a395ddb161b15fa1fe6dc34e0db611b4f74921f41ba60528168d517"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "file": "protocol/MODEL_SOURCE_INDEX.json",
+      "sha256": "43882ef4e71133ea3f2f413912e4395e341240b1ec361aa39592b4a057f8e06d"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "splits/arc_fit_ids.json",
+      "sha256": "b3771328b85bbbe00cffe1cf6155bfa689d9de29c80fbdea7cc732488883a1e7"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "splits/arc_cal_representatives.json",
+      "sha256": "61781f830a784f82d8a9d4c426b8a2a824f1c0919bc6e3fd27209a5aed4bdfaa"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "splits/obqa_cal_representatives.json",
+      "sha256": "8b33a4d168131c5a0095c5eabcdea2f2b3bb272dfae8a41ab2a7e0e05d5ebaed"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "splits/obqa_dev_ids.json",
+      "sha256": "80d1bbdd9148df3037401881533a2137b0d4ce9ee90a8ebb424fb413440bfbab"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "splits/obqa_dev_representatives.json",
+      "sha256": "80d1bbdd9148df3037401881533a2137b0d4ce9ee90a8ebb424fb413440bfbab"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "splits/obqa_group_members.csv",
+      "sha256": "be43bbee6009f73481c6a89976d1efee650bc0ae71c879f119267630ba28e3c9"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "splits/arc_train_dev_overlap.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "splits/obqa_fit_representatives.json",
+      "sha256": "1559bc9668d88a986df0967b96fdf14c995f02f622b126f396819b69b58c4028"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "splits/arc_dev_ids.json",
+      "sha256": "588d16b38e5db04b26a0d48feb5b4b96f4caa6af3bd5352626e59aa40063419c"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "splits/arc_cal_ids.json",
+      "sha256": "61781f830a784f82d8a9d4c426b8a2a824f1c0919bc6e3fd27209a5aed4bdfaa"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "splits/obqa_train_dev_overlap.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "splits/arc_group_members.csv",
+      "sha256": "77f5f120fdd8e1153b15a61a358ee42241a59557a5b185bb8d3ca558d970a43a"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "splits/arc_fit_representatives.json",
+      "sha256": "6a347fc68fa467ffb6b605dba872d06f3ddc064077c8dbc740b12c607fa90d5a"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "splits/obqa_cal_ids.json",
+      "sha256": "8b33a4d168131c5a0095c5eabcdea2f2b3bb272dfae8a41ab2a7e0e05d5ebaed"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "splits/obqa_fit_ids.json",
+      "sha256": "1559bc9668d88a986df0967b96fdf14c995f02f622b126f396819b69b58c4028"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "splits/arc_dev_representatives.json",
+      "sha256": "588d16b38e5db04b26a0d48feb5b4b96f4caa6af3bd5352626e59aa40063419c"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "splits/populations.json",
+      "sha256": "d87127b433f5eef3c82adc24d6990f919333df437c6a27f21f4caf78a47351ae"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "inputs/arc_train_queries.jsonl",
+      "sha256": "bc039741db9e9932d29632699e91113f881b67aa6aff82c5261de9e8f4dbf928"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "inputs/arc_panel_ids.json",
+      "sha256": "513e403c67c8192c3685701f633512cd09340d621972bb12c76b163636745894"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "inputs/arc_dev_queries.jsonl",
+      "sha256": "b550cf4db8635d3c3926bc7c90643794f071bb16a8ed10b112d2399a04c4657f"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "inputs/obqa_panel_ids.json",
+      "sha256": "37aeeffcb1fec43da584b020227ec756d20eb4661f1b91e48bb360f385865666"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "inputs/obqa_train_queries.jsonl",
+      "sha256": "56a89982c5fbf8fc08edc322d08a11eaba5ef05ac3b0dfeb662ddb96477ea767"
+    },
+    {
+      "freeze": "SPLIT_FREEZE.json",
+      "file": "inputs/obqa_dev_queries.jsonl",
+      "sha256": "23c6a8039b63d176a63c820114a20def2ce6a785d8b8cd86a3b510ed68928094"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "file": "src/render.py",
+      "sha256": "01e3c029a0bb8c7fd0d60ef37ada9d495a03d5001d619f882468cbf53a8dfcdb"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "file": "src/supervise.py",
+      "sha256": "6d445448d6b3ecb238d119d9c33b417d3b7b91513bb69e82588d61a830ebee27"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "file": "src/submit.py",
+      "sha256": "6ed6821333fba7871461be90b240c3ded59fe56ad09dc72f62eb4dea796105d0"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "file": "src/common.py",
+      "sha256": "b9317fd2c10d949ef8e0c31616c36b7654fce65bcb60f4d4a75943810be99bc4"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "file": "src/prepare.py",
+      "sha256": "8fea8a8097f20f5b8c7dccba6e3ca6979dedc586b522a44542a967789719e317"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "file": "src/analyze.py",
+      "sha256": "a1c503c4692c3c793068fbd4869c551bc6b6d14a0448e0a803b4b0e9c9cf3684"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "file": "src/run_boundaries.py",
+      "sha256": "1b034b11dc2eef167d78cceb6fe76d18936f64585865092b673a5d03b4adb4d7"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "file": "src/receiver_prompt.py",
+      "sha256": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "file": "src/pbs_entry.py",
+      "sha256": "c0a2233988e8670f5d3541e80a06f5fde600575eb3b9c4a6fc20fe5ff93be225"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "file": "run_boundaries.pbs",
+      "sha256": "d86f7d7faab3ccff58e2164d6a17dea18903eeab25d481461fc70d0a2c8ece08"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "file": "PROBE_PROTOCOL_ZH.md",
+      "sha256": "9e94984c95c25ee7f48f5458f11a65e45eb4fb00e21448dd13f28da93ccd7137"
+    },
+    {
+      "freeze": "ALL_ROUTES_FREEZE.json",
+      "file": "records/large_obqa_T_routes.jsonl",
+      "sha256": "656e91e2891923232844bbf79f3fcf8e614a6143c31dabe4e3e79849e32b38da"
+    },
+    {
+      "freeze": "ALL_ROUTES_FREEZE.json",
+      "file": "records/large_obqa_C_routes.jsonl",
+      "sha256": "37ba9265fe3557fde54bc17b355fbbade55cbab472eec6281995f283a29232ed"
+    },
+    {
+      "freeze": "ALL_ROUTES_FREEZE.json",
+      "file": "records/large_arc_T_routes.jsonl",
+      "sha256": "6ee84fd27762b5abf96a905fbcf5aa122ce86dcae900a629e2aabefedebb86fb"
+    },
+    {
+      "freeze": "ALL_ROUTES_FREEZE.json",
+      "file": "records/large_arc_C_routes.jsonl",
+      "sha256": "2172d096a8c470e4735e60c2ed65eb4b746930b9c7f9bcc549f0dd63c70bbe22"
+    },
+    {
+      "freeze": "ALL_ROUTES_FREEZE.json",
+      "file": "records/small_obqa_T_routes.jsonl",
+      "sha256": "8eda7c56022c959e4d7da8470bea55ccfc0f7e26eebf6e0af1d0dc3b923f86db"
+    },
+    {
+      "freeze": "ALL_ROUTES_FREEZE.json",
+      "file": "records/small_obqa_C_routes.jsonl",
+      "sha256": "75eb937f2e040fc84de0f85c6a1d644b182b07b6737dc2373bdefa360193304e"
+    },
+    {
+      "freeze": "ALL_ROUTES_FREEZE.json",
+      "file": "records/small_arc_T_routes.jsonl",
+      "sha256": "35ed08dfa65a80eb0c570b058ad8e884299901e0d07059efac79cc9e2bf46aa6"
+    },
+    {
+      "freeze": "ALL_ROUTES_FREEZE.json",
+      "file": "records/small_arc_C_routes.jsonl",
+      "sha256": "b6d93703c65526015eda9c51e1afb8e1d2a90659f2b5ea4475d11449f52be8cd"
+    },
+    {
+      "freeze": "ALL_ROUTES_FREEZE.json",
+      "file": "summary/calibration_all_160.csv",
+      "sha256": "b3038de19871c55222e69243299c1da7e459c382cc688d8d22ca5e20a7a896cc"
+    },
+    {
+      "freeze": "ALL_ROUTES_FREEZE.json",
+      "file": "deployments/all.json",
+      "sha256": "959a01ca64c9f9f246a68867bff58913d623a2da65b852bd6db8fbb0612b1e24"
+    },
+    {
+      "freeze": "PROBES_COMPLETE.json",
+      "file": "records/probe_records.jsonl",
+      "sha256": "8fed9b7fdf0824b1e922166d559829797fe403a2a884d5d06f61dd46a7739e35"
+    },
+    {
+      "freeze": "PROBES_COMPLETE.json",
+      "file": "records/probe_attempts.jsonl",
+      "sha256": "b4fb16291590ac926ea900194738ede19665e8edf0954ffb6758b2c156cc3c55"
+    },
+    {
+      "freeze": "PROBES_COMPLETE.json",
+      "file": "records/reused_probe_index_4208.csv",
+      "sha256": "7a533330038f129846f2f4abe3035cee429460d8ac41aef1010e75142e48f9ae"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/large_arc_full_bootstrap_indices.npz",
+      "sha256": "bfc9de944982be0b0421c1423b5dd136d5c0d214e07ddf08a80d912961b67dee"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/small_obqa_full_bootstrap_indices.npz",
+      "sha256": "d100298fe376b74223e18f3c6ff1762ffb7afc17c87381a099ae2a1c7a0fbacf"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/large_obqa_full_bootstrap_indices.npz",
+      "sha256": "d100298fe376b74223e18f3c6ff1762ffb7afc17c87381a099ae2a1c7a0fbacf"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/paired_bootstrap.csv",
+      "sha256": "3d31d6caa56b072206d331597e0a1e6353b6b95a43928e9c5992e2d14797f224"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/acquisition.csv",
+      "sha256": "3e0b667662e4bf828b7f95ecaa66d64b9285a526456bcceb780c608a83e1a9c9"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/disagreement_base_rates.csv",
+      "sha256": "8eb488ead3a5695e125ba855b192331b115e8d78e6fcf3bcafaf5e9d749aca50"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/large_obqa_panel_bootstrap_indices.npz",
+      "sha256": "131bd50f1e52545cd83c7b83ac68253badb676db58528a32774ed16e74e1d818"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/ranking.csv",
+      "sha256": "6dcf1df93256e53aca9349d5cdd9a4cf29209e8e4528323977158d721e3e2ceb"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/invalid_decomposition.csv",
+      "sha256": "bd393016eb857825df01b7f4ed54f4b07c27358310f2c5d81aa526f301f6155d"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/fixed_reference_risk.csv",
+      "sha256": "437d892b34f610ae468814c36263b655a282a1daaa8399b6870b15ea7dc7ba4a"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/panel_source_checks.json",
+      "sha256": "565457ad3223db9e15111bf0f1f6d73554a8bbae62a96b58461b370a59216643"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/historical_e2e_reference_reused.csv",
+      "sha256": "6ac22d2cb4ae5f5ae4ca15cb4273a1e44d0198009d4a1a854101ac27338bf7fe"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/calibration_new_140.csv",
+      "sha256": "75bf044024720bec10c4c80221907e6f89f6a106a13586ce8c0a0077fb8c4d70"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/collection_accounting.json",
+      "sha256": "b5e30acdee6e5a091d5c2ffe97f7ff0b9336595274aa6198c387a5a20521a467"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/small_arc_full_bootstrap_indices.npz",
+      "sha256": "bfc9de944982be0b0421c1423b5dd136d5c0d214e07ddf08a80d912961b67dee"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/fixed_full_dev.csv",
+      "sha256": "b97fecf0ddda28e5bb536c776164a3f859d23027d95d226cd09db9ba6a0cf12f"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/panel_cost.csv",
+      "sha256": "f8c917c061303e7c9a11321a2fece4704116b92153c6149dfa4e0f43ff28c233"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/main_dev.csv",
+      "sha256": "df4088fdddd5d15d9f6b0effc8e769eb703469db9520e86c5bfc2d6c95205ec8"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/large_arc_panel_bootstrap_indices.npz",
+      "sha256": "8d8af9006444f35fa8cac13f624378864f73145716d991c2981e73d64018f261"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/V2_action_summary_reused.csv",
+      "sha256": "d79d94f73b4b425276bbf33f35f428472e5e2ef1e831c1e5a314b5dde8f0d73e"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/risk_coverage_curves.csv",
+      "sha256": "940eaddb68c0bfbf56f3a0d4cd32ed5d45d829800630c915a4b821a710509f89"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/calibration_reused_20.csv",
+      "sha256": "7365c3fa318f0f3c17622e05464a8f3742107d1821d5c0b7da39167ac7d556bc"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/probe_timing.csv",
+      "sha256": "3ee3ad14d96c96d0bd367b11f85b517884a7dffe604a51546ed3751f7c99d3e6"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/calibration_diagnostics.json",
+      "sha256": "61f2f342dea40f8d7e5110b2738ac09c07d4d59f93b4e7c9ad8f53a4c93e8fbc"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/probe_diagnostics.json",
+      "sha256": "9deaabe07815826ddabdb64e8e97c9d15f3dcc6ee4cbc4d4bbee8e5cf2635148"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/small_obqa_panel_bootstrap_indices.npz",
+      "sha256": "131bd50f1e52545cd83c7b83ac68253badb676db58528a32774ed16e74e1d818"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/small_arc_panel_bootstrap_indices.npz",
+      "sha256": "8d8af9006444f35fa8cac13f624378864f73145716d991c2981e73d64018f261"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/calibration_all_160.csv",
+      "sha256": "b3038de19871c55222e69243299c1da7e459c382cc688d8d22ca5e20a7a896cc"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "summary/historical_e2e_source.json",
+      "sha256": "1d5e5f4a5d54b27c73ff8525826cdf14dae95017e90e5582c352e696d4081675"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "NUMERICAL_VALIDATION.json",
+      "sha256": "3aca101e13bd686a7e5c784ff683ca40dceb4b632635fc9fc2e52949539f01dd"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "records/deployment_evaluations_all.jsonl",
+      "sha256": "b34dae6048360db0348f23717175b43875f7321ae8b80227333cad8f26be05f4"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "file": "records/panel_per_question.jsonl",
+      "sha256": "0800fa7ce047e57f7355f2b402584c4772de998abe5e657c821b549f9e6bf44d"
+    },
+    {
+      "freeze": "deployments/large_obqa_T_ROUTES_FREEZE.json",
+      "file": "records/large_obqa_T_routes.jsonl",
+      "sha256": "656e91e2891923232844bbf79f3fcf8e614a6143c31dabe4e3e79849e32b38da"
+    },
+    {
+      "freeze": "deployments/large_obqa_T_ROUTES_FREEZE.json",
+      "file": "deployments/large_obqa_T_FREEZE.json",
+      "sha256": "b4c6f39aa07072d047b52feacb93410b60fcd1809cd30c76ae7e7af0534dcdfa"
+    },
+    {
+      "freeze": "deployments/small_arc_C_FREEZE.json",
+      "file": "deployments/small_arc_C.json",
+      "sha256": "b88a8e862c214f242240e15ef1a4bf197535277bb4e5a3bc30ca11b0cde4df02"
+    },
+    {
+      "freeze": "deployments/small_arc_C_FREEZE.json",
+      "file": "deployments/small_arc_C_tests.csv",
+      "sha256": "ca5fa95e4a202a65cbc90076ff4b7500b5d230b32e113b1ef5176e951402efb7"
+    },
+    {
+      "freeze": "deployments/small_arc_C_FREEZE.json",
+      "file": "thresholds/small_arc_FREEZE.json",
+      "sha256": "e140acba16a0dad3b2bcacbbbe2fe862e7b838ac382bcceb0088f3ce1c872b19"
+    },
+    {
+      "freeze": "deployments/large_arc_C_ROUTES_FREEZE.json",
+      "file": "records/large_arc_C_routes.jsonl",
+      "sha256": "2172d096a8c470e4735e60c2ed65eb4b746930b9c7f9bcc549f0dd63c70bbe22"
+    },
+    {
+      "freeze": "deployments/large_arc_C_ROUTES_FREEZE.json",
+      "file": "deployments/large_arc_C_FREEZE.json",
+      "sha256": "eca63c67df60541b1b6b46bfaacc3d5f4e30ba2e13b396c2f4835fb574a7f210"
+    },
+    {
+      "freeze": "deployments/large_obqa_C_FREEZE.json",
+      "file": "deployments/large_obqa_C.json",
+      "sha256": "507a9c099e1836ab75cad162605a86f7e4dfd97d3bed1e8823d1a4f13dab641e"
+    },
+    {
+      "freeze": "deployments/large_obqa_C_FREEZE.json",
+      "file": "deployments/large_obqa_C_tests.csv",
+      "sha256": "ef34a5a01bdbc2a9b340569603c62fc47770ed1964ca7ea15f31a0a099722e79"
+    },
+    {
+      "freeze": "deployments/large_obqa_C_FREEZE.json",
+      "file": "thresholds/large_obqa_FREEZE.json",
+      "sha256": "653c009d3fb246b37b1477b78ded288752503e76c90ada67d837b80450080241"
+    },
+    {
+      "freeze": "deployments/large_arc_C_FREEZE.json",
+      "file": "deployments/large_arc_C.json",
+      "sha256": "a3391054c494b06edab5e67df330283ea611f34db5cdf2c14953c593221a18b5"
+    },
+    {
+      "freeze": "deployments/large_arc_C_FREEZE.json",
+      "file": "deployments/large_arc_C_tests.csv",
+      "sha256": "0793635108c916905781eefd0cd3a656dca56f3df190f2fabef73c849b68a1f9"
+    },
+    {
+      "freeze": "deployments/large_arc_C_FREEZE.json",
+      "file": "thresholds/large_arc_FREEZE.json",
+      "sha256": "2358d14f9a16cd69ea0bca3a2244e0fa83feb50834e20c336059772c1492998a"
+    },
+    {
+      "freeze": "deployments/small_obqa_T_ROUTES_FREEZE.json",
+      "file": "records/small_obqa_T_routes.jsonl",
+      "sha256": "8eda7c56022c959e4d7da8470bea55ccfc0f7e26eebf6e0af1d0dc3b923f86db"
+    },
+    {
+      "freeze": "deployments/small_obqa_T_ROUTES_FREEZE.json",
+      "file": "deployments/small_obqa_T_FREEZE.json",
+      "sha256": "31e2da11a40d088ba97f860e11b35105d9a54a5f4d330d204239b0ca9ee4a1c1"
+    },
+    {
+      "freeze": "deployments/small_arc_T_FREEZE.json",
+      "file": "deployments/small_arc_T.json",
+      "sha256": "b88a8e862c214f242240e15ef1a4bf197535277bb4e5a3bc30ca11b0cde4df02"
+    },
+    {
+      "freeze": "deployments/small_arc_T_FREEZE.json",
+      "file": "deployments/small_arc_T_tests.csv",
+      "sha256": "99ac23e579e1891ef8e3b8354e743717ab5e1fe695ac8b5605431dc87a316e62"
+    },
+    {
+      "freeze": "deployments/small_arc_T_FREEZE.json",
+      "file": "thresholds/small_arc_FREEZE.json",
+      "sha256": "e140acba16a0dad3b2bcacbbbe2fe862e7b838ac382bcceb0088f3ce1c872b19"
+    },
+    {
+      "freeze": "deployments/small_arc_C_ROUTES_FREEZE.json",
+      "file": "records/small_arc_C_routes.jsonl",
+      "sha256": "b6d93703c65526015eda9c51e1afb8e1d2a90659f2b5ea4475d11449f52be8cd"
+    },
+    {
+      "freeze": "deployments/small_arc_C_ROUTES_FREEZE.json",
+      "file": "deployments/small_arc_C_FREEZE.json",
+      "sha256": "c74317d6fa27f4b6707dfb11d1b020afc371c1d452edd370fae2b06e92d4dca1"
+    },
+    {
+      "freeze": "deployments/large_obqa_T_FREEZE.json",
+      "file": "deployments/large_obqa_T.json",
+      "sha256": "6f4f7baa8054e9e6e50397d07492408d0e381bdee3c45a526a8a877b7441814b"
+    },
+    {
+      "freeze": "deployments/large_obqa_T_FREEZE.json",
+      "file": "deployments/large_obqa_T_tests.csv",
+      "sha256": "7365c3fa318f0f3c17622e05464a8f3742107d1821d5c0b7da39167ac7d556bc"
+    },
+    {
+      "freeze": "deployments/large_obqa_T_FREEZE.json",
+      "file": "thresholds/large_obqa_FREEZE.json",
+      "sha256": "653c009d3fb246b37b1477b78ded288752503e76c90ada67d837b80450080241"
+    },
+    {
+      "freeze": "deployments/small_obqa_T_FREEZE.json",
+      "file": "deployments/small_obqa_T.json",
+      "sha256": "b88a8e862c214f242240e15ef1a4bf197535277bb4e5a3bc30ca11b0cde4df02"
+    },
+    {
+      "freeze": "deployments/small_obqa_T_FREEZE.json",
+      "file": "deployments/small_obqa_T_tests.csv",
+      "sha256": "87c4eab596548e4d5f74e442b48a902da4ff2d79be2e9da157e0394609080282"
+    },
+    {
+      "freeze": "deployments/small_obqa_T_FREEZE.json",
+      "file": "thresholds/small_obqa_FREEZE.json",
+      "sha256": "b23ff90ed66bd23920f374b3e005b85e116b8f466061491aeb64e6ad14f7de17"
+    },
+    {
+      "freeze": "deployments/large_obqa_C_ROUTES_FREEZE.json",
+      "file": "records/large_obqa_C_routes.jsonl",
+      "sha256": "37ba9265fe3557fde54bc17b355fbbade55cbab472eec6281995f283a29232ed"
+    },
+    {
+      "freeze": "deployments/large_obqa_C_ROUTES_FREEZE.json",
+      "file": "deployments/large_obqa_C_FREEZE.json",
+      "sha256": "6433e3359dec8a56b65db63385aad50a3a8154dded1fe870ca135841b1729586"
+    },
+    {
+      "freeze": "deployments/small_obqa_C_ROUTES_FREEZE.json",
+      "file": "records/small_obqa_C_routes.jsonl",
+      "sha256": "75eb937f2e040fc84de0f85c6a1d644b182b07b6737dc2373bdefa360193304e"
+    },
+    {
+      "freeze": "deployments/small_obqa_C_ROUTES_FREEZE.json",
+      "file": "deployments/small_obqa_C_FREEZE.json",
+      "sha256": "1069abd90adbd19f98e12e81830e0650ffdbbeaff7647922e12c4434a4877e3e"
+    },
+    {
+      "freeze": "deployments/small_obqa_C_FREEZE.json",
+      "file": "deployments/small_obqa_C.json",
+      "sha256": "b88a8e862c214f242240e15ef1a4bf197535277bb4e5a3bc30ca11b0cde4df02"
+    },
+    {
+      "freeze": "deployments/small_obqa_C_FREEZE.json",
+      "file": "deployments/small_obqa_C_tests.csv",
+      "sha256": "fc8702d593103b49326d728b80fb65996ff8ad438a34accec850f12370bd0ef8"
+    },
+    {
+      "freeze": "deployments/small_obqa_C_FREEZE.json",
+      "file": "thresholds/small_obqa_FREEZE.json",
+      "sha256": "b23ff90ed66bd23920f374b3e005b85e116b8f466061491aeb64e6ad14f7de17"
+    },
+    {
+      "freeze": "deployments/small_arc_T_ROUTES_FREEZE.json",
+      "file": "records/small_arc_T_routes.jsonl",
+      "sha256": "35ed08dfa65a80eb0c570b058ad8e884299901e0d07059efac79cc9e2bf46aa6"
+    },
+    {
+      "freeze": "deployments/small_arc_T_ROUTES_FREEZE.json",
+      "file": "deployments/small_arc_T_FREEZE.json",
+      "sha256": "4c93f7a33c41edd002281f774ff9b6cc938660d244713115cf979ed7476fb41f"
+    },
+    {
+      "freeze": "deployments/large_arc_T_FREEZE.json",
+      "file": "deployments/large_arc_T.json",
+      "sha256": "30028f08c5423f324ec9762e9a91d2228bcbd0ad4decd2ea067a3c2f615a865c"
+    },
+    {
+      "freeze": "deployments/large_arc_T_FREEZE.json",
+      "file": "deployments/large_arc_T_tests.csv",
+      "sha256": "89f477a0b19a9b941e71f258ca2a91cc4fce84c0fce22db35997a41e13c03d6b"
+    },
+    {
+      "freeze": "deployments/large_arc_T_FREEZE.json",
+      "file": "thresholds/large_arc_FREEZE.json",
+      "sha256": "2358d14f9a16cd69ea0bca3a2244e0fa83feb50834e20c336059772c1492998a"
+    },
+    {
+      "freeze": "deployments/large_arc_T_ROUTES_FREEZE.json",
+      "file": "records/large_arc_T_routes.jsonl",
+      "sha256": "6ee84fd27762b5abf96a905fbcf5aa122ce86dcae900a629e2aabefedebb86fb"
+    },
+    {
+      "freeze": "deployments/large_arc_T_ROUTES_FREEZE.json",
+      "file": "deployments/large_arc_T_FREEZE.json",
+      "sha256": "8d9c31d3b299cb374f942174d2a19201cf422dad787b84df06b9eaa1f8c40f53"
+    },
+    {
+      "freeze": "thresholds/large_arc_PROBES_FREEZE.json",
+      "file": "records/large_arc_fit_probes.jsonl",
+      "sha256": "995361860f55956d44fcd989de6bfa43603872b8153a9546e1d64d89f10c898c"
+    },
+    {
+      "freeze": "thresholds/large_arc_PROBES_FREEZE.json",
+      "file": "records/large_arc_cal_probes.jsonl",
+      "sha256": "15c62f9b7d602d865fb52348d43ed6ea8bbea1997671b8768969fe77c93de7ce"
+    },
+    {
+      "freeze": "thresholds/small_arc_FREEZE.json",
+      "file": "thresholds/small_arc.json",
+      "sha256": "bcaca5e22a9886881db7fc673ac2ad76f452e2e783421d8590276ddaab4b7a80"
+    },
+    {
+      "freeze": "thresholds/small_obqa_PROBES_FREEZE.json",
+      "file": "records/small_obqa_fit_probes.jsonl",
+      "sha256": "6360031ff1382ef08bfb6a9cb61f4315629da691dc37c50d8e2121e53aec1973"
+    },
+    {
+      "freeze": "thresholds/small_obqa_PROBES_FREEZE.json",
+      "file": "records/small_obqa_cal_probes.jsonl",
+      "sha256": "62f50dd3c5fdb4583ea1089f7b89da23f4599b4878680105c52ff799e07a7fee"
+    },
+    {
+      "freeze": "thresholds/small_arc_PROBES_FREEZE.json",
+      "file": "records/small_arc_fit_probes.jsonl",
+      "sha256": "6205bb26543e72d59d4ec2b93882633b0fc28f4093f9be02ca6d79679b2cf38c"
+    },
+    {
+      "freeze": "thresholds/small_arc_PROBES_FREEZE.json",
+      "file": "records/small_arc_cal_probes.jsonl",
+      "sha256": "0de1f49f85a35c97015f015bb6741d24059e40c08a5955a910e29e79b38af8b9"
+    },
+    {
+      "freeze": "thresholds/small_obqa_FREEZE.json",
+      "file": "thresholds/small_obqa.json",
+      "sha256": "b1ecd1cedc747d4869243404a34838ca616f36358b77c7d1bb9b3ecb4ef4eb57"
+    },
+    {
+      "freeze": "thresholds/large_obqa_FREEZE.json",
+      "file": "thresholds/large_obqa.json",
+      "sha256": "e874e2d8aeb5d10450d4110725e09b5652a5c4d53e874739d16fd526ce735268"
+    },
+    {
+      "freeze": "thresholds/large_arc_FREEZE.json",
+      "file": "thresholds/large_arc.json",
+      "sha256": "1375cb1233d6e73d2b2cc2ee55b829c727ccbbf7e55bf97f4768b5d59602f909"
+    },
+    {
+      "freeze": "protocol/large/PROBE_PROTOCOL_FREEZE.json",
+      "file": "protocol/large/chat_template.jinja",
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+    },
+    {
+      "freeze": "protocol/large/PROBE_PROTOCOL_FREEZE.json",
+      "file": "protocol/large/token_decode_mapping.jsonl",
+      "sha256": "b50d9d3316d3dd679000c90cf8d2d94da1a91c21dc9ef907716a9c489ac92d27"
+    },
+    {
+      "freeze": "protocol/large/PROBE_PROTOCOL_FREEZE.json",
+      "file": "protocol/large/label_token_sets.json",
+      "sha256": "3a167b79464314e00ce9cb6a92e2fe121829e9808a5f7894211c080eb7a382ac"
+    },
+    {
+      "freeze": "protocol/large/PROBE_PROTOCOL_FREEZE.json",
+      "file": "protocol/large/FIRST_INPUT_CHECK.json",
+      "sha256": "33ff9c897d64cb7e1de521ac898f8662860d70e8652ff5be299f79ee661c3e6e"
+    },
+    {
+      "freeze": "protocol/large/PROBE_PROTOCOL_FREEZE.json",
+      "file": "protocol/large/prefix_ids.json",
+      "sha256": "4947bce493a63335a402c84ef1bc327ca0dddc281ef07980fe902a574aac8899"
+    },
+    {
+      "freeze": "protocol/large/PROBE_PROTOCOL_FREEZE.json",
+      "file": "src/receiver_prompt.py",
+      "sha256": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66"
+    },
+    {
+      "freeze": "protocol/large/PROBE_PROTOCOL_FREEZE.json",
+      "file": "src/run_boundaries.py",
+      "sha256": "1b034b11dc2eef167d78cceb6fe76d18936f64585865092b673a5d03b4adb4d7"
+    },
+    {
+      "freeze": "protocol/large/PROBE_PROTOCOL_FREEZE.json",
+      "file": "frozen_config.json",
+      "sha256": "e84c015eb04ef92dfc252917e2f1ae3cfb0e86d2e830bf283afbaba0e9073f22"
+    },
+    {
+      "freeze": "protocol/small/PROBE_PROTOCOL_FREEZE.json",
+      "file": "protocol/small/chat_template.jinja",
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+    },
+    {
+      "freeze": "protocol/small/PROBE_PROTOCOL_FREEZE.json",
+      "file": "protocol/small/token_decode_mapping.jsonl",
+      "sha256": "b50d9d3316d3dd679000c90cf8d2d94da1a91c21dc9ef907716a9c489ac92d27"
+    },
+    {
+      "freeze": "protocol/small/PROBE_PROTOCOL_FREEZE.json",
+      "file": "protocol/small/label_token_sets.json",
+      "sha256": "3a167b79464314e00ce9cb6a92e2fe121829e9808a5f7894211c080eb7a382ac"
+    },
+    {
+      "freeze": "protocol/small/PROBE_PROTOCOL_FREEZE.json",
+      "file": "protocol/small/FIRST_INPUT_CHECK.json",
+      "sha256": "3b19f595cf416b6ef56c117935a4a1443d1641c4d6f18fba5a89b50ec04ec635"
+    },
+    {
+      "freeze": "protocol/small/PROBE_PROTOCOL_FREEZE.json",
+      "file": "protocol/small/prefix_ids.json",
+      "sha256": "4947bce493a63335a402c84ef1bc327ca0dddc281ef07980fe902a574aac8899"
+    },
+    {
+      "freeze": "protocol/small/PROBE_PROTOCOL_FREEZE.json",
+      "file": "src/receiver_prompt.py",
+      "sha256": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66"
+    },
+    {
+      "freeze": "protocol/small/PROBE_PROTOCOL_FREEZE.json",
+      "file": "src/run_boundaries.py",
+      "sha256": "1b034b11dc2eef167d78cceb6fe76d18936f64585865092b673a5d03b4adb4d7"
+    },
+    {
+      "freeze": "protocol/small/PROBE_PROTOCOL_FREEZE.json",
+      "file": "frozen_config.json",
+      "sha256": "e84c015eb04ef92dfc252917e2f1ae3cfb0e86d2e830bf283afbaba0e9073f22"
+    }
+  ],
+  "all_indexed_parent_sources_unchanged": true,
+  "active_tex_sources_checked": true,
+  "contribution_words": 127,
+  "TeX_compiled": false,
+  "figure_visually_checked": true,
+  "numerical_validation_source": "NUMERICAL_VALIDATION.json",
+  "not_new_statistical_recomputation": true
+}

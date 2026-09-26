@@ -1,0 +1,14 @@
+{
+  "status": "PASS_WITHIN_REQUESTED_SCOPE",
+  "utc": "2026-09-12T19:29:05.930357+00:00",
+  "label_question_rows_checked": 12788,
+  "label_action_checks": 51152,
+  "source_overlap_AC": 1536,
+  "all_V2_action_counts_and_complementarity_recomputed": true,
+  "primary_vectors_and_population_timing_separation_checked": true,
+  "original_old_parser_replay_repeated": false,
+  "frozen_parser_unchanged": true,
+  "parser_post_freeze_corrections": 0,
+  "limitations": "Syntax tests plus exact delivered-label arithmetic; no semantic judge, new method fit, or independent test.",
+  "validation_code_sha256": "6bf7929f54c7d2f5a401ea487e8c1735cfc291310781d56811794c41f6de6662"
+}

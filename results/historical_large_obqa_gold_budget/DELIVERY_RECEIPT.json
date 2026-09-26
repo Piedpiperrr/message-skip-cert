@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETE",
+  "bundle": "$DATA_DIR/P2_GOLD_BUDGET_20260914T054406Z/P2_GOLD_BUDGET_20260914T054406Z_WORK_LIGHT.tar.gz",
+  "sha256": "25dc352ee798791e6d4af18253085050f10fd390bfca4afcfea07bae386c5a5e",
+  "bytes": 6297767,
+  "file_count": 218,
+  "member_hashes_verified": true,
+  "manifest_sha256": "bc58b757740a80dec90cc23522581e7872512a4a7633dc8ce98e16687e58abee",
+  "z_included": false,
+  "large_model_weights_included": false,
+  "whole_old_experiment_included": false,
+  "train_z_index": "$DATA_DIR/P2_GOLD_BUDGET_20260914T054406Z/inputs/TRAIN_FEATURE_INDEX.csv",
+  "dev_z_index": "$DATA_DIR/P2_GOLD_BUDGET_20260914T054406Z/inputs/DEV_FEATURE_INDEX.csv",
+  "utc": "2026-09-14T06:09:45.028303+00:00"
+}

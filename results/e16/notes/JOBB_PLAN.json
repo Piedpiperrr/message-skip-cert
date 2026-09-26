@@ -1,0 +1,266 @@
+{
+  "utc": "2026-09-21T19:02:00.717632+00:00",
+  "tiers": {
+    "qwen3_8b": [
+      [
+        "obqa",
+        "cal",
+        1
+      ],
+      [
+        "obqa",
+        "dev",
+        1
+      ],
+      [
+        "arc",
+        "cal",
+        1
+      ],
+      [
+        "arc",
+        "dev",
+        1
+      ],
+      [
+        "mmlu_pro",
+        "cal",
+        1
+      ],
+      [
+        "mmlu_pro",
+        "dev",
+        1
+      ],
+      [
+        "obqa",
+        "fit",
+        2
+      ],
+      [
+        "arc",
+        "fit",
+        2
+      ],
+      [
+        "mmlu_pro",
+        "fit",
+        2
+      ]
+    ],
+    "qwen3_1_7b": [
+      [
+        "obqa",
+        "cal",
+        1
+      ],
+      [
+        "obqa",
+        "dev",
+        1
+      ],
+      [
+        "arc",
+        "cal",
+        1
+      ],
+      [
+        "arc",
+        "dev",
+        1
+      ],
+      [
+        "obqa",
+        "fit",
+        2
+      ],
+      [
+        "arc",
+        "fit",
+        2
+      ],
+      [
+        "mmlu_pro",
+        "cal",
+        3
+      ],
+      [
+        "mmlu_pro",
+        "dev",
+        3
+      ],
+      [
+        "mmlu_pro",
+        "fit",
+        3
+      ]
+    ],
+    "qwen3_0_6b": [
+      [
+        "obqa",
+        "cal",
+        3
+      ],
+      [
+        "obqa",
+        "dev",
+        3
+      ],
+      [
+        "obqa",
+        "fit",
+        3
+      ],
+      [
+        "arc",
+        "cal",
+        3
+      ],
+      [
+        "arc",
+        "dev",
+        3
+      ],
+      [
+        "arc",
+        "fit",
+        3
+      ],
+      [
+        "mmlu_pro",
+        "cal",
+        3
+      ],
+      [
+        "mmlu_pro",
+        "dev",
+        3
+      ],
+      [
+        "mmlu_pro",
+        "fit",
+        3
+      ]
+    ]
+  },
+  "processes": [
+    {
+      "node": 0,
+      "gpu": 0,
+      "runs": [
+        {
+          "receiver": "qwen3_8b",
+          "dtype": "fp32",
+          "rows": "$DATA_DIR/P2_R7_E16_20260921T184114Z/records/work/jobB/q8b_fp32_s0.jsonl",
+          "n": 3454,
+          "sha256": "7678c573f44adfeef0c2558ab89879615ab67d3a1ddf61422482e5eeb7f6110e"
+        }
+      ]
+    },
+    {
+      "node": 0,
+      "gpu": 1,
+      "runs": [
+        {
+          "receiver": "qwen3_8b",
+          "dtype": "fp32",
+          "rows": "$DATA_DIR/P2_R7_E16_20260921T184114Z/records/work/jobB/q8b_fp32_s1.jsonl",
+          "n": 3453,
+          "sha256": "53b9996e7f129b5c50b980efb6c43353a3d5ff94b7f2824f9280de98465c0938"
+        }
+      ]
+    },
+    {
+      "node": 0,
+      "gpu": 2,
+      "runs": [
+        {
+          "receiver": "qwen3_8b",
+          "dtype": "fp32",
+          "rows": "$DATA_DIR/P2_R7_E16_20260921T184114Z/records/work/jobB/q8b_fp32_s2.jsonl",
+          "n": 3453,
+          "sha256": "4762fd1212b8370f02b10e41fdad3cf0a1406f3f42f364a90a99d88ae6808e1c"
+        }
+      ]
+    },
+    {
+      "node": 0,
+      "gpu": 3,
+      "runs": [
+        {
+          "receiver": "qwen3_8b",
+          "dtype": "fp32",
+          "rows": "$DATA_DIR/P2_R7_E16_20260921T184114Z/records/work/jobB/q8b_fp32_s3.jsonl",
+          "n": 3453,
+          "sha256": "690f6e9aa8bf3e36e833e18572cea8f2128c545db2aa6b9a356f7894fda83fb0"
+        }
+      ]
+    },
+    {
+      "node": 1,
+      "gpu": 0,
+      "runs": [
+        {
+          "receiver": "qwen3_8b",
+          "dtype": "fp32",
+          "rows": "$DATA_DIR/P2_R7_E16_20260921T184114Z/records/work/jobB/q8b_fp32_s4.jsonl",
+          "n": 3453,
+          "sha256": "c72c83d233281d2ab46b52f0c5ea9f8dae1556f90a36523cc3af91b5e31a8520"
+        }
+      ]
+    },
+    {
+      "node": 1,
+      "gpu": 1,
+      "runs": [
+        {
+          "receiver": "qwen3_8b",
+          "dtype": "bf16",
+          "rows": "$DATA_DIR/P2_R7_E16_20260921T184114Z/records/work/jobB/q8b_bf16.jsonl",
+          "n": 17266,
+          "sha256": "51a8d67018679110648e1714c50c3a632ca32989b852be23002c2c0eece31c52"
+        },
+        {
+          "receiver": "qwen3_1_7b",
+          "dtype": "bf16",
+          "rows": "$DATA_DIR/P2_R7_E16_20260921T184114Z/records/work/jobB/q17b_bf16.jsonl",
+          "n": 17266,
+          "sha256": "1569229fcdc7299f20f947aa949df5d18855dd2f15ba69b5b464096d3adcdeea"
+        }
+      ]
+    },
+    {
+      "node": 1,
+      "gpu": 2,
+      "runs": [
+        {
+          "receiver": "qwen3_1_7b",
+          "dtype": "fp32",
+          "rows": "$DATA_DIR/P2_R7_E16_20260921T184114Z/records/work/jobB/q17b_fp32.jsonl",
+          "n": 17266,
+          "sha256": "1569229fcdc7299f20f947aa949df5d18855dd2f15ba69b5b464096d3adcdeea"
+        }
+      ]
+    },
+    {
+      "node": 1,
+      "gpu": 3,
+      "runs": [
+        {
+          "receiver": "qwen3_0_6b",
+          "dtype": "bf16",
+          "rows": "$DATA_DIR/P2_R7_E16_20260921T184114Z/records/work/jobB/q06b_bf16.jsonl",
+          "n": 17266,
+          "sha256": "a3357f1931c1978dc24c24a513a2e8074f2ede11fb70ca30bbf04d4faadb7cd2"
+        },
+        {
+          "receiver": "qwen3_0_6b",
+          "dtype": "fp32",
+          "rows": "$DATA_DIR/P2_R7_E16_20260921T184114Z/records/work/jobB/q06b_fp32.jsonl",
+          "n": 17266,
+          "sha256": "a3357f1931c1978dc24c24a513a2e8074f2ede11fb70ca30bbf04d4faadb7cd2"
+        }
+      ]
+    }
+  ]
+}

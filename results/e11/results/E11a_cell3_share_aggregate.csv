@@ -1,0 +1,7 @@
+group,split,n_settings,min_cell3_share,max_cell3_share,pooled_cell3_share,label
+18 main settings,cal,18,0.0000,0.7068,0.2740,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+18 main settings,dev,18,0.0000,0.7092,0.2636,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+7 cross-family settings,cal,7,0.1865,0.4947,0.3179,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+7 cross-family settings,dev,7,0.1593,0.4030,0.3043,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+Text+fact (E6),cal,1,0.0235,0.0235,0.0235,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision
+Text+fact (E6),dev,1,0.0000,0.0000,0.0000,POST-HOC re-analysis (reviewer R4/E11); does not change any primary decision

@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-16T20:37:05.699121+00:00",
+  "rows": 12032,
+  "actions": 36096,
+  "probes": 12032,
+  "duplicate_request_keys": 0,
+  "missing_IDs": 0,
+  "input_hash_mismatches": 0,
+  "reparsed_actions": 36096,
+  "requests": [
+    {
+      "shard": "1",
+      "starts": 24064,
+      "success": 24064,
+      "sha256": "415db45a4b7a2f5b3b0a76648e5c7bb2def64a832306b128ce865fe7f0eed7f2"
+    },
+    {
+      "shard": "2",
+      "starts": 24064,
+      "success": 24064,
+      "sha256": "80fa9497c4f0e783d098be8afe3064ab15e653ce0e0457ad3b13e76db3d99c4b"
+    }
+  ],
+  "primary_groups": 11641,
+  "raw_rows_not_independent": true,
+  "output_files": [
+    {
+      "shard": "1",
+      "path": "$DATA_DIR/runs/iclr2027_p2/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/1/actions/cal.jsonl",
+      "sha256": "e70a0cbeb05c00d1853bdfa6602309fe7a48e1c819a0c662ff3a9875fa84c129"
+    },
+    {
+      "shard": "1",
+      "path": "$DATA_DIR/runs/iclr2027_p2/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/1/actions/fit.jsonl",
+      "sha256": "4a62e7ae5b1867fc951c69496b3f3dd5e48fa2efdbfc1b6aa07b323ff0c9815a"
+    },
+    {
+      "shard": "1",
+      "path": "$DATA_DIR/runs/iclr2027_p2/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/1/probes/cal.jsonl",
+      "sha256": "70679af28f4407f4d058bd9454a62274cb794f797d6024fe1b1107886a078049"
+    },
+    {
+      "shard": "1",
+      "path": "$DATA_DIR/runs/iclr2027_p2/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/1/probes/fit.jsonl",
+      "sha256": "1b4b2ed753a54aae4a3b9599c618c3145c4d739ab4da50db946a0eeba304b23e"
+    },
+    {
+      "shard": "2",
+      "path": "$DATA_DIR/runs/iclr2027_p2/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/2/actions/cal.jsonl",
+      "sha256": "f607704478e6c4989d7021c2f0ab6aed94bb1cbe21e9340d1725f5bf477dec51"
+    },
+    {
+      "shard": "2",
+      "path": "$DATA_DIR/runs/iclr2027_p2/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/2/actions/dev.jsonl",
+      "sha256": "1b916bbe760f20d2daaed77fe4ef1d2639dd4b449f44362466efe75038358db5"
+    },
+    {
+      "shard": "2",
+      "path": "$DATA_DIR/runs/iclr2027_p2/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/2/probes/cal.jsonl",
+      "sha256": "735cc77b0a78bf4e4be9e160b37bfe4319fdd1a4440692576a059c132673ebbc"
+    },
+    {
+      "shard": "2",
+      "path": "$DATA_DIR/runs/iclr2027_p2/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/2/probes/dev.jsonl",
+      "sha256": "e0b8e2546961927068cd3ecd3de1eb27fe3403c3274cf86ac33032a63429c67d"
+    }
+  ],
+  "fit_reps": 3000,
+  "cal_reps": 6000,
+  "dev_reps": 2641,
+  "calibration_tests": 40,
+  "group_leakage": 0,
+  "calibration_rank_pvalue_selection_recomputed": true,
+  "accuracy_decomposition_reconciled": true,
+  "MMLU_PRO_DEPLOY_COUNT": 2,
+  "E2E_jobs": 0,
+  "scientific_analysis_complete": true,
+  "final_delivery_audit": {
+    "path": "evidence/FINAL_DELIVERY_AUDIT.json",
+    "sha256": "210e57c69aee36bd610679fc0e979266438c2402a376942c07ebd20bd356c49c",
+    "status": "PASS"
+  }
+}

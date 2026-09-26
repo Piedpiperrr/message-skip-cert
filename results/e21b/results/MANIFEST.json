@@ -1,0 +1,51 @@
+{
+  "utc": "2026-09-22T07:33:09.307207+00:00",
+  "deadline_utc": "2026-09-22T23:00:00+00:00",
+  "populations": {
+    "arc": {
+      "N": 1172,
+      "arms": [
+        "probe",
+        "R",
+        "T",
+        "C"
+      ],
+      "records": 4688,
+      "missing": 0,
+      "duplicates": 0,
+      "unexpected": 0,
+      "missing_examples": [],
+      "complete": true
+    },
+    "obqa": {
+      "N": 744,
+      "arms": [
+        "probe",
+        "R",
+        "T",
+        "C",
+        "TF"
+      ],
+      "records": 3720,
+      "missing": 0,
+      "duplicates": 0,
+      "unexpected": 0,
+      "missing_examples": [],
+      "complete": true
+    }
+  },
+  "files": {
+    "out/arc_rot_shard0.jsonl": "1a5e5baa26e5064e19498c12fc37cc6940f388def7a963e4b764846f42e0c6cc",
+    "out/arc_rot_shard1.jsonl": "d74fa7e2f7e8edefa5165e99a2145048e430940f7749335909b4fdec8b141130",
+    "out/arc_rot_shard2.jsonl": "b72a07bf390893fc57f3150bb44804cdee44064ee7e6bf5dfc9825cb91014859",
+    "out/arc_rot_shard3.jsonl": "4ff60a0b6cfb9aa6280257bfbf629125ada321899777e5ecf2af4d4659d5583a",
+    "out/obqa_rot_shard0.jsonl": "d9617598226bc2e2628b3781fedf8696e1d6ec9a24e9e98894b2b64f67bad23a",
+    "out/obqa_rot_shard1.jsonl": "e6eb35a851b17736bea854392715f0e4db7e6696b4813132bc9e48d99ccd38e6",
+    "out/obqa_rot_shard2.jsonl": "38ada85141baeec5aa033c0b75e19d7c4015de61e153e4e0ddf599f432c660e7",
+    "out/obqa_rot_shard3.jsonl": "21701eab1c915b9342784872994094cd0ff862af74c7b7c1c2a78c9ac7cc5cb5"
+  },
+  "first_output_utc": "2026-09-22T07:18:18.352412+00:00",
+  "last_output_utc": "2026-09-22T07:32:27.231563+00:00",
+  "all_complete": true,
+  "written_by_deadline": true
+}

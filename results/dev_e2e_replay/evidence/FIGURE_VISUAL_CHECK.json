@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-14T18:10:13.983009+00:00",
+  "viewed": true,
+  "file": "figures/component_vs_e2e.png",
+  "sha256": "5d505f7c8f3e6146d20be12decb55db2e1351108565fb21adb07031d2b9a03b4",
+  "checks": [
+    "all four panels labelled",
+    "both component and E2E bars visible",
+    "all confidence intervals fully visible",
+    "zero baseline visible",
+    "Text/C2C small and large savings shown without clipping"
+  ],
+  "repair_needed": false
+}

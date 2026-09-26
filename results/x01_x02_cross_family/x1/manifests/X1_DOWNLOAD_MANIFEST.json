@@ -1,0 +1,290 @@
+{
+ "meta-llama/Llama-3.2-1B-Instruct": {
+  "revision": "9213176726f574b556790deb65791e0c5aa438b6",
+  "path": "$DATA_DIR/hf_cache/hub/models--meta-llama--Llama-3.2-1B-Instruct/snapshots/9213176726f574b556790deb65791e0c5aa438b6",
+  "files": {
+   ".gitattributes": {
+    "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+    "bytes": 1519
+   },
+   "LICENSE.txt": {
+    "sha256": "0b4284c1f87029e67654c7953afa16279961632cf73dcfe33374c4c2f298fa35",
+    "bytes": 7712
+   },
+   "README.md": {
+    "sha256": "18564977261167ff9f76d8ee3a94c8d1cc59c0e143ba054f1187744086004a93",
+    "bytes": 41742
+   },
+   "USE_POLICY.md": {
+    "sha256": "40e2777d7faa6beaf98400654170f414d8ab29b921b5163ad4ea0a1d39894201",
+    "bytes": 6021
+   },
+   "config.json": {
+    "sha256": "2febf68cea25bf4611be02b7536f2488a5ba523bb1134986e3610152abe74fdb",
+    "bytes": 877
+   },
+   "generation_config.json": {
+    "sha256": "88effbb63300dbbc7390143fbbdd9d9fa50587b37e8bfd16c8c90d4970a74a36",
+    "bytes": 189
+   },
+   "model.safetensors": {
+    "sha256": "1ff795ff6a07e6a68085d206fb84417da2f083f68391c2843cd2b8ac6df8538f",
+    "bytes": 2471645608
+   },
+   "special_tokens_map.json": {
+    "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec",
+    "bytes": 296
+   },
+   "tokenizer.json": {
+    "sha256": "79e3e522635f3171300913bb421464a87de6222182a0570b9b2ccba2a964b2b4",
+    "bytes": 9085657
+   },
+   "tokenizer_config.json": {
+    "sha256": "9823dcfdc1121869029da45192238e85cf44f0b232a6d9dc20e4fe6f4242a14e",
+    "bytes": 54528
+   }
+  }
+ },
+ "nics-efc/C2C_Fuser": {
+  "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d",
+  "path": "$DATA_DIR/hf_cache/hub/models--nics-efc--C2C_Fuser/snapshots/f01fc3258b305e280e04c7238f4f2cf31b7dc70d/qwen3_0.6b+llam3.2_1b_Fuser",
+  "files": {
+   "config.json": {
+    "sha256": "924ec4c2bde1711469a3dc14ee289d079360d8215182e85d9b8318e7c63e3571",
+    "bytes": 1711
+   },
+   "final/aggregator_config.json": {
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "bytes": 2
+   },
+   "final/projector_0.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_0.pt": {
+    "sha256": "a6b84cf9a10360852217fe367e8248bf9791eee261219f52484fc5477d222408",
+    "bytes": 35718087
+   },
+   "final/projector_1.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_1.pt": {
+    "sha256": "7c15d5f248f8d22bb48d1f48c9ffe7b113037e7dc34c48ff3de436a0c2930c31",
+    "bytes": 35718087
+   },
+   "final/projector_10.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_10.pt": {
+    "sha256": "960672ea2eb83a231126fc6b5f61d6a5330c00e1f8420a077bd46430171cd412",
+    "bytes": 35718124
+   },
+   "final/projector_11.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_11.pt": {
+    "sha256": "ae84619ea1c415aeaa3114c0ce0e0c1b9a96f96f6f1e5eb216c5665806b4085a",
+    "bytes": 35718124
+   },
+   "final/projector_12.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_12.pt": {
+    "sha256": "324f5e9a3035c91f429e016f92332643d6cd7c25606f72d06e19ea58f4abdc7e",
+    "bytes": 35718124
+   },
+   "final/projector_13.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_13.pt": {
+    "sha256": "ca0b3e7cba3505885ef18c5e398ee6fd8eef213eb026694a24de3d13f604c92e",
+    "bytes": 35718124
+   },
+   "final/projector_14.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_14.pt": {
+    "sha256": "84c6a85af62cfb9a7db925cf6a46f1c5a67f633e7bd18512c62d040ab05beb54",
+    "bytes": 35718124
+   },
+   "final/projector_15.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_15.pt": {
+    "sha256": "4b0fa8172377342dd7ac1afa7dcab3ed98ab8a23899b7687a916b99169ffe7af",
+    "bytes": 35718124
+   },
+   "final/projector_16.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_16.pt": {
+    "sha256": "86ecbf2f970a1a68e2f3ef21d4cdbaa75e0fcef029e48aab02e4e6edbb2a28f8",
+    "bytes": 35718124
+   },
+   "final/projector_17.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_17.pt": {
+    "sha256": "3e965bb4920c9248bc0a7fc0bb46c340c0da7ee9b37110adac85d4f974e7ecde",
+    "bytes": 35718124
+   },
+   "final/projector_18.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_18.pt": {
+    "sha256": "7702faa13547e2e405cb4f622c67e8ce62c091739c6030b963b3395d732bb663",
+    "bytes": 35718124
+   },
+   "final/projector_19.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_19.pt": {
+    "sha256": "717569636c5d5e58efb55004c0d06dd3b94d548778dc328d1d2f4d26b78bafbf",
+    "bytes": 35718124
+   },
+   "final/projector_2.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_2.pt": {
+    "sha256": "ecc2a14039f47670a23abf39ca7afacb0578acf8dc87a7b4109152e926e4ffcf",
+    "bytes": 35718087
+   },
+   "final/projector_20.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_20.pt": {
+    "sha256": "9ce76f68a19f64c90061aa245e3c5049526b7f4cfb11c0ee0fc78755ee32e120",
+    "bytes": 35718124
+   },
+   "final/projector_21.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_21.pt": {
+    "sha256": "ab2165aece78182eda4885fc91b5fb4137cc02e31b1eb515113cb1558835141e",
+    "bytes": 35718124
+   },
+   "final/projector_22.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_22.pt": {
+    "sha256": "091e0b61eeef5c52dc0e2602bc609d054062a8814f3f74914547d4663ab28435",
+    "bytes": 35718124
+   },
+   "final/projector_23.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_23.pt": {
+    "sha256": "36e69a48162fde32a85786f9707023cf7140007d17243df9f5fbf3ac7e8af2e0",
+    "bytes": 35718124
+   },
+   "final/projector_24.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_24.pt": {
+    "sha256": "beaf18b4595bf5aa0c5b34b8064098afd441f36eb37b344b2e6f55523b833427",
+    "bytes": 35718124
+   },
+   "final/projector_25.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_25.pt": {
+    "sha256": "cb8e6844862a8201b2a1df359b3bfaa4277db0b6dc479b2958e6e7f5b01c42bd",
+    "bytes": 35718124
+   },
+   "final/projector_26.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_26.pt": {
+    "sha256": "76891d9bf007e08bfdab6a9043cd03b00fbc49cf20e0c0ca6744b63c069cf850",
+    "bytes": 35718124
+   },
+   "final/projector_27.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_27.pt": {
+    "sha256": "0166e78a5cc5d943ff244ce2687d9c38b47a5a735db6c1a208309482b019a854",
+    "bytes": 35718124
+   },
+   "final/projector_3.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_3.pt": {
+    "sha256": "c7dc733c67b74d24a10a4106b75e7bcb17815481ebcd7f99f67650878e79d312",
+    "bytes": 35718087
+   },
+   "final/projector_4.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_4.pt": {
+    "sha256": "8037337fa3c7c58a42b660a5154e4b10bfa3dbbc84cbe1bdb721674d824686cb",
+    "bytes": 35718087
+   },
+   "final/projector_5.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_5.pt": {
+    "sha256": "05e36601f5cbfbde2ec1563a8b2f5cd9e4897b7f4fdacbe11628d13e707d661b",
+    "bytes": 35718087
+   },
+   "final/projector_6.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_6.pt": {
+    "sha256": "17285bcb352491a5f1d6339e9f6d6f51c3f6fa5597626ea62b23f6f6f3ea9518",
+    "bytes": 35718087
+   },
+   "final/projector_7.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_7.pt": {
+    "sha256": "066731386adda52bbc1654a06f22a8e8262f13308bcd592ad1abccfd574c7c52",
+    "bytes": 35718087
+   },
+   "final/projector_8.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_8.pt": {
+    "sha256": "687b334192afe1607338c28014ef75df2a6ce8f468fbe7a8ff125ccedbba48e6",
+    "bytes": 35718087
+   },
+   "final/projector_9.json": {
+    "sha256": "29059dd5653a71ad3d45eb8511df20bb8e1962d46ac36d1948b74535f9735382",
+    "bytes": 415
+   },
+   "final/projector_9.pt": {
+    "sha256": "b5c98eb2e4b5c57922e45a77d597a606f6881ed22620f6103aca19205aa672ea",
+    "bytes": 35718087
+   },
+   "final/projector_config.json": {
+    "sha256": "f4d71d9b76bc1168eeebbeafd17ed0e352ee5ab96a424c37c9d6b0099dd89a3e",
+    "bytes": 476
+   }
+  }
+ }
+}

@@ -1,0 +1,107 @@
+diff -ruN '--exclude=__pycache__' $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/common.py $DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/mmlu/src/common.py
+--- $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/common.py	2026-09-16 21:23:35.000000000 +0000
++++ $DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/mmlu/src/common.py	2026-09-19 07:53:25.000000000 +0000
+@@ -2,7 +2,7 @@
+ from pathlib import Path
+ sys.dont_write_bytecode=True
+ P=Path(__file__).resolve().parents[1]
+-ROOT=P.parent
++ROOT=P.parent.parent  # E3: stage copy nested one level below the project root
+ DATA_ROOT=ROOT.parent.parent
+ STAGE1=ROOT/'P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z'
+ REVIEW=ROOT/'P2_MMLU_PRO_BREADTH_PROTOCOL_AND_COST_REVIEW_20260915T224801Z'
+diff -ruN '--exclude=__pycache__' $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/guard_checks.py $DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/mmlu/src/guard_checks.py
+--- $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/guard_checks.py	2026-09-16 21:21:47.000000000 +0000
++++ $DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/mmlu/src/guard_checks.py	2026-09-19 07:53:25.000000000 +0000
+@@ -21,12 +21,12 @@
+     checks={'current_job_state_R':job.get('job_state')=='R',
+         'current_user':job.get('Job_Owner','').split('@')[0]=='user',
+         'account_project':job.get('Account_Name')=='project',
+-        'queue_gpu_queue':job.get('queue')=='gpu-queue','nodect_1':int(r.get('nodect',0))==1,
+-        'requested_ngpus_2':int(r.get('ngpus',0))==2,
+-        'allocated_ngpus_2':sum(item['ngpus'] for item in assigned)==2,
+-        'assigned_host_matches_process':bool(assigned) and {item['node'].split('.')[0] for item in assigned}=={short},
+-        'exec_host_matches_process':{part.split('/')[0].split('.')[0] for part in job.get('exec_host','').split('+')}=={short},
+-        'PBS_nodefile_matches_process':{node.split('.')[0] for node in nodefile_nodes}=={short},
++        'queue_debug':job.get('queue')=='debug','nodect_2':int(r.get('nodect',0))==2,
++        'requested_ngpus_0_ClusterA':int(r.get('ngpus',0))==0,  # E3 ClusterA: GPUs are not a PBS resource (2 exclusive nodes of 4 A100); the CUDA guard still asserts 2 visible devices
++        'allocated_ngpus_0_ClusterA':sum(item['ngpus'] for item in assigned)==0,
++        'assigned_host_matches_process':len(assigned)==2 and short in {item['node'].split('.')[0] for item in assigned},
++        'exec_host_matches_process':len(job.get('exec_host','').split('+'))==2 and short in {part.split('/')[0].split('.')[0] for part in job.get('exec_host','').split('+')},
++        'PBS_nodefile_matches_process':len({node.split('.')[0] for node in nodefile_nodes})==2 and short in {node.split('.')[0] for node in nodefile_nodes},
+         'fsreq_home_sharedfs':set(r.get('fsreq','').split(':'))>={'home','sharedfs'},
+         'stage2_walltime_cap':0<walltime_seconds(r.get('walltime','0:00:00'))<=walltime_seconds('01:00:00')}
+     return {'checks':checks,'assigned_vnodes':assigned,'status':'PASS' if all(checks.values()) else 'BLOCKED',
+diff -ruN '--exclude=__pycache__' $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/pbs_entry.py $DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/mmlu/src/pbs_entry.py
+--- $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/pbs_entry.py	2026-09-16 21:26:11.000000000 +0000
++++ $DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/mmlu/src/pbs_entry.py	2026-09-19 07:53:25.000000000 +0000
+@@ -12,10 +12,10 @@
+     check=allocation_identity(j,socket.gethostname(),Path(os.environ['PBS_NODEFILE']).read_text().split())
+     save(P/'evidence/ALLOCATION_GUARD.json',dict(utc=utc(),job_id=jid,**check));assert check['status']=='PASS',check
+     start=datetime.datetime.strptime(j['stime'],'%a %b %d %H:%M:%S %Y').replace(tzinfo=datetime.timezone.utc).timestamp()
+-    research_stop=datetime.datetime(2026,9,20,tzinfo=datetime.timezone.utc).timestamp()
++    research_stop=datetime.datetime(2026,9,23,tzinfo=datetime.timezone.utc).timestamp()  # E3: moved from 2026-09-20
+     assert start+check['walltime_seconds']<=research_stop,'RESEARCH_HARD_STOP'
+-    deadline=start+check['walltime_seconds']-45;os.environ['MMLU_DEADLINE_EPOCH']=str(deadline)
+-    save(P/'evidence/DEADLINE.json',dict(utc=utc(),PBS_stime=j['stime'],walltime_seconds=check['walltime_seconds'],deadline_epoch=deadline,safety_margin_seconds=45))
++    replay_start=float(os.environ['R1E3_REPLAY_START_EPOCH']);deadline=replay_start+3600-45;os.environ['MMLU_DEADLINE_EPOCH']=str(deadline)  # E3: own start + original 3600 s budget, original 45 s margin
++    save(P/'evidence/DEADLINE.json',dict(utc=utc(),PBS_stime=j['stime'],E3_replay_start_epoch=replay_start,E3_replay_budget_seconds=3600,walltime_seconds=check['walltime_seconds'],deadline_epoch=deadline,safety_margin_seconds=45))
+     phase='CUDA_DEVICE_GUARD'
+     import torch
+     n=torch.cuda.device_count();available=torch.cuda.is_available()
+--- $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/MMLU_PRO_E2E_STAGE2_FREEZE.json	2026-09-16 21:30:51.000000000 +0000
++++ $DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/mmlu/MMLU_PRO_E2E_STAGE2_FREEZE.json	2026-09-19 07:53:25.000000000 +0000
+@@ -1595,7 +1595,7 @@
+     "max_GPU_allocation_hours": 2,
+     "resubmission_allowed": false
+   },
+-  "PBS_script_sha256": "c715a39aa2209544b4806bb0036b6dfe709dd823b47788eda6c05f15d9787af2",
++  "PBS_script_sha256": "17433ca76fad41f324f3d3dd20965bdedd8459c717e8d00426e6a20842b0aff6",
+   "manuscript_or_supplement_changes": false,
+   "frozen_files": {
+     "DATASET_SOURCE_INDEX.json": "d2962a487f9f373c7d3ff2eada141b9b886f3a218ee40166d4dcc075917089e0",
+@@ -1615,14 +1615,15 @@
+     "protocol/prefix_ids.json": "ce218af11405dd5893ab42576be6829b89fc5ca3857c64b66337cb0d8f88418a",
+     "protocol/receiver_prompt.py": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66",
+     "protocol/scoring_v2.py": "d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9",
+-    "run_mmlu_stage2.pbs": "c715a39aa2209544b4806bb0036b6dfe709dd823b47788eda6c05f15d9787af2",
++    "run_mmlu_stage2.pbs": "17433ca76fad41f324f3d3dd20965bdedd8459c717e8d00426e6a20842b0aff6",
+     "src/analyze.py": "6cf928659dd86328eb8e9325f60dcb30f844354c2258a6eb876f0577f5987c96",
+-    "src/common.py": "a2529b7bbdfc99f98fafedf76fd2ddfd36fbb096df433995b37bf7be8db43a6f",
++    "src/common.py": "0241d85c48c63780afe754095c76a8658eca38dc265a998c6b0fccf0f8cde284",
+     "src/execute.py": "869c0f73b99c43d0c3b59f4365dd6fca1db43252bfc2294da7f6828c5e9b7a9c",
+-    "src/guard_checks.py": "d1e684ad5d927caa2d69c7e8d8e3a8e5fb7ec7568b5a2f445709f19049c89b7c",
++    "src/guard_checks.py": "234fd7ed446fd0f30d2f9b17ae8a3e31080a1ac4c37d0a2cb20d3834b71d4557",
+     "src/native_runtime.py": "f9158aef4dfab7b90a6233b8d1304dc26281240ba02d2b72211bd138095c4361",
+-    "src/pbs_entry.py": "af08043bf7a4d82e569c2030dcc6e0318e05d4f2a922ef3072fcf26c692c7501",
++    "src/pbs_entry.py": "15a7ad2390a0d2dfbb0fa02b76fb03e3156e04a58d88e55e23395010db7d0282",
+     "src/prepare_freeze.py": "5e54efcd596baa90756b2cbbb092f5ec471088c6f889a7143d7899203d044303",
+     "src/submit.py": "0e49a8e8d6413c9f79fffb54928be4b741a94824c58bb4ce1dc4fd948d96b74d"
+-  }
++  },
++  "E3_manifest_recomputed": "frozen_files re-hashed over this copy after the E3 ClusterA harness edits; original hashes are in diffs/mmlu.diff"
+ }
+--- $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/run_mmlu_stage2.pbs	2026-09-16 21:28:40.000000000 +0000
++++ $DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/mmlu/run_mmlu_stage2.pbs	2026-09-19 07:53:25.000000000 +0000
+@@ -10,9 +10,9 @@
+ # [scheduler directive removed for anonymity]
+ set -uo pipefail
+ source "$HOME/.config/ClusterB-storage.sh"
+-export P2_STAGE="$DATA_ROOT/projects/iclr2027_p2/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z"
+-export P2_RUN="$DATA_ROOT/runs/iclr2027_p2/${PBS_JOBID}_mmlu_stage2"
+-export TMPDIR="$DATA_ROOT/tmp/$PBS_JOBID"
++export P2_STAGE="$DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/mmlu"
++export P2_RUN="$P2_STAGE/run_logs"
++export TMPDIR="$P2_STAGE/tmp"
+ export TMP="$TMPDIR" TEMP="$TMPDIR" PYTHONDONTWRITEBYTECODE=1
+ export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 TOKENIZERS_PARALLELISM=false
+ export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 BLIS_NUM_THREADS=1
+@@ -25,7 +25,7 @@
+ if [ "$quota_rc" -eq 2 ]; then exit 2; fi
+ if [ "$quota_rc" -ne 0 ]; then
+     if command -v myquota >/dev/null 2>&1; then exit 92; fi
+-    if ! rg -q 'Home space check: PASSED' "$P2_STAGE/evidence/pbs/home_check.txt"; then exit 92; fi
++    if ! grep -q 'Home space check: PASSED' "$P2_STAGE/evidence/pbs/home_check.txt"; then exit 92; fi
+     printf 'Compute myquota unavailable; successful pre-submission Home quota receipt used.\n'
+ fi
+ cd "$P2_STAGE" || exit 93

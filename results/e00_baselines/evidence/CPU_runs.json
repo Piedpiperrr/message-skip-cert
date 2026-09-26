@@ -1,0 +1,67 @@
+[
+  {
+    "job_id": "run006",
+    "status": "STARTUP_FAILED",
+    "cpu_seconds": 1.0,
+    "CPU_kind": "conservative 1 second charge; scheduler cput=00:00:00 at 1-second granularity; no numeric process launched",
+    "peak_RSS_KiB": 14336,
+    "exit_code": 127,
+    "scheduler_evidence": "evidence/pbs/finished_185606.json",
+    "phases": []
+  },
+  {
+    "job_id": "run007",
+    "status": "BOOTSTRAP_CLEARANCE_FORMAT_MISMATCH",
+    "cpu_seconds": 1.0,
+    "CPU_kind": "conservative 1-second startup charge; no numerical work or fits launched",
+    "peak_RSS_KiB": 0,
+    "exit_code": 1,
+    "phases": []
+  },
+  {
+    "started_utc": "2026-09-13T04:25:11.283086+00:00",
+    "job_id": "run007",
+    "host": "REDACTED",
+    "threads": 1,
+    "nice": 10,
+    "phases": [
+      {
+        "script": "fit_stage.py",
+        "started_utc": "2026-09-13T04:25:11.287632+00:00",
+        "CPU_limit_seconds": 3321,
+        "log": "$DATA_DIR/runs/iclr2027_p2/run008/fit_stage.py.attempt1.log",
+        "pid": 1218303,
+        "exit_code": 0,
+        "ended_utc": "2026-09-13T04:26:07.691272+00:00",
+        "CPU_seconds_including_supervision": 26.408233
+      },
+      {
+        "script": "analyze_stage.py",
+        "started_utc": "2026-09-13T04:26:07.697472+00:00",
+        "CPU_limit_seconds": 3414,
+        "log": "$DATA_DIR/runs/iclr2027_p2/run008/analyze_stage.py.attempt2.log",
+        "pid": 1219400,
+        "exit_code": 0,
+        "ended_utc": "2026-09-13T04:26:15.760339+00:00",
+        "CPU_seconds_including_supervision": 7.337895000000003
+      },
+      {
+        "script": "validate_stage.py",
+        "started_utc": "2026-09-13T04:26:15.766300+00:00",
+        "CPU_limit_seconds": 3457,
+        "log": "$DATA_DIR/runs/iclr2027_p2/run008/validate_stage.py.attempt3.log",
+        "pid": 1219640,
+        "exit_code": 0,
+        "ended_utc": "2026-09-13T04:26:20.816415+00:00",
+        "CPU_seconds_including_supervision": 4.2735350000000025
+      }
+    ],
+    "cpu_seconds": 38.164606000000006,
+    "peak_RSS_KiB": 399360,
+    "status": "NUMERICAL_WORK_COMPLETE_REPORT_PENDING",
+    "updated_utc": "2026-09-13T04:26:20.822316+00:00",
+    "wall_seconds": 69.53877607593313,
+    "exit_code": 0,
+    "ended_utc": "2026-09-13T04:26:20.827417+00:00"
+  }
+]

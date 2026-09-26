@@ -1,0 +1,12 @@
+{
+  "split": "dev",
+  "split_success": 299,
+  "pair": "small",
+  "dataset": "arc",
+  "total_success": 7044,
+  "attempts": 7044,
+  "remaining_attempt_budget": 0,
+  "success_ids_file": "records/probe_records.jsonl",
+  "last_id": "Mercury_7082145",
+  "utc": "2026-09-14T17:14:17.133527+00:00"
+}

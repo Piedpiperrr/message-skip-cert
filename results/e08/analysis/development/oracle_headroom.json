@@ -1,0 +1,38 @@
+[
+  {
+    "pair": "small",
+    "N": 2641,
+    "correct_R": 403,
+    "correct_Text": 516,
+    "correct_C2C": 462,
+    "accuracy_R": 0.15259371450208253,
+    "accuracy_Text": 0.19538053767512306,
+    "accuracy_C2C": 0.17493373722074973,
+    "best_fixed_action": "T",
+    "best_fixed_correct": 516,
+    "best_fixed_accuracy": 0.19538053767512306,
+    "oracle_correct": 822,
+    "oracle_accuracy": 0.3112457402499053,
+    "oracle_gain_over_best_fixed": 0.11586520257478228,
+    "oracle_gain_over_R": 0.1586520257478228,
+    "unit": "development group representatives"
+  },
+  {
+    "pair": "medium",
+    "N": 2641,
+    "correct_R": 813,
+    "correct_Text": 913,
+    "correct_C2C": 530,
+    "accuracy_R": 0.3078379401741764,
+    "accuracy_Text": 0.345702385460053,
+    "accuracy_C2C": 0.20068156001514578,
+    "best_fixed_action": "T",
+    "best_fixed_correct": 913,
+    "best_fixed_accuracy": 0.345702385460053,
+    "oracle_correct": 1122,
+    "oracle_accuracy": 0.424839076107535,
+    "oracle_gain_over_best_fixed": 0.07913669064748201,
+    "oracle_gain_over_R": 0.11700113593335858,
+    "unit": "development group representatives"
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "repo_id": "TIGER-Lab/MMLU-Pro",
+  "exact_revision": "b189ec765aa7ed75c8acfea42df31fdae71f97be",
+  "metadata_last_modified": "2026-05-02T06:26:05.000Z",
+  "fetched_at_utc": "2026-09-15T22:49:32.409899+00:00",
+  "files": [
+    {
+      "url": "https://huggingface.co/api/datasets/TIGER-Lab/MMLU-Pro",
+      "path": "$DATA_DIR/P2_MMLU_PRO_BREADTH_PROTOCOL_AND_COST_REVIEW_20260915T224801Z/evidence/hf_repo_metadata.json",
+      "bytes": 2378,
+      "sha256": "e3df7ff441a9df3f97ae3ced493fc51d143d6cdda0dcf48b020ace4f3c51d2fc"
+    },
+    {
+      "url": "https://datasets-server.huggingface.co/splits?dataset=TIGER-Lab/MMLU-Pro",
+      "path": "$DATA_DIR/P2_MMLU_PRO_BREADTH_PROTOCOL_AND_COST_REVIEW_20260915T224801Z/evidence/viewer_splits.json",
+      "bytes": 177,
+      "sha256": "b58170eb73e62fd7bce56f8fbcedee2a18e923aa81bd8f1a38b25cb84cd6292a"
+    },
+    {
+      "url": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro/raw/b189ec765aa7ed75c8acfea42df31fdae71f97be/README.md",
+      "path": "$DATA_DIR/P2_MMLU_PRO_BREADTH_PROTOCOL_AND_COST_REVIEW_20260915T224801Z/evidence/dataset_card.md",
+      "bytes": 11723,
+      "sha256": "4bd710f67da3fa359a33edce1b4b5816b3de416c823c2624ba5e89c2557d2a47"
+    },
+    {
+      "url": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro/resolve/b189ec765aa7ed75c8acfea42df31fdae71f97be/data/test-00000-of-00001.parquet",
+      "path": "$DATA_DIR/P2_MMLU_PRO_BREADTH_PROTOCOL_AND_COST_REVIEW_20260915T224801Z/dataset/test-00000-of-00001.parquet",
+      "bytes": 4144185,
+      "sha256": "0e24a191921c2f453518a537a8b2117bd137e7714d4ef1565e9ba06c1ecb9ad8"
+    },
+    {
+      "url": "https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro/resolve/b189ec765aa7ed75c8acfea42df31fdae71f97be/data/validation-00000-of-00001.parquet",
+      "path": "$DATA_DIR/P2_MMLU_PRO_BREADTH_PROTOCOL_AND_COST_REVIEW_20260915T224801Z/dataset/validation-00000-of-00001.parquet",
+      "bytes": 42857,
+      "sha256": "139423c23722e480c807ac4a191409a710cfce4eba744c1d641cf88e730e2078"
+    }
+  ],
+  "source": "公开Hub原始文件；Viewer仅交叉检查metadata，不用浮动converted revision替代原始parquet",
+  "inference_calls": 0,
+  "gpu_calls": 0,
+  "pbs_submissions": 0,
+  "dataset_config": "default",
+  "available_splits": {
+    "test": 12032,
+    "validation": 70
+  },
+  "main_evaluation_split": "test"
+}

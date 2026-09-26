@@ -1,0 +1,17 @@
+{
+  "utc": "2026-09-21T06:21:56.408269+00:00",
+  "note": "certification and all gold-free diagnostics written before any gold read",
+  "files": {
+    "certification_ledger_40.csv": "c8b35059ae30c1efb87f79bcbc10d15ef5be91784886cfb88059588b38ca166f",
+    "dev_table_pre_gold.csv": "f6d5220dedd37b9902798fd3bf6eb3b2d73b5d920ac17dafc8fbbce06d779304",
+    "invalid_and_disagreement_split.csv": "3939d1dc67bab7c93ad995ec9d02048f734b53e6d97437cadcea1767eca6d91f",
+    "dev_routes.csv": "7bf452209f37613d21a55f0c06990dd1cdd39564fa98dcead233b2fc56e09662",
+    "diag_bothparse.csv": "a5079777178374ad33c32d533f394de072285a2cdb02dbfd2b69fd759a1951cc",
+    "diag_bothparse_grid.csv": "c8225d0763fb7cb173b430fe074c5ae33b1dd3ca3561ef6d68d48af4ca308ba5",
+    "diag_resplit.csv": "8ed8874b143370f8c218ca89f025912a37b93b2cd38b919a2f7ef5327bdb08e3",
+    "diag_resplit_per_seed.csv": "9ba0a52d1b6b976924b96ca250a9ab2aee33ee4ef5ade155e2a86e85d9d40be5",
+    "diag_argmax_recert.csv": "15d7d4195a662727c16c1475a8a0aeefa447898ea63809945a47723da9557a55",
+    "diag_argmax_grid.csv": "ba6f1f7611e7aab9d72a1286263eeedc4da39b34fc144f5ac3e0eba7e087e349",
+    "X3_PRE_GOLD.json": "7d7f058c2839da1e1a017d214e2586523c48163dbda570e0389999d788008a46"
+  }
+}

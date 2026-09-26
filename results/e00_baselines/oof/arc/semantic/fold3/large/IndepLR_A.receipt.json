@@ -1,0 +1,14 @@
+{
+  "event": "HEAD_COMPLETE",
+  "key": "OOF/arc/semantic/3/large/y_A",
+  "kind": "LR",
+  "n": 895,
+  "positive": 819,
+  "iterations": 19,
+  "warnings": [],
+  "CPU_seconds": 0.012436000000004555,
+  "protocol_sha256": "41239823e728796dd108aae24cc48401ec8093c38aca16f7a30a1352145ef797",
+  "model_sha256": "948a176fb99fd0570087ffc0f7723286fd066003da21deb0af2efcadfc8469c7",
+  "input_hash": "fe2c84e790550a55924a22b936adbc06",
+  "numerical_probability_check": true
+}

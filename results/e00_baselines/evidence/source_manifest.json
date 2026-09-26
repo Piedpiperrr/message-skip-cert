@@ -1,0 +1,326 @@
+[
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/frozen_config.json",
+    "role": "P2-10 frozen feature/LR/cost provenance",
+    "sha256": "0361e5f81a1ad919d2ac7546252fdef0a26552e546fafa478b25539cac6f49ed",
+    "size_bytes": 193894
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/RULE_FREEZE_V2.json",
+    "role": "formal V2 scoring; do not rerun parser/tests",
+    "sha256": "52caeb60c0153b571f6c5473536f7bc7095e25b199a198b18678e314dd5e1ab9",
+    "size_bytes": 1206
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/refit_inventory.csv",
+    "role": "8 C heads targeted, 24 R/T/A heads reusable only outside OOF",
+    "sha256": "65c3fd5b5b763fd5bb186f2569856f929f74b2d8d70b39e24b88e8d188c67768",
+    "size_bytes": 7419
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/labels/full_train_P2_SCORING_V2.jsonl",
+    "role": "V2 full train labels",
+    "sha256": "a26986635c944974a5263e08457cb181489a32aec84da450fd514f9155dbf911",
+    "size_bytes": 22144683
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/labels/full_development_P2_SCORING_V2.jsonl",
+    "role": "V2 full development labels",
+    "sha256": "6fde2e0a58f9be88ef14edf7aeab0ac7202b594a17b94d1d18f034f8984d9aa8",
+    "size_bytes": 5053322
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/labels/panel_train_P2_SCORING_V2.jsonl",
+    "role": "V2 panel train labels",
+    "sha256": "feb47d893581705a318f5f394d14f3997c2167bb56ce2983a1a7babeb5b13b12",
+    "size_bytes": 2684231
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/labels/panel_development_P2_SCORING_V2.jsonl",
+    "role": "V2 panel development labels",
+    "sha256": "dac016c424a1e2e3428ebd9a9d5ae7e55eea59526eef6ddefd86c1db99ba4ad2",
+    "size_bytes": 1355756
+  },
+  {
+    "path": "$DATA_DIR/P2_8_20260911T032044Z/duplicates.csv",
+    "role": "registered duplicate groups; no test data read",
+    "sha256": "15885514ae87c818621dc5966d834159d727f355000def8d3ec4e83f05674474",
+    "size_bytes": 289
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/data/obqa_train.jsonl",
+    "role": "train query source (only question/choices used)",
+    "sha256": "248d0729ccd56627cc50d83db1066d7875a24e52be4901805abb99876a9af51d",
+    "size_bytes": 3011848
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/data/obqa_train_semantic.npy",
+    "role": "fixed per-query semantic train cache, no new forward",
+    "sha256": "24e73aebeaea8d36905c038a268d827229b12614238e72fb0dd5bd736cfc5c08",
+    "size_bytes": 14196864
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/data/obqa_dev_semantic.npy",
+    "role": "baseline-only exposed dev semantic cache; forbidden to FFR OOF",
+    "sha256": "d0f1abe4d3564257d7cf3d554b56cb7eb3463ded0001089459e7eb7f0fc6b9cf",
+    "size_bytes": 3039360
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/features/row_ids.json",
+    "role": "feature row-ID provenance",
+    "sha256": "41514bb16f8b5e1d72e2df85ba815091260cb68b59b712899fa97cdf6b1ae323",
+    "size_bytes": 57677
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/features/word_train.npz",
+    "role": "full-train frozen TF-IDF for C refit only",
+    "sha256": "26ef1483d7e8dfa27a3423e81fef861515424f1cc6d46f4a92719d4c7c6ba60a",
+    "size_bytes": 785467
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/features/word_dev.npz",
+    "role": "old baseline dev TF-IDF; no OOF use",
+    "sha256": "09c64928cbbe47c2b56c10754cb5ce9de471ecfa6c9b04ade53d3a52218a4a9f",
+    "size_bytes": 157159
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/train_cost_panel_matrix.npz",
+    "role": "original train panel action costs",
+    "sha256": "0b9a3f11cfe963f477ffd88139f3171d070ca2d1317ebd1d15a3342c6d913b88",
+    "size_bytes": 424870
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/dev_cost_panel_matrix.npz",
+    "role": "baseline-only old dev panel action costs",
+    "sha256": "0f0f5e37d0b0ae5d38b82b8e86b4d9ccbcd2de1a5c746f1d4148622e4180a0bd",
+    "size_bytes": 209318
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/train_mixture_receipt.json",
+    "role": "historical probability/B_train reference",
+    "sha256": "df35d59d03e73a85759bafd9c3eb7498e9a90186b9ead5927182d64a592ca338",
+    "size_bytes": 4622
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/dev_predictions_word.npz",
+    "role": "old baseline dev choices/probabilities",
+    "sha256": "542eae2567121775eb4b8d170494bc63f9ffdfeca1e3d5affafc4054ebe128f7",
+    "size_bytes": 152940
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/dev_predictions_semantic.npz",
+    "role": "old baseline dev choices/probabilities",
+    "sha256": "41f57e5ed6b641d07a0ca8a3e87c8fcbb1960698f2aece08ba64679e2df9b4d6",
+    "size_bytes": 141068
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/models/word.joblib",
+    "role": "old bundle; only C replaced, R/T/A and costs unchanged",
+    "sha256": "5e2e4a2a3d04b877982566b5d2a874def09e2a909e375bd09e3d98ac46b1d6e3",
+    "size_bytes": 1266046
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/models/semantic.joblib",
+    "role": "old bundle; only C replaced, R/T/A and costs unchanged",
+    "sha256": "ba7a205134b5197ffc68106f83a24408a62e6dc8d492ec9320a7f1bd379e76fb",
+    "size_bytes": 84401
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/features/row_ids.json",
+    "role": "feature row-ID provenance",
+    "sha256": "41514bb16f8b5e1d72e2df85ba815091260cb68b59b712899fa97cdf6b1ae323",
+    "size_bytes": 57677
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/features/word_train.npz",
+    "role": "full-train frozen TF-IDF for C refit only",
+    "sha256": "26ef1483d7e8dfa27a3423e81fef861515424f1cc6d46f4a92719d4c7c6ba60a",
+    "size_bytes": 785467
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/features/word_dev.npz",
+    "role": "old baseline dev TF-IDF; no OOF use",
+    "sha256": "09c64928cbbe47c2b56c10754cb5ce9de471ecfa6c9b04ade53d3a52218a4a9f",
+    "size_bytes": 157159
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/train_cost_panel_matrix.npz",
+    "role": "original train panel action costs",
+    "sha256": "9da622519ada994b054df08c0c553c2a6c335a2a459d85d2ddfe7a6a8145601d",
+    "size_bytes": 424870
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/dev_cost_panel_matrix.npz",
+    "role": "baseline-only old dev panel action costs",
+    "sha256": "a996b116d059eeec0433526f08ad3d437306137823245ddc8b36c85f0203693d",
+    "size_bytes": 209318
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/train_mixture_receipt.json",
+    "role": "historical probability/B_train reference",
+    "sha256": "22c61fd57f880ed56b28e7101292a68513d6d4d77c85d38f8450c530ff1e5b20",
+    "size_bytes": 4627
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/dev_predictions_word.npz",
+    "role": "old baseline dev choices/probabilities",
+    "sha256": "6266a7ce6196049f67af233d3cfad332e40103e3caffee34de93a04169b60744",
+    "size_bytes": 152940
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/dev_predictions_semantic.npz",
+    "role": "old baseline dev choices/probabilities",
+    "sha256": "9f7d9b0c0472049d920f90684ca4f4543255156487164c3f9659543c761a23b6",
+    "size_bytes": 141068
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/models/word.joblib",
+    "role": "old bundle; only C replaced, R/T/A and costs unchanged",
+    "sha256": "708961761dfb6413142002fcbd11acc3deffd236bf61a26f62f3e61fd400de78",
+    "size_bytes": 1266046
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/models/semantic.joblib",
+    "role": "old bundle; only C replaced, R/T/A and costs unchanged",
+    "sha256": "bdebfc5b017afe0d705b5af8f11bc3c2d4e05eb18d5426fbbf314b372a00e725",
+    "size_bytes": 84401
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/data/arc_train.jsonl",
+    "role": "train query source (only question/choices used)",
+    "sha256": "2679c79b9543cacf55201be9781cdc80109929abcaf6b731121f7e3764f201c4",
+    "size_bytes": 2556014
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/data/arc_train_semantic.npy",
+    "role": "fixed per-query semantic train cache, no new forward",
+    "sha256": "679ac74c39ef0ab093aed1649b1b87af87d329490c082bc838b7f138a4b5db3f",
+    "size_bytes": 4583552
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/data/arc_validation_semantic.npy",
+    "role": "baseline-only exposed dev semantic cache; forbidden to FFR OOF",
+    "sha256": "2fdd275ded9630d6c1d9fc36239ac2965bb237350d044beb921085fa7b7e148b",
+    "size_bytes": 1224832
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/features/row_ids.json",
+    "role": "feature row-ID provenance",
+    "sha256": "90c3325f38dead715272e082a53801d5ccd40eb7b593a734f6f5b1171a099598",
+    "size_bytes": 33381
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/features/word_train.npz",
+    "role": "full-train frozen TF-IDF for C refit only",
+    "sha256": "1980f221b78dc7f05e23050d21e7e91b67a066857aa30a5f7249010f988c3b59",
+    "size_bytes": 373194
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/features/word_validation.npz",
+    "role": "old baseline dev TF-IDF; no OOF use",
+    "sha256": "6d000c7d78ab295f512cb94991403672a7b00b190ce8148ba6d9b74cfe1cd083",
+    "size_bytes": 91937
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/train_cost_panel_matrix.npz",
+    "role": "original train panel action costs",
+    "sha256": "dfec8e5651764a9fd5433aa36cd3810c5e260adbbeaaf3ea94def629efaa54be",
+    "size_bytes": 497574
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/validation_cost_panel_matrix.npz",
+    "role": "baseline-only old dev panel action costs",
+    "sha256": "78ba5efb7ee5e7dd343d18abb8edf0e79222c5a375fb57d6bc0e21119fd66fcc",
+    "size_bytes": 260006
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/train_mixture_receipt.json",
+    "role": "historical probability/B_train reference",
+    "sha256": "aafaf408da3e5af7a371a323028a58b40bb6e7bab26c94cbb5a2248a5105bf6b",
+    "size_bytes": 7171
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/dev_predictions_word.npz",
+    "role": "old baseline dev choices/probabilities",
+    "sha256": "48169df5dd7d6d7333313072ef0371072a1d950e58d4b111231be25ffd4e6bf7",
+    "size_bytes": 80508
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/dev_predictions_semantic.npz",
+    "role": "old baseline dev choices/probabilities",
+    "sha256": "f800be3c1601ada85d5e07b002d7cc5a498234e3bbc13c0077904b876cee3f18",
+    "size_bytes": 75724
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/models/word.joblib",
+    "role": "old bundle; only C replaced, R/T/A and costs unchanged",
+    "sha256": "87337b954ea8923284ea1dac08057ef3bf4becd9466b454c4ea6dccee6060ec6",
+    "size_bytes": 785491
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/models/semantic.joblib",
+    "role": "old bundle; only C replaced, R/T/A and costs unchanged",
+    "sha256": "b746a7926b33acb12f5bfe7b0b30f14e9a3975380a1cf9e9772e3d9a5b01296a",
+    "size_bytes": 77539
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/features/row_ids.json",
+    "role": "feature row-ID provenance",
+    "sha256": "90c3325f38dead715272e082a53801d5ccd40eb7b593a734f6f5b1171a099598",
+    "size_bytes": 33381
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/features/word_train.npz",
+    "role": "full-train frozen TF-IDF for C refit only",
+    "sha256": "1980f221b78dc7f05e23050d21e7e91b67a066857aa30a5f7249010f988c3b59",
+    "size_bytes": 373194
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/features/word_validation.npz",
+    "role": "old baseline dev TF-IDF; no OOF use",
+    "sha256": "6d000c7d78ab295f512cb94991403672a7b00b190ce8148ba6d9b74cfe1cd083",
+    "size_bytes": 91937
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/train_cost_panel_matrix.npz",
+    "role": "original train panel action costs",
+    "sha256": "fdcb175c4ed973a7ffa2172e172936d2398911b29031a8b5b639ce71089adc1b",
+    "size_bytes": 497574
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/validation_cost_panel_matrix.npz",
+    "role": "baseline-only old dev panel action costs",
+    "sha256": "5d2400733fd85c1df2518e2e3229fe6ad808611e9b94c25e22bfa5abc006c669",
+    "size_bytes": 260006
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/train_mixture_receipt.json",
+    "role": "historical probability/B_train reference",
+    "sha256": "7f3795a93bfa3fb432491c4b72d102218bba181d250375915b402b59739ece24",
+    "size_bytes": 7132
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/dev_predictions_word.npz",
+    "role": "old baseline dev choices/probabilities",
+    "sha256": "b6a909d8be8026196d4b1e4278ac8727171f6e5e0a72e1f7b507af67aee10c86",
+    "size_bytes": 80508
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/dev_predictions_semantic.npz",
+    "role": "old baseline dev choices/probabilities",
+    "sha256": "69e3e3ede75a10919afe6160e8f3d7303efe787a157d06e6a048d67d617f7f46",
+    "size_bytes": 75724
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/models/word.joblib",
+    "role": "old bundle; only C replaced, R/T/A and costs unchanged",
+    "sha256": "7a61f9445c38124569b70479d832b5664b4faa46d2839f3852b948e266b43082",
+    "size_bytes": 785491
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/small/arc/models/semantic.joblib",
+    "role": "old bundle; only C replaced, R/T/A and costs unchanged",
+    "sha256": "23b2d0d54e32fe407765e8c34a9cfddfb190ca6c57339d6ede3eab1f8cf4c85b",
+    "size_bytes": 77539
+  }
+]

@@ -1,0 +1,3 @@
+task,actual_E2E_panel_N,proxy_full_dev_N,prior_proxy_ms,prior_displayed_proxy_ms,actual_E2E_mean_saving_ms,actual_minus_proxy_ms,actual_minus_displayed_proxy_ms,directional_description,scope
+obqa,128,742,68.32206610626619,68.32,49.88400625370559,-18.4380598525606,-18.4359937462944,proxy偏乐观（实际节省较小）,full-dev arithmetic versus actual panel; difference mixes population and execution/batch boundaries; no hardware causal attribution
+arc,128,299,105.38137622760067,105.38,79.1811328726908,-26.200243354909873,-26.1988671273092,proxy偏乐观（实际节省较小）,full-dev arithmetic versus actual panel; difference mixes population and execution/batch boundaries; no hardware causal attribution

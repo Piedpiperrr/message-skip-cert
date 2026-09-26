@@ -1,0 +1,15 @@
+{
+  "checked": [
+    "table_gold_budget_all15_readable.tex",
+    "17_gold_budget_results.tex",
+    "fragments_preview.tex",
+    "table_gold_budget_summary.tex",
+    "table_gold_budget_all15.tex",
+    "table_gold_budget_summary_readable.tex",
+    "16_gold_budget_protocol.tex"
+  ],
+  "balanced_environments": true,
+  "inputs_exist": true,
+  "compiled": false,
+  "note": "Source checks do not replace TeX layout compilation."
+}

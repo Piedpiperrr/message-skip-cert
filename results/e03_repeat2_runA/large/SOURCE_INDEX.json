@@ -1,0 +1,1324 @@
+[
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/HANDOFF_ZH.md",
+    "bytes": 2249,
+    "sha256": "e55604781058c82435997e0b21bd6113d8b05d5daca9102affc41ddc0f816a39",
+    "role": "direct frozen provenance"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/frozen_config.json",
+    "bytes": 4256,
+    "sha256": "e84c015eb04ef92dfc252917e2f1ae3cfb0e86d2e830bf283afbaba0e9073f22",
+    "role": "direct frozen provenance"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/summary/panel_source_checks.json",
+    "bytes": 3257,
+    "sha256": "565457ad3223db9e15111bf0f1f6d73554a8bbae62a96b58461b370a59216643",
+    "role": "direct frozen provenance"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/summary/panel_cost.csv",
+    "bytes": 13880,
+    "sha256": "f8c917c061303e7c9a11321a2fece4704116b92153c6149dfa4e0f43ff28c233",
+    "role": "direct frozen provenance"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/records/panel_per_question.jsonl",
+    "bytes": 5839682,
+    "sha256": "0800fa7ce047e57f7355f2b402584c4772de998abe5e657c821b549f9e6bf44d",
+    "role": "direct frozen provenance"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/deployments/all.json",
+    "bytes": 3601,
+    "sha256": "959a01ca64c9f9f246a68867bff58913d623a2da65b852bd6db8fbb0612b1e24",
+    "role": "direct frozen provenance"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/src/run_boundaries.py",
+    "bytes": 17328,
+    "sha256": "1b034b11dc2eef167d78cceb6fe76d18936f64585865092b673a5d03b4adb4d7",
+    "role": "direct frozen provenance"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/ALL_ROUTES_FREEZE.json",
+    "bytes": 1243,
+    "sha256": "3d43ac84def188e7fb53ce9ab43fc61610aac38402fb1ed6dd58e001744ebaa5",
+    "role": "direct frozen provenance"
+  },
+  {
+    "path": "$DATA_DIR/P2_E1_E2E_OBQA_20260913T174210Z/native_adapter.py",
+    "bytes": 7895,
+    "sha256": "00d96f8e172f7711d7d5ae6c3f44b44147c599a69ed6cd0c89107b717f3d0591",
+    "role": "direct frozen provenance"
+  },
+  {
+    "path": "$DATA_DIR/P2_E1_E2E_OBQA_20260913T174210Z/execute_e2e.py",
+    "bytes": 16944,
+    "sha256": "e1fa9478111df05ab661fe15bca0f1dc8f3ff5071eae7091fc34ed178ffaa4d4",
+    "role": "direct frozen provenance"
+  },
+  {
+    "path": "$DATA_DIR/P2_E1_E2E_OBQA_20260913T174210Z/frozen_config.json",
+    "bytes": 24511,
+    "sha256": "ecdf9ebb7e20b2ddd7b8a8567f846adccc541e2d533cb287cda24c39b1687b70",
+    "role": "direct frozen provenance"
+  },
+  {
+    "path": "$DATA_DIR/P2_E1_E2E_OBQA_20260913T174210Z/SOURCE_INDEX.json",
+    "bytes": 71765,
+    "sha256": "fcfd86d5b6427b644b1a89239a8a5bf7d24ab9dfcdf6903c13d383c53e415b28",
+    "role": "direct frozen provenance"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/frozen_config.json",
+    "bytes": 193894,
+    "sha256": "0361e5f81a1ad919d2ac7546252fdef0a26552e546fafa478b25539cac6f49ed",
+    "role": "direct frozen provenance"
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/scoring_v2.py",
+    "bytes": 7819,
+    "sha256": "d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9",
+    "role": "direct frozen provenance"
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/labels/panel_development_P2_SCORING_V2.jsonl",
+    "bytes": 1355756,
+    "sha256": "dac016c424a1e2e3428ebd9a9d5ae7e55eea59526eef6ddefd86c1db99ba4ad2",
+    "role": "direct frozen provenance"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/ac_p2_10.py",
+    "resolved_path": "$DATA_DIR/P2_10_20260911T122423Z/ac_p2_10.py",
+    "bytes": 8978,
+    "sha256": "04172b0aa7be629e0f2228bf5029f2e7570da6a86bbe9b3499b780fb45360651",
+    "role": "targeted inherited source or query-only input projection"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/arc_protocol.py",
+    "resolved_path": "$DATA_DIR/P2_10_20260911T122423Z/arc_protocol.py",
+    "bytes": 7654,
+    "sha256": "b88840e37086c82dc6d485fe6ed3777bd99feb9718a47c901b4d4a5ad74ddbbe",
+    "role": "targeted inherited source or query-only input projection"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/arc_runtime_adapter.py",
+    "resolved_path": "$DATA_DIR/P2_10_20260911T122423Z/arc_runtime_adapter.py",
+    "bytes": 425,
+    "sha256": "c6f6127037ec6e3a75aad6c5ccc78e005c95916fd57b89261684e15206d79f76",
+    "role": "targeted inherited source or query-only input projection"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/legacy_methods.py",
+    "resolved_path": "$DATA_DIR/P2_10_20260911T122423Z/legacy_methods.py",
+    "bytes": 25961,
+    "sha256": "91b03c146f56fe151dc399c4202411974afb61c4a195080cf8c54abd584bffdf",
+    "role": "targeted inherited source or query-only input projection"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/protocol_min.py",
+    "resolved_path": "$DATA_DIR/P2_10_20260911T122423Z/protocol_min.py",
+    "bytes": 10393,
+    "sha256": "23c702e16ff5b2bb164ab25ef4e35f4105ac81becb83747c138d222faab2cd35",
+    "role": "targeted inherited source or query-only input projection"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/runtime.py",
+    "resolved_path": "$DATA_DIR/P2_10_20260911T122423Z/runtime.py",
+    "bytes": 5171,
+    "sha256": "a6888586a8bd5f13c62ccc17079f4bd86e34bfa1ada2d804a4d502dfec726514",
+    "role": "targeted inherited source or query-only input projection"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/config.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/config.json",
+    "bytes": 663,
+    "sha256": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+    "role": "helper inherited checkpoint",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/generation_config.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/generation_config.json",
+    "bytes": 243,
+    "sha256": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+    "role": "helper inherited checkpoint",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/merges.txt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/merges.txt",
+    "bytes": 1671839,
+    "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    "role": "helper inherited checkpoint",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model-00001-of-00004.safetensors",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model-00001-of-00004.safetensors",
+    "bytes": 3945441440,
+    "sha256": null,
+    "role": "helper inherited checkpoint",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model-00002-of-00004.safetensors",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model-00002-of-00004.safetensors",
+    "bytes": 3864726352,
+    "sha256": null,
+    "role": "helper inherited checkpoint",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model-00003-of-00004.safetensors",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model-00003-of-00004.safetensors",
+    "bytes": 3864726424,
+    "sha256": null,
+    "role": "helper inherited checkpoint",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model-00004-of-00004.safetensors",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model-00004-of-00004.safetensors",
+    "bytes": 3556377672,
+    "sha256": null,
+    "role": "helper inherited checkpoint",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model.safetensors.index.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/model.safetensors.index.json",
+    "bytes": 27752,
+    "sha256": "624bf7c47cd12468fdc16e38a47cf4f19e0415b859a223ba3c027eed2f0e1028",
+    "role": "helper inherited checkpoint",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/tokenizer.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/tokenizer.json",
+    "bytes": 7031645,
+    "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "role": "helper inherited checkpoint",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/tokenizer_config.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/tokenizer_config.json",
+    "bytes": 7305,
+    "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "role": "helper inherited checkpoint",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/vocab.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct/vocab.json",
+    "bytes": 2776833,
+    "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "role": "helper inherited checkpoint",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+  },
+  {
+    "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/.gitattributes",
+    "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/52373fe24473b1aa44333d318f578ae6bf04b49b",
+    "bytes": 1570,
+    "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+    "role": "receiver inherited checkpoint",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  {
+    "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/LICENSE",
+    "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+    "bytes": 11343,
+    "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "role": "receiver inherited checkpoint",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  {
+    "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/README.md",
+    "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/ecc3ebd0849aa08d9484bd911dddfd5261b10d30",
+    "bytes": 16660,
+    "sha256": "0f36caaff9c2516411a7738db384606263ba653c1e63e61d72f511606164d5a6",
+    "role": "receiver inherited checkpoint",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  {
+    "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/config.json",
+    "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/d46195ac87f837ad233d02b2f80f148bf7c005e0",
+    "bytes": 728,
+    "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+    "role": "receiver inherited checkpoint",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  {
+    "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json",
+    "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/20a8a9156fc8c3f25295ca067f61fdf120d517c5",
+    "bytes": 239,
+    "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+    "role": "receiver inherited checkpoint",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  {
+    "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/merges.txt",
+    "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/31349551d90c7606f325fe0f11bbb8bd5fa0d7c7",
+    "bytes": 1671853,
+    "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "role": "receiver inherited checkpoint",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  {
+    "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/model-00001-of-00005.safetensors",
+    "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/31d6a825ae35f11fb85b195b4c42c146c051e446433125a215336abdf95cbf5f",
+    "bytes": 3996250744,
+    "sha256": null,
+    "role": "receiver inherited checkpoint",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  {
+    "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/model-00002-of-00005.safetensors",
+    "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/5991236cea6fe21f3d43cab0f0e84448734fbbe0789816202989f2ddc9d18282",
+    "bytes": 3993160032,
+    "sha256": null,
+    "role": "receiver inherited checkpoint",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  {
+    "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/model-00003-of-00005.safetensors",
+    "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/c5185c4794be2d8a9784d5753c9922db38df478ce11f9ed0b415b7304d896836",
+    "bytes": 3959604768,
+    "sha256": null,
+    "role": "receiver inherited checkpoint",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  {
+    "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/model-00004-of-00005.safetensors",
+    "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/b5ee7de71fbf17db3d5704e0c8f2bc7d005ca9e1d7ca2aeb19827b0cfcaa917a",
+    "bytes": 3187841392,
+    "sha256": null,
+    "role": "receiver inherited checkpoint",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  {
+    "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/model-00005-of-00005.safetensors",
+    "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/20c2d6366ab85c90786ccdd829cd2b9e7d30ef3b2ebbb998280e7e4014b542ff",
+    "bytes": 1244659840,
+    "sha256": null,
+    "role": "receiver inherited checkpoint",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  {
+    "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/model.safetensors.index.json",
+    "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/2b85c00f1b118961cd7a477e2bba0fe197a4ce1a",
+    "bytes": 32878,
+    "sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc",
+    "role": "receiver inherited checkpoint",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  {
+    "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/tokenizer.json",
+    "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "bytes": 11422654,
+    "sha256": null,
+    "role": "receiver inherited checkpoint",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  {
+    "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/tokenizer_config.json",
+    "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/417d038a63fa3de29cfde265caedae14d1a58d92",
+    "bytes": 9732,
+    "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+    "role": "receiver inherited checkpoint",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  {
+    "path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218/vocab.json",
+    "resolved_path": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/blobs/4783fe10ac3adce15ac8f358ef5462739852c569",
+    "bytes": 2776833,
+    "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "role": "receiver inherited checkpoint",
+    "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/aggregator_config.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/aggregator_config.json",
+    "bytes": 2,
+    "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_0.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_0.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_0.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_0.pt",
+    "bytes": 35718087,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_1.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_1.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_1.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_1.pt",
+    "bytes": 35718087,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_10.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_10.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_10.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_10.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_11.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_11.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_11.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_11.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_12.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_12.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_12.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_12.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_13.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_13.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_13.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_13.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_14.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_14.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_14.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_14.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_15.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_15.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_15.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_15.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_16.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_16.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_16.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_16.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_17.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_17.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_17.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_17.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_18.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_18.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_18.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_18.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_19.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_19.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_19.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_19.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_2.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_2.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_2.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_2.pt",
+    "bytes": 35718087,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_20.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_20.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_20.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_20.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_21.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_21.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_21.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_21.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_22.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_22.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_22.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_22.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_23.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_23.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_23.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_23.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_24.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_24.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_24.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_24.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_25.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_25.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_25.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_25.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_26.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_26.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_26.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_26.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_27.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_27.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_27.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_27.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_28.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_28.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_28.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_28.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_29.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_29.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_29.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_29.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_3.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_3.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_3.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_3.pt",
+    "bytes": 35718087,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_30.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_30.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_30.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_30.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_31.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_31.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_31.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_31.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_32.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_32.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_32.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_32.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_33.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_33.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_33.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_33.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_34.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_34.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_34.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_34.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_35.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_35.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_35.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_35.pt",
+    "bytes": 35718124,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_4.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_4.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_4.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_4.pt",
+    "bytes": 35718087,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_5.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_5.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_5.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_5.pt",
+    "bytes": 35718087,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_6.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_6.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_6.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_6.pt",
+    "bytes": 35718087,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_7.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_7.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_7.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_7.pt",
+    "bytes": 35718087,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_8.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_8.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_8.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_8.pt",
+    "bytes": 35718087,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_9.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_9.json",
+    "bytes": 416,
+    "sha256": "a8ea5efcf705a99af7e515d9b047a67820086ef547d45d5757d7d283199f09c5",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_9.pt",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_9.pt",
+    "bytes": 35718087,
+    "sha256": null,
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_config.json",
+    "resolved_path": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final/projector_config.json",
+    "bytes": 624,
+    "sha256": "d8904f6e5b2d7762b84c7517ccbc900f531755366365e4a97f2f97c5f28d783b",
+    "role": "inherited native fuser",
+    "revision": "f01fc3258b305e280e04c7238f4f2cf31b7dc70d"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/model/projector.py",
+    "bytes": 50952,
+    "sha256": "d4426933c1d788adb3ca4cc5e8ad75ba504b5b2e7d0e996c22a19866869238f6",
+    "role": "official transplanted projector source"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/model/ablation_projector.py",
+    "bytes": 13376,
+    "sha256": "e3c42cadf7d185c99af338d03deac77687e8436127fb250f28724677350e746a",
+    "role": "official transplanted projector source"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/model/wrapper.py",
+    "bytes": 40253,
+    "sha256": "26f5fbab8400f26a29e9a1343ee80698f496e74eb4971f0f835641560e49c72d",
+    "role": "official transplanted projector source"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/model/oracle.py",
+    "bytes": 24227,
+    "sha256": "e1bdf85e6a73d956519353d0a1893887e04b15e6250b76aee15b1698b1e45f78",
+    "role": "official transplanted projector source"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/model/aligner.py",
+    "bytes": 26923,
+    "sha256": "3aeae7edd24c75a501e0a48375ad6ef9fbd7c0200c9358ff549b34ecd198b9a6",
+    "role": "official transplanted projector source"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/runtime_source/rosetta/model/sampling.py",
+    "bytes": 3339,
+    "sha256": "4d035e588efc2a14bc199cbfd643a8d811ac6600392374b8497d108df938abf0",
+    "role": "official transplanted projector source"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/src/receiver_prompt.py",
+    "bytes": 2626,
+    "sha256": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66",
+    "role": "exact frozen query formatter"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/protocol/large/PROBE_PROTOCOL_FREEZE.json",
+    "bytes": 959,
+    "sha256": "fe2902048571528f2946614d55c504f30170d2c1e1764e5932b3ada714c01ace",
+    "role": "frozen tokenizer/probe protocol"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/protocol/large/chat_template.jinja",
+    "bytes": 4168,
+    "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+    "role": "frozen tokenizer/probe protocol"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/protocol/large/token_decode_mapping.jsonl",
+    "bytes": 1074,
+    "sha256": "b50d9d3316d3dd679000c90cf8d2d94da1a91c21dc9ef907716a9c489ac92d27",
+    "role": "frozen tokenizer/probe protocol"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/protocol/large/label_token_sets.json",
+    "bytes": 207,
+    "sha256": "3a167b79464314e00ce9cb6a92e2fe121829e9808a5f7894211c080eb7a382ac",
+    "role": "frozen tokenizer/probe protocol"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/protocol/large/FIRST_INPUT_CHECK.json",
+    "bytes": 5387,
+    "sha256": "33ff9c897d64cb7e1de521ac898f8662860d70e8652ff5be299f79ee661c3e6e",
+    "role": "frozen tokenizer/probe protocol"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/protocol/large/prefix_ids.json",
+    "bytes": 230,
+    "sha256": "4947bce493a63335a402c84ef1bc327ca0dddc281ef07980fe902a574aac8899",
+    "role": "frozen tokenizer/probe protocol"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/inputs/obqa_panel_ids.json",
+    "bytes": 5298,
+    "sha256": "37aeeffcb1fec43da584b020227ec756d20eb4661f1b91e48bb360f385865666",
+    "role": "original panel identity"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/inputs/obqa_dev_queries.jsonl",
+    "bytes": 168630,
+    "sha256": "23c6a8039b63d176a63c820114a20def2ce6a785d8b8cd86a3b510ed68928094",
+    "role": "label-free queries"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/dev_cost_panel_matrix.npz",
+    "bytes": 209318,
+    "sha256": "0f0f5e37d0b0ae5d38b82b8e86b4d9ccbcd2de1a5c746f1d4148622e4180a0bd",
+    "role": "same-block historical full action requests"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/dev_cost_panel_originals.jsonl",
+    "bytes": 642758,
+    "sha256": "b035e5fc2ce88f5e1036b5f028024cd4dd0d6ee5bd68279be88da5331c978522",
+    "role": "same-block historical full action requests"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/obqa/train_cost_panel_matrix.npz",
+    "bytes": 424870,
+    "sha256": "0b9a3f11cfe963f477ffd88139f3171d070ca2d1317ebd1d15a3342c6d913b88",
+    "role": "frozen train c_ref source"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/deployments/large_obqa_T.json",
+    "bytes": 633,
+    "sha256": "6f4f7baa8054e9e6e50397d07492408d0e381bdee3c45a526a8a877b7441814b",
+    "role": "unchanged frozen deployment"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/deployments/large_obqa_T_FREEZE.json",
+    "bytes": 486,
+    "sha256": "b4c6f39aa07072d047b52feacb93410b60fcd1809cd30c76ae7e7af0534dcdfa",
+    "role": "unchanged frozen deployment"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/deployments/large_obqa_T_ROUTES_FREEZE.json",
+    "bytes": 347,
+    "sha256": "93b446f0d5eda9d3beb59f1aef78bdcec34930830df298d2300b92e083c551f2",
+    "role": "unchanged frozen deployment"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/records/large_obqa_T_routes.jsonl",
+    "bytes": 253925,
+    "sha256": "656e91e2891923232844bbf79f3fcf8e614a6143c31dabe4e3e79849e32b38da",
+    "role": "frozen per-id score/input hash/route identity"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/deployments/large_obqa_C.json",
+    "bytes": 660,
+    "sha256": "507a9c099e1836ab75cad162605a86f7e4dfd97d3bed1e8823d1a4f13dab641e",
+    "role": "unchanged frozen deployment"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/deployments/large_obqa_C_FREEZE.json",
+    "bytes": 486,
+    "sha256": "6433e3359dec8a56b65db63385aad50a3a8154dded1fe870ca135841b1729586",
+    "role": "unchanged frozen deployment"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/deployments/large_obqa_C_ROUTES_FREEZE.json",
+    "bytes": 344,
+    "sha256": "850e17e442d432c12794d2ce4d627f9d477b03fea4ce3965869245d98f830411",
+    "role": "unchanged frozen deployment"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/records/large_obqa_C_routes.jsonl",
+    "bytes": 251763,
+    "sha256": "37ba9265fe3557fde54bc17b355fbbade55cbab472eec6281995f283a29232ed",
+    "role": "frozen per-id score/input hash/route identity"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/inputs/arc_panel_ids.json",
+    "bytes": 9090,
+    "sha256": "513e403c67c8192c3685701f633512cd09340d621972bb12c76b163636745894",
+    "role": "original panel identity"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/inputs/arc_dev_queries.jsonl",
+    "bytes": 110723,
+    "sha256": "b550cf4db8635d3c3926bc7c90643794f071bb16a8ed10b112d2399a04c4657f",
+    "role": "label-free queries"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/validation_cost_panel_matrix.npz",
+    "bytes": 260006,
+    "sha256": "78ba5efb7ee5e7dd343d18abb8edf0e79222c5a375fb57d6bc0e21119fd66fcc",
+    "role": "same-block historical full action requests"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/validation_cost_panel_originals.jsonl",
+    "bytes": 658881,
+    "sha256": "6d387f5a38a22783dff5af23df179c754882d6659daacfec30e9e7c21b36ac13",
+    "role": "same-block historical full action requests"
+  },
+  {
+    "path": "$DATA_DIR/P2_10_20260911T122423Z/results/large/arc/train_cost_panel_matrix.npz",
+    "bytes": 497574,
+    "sha256": "dfec8e5651764a9fd5433aa36cd3810c5e260adbbeaaf3ea94def629efaa54be",
+    "role": "frozen train c_ref source"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/deployments/large_arc_T.json",
+    "bytes": 688,
+    "sha256": "30028f08c5423f324ec9762e9a91d2228bcbd0ad4decd2ea067a3c2f615a865c",
+    "role": "unchanged frozen deployment"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/deployments/large_arc_T_FREEZE.json",
+    "bytes": 483,
+    "sha256": "8d9c31d3b299cb374f942174d2a19201cf422dad787b84df06b9eaa1f8c40f53",
+    "role": "unchanged frozen deployment"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/deployments/large_arc_T_ROUTES_FREEZE.json",
+    "bytes": 342,
+    "sha256": "8ec9b22f33d768ec0e83d7b549c2362846f70d92ce087e73ca3d01f1134a0422",
+    "role": "unchanged frozen deployment"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/records/large_arc_T_routes.jsonl",
+    "bytes": 102774,
+    "sha256": "6ee84fd27762b5abf96a905fbcf5aa122ce86dcae900a629e2aabefedebb86fb",
+    "role": "frozen per-id score/input hash/route identity"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/deployments/large_arc_C.json",
+    "bytes": 679,
+    "sha256": "a3391054c494b06edab5e67df330283ea611f34db5cdf2c14953c593221a18b5",
+    "role": "unchanged frozen deployment"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/deployments/large_arc_C_FREEZE.json",
+    "bytes": 483,
+    "sha256": "eca63c67df60541b1b6b46bfaacc3d5f4e30ba2e13b396c2f4835fb574a7f210",
+    "role": "unchanged frozen deployment"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/deployments/large_arc_C_ROUTES_FREEZE.json",
+    "bytes": 342,
+    "sha256": "56b05b45fdcabbeb9b25d7177fef20880fae43ff9562645395df9a1edf64b118",
+    "role": "unchanged frozen deployment"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/records/large_arc_C_routes.jsonl",
+    "bytes": 102681,
+    "sha256": "2172d096a8c470e4735e60c2ed65eb4b746930b9c7f9bcc549f0dd63c70bbe22",
+    "role": "frozen per-id score/input hash/route identity"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/reference_preserving.tex",
+    "bytes": 96,
+    "sha256": "cbb9c836aac4e5f3640aca1a3a42e4a509b45485708e3991717fc3b71d8d81ce",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/table_acquisition.tex",
+    "bytes": 387,
+    "sha256": "9f914b056d842654fa8ed98ce2eb9345b7ef0058935342335eb71afe5b08caf2",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/methods.tex",
+    "bytes": 11033,
+    "sha256": "25b1d896f028e9dae26b8f4346dc371a7bec280da5cea54175b14103be75e50b",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/refs_binary.bib",
+    "bytes": 365,
+    "sha256": "4b88ebe9ca320a4c2d939bc5cfe522dc46f0c8e41962b9c828dda95145973d6f",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/table_calibration.tex",
+    "bytes": 514,
+    "sha256": "8fe500d14a8c4edadaa0885f81f1c7bed47e54eb2ffce5aa3e4a4e01c94e0332",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/boundary_appendix.tex",
+    "bytes": 26670,
+    "sha256": "54800b594df21750f6c69fc84a936492890f3c163ec7d9a88e9e5b17e0e676f5",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/results.tex",
+    "bytes": 7644,
+    "sha256": "4e0e331abd8b02136ef05e8810352f9b37a34eee06b3de241246aca837531f58",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/boundary_methods.tex",
+    "bytes": 3315,
+    "sha256": "457bab1f97919ef1333c4b55a0f9106731fded3fdcdbb29d2b41152d8d9168e7",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/table_calibration_all.tex",
+    "bytes": 6749,
+    "sha256": "80dd2bfe9fcb94e60834d0e7eedd6fe4baa8aa4579be5897f8a748424d766f4c",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/table_dev_diagnostics.tex",
+    "bytes": 872,
+    "sha256": "af031959516dc46ed36e4a82b24ae0170b446be87054c3b6ec22d239ed5efa3b",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/appendix.tex",
+    "bytes": 4215,
+    "sha256": "5d414c21b4b9e5d83cb5c220313f660e975abc903203fab2fa9a47aa630519eb",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/table_historical_e2e.tex",
+    "bytes": 448,
+    "sha256": "d98195b1f4d97cf127350ab855fbbca73c2d19df8617c3737565b27cdc5fbe32",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/boundary_cost_limitations.tex",
+    "bytes": 3579,
+    "sha256": "764bb7f4b0a28196e691a678e916fa6895431d2b97b5da3bfc8c0da1bf445dfc",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/table_bootstrap.tex",
+    "bytes": 918,
+    "sha256": "fbd7d1de21bf5903cd5b831e5e8b93e329902c50f1a70f957f1a50418e108581",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/limitations.tex",
+    "bytes": 1829,
+    "sha256": "a3024bfc3f13e0404aec6f90592d056184c10830ec2752fa74d156aab0e14e3e",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/boundary_results.tex",
+    "bytes": 7829,
+    "sha256": "a78dce9ee069e939c0e3a8464b5b5339b0c6da2b3348f6d1651845f770e76b44",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/boundary_main_table.tex",
+    "bytes": 844,
+    "sha256": "447040380f6ab9748c51bac51f8346786408657bdf700724d216605580931a61",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/supervision.tex",
+    "bytes": 4442,
+    "sha256": "fcab877dca037680db668a19b6d6cf70ec24506be34bc1f380891eba4ee3f768",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/table_ranking.tex",
+    "bytes": 328,
+    "sha256": "38950e3d7fdb42123bfdecd7c12e0fca687168114d9807b652a761636df049a2",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/boundary_panel_table.tex",
+    "bytes": 863,
+    "sha256": "eec4056616260085fdefd8f8a5b091c3c0aef0d558871c59ddbbdbb04492e894",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/table_gold_all15.tex",
+    "bytes": 1158,
+    "sha256": "24d543ed6d31bc9e73c307b7d3d74d58fecc76d3a4f89a9a866ebcb963bbd19e",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/manuscript.tex",
+    "bytes": 348,
+    "sha256": "f7b2e619ccecb9585f363bf286657a41b9b31a0a502093ed609467c658e1847a",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/table_main.tex",
+    "bytes": 601,
+    "sha256": "e059cfecb092ab72fee35ab5525b53e49dea35a76ffb7f8e3b7dae54dcebae30",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/paper/contribution_positioning.tex",
+    "bytes": 966,
+    "sha256": "08258b99fad7f3c820637a02d95c819ec2568d68c26eedfd40370f61de726480",
+    "role": "continuation of accepted manuscript"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/figures/reference_boundaries.pdf",
+    "bytes": 28138,
+    "sha256": "85be227dd165006275e728afe2b23bd67905c56ca5d7cd16de3844f88752f013",
+    "role": "unchanged boundary figure"
+  },
+  {
+    "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/figures/reference_boundaries.png",
+    "bytes": 171398,
+    "sha256": "a713c03909cb71885313de30f4af83cbd3494170afd32f54f7028d45461c120c",
+    "role": "unchanged boundary figure"
+  }
+]

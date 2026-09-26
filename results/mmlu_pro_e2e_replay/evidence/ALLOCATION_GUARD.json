@@ -1,0 +1,26 @@
+{
+  "utc": "2026-09-16T21:49:29.571361+00:00",
+  "job_id": "run016",
+  "checks": {
+    "current_job_state_R": true,
+    "current_user": true,
+    "account_project": true,
+    "queue_gpu_queue": true,
+    "nodect_1": true,
+    "requested_ngpus_2": true,
+    "allocated_ngpus_2": true,
+    "assigned_host_matches_process": true,
+    "exec_host_matches_process": true,
+    "PBS_nodefile_matches_process": true,
+    "fsreq_home_sharedfs": true,
+    "stage2_walltime_cap": true
+  },
+  "assigned_vnodes": [
+    {
+      "node": "ClusterB-gpu-02",
+      "ngpus": 2
+    }
+  ],
+  "status": "PASS",
+  "walltime_seconds": 3600
+}

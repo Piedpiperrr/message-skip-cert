@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-15T21:10:25.499883+00:00",
+  "groups": [
+    {
+      "task": "obqa",
+      "N": 128,
+      "arithmetic": "PASS",
+      "independent_scalar_bootstrap": "PASS",
+      "rotation_64_64": "PASS",
+      "fixed_threshold_application": "PASS",
+      "output_identity_accounting": "PASS",
+      "gate": "E2E_POSITIVE"
+    },
+    {
+      "task": "arc",
+      "N": 128,
+      "arithmetic": "PASS",
+      "independent_scalar_bootstrap": "PASS",
+      "rotation_64_64": "PASS",
+      "fixed_threshold_application": "PASS",
+      "output_identity_accounting": "PASS",
+      "gate": "E2E_POSITIVE"
+    }
+  ],
+  "complete_requests": 512,
+  "online_probes": 256,
+  "fixed_requests": 256,
+  "policy_requests": 256,
+  "paired_questions": 256,
+  "retries": 0,
+  "first_formal_request_retained": true,
+  "paired_bootstrap_seed": 0,
+  "paired_bootstrap_resamples": 2000,
+  "same_allocation_and_residency": true,
+  "source_hashes_and_mtimes_unchanged": true,
+  "independent_arithmetic": true,
+  "gold_after_replay": true,
+  "new_calibration": 0,
+  "new_thresholds": 0,
+  "new_gold_generation": 0,
+  "ARC_test_reads": 0,
+  "Text_replays": 0,
+  "small_large_replays": 0,
+  "utility_computed": false,
+  "identity_mismatch_rows": 0,
+  "identity_mismatches_retained": true
+}

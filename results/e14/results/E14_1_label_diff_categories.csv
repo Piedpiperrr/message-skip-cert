@@ -1,0 +1,5 @@
+policy,output,category,category_name,transition,output_pattern,official_branch,V2_to_official,count,label
+large/ARC/C2C,reference,C2,"option text with a math substring (tan/sin/""/"")",label->INVALID,leading_label_then_option_text,blocked_by_math_substring,A->INVALID,8,"POST-HOC re-analysis (E14, PREREG_E14.md); descriptive, not a new certificate"
+large/ARC/C2C,reference,C2,"option text with a math substring (tan/sin/""/"")",label->INVALID,leading_label_then_option_text,blocked_by_math_substring,B->INVALID,17,"POST-HOC re-analysis (E14, PREREG_E14.md); descriptive, not a new certificate"
+large/ARC/C2C,reference,C2,"option text with a math substring (tan/sin/""/"")",label->INVALID,leading_label_then_option_text,blocked_by_math_substring,C->INVALID,5,"POST-HOC re-analysis (E14, PREREG_E14.md); descriptive, not a new certificate"
+large/ARC/C2C,reference,C2,"option text with a math substring (tan/sin/""/"")",label->INVALID,leading_label_then_option_text,blocked_by_math_substring,D->INVALID,14,"POST-HOC re-analysis (E14, PREREG_E14.md); descriptive, not a new certificate"

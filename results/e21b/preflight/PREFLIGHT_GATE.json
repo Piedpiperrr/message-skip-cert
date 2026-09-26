@@ -1,0 +1,71 @@
+{
+  "utc": "2026-09-22T07:17:43.472658+00:00",
+  "P1": {
+    "arc": {
+      "rows": 16,
+      "duplicates": 0,
+      "missing": [],
+      "hard": {},
+      "identical": {
+        "T_helper": 16,
+        "T": 16,
+        "C": 16
+      },
+      "mismatches": [],
+      "u_absdiff_max": 0.0,
+      "u_bitwise": 16
+    },
+    "obqa": {
+      "rows": 16,
+      "duplicates": 0,
+      "missing": [],
+      "hard": {},
+      "identical": {
+        "T_helper": 16,
+        "T": 16,
+        "C": 16,
+        "TF_helper": 16,
+        "TF": 16
+      },
+      "mismatches": [],
+      "u_absdiff_max": 0.0,
+      "u_bitwise": 16
+    }
+  },
+  "P2": {
+    "arc": {
+      "rows": 44,
+      "failures": []
+    },
+    "obqa": {
+      "rows": 16,
+      "failures": []
+    }
+  },
+  "P3": {
+    "arc": {
+      "rows": 16,
+      "duplicates": 0,
+      "missing": 0,
+      "invalid": {
+        "R": 0,
+        "T": 0,
+        "C": 0
+      }
+    },
+    "obqa": {
+      "rows": 16,
+      "duplicates": 0,
+      "missing": 0,
+      "invalid": {
+        "R": 0,
+        "T": 0,
+        "C": 1,
+        "TF": 0
+      }
+    }
+  },
+  "stop_reasons": [],
+  "verdict": "PASS",
+  "gold_read": false
+}

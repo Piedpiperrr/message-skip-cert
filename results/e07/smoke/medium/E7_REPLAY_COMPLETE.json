@@ -1,0 +1,24 @@
+{
+  "utc": "2026-09-19T23:27:40.679732+00:00",
+  "status": "COMPLETE",
+  "kind": "medium",
+  "smoke": true,
+  "job_id": "run008",
+  "complete_requests": 32,
+  "policies": 2,
+  "questions_per_panel": 4,
+  "arms": [
+    "fixed",
+    "original",
+    "reuse",
+    "argmax"
+  ],
+  "probe_requests": 24,
+  "requests_sha256": "e04cdea1a27c6b59f0e53c98d6f6c4aa2c9cd90c59e3c384365f5d339a1f8aa0",
+  "attempts_sha256": "b33904fa28ffb024add5083c22a1716100d42ceaa80052d9745cbc6311ef7598",
+  "gold_read": false,
+  "retries": 0,
+  "warmup": 0,
+  "analysis_performed": false,
+  "elapsed_seconds": 8.28705857694149
+}

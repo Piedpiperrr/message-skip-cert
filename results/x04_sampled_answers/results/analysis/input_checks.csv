@@ -1,0 +1,3 @@
+setting,greedy_q_reproduced,paper_greedy_q,ok_q,dev_u0,paper_dev_u0,ok_u0,seeds_ok,runtime_errors
+large/obqa/Text sampled,0.8,0.8,True,354/742,354/742,True,True,0
+large/arc/Text sampled,0.95,0.95,True,217/299,217/299,True,True,0

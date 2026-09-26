@@ -1,0 +1,4 @@
+split,N,d_count,d_rate,R_correct,Text_correct,both_INVALID,R_only_INVALID,Text_only_INVALID,both_valid,Text_to_R_benefit,Text_to_R_harm,neutral_change
+fit,2100,203,0.09666666666666666,1717,1800,0,2,1,2097,46,129,28
+cal,1366,143,0.10468521229868229,1113,1178,0,2,0,1364,25,90,28
+dev,742,72,0.09703504043126684,617,645,0,0,0,742,18,46,8

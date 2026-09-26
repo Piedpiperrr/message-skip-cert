@@ -1,0 +1,78 @@
+{
+  "utc": "2026-09-20T03:35:52.825169+00:00",
+  "basis": "validation job 7638148 measured 16 MMLU-Pro fit rows per pair, rescaled to the whole population by the large-pair per-action ratio between those same 16 ids and all 12,032 rows",
+  "source_validation_job": "run024",
+  "large_same_16_ids_mean_ms": {
+    "R": 254.2,
+    "T": 1270.6,
+    "C": 465.3,
+    "P": 45.9
+  },
+  "large_all_rows_mean_ms": {
+    "R": 275.3,
+    "T": 1297.8,
+    "C": 377.7,
+    "P": 46.1
+  },
+  "population_correction_per_action": {
+    "R": 1.083,
+    "T": 1.0213,
+    "C": 0.8116,
+    "P": 1.0031
+  },
+  "per_pair": [
+    {
+      "pair": "small",
+      "measured_16row_seconds_per_row": 2.2326,
+      "measured_mean_latency_ms": {
+        "R": 360.2,
+        "T": 1234.7,
+        "C": 610.8,
+        "P": 26.9
+      },
+      "population_corrected_seconds_per_row": 2.1739,
+      "projected_pair_wall_hours": 7.266,
+      "productive_GPU_hours": 14.531
+    },
+    {
+      "pair": "medium",
+      "measured_16row_seconds_per_row": 2.2662,
+      "measured_mean_latency_ms": {
+        "R": 188.2,
+        "T": 1401.4,
+        "C": 649.6,
+        "P": 27.0
+      },
+      "population_corrected_seconds_per_row": 2.1894,
+      "projected_pair_wall_hours": 7.318,
+      "productive_GPU_hours": 14.635
+    }
+  ],
+  "totals": {
+    "pair_wall_hours": 14.583,
+    "productive_GPU_hours": 29.17
+  },
+  "packing": {
+    "walltime_cap_seconds": 3000,
+    "startup": {
+      "import_seconds": 66.5,
+      "model_load_seconds_small": 48.5,
+      "model_load_seconds_medium": 89.9,
+      "mechanical_smoke_seconds": 15,
+      "deadline_margin_seconds": 150,
+      "stop_margin_seconds": 60
+    },
+    "usable_seconds_per_slot_per_job": 2619,
+    "slots_per_job": 4,
+    "main_debug_jobs_estimated": 6,
+    "allocated_GPU_hours_if_that_many": 40.0
+  },
+  "gate": {
+    "limit_GPU_hours": 30,
+    "limit_debug_jobs_for_main_runs": 6,
+    "productive_GPU_hours": 29.17,
+    "main_debug_jobs": 6,
+    "within_limits": true,
+    "convention": "productive GPU-hours, per the recorded budget authorization"
+  }
+}

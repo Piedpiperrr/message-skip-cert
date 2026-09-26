@@ -1,0 +1,10 @@
+policy,reference,metric,difference,CI95_descriptive_low,CI95_descriptive_high,replicates,seed,interpretation
+ProbeMax,D,accuracy,-0.006738544474393482,-0.018867924528301883,0.005390835579514808,2000,0,descriptive on exposed population; fixed models/thresholds; no equivalence/noninferiority
+ProbeMax,D,mean_cost_ms,-336.2294841863639,-364.3506726079878,-308.41185777855395,2000,0,descriptive on exposed population; fixed models/thresholds; no equivalence/noninferiority
+ProbeMax,D,U,0.006072027129951474,-0.005660303974825842,0.018319751235951778,2000,0,descriptive on exposed population; fixed models/thresholds; no equivalence/noninferiority
+ProbeEntropy,D,accuracy,-0.005390835579514808,-0.01752021563342321,0.006738544474393482,2000,0,descriptive on exposed population; fixed models/thresholds; no equivalence/noninferiority
+ProbeEntropy,D,mean_cost_ms,-336.45405133801506,-364.19041390592685,-308.0686904991699,2000,0,descriptive on exposed population; fixed models/thresholds; no equivalence/noninferiority
+ProbeEntropy,D,U,0.0074282921857597994,-0.004056085352890764,0.019045734472226756,2000,0,descriptive on exposed population; fixed models/thresholds; no equivalence/noninferiority
+WordD,D,accuracy,0.0026954177897574594,-0.0040431266846361336,0.009433962264150941,2000,0,descriptive on exposed population; fixed models/thresholds; no equivalence/noninferiority
+WordD,D,mean_cost_ms,178.59774053534773,153.13714363141347,203.91256445024268,2000,0,descriptive on exposed population; fixed models/thresholds; no equivalence/noninferiority
+WordD,D,U,-0.004109277369676367,-0.01045709390967742,0.002692834959839464,2000,0,descriptive on exposed population; fixed models/thresholds; no equivalence/noninferiority

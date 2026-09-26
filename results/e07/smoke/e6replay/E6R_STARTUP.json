@@ -1,0 +1,13 @@
+{
+  "utc": "2026-09-19T23:29:10.255468+00:00",
+  "job_id": "run008",
+  "startup_wall_seconds": 82.40617564786226,
+  "load_seconds": {
+    "helper": 12.263635745970532,
+    "receiver": 56.80473991506733,
+    "fusers": 13.263361665885895
+  },
+  "flag_off_byte_identical_5_panel_rows": true,
+  "warmup_requests": 0,
+  "one_residency": true
+}

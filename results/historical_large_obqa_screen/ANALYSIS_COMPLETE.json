@@ -1,0 +1,16 @@
+{
+  "utc": "2026-09-14T04:54:57.169909+00:00",
+  "files": {
+    "summary/main_dev.csv": "e398df53b3fcc7833a9e8f4046954277612c85e6e6a38f7c4c0a673c21e7ea07",
+    "summary/populations.json": "4d206b24aa06b13578a92f20c39be5ae941815d16f680bd78a868ac6facca40d",
+    "summary/ranking.csv": "27bec285c8aa9b524e471a719cb29e3fa6607c09b422de8b955b628995220a75",
+    "summary/grid_curves.csv": "494df22bc3bd12b9c4db822e842f0645d592f644adf13dcea2f900a0f48cd2c3",
+    "summary/paired_bootstrap.csv": "1b94b5ffbab60af1395b35063b364df8c79dbd5645a3bd19fd0c787cd71d49e4",
+    "records/dev_per_question.jsonl": "decfe6d1a02e0c531d6111be06fe3fae4b2f6f60f678cdd568feec14f1a0cd76",
+    "evidence/NUMERICAL_VALIDATION.json": "b81fd05ab7504d85a45040ad06847415f21af4a5d4357424d7a532348340a387"
+  },
+  "N": 742,
+  "heads": 4,
+  "calibration_tests": 100,
+  "deployments": 5
+}

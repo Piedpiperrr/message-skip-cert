@@ -1,0 +1,14 @@
+{
+  "status": "OOF_FOLD_COMPLETE",
+  "pair": "large",
+  "dataset": "obqa",
+  "family": "semantic",
+  "fold": 4,
+  "n_fit": 2773,
+  "n_heldout": 693,
+  "fit_panel_n": 202,
+  "protocol_sha256": "41239823e728796dd108aae24cc48401ec8093c38aca16f7a30a1352145ef797",
+  "prediction_sha256": "567d32c297a5c7f7f33b330054b0f6ec09ccfd82e00293ff3b8a40fb6b64169a",
+  "dev_used": false,
+  "full_train_pretrained_heads_used": false
+}

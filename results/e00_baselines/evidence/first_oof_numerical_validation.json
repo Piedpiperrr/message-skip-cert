@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "pair": "large",
+  "dataset": "obqa",
+  "family": "word",
+  "fold": 0,
+  "formal_fold_reused": true,
+  "head_probability_checks": "each official head receipt",
+  "split_disjoint": true,
+  "labels_and_direction_recomputed": true,
+  "cost_panel_membership_and_mean_checked": true,
+  "all_first_fold_choices_scalar_verified": true,
+  "training_only_IDF_recomputed_without_refitting": true,
+  "no_new_fit": true,
+  "CPU_in_main_ledger": true
+}

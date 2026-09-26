@@ -1,0 +1,10 @@
+{
+  "utc": "2026-09-14T04:55:08.708705+00:00",
+  "job_id": "screen-run01",
+  "heads": 4,
+  "calibration_tests": 100,
+  "dev": 742,
+  "new_prefill_attempts": 742,
+  "new_prefill_success": 742,
+  "CPU_with_reserve": 158.172164
+}

@@ -1,0 +1,157 @@
+{
+  "official_C2C_commit": "113c3a9b2538cbf096a0477e1ec99ae2a2e0d12a",
+  "official_C2C_remote": "https://github.com/thu-nics/C2C.git",
+  "official_checked_files_worktree_clean": true,
+  "files": [
+    {
+      "path": "$DATA_DIR/P2_SUBMISSION_MANUSCRIPT_V4_MEDIUM_INTEGRATION_20260915T213129Z/HANDOFF_ZH.md",
+      "sha256": "6e0782bdbe172311d54b2670a8e8c2d9a1d367119965179dd9dee496d933e486",
+      "bytes": 2462
+    },
+    {
+      "path": "$DATA_DIR/P2_SUBMISSION_MANUSCRIPT_V4_MEDIUM_INTEGRATION_20260915T213129Z/REPORT_ZH.md",
+      "sha256": "43934012ab5ffc9bb086c61195d6afcc4f28ce3000034dddaea2a6f4b979cc5e",
+      "bytes": 12666
+    },
+    {
+      "path": "$DATA_DIR/P2_SUBMISSION_MANUSCRIPT_V4_MEDIUM_INTEGRATION_20260915T213129Z/SHA256SUMS",
+      "sha256": "a007cff120c7c0451bdfe2f1622ad1694b1252fc697e7b0f174a5910bec8af82",
+      "bytes": 9615
+    },
+    {
+      "path": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/HANDOFF_ZH.md",
+      "sha256": "7aea02555099295e2adcf4907ebb870297dde715ad17397b971fb24f96c80c43",
+      "bytes": 3363
+    },
+    {
+      "path": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/RESOURCE_LEDGER.json",
+      "sha256": "e34027b0c2db6f1ffe951b777791569dbef6ef54a4919de992793db3db287a91",
+      "bytes": 1739
+    },
+    {
+      "path": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/MODEL_SOURCE_INDEX.json",
+      "sha256": "11f8789adab64771a5d591e911728f539aa6f402a68cd4d65fd8ebc5fec837af",
+      "bytes": 53407
+    },
+    {
+      "path": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/RUNTIME_SOURCE_INDEX.json",
+      "sha256": "5bb03f4a7386d624fc1168145c2e7cee5eaba5afe067957375fc9f87f8bf0ef0",
+      "bytes": 4195
+    },
+    {
+      "path": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/summary/runtime_diagnostics.csv",
+      "sha256": "eb699ea3de460cbf7c5b6ee1e54625c10e6c77dd11727d7c94c15cb5deeb9edd",
+      "bytes": 4967
+    },
+    {
+      "path": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/src/native_runtime.py",
+      "sha256": "a585b34ae0e50db66b7e0f6adc158306a6029706628952adc55b451a4cdaacc0",
+      "bytes": 10396
+    },
+    {
+      "path": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/src/risk.py",
+      "sha256": "ff70ae8735a191e347a7d7117d3baadf591989fe73f172524aacbed3b2f371e7",
+      "bytes": 1502
+    },
+    {
+      "path": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/src/analyze.py",
+      "sha256": "df6089bc29bfe21ee8cd61795c23d6e8e181a36cf0256c4b7de85a27df5388ad",
+      "bytes": 8601
+    },
+    {
+      "path": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/protocol/receiver_prompt.py",
+      "sha256": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66",
+      "bytes": 2626
+    },
+    {
+      "path": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/protocol/scoring_v2.py",
+      "sha256": "d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9",
+      "bytes": 7819
+    },
+    {
+      "path": "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/HANDOFF_ZH.md",
+      "sha256": "36d1f977bb5cdbdd78648d9394b149dcb04180a231a3f81f454ab73864ecde9b",
+      "bytes": 2542
+    },
+    {
+      "path": "$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/REPORT_ZH.md",
+      "sha256": "23d9cfafef6ce6ede8f4df7d430a59d352c0e5896eaa3c468d99b555e18a6b8a",
+      "bytes": 10029
+    },
+    {
+      "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/HANDOFF_ZH.md",
+      "sha256": "e55604781058c82435997e0b21bd6113d8b05d5daca9102affc41ddc0f816a39",
+      "bytes": 2249
+    },
+    {
+      "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/frozen_config.json",
+      "sha256": "e84c015eb04ef92dfc252917e2f1ae3cfb0e86d2e830bf283afbaba0e9073f22",
+      "bytes": 4256
+    },
+    {
+      "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/PROBE_PROTOCOL_ZH.md",
+      "sha256": "9e94984c95c25ee7f48f5458f11a65e45eb4fb00e21448dd13f28da93ccd7137",
+      "bytes": 2477
+    },
+    {
+      "path": "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/summary/probe_timing.csv",
+      "sha256": "3ee3ad14d96c96d0bd367b11f85b517884a7dffe604a51546ed3751f7c99d3e6",
+      "bytes": 17129
+    },
+    {
+      "path": "$DATA_DIR/P2_10_20260911T122423Z/frozen_config.json",
+      "sha256": "0361e5f81a1ad919d2ac7546252fdef0a26552e546fafa478b25539cac6f49ed",
+      "bytes": 193894
+    },
+    {
+      "path": "$DATA_DIR/P2_10_20260911T122423Z/legacy_methods.py",
+      "sha256": "91b03c146f56fe151dc399c4202411974afb61c4a195080cf8c54abd584bffdf",
+      "bytes": 25961
+    },
+    {
+      "path": "$DATA_DIR/P2_10_20260911T122423Z/protocol_min.py",
+      "sha256": "23c702e16ff5b2bb164ab25ef4e35f4105ac81becb83747c138d222faab2cd35",
+      "bytes": 10393
+    },
+    {
+      "path": "$DATA_DIR/P2_10_20260911T122423Z/arc_runtime_adapter.py",
+      "sha256": "c6f6127037ec6e3a75aad6c5ccc78e005c95916fd57b89261684e15206d79f76",
+      "bytes": 425
+    },
+    {
+      "path": "$DATA_DIR/P2_10_20260911T122423Z/arc_protocol.py",
+      "sha256": "b88840e37086c82dc6d485fe6ed3777bd99feb9718a47c901b4d4a5ad74ddbbe",
+      "bytes": 7654
+    },
+    {
+      "path": "$DATA_DIR/P2_10_20260911T122423Z/runtime.py",
+      "sha256": "a6888586a8bd5f13c62ccc17079f4bd86e34bfa1ada2d804a4d502dfec726514",
+      "bytes": 5171
+    },
+    {
+      "path": "$DATA_DIR/c2c_reproduction_assets/official_C2C/script/evaluation/unified_evaluator.py",
+      "sha256": "ea198b74544a1008de876ea6f163e8466dc242f2ddb7af59d64a76524ea49c27",
+      "bytes": 90361
+    },
+    {
+      "path": "$DATA_DIR/c2c_reproduction_assets/official_C2C/recipe/eval_recipe/unified_eval.yaml",
+      "sha256": "a1e0497962f4458abfc5d6a9a662d09bfca28f6a9a33b9f0b7f43d8f4a8c72aa",
+      "bytes": 1840
+    },
+    {
+      "path": "$DATA_DIR/c2c_reproduction_assets/official_C2C/rosetta/utils/evaluate.py",
+      "sha256": "b341338aecf1cf07a5cb61664b8dac5f2ff96b32622e54eb37b32604deeddf16",
+      "bytes": 26938
+    },
+    {
+      "path": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_20260915T152640Z/evidence/pbs/queue_configuration.txt",
+      "sha256": "bbc7ac75ea1f60b1b122793e4210156a4a55e158659598e70961ed2ddefcd5d3",
+      "bytes": 629
+    }
+  ],
+  "tokenizer_indices": [
+    "CHOICE_TOKEN_COMPATIBILITY.json",
+    "evidence/HELPER_TOKENIZER_SOURCE_INDEX.json"
+  ],
+  "historical_timing_index": "evidence/HISTORICAL_TIMING_SOURCE_INDEX.json"
+}

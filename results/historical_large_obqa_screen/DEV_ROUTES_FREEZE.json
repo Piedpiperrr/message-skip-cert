@@ -1,0 +1,12 @@
+{
+  "utc": "2026-09-14T04:54:36.484211+00:00",
+  "files": {
+    "records/dev_scored_routes.jsonl": "bc2f2761433211a6b13ffa121e322a0a2fd6b83da6f8f7e4e2a611f1f9c3ce6c",
+    "records/dev_grid_routes.jsonl": "0fdfd6921bb0e59093ae7dd75b43be433bc3b7e4252e628805e03263bac8b6c8",
+    "DEPLOYMENT_FREEZE.json": "7b6a61728485139fe7c42eeafa6be8da56d871304e2e77f4ec17f072dac0a4b0",
+    "DEV_FEATURES_COMPLETE.json": "085533ef96984dfd1dcbbb92a0a5d23f06ccde8a744857835811243e04a7d281"
+  },
+  "N": 742,
+  "dev_answers_or_gold_read_by_scoring_process": false,
+  "selection_changed": false
+}

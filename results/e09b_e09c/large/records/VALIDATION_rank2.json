@@ -1,0 +1,368 @@
+{
+  "pair": "large",
+  "utc": "2026-09-20T10:02:07.316666+00:00",
+  "job_id": "run010",
+  "per_action": {
+    "probe": {
+      "n": 8,
+      "mismatches": 0
+    },
+    "R": {
+      "n": 8,
+      "mismatches": 0
+    },
+    "T": {
+      "n": 8,
+      "mismatches": 0
+    },
+    "C": {
+      "n": 8,
+      "mismatches": 0
+    },
+    "TF": {
+      "n": 8,
+      "mismatches": 0
+    }
+  },
+  "rows": [
+    {
+      "id": "14-1371",
+      "action": "probe",
+      "ProbeMax": 0.0,
+      "expected_ProbeMax": 0.0,
+      "argmax": "A",
+      "expected_argmax": "A",
+      "probe_ids_sha256_match": true,
+      "match": true
+    },
+    {
+      "id": "14-97",
+      "action": "probe",
+      "ProbeMax": 0.0007803440093994141,
+      "expected_ProbeMax": 0.0007803440093994141,
+      "argmax": "B",
+      "expected_argmax": "B",
+      "probe_ids_sha256_match": true,
+      "match": true
+    },
+    {
+      "id": "11-514",
+      "action": "probe",
+      "ProbeMax": 0.0,
+      "expected_ProbeMax": 0.0,
+      "argmax": "D",
+      "expected_argmax": "D",
+      "probe_ids_sha256_match": true,
+      "match": true
+    },
+    {
+      "id": "10-1178",
+      "action": "probe",
+      "ProbeMax": 0.0,
+      "expected_ProbeMax": 0.0,
+      "argmax": "C",
+      "expected_argmax": "C",
+      "probe_ids_sha256_match": true,
+      "match": true
+    },
+    {
+      "id": "10-655",
+      "action": "probe",
+      "ProbeMax": 0.0,
+      "expected_ProbeMax": 0.0,
+      "argmax": "D",
+      "expected_argmax": "D",
+      "probe_ids_sha256_match": true,
+      "match": true
+    },
+    {
+      "id": "1000",
+      "action": "probe",
+      "ProbeMax": 0.0,
+      "expected_ProbeMax": 0.0,
+      "argmax": "C",
+      "expected_argmax": "C",
+      "probe_ids_sha256_match": true,
+      "match": true
+    },
+    {
+      "id": "14-356",
+      "action": "probe",
+      "ProbeMax": 0.0,
+      "expected_ProbeMax": 0.0,
+      "argmax": "D",
+      "expected_argmax": "D",
+      "probe_ids_sha256_match": true,
+      "match": true
+    },
+    {
+      "id": "10-743",
+      "action": "probe",
+      "ProbeMax": 0.0,
+      "expected_ProbeMax": 0.0,
+      "argmax": "A",
+      "expected_argmax": "A",
+      "probe_ids_sha256_match": true,
+      "match": true
+    },
+    {
+      "id": "14-1371",
+      "action": "R",
+      "raw": "The correct answer is A",
+      "expected": "The correct answer is A",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "14-97",
+      "action": "R",
+      "raw": "The correct answer is B",
+      "expected": "The correct answer is B",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "11-514",
+      "action": "R",
+      "raw": "The correct answer is D.",
+      "expected": "The correct answer is D.",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "10-1178",
+      "action": "R",
+      "raw": "The correct answer is C",
+      "expected": "The correct answer is C",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "10-655",
+      "action": "R",
+      "raw": "The correct answer is D",
+      "expected": "The correct answer is D",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "1000",
+      "action": "R",
+      "raw": "The correct answer is C",
+      "expected": "The correct answer is C",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "14-356",
+      "action": "R",
+      "raw": "The correct answer is D",
+      "expected": "The correct answer is D",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "10-743",
+      "action": "R",
+      "raw": "The correct answer is A",
+      "expected": "The correct answer is A",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "14-1371",
+      "action": "T",
+      "raw": "The correct answer is A",
+      "expected": "The correct answer is A",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "14-97",
+      "action": "T",
+      "raw": "The correct answer is B",
+      "expected": "The correct answer is B",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "11-514",
+      "action": "T",
+      "raw": "The correct answer is D.",
+      "expected": "The correct answer is D.",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "10-1178",
+      "action": "T",
+      "raw": "The correct answer is C.",
+      "expected": "The correct answer is C.",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "10-655",
+      "action": "T",
+      "raw": "The correct answer is D.",
+      "expected": "The correct answer is D.",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "1000",
+      "action": "T",
+      "raw": "C",
+      "expected": "C",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "14-356",
+      "action": "T",
+      "raw": "The correct answer is D.",
+      "expected": "The correct answer is D.",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "10-743",
+      "action": "T",
+      "raw": "The correct answer is A.",
+      "expected": "The correct answer is A.",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "14-1371",
+      "action": "C",
+      "raw": "A",
+      "expected": "A",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "14-97",
+      "action": "C",
+      "raw": "The correct answer is B.",
+      "expected": "The correct answer is B.",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "11-514",
+      "action": "C",
+      "raw": "D. shoot",
+      "expected": "D. shoot",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "10-1178",
+      "action": "C",
+      "raw": "C. it repeats",
+      "expected": "C. it repeats",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "10-655",
+      "action": "C",
+      "raw": "D. mates for reproduction",
+      "expected": "D. mates for reproduction",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "1000",
+      "action": "C",
+      "raw": "C. She can use the mirror to signal someone",
+      "expected": "C. She can use the mirror to signal someone",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "14-356",
+      "action": "C",
+      "raw": "D.",
+      "expected": "D.",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "10-743",
+      "action": "C",
+      "raw": "A. a pond",
+      "expected": "A. a pond",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "14-1371",
+      "action": "TF",
+      "raw": "The correct answer is A",
+      "expected": "The correct answer is A",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "14-97",
+      "action": "TF",
+      "raw": "The correct answer is B.",
+      "expected": "The correct answer is B.",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "11-514",
+      "action": "TF",
+      "raw": "The correct answer is D.",
+      "expected": "The correct answer is D.",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "10-1178",
+      "action": "TF",
+      "raw": "The correct answer is C.",
+      "expected": "The correct answer is C.",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "10-655",
+      "action": "TF",
+      "raw": "The correct answer is D.",
+      "expected": "The correct answer is D.",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "1000",
+      "action": "TF",
+      "raw": "C",
+      "expected": "C",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "14-356",
+      "action": "TF",
+      "raw": "The correct answer is D.",
+      "expected": "The correct answer is D.",
+      "token_ids_match": true,
+      "match": true
+    },
+    {
+      "id": "10-743",
+      "action": "TF",
+      "raw": "The correct answer is A.",
+      "expected": "The correct answer is A.",
+      "token_ids_match": true,
+      "match": true
+    }
+  ],
+  "PASS": true,
+  "criterion": "bit-for-bit: raw_answer and generated_token_ids identical; probe ProbeMax, argmax and probe_ids_sha256 identical",
+  "gold_read": false
+}

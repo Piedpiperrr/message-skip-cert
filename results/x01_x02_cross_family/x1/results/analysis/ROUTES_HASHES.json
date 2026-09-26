@@ -1,0 +1,9 @@
+{
+  "utc": "2026-09-19T20:45:25.493551+00:00",
+  "note": "routes and certification written before any gold read",
+  "files": {
+    "certification_ledger_80.csv": "65ed1ad62fa8ffeb97f1ec0ffca13946c836173022c5493da5ddc51235c5c806",
+    "dev_routes.csv": "6e93f0019f7afcd298512bf5fbb358022237a7043a7265e1949ce9ddcc7e5283",
+    "dev_table_pre_gold.csv": "0beeba7e3a67502811c5cfc8a349482b78937bd9c15a45c3d5c9b82b587e007c"
+  }
+}

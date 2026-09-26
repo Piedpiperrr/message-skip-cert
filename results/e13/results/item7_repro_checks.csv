@@ -1,0 +1,3 @@
+item,check,expected,got,ok
+7,medium/ARC/C2C re-split deploy share (Table 7),0.96,0.96,True
+7,all fallback settings re-split deploy share (Table 7),0.00 for all,max 0.00 over 17,True

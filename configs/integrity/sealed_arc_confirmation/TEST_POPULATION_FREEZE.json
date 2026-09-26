@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-14T21:33:46.726198+00:00",
+  "files": {
+    "inputs/test_queries_no_gold.jsonl": "6eadf788cad4a8c65762b34febc73b07f8630d53f8ec35bdf261c173caa80f3c",
+    "inputs/group_members.csv": "0447d97b8a7c9cd6f9891e2fe64494a4b134a12642aa5fe5a6152bbc59720ebb",
+    "inputs/ordered_test_ids.json": "a2fb4d286f8bce14d75d1c4f95a91abb6f4829eaffc5730ff7de7cc2e493c08c",
+    "inputs/representative_ids.json": "a2fb4d286f8bce14d75d1c4f95a91abb6f4829eaffc5730ff7de7cc2e493c08c",
+    "FIRST_TEST_ACCESS.json": "f59550a97c73ea902583b2f569468212e2b44b68090f118f5335c477029beaa0",
+    "evidence/SEALED_EXPOSURE_RECEIPT.json": "03fcba6f9277fd8f53c4baf06ca7d6fa4d622587b147f3aa058cf59f8fb7ea43"
+  },
+  "gold_read": false,
+  "N": 1172,
+  "groups": 1172
+}

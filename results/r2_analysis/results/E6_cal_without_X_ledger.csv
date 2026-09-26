@@ -1,0 +1,21 @@
+q,threshold,N_clean,n,k,p,CP999,accepted,full_C_n,full_C_k,full_C_p,full_C_accepted,label
+0.05,0.0,1158,544,2,3.34095e-10,0.0204671,True,642,2,3.02093e-12,True,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.1,0.0,1158,544,2,3.34095e-10,0.0204671,True,642,2,3.02093e-12,True,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.15,0.0,1158,544,2,3.34095e-10,0.0204671,True,642,2,3.02093e-12,True,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.2,0.0,1158,544,2,3.34095e-10,0.0204671,True,642,2,3.02093e-12,True,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.25,0.0,1158,544,2,3.34095e-10,0.0204671,True,642,2,3.02093e-12,True,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.3,0.0,1158,544,2,3.34095e-10,0.0204671,True,642,2,3.02093e-12,True,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.35,0.0,1158,544,2,3.34095e-10,0.0204671,True,642,2,3.02093e-12,True,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.4,0.0,1158,544,2,3.34095e-10,0.0204671,True,642,2,3.02093e-12,True,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.45,0.0,1158,544,2,3.34095e-10,0.0204671,True,642,2,3.02093e-12,True,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.5,1.1920928955078125e-07,1158,576,2,7.22819e-11,0.0193391,True,683,2,4.15983e-13,True,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.55,3.5762786865234375e-07,1158,613,3,1.35367e-10,0.0211346,True,728,3,6.13045e-13,True,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.6,1.7881393432617188e-06,1158,684,6,2.04623e-09,0.026174,True,807,7,6.06129e-11,True,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.65,7.987022399902344e-06,1158,739,9,2.38407e-08,0.0303771,True,870,11,2.3787e-09,True,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.7,4.5418739318847656e-05,1158,790,14,1.77625e-06,0.0374086,True,932,16,1.20468e-07,True,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.75,0.0002611875534057617,1158,852,20,6.63109e-05,0.044178,True,999,22,4.83045e-06,True,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.8,0.001170039176940918,1158,908,30,0.00861248,0.0556056,False,1064,33,0.00162848,False,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.85,0.008580565452575684,1158,970,50,0.623522,0.0772397,False,1135,57,0.548691,False,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.9,0.04792952537536621,1158,1039,73,0.998224,0.0980996,False,1217,86,0.999313,False,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+0.95,0.22272759675979614,1158,1105,100,1,0.12015,False,1297,123,1,False,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+1.0,Infinity,1158,1158,134,1,0.147438,False,1366,170,1,False,POST-HOC analysis of completed E6/E7 records; changes no frozen decision

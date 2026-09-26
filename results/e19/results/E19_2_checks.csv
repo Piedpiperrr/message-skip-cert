@@ -1,0 +1,14 @@
+check,expected,observed,status
+held-out large/OBQA/Text: n/k == E9B_RESULTS.json,"[595, 12]","[595, 12]",PASS
+held-out large/OBQA/C2C: n/k == E9B_RESULTS.json,"[595, 13]","[595, 13]",PASS
+held-out medium/OBQA/C2C q=.55: n/k == E9B_RESULTS.json,"[388, 8]","[388, 8]",PASS
+held-out medium/OBQA/C2C q=.50: n/k == E9B_RESULTS.json,"[346, 6]","[346, 6]",PASS
+held-out large/OBQA/Text+fact: n/k == E9B_RESULTS.json,"[558, 16]","[558, 16]",PASS
+sealed large/ARC/Text: n/k == primary_sealed.csv,"[1100, 20]","[1100, 20]",PASS
+sealed large/ARC/C2C: n/k == primary_sealed.csv,"[1047, 11]","[1047, 11]",PASS
+held-out 744 OBQA (E16-1) Llama-3.1-8B/OBQA/Text: n/k == OOS_PRE_GOLD.json,"[440, 3]","[440, 3]",PASS
+held-out 744 OBQA (E16-1) Llama-3.1-8B/OBQA/Text: INVALID R/ref among omitted == OOS_PRE_GOLD.json,"[0, 0]","[0, 0]",PASS
+"ARC test 1,172 (E16-1) Llama-3.1-8B/ARC/Text: n/k == OOS_PRE_GOLD.json","[794, 15]","[794, 15]",PASS
+"ARC test 1,172 (E16-1) Llama-3.1-8B/ARC/Text: INVALID R/ref among omitted == OOS_PRE_GOLD.json","[0, 0]","[0, 0]",PASS
+"ARC test 1,172 (E16-2) medium/ARC/C2C: n/k == OOS_PRE_GOLD.json","[733, 15]","[733, 15]",PASS
+"ARC test 1,172 (E16-2) medium/ARC/C2C: INVALID R/ref among omitted == OOS_PRE_GOLD.json","[0, 7]","[0, 7]",PASS

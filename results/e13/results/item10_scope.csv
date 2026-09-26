@@ -1,0 +1,20 @@
+source,included,note
+P2_SCORING_V2 label index -> P2_5/P2_6/P2_9 train/dev cases and P2_10 cases,True,
+P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z/actions,True,
+"P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/{1,2}/actions",True,
+"P2_R2_E8/shards/{small,medium}/lane_*/ (actions R/T/C)",True,
+"P2_R1_XFAM/results/runs/chain_*.jsonl (R, Text)",True,
+"P2_R1_XFAM/x1/results/runs/{text,c2c}_chain_*.jsonl (Text, C2C; R reused from the small pair)",True,
+P2_R2_GPU/e6/main/e6_shard*.jsonl (Text+fact; R reused from the V2 index),True,
+P2_R3_E9BC/analysis/SEALED_OUTPUTS.jsonl,True,
+replay/sealed records: FP,True,
+replay/sealed records: ME,True,
+replay/sealed records: MP,True,
+replay/sealed records: E3POL x3,True,
+replay/sealed records: E3POL MMLU full,True,
+replay/sealed records: E7,True,
+replay/sealed records: E6 replay,True,
+replay/sealed records: sealed ARC,True,
+P2_R1_EXP results/e4 (null controls) and results/e1_per_question.csv (port check),True,E1: 3000 rows without a stored option set used A-D (OBQA has four options)
+P2_R4_E10 GSM8K,False,numeric short answers; neither multiple-choice parser applies
+"earlier exploratory stages (P2_1..P2_4, P2_7, P2_8, P2_E1_DIRECTION, gold-budget and baseline stages)",False,not an input to any number in the paper; the paper-facing labels of P2_5/P2_6/P2_9/P2_10 are covered through the V2 index

@@ -1,0 +1,15 @@
+{
+ "ii_min": 0.7387857065276421,
+ "ii_min_policy": "medium/OBQA/C2C q=.55",
+ "ii_max": 0.8271446862996159,
+ "ii_max_policy": "large/ARC/C2C",
+ "ii_median": 0.7742613596864154,
+ "iii_median": 0.8843230694037145,
+ "i_median": 0.8826490713587488,
+ "vi_min": 0.0,
+ "vi_max": 0.021806853582554516,
+ "label": "POST HOC (E21, PREREG.md); stored outputs only; creates no deployment and changes no count in the paper",
+ "always": "Sec. 6 (u = 0 paragraph): AUROC on u > 0 over the nine policies ranges 0.739-0.827 (median 0.774); AUROC of the float64 score m on all dev questions has median 0.884.",
+ "branch": "otherwise (.70 <= median(ii) < .80)",
+ "sentence": "on unsaturated questions alone the AUROC is 0.739-0.827 (median 0.774), lower than on all questions (median 0.883)"
+}

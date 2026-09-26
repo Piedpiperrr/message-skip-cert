@@ -1,0 +1,192 @@
+{
+  "utc": "2026-09-21T18:59:47.070228+00:00",
+  "verdict": "PASS",
+  "n": 16,
+  "counts": {
+    "runtime_ok": 16,
+    "R_raw_equal": 16,
+    "T_raw_equal": 16,
+    "u_equal": 16,
+    "p_labels_equal": 16,
+    "probe_ids_equal": 16,
+    "all_equal": 16
+  },
+  "rows": [
+    {
+      "dataset": "obqa",
+      "id": "14-1371",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-97",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "11-514",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-1178",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-655",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "1000",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "14-356",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "obqa",
+      "id": "10-743",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7181965",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7009923",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7230195",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "NYSEDREGENTS_2016_4_13",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7133368",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7228288",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_184293",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_SC_407691",
+      "runtime_ok": true,
+      "R_raw_equal": true,
+      "T_raw_equal": true,
+      "u_equal": true,
+      "p_labels_equal": true,
+      "probe_ids_equal": true,
+      "all_equal": true
+    }
+  ]
+}

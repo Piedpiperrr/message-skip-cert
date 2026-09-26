@@ -1,0 +1,104 @@
+{
+  "job": "A",
+  "dry_run": false,
+  "utc_start": "2026-09-21T23:32:00.982550+00:00",
+  "datasets": [
+    "squad",
+    "nqp"
+  ],
+  "PASS": true,
+  "preflight_PASS": true,
+  "preflight_skipped": false,
+  "smoke": {
+    "qwen3": {
+      "squad": {
+        "n": 8,
+        "invalid": 0,
+        "median_words": 5.0,
+        "fail": false,
+        "answers": [
+          "removal of malware or admit existence of malware issue",
+          "in paradise restored on earth",
+          "on grounds that they infringed apples copyrighted gui citing among other things use of rectangular overlapping and resizable windows",
+          "15 special operations troops",
+          "jose vianna da motta carlos seixas joao domingos bomtempo joao de sousa carvalho luis de fre",
+          "about 3",
+          "opecs 2nd largest oil exporter",
+          "artemis"
+        ]
+      },
+      "nqp": {
+        "n": 8,
+        "invalid": 0,
+        "median_words": 2.0,
+        "fail": false,
+        "answers": [
+          "1964",
+          "hbo stands for home box office",
+          "jennifer garner as christy beam",
+          "jonathan breck",
+          "24 questions",
+          "lord speaker",
+          "lal bahadur shastri",
+          "345400 2017"
+        ]
+      }
+    },
+    "llama": {
+      "squad": {
+        "n": 8,
+        "invalid": 0,
+        "median_words": 3.5,
+        "fail": false,
+        "answers": [
+          "removal of malware",
+          "paradise restored on earth",
+          "infringed apples copyrighted gui",
+          "15",
+          "jose vianna da motta carlos seixas joao domingos bomtempo joao de sousa carvalho luis",
+          "3",
+          "irans 2nd largest oil exporter",
+          "artemis"
+        ]
+      },
+      "nqp": {
+        "n": 8,
+        "invalid": 0,
+        "median_words": 2.0,
+        "fail": false,
+        "answers": [
+          "1964",
+          "home box office",
+          "jennifer garner",
+          "jonathan breck",
+          "24",
+          "lord speaker",
+          "lal bahadur shastri",
+          "345400"
+        ]
+      }
+    }
+  },
+  "datasets_kept": [
+    "squad",
+    "nqp"
+  ],
+  "datasets_dropped": [],
+  "n_per_dataset": 400,
+  "reduced_to_300": false,
+  "projection": {
+    "elapsed_s": 534.0627148151398,
+    "load_s": {
+      "helper": 160.69572228612378,
+      "qwen3": 141.63338966597803,
+      "llama": 139.88909196201712
+    },
+    "helper_tokens_per_s": 49.43284431100189,
+    "qwen3_e20_tokens_per_s": 30.647300892733785,
+    "llama_e20_tokens_per_s": 41.69201094027147,
+    "questions_per_rank": 100,
+    "worst_case_projected_total_s": 1856.4893788007778,
+    "limit_s": 2700
+  },
+  "utc_gate": "2026-09-21T23:39:56.062728+00:00"
+}

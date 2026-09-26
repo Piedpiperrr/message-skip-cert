@@ -1,0 +1,9 @@
+pair,task,reference,ClusterB_b,REPEAT1,REPEAT2,REPEAT3
+large,OBQA,Text,"+ (532.8 [470.9, 594.7])",+,+,+
+large,OBQA,C2C,"+ (33.5 [16.5, 51.7])",+,+,+
+large,ARC,Text,"+ (717.2 [670.1, 761.8])",+,+,+
+large,ARC,C2C,"+ (112.3 [83.7, 142.3])",+,+,+
+medium,OBQA,C2C,"+ (61.0 [43.9, 79.9])",+,+,+
+medium,ARC,C2C,"+ (100.8 [73.0, 132.8])",+,+,+
+large,MMLU-Pro,Text,"+ (322.1 [234.8, 412.5])",+,+,+
+large,MMLU-Pro,C2C,"? (6.5 [-23.3, 41.1])",?,?,?

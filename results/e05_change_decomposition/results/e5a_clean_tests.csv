@@ -1,0 +1,22 @@
+setting,benchmark,N_cal,exposed_in_cal,N_clean,orig_q,clean_n,clean_k,clean_p,clean_CP999,orig_q_accepted_on_clean,largest_clean_accepted_q,full_C_n_at_orig_q,full_C_k_at_orig_q,full_C_p_at_orig_q,label
+small/OBQA/Text,obqa,1366,208,1158,0.0,,,,,n/a (fallback: no deployed q),0.0,,,nan,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+small/OBQA/C2C,obqa,1366,208,1158,0.0,,,,,n/a (fallback: no deployed q),0.0,,,nan,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+small/ARC/Text,arc,448,133,315,0.0,,,,,n/a (fallback: no deployed q),0.0,,,nan,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+small/ARC/C2C,arc,448,133,315,0.0,,,,,n/a (fallback: no deployed q),0.0,,,nan,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/OBQA/Text,obqa,1366,208,1158,0.0,,,,,n/a (fallback: no deployed q),0.0,,,nan,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/OBQA/C2C,obqa,1366,208,1158,0.55,640,18,0.00439643,0.0544895,False,0.5,739,19,0.000694187,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/ARC/Text,arc,448,133,315,0.0,,,,,n/a (fallback: no deployed q),0.0,,,nan,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/ARC/C2C,arc,448,133,315,0.6,210,1,0.000252953,0.0431169,True,0.6,290,1,5.63703e-06,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/OBQA/Text,obqa,1366,208,1158,0.8,908,17,7.81388e-07,0.0370871,True,0.8,1064,18,1.15505e-08,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/OBQA/C2C,obqa,1366,208,1158,0.8,908,19,5.36037e-06,0.0400262,True,0.8,1064,22,6.7085e-07,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/ARC/Text,arc,448,133,315,0.95,297,2,3.34985e-05,0.0372254,True,0.95,422,4,4.8015e-06,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/ARC/C2C,arc,448,133,315,0.9,282,2,6.56192e-05,0.0391731,True,0.9,404,7,0.000539697,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/MMLU-Pro/Text,mmlu_pro,6000,0,6000,0.4,2358,67,1.33558e-07,0.0406074,True,0.4,2358,67,1.33558e-07,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/MMLU-Pro/C2C,mmlu_pro,6000,0,6000,0.4,2358,75,1.0127e-05,0.0445786,True,0.4,2358,75,1.0127e-05,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/OBQA/Text,obqa,1366,208,1158,0.0,,,,,n/a (fallback: no deployed q),0.0,,,nan,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/OBQA/C2C,obqa,1366,208,1158,0.0,,,,,n/a (fallback: no deployed q),0.0,,,nan,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/ARC/Text,arc,448,133,315,0.0,,,,,n/a (fallback: no deployed q),0.0,,,nan,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/ARC/C2C,arc,448,133,315,0.0,,,,,n/a (fallback: no deployed q),0.0,,,nan,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/OBQA/Text,obqa,1366,208,1158,0.0,,,,,n/a (fallback: no deployed q),0.0,,,nan,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/ARC/Text,arc,448,133,315,0.0,,,,,n/a (fallback: no deployed q),0.0,,,nan,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/MMLU-Pro/Text,mmlu_pro,6000,0,6000,0.0,,,,,n/a (fallback: no deployed q),0.0,,,nan,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision

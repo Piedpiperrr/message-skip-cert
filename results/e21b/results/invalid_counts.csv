@@ -1,0 +1,8 @@
+population,arm,invalid_rot,N_rot,invalid_orig,N_orig
+arc,R,1,1172,0,1100
+arc,T,0,1172,0,1172
+arc,C,2,1172,1,1172
+obqa,R,0,744,1,744
+obqa,T,0,744,0,744
+obqa,C,1,744,3,744
+obqa,TF,0,744,0,744

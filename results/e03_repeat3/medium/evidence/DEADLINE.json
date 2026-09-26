@@ -1,0 +1,9 @@
+{
+  "PBS_stime": "Sat Sep 19 08:42:48 2026",
+  "E3_replay_start_epoch": 1789808242.1780238,
+  "E3_replay_budget_seconds": 900,
+  "requested_walltime_seconds": 3300,
+  "safety_seconds": 45,
+  "deadline_epoch": 1789809097.1780238,
+  "max_GPU_allocation_hours": 1.8333333333333333
+}

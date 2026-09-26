@@ -1,0 +1,14 @@
+stage,setting,reference,id,panel_ordinal,reuse_raw,native_R_raw,reuse_label,native_R_label,labels_equal
+large,large/obqa/T,T,12-1066,47,The correct answer is C,The correct answer is C.,C,C,True
+large,large/obqa/T,T,10-580,80,The correct answer is C,The correct answer is C.,C,C,True
+large,large/obqa/T,T,10-681,81,The correct answer is D.,The correct answer is D,D,D,True
+large,large/obqa/C,C,12-1066,47,The correct answer is C,The correct answer is C.,C,C,True
+large,large/obqa/C,C,10-580,80,The correct answer is C,The correct answer is C.,C,C,True
+large,large/obqa/C,C,10-681,81,The correct answer is D.,The correct answer is D,D,D,True
+large,large/arc/T,T,Mercury_400934,12,The correct answer is C.,The correct answer is C,C,C,True
+large,large/arc/T,T,Mercury_7143518,118,The correct answer is D.,The correct answer is D,D,D,True
+large,large/arc/C,C,Mercury_400934,12,The correct answer is C.,The correct answer is C,C,C,True
+large,large/arc/C,C,Mercury_7143518,118,The correct answer is D.,The correct answer is D,D,D,True
+medium,medium/obqa/C,C,13-71,57,The correct answer is A. heaviness,The correct answer is A.,A,A,True
+medium,medium/obqa/C,C,10-681,81,The correct answer is D.,D. changing location,D,D,True
+medium,medium/arc/C,C,Mercury_177398,2,The correct answer is B. velocity,The correct answer is B.,B,B,True

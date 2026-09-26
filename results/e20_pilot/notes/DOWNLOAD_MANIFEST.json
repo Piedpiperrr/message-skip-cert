@@ -1,0 +1,87 @@
+{
+  "squad": {
+    "repo": "rajpurkar/squad",
+    "revision": "7b6d24c440a36b6815f21b70d25016731768db1f",
+    "files": {
+      "plain_text/train-00000-of-00001.parquet": {
+        "path": "$DATA_DIR/cache/huggingface/hub/datasets--rajpurkar--squad/snapshots/7b6d24c440a36b6815f21b70d25016731768db1f/plain_text/train-00000-of-00001.parquet",
+        "sha256": "ea7f52bac024f6b1bdc7aaa2a4ee302cba8c2fdc8d4a235cf18a9a5196b6175b",
+        "bytes": 14458314
+      }
+    }
+  },
+  "nqp": {
+    "repo": "mrqa-workshop/mrqa",
+    "revision": "f3178d9888471dfb2b67c93de14f0ddf499a8d9f",
+    "files": {
+      "plain_text/train-00000-of-00009.parquet": {
+        "path": "$DATA_DIR/cache/huggingface/hub/datasets--mrqa-workshop--mrqa/snapshots/f3178d9888471dfb2b67c93de14f0ddf499a8d9f/plain_text/train-00000-of-00009.parquet",
+        "sha256": "a7f3bdb15ac4179e7194c5f36e7b90754b2888361c7d5f5024f42bf920e7d76b",
+        "bytes": 40937968
+      },
+      "plain_text/train-00001-of-00009.parquet": {
+        "path": "$DATA_DIR/cache/huggingface/hub/datasets--mrqa-workshop--mrqa/snapshots/f3178d9888471dfb2b67c93de14f0ddf499a8d9f/plain_text/train-00001-of-00009.parquet",
+        "sha256": "ee901275a64a557398407475cc3c9f3c7ad27075939359b8dc649d1800bb63ad",
+        "bytes": 83288515
+      },
+      "plain_text/train-00002-of-00009.parquet": {
+        "path": "$DATA_DIR/cache/huggingface/hub/datasets--mrqa-workshop--mrqa/snapshots/f3178d9888471dfb2b67c93de14f0ddf499a8d9f/plain_text/train-00002-of-00009.parquet",
+        "sha256": "153cc1d83cb80b2fec592d2a06bcfd2d37778d0d9e33ecca82eebe0f0dff9012",
+        "bytes": 168678531
+      },
+      "plain_text/train-00003-of-00009.parquet": {
+        "path": "$DATA_DIR/cache/huggingface/hub/datasets--mrqa-workshop--mrqa/snapshots/f3178d9888471dfb2b67c93de14f0ddf499a8d9f/plain_text/train-00003-of-00009.parquet",
+        "sha256": "b07c5521698aeaa7620c4595bbfb4dd0c2712d9af4604e4c5a24db055e2efff7",
+        "bytes": 330623073
+      },
+      "plain_text/train-00004-of-00009.parquet": {
+        "path": "$DATA_DIR/cache/huggingface/hub/datasets--mrqa-workshop--mrqa/snapshots/f3178d9888471dfb2b67c93de14f0ddf499a8d9f/plain_text/train-00004-of-00009.parquet",
+        "sha256": "d22376ff3475fc42ae3873ef0576a0aa67712c9ca4ceeb1fc7b9e3f07314e504",
+        "bytes": 313450289
+      },
+      "plain_text/train-00005-of-00009.parquet": {
+        "path": "$DATA_DIR/cache/huggingface/hub/datasets--mrqa-workshop--mrqa/snapshots/f3178d9888471dfb2b67c93de14f0ddf499a8d9f/plain_text/train-00005-of-00009.parquet",
+        "sha256": "9639612c7bb352b0544376f039810cfb048be63f620f8035f96d65e4fb8516c0",
+        "bytes": 295803474
+      },
+      "plain_text/train-00006-of-00009.parquet": {
+        "path": "$DATA_DIR/cache/huggingface/hub/datasets--mrqa-workshop--mrqa/snapshots/f3178d9888471dfb2b67c93de14f0ddf499a8d9f/plain_text/train-00006-of-00009.parquet",
+        "sha256": "de662f1c252d1ce32f075de2ce4c3803e4595a0f9e95d9c38183f1ffc22ae3ed",
+        "bytes": 96192618
+      },
+      "plain_text/train-00007-of-00009.parquet": {
+        "path": "$DATA_DIR/cache/huggingface/hub/datasets--mrqa-workshop--mrqa/snapshots/f3178d9888471dfb2b67c93de14f0ddf499a8d9f/plain_text/train-00007-of-00009.parquet",
+        "sha256": "457c4aa13081b48baf58794bbdbbb89463018713498608ab086c2d5427c2798f",
+        "bytes": 80208968
+      },
+      "plain_text/train-00008-of-00009.parquet": {
+        "path": "$DATA_DIR/cache/huggingface/hub/datasets--mrqa-workshop--mrqa/snapshots/f3178d9888471dfb2b67c93de14f0ddf499a8d9f/plain_text/train-00008-of-00009.parquet",
+        "sha256": "064252dd7d9f8c2b83dae571bc608249f45822e649aaef102ad9566e46616a1d",
+        "bytes": 76950665
+      }
+    }
+  },
+  "triviaqa": {
+    "repo": "mandarjoshi/trivia_qa",
+    "revision": "0f7faf33a3908546c6fd5b73a660e0f8ff173c2f",
+    "files": {
+      "rc.nocontext/train-00000-of-00001.parquet": {
+        "path": "$DATA_DIR/cache/huggingface/hub/datasets--mandarjoshi--trivia_qa/snapshots/0f7faf33a3908546c6fd5b73a660e0f8ff173c2f/rc.nocontext/train-00000-of-00001.parquet",
+        "sha256": "455223e4a3ba6977611914d96b1b812fe19a6cd4ea3aef4df381f093b297670c",
+        "bytes": 55391498
+      }
+    }
+  },
+  "nqopen": {
+    "repo": "google-research-datasets/nq_open",
+    "revision": "5dd9790a83002ad084ddeb7c420dc716852c6f28",
+    "files": {
+      "nq_open/train-00000-of-00001.parquet": {
+        "path": "$DATA_DIR/cache/huggingface/hub/datasets--google-research-datasets--nq_open/snapshots/5dd9790a83002ad084ddeb7c420dc716852c6f28/nq_open/train-00000-of-00001.parquet",
+        "sha256": "25d3a544324f900b31ebc05a3a5686bdd5b9b42738133500675c3f20eee7d83a",
+        "bytes": 4464642
+      }
+    }
+  },
+  "_utc": "2026-09-21T22:49:30.708173+00:00"
+}

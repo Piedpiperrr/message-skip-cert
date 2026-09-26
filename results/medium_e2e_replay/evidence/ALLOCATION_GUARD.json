@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "checks": {
+    "state_R": true,
+    "user": true,
+    "account": true,
+    "queue": true,
+    "nodect": true,
+    "requested_GPUs": true,
+    "allocated_GPUs": true,
+    "assigned_host": true,
+    "exec_host": true,
+    "nodefile": true,
+    "fsreq": true,
+    "budget": true
+  },
+  "assigned": [
+    {
+      "node": "ClusterB-gpu-06",
+      "ngpus": 2
+    }
+  ],
+  "walltime_seconds": 900,
+  "job_id": "run013",
+  "host": "REDACTED",
+  "utc": "2026-09-15T21:04:19.204421+00:00"
+}

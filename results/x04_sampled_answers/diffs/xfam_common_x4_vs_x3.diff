@@ -1,0 +1,8 @@
+--- ../P2_R6_X3_20260921T052602Z/src/xfam_common.py	2026-09-21 06:09:25.000000000 +0000
++++ src/xfam_common.py	2026-09-21 07:25:19.000000000 +0000
+@@ -1,4 +1,4 @@
+-"""P2_R6_X3 shared definitions (copy of P2_R1_XFAM X2 xfam_common.py; X3 changes: receivers Llama-3.1-8B / Mistral-7B-v0.3, datasets OBQA + ARC). Writes only under this folder."""
++"""P2_R6_X4 shared definitions: byte copy of P2_R6_X3 src/xfam_common.py (X = this X4 folder). Writes only under this folder."""
+ import sys
+ sys.dont_write_bytecode = True
+ import json, hashlib, pathlib, os, datetime

@@ -1,0 +1,16 @@
+{
+  "utc": "2026-09-15T19:37:06.074834+00:00",
+  "status": "COMPLETE_MEDIUM_STAGE1",
+  "job_id": "run002",
+  "PBS_exit_status": 0,
+  "action_success_count": 16878,
+  "ProbeMax_success_count": 5626,
+  "MEDIUM_DEPLOY_COUNT": 2,
+  "replacement_actual_GPU_allocation_hours": 5.233888888888889,
+  "cumulative_actual_GPU_allocation_hours": 5.239444444444445,
+  "attempt1_immutable": true,
+  "parent_protocol_sha256": "c4b85ca697030ca115020fdb959143c8c4901135a5b876cf716bf4b6a4c94bf8",
+  "retry_execution_freeze_sha256": "1edcb45f8f5b926aee76bbc61f137ed84e6eedec850416b4b4544a555254b82e",
+  "no_third_submission": true,
+  "Stage2_started": false
+}

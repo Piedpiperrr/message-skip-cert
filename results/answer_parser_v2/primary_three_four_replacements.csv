@@ -1,0 +1,17 @@
+population,pair,dataset,split,n,training_labels,refitted_V2,evaluation_role,timing_source,changed_actions_3_to_4,selected_A,AC_exclusive_captured_V2,old_four_minus_three_correct,old_improved,old_harmed,old_same_on_changed,D1_four_minus_three_correct,D1_improved,D1_harmed,D1_same_on_changed,V2_four_minus_three_correct,V2_improved,V2_harmed,V2_same_on_changed
+full,large,obqa,train,3466,old_scoring,False,train_in_sample_diagnostic,accuracy_only,494,494,2,3.0,3,0,491,3.0,3,0,491,3.0,3,0,491
+panel,large,obqa,train,256,old_scoring,False,train_in_sample_diagnostic,original_P2_10_same_job,41,41,0,0.0,0,0,41,0.0,0,0,41,0.0,0,0,41
+full,large,obqa,dev,742,old_scoring,False,previously_exposed_development,accuracy_only,96,96,0,-2.0,0,2,94,-2.0,0,2,94,-2.0,0,2,94
+panel,large,obqa,dev,128,old_scoring,False,previously_exposed_development,original_P2_10_same_job,13,13,0,0.0,0,0,13,0.0,0,0,13,0.0,0,0,13
+full,large,arc,train,1119,old_scoring,False,train_in_sample_diagnostic,accuracy_only,30,30,0,0.0,0,0,30,0.0,0,0,30,0.0,0,0,30
+panel,large,arc,train,256,old_scoring,False,train_in_sample_diagnostic,original_P2_10_same_job,5,5,0,0.0,0,0,5,0.0,0,0,5,0.0,0,0,5
+full,large,arc,validation,299,old_scoring,False,previously_exposed_development,accuracy_only,13,13,0,0.0,0,0,13,0.0,0,0,13,0.0,0,0,13
+panel,large,arc,validation,128,old_scoring,False,previously_exposed_development,original_P2_10_same_job,4,4,0,0.0,0,0,4,0.0,0,0,4,0.0,0,0,4
+full,small,obqa,train,3466,old_scoring,False,train_in_sample_diagnostic,accuracy_only,81,81,3,7.0,7,0,74,7.0,7,0,74,7.0,7,0,74
+panel,small,obqa,train,256,old_scoring,False,train_in_sample_diagnostic,original_P2_10_same_job,10,10,0,0.0,0,0,10,0.0,0,0,10,0.0,0,0,10
+full,small,obqa,dev,742,old_scoring,False,previously_exposed_development,accuracy_only,9,9,0,1.0,2,1,6,1.0,2,1,6,1.0,2,1,6
+panel,small,obqa,dev,128,old_scoring,False,previously_exposed_development,original_P2_10_same_job,2,2,0,0.0,0,0,2,0.0,0,0,2,0.0,0,0,2
+full,small,arc,train,1119,old_scoring,False,train_in_sample_diagnostic,accuracy_only,9,9,0,1.0,1,0,8,1.0,1,0,8,1.0,1,0,8
+panel,small,arc,train,256,old_scoring,False,train_in_sample_diagnostic,original_P2_10_same_job,2,2,0,0.0,0,0,2,0.0,0,0,2,0.0,0,0,2
+full,small,arc,validation,299,old_scoring,False,previously_exposed_development,accuracy_only,1,1,0,0.0,0,0,1,0.0,0,0,1,0.0,0,0,1
+panel,small,arc,validation,128,old_scoring,False,previously_exposed_development,original_P2_10_same_job,0,0,0,0.0,0,0,0,0.0,0,0,0,0.0,0,0,0

@@ -1,0 +1,2 @@
+n_settings,n_deployed,n_fallback,x_deployed_predicted_deploy,y_fallback_predicted_fallback,n_both_deploy,median_abs_grid_steps,max_abs_grid_steps,median_abs_coverage_error,median_abs_saving_err_fitcov_ms,median_rel_saving_err_fitcov,median_abs_saving_err_panelcov_ms,median_rel_saving_err_panelcov,paper_rule,label
+25,8,17,8,17,8,0.0,1,0.02722821203953285,15.414283008781744,0.12641523261093335,15.311992023503567,0.11887688104011149,predicts,POST-HOC re-analysis (E15); does not change any primary decision

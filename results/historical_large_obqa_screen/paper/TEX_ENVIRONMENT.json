@@ -1,0 +1,9 @@
+{
+  "pdflatex": null,
+  "xelatex": null,
+  "lualatex": null,
+  "tectonic": null,
+  "compiled": false,
+  "status": "No pdflatex/xelatex/lualatex/tectonic on PATH; source delivered, not compiled; no installation",
+  "utc": "2026-09-14T04:54:22.887210+00:00"
+}

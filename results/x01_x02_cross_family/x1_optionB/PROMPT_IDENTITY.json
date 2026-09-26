@@ -1,0 +1,28 @@
+{
+  "utc": "2026-09-19T19:22:31.358356+00:00",
+  "evaluator": "$DATA_DIR/P2_R1_XFAM_20260919T095058Z/x1_optionB/unified_evaluator_xfam.py",
+  "evaluator_sha256": "341b2bb9ed3b68c68338a9a8a20db9e907027b449d12003df45be15d453cc27c",
+  "clean_clone_commit": "113c3a9b2538cbf096a0477e1ec99ae2a2e0d12a",
+  "receiver_tokenizer": "$DATA_DIR/c2c_reproduction_assets/models/Qwen--Qwen3-0.6B",
+  "results": {
+    "obqa": {
+      "n": 4208,
+      "user_message_equal": 4208,
+      "rendered_equal": 4208,
+      "ids_equal": 4208,
+      "K_not_4": 0,
+      "K_not_4_all_equal": 0,
+      "first_mismatch": null
+    },
+    "arc": {
+      "n": 1418,
+      "user_message_equal": 1418,
+      "rendered_equal": 1418,
+      "ids_equal": 1418,
+      "K_not_4": 6,
+      "K_not_4_all_equal": 6,
+      "first_mismatch": null
+    }
+  },
+  "scope": "receiver-side prompt only; the Llama-side aligned input needs the (gated) Llama tokenizer"
+}

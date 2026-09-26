@@ -1,0 +1,128 @@
+{"event": "START", "utc": "2026-09-19T23:30:22.575808+00:00", "key": "obqa|T|9-782|fixed", "attempt": 1, "arm": "fixed", "panel_ordinal": 0, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:23.957619+00:00", "key": "obqa|T|9-782|fixed", "attempt": 1}
+{"event": "START", "utc": "2026-09-19T23:30:23.961940+00:00", "key": "obqa|T|9-782|original", "attempt": 2, "arm": "original", "panel_ordinal": 0, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:24.268041+00:00", "key": "obqa|T|9-782|original", "attempt": 2}
+{"event": "START", "utc": "2026-09-19T23:30:24.271605+00:00", "key": "obqa|T|9-782|reuse", "attempt": 3, "arm": "reuse", "panel_ordinal": 0, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:24.512138+00:00", "key": "obqa|T|9-782|reuse", "attempt": 3}
+{"event": "START", "utc": "2026-09-19T23:30:24.514656+00:00", "key": "obqa|T|9-782|argmax", "attempt": 4, "arm": "argmax", "panel_ordinal": 0, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:24.554562+00:00", "key": "obqa|T|9-782|argmax", "attempt": 4}
+{"event": "START", "utc": "2026-09-19T23:30:24.557022+00:00", "key": "obqa|T|14-290|original", "attempt": 5, "arm": "original", "panel_ordinal": 1, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:24.797070+00:00", "key": "obqa|T|14-290|original", "attempt": 5}
+{"event": "START", "utc": "2026-09-19T23:30:24.799722+00:00", "key": "obqa|T|14-290|reuse", "attempt": 6, "arm": "reuse", "panel_ordinal": 1, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:25.040347+00:00", "key": "obqa|T|14-290|reuse", "attempt": 6}
+{"event": "START", "utc": "2026-09-19T23:30:25.052061+00:00", "key": "obqa|T|14-290|argmax", "attempt": 7, "arm": "argmax", "panel_ordinal": 1, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:25.091294+00:00", "key": "obqa|T|14-290|argmax", "attempt": 7}
+{"event": "START", "utc": "2026-09-19T23:30:25.093633+00:00", "key": "obqa|T|14-290|fixed", "attempt": 8, "arm": "fixed", "panel_ordinal": 1, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:26.020291+00:00", "key": "obqa|T|14-290|fixed", "attempt": 8}
+{"event": "START", "utc": "2026-09-19T23:30:26.024222+00:00", "key": "obqa|T|13-823|reuse", "attempt": 9, "arm": "reuse", "panel_ordinal": 2, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:26.263060+00:00", "key": "obqa|T|13-823|reuse", "attempt": 9}
+{"event": "START", "utc": "2026-09-19T23:30:26.266176+00:00", "key": "obqa|T|13-823|argmax", "attempt": 10, "arm": "argmax", "panel_ordinal": 2, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:26.305703+00:00", "key": "obqa|T|13-823|argmax", "attempt": 10}
+{"event": "START", "utc": "2026-09-19T23:30:26.307831+00:00", "key": "obqa|T|13-823|fixed", "attempt": 11, "arm": "fixed", "panel_ordinal": 2, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:27.328866+00:00", "key": "obqa|T|13-823|fixed", "attempt": 11}
+{"event": "START", "utc": "2026-09-19T23:30:27.332550+00:00", "key": "obqa|T|13-823|original", "attempt": 12, "arm": "original", "panel_ordinal": 2, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:27.609967+00:00", "key": "obqa|T|13-823|original", "attempt": 12}
+{"event": "START", "utc": "2026-09-19T23:30:27.612733+00:00", "key": "obqa|T|12-745|argmax", "attempt": 13, "arm": "argmax", "panel_ordinal": 3, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:27.680621+00:00", "key": "obqa|T|12-745|argmax", "attempt": 13}
+{"event": "START", "utc": "2026-09-19T23:30:27.682814+00:00", "key": "obqa|T|12-745|fixed", "attempt": 14, "arm": "fixed", "panel_ordinal": 3, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:28.487279+00:00", "key": "obqa|T|12-745|fixed", "attempt": 14}
+{"event": "START", "utc": "2026-09-19T23:30:28.491085+00:00", "key": "obqa|T|12-745|original", "attempt": 15, "arm": "original", "panel_ordinal": 3, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:28.731200+00:00", "key": "obqa|T|12-745|original", "attempt": 15}
+{"event": "START", "utc": "2026-09-19T23:30:28.733358+00:00", "key": "obqa|T|12-745|reuse", "attempt": 16, "arm": "reuse", "panel_ordinal": 3, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:28.974493+00:00", "key": "obqa|T|12-745|reuse", "attempt": 16}
+{"event": "START", "utc": "2026-09-19T23:30:28.979767+00:00", "key": "obqa|C|9-782|fixed", "attempt": 17, "arm": "fixed", "panel_ordinal": 0, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:29.397773+00:00", "key": "obqa|C|9-782|fixed", "attempt": 17}
+{"event": "START", "utc": "2026-09-19T23:30:29.401968+00:00", "key": "obqa|C|9-782|original", "attempt": 18, "arm": "original", "panel_ordinal": 0, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:29.641940+00:00", "key": "obqa|C|9-782|original", "attempt": 18}
+{"event": "START", "utc": "2026-09-19T23:30:29.644406+00:00", "key": "obqa|C|9-782|reuse", "attempt": 19, "arm": "reuse", "panel_ordinal": 0, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:29.884334+00:00", "key": "obqa|C|9-782|reuse", "attempt": 19}
+{"event": "START", "utc": "2026-09-19T23:30:29.887595+00:00", "key": "obqa|C|9-782|argmax", "attempt": 20, "arm": "argmax", "panel_ordinal": 0, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:29.927074+00:00", "key": "obqa|C|9-782|argmax", "attempt": 20}
+{"event": "START", "utc": "2026-09-19T23:30:29.930003+00:00", "key": "obqa|C|14-290|original", "attempt": 21, "arm": "original", "panel_ordinal": 1, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:30.168535+00:00", "key": "obqa|C|14-290|original", "attempt": 21}
+{"event": "START", "utc": "2026-09-19T23:30:30.171724+00:00", "key": "obqa|C|14-290|reuse", "attempt": 22, "arm": "reuse", "panel_ordinal": 1, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:30.411532+00:00", "key": "obqa|C|14-290|reuse", "attempt": 22}
+{"event": "START", "utc": "2026-09-19T23:30:30.413771+00:00", "key": "obqa|C|14-290|argmax", "attempt": 23, "arm": "argmax", "panel_ordinal": 1, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:30.452963+00:00", "key": "obqa|C|14-290|argmax", "attempt": 23}
+{"event": "START", "utc": "2026-09-19T23:30:30.455120+00:00", "key": "obqa|C|14-290|fixed", "attempt": 24, "arm": "fixed", "panel_ordinal": 1, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:30.714938+00:00", "key": "obqa|C|14-290|fixed", "attempt": 24}
+{"event": "START", "utc": "2026-09-19T23:30:30.717925+00:00", "key": "obqa|C|13-823|reuse", "attempt": 25, "arm": "reuse", "panel_ordinal": 2, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:30.999033+00:00", "key": "obqa|C|13-823|reuse", "attempt": 25}
+{"event": "START", "utc": "2026-09-19T23:30:31.002148+00:00", "key": "obqa|C|13-823|argmax", "attempt": 26, "arm": "argmax", "panel_ordinal": 2, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:31.043711+00:00", "key": "obqa|C|13-823|argmax", "attempt": 26}
+{"event": "START", "utc": "2026-09-19T23:30:31.045722+00:00", "key": "obqa|C|13-823|fixed", "attempt": 27, "arm": "fixed", "panel_ordinal": 2, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:31.528263+00:00", "key": "obqa|C|13-823|fixed", "attempt": 27}
+{"event": "START", "utc": "2026-09-19T23:30:31.533265+00:00", "key": "obqa|C|13-823|original", "attempt": 28, "arm": "original", "panel_ordinal": 2, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:31.773358+00:00", "key": "obqa|C|13-823|original", "attempt": 28}
+{"event": "START", "utc": "2026-09-19T23:30:31.776181+00:00", "key": "obqa|C|12-745|argmax", "attempt": 29, "arm": "argmax", "panel_ordinal": 3, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:31.815229+00:00", "key": "obqa|C|12-745|argmax", "attempt": 29}
+{"event": "START", "utc": "2026-09-19T23:30:31.817480+00:00", "key": "obqa|C|12-745|fixed", "attempt": 30, "arm": "fixed", "panel_ordinal": 3, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:32.283364+00:00", "key": "obqa|C|12-745|fixed", "attempt": 30}
+{"event": "START", "utc": "2026-09-19T23:30:32.287045+00:00", "key": "obqa|C|12-745|original", "attempt": 31, "arm": "original", "panel_ordinal": 3, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:32.532194+00:00", "key": "obqa|C|12-745|original", "attempt": 31}
+{"event": "START", "utc": "2026-09-19T23:30:32.535070+00:00", "key": "obqa|C|12-745|reuse", "attempt": 32, "arm": "reuse", "panel_ordinal": 3, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:32.773040+00:00", "key": "obqa|C|12-745|reuse", "attempt": 32}
+{"event": "START", "utc": "2026-09-19T23:30:32.820817+00:00", "key": "arc|T|Mercury_7207358|fixed", "attempt": 33, "arm": "fixed", "panel_ordinal": 0, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:33.692787+00:00", "key": "arc|T|Mercury_7207358|fixed", "attempt": 33}
+{"event": "START", "utc": "2026-09-19T23:30:33.696907+00:00", "key": "arc|T|Mercury_7207358|original", "attempt": 34, "arm": "original", "panel_ordinal": 0, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:33.938289+00:00", "key": "arc|T|Mercury_7207358|original", "attempt": 34}
+{"event": "START", "utc": "2026-09-19T23:30:33.940983+00:00", "key": "arc|T|Mercury_7207358|reuse", "attempt": 35, "arm": "reuse", "panel_ordinal": 0, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:34.179248+00:00", "key": "arc|T|Mercury_7207358|reuse", "attempt": 35}
+{"event": "START", "utc": "2026-09-19T23:30:34.182578+00:00", "key": "arc|T|Mercury_7207358|argmax", "attempt": 36, "arm": "argmax", "panel_ordinal": 0, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:34.221153+00:00", "key": "arc|T|Mercury_7207358|argmax", "attempt": 36}
+{"event": "START", "utc": "2026-09-19T23:30:34.224310+00:00", "key": "arc|T|Mercury_SC_LBS10915|original", "attempt": 37, "arm": "original", "panel_ordinal": 1, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:34.492166+00:00", "key": "arc|T|Mercury_SC_LBS10915|original", "attempt": 37}
+{"event": "START", "utc": "2026-09-19T23:30:34.495131+00:00", "key": "arc|T|Mercury_SC_LBS10915|reuse", "attempt": 38, "arm": "reuse", "panel_ordinal": 1, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:34.764754+00:00", "key": "arc|T|Mercury_SC_LBS10915|reuse", "attempt": 38}
+{"event": "START", "utc": "2026-09-19T23:30:34.767417+00:00", "key": "arc|T|Mercury_SC_LBS10915|argmax", "attempt": 39, "arm": "argmax", "panel_ordinal": 1, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:34.805186+00:00", "key": "arc|T|Mercury_SC_LBS10915|argmax", "attempt": 39}
+{"event": "START", "utc": "2026-09-19T23:30:34.807805+00:00", "key": "arc|T|Mercury_SC_LBS10915|fixed", "attempt": 40, "arm": "fixed", "panel_ordinal": 1, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:35.596050+00:00", "key": "arc|T|Mercury_SC_LBS10915|fixed", "attempt": 40}
+{"event": "START", "utc": "2026-09-19T23:30:35.600315+00:00", "key": "arc|T|Mercury_177398|reuse", "attempt": 41, "arm": "reuse", "panel_ordinal": 2, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:35.835183+00:00", "key": "arc|T|Mercury_177398|reuse", "attempt": 41}
+{"event": "START", "utc": "2026-09-19T23:30:35.837953+00:00", "key": "arc|T|Mercury_177398|argmax", "attempt": 42, "arm": "argmax", "panel_ordinal": 2, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:35.877251+00:00", "key": "arc|T|Mercury_177398|argmax", "attempt": 42}
+{"event": "START", "utc": "2026-09-19T23:30:35.881393+00:00", "key": "arc|T|Mercury_177398|fixed", "attempt": 43, "arm": "fixed", "panel_ordinal": 2, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:36.626161+00:00", "key": "arc|T|Mercury_177398|fixed", "attempt": 43}
+{"event": "START", "utc": "2026-09-19T23:30:36.630154+00:00", "key": "arc|T|Mercury_177398|original", "attempt": 44, "arm": "original", "panel_ordinal": 2, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:36.867361+00:00", "key": "arc|T|Mercury_177398|original", "attempt": 44}
+{"event": "START", "utc": "2026-09-19T23:30:36.870856+00:00", "key": "arc|T|Mercury_SC_400655|argmax", "attempt": 45, "arm": "argmax", "panel_ordinal": 3, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:36.908848+00:00", "key": "arc|T|Mercury_SC_400655|argmax", "attempt": 45}
+{"event": "START", "utc": "2026-09-19T23:30:36.911050+00:00", "key": "arc|T|Mercury_SC_400655|fixed", "attempt": 46, "arm": "fixed", "panel_ordinal": 3, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:37.899584+00:00", "key": "arc|T|Mercury_SC_400655|fixed", "attempt": 46}
+{"event": "START", "utc": "2026-09-19T23:30:37.902398+00:00", "key": "arc|T|Mercury_SC_400655|original", "attempt": 47, "arm": "original", "panel_ordinal": 3, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:38.139666+00:00", "key": "arc|T|Mercury_SC_400655|original", "attempt": 47}
+{"event": "START", "utc": "2026-09-19T23:30:38.143638+00:00", "key": "arc|T|Mercury_SC_400655|reuse", "attempt": 48, "arm": "reuse", "panel_ordinal": 3, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:38.410554+00:00", "key": "arc|T|Mercury_SC_400655|reuse", "attempt": 48}
+{"event": "START", "utc": "2026-09-19T23:30:38.440588+00:00", "key": "arc|C|Mercury_7207358|fixed", "attempt": 49, "arm": "fixed", "panel_ordinal": 0, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:38.635406+00:00", "key": "arc|C|Mercury_7207358|fixed", "attempt": 49}
+{"event": "START", "utc": "2026-09-19T23:30:38.637973+00:00", "key": "arc|C|Mercury_7207358|original", "attempt": 50, "arm": "original", "panel_ordinal": 0, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:38.876178+00:00", "key": "arc|C|Mercury_7207358|original", "attempt": 50}
+{"event": "START", "utc": "2026-09-19T23:30:38.879152+00:00", "key": "arc|C|Mercury_7207358|reuse", "attempt": 51, "arm": "reuse", "panel_ordinal": 0, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:39.116609+00:00", "key": "arc|C|Mercury_7207358|reuse", "attempt": 51}
+{"event": "START", "utc": "2026-09-19T23:30:39.120180+00:00", "key": "arc|C|Mercury_7207358|argmax", "attempt": 52, "arm": "argmax", "panel_ordinal": 0, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:39.159386+00:00", "key": "arc|C|Mercury_7207358|argmax", "attempt": 52}
+{"event": "START", "utc": "2026-09-19T23:30:39.161803+00:00", "key": "arc|C|Mercury_SC_LBS10915|original", "attempt": 53, "arm": "original", "panel_ordinal": 1, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:39.430231+00:00", "key": "arc|C|Mercury_SC_LBS10915|original", "attempt": 53}
+{"event": "START", "utc": "2026-09-19T23:30:39.433056+00:00", "key": "arc|C|Mercury_SC_LBS10915|reuse", "attempt": 54, "arm": "reuse", "panel_ordinal": 1, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:39.703779+00:00", "key": "arc|C|Mercury_SC_LBS10915|reuse", "attempt": 54}
+{"event": "START", "utc": "2026-09-19T23:30:39.716411+00:00", "key": "arc|C|Mercury_SC_LBS10915|argmax", "attempt": 55, "arm": "argmax", "panel_ordinal": 1, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:39.753568+00:00", "key": "arc|C|Mercury_SC_LBS10915|argmax", "attempt": 55}
+{"event": "START", "utc": "2026-09-19T23:30:39.756165+00:00", "key": "arc|C|Mercury_SC_LBS10915|fixed", "attempt": 56, "arm": "fixed", "panel_ordinal": 1, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:40.249015+00:00", "key": "arc|C|Mercury_SC_LBS10915|fixed", "attempt": 56}
+{"event": "START", "utc": "2026-09-19T23:30:40.253129+00:00", "key": "arc|C|Mercury_177398|reuse", "attempt": 57, "arm": "reuse", "panel_ordinal": 2, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:40.488326+00:00", "key": "arc|C|Mercury_177398|reuse", "attempt": 57}
+{"event": "START", "utc": "2026-09-19T23:30:40.491307+00:00", "key": "arc|C|Mercury_177398|argmax", "attempt": 58, "arm": "argmax", "panel_ordinal": 2, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:40.530120+00:00", "key": "arc|C|Mercury_177398|argmax", "attempt": 58}
+{"event": "START", "utc": "2026-09-19T23:30:40.532808+00:00", "key": "arc|C|Mercury_177398|fixed", "attempt": 59, "arm": "fixed", "panel_ordinal": 2, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:40.786628+00:00", "key": "arc|C|Mercury_177398|fixed", "attempt": 59}
+{"event": "START", "utc": "2026-09-19T23:30:40.789942+00:00", "key": "arc|C|Mercury_177398|original", "attempt": 60, "arm": "original", "panel_ordinal": 2, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:41.026979+00:00", "key": "arc|C|Mercury_177398|original", "attempt": 60}
+{"event": "START", "utc": "2026-09-19T23:30:41.029458+00:00", "key": "arc|C|Mercury_SC_400655|argmax", "attempt": 61, "arm": "argmax", "panel_ordinal": 3, "order_position": 0, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:41.067210+00:00", "key": "arc|C|Mercury_SC_400655|argmax", "attempt": 61}
+{"event": "START", "utc": "2026-09-19T23:30:41.069863+00:00", "key": "arc|C|Mercury_SC_400655|fixed", "attempt": 62, "arm": "fixed", "panel_ordinal": 3, "order_position": 1, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:41.259278+00:00", "key": "arc|C|Mercury_SC_400655|fixed", "attempt": 62}
+{"event": "START", "utc": "2026-09-19T23:30:41.262326+00:00", "key": "arc|C|Mercury_SC_400655|original", "attempt": 63, "arm": "original", "panel_ordinal": 3, "order_position": 2, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:41.498584+00:00", "key": "arc|C|Mercury_SC_400655|original", "attempt": 63}
+{"event": "START", "utc": "2026-09-19T23:30:41.501723+00:00", "key": "arc|C|Mercury_SC_400655|reuse", "attempt": 64, "arm": "reuse", "panel_ordinal": 3, "order_position": 3, "job_id": "run008"}
+{"event": "SUCCESS", "utc": "2026-09-19T23:30:41.737907+00:00", "key": "arc|C|Mercury_SC_400655|reuse", "attempt": 64}

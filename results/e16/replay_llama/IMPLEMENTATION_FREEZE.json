@@ -1,0 +1,22 @@
+{
+  "utc": "2026-09-14T17:51:26.079303+00:00",
+  "files": {
+    "src/render.py": "646a3445a228e7bdd645c144f71ffb7b1dbaf9b3c51215e5e0fd07c7c2343a81",
+    "src/validate_sources.py": "f2169229f71538353629746ca851c271551ec546111e7adc33d8f2a7f6e635c6",
+    "src/supervise.py": "3212cc86175467f4170d413e692e78ef5591971a756141e83ac9245d496e9a53",
+    "src/submit.py": "656f096173627d2edcd178580bf48feac5983efd2f40ccbe52dd484d06441b82",
+    "src/common.py": "0ff6b7ed00b0d231f7d68960fd835c3a58120b53d4945ee53893091cf05b3d8c",
+    "src/build_execution.py": "1c9d9d4d65884f72b903336c2b7c50f86861d9ef80801ac22990713fd552d3bc",
+    "src/prepare.py": "9f7b6b98fd1008e80634e6d91708478974f4e9c5bd459575855499fcb906fddc",
+    "src/analyze.py": "8a28892fa77d88ec96e1c24f359f7a7e6935f5491988a6dc2bd866e20ffbb952",
+    "src/native_adapter.py": "1a632a1c9f6b65863a2c4487a1d975e74d0a60f08c084d5ad198e6a082bdef26",
+    "src/execute.py": "5154685e9b47a1ea1938405f9b567c7d11ab0cfd98e8de08250d2dd6e9094107",
+    "src/receiver_prompt.py": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66",
+    "src/pbs_entry.py": "8bff44fa584430a4bde12e0ff1fd04bc96f48c31d85d54307ad41dcf59e02e27",
+    "src/build_adapter.py": "53bc90877b82549e9667d868ec1767d88cb1bceb7711d77bf972d666f4af694d",
+    "run_e2e.pbs": "2318e3ceb086d499bc7dc1f699e86f69c99d27cef040adf5ab1277bbdc1e9d39"
+  },
+  "no_model_or_scoring_execution": true,
+  "E3_manifest_recomputed": "hashes recomputed over this copy after the E3 ClusterA harness edits; original hashes are in diffs/large.diff",
+  "E16_4_manifest_recomputed": "hashes recomputed over this Llama copy (P2_R7_E16 build_e164.py)"
+}

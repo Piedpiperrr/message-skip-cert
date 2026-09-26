@@ -1,0 +1,39 @@
+{
+  "status": "NUMERICAL_VALIDATION_PASSED",
+  "passed": true,
+  "job_id": "run007",
+  "checks": [
+    "All frozen hashes unchanged",
+    "Duplicate groups remain disjoint across folds",
+    "8 baseline and 280 OOF formal heads and their hashes/first numerical checks verified",
+    "All planned combinations/folds/actions/lambdas/scopes and table counts complete",
+    "One held-out prediction per question and representation/model pair",
+    "Frozen large ARC fold 4 f_A has AUC/AP NA and finite log loss",
+    "Every decision/paired difference recomputed from official predictions and all overhead identities verified",
+    "Pooled metrics weighted by question counts across unequal folds",
+    "INVALID partition counts reconcile without dropped questions"
+  ],
+  "table_rows": {
+    "baseline_update_summary.csv": 112,
+    "baseline_panel_replay.csv": 256,
+    "oof_predictions.csv": 18340,
+    "flip_metrics.csv": 576,
+    "decision_metrics.csv": 5712,
+    "paired_method_differences.csv": 5712,
+    "overhead_headroom.csv": 5712,
+    "invalid_analysis.csv": 720,
+    "direction_diagnostics.csv": 120
+  },
+  "LR_attempts": 288,
+  "completed_baseline_C_heads": 8,
+  "completed_OOF_heads": 280,
+  "warnings": [],
+  "versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "sklearn": "1.7.1",
+    "joblib": "1.5.3"
+  },
+  "paper_compiled": false,
+  "no_significance_testing_or_point_selection": true
+}

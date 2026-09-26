@@ -1,0 +1,26 @@
+check,setting,N_fit,N_cal,N_dev,expected_q,recomputed_q,outcome,accepted_q,p_at_q,n_at_q,k_at_q,stored_thresholds_equal_fit_order_statistics,ok
+(i) certification,small/OBQA/Text,2100,1366,742,0.0,0.0,fallback,,,,,True,True
+(i) certification,small/OBQA/C2C,2100,1366,742,0.0,0.0,fallback,,,,,True,True
+(i) certification,small/ARC/Text,670,448,299,0.0,0.0,fallback,,,,,True,True
+(i) certification,small/ARC/C2C,670,448,299,0.0,0.0,fallback,,,,,True,True
+(i) certification,medium/OBQA/Text,2100,1366,742,0.0,0.0,fallback,,,,,True,True
+(i) certification,medium/OBQA/C2C,2100,1366,742,0.55,0.55,deploy,0.05;0.10;0.15;0.20;0.25;0.30;0.35;0.40;0.45;0.50;0.55,0.0006941865963785939,739,19,True,True
+(i) certification,medium/ARC/Text,670,448,299,0.0,0.0,fallback,,,,,True,True
+(i) certification,medium/ARC/C2C,670,448,299,0.6,0.6,deploy,0.05;0.10;0.15;0.20;0.25;0.30;0.35;0.40;0.45;0.50;0.55;0.60,5.637030858186349e-06,290,1,True,True
+(i) certification,large/OBQA/Text,2100,1366,742,0.8,0.8,deploy,0.05;0.10;0.15;0.20;0.25;0.30;0.35;0.40;0.45;0.50;0.55;0.60;0.65;0.70;0.75;0.80,1.1550466704560778e-08,1064,18,True,True
+(i) certification,large/OBQA/C2C,2100,1366,742,0.8,0.8,deploy,0.05;0.10;0.15;0.20;0.25;0.30;0.35;0.40;0.45;0.50;0.55;0.60;0.65;0.70;0.75;0.80,6.7085048137187e-07,1064,22,True,True
+(i) certification,large/ARC/Text,670,448,299,0.95,0.95,deploy,0.05;0.10;0.15;0.20;0.25;0.30;0.35;0.40;0.45;0.50;0.55;0.60;0.65;0.70;0.75;0.80;0.85;0.90;0.95,4.801495832619201e-06,422,4,True,True
+(i) certification,large/ARC/C2C,670,448,299,0.9,0.9,deploy,0.05;0.10;0.15;0.20;0.25;0.30;0.35;0.40;0.45;0.50;0.55;0.60;0.65;0.70;0.75;0.80;0.85;0.90,0.0005396969574823307,404,7,True,True
+(i) certification,large/MMLU-Pro/Text,3000,6000,2641,0.4,0.4,deploy,0.05;0.10;0.15;0.20;0.25;0.30;0.35;0.40,1.335577911279424e-07,2358,67,True,True
+(i) certification,large/MMLU-Pro/C2C,3000,6000,2641,0.4,0.4,deploy,0.05;0.10;0.15;0.20;0.25;0.30;0.35;0.40,1.012696335561767e-05,2358,75,True,True
+(i) certification,small/MMLU-Pro/Text,3000,6000,2641,0.0,0.0,fallback,,,,,True,True
+(i) certification,small/MMLU-Pro/C2C,3000,6000,2641,0.0,0.0,fallback,,,,,True,True
+(i) certification,medium/MMLU-Pro/Text,3000,6000,2641,0.0,0.0,fallback,,,,,True,True
+(i) certification,medium/MMLU-Pro/C2C,3000,6000,2641,0.0,0.0,fallback,,,,,True,True
+(i) certification,X1-Llama/OBQA/Text,2100,1366,742,0.0,0.0,fallback,,,,,True,True
+(i) certification,X1-Llama/OBQA/C2C,2100,1366,742,0.0,0.0,fallback,,,,,True,True
+(i) certification,X1-Llama/ARC/Text,670,448,299,0.0,0.0,fallback,,,,,True,True
+(i) certification,X1-Llama/ARC/C2C,670,448,299,0.0,0.0,fallback,,,,,True,True
+(i) certification,X2-OLMo/OBQA/Text,2100,1366,742,0.0,0.0,fallback,,,,,True,True
+(i) certification,X2-OLMo/ARC/Text,670,448,299,0.0,0.0,fallback,,,,,True,True
+(i) certification,X2-OLMo/MMLU-Pro/Text,3000,6000,2641,0.0,0.0,fallback,,,,,True,True

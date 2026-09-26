@@ -1,0 +1,70 @@
+--- P2_R3_E9BC_20260920T061042Z/src/slot_e9b.sh	2026-09-20 06:52:00.000000000 +0000
++++ P2_R9_E21B_20260922T065040Z/src/slot_e21b.sh	2026-09-22 07:05:36.000000000 +0000
+@@ -1,25 +1,49 @@
+ #!/bin/bash
+-# One E9B slot = 2 GPUs (helper cuda:0, receiver cuda:1), as the frozen runtimes require.
+-# ranks 0,1,2 -> large pair thirds of the 744 rows; rank 3 -> medium pair, all 744.
+-# Validation runs first inside the slot; main runs only if it passed. Always exits 0.
++# One E21B slot = 2 GPUs (helper cuda:0, receiver cuda:1), as the frozen runtime requires (from E9B slot_e9b.sh).
++# Phase A: this slot's preflight part (rank 0: P1 ARC, 1: P1 OBQA, 2: P3 ARC, 3: P3 OBQA).
++# Barrier; rank 0 runs the gate (P1/P2/P3); every slot reads the verdict. Phase B only on PASS:
++# production shard GR/4 of sealed ARC, then of held-out OBQA. Always exits 0 so siblings are not killed.
+ set -u
+ GR="${PALS_RANKID:-${PMI_RANK:-0}}"
+ LR="${PALS_LOCAL_RANKID:-${PMI_LOCAL_RANK:-0}}"
+ case "$LR" in 0) GPUS=0,1 ;; 1) GPUS=2,3 ;; *) echo "unexpected local rank $LR"; exit 0 ;; esac
+ export CUDA_VISIBLE_DEVICES=$GPUS
+-export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=8 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 TOKENIZERS_PARALLELISM=false
+-export TMPDIR="/tmp/e9b.$$"; mkdir -p "$TMPDIR"
+-export P2_DEADLINE_EPOCH="$E9_E9B_DEADLINE" P2_MEDIUM_DEADLINE="$E9_E9B_DEADLINE"
+-if [ "$GR" -lt 3 ]; then PAIR=large; ACTS='probe,R,T,C,TF'; SH=$GR; NSH=3
+-else PAIR=medium; ACTS='probe,R,C'; SH=0; NSH=1; fi
+-echo "E9B SLOT rank=$GR pair=$PAIR gpus=$GPUS shard=$SH/$NSH host=$(hostname)"
+-D="$E9_DIR/$PAIR"
+-"$E9_PY" -u "$E9_DIR/src/gpu_preflight2.py" || { echo "E9B rank=$GR skipping: GPUs unusable"; exit 0; }
+-V="$D/records/VALIDATION_rank${GR}.json"
+-"$E9_PY" -u "$D/src/e9b_exec.py" --mode validate --actions "$ACTS" --out "$V"
+-rc=$?
+-if [ $rc -ne 0 ]; then echo "E9B rank=$GR VALIDATION FAILED rc=$rc -- main not run"; exit 0; fi
+-"$E9_PY" -u "$D/src/e9b_exec.py" --mode main --actions "$ACTS" --shard "$SH" --nshards "$NSH" \
+-    --out "$D/records/e9b_${PAIR}_shard${SH}.jsonl" --deadline-epoch "$E9_E9B_DEADLINE"
+-echo "E9B rank=$GR main exit=$? (reported as 0 so siblings are not killed)"
++export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=8 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 TOKENIZERS_PARALLELISM=false PYTHONDONTWRITEBYTECODE=1
++export TMPDIR="/tmp/e21b.$$"; mkdir -p "$TMPDIR"
++export P2_DEADLINE_EPOCH="$E21_DEADLINE"
++export E21B_STAGE="$E21_DIR/large_s$GR"
++PF="$E21_DIR/preflight"
++X="$E21_PY -u $E21_DIR/src/e21b_exec.py --mode main --deadline-epoch $E21_DEADLINE"
++now() { date -u +%Y-%m-%dT%H:%M:%SZ; }
++echo "E21B SLOT rank=$GR gpus=$GPUS host=$(hostname) stage=$E21B_STAGE $(now)"
++if "$E21_PY" -u "$E21_DIR/src/gpu_preflight2.py"; then
++  case "$GR" in
++    0) $X --population arc  --transform identity --actions probe,R,T,C    --ids "$PF/ids_arc.json"  --out "$PF/p1_arc.jsonl" ;;
++    1) $X --population obqa --transform identity --actions probe,R,T,C,TF --ids "$PF/ids_obqa.json" --out "$PF/p1_obqa.jsonl" ;;
++    2) $X --population arc  --transform v1       --actions probe,R,T,C    --ids "$PF/ids_arc.json"  --out "$PF/p3_arc.jsonl" ;;
++    3) $X --population obqa --transform v1       --actions probe,R,T,C,TF --ids "$PF/ids_obqa.json" --out "$PF/p3_obqa.jsonl" ;;
++  esac
++  echo "E21B PREFLIGHT_PART rank=$GR exit=$? $(now)"
++else
++  echo "E21B rank=$GR GPUs unusable; preflight part not run $(now)"
++fi
++touch "$PF/part_done_rank$GR"
++while [ "$(ls "$PF"/part_done_rank* 2>/dev/null | wc -l)" -lt 4 ]; do
++  sleep 5; if [ "$(date +%s)" -gt "$E21_DEADLINE" ]; then echo "E21B rank=$GR barrier timeout $(now)"; exit 0; fi
++done
++if [ "$GR" -eq 0 ]; then
++  "$E21_PY" -u "$E21_DIR/src/e21b_stats.py" gate > "$PF/gate.log" 2>&1
++  echo "rc=$?" > "$PF/gate_rc.tmp" && mv "$PF/gate_rc.tmp" "$PF/gate_rc.txt"
++fi
++while [ ! -s "$PF/gate_rc.txt" ]; do
++  sleep 5; if [ "$(date +%s)" -gt "$E21_DEADLINE" ]; then echo "E21B rank=$GR gate timeout $(now)"; exit 0; fi
++done
++if [ "$(cat "$PF/gate_rc.txt")" != "rc=0" ]; then
++  echo "E21B rank=$GR PREFLIGHT verdict $(cat "$PF/gate_rc.txt") (not PASS) -- no production $(now)"; exit 0
++fi
++echo "E21B rank=$GR PREFLIGHT PASS -> production $(now)"
++$X --population arc  --transform v1 --actions probe,R,T,C    --shard "$GR" --nshards 4 --out "$E21_DIR/out/arc_rot_shard$GR.jsonl"
++echo "E21B rank=$GR ARC shard exit=$? $(now)"
++$X --population obqa --transform v1 --actions probe,R,T,C,TF --shard "$GR" --nshards 4 --out "$E21_DIR/out/obqa_rot_shard$GR.jsonl"
++echo "E21B rank=$GR OBQA shard exit=$? $(now)"
+ exit 0

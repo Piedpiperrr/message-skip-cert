@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-14T07:08:40.063814+00:00",
+  "files": {
+    "models/deployment.json": "ae267bf988b70a0cbf0adc3aa5866a0e48db131b22c7a2c3fe03d68f57a2bcd4",
+    "summary/calibration_new_60.csv": "228da4ee170780a77122f9360531672e9c8d2bc4caa59056b7dfaef7dd3d1305",
+    "summary/calibration_reused_40_original.csv": "09d6e228fc6914353338bff559dfff95fbd4e1a3acc3bace46634efdaac8ed77",
+    "summary/calibration_comparison_100.csv": "db1806bebe4db5bc28892aaeae3f30eb464796f940fce96c8d43dbf548332351",
+    "THRESHOLDS_FREEZE.json": "eed92a2ba464aff8cf2676f29a285197f4658e9a49869ae3d2cff829fe7ee05b"
+  },
+  "new_tests": 60,
+  "reused_tests": 40,
+  "total_family_items": 100,
+  "dev_probe_success": 0,
+  "dev_gold_or_answers_read": false
+}

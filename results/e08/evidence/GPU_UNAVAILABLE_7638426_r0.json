@@ -1,0 +1,23 @@
+{
+  "utc": "2026-09-20T06:07:50.060756+00:00",
+  "host": "REDACTED",
+  "job_id": "run034",
+  "slot": "r0",
+  "pair": "small",
+  "CUDA_VISIBLE_DEVICES": "0,1",
+  "attempts": 10,
+  "sleep_seconds": 15.0,
+  "errors": [
+    "attempt 1: RuntimeError('CUDA error: CUDA-capable device(s) is/are busy or unavailable\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n')",
+    "attempt 2: RuntimeError('CUDA error: CUDA-capable device(s) is/are busy or unavailable\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n')",
+    "attempt 3: RuntimeError('CUDA error: CUDA-capable device(s) is/are busy or unavailable\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n')",
+    "attempt 4: RuntimeError('CUDA error: CUDA-capable device(s) is/are busy or unavailable\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n')",
+    "attempt 5: RuntimeError('CUDA error: CUDA-capable device(s) is/are busy or unavailable\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n')",
+    "attempt 6: RuntimeError('CUDA error: CUDA-capable device(s) is/are busy or unavailable\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n')",
+    "attempt 7: RuntimeError('CUDA error: CUDA-capable device(s) is/are busy or unavailable\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n')",
+    "attempt 8: RuntimeError('CUDA error: CUDA-capable device(s) is/are busy or unavailable\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n')",
+    "attempt 9: RuntimeError('CUDA error: CUDA-capable device(s) is/are busy or unavailable\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n')",
+    "attempt 10: RuntimeError('CUDA error: CUDA-capable device(s) is/are busy or unavailable\\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\\n')"
+  ],
+  "action": "slot skipped; its lanes stay unclaimed for a later job; sibling ranks continue"
+}

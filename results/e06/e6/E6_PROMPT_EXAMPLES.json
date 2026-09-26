@@ -1,0 +1,21 @@
+{
+  "examples": [
+    {
+      "id": "14-1371",
+      "fact1": "metal is a nonrenewable resource",
+      "helper_user_message_Text": "In one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nWhich relationship is true?\n\nChoices:\nA. wind is renewable; metal is nonrenewable\nB. wind is recyclable, metal is other\nC. wind is happy, metal is other\nD. wind is nonrenewable; metal is renewable\n\n\nDo NOT directly solve or give answer to the question.",
+      "helper_user_message_Text_plus_fact": "In one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nUseful fact: metal is a nonrenewable resource\nWhich relationship is true?\n\nChoices:\nA. wind is renewable; metal is nonrenewable\nB. wind is recyclable, metal is other\nC. wind is happy, metal is other\nD. wind is nonrenewable; metal is renewable\n\n\nDo NOT directly solve or give answer to the question.",
+      "Text_sha256": "51cbf1c18ff59ead6a80902f0dcf59e88d47c7eee9a0de8e77dcdab855b124cd",
+      "Text_plus_fact_sha256": "d1cfa3a07e496b1f53b04d111e69e0a9338df92b82617461b98e814f9964d7b4"
+    },
+    {
+      "id": "14-97",
+      "fact1": "seed dispersal is when the seeds of a plant are moved from the plant to a new environment",
+      "helper_user_message_Text": "In one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nIf the source of a bean is very far away, and the bean becomes a source for another, separate bean, then the original bean was\n\nChoices:\nA. a bad seed\nB. a dispersed seed\nC. a fresh shell\nD. a meaty liver\n\n\nDo NOT directly solve or give answer to the question.",
+      "helper_user_message_Text_plus_fact": "In one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nUseful fact: seed dispersal is when the seeds of a plant are moved from the plant to a new environment\nIf the source of a bean is very far away, and the bean becomes a source for another, separate bean, then the original bean was\n\nChoices:\nA. a bad seed\nB. a dispersed seed\nC. a fresh shell\nD. a meaty liver\n\n\nDo NOT directly solve or give answer to the question.",
+      "Text_sha256": "6df5c4ef37121b1c3e80d61c39d89a1983d2ad8b467f19f560dc906fd3f7eed6",
+      "Text_plus_fact_sha256": "94fb3a9132a98ffd6cf3a13ef402e1a52e2d3b6f9f82790185c9d7aafafe1de2"
+    }
+  ],
+  "flag_off_is_byte_identical_on_5_fit_rows": true
+}

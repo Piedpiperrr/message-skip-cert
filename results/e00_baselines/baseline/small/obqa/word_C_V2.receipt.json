@@ -1,0 +1,14 @@
+{
+  "event": "HEAD_COMPLETE",
+  "key": "baseline/small/obqa/word/C",
+  "kind": "LR",
+  "n": 3466,
+  "positive": 1804,
+  "iterations": 25,
+  "warnings": [],
+  "CPU_seconds": 0.0323430000000009,
+  "protocol_sha256": "41239823e728796dd108aae24cc48401ec8093c38aca16f7a30a1352145ef797",
+  "model_sha256": "4e7446d27c0d5acf7d5fe6af70e469ccd04a934571d1b21559cef2fff82980c9",
+  "input_hash": "c1baa112562540ffafda38a7aa59e24e",
+  "numerical_probability_check": true
+}

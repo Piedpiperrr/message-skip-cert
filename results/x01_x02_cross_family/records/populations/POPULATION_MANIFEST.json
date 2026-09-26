@@ -1,0 +1,74 @@
+{
+  "utc": "2026-09-19T19:01:39.275921+00:00",
+  "files": {
+    "obqa_fit.jsonl": {
+      "n": 2100,
+      "sha256": "6ad1b27f49e444d0102646c042d8bf20353cedace34fd44c46ae26830afcafd0"
+    },
+    "obqa_cal.jsonl": {
+      "n": 1366,
+      "sha256": "23f6356348737b9f83ca87826ed39578f10dd0fe9b6c4a9b3b9b8667f4574d60"
+    },
+    "obqa_dev.jsonl": {
+      "n": 742,
+      "sha256": "38ab089008f979061c014637f725ce4e6a42fbddec6198990cc4950e4eea21c6"
+    },
+    "arc_fit.jsonl": {
+      "n": 671,
+      "sha256": "0caf16b66f502a079c9ce9770657d984448bcb25578424037bb684593b3a1a3f"
+    },
+    "arc_cal.jsonl": {
+      "n": 448,
+      "sha256": "039b23dde7db04f36c3aee0996316831b8c358eb1e626616aeca88333efb8bc5"
+    },
+    "arc_dev.jsonl": {
+      "n": 299,
+      "sha256": "97d8449a4fc42e1a7fe12456ae4d783eacc4c62804a3c3f1b8cc3276404afdba"
+    },
+    "mmlu_pro_fit.jsonl": {
+      "n": 3000,
+      "sha256": "6f768418d246ad150cc3a4736577e455b505161f697201d4a1bdf6583099fa09"
+    },
+    "mmlu_pro_cal.jsonl": {
+      "n": 6000,
+      "sha256": "87af491e01cb8ca8ba1421f749d2022d3ec205a4b6a04590309beb441095138e"
+    },
+    "mmlu_pro_dev.jsonl": {
+      "n": 2641,
+      "sha256": "0fbe2f175a5ffc9069cf68ba02c55a0083848a59e64df2a14283ee2aa9804b04"
+    }
+  },
+  "sources": {
+    "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/labels/full_train_P2_SCORING_V2.jsonl": "a26986635c944974a5263e08457cb181489a32aec84da450fd514f9155dbf911",
+    "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/labels/full_development_P2_SCORING_V2.jsonl": "6fde2e0a58f9be88ef14edf7aeab0ac7202b594a17b94d1d18f034f8984d9aa8",
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/inputs/obqa_train_queries.jsonl": "56a89982c5fbf8fc08edc322d08a11eaba5ef05ac3b0dfeb662ddb96477ea767",
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/inputs/obqa_dev_queries.jsonl": "23c6a8039b63d176a63c820114a20def2ce6a785d8b8cd86a3b510ed68928094",
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/obqa_fit_ids.json": "1559bc9668d88a986df0967b96fdf14c995f02f622b126f396819b69b58c4028",
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/obqa_fit_representatives.json": "1559bc9668d88a986df0967b96fdf14c995f02f622b126f396819b69b58c4028",
+    "$DATA_DIR/P2_6_20260910T164138Z/results/train_cases.jsonl": "4a8d3c7fbb41638fcaa283538060c69a095430fff7f0f123bfee19f248a748ce",
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/obqa_cal_ids.json": "8b33a4d168131c5a0095c5eabcdea2f2b3bb272dfae8a41ab2a7e0e05d5ebaed",
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/obqa_cal_representatives.json": "8b33a4d168131c5a0095c5eabcdea2f2b3bb272dfae8a41ab2a7e0e05d5ebaed",
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/obqa_dev_ids.json": "80d1bbdd9148df3037401881533a2137b0d4ce9ee90a8ebb424fb413440bfbab",
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/obqa_dev_representatives.json": "80d1bbdd9148df3037401881533a2137b0d4ce9ee90a8ebb424fb413440bfbab",
+    "$DATA_DIR/P2_6_20260910T164138Z/results/dev_cases.jsonl": "8bbbfbc2a52c22bd578bd8ef161286d845adc5fb188ee4c763ef14d545040d7e",
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/inputs/arc_train_queries.jsonl": "bc039741db9e9932d29632699e91113f881b67aa6aff82c5261de9e8f4dbf928",
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/inputs/arc_dev_queries.jsonl": "b550cf4db8635d3c3926bc7c90643794f071bb16a8ed10b112d2399a04c4657f",
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/arc_fit_ids.json": "b3771328b85bbbe00cffe1cf6155bfa689d9de29c80fbdea7cc732488883a1e7",
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/arc_fit_representatives.json": "6a347fc68fa467ffb6b605dba872d06f3ddc064077c8dbc740b12c607fa90d5a",
+    "$DATA_DIR/P2_9_20260911T045010Z/results/large/train_cases.jsonl": "332f8cbc2fc5197ddeb0a7a56e6e08df03e81dc20dcd2cb4e79d26423fb00da4",
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/arc_cal_ids.json": "61781f830a784f82d8a9d4c426b8a2a824f1c0919bc6e3fd27209a5aed4bdfaa",
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/arc_cal_representatives.json": "61781f830a784f82d8a9d4c426b8a2a824f1c0919bc6e3fd27209a5aed4bdfaa",
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/arc_dev_ids.json": "588d16b38e5db04b26a0d48feb5b4b96f4caa6af3bd5352626e59aa40063419c",
+    "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/splits/arc_dev_representatives.json": "588d16b38e5db04b26a0d48feb5b4b96f4caa6af3bd5352626e59aa40063419c",
+    "$DATA_DIR/P2_9_20260911T045010Z/results/large/validation_cases.jsonl": "a6509a137ceff1a9f5219d82eefe5294b429b561b6a4370c7fc795c0c9990f5b",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/1/actions/cal.jsonl": "e70a0cbeb05c00d1853bdfa6602309fe7a48e1c819a0c662ff3a9875fa84c129",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/1/actions/fit.jsonl": "4a62e7ae5b1867fc951c69496b3f3dd5e48fa2efdbfc1b6aa07b323ff0c9815a",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/2/actions/cal.jsonl": "f607704478e6c4989d7021c2f0ab6aed94bb1cbe21e9340d1725f5bf477dec51",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/shards/2/actions/dev.jsonl": "1b916bbe760f20d2daaed77fe4ef1d2639dd4b449f44362466efe75038358db5",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/inputs/queries_only.jsonl": "a777b14d54e0773a0f3a7182ea8fde22c06f7111707aeefd51ea0cfda9a7fff6",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/splits/fit_groups.json": "0a03684d33083a2a5b22914e0600ab3f3c1a92971853b775e2ffb5102df21cb6",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/splits/cal_groups.json": "f6ecbfb4c2190b993c3f4888b061dd47d4d3809e028f880df5da9bfe8d89cbfa",
+    "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/splits/dev_groups.json": "848be2786457c2aa169281a7f2fc33b95988b5f6753bd830085e5894882642cd"
+  },
+  "gold_read": false
+}

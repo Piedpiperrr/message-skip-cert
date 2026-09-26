@@ -1,0 +1,16 @@
+"""Document synthesis from frozen summaries and the first formal record; no statistics rerun."""
+from common import *
+assert (P/'ANALYSIS_FREEZE.json').exists()
+with (P/'records/e2e_requests.jsonl').open() as f:first=json.loads(next(f))
+assert first['key']=='obqa|9-782|policy_T' and first['cold_first_request']
+text=r'''
+\paragraph{Component prediction versus actual execution.}
+Component recomposition was slightly optimistic for OBQA/Text: actual saving was 1.76 ms smaller. It was conservative for OBQA/C2C, ARC/Text, and ARC/C2C by 8.40, 20.50, and 9.74 ms, respectively. For OBQA/Text, the reference-time shift of +28.29 ms was offset by +15.60 ms in the selected action and +14.46 ms in online control. For OBQA/C2C, the corresponding shifts were +15.41, +8.10, and -1.09 ms; for ARC/Text, +29.69, +9.70, and -0.52 ms; and for ARC/C2C, +18.20, +9.21, and -0.75 ms. Here online control includes all policy work outside the selected native action. These shifts are an accounting decomposition, not a causal isolation of hardware or implementation effects.
+
+The first formal OBQA/Text policy probe took 2022.73 ms and remains in its 57.64 ms mean probe/selector cost; the other three strata had means between 42.09 and 42.37 ms. No request was removed for cold behavior. All 1024 raw and parsed action outputs matched their corresponding historical outputs; there were no INVALID parses or runtime failures. Thus the revised utility differences preserve the original panel correctness while replacing the latency measurements. Positive latency savings do not imply an overall accuracy--cost dominance claim: utility-difference intervals still cross zero for OBQA/Text and ARC/C2C.
+'''
+p=P/'paper/e2e_validation.tex';s=p.read_text();assert 'Component prediction versus actual execution' not in s;s=s.replace('\\begin{figure}[t]',text+'\n\\begin{figure}[t]');p.write_text(s)
+with (P/'REPORT_ZH.md').open('a') as f:f.write('\n对四项问题的直接回答：Text 的大幅节省在两任务均保留。OBQA/C2C 原约28ms margin变为36.575ms，描述95%区间[18.015,56.773]；ARC/C2C原约101ms变为110.935ms，区间[81.956,142.829]。组件估计在OBQA/Text略乐观（E2E少省1.765ms），在OBQA/C2C、ARC/Text、ARC/C2C分别保守8.401、20.498、9.737ms。分解表中reference时间增加大于所选动作时间增加，是后三层净节省上升的主要账面来源；这不是硬件效应的因果识别。\n\n首正式OBQA/Text policy probe为2022.731ms，完整纳入该层57.637ms平均probe/selector费用；其余三层平均约42.09–42.37ms。首题未剔除，也未另抽bootstrap。1024个新原始/解析答案均与相应历史动作一致，四层均无INVALID、无runtime failure；准确率身份保持，U变化来自重新测得的成本。虽然四层latency描述区间均支持正节省，OBQA/Text和ARC/C2C的ΔU区间仍跨零，不能宣称总体准确率—成本全面支配。\n')
+save(P/'evidence/WRITING_SYNTHESIS_RECEIPT.json',{'utc':utc(),'source_summary':sha(P/'summary/e2e_summary.csv'),'source_decomposition':sha(P/'summary/component_vs_e2e.csv'),'source_diagnostics':sha(P/'summary/output_diagnostics.csv'),'first_cold_key':first['key'],'first_cold_probe_ms':first['parts_ms']['probe_ms'],'numerical_recomputation':False,'policy_changes':False})
+save(P/'evidence/FIGURE_VISUAL_CHECK.json',{'utc':utc(),'viewed':True,'file':'figures/component_vs_e2e.png','sha256':sha(P/'figures/component_vs_e2e.png'),'checks':['all four panels labelled','both component and E2E bars visible','all confidence intervals fully visible','zero baseline visible','Text/C2C small and large savings shown without clipping'],'repair_needed':False})
+print('WRITING_AND_VISUAL_CHECK_COMPLETE')

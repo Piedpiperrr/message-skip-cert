@@ -1,0 +1,96 @@
+{
+  "D": {
+    "q": 0.3,
+    "threshold": 0.08307916184658852,
+    "mode": "selective",
+    "accepted_q": [
+      0.15,
+      0.2,
+      0.25,
+      0.3
+    ],
+    "calibration": {
+      "family": "D",
+      "q": 0.3,
+      "threshold": 0.08307916184658852,
+      "N": 1366,
+      "n_R": 380,
+      "changed": 6,
+      "conditional_risk": 0.015789473684210527,
+      "p_value": 0.00040960882929912964,
+      "CP_upper_0_999": 0.046781425415328697,
+      "accepted": true,
+      "coverage": 0.2781844802342606,
+      "marginal_change": 0.004392386530014641
+    },
+    "fallback_reason": null
+  },
+  "R": {
+    "q": 0.4,
+    "threshold": 0.16532099602212336,
+    "mode": "selective",
+    "accepted_q": [
+      0.25,
+      0.3,
+      0.35,
+      0.4
+    ],
+    "calibration": {
+      "family": "R",
+      "q": 0.4,
+      "threshold": 0.16532099602212336,
+      "N": 1366,
+      "n_R": 523,
+      "changed": 11,
+      "conditional_risk": 0.021032504780114723,
+      "p_value": 0.000563729079806503,
+      "CP_upper_0_999": 0.04824838475266088,
+      "accepted": true,
+      "coverage": 0.3828696925329429,
+      "marginal_change": 0.008052708638360176
+    },
+    "fallback_reason": null
+  },
+  "Diff": {
+    "q": 0.0,
+    "threshold": null,
+    "mode": "fixed_T",
+    "accepted_q": [],
+    "calibration": null,
+    "fallback_reason": "No strategy passed p<=0.001; not evidence of absent ranking signal"
+  },
+  "H": {
+    "q": 0.25,
+    "threshold": 0.05362096654722128,
+    "mode": "selective",
+    "accepted_q": [
+      0.1,
+      0.15,
+      0.2,
+      0.25
+    ],
+    "calibration": {
+      "family": "H",
+      "q": 0.25,
+      "threshold": 0.05362096654722128,
+      "N": 1366,
+      "n_R": 327,
+      "changed": 4,
+      "conditional_risk": 0.012232415902140673,
+      "p_value": 0.00023881525778559942,
+      "CP_upper_0_999": 0.044501373522178506,
+      "accepted": true,
+      "coverage": 0.23938506588579794,
+      "marginal_change": 0.0029282576866764276
+    },
+    "fallback_reason": null
+  },
+  "Random": {
+    "q": 0.0,
+    "threshold": null,
+    "mode": "fixed_T",
+    "accepted_q": [],
+    "calibration": null,
+    "fallback_reason": "No strategy passed p<=0.001; not evidence of absent ranking signal"
+  }
+}

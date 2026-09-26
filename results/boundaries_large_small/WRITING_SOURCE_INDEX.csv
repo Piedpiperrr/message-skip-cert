@@ -1,0 +1,4 @@
+path,sha256,role
+$DATA_DIR/P2_SCORING_V2_20260912T191445Z/rescore_answers.py,e0222a1a4a27e6e4e299e62df848719a712d464c578deec67202d8a0f941c0e6,V2 source schema/raw hash definition inspected; parser not rerun
+$DATA_DIR/P2_10_20260911T122423Z/common_p2_10.py,bd9c819a9974020004774706e86a19a14ec6f9b0a2728ee3f2329e0df53417b3,original four action code names
+$DATA_DIR/P2_ZERO_GOLD_CONTROLS_20260914T065145Z/summary/historical_e2e_reference.csv,6ac22d2cb4ae5f5ae4ca15cb4273a1e44d0198009d4a1a854101ac27338bf7fe,read-only E2E identity retained

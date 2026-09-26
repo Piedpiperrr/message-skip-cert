@@ -1,0 +1,35 @@
+[
+ {
+  "id": "Mercury_SC_407695",
+  "K": 4,
+  "labels": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "identical": true
+ },
+ {
+  "id": "NYSEDREGENTS_2014_4_4",
+  "K": 3,
+  "labels": [
+   "A",
+   "B",
+   "C"
+  ],
+  "identical": false
+ },
+ {
+  "id": "TIMSS_2003_8_pg29",
+  "K": 5,
+  "labels": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "identical": false
+ }
+]

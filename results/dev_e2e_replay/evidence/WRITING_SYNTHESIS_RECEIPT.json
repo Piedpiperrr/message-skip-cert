@@ -1,0 +1,10 @@
+{
+  "utc": "2026-09-14T18:10:13.975327+00:00",
+  "source_summary": "430ce4b6294f5c7bf85ff7c7315097f45447828238515bc6b36c77a61f864992",
+  "source_decomposition": "32c4e9a22dee45af5055f2a4a447b271edb170aac878bc7fd72de816bf5c9da4",
+  "source_diagnostics": "41319a1f14088442be710310b23ec7dca758cb29b4ce20a0f63466651f56f89c",
+  "first_cold_key": "obqa|9-782|policy_T",
+  "first_cold_probe_ms": 2022.7313521318138,
+  "numerical_recomputation": false,
+  "policy_changes": false
+}

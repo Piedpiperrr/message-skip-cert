@@ -1,0 +1,6 @@
+{
+  "utc": "2026-09-20T19:10:32.184877+00:00",
+  "after_deployment_configs": true,
+  "deployment_configs_sha256": "fc2e579dae5564763b726e99a8ec81f1bd9716ebd33ee64bc88f25db5169bf57",
+  "parquet": "$DATA_DIR/P2_MMLU_PRO_BREADTH_PROTOCOL_AND_COST_REVIEW_20260915T224801Z/dataset/test-00000-of-00001.parquet"
+}

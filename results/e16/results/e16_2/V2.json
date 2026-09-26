@@ -1,0 +1,150 @@
+{
+ "utc": "2026-09-21T18:59:50.316965+00:00",
+ "verdict": "PASS",
+ "rows": [
+  {
+   "id": "Mercury_7181965",
+   "runtime_ok": true,
+   "R_raw_equal": true,
+   "C_raw_equal": true,
+   "ProbeMax_equal": true,
+   "probe_ids_equal": true,
+   "all_equal": true
+  },
+  {
+   "id": "Mercury_7009923",
+   "runtime_ok": true,
+   "R_raw_equal": true,
+   "C_raw_equal": true,
+   "ProbeMax_equal": true,
+   "probe_ids_equal": true,
+   "all_equal": true
+  },
+  {
+   "id": "Mercury_7230195",
+   "runtime_ok": true,
+   "R_raw_equal": true,
+   "C_raw_equal": true,
+   "ProbeMax_equal": true,
+   "probe_ids_equal": true,
+   "all_equal": true
+  },
+  {
+   "id": "NYSEDREGENTS_2016_4_13",
+   "runtime_ok": true,
+   "R_raw_equal": true,
+   "C_raw_equal": true,
+   "ProbeMax_equal": true,
+   "probe_ids_equal": true,
+   "all_equal": true
+  },
+  {
+   "id": "Mercury_7133368",
+   "runtime_ok": true,
+   "R_raw_equal": true,
+   "C_raw_equal": true,
+   "ProbeMax_equal": true,
+   "probe_ids_equal": true,
+   "all_equal": true
+  },
+  {
+   "id": "Mercury_7228288",
+   "runtime_ok": true,
+   "R_raw_equal": true,
+   "C_raw_equal": true,
+   "ProbeMax_equal": true,
+   "probe_ids_equal": true,
+   "all_equal": true
+  },
+  {
+   "id": "Mercury_184293",
+   "runtime_ok": true,
+   "R_raw_equal": true,
+   "C_raw_equal": true,
+   "ProbeMax_equal": true,
+   "probe_ids_equal": true,
+   "all_equal": true
+  },
+  {
+   "id": "Mercury_SC_407691",
+   "runtime_ok": true,
+   "R_raw_equal": true,
+   "C_raw_equal": true,
+   "ProbeMax_equal": true,
+   "probe_ids_equal": true,
+   "all_equal": true
+  },
+  {
+   "id": "Mercury_7221743",
+   "runtime_ok": true,
+   "R_raw_equal": true,
+   "C_raw_equal": true,
+   "ProbeMax_equal": true,
+   "probe_ids_equal": true,
+   "all_equal": true
+  },
+  {
+   "id": "Mercury_7043995",
+   "runtime_ok": true,
+   "R_raw_equal": true,
+   "C_raw_equal": true,
+   "ProbeMax_equal": true,
+   "probe_ids_equal": true,
+   "all_equal": true
+  },
+  {
+   "id": "MCAS_2004_8_36",
+   "runtime_ok": true,
+   "R_raw_equal": true,
+   "C_raw_equal": true,
+   "ProbeMax_equal": true,
+   "probe_ids_equal": true,
+   "all_equal": true
+  },
+  {
+   "id": "TIMSS_1995_8_I17",
+   "runtime_ok": true,
+   "R_raw_equal": true,
+   "C_raw_equal": true,
+   "ProbeMax_equal": true,
+   "probe_ids_equal": true,
+   "all_equal": true
+  },
+  {
+   "id": "TIMSS_2003_8_pg27",
+   "runtime_ok": true,
+   "R_raw_equal": true,
+   "C_raw_equal": true,
+   "ProbeMax_equal": true,
+   "probe_ids_equal": true,
+   "all_equal": true
+  },
+  {
+   "id": "Mercury_7230300",
+   "runtime_ok": true,
+   "R_raw_equal": true,
+   "C_raw_equal": true,
+   "ProbeMax_equal": true,
+   "probe_ids_equal": true,
+   "all_equal": true
+  },
+  {
+   "id": "Mercury_402062",
+   "runtime_ok": true,
+   "R_raw_equal": true,
+   "C_raw_equal": true,
+   "ProbeMax_equal": true,
+   "probe_ids_equal": true,
+   "all_equal": true
+  },
+  {
+   "id": "Mercury_7234430",
+   "runtime_ok": true,
+   "R_raw_equal": true,
+   "C_raw_equal": true,
+   "ProbeMax_equal": true,
+   "probe_ids_equal": true,
+   "all_equal": true
+  }
+ ]
+}

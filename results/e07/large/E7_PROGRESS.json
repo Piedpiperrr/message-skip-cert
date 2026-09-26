@@ -1,0 +1,12 @@
+{
+  "utc": "2026-09-19T23:50:10.161305+00:00",
+  "status": "RUNNING",
+  "kind": "large",
+  "job_id": "run007",
+  "complete": 2048,
+  "expected": 2048,
+  "attempts": 2048,
+  "probes": 1536,
+  "elapsed_seconds": 677.8171130679548,
+  "ETA_remaining_seconds": 0.0
+}

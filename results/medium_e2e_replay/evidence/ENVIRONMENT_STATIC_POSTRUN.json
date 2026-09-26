@@ -1,0 +1,12 @@
+{
+  "identity": "post-run read-only metadata of same shared Python environment; not a new GPU run",
+  "python": "3.10.18 (main, Jun  5 2025, 13:14:17) [GCC 11.2.0]",
+  "executable": "$DATA_DIR/software/envs/c2c_official/bin/python",
+  "packages": {
+    "torch": "2.6.0",
+    "transformers": "4.52.4",
+    "numpy": "2.2.6",
+    "safetensors": "0.8.0",
+    "accelerate": "1.9.0"
+  }
+}

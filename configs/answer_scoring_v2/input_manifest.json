@@ -1,0 +1,170 @@
+[
+  {
+    "source_id": "S001",
+    "path": "<private_path>/obqa_train.jsonl",
+    "role": "规范化train/已曝光开发输入及gold",
+    "size_bytes": 3011848,
+    "sha256": "248d0729ccd56627cc50d83db1066d7875a24e52be4901805abb99876a9af51d",
+    "frozen_hash_verified": true
+  },
+  {
+    "source_id": "S002",
+    "path": "<private_path>/obqa_dev.jsonl",
+    "role": "规范化train/已曝光开发输入及gold",
+    "size_bytes": 643015,
+    "sha256": "fddc1d889c02c31014885fb9932baa6c4d27757dbbc5187e8aeb0f964acaa296",
+    "frozen_hash_verified": true
+  },
+  {
+    "source_id": "S003",
+    "path": "<private_path>/arc_train.jsonl",
+    "role": "规范化train/已曝光开发输入及gold",
+    "size_bytes": 2556014,
+    "sha256": "2679c79b9543cacf55201be9781cdc80109929abcaf6b731121f7e3764f201c4",
+    "frozen_hash_verified": true
+  },
+  {
+    "source_id": "S004",
+    "path": "<private_path>/arc_validation.jsonl",
+    "role": "规范化train/已曝光开发输入及gold",
+    "size_bytes": 698272,
+    "sha256": "8b0244ccb07aa1c77003e82908ba0955ab9255361ec32dd75b2006221248f481",
+    "frozen_hash_verified": true
+  },
+  {
+    "source_id": "S005",
+    "path": "<private_path>/request_manifest.jsonl",
+    "role": "P2-10正式调用manifest",
+    "size_bytes": 3494394,
+    "sha256": "660249f55d9d6d4d882cf6fb7b2cebe5ce2cac9a74668962ce12c7d2bb4dcedc",
+    "frozen_hash_verified": true
+  },
+  {
+    "source_id": "S006",
+    "path": "<private_path>/train_cases.jsonl",
+    "role": "全量历史R/T/C原始成功请求",
+    "size_bytes": 7192492,
+    "sha256": "4a8d3c7fbb41638fcaa283538060c69a095430fff7f0f123bfee19f248a748ce",
+    "frozen_hash_verified": true
+  },
+  {
+    "source_id": "S007",
+    "path": "<private_path>/train_cases.jsonl",
+    "role": "P2-10全量AC和同作业成本子集新RTC",
+    "size_bytes": 5384170,
+    "sha256": "f928b8a14dbf6eb492b84a3c631e959169ae996e067fbb42fb651864a1ed8d50",
+    "frozen_hash_verified": false
+  },
+  {
+    "source_id": "S008",
+    "path": "<private_path>/dev_cases.jsonl",
+    "role": "全量历史R/T/C原始成功请求",
+    "size_bytes": 1534711,
+    "sha256": "8bbbfbc2a52c22bd578bd8ef161286d845adc5fb188ee4c763ef14d545040d7e",
+    "frozen_hash_verified": true
+  },
+  {
+    "source_id": "S009",
+    "path": "<private_path>/dev_cases.jsonl",
+    "role": "P2-10全量AC和同作业成本子集新RTC",
+    "size_bytes": 1422112,
+    "sha256": "3d563b23c9fd55265a2843978b12e73dbc0ede14b2caad3b9714586e2abb8ea9",
+    "frozen_hash_verified": false
+  },
+  {
+    "source_id": "S010",
+    "path": "<private_path>/train_cases.jsonl",
+    "role": "全量历史R/T/C原始成功请求",
+    "size_bytes": 2644355,
+    "sha256": "332f8cbc2fc5197ddeb0a7a56e6e08df03e81dc20dcd2cb4e79d26423fb00da4",
+    "frozen_hash_verified": true
+  },
+  {
+    "source_id": "S011",
+    "path": "<private_path>/train_cases.jsonl",
+    "role": "P2-10全量AC和同作业成本子集新RTC",
+    "size_bytes": 2402487,
+    "sha256": "b89c89a4a3989dadeec79ef5fe34c2016db4649128c55904bc5f1b95055f8e9a",
+    "frozen_hash_verified": false
+  },
+  {
+    "source_id": "S012",
+    "path": "<private_path>/validation_cases.jsonl",
+    "role": "全量历史R/T/C原始成功请求",
+    "size_bytes": 712536,
+    "sha256": "a6509a137ceff1a9f5219d82eefe5294b429b561b6a4370c7fc795c0c9990f5b",
+    "frozen_hash_verified": true
+  },
+  {
+    "source_id": "S013",
+    "path": "<private_path>/validation_cases.jsonl",
+    "role": "P2-10全量AC和同作业成本子集新RTC",
+    "size_bytes": 879411,
+    "sha256": "33db94804f7926fdedac9e77634624d4b500a8340c631a76c5e0dbe0082c9ea4",
+    "frozen_hash_verified": false
+  },
+  {
+    "source_id": "S014",
+    "path": "<private_path>/train_cases.jsonl",
+    "role": "全量历史R/T/C原始成功请求",
+    "size_bytes": 6903257,
+    "sha256": "d872adfa499c9168f95cb9cbbb636b21998d2a14648cc32cd1fbaa4349fdf4ba",
+    "frozen_hash_verified": true
+  },
+  {
+    "source_id": "S015",
+    "path": "<private_path>/train_cases.jsonl",
+    "role": "P2-10全量AC和同作业成本子集新RTC",
+    "size_bytes": 5515562,
+    "sha256": "6ef282719d180d89c4e4b1f1c65770c089f462a1cb9f8b081eefdfb4d0fd17a6",
+    "frozen_hash_verified": false
+  },
+  {
+    "source_id": "S016",
+    "path": "<private_path>/dev_cases.jsonl",
+    "role": "全量历史R/T/C原始成功请求",
+    "size_bytes": 1477846,
+    "sha256": "1ed5231d198a01cc82ecc61fb5b3b72967f369b57cfc2d18bd79ba441e583255",
+    "frozen_hash_verified": true
+  },
+  {
+    "source_id": "S017",
+    "path": "<private_path>/dev_cases.jsonl",
+    "role": "P2-10全量AC和同作业成本子集新RTC",
+    "size_bytes": 1453550,
+    "sha256": "c0a48f831f5b8557c393f3665f7bf486992b9a3f7e426e5d818b15d976d2ffc8",
+    "frozen_hash_verified": false
+  },
+  {
+    "source_id": "S018",
+    "path": "<private_path>/train_cases.jsonl",
+    "role": "全量历史R/T/C原始成功请求",
+    "size_bytes": 2926698,
+    "sha256": "d11dc14781d0512ec0a7725ec7648f7307e768c0a0524a408ca8cdfe2b2375f6",
+    "frozen_hash_verified": true
+  },
+  {
+    "source_id": "S019",
+    "path": "<private_path>/train_cases.jsonl",
+    "role": "P2-10全量AC和同作业成本子集新RTC",
+    "size_bytes": 2510029,
+    "sha256": "cb844cfd22fe9cae2ec17c50105ebb4306608a305468e68d7b3cb15d98273758",
+    "frozen_hash_verified": false
+  },
+  {
+    "source_id": "S020",
+    "path": "<private_path>/validation_cases.jsonl",
+    "role": "全量历史R/T/C原始成功请求",
+    "size_bytes": 783498,
+    "sha256": "4b2e400fd006a71fa7d1896b80328d770e851db47af868b83408f5ce2dc42947",
+    "frozen_hash_verified": true
+  },
+  {
+    "source_id": "S021",
+    "path": "<private_path>/validation_cases.jsonl",
+    "role": "P2-10全量AC和同作业成本子集新RTC",
+    "size_bytes": 920010,
+    "sha256": "efe74beb13441a1a2807a5094544a88a0829830dd4fa0c4f12a91f3aa77e3b37",
+    "frozen_hash_verified": false
+  }
+]

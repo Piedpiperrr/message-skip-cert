@@ -1,0 +1,68 @@
+--- P2_R3_E9BC_20260920T061042Z/run_e9bc.pbs	2026-09-20 06:52:52.000000000 +0000
++++ P2_R9_E21B_20260922T065040Z/jobs/e21b_job1.pbs	2026-09-22 07:07:36.000000000 +0000
+@@ -2,51 +2,26 @@
+ # [scheduler directive removed for anonymity]
+ # [scheduler directive removed for anonymity]
+ # [scheduler directive removed for anonymity]
+-# E9B + E9C packed into one ClusterA debug job (2 nodes = 8 A100).
+-#   Phase 1  E9B: 4 slots x 2 GPUs. Each slot first reproduces 8 saved OBQA fit rows per action
+-#                 bit for bit; only then does it run its share of the 744 held-out questions.
+-#                 ranks 0-2 = large pair (probe,R,T,C,TF), rank 3 = medium pair (probe,R,C).
+-#   Phase 2  E9C: the frozen 4-lane helper-prefill plan, one GPU per lane.
+-# No gold is read in either phase.
++# E21B job 1 (ClusterA debug, 2 nodes = 8 A100 = 4 slots x 2 GPUs): preflight P1/P2/P3, then production
++# (only on PASS). From E9B run_e9bc.pbs. Nothing is downloaded (HF offline; no proxy). No gold is read.
+ # Submit:
+-#   submit-job  -q debug -l select=2 -l walltime=00:50:00 \
+-#        -l fsreq=<fs> -N E9BC run_e9bc.pbs
++#   submit-job  -q debug -l select=2 -l walltime=00:50:00 -l fsreq=<fs> -N E21B_J1 jobs/e21b_job1.pbs
+ set -uo pipefail
+-export E9_DIR=$DATA_DIR/P2_R3_E9BC_20260920T061042Z
++export E21_DIR=$DATA_DIR/P2_R9_E21B_20260922T065040Z
+ source "$HOME/.config/ClusterB-storage.sh"
+ export PATH="$PATH:/opt/pbs/bin"
+-export http_proxy=http://proxy.cluster.invalid:3128 https_proxy=http://proxy.cluster.invalid:3128
+-export HTTP_PROXY=http://proxy.cluster.invalid:3128 HTTPS_PROXY=http://proxy.cluster.invalid:3128
+ export CUDA_DEVICE_ORDER=PCI_BUS_ID
+-export E9_PY="$DATA_ROOT/software/envs/c2c_official/bin/python"
+-export E9_JOBTAG="${PBS_JOBID%%.*}"
+-START=$(date +%s); WALL=3000
+-export E9_E9B_DEADLINE=$(( START + 1800 ))    # E9B must hand the node over by T+30 min
+-export E9_E9C_DEADLINE=$(( START + WALL - 240 ))
+-LOG="$E9_DIR/logs"; mkdir -p "$LOG" "$E9_DIR/large/records" "$E9_DIR/medium/records"
+-"$E9_PY" - <<PY
+-import json,os,datetime
+-for d in ['large']:
+-    p='$E9_DIR/%s/execution_clearance.json'%d
+-    json.dump({'job_id':os.environ['PBS_JOBID'],'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+-               'strict_cgroup_match':False,'note':'E9B; cgroup match recorded, not required (ClusterA)'},open(p,'w'),indent=2)
+-PY
++export E21_PY="$DATA_ROOT/software/envs/c2c_official/bin/python"
++export E21_TAG="${PBS_JOBID%%.*}"
++START=$(date +%s)
++export E21_DEADLINE=$(( START + 46 * 60 ))   # drivers stop cleanly between questions 4 min before walltime
++LOG="$E21_DIR/logs"; mkdir -p "$LOG" "$E21_DIR/out"
+ {
+-  echo "JOB_START_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ) head=$(hostname) PBS_JOBID=${PBS_JOBID:-none}"
+-  echo "FREEZE_E9B=$(awk '{print $1}' "$E9_DIR/PROTOCOL_FREEZE_E9B.md.sha256")"
+-  echo "AMEND_E9B=$(awk '{print $1}' "$E9_DIR/PROTOCOL_AMENDMENT_E9B.md.sha256")"
+-  echo "FREEZE_E9C=$(awk '{print $1}' "$E9_DIR/PROTOCOL_FREEZE_E9C.md.sha256")"
+-  echo "E9B_DEADLINE=$E9_E9B_DEADLINE E9C_DEADLINE=$E9_E9C_DEADLINE"
++  echo "JOB_START_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ) head=$(hostname) PBS_JOBID=${PBS_JOBID:-none} E21_DEADLINE=$E21_DEADLINE"
++  echo "PREREG_SHA256=$(sha256sum "$E21_DIR/PREREG.md" | awk '{print $1}')"
+   echo "PBS_NODEFILE:"; cat "$PBS_NODEFILE"; nvidia-smi -L
+   job-status -f "$PBS_JOBID" | grep -E 'queue =|Resource_List|exec_vnode' || true
+-} > "$LOG/e9bc_${E9_JOBTAG}_env.txt" 2>&1
+-
+-echo "=== PHASE 1: E9B ==="
++} > "$LOG/job_${E21_TAG}_env.txt" 2>&1
+ mpiexec -n 4 --ppn 2 --hostfile "$PBS_NODEFILE" --cpu-bind none \
+-  bash "$E9_DIR/src/slot_e9b.sh" 2>&1 | tee "$LOG/e9b_${E9_JOBTAG}.log"
+-echo "PHASE1_EXIT=$? $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+-
+-echo "=== PHASE 2: E9C ==="
+-mpiexec -n 4 --ppn 2 --hostfile "$PBS_NODEFILE" --cpu-bind none \
+-  bash "$E9_DIR/src/slot_e9c.sh" 2>&1 | tee "$LOG/e9c_${E9_JOBTAG}.log"
+-echo "PHASE2_EXIT=$? JOB_END_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$LOG/e9bc_${E9_JOBTAG}_env.txt"
++  bash "$E21_DIR/src/slot_e21b.sh" > "$LOG/job_${E21_TAG}.log" 2>&1
++echo "MPIEXEC_EXIT=$? JOB_END_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$LOG/job_${E21_TAG}_env.txt"

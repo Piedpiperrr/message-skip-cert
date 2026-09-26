@@ -1,0 +1,39 @@
+{
+  "q": 0.55,
+  "threshold": 1.3113021850585938e-06,
+  "mode": "selective",
+  "accepted_q": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55
+  ],
+  "chosen_calibration": {
+    "q": 0.55,
+    "threshold": 1.3113021850585938e-06,
+    "N_cal": 1366,
+    "routed": 739,
+    "changed": 19,
+    "coverage": 0.54099560761347,
+    "conditional_disagreement": 0.02571041948579161,
+    "p_value": 0.0006941865963785939,
+    "CP_upper_0_999": 0.0490693013388247,
+    "accepted": true,
+    "task": "obqa",
+    "reference": "C",
+    "pair": "medium"
+  },
+  "accuracy_used_for_selection": false,
+  "task": "obqa",
+  "reference": "C",
+  "utc": "2026-09-15T18:30:07.802945+00:00",
+  "fit_threshold_sha256": "e9a57c9fbede98cb626d5cfc69d7097996ec3d570946fa378db48f4836383d35",
+  "dev_project_inference_started": false
+}

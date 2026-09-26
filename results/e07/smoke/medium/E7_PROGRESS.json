@@ -1,0 +1,12 @@
+{
+  "utc": "2026-09-19T23:27:40.676951+00:00",
+  "status": "RUNNING",
+  "kind": "medium",
+  "job_id": "run008",
+  "complete": 32,
+  "expected": 32,
+  "attempts": 32,
+  "probes": 24,
+  "elapsed_seconds": 8.28328682295978,
+  "ETA_remaining_seconds": 0.0
+}

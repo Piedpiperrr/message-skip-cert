@@ -1,0 +1,5 @@
+arm,median_ratio_R1_over_R2,p90_ratio,mean_ratio
+fixed_T,1.02,1.01,1.01
+policy_T,1.02,1.0,1.01
+fixed_C,1.05,0.99,1.03
+policy_C,1.07,1.01,1.03

@@ -1,0 +1,110 @@
+{
+ "repo": "mistralai/Mistral-7B-Instruct-v0.3",
+ "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+ "cache_dir": "$DATA_DIR/hf_cache/hub",
+ "access_check_utc": "2026-09-21T06:08:43.040881+00:00",
+ "whoami": "user",
+ "access": "granted",
+ "snapshot": "$DATA_DIR/hf_cache/hub/models--mistralai--Mistral-7B-Instruct-v0.3/snapshots/c170c708c41dac9275d15a8fff4eca08d52bab71",
+ "download_seconds": 18.9605393409729,
+ "files": {
+  ".gitattributes": {
+   "size": 1519,
+   "size_hub": 1519,
+   "kind": "git_blob_sha1",
+   "hash": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+   "hub": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+   "ok": true
+  },
+  "README.md": {
+   "size": 7893,
+   "size_hub": 7893,
+   "kind": "git_blob_sha1",
+   "hash": "2160488d137e4f9228cb407048093babea8958ef",
+   "hub": "2160488d137e4f9228cb407048093babea8958ef",
+   "ok": true
+  },
+  "config.json": {
+   "size": 601,
+   "size_hub": 601,
+   "kind": "git_blob_sha1",
+   "hash": "9f913dc05d66cfb23c16e3c93b3cc4899813dfa6",
+   "hub": "9f913dc05d66cfb23c16e3c93b3cc4899813dfa6",
+   "ok": true
+  },
+  "generation_config.json": {
+   "size": 116,
+   "size_hub": 116,
+   "kind": "git_blob_sha1",
+   "hash": "b6bea2642bc3fe80f392111d52af91d1563a8de2",
+   "hub": "b6bea2642bc3fe80f392111d52af91d1563a8de2",
+   "ok": true
+  },
+  "model-00001-of-00003.safetensors": {
+   "size": 4949453792,
+   "size_hub": 4949453792,
+   "kind": "lfs_sha256",
+   "hash": "ce6fb6f6f4d0183f4813cbf4ece24109da629a08d4210da46f77e1d8b0bd5c19",
+   "hub": "ce6fb6f6f4d0183f4813cbf4ece24109da629a08d4210da46f77e1d8b0bd5c19",
+   "ok": true
+  },
+  "model-00002-of-00003.safetensors": {
+   "size": 4999819336,
+   "size_hub": 4999819336,
+   "kind": "lfs_sha256",
+   "hash": "8c0e72f148366b6a3709e002a98706a33d31aec8515090c856c95b2044f92ae0",
+   "hub": "8c0e72f148366b6a3709e002a98706a33d31aec8515090c856c95b2044f92ae0",
+   "ok": true
+  },
+  "model-00003-of-00003.safetensors": {
+   "size": 4546807800,
+   "size_hub": 4546807800,
+   "kind": "lfs_sha256",
+   "hash": "905dd405363e43d95779c1c1155a2dbfd36155914ae95dbd934e12e490cfb4ca",
+   "hub": "905dd405363e43d95779c1c1155a2dbfd36155914ae95dbd934e12e490cfb4ca",
+   "ok": true
+  },
+  "model.safetensors.index.json": {
+   "size": 23950,
+   "size_hub": 23950,
+   "kind": "git_blob_sha1",
+   "hash": "050e5515d49376fc01e4837d031902c63af98111",
+   "hub": "050e5515d49376fc01e4837d031902c63af98111",
+   "ok": true
+  },
+  "special_tokens_map.json": {
+   "size": 414,
+   "size_hub": 414,
+   "kind": "git_blob_sha1",
+   "hash": "451134b2ddc2e78555d1e857518c54b4bdc2e87d",
+   "hub": "451134b2ddc2e78555d1e857518c54b4bdc2e87d",
+   "ok": true
+  },
+  "tokenizer.json": {
+   "size": 1961548,
+   "size_hub": 1961548,
+   "kind": "git_blob_sha1",
+   "hash": "8d7d23136b474a3df1182ed829db19984e295ee7",
+   "hub": "8d7d23136b474a3df1182ed829db19984e295ee7",
+   "ok": true
+  },
+  "tokenizer.model": {
+   "size": 587404,
+   "size_hub": 587404,
+   "kind": "lfs_sha256",
+   "hash": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+   "hub": "37f00374dea48658ee8f5d0f21895b9bc55cb0103939607c8185bfd1c6ca1f89",
+   "ok": true
+  },
+  "tokenizer_config.json": {
+   "size": 140874,
+   "size_hub": 140874,
+   "kind": "git_blob_sha1",
+   "hash": "940a9c375c745ccbf0bebc5bedcec924d71827aa",
+   "hub": "940a9c375c745ccbf0bebc5bedcec924d71827aa",
+   "ok": true
+  }
+ },
+ "all_ok": true,
+ "verified_utc": "2026-09-21T06:09:17.572333+00:00"
+}

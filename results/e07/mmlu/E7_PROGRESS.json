@@ -1,0 +1,12 @@
+{
+  "utc": "2026-09-19T23:48:41.556091+00:00",
+  "status": "RUNNING",
+  "kind": "mmlu",
+  "job_id": "run007",
+  "complete": 1024,
+  "expected": 1024,
+  "attempts": 1024,
+  "probes": 768,
+  "elapsed_seconds": 589.2407465709839,
+  "ETA_remaining_seconds": 0.0
+}

@@ -1,0 +1,13 @@
+{
+  "utc": "2026-09-14T17:14:34.645686+00:00",
+  "complete": true,
+  "all_7044_probes_unique": true,
+  "all_160_tests": 160,
+  "reused_Text_742_identity_checked": true,
+  "panels_complete_and_V2_hash_matched": true,
+  "all_curves_predeclared": true,
+  "gold_association_after_all_routes": true,
+  "new_evaluations": 3422,
+  "runtime_failure_rows_full": 0,
+  "FP32_scores_unchanged": true
+}

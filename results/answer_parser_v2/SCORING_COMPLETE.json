@@ -1,0 +1,15 @@
+{
+  "status": "SCORING_COMPLETE",
+  "utc": "2026-09-12T19:23:32.229638+00:00",
+  "records": 49616,
+  "full_records": 45008,
+  "panel_records": 6144,
+  "overlap_AC_records": 1536,
+  "inherited_old_replay_mismatch": 0,
+  "old_parser_rerun": false,
+  "D1_saved_summary_exact_match": true,
+  "runtime_failure_attempts": 0,
+  "scoring_code_sha256": "e0222a1a4a27e6e4e299e62df848719a712d464c578deec67202d8a0f941c0e6",
+  "parser_sha256": "d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9",
+  "rule_freeze_sha256": "52caeb60c0153b571f6c5473536f7bc7095e25b199a198b18678e314dd5e1ab9"
+}

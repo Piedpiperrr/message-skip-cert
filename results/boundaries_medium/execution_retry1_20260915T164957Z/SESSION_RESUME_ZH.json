@@ -1,0 +1,24 @@
+{
+  "utc": "2026-09-15T19:37:06.034450+00:00",
+  "task": "P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1",
+  "phase": "COMPLETE_MEDIUM_STAGE1",
+  "execution_directory": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_retry1_20260915T164957Z",
+  "prior_attempt_directory": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/execution_20260915T152640Z",
+  "formal_submissions_this_attempt": 1,
+  "total_prior_submissions": 1,
+  "no_third_submission": true,
+  "MEDIUM_PAIR_OUTCOMES_OBSERVED": true,
+  "job_id": "run002",
+  "total_submissions": 2,
+  "replacement_execution_freeze_sha256": "1edcb45f8f5b926aee76bbc61f137ed84e6eedec850416b4b4544a555254b82e",
+  "after_terminal": [
+    "If full inference and numerical PASS: run src/validate_input_records.py offline CPU without any forward",
+    "Run src/finalize_retry_delivery.py only after PBS F; preserve attempt1 and count both attempts",
+    "Verify package and stop back to Work; no Stage2 or submission"
+  ],
+  "job_terminal_state": "F",
+  "formal_action_success_count": 16878,
+  "formal_probe_success_count": 5626,
+  "stopped_and_returned_to": "Work",
+  "Stage2_started": false
+}

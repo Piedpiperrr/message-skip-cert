@@ -1,0 +1,22 @@
+setting,benchmark,orig_outcome,cert_rate,match_rate,stable,median_q,IQR_q,median_dev_coverage_pct,median_dev_changed,median_dev_omitted,n_deploying,min_p_q,r_at_min_p,needed_m,needed_m_scaled_to_N_cal,label
+small/OBQA/Text,obqa,fallback q=0,0.000,1.000,stable,,,,,,0,0.05,0.0769,not attainable (r >= .05),,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+small/OBQA/C2C,obqa,fallback q=0,0.000,1.000,stable,,,,,,0,0.05,0.0308,1037,21793,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+small/ARC/Text,arc,fallback q=0,0.000,1.000,stable,,,,,,0,0.1,0.1515,not attainable (r >= .05),,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+small/ARC/C2C,arc,fallback q=0,0.000,1.000,stable,,,,,,0,0.1,0.0606,not attainable (r >= .05),,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/OBQA/Text,obqa,fallback q=0,0.000,1.000,stable,,,,,,0,0.05,0.0599,not attainable (r >= .05),,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/OBQA/C2C,obqa,deploy q=0.55,1.000,1.000,stable,0.55,"[0.5, 0.55]",52.43,11,389,200,0.05,0.0116,220,500,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/ARC/Text,arc,fallback q=0,0.000,1.000,stable,,,,,,0,0.05,0.0469,45333,79333,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/ARC/C2C,arc,deploy q=0.6,0.960,0.960,stable,0.6,"[0.6, 0.6]",62.54,3,187,192,0.6,0.0034,135,209,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/OBQA/Text,obqa,deploy q=0.8,1.000,1.000,stable,0.8,"[0.8, 0.8]",77.76,19,577,200,0.6,0.0025,135,229,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/OBQA/C2C,obqa,deploy q=0.8,1.000,1.000,stable,0.8,"[0.8, 0.85]",78.44,16,582,200,0.65,0.0046,135,212,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/ARC/Text,arc,deploy q=0.95,1.000,1.000,stable,0.9,"[0.9, 0.95]",90.3,3,270,200,0.8,0.0000,135,168,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/ARC/C2C,arc,deploy q=0.9,1.000,1.000,stable,0.9,"[0.9, 0.9]",90.3,3,270,200,0.8,0.0056,135,168,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/MMLU-Pro/Text,mmlu_pro,deploy q=0.4,1.000,1.000,stable,0.4,"[0.4, 0.4]",40.86,41,1079,200,0.05,0.0097,181,753,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/MMLU-Pro/C2C,mmlu_pro,deploy q=0.4,1.000,1.000,stable,0.4,"[0.35, 0.4]",40.25,37,1063,200,0.25,0.0058,135,525,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/OBQA/Text,obqa,fallback q=0,0.000,1.000,stable,,,,,,0,0.1,0.0282,779,7494,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/OBQA/C2C,obqa,fallback q=0,0.000,1.000,stable,,,,,,0,0.05,0.1692,not attainable (r >= .05),,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/ARC/Text,arc,fallback q=0,0.000,1.000,stable,,,,,,0,0.1,0.0606,not attainable (r >= .05),,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/ARC/C2C,arc,fallback q=0,0.000,1.000,stable,,,,,,0,0.1,0.0303,986,13386,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/OBQA/Text,obqa,fallback q=0,0.000,1.000,stable,,,,,,0,0.1,0.0541,not attainable (r >= .05),,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/ARC/Text,arc,fallback q=0,0.000,1.000,stable,,,,,,0,0.1,0.0213,417,3975,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/MMLU-Pro/Text,mmlu_pro,fallback q=0,0.000,1.000,stable,,,,,,0,0.05,0.1867,not attainable (r >= .05),,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision

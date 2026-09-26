@@ -1,0 +1,14 @@
+{
+  "event": "HEAD_COMPLETE",
+  "key": "baseline/large/arc/semantic/C",
+  "kind": "LR",
+  "n": 1119,
+  "positive": 1013,
+  "iterations": 21,
+  "warnings": [],
+  "CPU_seconds": 0.015263000000000915,
+  "protocol_sha256": "41239823e728796dd108aae24cc48401ec8093c38aca16f7a30a1352145ef797",
+  "model_sha256": "810419fdd1d5978061cbaf5f34b650fb11c1eb9de541b62589ad78f61adc4539",
+  "input_hash": "7da8b04255fc59492befaf2f47e592d2",
+  "numerical_probability_check": true
+}

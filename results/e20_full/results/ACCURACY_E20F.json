@@ -1,0 +1,107 @@
+{
+ "utc": "2026-09-22T03:31:23.507956+00:00",
+ "stats_sha256": "2bc035b318149295280cc8dd90561f4e46b9ad8a029f74dce264ad85387e2494",
+ "routes_sha256": "a0455b51f3db9053d709b8fc3d9e76c7db98074f9147cd02542690be052dfcbb",
+ "splits": {
+  "dev": {
+   "n": 1000,
+   "R_correct": 659,
+   "Text_correct": 669,
+   "policy_correct": 673,
+   "acc_R": 0.659,
+   "acc_Text": 0.669,
+   "acc_policy": 0.673,
+   "CI95": {
+    "R": [
+     0.629,
+     0.689
+    ],
+    "Text": [
+     0.639,
+     0.699
+    ],
+    "policy": [
+     0.643975,
+     0.703
+    ],
+    "G": [
+     -0.0089999999999999,
+     0.029000000000000026
+    ]
+   },
+   "G": 0.010000000000000009,
+   "omitted": 396,
+   "coverage": 0.396,
+   "changes": {
+    "n": 154,
+    "reference_corrects": 49,
+    "reference_breaks": 39,
+    "both_wrong": 66,
+    "both_right": 0
+   },
+   "omitted_changes": {
+    "n": 16,
+    "reference_corrects": 4,
+    "reference_breaks": 8,
+    "both_wrong": 4,
+    "both_right": 0
+   }
+  },
+  "test": {
+   "n": 1000,
+   "R_correct": 664,
+   "Text_correct": 682,
+   "policy_correct": 686,
+   "acc_R": 0.664,
+   "acc_Text": 0.682,
+   "acc_policy": 0.686,
+   "CI95": {
+    "R": [
+     0.635,
+     0.694
+    ],
+    "Text": [
+     0.654,
+     0.712
+    ],
+    "policy": [
+     0.658,
+     0.715
+    ],
+    "G": [
+     -2.4999999999998602e-05,
+     0.03799999999999992
+    ]
+   },
+   "G": 0.018000000000000016,
+   "omitted": 364,
+   "coverage": 0.364,
+   "changes": {
+    "n": 155,
+    "reference_corrects": 54,
+    "reference_breaks": 36,
+    "both_wrong": 65,
+    "both_right": 0
+   },
+   "omitted_changes": {
+    "n": 9,
+    "reference_corrects": 2,
+    "reference_breaks": 6,
+    "both_wrong": 1,
+    "both_right": 0
+   }
+  }
+ },
+ "kappa_alpha": {
+  "value": 0.0198,
+  "definition": "dev coverage x 5 points",
+  "G_dev": 0.010000000000000009,
+  "G_dev_CI95": [
+   -0.0089999999999999,
+   0.029000000000000026
+  ],
+  "G_le_kappa_alpha": true,
+  "G_CI_includes_0": true
+ },
+ "rule5_redundancy_triggered": true
+}

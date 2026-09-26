@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-14T23:14:22.995031+00:00",
+  "archive": "$DATA_DIR/P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z_WORK_LIGHT.tar.gz",
+  "bytes": 9828990,
+  "sha256": "aa547c548f4d7978e227744d427232f2711a96a64cb52f9d676de79c4f85c783",
+  "contained_file_count": 219,
+  "archive_members_hash_verified": true,
+  "live_SHA256SUMS_verified": true,
+  "contains_weights": false,
+  "full_raw_predictions_and_timing": true,
+  "updated_actual_paper_included": true,
+  "excluded_mutable_command_stdout": "evidence/final_audit_command.log; preserved locally, not a scientific record",
+  "scientific_records_or_rules_changed": false,
+  "budget_closed": true
+}

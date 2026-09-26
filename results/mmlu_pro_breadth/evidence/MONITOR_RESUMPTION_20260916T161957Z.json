@@ -1,0 +1,10 @@
+{
+  "utc": "20260916T161957Z",
+  "pid": 1610472,
+  "log": "$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/evidence/supervisor_resumed_20260916T161957Z.log",
+  "purpose": "Restore CPU-only monitor and previously authorized post-completion CPU analysis; no new PBS or model requests",
+  "formal_PBS_submissions_total": 2,
+  "E2E_submissions": 0,
+  "prior_supervisor_present": false,
+  "prior_exit_cause": "not recorded"
+}

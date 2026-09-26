@@ -1,0 +1,25 @@
+{
+  "utc": "2026-09-14T05:57:49.493582+00:00",
+  "files": {
+    "thresholds/all.json": "5e0b0e44dc8b97071f25fde130174a3dd7850108eba70036394a7d1a6a68576e",
+    "records/R32_r0_fit_scores.jsonl": "c106ab6c489eb1ebd902221220f53871e18f5e278c2c9cff2fc76a68d4e8088b",
+    "records/R128_r0_fit_scores.jsonl": "babfd0ec47e2888f59a13f765a754d02d5367c1c2bee54cd6a0b59e935c84d7b",
+    "records/R512_r0_fit_scores.jsonl": "925fb5ed6325fe419a24ef3662be31d7dc53edaf69ef0b0ae2e3a34af1069118",
+    "records/R32_r1_fit_scores.jsonl": "c6da61b57f319e57bb4f6a23a4808d55f677805722d78d8e8db7964b42188b01",
+    "records/R128_r1_fit_scores.jsonl": "1c86a988aa57ebce67e8d37084357647d3eff8e18026e9325a9db9d37c63cb09",
+    "records/R512_r1_fit_scores.jsonl": "2a241f308ca9b5950e248ece187d6ea93a4c7ce9e1d745031234cbf3e80414ba",
+    "records/R32_r2_fit_scores.jsonl": "f8f21de93304b68e780dfe20c38481730d4fa24d9f3d771eaea4a1c6a79adefe",
+    "records/R128_r2_fit_scores.jsonl": "1d3a06011a0d39d5d1566d952e4a7960b69cb0edbe7e1e9bd9908825b27c6c52",
+    "records/R512_r2_fit_scores.jsonl": "435636bf2854128f8baa2850eccb5a26882c3ef270df69dd59314befa28cf78e",
+    "records/R32_r3_fit_scores.jsonl": "524f26ad1ea2aef495611b317e485c6074f66ce48a7c7a0da16cdc784b49d0e6",
+    "records/R128_r3_fit_scores.jsonl": "87b9a2b94ec05d4a4cfec43c0e23510f0234ab7d6619044e798d2edcda52fbad",
+    "records/R512_r3_fit_scores.jsonl": "005244be63b33d64ea5fae2f09ed265af7a796a4765caebdc31068bd3a4dcae1",
+    "records/R32_r4_fit_scores.jsonl": "75f425779f802cbd231f74a935e45a5e96bc64c71e05f0e062f1bb490794dbda",
+    "records/R128_r4_fit_scores.jsonl": "80cbc710d5b28d86b48eb5fda27b4d9fa8cfb11d3b3ec33a8d8e173487c76d8c",
+    "records/R512_r4_fit_scores.jsonl": "ade31b08562ad0e487401aafe7b081b939405d92af46deddf8a104f5bf34e5f3"
+  },
+  "new_models": 15,
+  "fit_reference_pool": 2100,
+  "cal_d_read": false,
+  "unlabeled_reference_pool": true
+}

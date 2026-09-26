@@ -1,0 +1,29 @@
+setting,dev_N,dev_disagreements,dev_disagreement_rate,source,check
+small/OBQA/Text,742,339,0.4568733153638814,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",
+small/OBQA/C2C,742,350,0.4716981132075472,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",
+small/ARC/Text,299,145,0.48494983277591974,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",E17_3_splits.csv 145/299 match
+small/ARC/C2C,299,160,0.5351170568561873,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",E17_3_splits.csv 160/299 match
+medium/OBQA/Text,742,174,0.23450134770889489,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",
+medium/OBQA/C2C,742,131,0.1765498652291105,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",
+medium/ARC/Text,299,52,0.17391304347826086,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",E17_3_splits.csv 52/299 match
+medium/ARC/C2C,299,48,0.1605351170568562,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",E17_3_splits.csv 48/299 match
+large/OBQA/Text,742,72,0.09703504043126684,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",
+large/OBQA/C2C,742,60,0.08086253369272237,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",
+large/ARC/Text,299,15,0.05016722408026756,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",E17_3_splits.csv 15/299 match
+large/ARC/C2C,299,12,0.04013377926421405,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",E17_3_splits.csv 12/299 match
+large/MMLU-Pro/Text,2641,561,0.2124195380537675,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",
+large/MMLU-Pro/C2C,2641,756,0.2862552063612268,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",
+small/MMLU-Pro/Text,2641,1235,0.4676258992805755,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",
+small/MMLU-Pro/C2C,2641,1591,0.602423324498296,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",
+medium/MMLU-Pro/Text,2641,1128,0.42711094282468764,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",
+medium/MMLU-Pro/C2C,2641,1410,0.5338886785308595,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",
+large/OBQA/Text+fact,742,76,0.10242587601078167,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",
+X1-Llama/OBQA/Text,742,191,0.2574123989218329,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",
+X1-Llama/OBQA/C2C,742,427,0.5754716981132075,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",
+X1-Llama/ARC/Text,299,88,0.29431438127090304,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",E17_3_splits.csv 88/299 match
+X1-Llama/ARC/C2C,299,174,0.5819397993311036,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",E17_3_splits.csv 174/299 match
+X2-OLMo/OBQA/Text,742,172,0.23180592991913745,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",
+X2-OLMo/ARC/Text,299,67,0.22408026755852842,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",E17_3_splits.csv 67/299 match
+X2-OLMo/MMLU-Pro/Text,2641,1112,0.42105263157894735,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",
+X3-Llama8B/OBQA/Text,742,86,0.11590296495956873,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",X3 dev_table.csv 86/742 match
+X3-Llama8B/ARC/Text,299,37,0.12374581939799331,"cache/data28.pkl dev split (o_R != o_b, V2, two INVALID = agreement)",X3 dev_table.csv 37/299 match

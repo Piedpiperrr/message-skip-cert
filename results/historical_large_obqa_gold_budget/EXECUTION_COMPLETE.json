@@ -1,0 +1,13 @@
+{
+  "utc": "2026-09-14T05:58:27.755578+00:00",
+  "job_id": "run001",
+  "models": 15,
+  "actual_LR_fits": 15,
+  "constant_fallbacks": 0,
+  "new_calibration_tests": 300,
+  "distinct_model_grid_items": 340,
+  "new_dev_evaluations": 11130,
+  "GPU_compute": 0,
+  "prefills": 0,
+  "CPU_with_reserve": 59.784743
+}

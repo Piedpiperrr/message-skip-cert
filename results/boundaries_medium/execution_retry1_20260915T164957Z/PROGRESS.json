@@ -1,0 +1,14 @@
+{
+  "status": "INFERENCE_COMPLETE",
+  "phase": "FORMAL_INFERENCE_COMPLETE",
+  "utc": "2026-09-15T19:32:54.345559+00:00",
+  "job_id": "run002",
+  "action_success_count": 16878,
+  "probe_success_count": 5626,
+  "attempt_count": 22504,
+  "successful_IDs_path": "records/successful_keys.json",
+  "wall_seconds": 9263.136464840965,
+  "wall_remaining_seconds": 3181.654422044754,
+  "MEDIUM_PAIR_OUTCOMES_OBSERVED": true,
+  "retry_count": 0
+}

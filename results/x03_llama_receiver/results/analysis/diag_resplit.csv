@@ -1,0 +1,3 @@
+setting,seed0_reproduces_frozen_split,original_outcome,n_resplits,certification_rate,agreement_with_original,median_q,median_dev_coverage,label
+obqa/Text,True,deploy,200,1.0,1.0,0.6,0.5929919137466307,"DIAGNOSTIC (descriptive, not deployable)"
+arc/Text,True,deploy,200,1.0,1.0,0.7,0.6622073578595318,"DIAGNOSTIC (descriptive, not deployable)"

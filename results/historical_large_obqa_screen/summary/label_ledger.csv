@@ -1,0 +1,6 @@
+family,algorithm_fit_unique_gold_questions,derived_action_correctness_values,harm_training_targets,machine_disagreement_fit_labels,machine_disagreement_cal_labels,cal_gold_required,dev_gold_posthoc_only,new_human_annotations_this_round,shared_gold_not_summed
+D,0,0,0,2100,1366,0,742,0,True
+R,2100,2100,0,0,1366,0,742,0,True
+Diff,2100,4200,0,0,1366,0,742,0,True
+H,2100,4200,2100,0,1366,0,742,0,True
+Random,0,0,0,0,1366,0,742,0,True

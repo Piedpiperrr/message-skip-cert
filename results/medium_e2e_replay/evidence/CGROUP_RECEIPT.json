@@ -1,0 +1,8 @@
+{
+  "cgroup_raw": "13:rdma:/\n12:pids:/jobs/186020\n11:net_cls,net_prio:/\n10:cpuset:/jobs/186020\n9:misc:/\n8:blkio:/system.slice/pbs.service\n7:perf_event:/\n6:hugetlb:/\n5:memory:/jobs/186020\n4:freezer:/jobs/186020\n3:cpu,cpuacct:/jobs/186020\n2:devices:/jobs/186020\n1:name=systemd:/system.slice/pbs.service\n",
+  "utc": "2026-09-15T21:04:19.147556+00:00",
+  "job_id": "run013",
+  "host": "REDACTED",
+  "legacy_cgroup_pattern_match": true,
+  "legacy_match_is_fatal": false
+}

@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-14T04:41:35.950162+00:00",
+  "files": {
+    "splits/cal_ids.json": "8b33a4d168131c5a0095c5eabcdea2f2b3bb272dfae8a41ab2a7e0e05d5ebaed",
+    "splits/group_members.csv": "19773ac3d17ddb310e9039f5e7dd838f614b2719d9dc40905c41494828cdc0a2",
+    "splits/fit_ids.json": "1559bc9668d88a986df0967b96fdf14c995f02f622b126f396819b69b58c4028",
+    "splits/dev_ids.json": "80d1bbdd9148df3037401881533a2137b0d4ce9ee90a8ebb424fb413440bfbab"
+  },
+  "seed": 0,
+  "rng": "Python random.Random(0), shuffle lexicographically sorted representatives",
+  "fit_n": 2100,
+  "cal_n": 1366,
+  "dev_n": 742,
+  "labels_read": false
+}

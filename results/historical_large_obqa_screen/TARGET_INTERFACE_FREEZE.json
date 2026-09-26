@@ -1,0 +1,17 @@
+{
+  "utc": "2026-09-14T04:50:18.680073+00:00",
+  "files": {
+    "inputs/candidate_fit.jsonl": "07bc38c0621ddf18a11c587155c70fb2a13d5d65dd005b0d2054ee2804397dd8",
+    "inputs/candidate_cal.jsonl": "f05b49a64ce52358a4255861b57eb65fef85778d3c1f5a5d13df808bd374ddc9",
+    "inputs/baseline_fit.jsonl": "89c940aace1d09a5863ebd38cf36a085b4bee78ab56d4a72ab18af08a224eb61"
+  },
+  "candidate_columns": [
+    "id",
+    "d"
+  ],
+  "baseline_calibration_columns": [
+    "id",
+    "d"
+  ],
+  "cal_gold_used": false
+}

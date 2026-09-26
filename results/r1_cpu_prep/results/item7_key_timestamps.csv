@@ -1,0 +1,10 @@
+fact,value
+freeze_file,"$DATA_DIR/P2_RISK_CALIBRATION_BINARY_20260914T043954Z/frozen_config.json mtime 2026-09-14T04:41:36Z; contains alpha=0.05, p_cutoff=0.001, delta=0.1, q_grid(20); families=['D', 'R', 'Diff', 'H', 'Random']; 'ProbeMax' present: False"
+probemax_first_frozen,"$DATA_DIR/P2_ZERO_GOLD_CONTROLS_20260914T065145Z/frozen_config.json mtime 2026-09-14T07:01:57Z (families ['D', 'R2100', 'ProbeMax', 'ProbeEntropy', 'WordD']); earliest file mentioning ProbeMax: $DATA_DIR/P2_ZERO_GOLD_CONTROLS_20260914T065145Z/src/common.py 2026-09-14T06:54:18Z"
+obqa_split_created,"$DATA_DIR/P2_RISK_CALIBRATION_BINARY_20260914T043954Z/SPLIT_FREEZE.json utc 2026-09-14T04:41:35.950162+00:00 (Python random.Random(0), shuffle lexicographically sorted representatives; labels_read=False)"
+arc_split_created,$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/SPLIT_FREEZE.json utc 2026-09-14T16:52:46.089022+00:00 (outcomes_used=False)
+mmlu_split_protocol,$DATA_DIR/P2_MMLU_PRO_BREADTH_STAGE1_20260916T002337Z/MMLU_PRO_STAGE1_PROTOCOL_FREEZE.json utc 2026-09-16T00:39:11.257382+00:00
+medium_protocol,$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/MEDIUM_PAIR_PROTOCOL_FREEZE.json utc 2026-09-15T14:54:02.955834+00:00
+first_cal_statistic_any,$DATA_DIR/P2_RISK_CALIBRATION_BINARY_20260914T043954Z/inputs/candidate_cal.jsonl mtime 2026-09-14T04:50:18Z; $DATA_DIR/P2_RISK_CALIBRATION_BINARY_20260914T043954Z/summary/calibration_100.csv mtime 2026-09-14T04:51:30Z (large/OBQA/Text only)
+V2_frozen,"$DATA_DIR/P2_SCORING_V2_20260912T191445Z/RULE_FREEZE_V2.json frozen_utc 2026-09-12T19:19:38.860954+00:00; disclosure: Revision followed review of exposed cases, gold and old/D1 outcomes; NOT globally blinded."
+planning_prompt,$DATA_DIR/P2_POST_E2E_METHOD_REVIEW_20260914T034957Z/NEXT_EXPERIMENT_ClusterB_PROMPT_ZH.md mtime 2026-09-14T03:56:40Z: proposed fit2100/cal1366 split stratified by f_R (R vs Text flip); implemented split was unstratified/label-independent

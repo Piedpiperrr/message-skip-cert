@@ -1,0 +1,11 @@
+pair,action,E8_N,E8_differences,E13_all_splits,E13_fit,E13_cal,E13_dev,E13_dev_representatives,match,E8_D1_sha256,label
+small,R,12032,13,13,6,7,0,0,True,6619cafdd9cffb9891eb2cc818053e5ce506be59c7ff2e75b51e5331c918cfab,POST-HOC follow-up added after the E13 preregistration hash; counting only
+small,Text,12032,1,1,0,1,0,0,True,6619cafdd9cffb9891eb2cc818053e5ce506be59c7ff2e75b51e5331c918cfab,POST-HOC follow-up added after the E13 preregistration hash; counting only
+small,C2C,12032,27,27,7,16,4,4,True,6619cafdd9cffb9891eb2cc818053e5ce506be59c7ff2e75b51e5331c918cfab,POST-HOC follow-up added after the E13 preregistration hash; counting only
+medium,R,12032,0,0,0,0,0,0,True,6619cafdd9cffb9891eb2cc818053e5ce506be59c7ff2e75b51e5331c918cfab,POST-HOC follow-up added after the E13 preregistration hash; counting only
+medium,Text,12032,0,0,0,0,0,0,True,6619cafdd9cffb9891eb2cc818053e5ce506be59c7ff2e75b51e5331c918cfab,POST-HOC follow-up added after the E13 preregistration hash; counting only
+medium,C2C,12032,2,2,0,2,0,0,True,6619cafdd9cffb9891eb2cc818053e5ce506be59c7ff2e75b51e5331c918cfab,POST-HOC follow-up added after the E13 preregistration hash; counting only
+small,"setting small/MMLU-Pro/Text: R + Text outputs on the 2,641 dev representatives",,,,,,,0,,,POST-HOC follow-up added after the E13 preregistration hash; counting only
+small,"setting small/MMLU-Pro/C2C: R + C2C outputs on the 2,641 dev representatives",,,,,,,4,,,POST-HOC follow-up added after the E13 preregistration hash; counting only
+medium,"setting medium/MMLU-Pro/Text: R + Text outputs on the 2,641 dev representatives",,,,,,,0,,,POST-HOC follow-up added after the E13 preregistration hash; counting only
+medium,"setting medium/MMLU-Pro/C2C: R + C2C outputs on the 2,641 dev representatives",,,,,,,0,,,POST-HOC follow-up added after the E13 preregistration hash; counting only

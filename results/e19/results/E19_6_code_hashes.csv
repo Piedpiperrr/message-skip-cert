@@ -1,0 +1,13 @@
+role,path,sha256
+helper instruction (P2_10 legacy_methods.BACKGROUND_PROMPT),$DATA_DIR/P2_10_20260911T122423Z/legacy_methods.py,91b03c146f56fe151dc399c4202411974afb61c4a195080cf8c54abd584bffdf
+ARC helper/receiver adapter (P2_10 arc_protocol),$DATA_DIR/P2_10_20260911T122423Z/arc_protocol.py,b88840e37086c82dc6d485fe6ed3777bd99feb9718a47c901b4d4a5ad74ddbbe
+receiver prompt (receiver_prompt.py),$DATA_DIR/P2_R1_EXP_20260919T050555Z/src/receiver_prompt.py,868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66
+probe construction (run_boundaries.py),$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/src/run_boundaries.py,1b034b11dc2eef167d78cceb6fe76d18936f64585865092b673a5d03b4adb4d7
+Text+fact protocol (PROTOCOL_FREEZE_E6.md),$DATA_DIR/P2_R2_GPU_20260919T220941Z/e6/PROTOCOL_FREEZE_E6.md,d9fd5b9539fb6de1461bdb2f39958f3399295fd84563b0ec016e2b62c00e3793
+question body incl. Text+fact line (E9 e9_common.question_body),$DATA_DIR/P2_R3_E9BC_20260920T061042Z/src/e9_common.py,538247a5b8556fd123a355672ef53de3be0d3b98832c4d1e3d8c2c6862c29da9
+helper-aware prefill (E9c e9c_prefill.py),$DATA_DIR/P2_R3_E9BC_20260920T061042Z/src/e9c_prefill.py,64989beba5af58654a3b623afc97ded9d722a4bb905ae9d9fc3e749edccb1076
+Llama-3.1-8B receiver (X3 run_x3.py),$DATA_DIR/P2_R6_X3_20260921T052602Z/src/run_x3.py,6e4a34d2c6baf4e46b526e630287962edb1837145cc92d94d053313d1dba1855
+OLMo-2 receiver (X2 run_x2.py),$DATA_DIR/P2_R1_XFAM_20260919T095058Z/src/run_x2.py,91f145e2f2849061fc1d2a6d9a41e040e47f98c89c48ab7ebd4a3618dec5a078
+GSM8K prompts (E10 e10_prompts.py),$DATA_DIR/P2_R4_E10_20260920T225954Z/src/e10_prompts.py,8d5809beb9451e1670a468a3213ccc8435fdc24694c0ddf8d7742c2a86c2afc7
+parser V2 (scoring_v2.py),$DATA_DIR/P2_SCORING_V2_20260912T191445Z/scoring_v2.py,d05978f400cf69aa6bddc56168a260ac3ea9158abaa640e9331602dc9bfcc2f9
+"probe prefix (BOUNDARIES frozen_config.json[""prefix""], read by run_boundaries.py)",$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/frozen_config.json,e84c015eb04ef92dfc252917e2f1ae3cfb0e86d2e830bf283afbaba0e9073f22

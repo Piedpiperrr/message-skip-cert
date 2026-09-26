@@ -1,0 +1,14 @@
+setting,panel,id,omitted,reuse_raw,original_raw,reuse_label,original_label,label
+large/obqa/T,large/OBQA,12-1066,True,The correct answer is C,The correct answer is C.,C,C,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/obqa/T,large/OBQA,10-580,True,The correct answer is C,The correct answer is C.,C,C,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/obqa/T,large/OBQA,10-681,True,The correct answer is D.,The correct answer is D,D,D,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/obqa/C,large/OBQA,12-1066,True,The correct answer is C,The correct answer is C.,C,C,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/obqa/C,large/OBQA,10-580,True,The correct answer is C,The correct answer is C.,C,C,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/obqa/C,large/OBQA,10-681,True,The correct answer is D.,The correct answer is D,D,D,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/arc/T,large/ARC,Mercury_400934,True,The correct answer is C.,The correct answer is C,C,C,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/arc/T,large/ARC,Mercury_7143518,True,The correct answer is D.,The correct answer is D,D,D,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/arc/C,large/ARC,Mercury_400934,True,The correct answer is C.,The correct answer is C,C,C,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+large/arc/C,large/ARC,Mercury_7143518,True,The correct answer is D.,The correct answer is D,D,D,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+medium/obqa/C,medium/OBQA,13-71,True,The correct answer is A. heaviness,The correct answer is A.,A,A,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+medium/obqa/C,medium/OBQA,10-681,True,The correct answer is D.,D. changing location,D,D,POST-HOC analysis of completed E6/E7 records; changes no frozen decision
+medium/arc/C,medium/ARC,Mercury_177398,True,The correct answer is B. velocity,The correct answer is B.,B,B,POST-HOC analysis of completed E6/E7 records; changes no frozen decision

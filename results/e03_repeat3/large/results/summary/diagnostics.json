@@ -1,0 +1,52 @@
+[
+  {
+    "dataset": "obqa",
+    "reference": "T",
+    "policy_raw_changes": 0,
+    "reference_raw_changes": 0,
+    "both_invalid": 0,
+    "policy_only_invalid": 0,
+    "reference_only_invalid": 0,
+    "runtime_failures": 0,
+    "cold_pairs": [
+      "9-782"
+    ],
+    "probe_exact_identity_matches": 128
+  },
+  {
+    "dataset": "obqa",
+    "reference": "C",
+    "policy_raw_changes": 0,
+    "reference_raw_changes": 0,
+    "both_invalid": 0,
+    "policy_only_invalid": 0,
+    "reference_only_invalid": 0,
+    "runtime_failures": 0,
+    "cold_pairs": [],
+    "probe_exact_identity_matches": 128
+  },
+  {
+    "dataset": "arc",
+    "reference": "T",
+    "policy_raw_changes": 0,
+    "reference_raw_changes": 0,
+    "both_invalid": 0,
+    "policy_only_invalid": 0,
+    "reference_only_invalid": 0,
+    "runtime_failures": 0,
+    "cold_pairs": [],
+    "probe_exact_identity_matches": 128
+  },
+  {
+    "dataset": "arc",
+    "reference": "C",
+    "policy_raw_changes": 0,
+    "reference_raw_changes": 0,
+    "both_invalid": 0,
+    "policy_only_invalid": 0,
+    "reference_only_invalid": 0,
+    "runtime_failures": 0,
+    "cold_pairs": [],
+    "probe_exact_identity_matches": 128
+  }
+]

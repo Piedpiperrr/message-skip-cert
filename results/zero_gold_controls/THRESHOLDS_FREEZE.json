@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-14T07:08:39.922665+00:00",
+  "files": {
+    "thresholds/new_thresholds.json": "f9d7874879ed75722d10531224cafc076766c5e9cd731d7c5b31ab75fcc445b2",
+    "records/fit_scores.jsonl": "366ae84e23bce5a70becbe5e88a64ba4d3001788d4176ef2b40b718a2a418fd0",
+    "records/cal_scores.jsonl": "90101113285502c8bf266a914007478cbc145f8f2c1ac77c5b5b1101645dd7cb",
+    "records/probe_fit.jsonl": "42a6a994130e8cb29cf343fd7e0f4d26fb2f40b8df86130ae48e70e3dbedab5d",
+    "records/probe_cal.jsonl": "e8c96694f104d23835629bc075b2a96694040ee96636aebf68c850b1ddf77c5d",
+    "WORD_MODEL_FREEZE.json": "98cefd06c7c4276a3558e34c00edaa2ae3eb560f95b528f20040d9ac4adf5150",
+    "PROBE_PROTOCOL_FREEZE.json": "9eb14e1b887744e488dd3f3f56c79dc6aefafe06556c1761de6f8f01d716b1e6"
+  },
+  "new_families": 3,
+  "cal_d_read": false,
+  "gold_read": false
+}

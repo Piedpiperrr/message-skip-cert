@@ -1,0 +1,5 @@
+setting,N_fit,N_cal,actual_outcome,actual_q,predicted_outcome,q_hat,outcome_match,predicted_fit_coverage,actual_dev_coverage,N_dev,grid_steps_qhat_minus_q,abs_grid_steps,abs_coverage_error,label
+X3-Llama8B/OBQA/Text,2100,1366,deploy,0.6,deploy,0.65,True,0.65,0.5902964959568733,742,1,1,0.05970350404312674,POST-HOC re-analysis (E15); does not change any primary decision
+X3-Llama8B/ARC/Text,670,448,deploy,0.7,deploy,0.65,True,0.6507462686567164,0.6889632107023411,299,-1,1,0.03821694204562476,POST-HOC re-analysis (E15); does not change any primary decision
+strong-helper/OBQA/Text,2100,1366,fallback,0.0,fallback,0.0,True,,,,,,,POST-HOC re-analysis (E15); does not change any primary decision
+strong-helper/ARC/Text,670,448,fallback,0.0,fallback,0.0,True,,,,,,,POST-HOC re-analysis (E15); does not change any primary decision

@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-19T23:31:13.077211+00:00",
+  "kind": "mmlu",
+  "job_id": "run008",
+  "startup_wall_seconds": 25.00158543488942,
+  "load_seconds": {
+    "helper": 11.420961819123477,
+    "receiver": 9.223307461943477,
+    "fuser": 4.242074701935053
+  },
+  "warmup_requests": 0,
+  "synthetic_forward_requests": 0,
+  "one_residency": true,
+  "smoke": true
+}

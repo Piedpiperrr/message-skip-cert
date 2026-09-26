@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-14T04:51:30.746798+00:00",
+  "files": {
+    "THRESHOLDS_FREEZE.json": "26726b1014296aa89d2544c6513b9d74d9c0ba6e31a29392de7f584631a7e3c5",
+    "summary/calibration_100.csv": "f7ceda8c681325473c843c69270723cbbbc57dba3860fe76d00e7aabf4a6045e",
+    "models/deployment.json": "2d00c752e17abb2aaa0bfa7059a5c66b65f9dc3e3772581d4578b2913b2221ca",
+    "records/cal_scores.jsonl": "68ba3de0e194a366a3b007e92666e7f7f12997ebbae39cc4588159a98364b477"
+  },
+  "heads": 4,
+  "calibration_tests": 100,
+  "families": 5,
+  "dev_gold_or_answers_read": false,
+  "calibration_gold_used": false
+}

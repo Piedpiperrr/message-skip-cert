@@ -1,0 +1,14 @@
+{
+  "old_means_path": "$DATA_DIR/P2_RISK_CALIBRATION_BINARY_20260914T043954Z/summary/bootstrap_joint_means.npz",
+  "old_means_sha256": "f18681ec17fab215005a7f23a2d10477dc7a0802c3b33bd346b5611009d3814d",
+  "index_sha256": "3930b1a8978281ce22258a44757d375dbe2a4c53bf24c2621f56f14798e455fa",
+  "replicates": 2000,
+  "seed": 0,
+  "new_bootstrap_models": [
+    "ProbeMax",
+    "ProbeEntropy",
+    "WordD"
+  ],
+  "old_D_R_comparison_recomputed": false,
+  "joint_question_order_sha256": "80d1bbdd9148df3037401881533a2137b0d4ce9ee90a8ebb424fb413440bfbab"
+}

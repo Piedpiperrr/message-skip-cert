@@ -1,0 +1,40 @@
+{
+  "rank": 0,
+  "utc": "2026-09-20T23:20:42Z",
+  "ids": [
+    "gsm8k_train_01444",
+    "gsm8k_train_03992"
+  ],
+  "rescore_vs_generation": [
+    {
+      "id": "gsm8k_train_01444",
+      "gen_tokens": 202,
+      "retokenized_tokens": 200,
+      "common_prefix_tokens": 200,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 3,
+      "max_abs_logprob_diff": 0.0
+    },
+    {
+      "id": "gsm8k_train_03992",
+      "gen_tokens": 195,
+      "retokenized_tokens": 193,
+      "common_prefix_tokens": 193,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 3,
+      "max_abs_logprob_diff": 0.0
+    }
+  ],
+  "invalid_R": 0,
+  "invalid_T": 0,
+  "empty_helper_message": 0,
+  "n_gen_tokens_R": [
+    202,
+    195
+  ],
+  "n_gen_tokens_T": [
+    142,
+    114
+  ],
+  "gold_read": false
+}

@@ -1,0 +1,29 @@
+{
+  "utc": "2026-09-19T20:43:59.292931+00:00",
+  "script": "$DATA_DIR/P2_R1_XFAM_20260919T095058Z/x1/src/finish_x1_c2c_from_csv.py",
+  "script_sha256": "04596fa44a7b86ea95ccdc0d420350a81e9c5afe22d82c1c15ba878d80252318",
+  "csv": "$DATA_DIR/P2_R1_XFAM_20260919T095058Z/x1/results/runs/c2c_chain_04_work/eval_out/Rosetta_openbookqa_generate_20260919_203631_cot.csv",
+  "csv_sha256": "7d4c53ea9cf60f3e9b6aab7e778a76d75d11954d2a145d75eab2d571a8818238",
+  "env": "../results/runs/c2c_chain_04.env.json",
+  "rows": "../records/work/run/P2R1_XFAM_X1RUN_chain_04.jsonl",
+  "out": "$TMPDIR",
+  "out_sha256": "09785ad1d6b75c1ffb4834b7372166fa732d80f99d21e41971397df0324cc00f",
+  "checks": {
+    "n": 2104,
+    "question_equal": 2104,
+    "logged_choices_equal": 2104,
+    "unlogged_columns_empty": 2104,
+    "evaluator_prompt_equal": 2104,
+    "aligned_input_length_equal": 2104,
+    "receiver_nonpad_ids_equal": 2104,
+    "llama_today_date": [
+      "19 Sep 2026"
+    ],
+    "pad_positions": [
+      27
+    ],
+    "K_gt_4": [],
+    "partial_rows": 2104,
+    "partial_prefix_identical": true
+  }
+}

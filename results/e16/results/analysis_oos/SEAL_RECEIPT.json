@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-21T19:11:41.638778+00:00",
+  "note": "routes, changes, tests and all output files hashed before the answer key is read",
+  "answer_key_read": false,
+  "files": {
+    "results/analysis_oos/routes_llama_obqa.jsonl": "8e0cfef9c6f64b7f61f5d452688c13f8fa172e17f3022debcea17f87c34c52c3",
+    "results/analysis_oos/routes_llama_arc.jsonl": "09ee45832a7c384dc69ffbb7ccf5314bbb6b9d4756d1cbec07ba0c28e7c44e35",
+    "results/analysis_oos/routes_medium_arc_C.jsonl": "ca984f9fa0e5d76bd826278295d6f8b862162d582e956ca3120119b31316a12e",
+    "results/analysis_oos/OOS_PRE_GOLD.json": "51c7cc83ada775249aa7f94e0593d4f1d697d8f6d96c232797c7290c4de861d9",
+    "results/e16_1/shard0.jsonl": "e2fd5b05707479f269e85f791d7dab8d62b2f42c482ed3fcba26eafdbdf911ce",
+    "results/e16_1/shard1.jsonl": "95ce3e480998d057e8e2dfed2f07275e308453c17de70ddd5cb4a414f65dfcdc",
+    "results/e16_2/e16_2_medium_arc_test.jsonl": "e9970a2a6655278ddcf4c098b20d07b0b44d8a7da2cb0064bafb58ffde238147"
+  }
+}

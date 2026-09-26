@@ -1,0 +1,37 @@
+from common import *
+assert (P/'REPLAY_COMPLETE.json').exists()
+import numpy as np
+rows=jl(P/'records/e2e_requests.jsonl');assert len(rows)==1024 and len({r['key'] for r in rows})==1024
+rr={(r['dataset'],r['reference'],r['id'],r['mode']):r for r in rows}
+ev={(r['dataset'],r['id']):r for r in jl(P/'inputs/evaluation_existing_gold.jsonl')}
+cp={(r['dataset'],r['reference'],r['id']):r for r in jl(P/'inputs/component_estimates.jsonl')}
+out=[];paired=[];boot=[];decomp=[];diagnostics=[]
+for ds in ['obqa','arc']:
+ ids=read(P/f'inputs/{ds}_panel_ids.json');assert len(set(ev[ds,i]['group'] for i in ids))==128
+ idx=np.random.default_rng(0).integers(0,128,size=(2000,128));np.savez_compressed(R/f'summary/{ds}_bootstrap_indices.npz',ids=np.array(ids),indices=idx,seed=0)
+ for b in ['T','C']:
+  dep=read(P/f'protocol/large_{ds}_{b}_deployment.json');v=[]
+  for i in ids:
+   p=rr[ds,b,i,'policy'];r=rr[ds,b,i,'reference'];e=ev[ds,i];c=cp[ds,b,i]
+   assert all(p['frozen_identity'].values()) and not p['runtime_failure'] and not r['runtime_failure']
+   assert abs(sum(p['parts_ms'].values())-p['latency_ms'])<1e-7 and abs(sum(r['parts_ms'].values())-r['latency_ms'])<1e-7
+   yp=int(p['parsed']['valid'] and p['parsed']['answer']==e['gold']);yr=int(r['parsed']['valid'] and r['parsed']['answer']==e['gold'])
+   pc=p['latency_ms'];rc=r['latency_ms'];cref=CFG['c_ref'][ds]
+   z={'dataset':ds,'reference':b,'id':i,'group':i,'q':dep['q'],'route':p['selected'],'policy_correct':yp,'reference_correct':yr,'policy_answer':p['parsed']['answer'] or 'INVALID','reference_answer':r['parsed']['answer'] or 'INVALID','policy_valid':p['parsed']['valid'],'reference_valid':r['parsed']['valid'],'policy_ms':pc,'reference_ms':rc,'latency_diff_policy_minus_reference_ms':pc-rc,'net_saving_ms':rc-pc,'accuracy_diff':yp-yr,'policy_U':yp-.01*pc/cref,'reference_U':yr-.01*rc/cref,'delta_U':yp-yr+.01*(rc-pc)/cref,**{k:c[k] for k in c if k.startswith('old_')},'online_probe_selector_ms':p['parts_ms']['probe_ms']+p['parts_ms']['selector_ms'],'policy_action_ms':p['parts_ms']['action_ms'],'policy_other_ms':pc-p['parts_ms']['action_ms']-p['parts_ms']['probe_ms']-p['parts_ms']['selector_ms'],'reference_action_ms':r['parts_ms']['action_ms'],'reference_other_ms':rc-r['parts_ms']['action_ms'],'reference_shift_ms':rc-c['old_reference_ms'],'selected_action_shift_ms':p['parts_ms']['action_ms']-c['old_action_ms'],'online_control_shift_ms':pc-p['parts_ms']['action_ms']-c['old_probe_selector_ms'],'saving_minus_component_ms':rc-pc-c['old_net_saving_ms'],'policy_historical_parsed_match':(p['parsed']['answer'] or 'INVALID')==e['o_'+p['selected']],'reference_historical_parsed_match':(r['parsed']['answer'] or 'INVALID')==e['o_'+b],'policy_historical_raw_match':hashlib.sha256(p['output']['raw_answer'].encode()).hexdigest()==e['source_'+p['selected']]['raw_sha256'],'reference_historical_raw_match':hashlib.sha256(r['output']['raw_answer'].encode()).hexdigest()==e['source_'+b]['raw_sha256'],'cold_first_request':p['cold_first_request'] or r['cold_first_request'],'policy_record_key':p['key'],'reference_record_key':r['key']}
+   assert abs(z['saving_minus_component_ms']-(z['reference_shift_ms']-z['selected_action_shift_ms']-z['online_control_shift_ms']))<1e-7
+   v.append(z);paired.append(z)
+  def a(k):return np.array([z[k] for z in v],float)
+  def mean(k):return float(a(k).mean())
+  def ci(k):return [float(x) for x in np.quantile(a(k)[idx].mean(axis=1),[.025,.975])]
+  s={'dataset':ds,'reference':b,'N':128,'groups':128,'q':dep['q'],'threshold':dep['threshold'],'n_R':sum(z['route']=='R' for z in v),'coverage':sum(z['route']=='R' for z in v)/128,'policy_correct':int(a('policy_correct').sum()),'reference_correct':int(a('reference_correct').sum()),'policy_mean_ms':mean('policy_ms'),'reference_mean_ms':mean('reference_ms'),'policy_median_ms':float(np.median(a('policy_ms'))),'reference_median_ms':float(np.median(a('reference_ms'))),'paired_difference_mean_ms':mean('latency_diff_policy_minus_reference_ms'),'paired_difference_median_ms':float(np.median(a('latency_diff_policy_minus_reference_ms'))),'net_saving_ms':mean('net_saving_ms'),'CI95_saving_low':ci('net_saving_ms')[0],'CI95_saving_high':ci('net_saving_ms')[1],'accuracy_diff':mean('accuracy_diff'),'CI95_accuracy_low':ci('accuracy_diff')[0],'CI95_accuracy_high':ci('accuracy_diff')[1],'policy_U':mean('policy_U'),'reference_U':mean('reference_U'),'delta_U':mean('delta_U'),'CI95_U_low':ci('delta_U')[0],'CI95_U_high':ci('delta_U')[1],'c_ref_train_R_ms':CFG['c_ref'][ds],'lambda':.01,'component_net_saving_ms':mean('old_net_saving_ms'),'saving_minus_component_ms':mean('saving_minus_component_ms'),'policy_invalid':sum(not z['policy_valid'] for z in v),'reference_invalid':sum(not z['reference_valid'] for z in v),'policy_historical_parsed_changes':sum(not z['policy_historical_parsed_match'] for z in v),'reference_historical_parsed_changes':sum(not z['reference_historical_parsed_match'] for z in v),'confirmed_descriptive_positive_saving':ci('net_saving_ms')[0]>0,'interpretation':'exposed panel descriptive paired interval; no population guarantee'}
+  out.append(s)
+  for metric in ['net_saving_ms','latency_diff_policy_minus_reference_ms','accuracy_diff','delta_U','saving_minus_component_ms']:
+   lo,hi=ci(metric);boot.append({'dataset':ds,'reference':b,'metric':metric,'mean':mean(metric),'CI95_low':lo,'CI95_high':hi,'seed':0,'replicates':2000,'unit':'128 independent panel groups','indices_sha256':sha(R/f'summary/{ds}_bootstrap_indices.npz')})
+  decomp.append({'dataset':ds,'reference':b,**{k:mean(k) for k in ['old_net_saving_ms','net_saving_ms','saving_minus_component_ms','old_reference_ms','reference_ms','old_action_ms','policy_action_ms','old_probe_selector_ms','online_probe_selector_ms','policy_other_ms','reference_other_ms','reference_shift_ms','selected_action_shift_ms','online_control_shift_ms']},'identity':'saving change = reference shift - selected-action shift - online-control shift'})
+  diagnostics.append({'dataset':ds,'reference':b,'policy_raw_changes':sum(not z['policy_historical_raw_match'] for z in v),'reference_raw_changes':sum(not z['reference_historical_raw_match'] for z in v),'both_invalid':sum(not z['policy_valid'] and not z['reference_valid'] for z in v),'policy_only_invalid':sum(not z['policy_valid'] and z['reference_valid'] for z in v),'reference_only_invalid':sum(z['policy_valid'] and not z['reference_valid'] for z in v),'runtime_failures':0,'cold_pairs':[z['id'] for z in v if z['cold_first_request']],'probe_exact_identity_matches':128})
+writejl(R/'records/paired_e2e_512.jsonl',paired);csvout(R/'summary/paired_per_question.csv',paired)
+for name,data in [('e2e_summary',out),('paired_bootstrap',boot),('component_vs_e2e',decomp),('output_diagnostics',diagnostics)]:csvout(R/f'summary/{name}.csv',data)
+save(R/'summary/diagnostics.json',diagnostics)
+save(R/'NUMERICAL_VALIDATION.json',{'utc':utc(),'complete':True,'new_complete_requests':1024,'new_online_probes':512,'all_frozen_input_score_route_matches':True,'panel128_each':True,'new_gold_acquisition':0,'ARC_test_read':False,'all_timing_parts_sum':True,'all_decompositions_sum':True,'gold_association_after_replay':True,'fixed_reference_same_job_residency':True,'no_KV_reuse':True,'small_fallback_unchanged':True})
+save(R/'ANALYSIS_FREEZE.json',dict(utc=utc(),files={str(p.relative_to(R)):sha(p) for p in list((R/'summary').glob('*'))+[R/'records/paired_e2e_512.jsonl',R/'NUMERICAL_VALIDATION.json']}))
+print(json.dumps(out),flush=True)

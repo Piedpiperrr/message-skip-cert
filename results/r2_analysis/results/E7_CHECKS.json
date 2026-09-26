@@ -1,0 +1,39 @@
+{
+  "stop_conditions": [],
+  "n_reuse_output_differences": 13,
+  "omitted_per_stage_recomputed": {
+    "large": {
+      "original": 429,
+      "reuse": 429,
+      "argmax": 429
+    },
+    "medium": {
+      "original": 143,
+      "reuse": 143,
+      "argmax": 138
+    },
+    "mmlu": {
+      "original": 96,
+      "reuse": 96,
+      "argmax": 96
+    }
+  },
+  "reuse_differences_all_on_omitted": true,
+  "omitted_per_stage_recorded": {
+    "large": {
+      "original": 429,
+      "reuse": 429,
+      "argmax": 429
+    },
+    "mmlu": {
+      "original": 96,
+      "reuse": 96,
+      "argmax": 96
+    },
+    "medium": {
+      "original": 143,
+      "reuse": 143,
+      "argmax": 138
+    }
+  }
+}

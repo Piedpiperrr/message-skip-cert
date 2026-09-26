@@ -1,0 +1,84 @@
+{
+  "rank": 2,
+  "helper_pair": "large",
+  "utc": "2026-09-20T10:18:19Z",
+  "tasks_done": [
+    {
+      "file": "large_obqa_fit_plain_rank2.jsonl",
+      "n": 2100,
+      "requested": 2100,
+      "seconds": 55.088051467901096
+    },
+    {
+      "file": "large_obqa_cal_plain_rank2.jsonl",
+      "n": 1366,
+      "requested": 1366,
+      "seconds": 35.84945369907655
+    },
+    {
+      "file": "large_obqa_dev_plain_rank2.jsonl",
+      "n": 742,
+      "requested": 742,
+      "seconds": 19.52791607985273
+    },
+    {
+      "file": "large_arc_fit_plain_rank2.jsonl",
+      "n": 670,
+      "requested": 670,
+      "seconds": 18.351587523939088
+    },
+    {
+      "file": "large_arc_cal_plain_rank2.jsonl",
+      "n": 448,
+      "requested": 448,
+      "seconds": 12.24750659102574
+    },
+    {
+      "file": "large_arc_dev_plain_rank2.jsonl",
+      "n": 299,
+      "requested": 299,
+      "seconds": 8.19647701899521
+    },
+    {
+      "file": "large_mmlu_pro_fit_plain_rank2.jsonl",
+      "n": 1260,
+      "requested": 1260,
+      "seconds": 45.93885227292776
+    },
+    {
+      "file": "large_mmlu_pro_cal_plain_rank2.jsonl",
+      "n": 2520,
+      "requested": 2520,
+      "seconds": 91.82492570998147
+    },
+    {
+      "file": "large_mmlu_pro_dev_plain_rank2.jsonl",
+      "n": 1109,
+      "requested": 1109,
+      "seconds": 42.68252710090019
+    },
+    {
+      "file": "large_obqa_fit_with_fact_rank2.jsonl",
+      "n": 1050,
+      "requested": 1050,
+      "seconds": 28.580479233991355
+    },
+    {
+      "file": "large_obqa_cal_with_fact_rank2.jsonl",
+      "n": 683,
+      "requested": 683,
+      "seconds": 19.54400004679337
+    },
+    {
+      "file": "large_obqa_dev_with_fact_rank2.jsonl",
+      "n": 371,
+      "requested": 371,
+      "seconds": 10.09909509983845
+    }
+  ],
+  "tasks_skipped": [],
+  "job_id": "run010",
+  "gold_read": false,
+  "generation": false,
+  "complete": true
+}

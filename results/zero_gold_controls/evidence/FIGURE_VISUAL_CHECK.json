@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-14T07:15:01.143003+00:00",
+  "file": "figures/risk_coverage_cost.png",
+  "viewed": true,
+  "assessment": "Three readable panels; percent axes and cost units correct; five fixed score families; alpha=.05; stars for deployments and WordD Text fallback square; no material clipping. Curves are descriptive only.",
+  "source_rows": [
+    "summary/calibration_comparison_100.csv",
+    "summary/grid_curves_dev.csv",
+    "summary/main_dev.csv"
+  ]
+}

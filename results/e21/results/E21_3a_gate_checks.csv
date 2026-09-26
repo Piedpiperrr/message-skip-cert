@@ -1,0 +1,26 @@
+check,status,detail
+"small/OBQA population: v1_query = option contents rotated by one, labels/stem/other fields unchanged, back-map consistent",PASS,"742 rows, 0 violations"
+"small/ARC population: v1_query = option contents rotated by one, labels/stem/other fields unchanged, back-map consistent",PASS,"299 rows, 0 violations"
+"medium/OBQA population: v1_query = option contents rotated by one, labels/stem/other fields unchanged, back-map consistent",PASS,"742 rows, 0 violations"
+"medium/ARC population: v1_query = option contents rotated by one, labels/stem/other fields unchanged, back-map consistent",PASS,"299 rows, 0 violations"
+"large/OBQA population: v1_query = option contents rotated by one, labels/stem/other fields unchanged, back-map consistent",PASS,"742 rows, 0 violations"
+"large/ARC population: v1_query = option contents rotated by one, labels/stem/other fields unchanged, back-map consistent",PASS,"299 rows, 0 violations"
+"large/MMLU-Pro population: v1_query = option contents rotated by one, labels/stem/other fields unchanged, back-map consistent",PASS,"2641 rows, 0 violations"
+large/ARC V1 records: parsed_original = back-map(parsed_displayed),PASS,"299 V1 records, 0 mismatches, 0 runtime errors; probe-score fields stored: none"
+large/MMLU-Pro V1 records: parsed_original = back-map(parsed_displayed),PASS,"2641 V1 records, 0 mismatches, 0 runtime errors; probe-score fields stored: none"
+large/OBQA V1 records: parsed_original = back-map(parsed_displayed),PASS,"742 V1 records, 0 mismatches, 0 runtime errors; probe-score fields stored: none"
+medium/ARC V1 records: parsed_original = back-map(parsed_displayed),PASS,"299 V1 records, 0 mismatches, 0 runtime errors; probe-score fields stored: none"
+medium/OBQA V1 records: parsed_original = back-map(parsed_displayed),PASS,"742 V1 records, 0 mismatches, 0 runtime errors; probe-score fields stored: none"
+small/ARC V1 records: parsed_original = back-map(parsed_displayed),PASS,"299 V1 records, 0 mismatches, 0 runtime errors; probe-score fields stored: none"
+small/OBQA V1 records: parsed_original = back-map(parsed_displayed),PASS,"742 V1 records, 0 mismatches, 0 runtime errors; probe-score fields stored: none"
+"env_large_mmlu_V0-V1.json: one generation config for V0 and V1 (greedy, max_new_tokens 64)",PASS,do_sample=False max_new_tokens=64 num_beams=1
+"env_large_p210_V0-V1.json: one generation config for V0 and V1 (greedy, max_new_tokens 64)",PASS,do_sample=False max_new_tokens=64 num_beams=1
+"env_medium_medium_V0-V1-V2.json: one generation config for V0 and V1 (greedy, max_new_tokens 64)",PASS,do_sample=False max_new_tokens=64 num_beams=1
+"env_small_p210_V0-V1-V2.json: one generation config for V0 and V1 (greedy, max_new_tokens 64)",PASS,do_sample=False max_new_tokens=64 num_beams=1
+prompts_large_arc__V0-V1.json: rendered V1 prompt = V0 prompt with option contents rotated (questions 0-2),PASS,3 questions compared
+prompts_large_mmlu_pro__V0-V1.json: rendered V1 prompt = V0 prompt with option contents rotated (questions 0-2),PASS,3 questions compared
+prompts_large_obqa__V0-V1.json: rendered V1 prompt = V0 prompt with option contents rotated (questions 0-2),PASS,3 questions compared
+prompts_medium_arc__V0-V1-V2.json: rendered V1 prompt = V0 prompt with option contents rotated (questions 0-2),PASS,3 questions compared
+prompts_medium_obqa__V0-V1-V2.json: rendered V1 prompt = V0 prompt with option contents rotated (questions 0-2),PASS,3 questions compared
+prompts_small_arc__V0-V1-V2.json: rendered V1 prompt = V0 prompt with option contents rotated (questions 0-2),PASS,3 questions compared
+prompts_small_obqa__V0-V1-V2.json: rendered V1 prompt = V0 prompt with option contents rotated (questions 0-2),PASS,3 questions compared

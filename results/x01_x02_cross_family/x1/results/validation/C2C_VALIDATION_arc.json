@@ -1,0 +1,54 @@
+{
+  "utc": "2026-09-19T20:17:39.984488+00:00",
+  "verdict": "PASS",
+  "rows": [
+    {
+      "dataset": "arc",
+      "id": "Mercury_7181965",
+      "C_raw_equal": true,
+      "saved_record": "$DATA_DIR/P2_9_20260911T045010Z/results/small/train_cases.jsonl:1368"
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7009923",
+      "C_raw_equal": true,
+      "saved_record": "$DATA_DIR/P2_9_20260911T045010Z/results/small/train_cases.jsonl:1188"
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7230195",
+      "C_raw_equal": true,
+      "saved_record": "$DATA_DIR/P2_9_20260911T045010Z/results/small/train_cases.jsonl:2592"
+    },
+    {
+      "dataset": "arc",
+      "id": "NYSEDREGENTS_2016_4_13",
+      "C_raw_equal": true,
+      "saved_record": "$DATA_DIR/P2_9_20260911T045010Z/results/small/train_cases.jsonl:2379"
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7133368",
+      "C_raw_equal": true,
+      "saved_record": "$DATA_DIR/P2_9_20260911T045010Z/results/small/train_cases.jsonl:785"
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_7228288",
+      "C_raw_equal": true,
+      "saved_record": "$DATA_DIR/P2_9_20260911T045010Z/results/small/train_cases.jsonl:1867"
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_184293",
+      "C_raw_equal": true,
+      "saved_record": "$DATA_DIR/P2_9_20260911T045010Z/results/small/train_cases.jsonl:2281"
+    },
+    {
+      "dataset": "arc",
+      "id": "Mercury_SC_407691",
+      "C_raw_equal": true,
+      "saved_record": "$DATA_DIR/P2_9_20260911T045010Z/results/small/train_cases.jsonl:2531"
+    }
+  ]
+}

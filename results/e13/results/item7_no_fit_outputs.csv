@@ -1,0 +1,3 @@
+setting,reason,label
+large/OBQA/Text+fact,E6 ran Text+fact on calibration and development only (no fit-split reference outputs),POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+large/GSM8K/Text (E10),E10 fit split has receiver-only outputs only (0 Text outputs on fit); no re-split possible,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision

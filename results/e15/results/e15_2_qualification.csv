@@ -1,0 +1,41 @@
+setting,source,n_fixed,n_policy,qualifies,reason,path
+medium/OBQA/C2C,(a) original configuration,128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/records/e2e_requests.jsonl
+medium/OBQA/C2C,(b) second configuration E3 REPEAT1,128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/medium/records/e2e_requests.jsonl
+medium/OBQA/C2C,(b) second configuration E3 REPEAT2,128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/records/e2e_requests.jsonl
+medium/OBQA/C2C,(b) second configuration E3 REPEAT3,128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/medium/records/e2e_requests.jsonl
+medium/OBQA/C2C,(b) second configuration E7 (ORIGINAL arm vs FIXED),128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_R2_E7_20260919T231531Z/medium/records_e7/e7_requests.jsonl
+medium/ARC/C2C,(a) original configuration,128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_MEDIUM_PAIR_E2E_STAGE2_20260915T205303Z/records/e2e_requests.jsonl
+medium/ARC/C2C,(b) second configuration E3 REPEAT1,128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/medium/records/e2e_requests.jsonl
+medium/ARC/C2C,(b) second configuration E3 REPEAT2,128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/medium/records/e2e_requests.jsonl
+medium/ARC/C2C,(b) second configuration E3 REPEAT3,128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/medium/records/e2e_requests.jsonl
+medium/ARC/C2C,(b) second configuration E7 (ORIGINAL arm vs FIXED),128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_R2_E7_20260919T231531Z/medium/records_e7/e7_requests.jsonl
+large/OBQA/Text,(a) original configuration,128,128,True,every stage separately timed per request,$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/records/e2e_requests.jsonl
+large/OBQA/Text,(b) second configuration E3 REPEAT1,128,128,True,every stage separately timed per request,$DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/large/records/e2e_requests.jsonl
+large/OBQA/Text,(b) second configuration E3 REPEAT2,128,128,True,every stage separately timed per request,$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/large/records/e2e_requests.jsonl
+large/OBQA/Text,(b) second configuration E3 REPEAT3,128,128,True,every stage separately timed per request,$DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/large/records/e2e_requests.jsonl
+large/OBQA/Text,(b) second configuration E7 (ORIGINAL arm vs FIXED),128,128,False,"no per-stage timer (one action wall interval, GPU_forward_event_sum_ms is one sum per request)",$DATA_DIR/P2_R2_E7_20260919T231531Z/large/records_e7/e7_requests.jsonl
+large/OBQA/C2C,(a) original configuration,128,128,True,every stage separately timed per request,$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/records/e2e_requests.jsonl
+large/OBQA/C2C,(b) second configuration E3 REPEAT1,128,128,True,every stage separately timed per request,$DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/large/records/e2e_requests.jsonl
+large/OBQA/C2C,(b) second configuration E3 REPEAT2,128,128,True,every stage separately timed per request,$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/large/records/e2e_requests.jsonl
+large/OBQA/C2C,(b) second configuration E3 REPEAT3,128,128,True,every stage separately timed per request,$DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/large/records/e2e_requests.jsonl
+large/OBQA/C2C,(b) second configuration E7 (ORIGINAL arm vs FIXED),128,128,False,"no per-stage timer (one action wall interval, GPU_forward_event_sum_ms is one sum per request)",$DATA_DIR/P2_R2_E7_20260919T231531Z/large/records_e7/e7_requests.jsonl
+large/ARC/Text,(a) original configuration,128,128,True,every stage separately timed per request,$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/records/e2e_requests.jsonl
+large/ARC/Text,(b) second configuration E3 REPEAT1,128,128,True,every stage separately timed per request,$DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/large/records/e2e_requests.jsonl
+large/ARC/Text,(b) second configuration E3 REPEAT2,128,128,True,every stage separately timed per request,$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/large/records/e2e_requests.jsonl
+large/ARC/Text,(b) second configuration E3 REPEAT3,128,128,True,every stage separately timed per request,$DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/large/records/e2e_requests.jsonl
+large/ARC/Text,(b) second configuration E7 (ORIGINAL arm vs FIXED),128,128,False,"no per-stage timer (one action wall interval, GPU_forward_event_sum_ms is one sum per request)",$DATA_DIR/P2_R2_E7_20260919T231531Z/large/records_e7/e7_requests.jsonl
+large/ARC/C2C,(a) original configuration,128,128,True,every stage separately timed per request,$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/records/e2e_requests.jsonl
+large/ARC/C2C,(b) second configuration E3 REPEAT1,128,128,True,every stage separately timed per request,$DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/large/records/e2e_requests.jsonl
+large/ARC/C2C,(b) second configuration E3 REPEAT2,128,128,True,every stage separately timed per request,$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/large/records/e2e_requests.jsonl
+large/ARC/C2C,(b) second configuration E3 REPEAT3,128,128,True,every stage separately timed per request,$DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/large/records/e2e_requests.jsonl
+large/ARC/C2C,(b) second configuration E7 (ORIGINAL arm vs FIXED),128,128,False,"no per-stage timer (one action wall interval, GPU_forward_event_sum_ms is one sum per request)",$DATA_DIR/P2_R2_E7_20260919T231531Z/large/records_e7/e7_requests.jsonl
+large/MMLU-Pro/Text,(a) original configuration,128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/records/four_arm_requests.jsonl
+large/MMLU-Pro/Text,(b) second configuration E3 REPEAT1,128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/mmlu/records/four_arm_requests.jsonl
+large/MMLU-Pro/Text,(b) second configuration E3 REPEAT2,128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/mmlu/records/four_arm_requests.jsonl
+large/MMLU-Pro/Text,(b) second configuration E3 REPEAT3,128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/mmlu/records/four_arm_requests.jsonl
+large/MMLU-Pro/Text,(b) second configuration E7 (ORIGINAL arm vs FIXED),128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_R2_E7_20260919T231531Z/mmlu/records_e7/e7_requests.jsonl
+large/MMLU-Pro/C2C,(a) original configuration,128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/records/four_arm_requests.jsonl
+large/MMLU-Pro/C2C,(b) second configuration E3 REPEAT1,128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/mmlu/records/four_arm_requests.jsonl
+large/MMLU-Pro/C2C,(b) second configuration E3 REPEAT2,128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_R1_E3POL_REPEAT2_20260919T075315Z/mmlu/records/four_arm_requests.jsonl
+large/MMLU-Pro/C2C,(b) second configuration E3 REPEAT3,128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_R1_E3POL_REPEAT3_20260919T075315Z/mmlu/records/four_arm_requests.jsonl
+large/MMLU-Pro/C2C,(b) second configuration E7 (ORIGINAL arm vs FIXED),128,128,False,no per-stage timer (one action wall interval),$DATA_DIR/P2_R2_E7_20260919T231531Z/mmlu/records_e7/e7_requests.jsonl

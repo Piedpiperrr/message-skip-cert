@@ -1,0 +1,15 @@
+{"name": "R32_r0", "B": 32, "repeat": 0, "utc": "2026-09-14T05:57:18.719422+00:00", "event": "START_MODEL", "subset_sha256": "ca78cdf2ce2fe606f85813ca533c0bc9903d9790f245f3984cd345469fbbb282"}
+{"name": "R128_r0", "B": 128, "repeat": 0, "utc": "2026-09-14T05:57:20.316451+00:00", "event": "START_MODEL", "subset_sha256": "12c0bd6bb9fc881db2e10bd97cb35dd3b27d79b841114295b64d1cb9f2540860"}
+{"name": "R512_r0", "B": 512, "repeat": 0, "utc": "2026-09-14T05:57:26.104256+00:00", "event": "START_MODEL", "subset_sha256": "9b2af5b52a736f465c942022244c5319db095d88a1f941bcfa6063cc25e18877"}
+{"name": "R32_r1", "B": 32, "repeat": 1, "utc": "2026-09-14T05:57:26.477036+00:00", "event": "START_MODEL", "subset_sha256": "c8ebc75b63fd9d58f4fd9f244923fa67225e5082130ed50b81dd0ddaaca7b34b"}
+{"name": "R128_r1", "B": 128, "repeat": 1, "utc": "2026-09-14T05:57:27.453185+00:00", "event": "START_MODEL", "subset_sha256": "0c55eba028ba6d466df936ae30f447a5e6fd6af0968d9021b542aa20458de43e"}
+{"name": "R512_r1", "B": 512, "repeat": 1, "utc": "2026-09-14T05:57:31.001652+00:00", "event": "START_MODEL", "subset_sha256": "618deb86b6078f639caf90f23fcb5df11c336f658c370d0d349a7d3e39bb347d"}
+{"name": "R32_r2", "B": 32, "repeat": 2, "utc": "2026-09-14T05:57:31.408784+00:00", "event": "START_MODEL", "subset_sha256": "b0354532861fd8e497c955c38dbbe0f5225113ddcfe9d3cb62a3923b2f4006d4"}
+{"name": "R128_r2", "B": 128, "repeat": 2, "utc": "2026-09-14T05:57:32.210695+00:00", "event": "START_MODEL", "subset_sha256": "e59cb11bb932f02a4bdcf49b4171048fd6872e9119faee81f139780d559661a4"}
+{"name": "R512_r2", "B": 512, "repeat": 2, "utc": "2026-09-14T05:57:35.039805+00:00", "event": "START_MODEL", "subset_sha256": "0e2758cc67054c81374ef69aa3a6a02179fa82e4afdd9759bd3d3477f3f5b9cb"}
+{"name": "R32_r3", "B": 32, "repeat": 3, "utc": "2026-09-14T05:57:35.362086+00:00", "event": "START_MODEL", "subset_sha256": "ba608c576e40687f08eb9da5336df722cfba98c3c8765acf298caa5e013fb394"}
+{"name": "R128_r3", "B": 128, "repeat": 3, "utc": "2026-09-14T05:57:35.867135+00:00", "event": "START_MODEL", "subset_sha256": "9ddd9fb5fa050081b925a2f41b5148455908b25ce577c086a3ea912230fc2629"}
+{"name": "R512_r3", "B": 512, "repeat": 3, "utc": "2026-09-14T05:57:37.960093+00:00", "event": "START_MODEL", "subset_sha256": "75c48abdaf55bce5656ea8122dbcd1c1b93c7cc193a424f5caf41f8cfe09fe25"}
+{"name": "R32_r4", "B": 32, "repeat": 4, "utc": "2026-09-14T05:57:38.183260+00:00", "event": "START_MODEL", "subset_sha256": "88fdda04ec59d7c6f4e176b74256b3d733c986d8209541f5cd98bfa10bc867ca"}
+{"name": "R128_r4", "B": 128, "repeat": 4, "utc": "2026-09-14T05:57:38.644420+00:00", "event": "START_MODEL", "subset_sha256": "47ca90105b7095e36105453b7b7c0d481a7a8a2876c10a0c0fd957fe4359b223"}
+{"name": "R512_r4", "B": 512, "repeat": 4, "utc": "2026-09-14T05:57:40.342454+00:00", "event": "START_MODEL", "subset_sha256": "31343571c999153c2388602cf591193fa25d944217002d35d77cf9e433116208"}

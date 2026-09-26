@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-14T04:54:31.389597+00:00",
+  "files": {
+    "features/DEV_FEATURE_INDEX.csv": "5d56787f82a561095802b50490bd44643188a02893f6319e2c1fb97b2aa53f18"
+  },
+  "success": 742,
+  "attempts": 742,
+  "new_success": 742,
+  "cached": 0,
+  "model_load_wall_seconds": 130.58787003392354
+}

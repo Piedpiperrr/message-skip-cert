@@ -1,0 +1,20 @@
+{
+  "utc": "2026-09-15T21:04:57.305789+00:00",
+  "CUDA_VISIBLE_DEVICES": null,
+  "cuda_available": true,
+  "device_count": 2,
+  "devices": [
+    {
+      "index": 0,
+      "name": "NVIDIA A100-SXM4-40GB",
+      "uuid": "c7605c21-dd41-3555-0d2e-e825b197e9ac",
+      "total_memory_bytes": 42405855232
+    },
+    {
+      "index": 1,
+      "name": "NVIDIA A100-SXM4-40GB",
+      "uuid": "ff4382a8-6b4e-efa1-c6e7-163b13f6c962",
+      "total_memory_bytes": 42405855232
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "allowed": true,
+  "host": "REDACTED",
+  "stage": "P2_V2_BASELINES_FFR_E0_20260913T000052Z",
+  "job_id": "run007",
+  "evidence": [
+    "$DATA_DIR/P2_V2_BASELINES_FFR_E0_20260913T000052Z/evidence/pbs/allocation_185607.cluster-host",
+    "$DATA_DIR/P2_V2_BASELINES_FFR_E0_20260913T000052Z/RESOURCE_ADDENDUM.json"
+  ],
+  "allocation_evidence_sha256": "e6baf8c426bff2eb476fc8ca5f139e28779c4d1adb2d6e86fc3c316f7fb695d8",
+  "basis": "Verified real PBS owner, scheduler host, nodefile, process membership and sharedfs/environment access"
+}

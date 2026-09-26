@@ -1,0 +1,150 @@
+label_group,pair_R,pair_b,n_questions,n_change_label_differs,ids,label
+V2idx|large|obqa|cal,R,Text,1366,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|large|obqa|cal,R,C2C,1366,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|large|obqa|fit,R,Text,2100,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|large|obqa|fit,R,C2C,2100,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|large|arc|cal,R,Text,448,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|large|arc|cal,R,C2C,448,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|large|arc|fit,R,Text,671,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|large|arc|fit,R,C2C,671,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|small|obqa|cal,R,Text,1366,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|small|obqa|cal,R,C2C,1366,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|small|obqa|fit,R,Text,2100,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|small|obqa|fit,R,C2C,2100,1,1952,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|small|arc|cal,R,Text,448,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|small|arc|cal,R,C2C,448,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|small|arc|fit,R,Text,671,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|small|arc|fit,R,C2C,671,2,MCAS_1998_4_17;Mercury_LBS10444,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|large|obqa|dev,R,Text,742,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|large|obqa|dev,R,C2C,742,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|large|arc|dev,R,Text,299,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|large|arc|dev,R,C2C,299,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|small|obqa|dev,R,Text,742,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|small|obqa|dev,R,C2C,742,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|small|arc|dev,R,Text,299,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+V2idx|small|arc|dev,R,C2C,299,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"V2idx|large|obqa|panel (dev, P2_10 cost panel)",R,Text,128,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"V2idx|large|obqa|panel (dev, P2_10 cost panel)",R,C2C,128,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"V2idx|large|arc|panel (dev, P2_10 cost panel)",R,Text,128,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"V2idx|large|arc|panel (dev, P2_10 cost panel)",R,C2C,128,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"V2idx|small|obqa|panel (dev, P2_10 cost panel)",R,Text,128,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"V2idx|small|obqa|panel (dev, P2_10 cost panel)",R,C2C,128,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"V2idx|small|arc|panel (dev, P2_10 cost panel)",R,Text,128,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"V2idx|small|arc|panel (dev, P2_10 cost panel)",R,C2C,128,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"V2idx|large|obqa|panel (train, P2_10 cost panel)",R,Text,256,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"V2idx|large|obqa|panel (train, P2_10 cost panel)",R,C2C,256,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"V2idx|large|arc|panel (train, P2_10 cost panel)",R,Text,256,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"V2idx|large|arc|panel (train, P2_10 cost panel)",R,C2C,256,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"V2idx|small|obqa|panel (train, P2_10 cost panel)",R,Text,256,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"V2idx|small|obqa|panel (train, P2_10 cost panel)",R,C2C,256,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"V2idx|small|arc|panel (train, P2_10 cost panel)",R,Text,256,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"V2idx|small|arc|panel (train, P2_10 cost panel)",R,C2C,256,1,MCAS_1998_4_17,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+medium|obqa|fit,R,Text,2100,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+medium|obqa|fit,R,C2C,2100,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+medium|obqa|cal,R,Text,1366,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+medium|obqa|cal,R,C2C,1366,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+medium|obqa|dev,R,Text,742,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+medium|obqa|dev,R,C2C,742,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+medium|arc|fit,R,Text,671,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+medium|arc|fit,R,C2C,671,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+medium|arc|cal,R,Text,448,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+medium|arc|cal,R,C2C,448,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+medium|arc|dev,R,Text,299,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+medium|arc|dev,R,C2C,299,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+mmlu_large|cal,R,Text,6196,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+mmlu_large|cal,R,C2C,6196,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+mmlu_large|fit,R,Text,3093,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+mmlu_large|fit,R,C2C,3093,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+mmlu_large|dev,R,Text,2743,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+mmlu_large|dev,R,C2C,2743,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E8|small|fit,R,Text,3093,4,test:11459;test:11850;test:3952;test:7702,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E8|small|fit,R,C2C,3093,7,test:11066;test:11459;test:1587;test:3784;test:3952;test:5263;test:9239,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E8|small|cal,R,Text,6196,7,test:11824;test:12071;test:247;test:3809;test:4061;test:820;test:8339,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E8|small|cal,R,C2C,6196,13,test:10198;test:11036;test:11312;test:11824;test:12071;test:129;test:247;test:3809;test:4885;test:5903;test:7125;test:7866;test:820,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E8|small|dev,R,Text,2743,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E8|small|dev,R,C2C,2743,4,test:12213;test:1886;test:1923;test:9679,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E8|medium|fit,R,Text,3093,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E8|medium|fit,R,C2C,3093,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E8|medium|cal,R,Text,6196,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E8|medium|cal,R,C2C,6196,1,test:11355,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E8|medium|dev,R,Text,2743,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E8|medium|dev,R,C2C,2743,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X2|obqa|fit,R,Text,2100,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X2|obqa|cal,R,Text,1366,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X2|obqa|dev,R,Text,742,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X2|arc|fit,R,Text,671,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X2|arc|cal,R,Text,448,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X2|arc|dev,R,Text,299,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X2|mmlu_pro|fit,R,Text,3000,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X2|mmlu_pro|cal,R,Text,6000,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X2|mmlu_pro|dev,R,Text,2641,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X1|obqa|fit,R,Text,2100,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X1|obqa|fit,R,C2C,2100,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X1|obqa|cal,R,Text,1366,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X1|obqa|cal,R,C2C,1366,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X1|obqa|dev,R,Text,742,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X1|obqa|dev,R,C2C,742,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X1|arc|fit,R,Text,671,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X1|arc|fit,R,C2C,671,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X1|arc|cal,R,Text,448,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X1|arc|cal,R,C2C,448,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X1|arc|dev,R,Text,299,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+X1|arc|dev,R,C2C,299,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E6|cal,R,Text+fact,1366,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E6|dev,R,Text+fact,742,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E9b|large,R,Text,744,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E9b|large,R,C2C,744,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E9b|large,R,Text+fact,744,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+E9b|medium,R,C2C,744,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: original large (ClusterB)|large/obqa/Text,policy:R,fixed:ref,97,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: original large (ClusterB)|large/obqa/C2C,policy:R,fixed:ref,97,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: original large (ClusterB)|large/arc/Text,policy:R,fixed:ref,120,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: original large (ClusterB)|large/arc/C2C,policy:R,fixed:ref,115,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: original medium (ClusterB)|medium/obqa/C2C,policy:R,fixed:ref,66,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: original medium (ClusterB)|medium/arc/C2C,policy:R,fixed:ref,77,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: original MMLU-Pro (ClusterB)|large/mmlu_pro/T,policy:R,fixed:ref,48,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: original MMLU-Pro (ClusterB)|large/mmlu_pro/C,policy:R,fixed:ref,48,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT1 (ClusterA)|large/obqa/Text,policy:R,fixed:ref,97,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT1 (ClusterA)|large/obqa/C2C,policy:R,fixed:ref,97,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT1 (ClusterA)|large/arc/Text,policy:R,fixed:ref,120,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT1 (ClusterA)|large/arc/C2C,policy:R,fixed:ref,115,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT1 (ClusterA)|medium/obqa/C2C,policy:R,fixed:ref,66,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT1 (ClusterA)|medium/arc/C2C,policy:R,fixed:ref,77,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT1 (ClusterA)|large/mmlu_pro/T,policy:R,fixed:ref,48,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT1 (ClusterA)|large/mmlu_pro/C,policy:R,fixed:ref,48,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT2 (ClusterA)|large/obqa/Text,policy:R,fixed:ref,97,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT2 (ClusterA)|large/obqa/C2C,policy:R,fixed:ref,97,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT2 (ClusterA)|large/arc/Text,policy:R,fixed:ref,120,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT2 (ClusterA)|large/arc/C2C,policy:R,fixed:ref,115,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT2 (ClusterA)|medium/obqa/C2C,policy:R,fixed:ref,66,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT2 (ClusterA)|medium/arc/C2C,policy:R,fixed:ref,77,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT2 (ClusterA)|large/mmlu_pro/T,policy:R,fixed:ref,48,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT2 (ClusterA)|large/mmlu_pro/C,policy:R,fixed:ref,48,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT3 (ClusterA)|large/obqa/Text,policy:R,fixed:ref,97,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT3 (ClusterA)|large/obqa/C2C,policy:R,fixed:ref,97,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT3 (ClusterA)|large/arc/Text,policy:R,fixed:ref,120,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT3 (ClusterA)|large/arc/C2C,policy:R,fixed:ref,115,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT3 (ClusterA)|medium/obqa/C2C,policy:R,fixed:ref,66,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT3 (ClusterA)|medium/arc/C2C,policy:R,fixed:ref,77,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT3 (ClusterA)|large/mmlu_pro/T,policy:R,fixed:ref,48,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E3 REPEAT3 (ClusterA)|large/mmlu_pro/C,policy:R,fixed:ref,48,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"replay: E3 full 2,641 MMLU-Pro C2C (ClusterA)|large/mmlu_pro/C",policy:R,fixed:ref,1069,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E7 (ClusterA)|large/arc/C,policy:R,fixed:ref,115,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E7 (ClusterA)|large/arc/C,reuse:R,fixed:ref,115,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E7 (ClusterA)|large/arc/T,policy:R,fixed:ref,120,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E7 (ClusterA)|large/arc/T,reuse:R,fixed:ref,120,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E7 (ClusterA)|large/obqa/C,policy:R,fixed:ref,97,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E7 (ClusterA)|large/obqa/C,reuse:R,fixed:ref,97,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E7 (ClusterA)|large/obqa/T,policy:R,fixed:ref,97,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E7 (ClusterA)|large/obqa/T,reuse:R,fixed:ref,97,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E7 (ClusterA)|large/mmlu_pro/C,policy:R,fixed:ref,48,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E7 (ClusterA)|large/mmlu_pro/C,reuse:R,fixed:ref,48,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E7 (ClusterA)|large/mmlu_pro/T,policy:R,fixed:ref,48,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E7 (ClusterA)|large/mmlu_pro/T,reuse:R,fixed:ref,48,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E7 (ClusterA)|medium/arc/C,policy:R,fixed:ref,77,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E7 (ClusterA)|medium/arc/C,reuse:R,fixed:ref,77,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E7 (ClusterA)|medium/obqa/C,policy:R,fixed:ref,66,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E7 (ClusterA)|medium/obqa/C,reuse:R,fixed:ref,66,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+replay: E6 Text+fact (ClusterA)|large/obqa/Text+fact,policy:R,fixed:ref,92,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"sealed ARC test (1,172 groups)|large/arc-sealed/Text",policy:R,fixed:ref,1100,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision
+"sealed ARC test (1,172 groups)|large/arc-sealed/C2C",policy:R,fixed:ref,1047,0,,POST-HOC re-analysis (reviewer R5/E13); does not change any primary decision

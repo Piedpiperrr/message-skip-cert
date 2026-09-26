@@ -1,0 +1,5 @@
+# Pinned to the environment the experiments ran in (Python 3.10.18).
+# These three are all the CPU analysis, verification and figure scripts import.
+numpy==2.2.6
+scipy==1.15.3
+matplotlib==3.10.5

@@ -1,0 +1,35 @@
+{
+  "job_id": "run019",
+  "start_utc": "2026-09-19T08:16:47.330265+00:00",
+  "phases": [
+    {
+      "args": [
+        "validate_sources.py"
+      ],
+      "log": "$DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/large/run_logs/validate_sources.py.log",
+      "started_utc": "2026-09-19T08:16:47.330894+00:00",
+      "CPU_limit": 1302,
+      "exit_code": 0,
+      "CPU_seconds": 1.1214210000000002,
+      "wall_seconds": 4.076323509216309,
+      "ended_utc": "2026-09-19T08:16:51.407232+00:00"
+    },
+    {
+      "args": [
+        "execute.py"
+      ],
+      "log": "$DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/large/run_logs/execute.py.log",
+      "started_utc": "2026-09-19T08:16:51.412796+00:00",
+      "CPU_limit": 1301,
+      "exit_code": 0,
+      "CPU_seconds": 498.893367,
+      "wall_seconds": 879.7510304450989,
+      "ended_utc": "2026-09-19T08:31:31.163839+00:00"
+    }
+  ],
+  "status": "NUMERICAL_COMPLETE",
+  "CPU_seconds": 502.650505,
+  "preparation_reporting_reserve": 180,
+  "CPU_cap": 1500,
+  "utc": "2026-09-19T08:31:31.177279+00:00"
+}

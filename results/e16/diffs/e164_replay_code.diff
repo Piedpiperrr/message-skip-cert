@@ -1,0 +1,77 @@
+diff -ru $DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/large/src/execute.py $DATA_DIR/P2_R7_E16_20260921T184114Z/replay_llama/src/execute.py
+--- $DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/large/src/execute.py	2026-09-14 17:46:04.000000000 +0000
++++ $DATA_DIR/P2_R7_E16_20260921T184114Z/replay_llama/src/execute.py	2026-09-21 19:40:35.000000000 +0000
+@@ -12,7 +12,7 @@
+ for ds in CFG['order']['tasks']:
+  queries=jl(P/f'inputs/{ds}_queries.jsonl')
+  for ordinal,row in enumerate(queries):
+-  paths=CFG['order']['paths'];k=ordinal%4;order=paths[k:]+paths[:k]
++  paths=CFG['order']['paths'];k=ordinal%len(paths);order=paths[k:]+paths[:k]  # E16-4 D7: balanced rotation for 2 arms
+   for order_position,path in enumerate(order):
+    stop_check();assert attempt<1024
+    mode,b=path.split('_');i=row['id'];request_key=f'{ds}|{i}|{path}'
+@@ -43,6 +43,6 @@
+    except BaseException as e:
+     append(P/'records/failures.jsonl',{'key':request_key,'attempt':attempt,'utc':utc(),'error':repr(e),'traceback':traceback.format_exc(),'no_retry':True})
+     save(P/'REPLAY_PROGRESS.json',{'status':'PARTIAL','job_id':os.environ['PBS_JOBID'],'successful_count':len(success),'successful_keys':success,'attempts':attempt,'probe_attempts':probes,'remaining_action_attempts':1024-attempt,'remaining_online_probe_attempts':512-probes,'records_sha256':sha(P/'records/e2e_requests.jsonl') if (P/'records/e2e_requests.jsonl').exists() else None});raise
+-assert attempt==1024 and probes==512 and len(set(success))==1024
+-freeze('REPLAY_COMPLETE.json',[P/'records/e2e_requests.jsonl',P/'records/attempts.jsonl'],job_id=os.environ['PBS_JOBID'],action_attempts=attempt,online_probe_attempts=probes,successful=1024,existing_gold_read_by_execution=False)
++assert attempt==512 and probes==256 and len(set(success))==512  # E16-4: 2 arms
++freeze('REPLAY_COMPLETE.json',[P/'records/e2e_requests.jsonl',P/'records/attempts.jsonl'],job_id=os.environ['PBS_JOBID'],action_attempts=attempt,online_probe_attempts=probes,successful=len(set(success)),existing_gold_read_by_execution=False)
+ print('REPLAY_COMPLETE',flush=True)
+diff -ru $DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/large/src/native_adapter.py $DATA_DIR/P2_R7_E16_20260921T184114Z/replay_llama/src/native_adapter.py
+--- $DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/large/src/native_adapter.py	2026-09-14 17:46:04.000000000 +0000
++++ $DATA_DIR/P2_R7_E16_20260921T184114Z/replay_llama/src/native_adapter.py	2026-09-21 19:40:35.000000000 +0000
+@@ -10,6 +10,11 @@
+ from ac_p2_10 import validate_result
+ from protocol_min import apply_generation_config,receiver_prompt_tensors
+ sys.path.remove(CFG['native_root'])
++import protocol_min as _pm  # E16-4: R path tokenizes the rendered chat template with add_special_tokens=False (no second BOS)
++def _rpt(tokenizer,example,device):
++ prompt=_pm.format_openbook(example,use_template=True);rendered=tokenizer.apply_chat_template([{'role':'user','content':prompt}],tokenize=False,add_generation_prompt=True,enable_thinking=False)
++ t=tokenizer(rendered,return_tensors='pt',add_special_tokens=False);return prompt,rendered,{k:v.to(device) for k,v in t.items()}
++native.receiver_prompt_tensors=_rpt
+ # Native runtime already disables old internal timing and unused old parsing.
+ 
+ def sync():
+@@ -35,17 +40,12 @@
+   lm=native.lm;lm.C2C_FUSERS=Path(cfg['fuser']['path']);lm.HELPER_CONFIG=self.runner.helper.config;lm.RECEIVER_CONFIG=self.runner.receiver.config
+   self.runner.th=lm.T2THelperBundle(self.runner.helper,self.runner.helper_tok)
+   self.runner.tr=lm.T2TReceiverBundle(self.runner.receiver,self.runner.receiver_tok)
+-  self.runner.ch=lm.C2CSharerHelperBundle(self.runner.helper,self.runner.receiver_tok)
+-  assert self.runner.ch.tokenizer is self.runner.receiver_tok
+-  t=time.perf_counter();self.runner.cr=lm.C2CReceiverSideFuserBundle(self.runner.receiver,self.runner.receiver_tok)
+-  for f in self.runner.cr.projectors:f.eval().requires_grad_(False)
+-  sync();self.load_times['fusers']=time.perf_counter()-t
++  # E16-4: Text-only policy; C2C bundles and fuser are not built
+   self.trace=[];self.active=False;self.trace_handles=[]
+   for role in ['helper','receiver']:
+    model=getattr(self.runner,role)
+    self._install_trace(model,role,model.device)
+   self._install_trace(self.runner.receiver.model,'receiver_backbone',self.runner.receiver.device)
+-  for j,f in enumerate(self.runner.cr.projectors):self._install_trace(f,'fuser_'+str(j),self.runner.receiver.device)
+   self.baseline=self.hook_signature();self.first_request=True;self.action_first={a:True for a in A};self.validated_probe=False
+   self.prefix_ids=read(P/'protocol/prefix_ids.json')['ids'];self.ix={l:torch.tensor(v,device='cuda:1') for l,v in read(P/'protocol/label_token_sets.json').items()}
+   assert self.runner.receiver_tok.encode(CFG['prefix'],add_special_tokens=False)==self.prefix_ids
+@@ -87,7 +87,7 @@
+   self.in_probe=True;tok=self.runner.receiver_tok;model=self.runner.receiver;device=model.device
+   t0=time.perf_counter();body=receiver_prompt(q)
+   rendered=tok.apply_chat_template([{'role':'user','content':body}],tokenize=False,add_generation_prompt=True,enable_thinking=False)
+-  base=tok(rendered,return_tensors='pt');suffix=tok.encode(CFG['prefix'],add_special_tokens=False)
++  base=tok(rendered,return_tensors='pt',add_special_tokens=False);suffix=tok.encode(CFG['prefix'],add_special_tokens=False)
+   assert suffix==self.prefix_ids
+   ids=torch.cat([base['input_ids'],torch.tensor([suffix],dtype=base['input_ids'].dtype)],dim=1)
+   mask=torch.cat([base['attention_mask'],torch.ones((1,len(suffix)),dtype=base['attention_mask'].dtype)],dim=1)
+Only in $DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/large/src: __pycache__
+diff -ru $DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/large/src/supervise.py $DATA_DIR/P2_R7_E16_20260921T184114Z/replay_llama/src/supervise.py
+--- $DATA_DIR/P2_R1_E3POL_REPEAT1_20260919T075315Z/large/src/supervise.py	2026-09-19 07:53:16.000000000 +0000
++++ $DATA_DIR/P2_R7_E16_20260921T184114Z/replay_llama/src/supervise.py	2026-09-21 19:40:35.000000000 +0000
+@@ -31,7 +31,7 @@
+     time.sleep(2)
+   phase.update(exit_code=proc.returncode,CPU_seconds=used()-before,wall_seconds=time.time()-t,ended_utc=utc());record('FINISHED_'+name)
+   if proc.returncode:raise RuntimeError(f'Phase failed {name} exit={proc.returncode}; no automatic retry')
+- record('NUMERICAL_COMPLETE');save(P/'EXECUTION_COMPLETE.json',{'utc':utc(),'job_id':rec['job_id'],'complete_action_requests':1024,'online_policy_probes':512,'paired_evaluations':512,'CPU_with_reserve':reserve+used()})
++ record('NUMERICAL_COMPLETE');save(P/'EXECUTION_COMPLETE.json',{'utc':utc(),'job_id':rec['job_id'],'complete_action_requests':512,'online_policy_probes':256,'paired_evaluations':256,'CPU_with_reserve':reserve+used()})
+ except BaseException as e:
+  rec['error']=repr(e);record('PARTIAL');raise
+ finally:record(rec['status'])

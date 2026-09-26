@@ -1,0 +1,38 @@
+[
+  {
+    "path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/labels/full_train_P2_SCORING_V2.jsonl",
+    "relative_path": "labels/full_train_P2_SCORING_V2.jsonl",
+    "sha256": "a26986635c944974a5263e08457cb181489a32aec84da450fd514f9155dbf911",
+    "size_bytes": 22144683,
+    "population": "full",
+    "role": "train",
+    "question_rows": 9170
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/labels/full_development_P2_SCORING_V2.jsonl",
+    "relative_path": "labels/full_development_P2_SCORING_V2.jsonl",
+    "sha256": "6fde2e0a58f9be88ef14edf7aeab0ac7202b594a17b94d1d18f034f8984d9aa8",
+    "size_bytes": 5053322,
+    "population": "full",
+    "role": "development",
+    "question_rows": 2082
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/labels/panel_train_P2_SCORING_V2.jsonl",
+    "relative_path": "labels/panel_train_P2_SCORING_V2.jsonl",
+    "sha256": "feb47d893581705a318f5f394d14f3997c2167bb56ce2983a1a7babeb5b13b12",
+    "size_bytes": 2684231,
+    "population": "panel",
+    "role": "train",
+    "question_rows": 1024
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/labels/panel_development_P2_SCORING_V2.jsonl",
+    "relative_path": "labels/panel_development_P2_SCORING_V2.jsonl",
+    "sha256": "dac016c424a1e2e3428ebd9a9d5ae7e55eea59526eef6ddefd86c1db99ba4ad2",
+    "size_bytes": 1355756,
+    "population": "panel",
+    "role": "development",
+    "question_rows": 512
+  }
+]

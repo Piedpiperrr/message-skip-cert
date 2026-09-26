@@ -1,0 +1,259 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-19T08:57:52.889272+00:00",
+  "job_id": "run020",
+  "startup_wall_seconds": 10.372023998061195,
+  "load_seconds": {
+    "helper": 4.740224177017808,
+    "receiver": 2.3547209401149303,
+    "fuser": 3.270040606148541
+  },
+  "strict_model_loading_info": {
+    "helper": {
+      "missing_keys": [],
+      "unexpected_keys": [],
+      "mismatched_keys": [],
+      "error_msgs": []
+    },
+    "receiver": {
+      "missing_keys": [],
+      "unexpected_keys": [],
+      "mismatched_keys": [],
+      "error_msgs": []
+    }
+  },
+  "fuser_loading_audit": [
+    {
+      "projector": 0,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 1,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 2,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 3,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 4,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 5,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 6,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 7,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 8,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 9,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 10,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 11,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 12,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 13,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 14,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 15,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 16,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 17,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 18,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 19,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 20,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 21,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 22,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 23,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 24,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 25,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 26,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    {
+      "projector": 27,
+      "strict": true,
+      "state_tensors": 33,
+      "parameters": 17328146,
+      "missing_keys": [],
+      "unexpected_keys": []
+    }
+  ],
+  "projector_count": 28,
+  "helper_device": "cuda:0",
+  "receiver_device": "cuda:1",
+  "runtime_import_seconds": 3.6781144549604505,
+  "startup_total_including_runtime_import_seconds": 14.050175502896309,
+  "warmup_requests": 0,
+  "synthetic_forward_requests": 0,
+  "per_question_amortization": false
+}

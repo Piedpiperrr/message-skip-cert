@@ -1,0 +1,32 @@
+{
+ "utc": "2026-09-21T23:30:43.098382+00:00",
+ "files": {
+  "GATE.md": "46e64a6d88a09dc85bc5609d14d5dc5fec6614d09c92403e78f2b83373f51cd8",
+  "PROMPTS_E20.md": "6ed439e8c320c9c9bb62bb3fad969564219168976f134db7e3199db674c6814e",
+  "inputs/PILOT_nqopen.jsonl": "7cc1e18170835e8789a9583a7dd056a3e637af421882cfcbcceafb0f48394a91",
+  "inputs/PILOT_nqp.jsonl": "eddf08f0701f08ca3fbcc08455a36273ab0fd251c4dd992ff03dc7884292088b",
+  "inputs/PILOT_squad.jsonl": "bcf2b0e2de5756a179893d7e4b711a667006007321842f325ac47b4d43937d9d",
+  "inputs/PILOT_triviaqa.jsonl": "fb0fe5a72f53f3bb38277380264c29387bb009abe7d3b6d0fe4a683af29f0a84",
+  "inputs/POOL_ORDER_nqopen.txt": "f7ec7dfca52f2443f704a822dec14fb2690c841782fee1fe9d7190840558e6bf",
+  "inputs/POOL_ORDER_nqp.txt": "ba6525fb9dd6693cfc88f3497dc300db10749e4e50d7b4e292121f04a5888036",
+  "inputs/POOL_ORDER_squad.txt": "9754449546d370e2ab7c690ee99f44a50c240230850574f195f596664ffab7f3",
+  "inputs/POOL_ORDER_triviaqa.txt": "3457e6978a7942344299c30859679c2103cf906b522790622a6e304386534b7e",
+  "jobs/e20_jobA.pbs": "eca05000f4b4e2ced0cb29d062ae2d19ed30d74b5c8c0d1b59dd5c45ddcd48dd",
+  "jobs/e20_jobB.pbs": "817cfc55e8ffe3272f37ce873f82ff62329440cd0ed36c4f616ff94a03740a5f",
+  "jobs/e20_slot.sh": "ec14f16f60f45ddc76357cccc48e5974f92410c5736dd0b8b3e2607bd5cf38a6",
+  "notes/DOWNLOAD_MANIFEST.json": "45b36ba78c4fc2abaa5ea0128641df48dd871948d92a6d9c295b74093c99a5fa",
+  "notes/POOL_E20P.json": "9f5613aca456471da8a26927032387959b0eb70a881d8d97a25580591773d68e",
+  "notes/PREREG_BLOCK.txt": "8c9f497417308edf2b61b2fc5373b12ee39c07590b2d17576e1860486a0b3d2d",
+  "notes/PROMPT_CHECKS.json": "90544047cdf81cc2ccd50b04d083894413e8a732e4cb90fab1d245ecbbb5ad23",
+  "src/download_datasets.py": "73d58344d49e2ef255fad5acacae8aed541ee510bd90f5d0c7eedb1e643cf508",
+  "src/e20_accuracy.py": "1806e0137eeda1dfef6d19074c47102b044db1d27ebaa3c6d1453ef6cd8ba6e1",
+  "src/e20_analyze.py": "7185a3696d0ec3a805126f3872921acb29881ae996cbc7eb908dc985b793abac",
+  "src/e20_exec.py": "841f849807d5be2f71d0fdb49ec77ab573585e21f16314108003741715769f3f",
+  "src/e20_exec_common.py": "7e74678c1367a3e74a039e5fa1371cadb3bc2091ecbe60a12c1659e291f80c85",
+  "src/e20_extract.py": "d9c30fa611218ff2decdf498349f3a1eefbdaada89dbed171b1d40fed9342be0",
+  "src/e20_merge.py": "9085534ea8ce4a79e5b5101579c5404727168e32f890f401212d43b8f3758111",
+  "src/e20_pool.py": "53413dc7ec8dab1a53b1cae9b043347d8f4086263ef437891f8f00ca3a60bee7",
+  "src/e20_prompts.py": "c4b0be5dea890f56ed4a86f820045775743504556cb22b6f332b760f50c0c900",
+  "src/e20_render.py": "e919aabc4741f94d80d7bba8923464716ffb9dd40c2349848c4f2fbb33312802"
+ }
+}

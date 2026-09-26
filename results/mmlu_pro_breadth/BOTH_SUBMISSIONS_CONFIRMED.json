@@ -1,0 +1,19 @@
+{
+  "utc": "2026-09-16T00:39:33.857772+00:00",
+  "jobs": {
+    "1": {
+      "job_id": "run014",
+      "submission_utc": "2026-09-16T00:39:33.063490+00:00",
+      "held_receipt_sha256": "169767833c696b8412ad9f4b02c3c4917dbf46fcb9e914d58ae0c185cf5e99ea",
+      "PBS_script_sha256": "b07723f9eab52d2fdf97c88ffbb047f10e10a54e7171d85b77aad6ff22fc673d"
+    },
+    "2": {
+      "job_id": "run015",
+      "submission_utc": "2026-09-16T00:39:33.852488+00:00",
+      "held_receipt_sha256": "09aeea50a25ef88a89c72d9c2d7da5f79a9102058dbb296973d538b60db1eab1",
+      "PBS_script_sha256": "ac80db31f142fee5fecf1232bba30f3184f85faf52adaefd3914147421f6e1c7"
+    }
+  },
+  "protocol_freeze_sha256": "c6300cff73ef096c81fb07cdab3eef68050265fec97ec2fcecfbf94e25a38624",
+  "MMLU_PRO_OUTCOMES_OBSERVED": false
+}

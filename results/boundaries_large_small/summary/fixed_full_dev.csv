@@ -1,0 +1,17 @@
+pair,dataset,action,population,N_rows,N_groups,correct_all_ids,correct_groups,accuracy,identity
+large,obqa,R,full_dev,742,742,617,617,0.8315363881401617,direct V2 correctness aggregation; no rescoring
+large,obqa,T,full_dev,742,742,645,645,0.8692722371967655,direct V2 correctness aggregation; no rescoring
+large,obqa,C,full_dev,742,742,598,598,0.8059299191374663,direct V2 correctness aggregation; no rescoring
+large,obqa,A,full_dev,742,742,617,617,0.8315363881401617,direct V2 correctness aggregation; no rescoring
+large,arc,R,full_dev,299,299,268,268,0.8963210702341137,direct V2 correctness aggregation; no rescoring
+large,arc,T,full_dev,299,299,274,274,0.9163879598662207,direct V2 correctness aggregation; no rescoring
+large,arc,C,full_dev,299,299,266,266,0.8896321070234113,direct V2 correctness aggregation; no rescoring
+large,arc,A,full_dev,299,299,269,269,0.8996655518394648,direct V2 correctness aggregation; no rescoring
+small,obqa,R,full_dev,742,742,285,285,0.38409703504043125,direct V2 correctness aggregation; no rescoring
+small,obqa,T,full_dev,742,742,346,346,0.46630727762803237,direct V2 correctness aggregation; no rescoring
+small,obqa,C,full_dev,742,742,366,366,0.49326145552560646,direct V2 correctness aggregation; no rescoring
+small,obqa,A,full_dev,742,742,284,284,0.38274932614555257,direct V2 correctness aggregation; no rescoring
+small,arc,R,full_dev,299,299,110,110,0.36789297658862874,direct V2 correctness aggregation; no rescoring
+small,arc,T,full_dev,299,299,126,126,0.4214046822742475,direct V2 correctness aggregation; no rescoring
+small,arc,C,full_dev,299,299,155,155,0.5183946488294314,direct V2 correctness aggregation; no rescoring
+small,arc,A,full_dev,299,299,110,110,0.36789297658862874,direct V2 correctness aggregation; no rescoring

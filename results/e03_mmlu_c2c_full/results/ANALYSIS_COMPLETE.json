@@ -1,0 +1,10 @@
+{
+  "utc": "2026-09-19T09:30:46.787967+00:00",
+  "status": "COMPLETE_MMLU_PRO_STAGE2",
+  "classifications": {
+    "C2C": "E2E_POSITIVE"
+  },
+  "no_policy_selection": true,
+  "no_new_calibration": true,
+  "no_next_task": true
+}

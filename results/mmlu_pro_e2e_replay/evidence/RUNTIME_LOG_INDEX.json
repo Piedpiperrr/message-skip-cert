@@ -1,0 +1,26 @@
+[
+  {
+    "source": "$DATA_DIR/runs/iclr2027_p2/run017/entry.log",
+    "copy": "evidence/runtime_logs/entry.log",
+    "sha256": "6071295777898965f0b785a9ab71d95a189c2b337ebcfb7f0bf3a80f94dd0f25",
+    "bytes": 4253
+  },
+  {
+    "source": "$DATA_DIR/runs/iclr2027_p2/run017/outer.log",
+    "copy": "evidence/runtime_logs/outer.log",
+    "sha256": "4874dfdc5bd7d6714a6c50ea17fda9e17b3e40f900825b5a46a536dab9eefaa5",
+    "bytes": 80
+  },
+  {
+    "source": "$DATA_DIR/runs/iclr2027_p2/run017/job_exit.txt",
+    "copy": "evidence/runtime_logs/job_exit.txt",
+    "sha256": "0af872de41e2668c2b82797cf9c89542a081b1722d2675c14a73cd408d38afde",
+    "bytes": 43
+  },
+  {
+    "source": "$DATA_DIR/runs/iclr2027_p2/run017/home_space_check.log",
+    "copy": "evidence/runtime_logs/home_space_check.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  }
+]

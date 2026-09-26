@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-16T22:00:15.961459+00:00",
+  "status": "COMPLETE_MMLU_PRO_STAGE2",
+  "MMLU_TEXT_E2E": "E2E_POSITIVE",
+  "MMLU_C2C_E2E": "E2E_UNCERTAIN_OR_NEGATIVE",
+  "complete_requests": 512,
+  "online_probes": 256,
+  "formal_PBS_submissions": 1,
+  "actual_GPUh": 0.3188888888888889,
+  "policy_selection": false,
+  "calibration": false,
+  "manuscript_modified": false,
+  "supplement_modified": false,
+  "next_task_started": false
+}

@@ -1,0 +1,9 @@
+{
+  "utc": "2026-09-14T17:20:11.506417+00:00",
+  "file": "figures/reference_boundaries.png",
+  "viewed": true,
+  "assessment": "Corrected common0to70% axes include all eight calibrated/development curves; blue solid/circle Text and orange dashed/triangle C2C, stars frozen points; fallback text separated from plotted curves; labels and units readable, no material clipping. Full curve rows unchanged.",
+  "repair_source": "src/repair_figure.py",
+  "source_calibration_sha256": "b3038de19871c55222e69243299c1da7e459c382cc688d8d22ca5e20a7a896cc",
+  "source_curves_sha256": "940eaddb68c0bfbf56f3a0d4cd32ed5d45d829800630c915a4b821a710509f89"
+}

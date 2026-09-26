@@ -1,0 +1,81 @@
+{
+  "utc": "2026-09-22T06:59:39.523631+00:00",
+  "P1_P3_rows": {
+    "arc": [
+      "Mercury_7175875",
+      "Mercury_SC_409171",
+      "Mercury_SC_408547",
+      "Mercury_407327",
+      "MCAS_2006_9_44",
+      "Mercury_7270393",
+      "MCAS_2014_5_7",
+      "Mercury_7086660",
+      "MCAS_2003_8_11",
+      "Mercury_7250058",
+      "Mercury_7012740",
+      "Mercury_LBS10610",
+      "Mercury_7212993",
+      "Mercury_SC_413240",
+      "Mercury_7186358",
+      "Mercury_7166425"
+    ],
+    "obqa": [
+      "9-732",
+      "7-637",
+      "7-1167",
+      "453",
+      "9-676",
+      "1310",
+      "8-203",
+      "8-37",
+      "7-678",
+      "7-156",
+      "278",
+      "1288",
+      "8-446",
+      "9-283",
+      "7-13",
+      "9-1013"
+    ]
+  },
+  "P2_extra_arc": [
+    "NYSEDREGENTS_2008_8_34",
+    "NYSEDREGENTS_2010_4_4",
+    "NYSEDREGENTS_2008_8_11",
+    "NYSEDREGENTS_2008_8_30",
+    "NYSEDREGENTS_2008_8_27",
+    "NYSEDREGENTS_2012_8_42",
+    "NYSEDREGENTS_2008_4_15",
+    "NYSEDREGENTS_2010_8_16",
+    "NYSEDREGENTS_2012_8_19",
+    "NYSEDREGENTS_2013_8_42",
+    "NYSEDREGENTS_2010_8_35",
+    "NYSEDREGENTS_2008_8_9",
+    "NYSEDREGENTS_2008_8_32",
+    "NYSEDREGENTS_2008_8_36",
+    "NYSEDREGENTS_2015_8_3",
+    "TIMSS_1995_8_J7",
+    "NYSEDREGENTS_2013_8_10",
+    "NYSEDREGENTS_2012_8_28",
+    "TIMSS_2007_8_pg53",
+    "NYSEDREGENTS_2008_8_17",
+    "NYSEDREGENTS_2013_8_34",
+    "NYSEDREGENTS_2015_8_9",
+    "NYSEDREGENTS_2008_8_42",
+    "TIMSS_1995_8_N4",
+    "NYSEDREGENTS_2015_4_7",
+    "NYSEDREGENTS_2010_8_42",
+    "NYSEDREGENTS_2008_8_5",
+    "NYSEDREGENTS_2015_8_29"
+  ],
+  "rule": {
+    "arc": "first 16 sealed ARC questions in ordinal order that have a stored R output",
+    "obqa": "first 16 held-out OBQA questions in population order",
+    "P2_extra_arc": "every sealed ARC question with K != 4 or original labels other than A.."
+  },
+  "counts": {
+    "extra_K_not_4": 7,
+    "extra_nonletter": 22,
+    "extra_total": 28
+  }
+}

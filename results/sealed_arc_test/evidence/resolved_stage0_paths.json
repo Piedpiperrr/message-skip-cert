@@ -1,0 +1,23 @@
+{
+  "helper": "$DATA_DIR/P2_6_20260910T164138Z/assets/Qwen2.5-7B-Instruct",
+  "receiver": "$DATA_DIR/hf_cache/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+  "checkpoint": "$DATA_DIR/P2_6_20260910T164138Z/assets/C2C_Fuser/qwen3_8b+qwen2.5_7b_Fuser/final",
+  "dataset": "$DATA_DIR/P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/source",
+  "output": "$DATA_DIR/P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z",
+  "log": "$DATA_DIR/P2_FINAL_SEALED_ARC_CONFIRMATION_20260914T211958Z/evidence",
+  "temporary": "$DATA_DIR/tmp/p2_sealed_stage0",
+  "cache": "$DATA_DIR/cache/huggingface",
+  "python": "$DATA_DIR/software/envs/c2c_official/bin/python",
+  "UV_CACHE_DIR": "$DATA_DIR/cache/uv",
+  "NUMBA_CACHE_DIR": "$DATA_DIR/cache/numba",
+  "HF_HUB_CACHE": "$DATA_DIR/cache/huggingface/hub",
+  "CUDA_CACHE_PATH": "$DATA_DIR/cache/cuda",
+  "HF_DATASETS_CACHE": "$DATA_DIR/cache/huggingface/datasets",
+  "PIP_CACHE_DIR": "$DATA_DIR/cache/pip",
+  "TRITON_CACHE_DIR": "$DATA_DIR/cache/triton",
+  "XDG_CACHE_HOME": "$DATA_DIR/cache/xdg",
+  "HF_HOME": "$DATA_DIR/cache/huggingface",
+  "APPTAINER_CACHEDIR": "$DATA_DIR/cache/apptainer",
+  "HF_ASSETS_CACHE": "$DATA_DIR/cache/huggingface/assets",
+  "TORCH_HOME": "$DATA_DIR/cache/torch"
+}

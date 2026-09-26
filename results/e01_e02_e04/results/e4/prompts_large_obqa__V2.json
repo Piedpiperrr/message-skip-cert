@@ -1,0 +1,20 @@
+[
+  {
+    "variant": "V2",
+    "pos": 0,
+    "id": "10-1005",
+    "rendered": "<|im_start|>user\nIn one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nSoil is produced naturally when, over a period of many years\n\nChoices:\nA. stones are rock solid\nB. stones are blown up\nC. stones are vaporized by storms\nD. stones are worn down\n\n\nDo NOT directly solve or give answer to the question.<|im_end|>\n<|im_start|>assistant\nThe most essential background knowledge needed to answer the question is an understanding of activities or substances that contribute to environmental pollution or degradation.<|im_end|>\n<|im_start|>user\nAccurately answer the following question:\n\nSoil is produced naturally when, over a period of many years\n\nChoices:\nA. stones are rock solid\nB. stones are blown up\nC. stones are vaporized by storms\nD. stones are worn down\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V2",
+    "pos": 1,
+    "id": "10-1009",
+    "rendered": "<|im_start|>user\nIn one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nA sandbar is in the shallow portion of water where\n\nChoices:\nA. water is bloody\nB. water is harder\nC. water is falling\nD. water adjusts things\n\n\nDo NOT directly solve or give answer to the question.<|im_end|>\n<|im_start|>assistant\nThe most essential background knowledge needed to answer the question is an understanding of electricity and how it powers electrical devices like light bulbs.<|im_end|>\n<|im_start|>user\nAccurately answer the following question:\n\nA sandbar is in the shallow portion of water where\n\nChoices:\nA. water is bloody\nB. water is harder\nC. water is falling\nD. water adjusts things\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V2",
+    "pos": 2,
+    "id": "10-1018",
+    "rendered": "<|im_start|>user\nIn one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nSome monkey babies may be\n\nChoices:\nA. turned into canned meat\nB. taken to a hospital\nC. run out of the pact\nD. taken care with two parents\n\n\nDo NOT directly solve or give answer to the question.<|im_end|>\n<|im_start|>assistant\nThe most essential background knowledge needed to answer the question is an understanding of the sun's nuclear processes and how it generates energy.<|im_end|>\n<|im_start|>user\nAccurately answer the following question:\n\nSome monkey babies may be\n\nChoices:\nA. turned into canned meat\nB. taken to a hospital\nC. run out of the pact\nD. taken care with two parents\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  }
+]

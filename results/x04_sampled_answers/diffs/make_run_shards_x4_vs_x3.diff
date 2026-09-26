@@ -1,0 +1,35 @@
+--- ../P2_R6_X3_20260921T052602Z/src/make_run_shards.py	2026-09-21 06:23:15.000000000 +0000
++++ src/make_run_shards.py	2026-09-21 07:26:42.000000000 +0000
+@@ -1,4 +1,4 @@
+-"""X3 (copy of X2 make_run_shards.py; OBQA + ARC only, receiver from jobs/receiver.env): split all X3 rows into single-GPU chains balanced
++"""X4 (copy of X3 make_run_shards.py; node script runs run_x4.py --sampling on; receiver qwen3_8b via jobs/receiver.env). X3 docstring: X3 (copy of X2 make_run_shards.py; OBQA + ARC only, receiver from jobs/receiver.env): split all X3 rows into single-GPU chains balanced
+ by expected time (harness). Per-row seconds come from the smoke latencies.
+ usage: make_run_shards.py <n_nodes> <sec_per_row_obqa_arc> <queue> <walltime HH:MM:SS> <job_name>
+ Writes records/work/run/chain_XX.jsonl, records/work/run/PLAN.json and jobs/<job_name>.pbs + jobs/<job_name>_node.sh."""
+@@ -29,7 +29,7 @@
+ J = X / 'jobs'
+ h, m, s = map(int, wall.split(':')); wall_s = h * 3600 + m * 60 + s
+ (J / f'{name}_node.sh').write_text(f'''#!/bin/bash
+-# X3 full run: node shell (one per node via mpiexec); 4 single-GPU chains (receiver from jobs/receiver.env); records only, gold never read.
++# X4 full run (sampled receiver answers): node shell (one per node via mpiexec); 4 single-GPU chains; records only, gold never read.
+ set -uo pipefail
+ X={X}
+ source "$HOME/.config/ClusterB-storage.sh"
+@@ -50,7 +50,7 @@
+   c=$(printf '%02d' $((RANK * 4 + g)))
+   [ -f "$X/records/work/run/chain_$c.jsonl" ] || continue
+   ( export CUDA_VISIBLE_DEVICES=$g
+-    "$PY" run_x3.py --mode run --receiver "$X3_RECEIVER" --rows "$X/records/work/run/chain_$c.jsonl" --out "$X/results/runs/chain_$c.jsonl"; echo "EXIT chain_$c $?" ) > "$L/chain_$c.log" 2>&1 &
++    "$PY" run_x4.py --mode run --receiver "$X3_RECEIVER" --sampling on --rows "$X/records/work/run/chain_$c.jsonl" --out "$X/results/runs/chain_$c.jsonl"; echo "EXIT chain_$c $?" ) > "$L/chain_$c.log" 2>&1 &
+   PIDS+=($!)
+ done
+ wait "${{PIDS[@]}}"
+@@ -62,7 +62,7 @@
+ # [scheduler directive removed for anonymity]
+ # [scheduler directive removed for anonymity]
+ # [scheduler directive removed for anonymity]
+-# X3 full run ({C} single-GPU chains on {nodes} node(s)); plan: records/work/run/PLAN.json
++# X4 full run, sampled ({C} single-GPU chains on {nodes} node(s)); plan: records/work/run/PLAN.json
+ # Submit: submit-job  -q {queue} -l select={nodes} -l walltime={wall} -l fsreq=<fs> -N {name} {name}.pbs
+ set -uo pipefail
+ START=$(date +%s); DEADLINE=$((START + {wall_s} - 240))

@@ -1,0 +1,23 @@
+{
+  "utc": "2026-09-20T05:18:28.028246+00:00",
+  "host": "REDACTED",
+  "job_id": "run028",
+  "slot": "r1",
+  "pair": "medium",
+  "CUDA_VISIBLE_DEVICES": "2,3",
+  "attempts": 10,
+  "sleep_seconds": 15.0,
+  "errors": [
+    "attempt 1: SystemExit(0)",
+    "attempt 2: SystemExit(0)",
+    "attempt 3: SystemExit(0)",
+    "attempt 4: SystemExit(0)",
+    "attempt 5: SystemExit(0)",
+    "attempt 6: SystemExit(0)",
+    "attempt 7: SystemExit(0)",
+    "attempt 8: SystemExit(0)",
+    "attempt 9: SystemExit(0)",
+    "attempt 10: SystemExit(0)"
+  ],
+  "action": "slot skipped; its lanes stay unclaimed for a later job; sibling ranks continue"
+}

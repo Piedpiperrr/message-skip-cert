@@ -1,0 +1,7 @@
+{
+  "utc": "2026-09-19T08:36:17.846909+00:00",
+  "MMLU_PRO_STAGE2_RESULTS_OBSERVED": true,
+  "first_formal_attempt": "mmlu_pro|test:3074|fixed_T",
+  "successful_results_at_marker": 0,
+  "freeze_sha256": "1a4ebc1883b4edf4e5ba751e354801f3816b7041f985b57c4a30a5ffe565b945"
+}

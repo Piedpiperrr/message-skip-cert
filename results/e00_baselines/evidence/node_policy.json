@@ -1,0 +1,19 @@
+{
+ "host": "REDACTED",
+ "PBS_JOBID": null,
+ "execution_clearance": "NOT_ESTABLISHED_FOR_288_FITS_ON_LOGIN",
+ "training_started": false,
+ "source_url": "[site documentation reference removed for anonymity]",
+ "exact_quote": "[site documentation reference removed for anonymity]",
+ "source_scope": "the-cluster official general guide; ClusterB-specific exception for this workload not established",
+ "ClusterB_reference": "https://docs.cluster.invalid/ClusterB/getting-started/",
+ "ai_agent_reference": "https://docs.cluster.invalid/support/ai-guidance/",
+ "technical_limits_not_permissions": {
+  "cpu_quota_us": 10000000,
+  "cpu_period_us": 100000,
+  "memory_limit_bytes": 429496729600,
+  "pids_max": 1359921,
+  "pids_current_sample": 782
+ },
+ "action": "Prepare/freeze only; no fitting, no PBS submission unless execution conditions change explicitly."
+}

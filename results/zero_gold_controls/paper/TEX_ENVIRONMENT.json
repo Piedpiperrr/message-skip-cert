@@ -1,0 +1,11 @@
+{
+  "compiled": false,
+  "checked_engines": {
+    "pdflatex": null,
+    "xelatex": null,
+    "lualatex": null,
+    "tectonic": null
+  },
+  "installations": 0,
+  "status": "No installed TeX compiler on PATH; integrated source and independently rendered PDF/PNG figure delivered"
+}

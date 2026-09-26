@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-19T23:38:52.340631+00:00",
+  "kind": "large",
+  "job_id": "run007",
+  "startup_wall_seconds": 288.5024403289426,
+  "load_seconds": {
+    "helper": 105.6756595519837,
+    "receiver": 172.93069034512155,
+    "fusers": 9.752019624924287
+  },
+  "warmup_requests": 0,
+  "synthetic_forward_requests": 0,
+  "one_residency": true,
+  "smoke": false
+}

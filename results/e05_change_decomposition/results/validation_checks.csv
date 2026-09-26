@@ -1,0 +1,22 @@
+setting,n_k_reproduced,grid_points,source,label
+small/OBQA/Text,True,20,stored ledger (calibration_all_160 / medium / MMLU-Pro 40_test_ledger),POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+small/OBQA/C2C,True,20,stored ledger (calibration_all_160 / medium / MMLU-Pro 40_test_ledger),POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+small/ARC/Text,True,20,stored ledger (calibration_all_160 / medium / MMLU-Pro 40_test_ledger),POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+small/ARC/C2C,True,20,stored ledger (calibration_all_160 / medium / MMLU-Pro 40_test_ledger),POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/OBQA/Text,True,20,stored ledger (calibration_all_160 / medium / MMLU-Pro 40_test_ledger),POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/OBQA/C2C,True,20,stored ledger (calibration_all_160 / medium / MMLU-Pro 40_test_ledger),POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/ARC/Text,True,20,stored ledger (calibration_all_160 / medium / MMLU-Pro 40_test_ledger),POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+medium/ARC/C2C,True,20,stored ledger (calibration_all_160 / medium / MMLU-Pro 40_test_ledger),POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/OBQA/Text,True,20,stored ledger (calibration_all_160 / medium / MMLU-Pro 40_test_ledger),POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/OBQA/C2C,True,20,stored ledger (calibration_all_160 / medium / MMLU-Pro 40_test_ledger),POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/ARC/Text,True,20,stored ledger (calibration_all_160 / medium / MMLU-Pro 40_test_ledger),POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/ARC/C2C,True,20,stored ledger (calibration_all_160 / medium / MMLU-Pro 40_test_ledger),POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/MMLU-Pro/Text,True,20,stored ledger (calibration_all_160 / medium / MMLU-Pro 40_test_ledger),POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+large/MMLU-Pro/C2C,True,20,stored ledger (calibration_all_160 / medium / MMLU-Pro 40_test_ledger),POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/OBQA/Text,True,20,X1 certification_ledger_80.csv,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/OBQA/C2C,True,20,X1 certification_ledger_80.csv,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/ARC/Text,True,20,X1 certification_ledger_80.csv,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X1-Llama/ARC/C2C,True,20,X1 certification_ledger_80.csv,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/OBQA/Text,True,20,X2 certification_ledger_60.csv,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/ARC/Text,True,20,X2 certification_ledger_60.csv,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision
+X2-OLMo/MMLU-Pro/Text,True,20,X2 certification_ledger_60.csv,POST-HOC re-analysis (reviewer R2/E5); does not change any primary decision

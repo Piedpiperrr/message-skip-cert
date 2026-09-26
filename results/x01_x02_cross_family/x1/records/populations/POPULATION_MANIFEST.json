@@ -1,0 +1,36 @@
+{
+  "utc": "2026-09-19T20:09:02.397992+00:00",
+  "files": {
+    "obqa_fit.jsonl": {
+      "n": 2100,
+      "representatives": 2100,
+      "sha256": "3177e29c8ebe56c5af781f841ea8e4b6a508027a81936c601046ac1268664aea"
+    },
+    "obqa_cal.jsonl": {
+      "n": 1366,
+      "representatives": 1366,
+      "sha256": "d267fcb1237628a2d374d0e3ae8ec06a17bf8009d421d2c1ce5b2c649f86707e"
+    },
+    "obqa_dev.jsonl": {
+      "n": 742,
+      "representatives": 742,
+      "sha256": "8264a8e350722ba67bee8a179c52ccd5e231c84d8089029015779d87a4b78771"
+    },
+    "arc_fit.jsonl": {
+      "n": 671,
+      "representatives": 670,
+      "sha256": "989e41698dcfe1c9dbac1e7bbb5abfae3421ed5556abbd9d54aea3f799125717"
+    },
+    "arc_cal.jsonl": {
+      "n": 448,
+      "representatives": 448,
+      "sha256": "19075a48f40703315111b369b5a5a65716baae05b86ed71c12d3179c3b3fb0cd"
+    },
+    "arc_dev.jsonl": {
+      "n": 299,
+      "representatives": 299,
+      "sha256": "c12ae23dfb9d0c7de034cf5da5f048ee228887f04a2753bab93d830d66ddfa7b"
+    }
+  },
+  "source": "P2_R1_XFAM records/populations (X2), helper fields removed"
+}

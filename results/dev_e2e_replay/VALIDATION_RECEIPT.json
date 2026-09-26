@@ -1,0 +1,253 @@
+{
+  "status": "PASS",
+  "frozen_checks": [
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "frozen_config.json",
+      "sha256": "4fce806e4b928b8ac1c6fa74bfa59eef67a9ea42c88af2675eb16300bb7d2719"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "SOURCE_INDEX.json",
+      "sha256": "ab4e635e918ca0974f048ae8d0e8553464d2e549b11dcf70ad989c5c1e7cbce2"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "inputs/large_obqa_T_expected_routes.jsonl",
+      "sha256": "6ebdd7fdf2bd5c234110e55dc9aa3064857fc6994aab62377323517fbdf63d9a"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "inputs/arc_panel_ids.json",
+      "sha256": "1fdb3fccdfa12769fe99d1a34da154881d877b6efcaf74902f0c73cd88473232"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "inputs/large_arc_C_expected_routes.jsonl",
+      "sha256": "93ed6e7dda3a0b3c0bba0606cccdaf1c4e3855d2eb50ad393e7958d0134147ea"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "inputs/large_obqa_C_expected_routes.jsonl",
+      "sha256": "c2bfb575f3a7af102da38d2354f3e5f70420180d571e6c3e0facf45faf26b806"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "inputs/obqa_panel_ids.json",
+      "sha256": "6ebbd7604ce342d43219288b4235053026449b1d9684cff73044be356b3263ac"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "inputs/obqa_queries.jsonl",
+      "sha256": "cbaee992cee5b5b956d2ae439fd3ce730dc90e73ad8e1b04cda407fabc04ce14"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "inputs/arc_queries.jsonl",
+      "sha256": "5c7d26f92c7f05312af4348216b969c89bf8c26364d9a3e150473ea4f6ce5567"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "inputs/large_arc_T_expected_routes.jsonl",
+      "sha256": "b63c0976cc50066e4d7bb87c715f3cd6ec532a25e6ef1d425e479fa325e9f259"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "protocol/large_arc_T_deployment.json",
+      "sha256": "30028f08c5423f324ec9762e9a91d2228bcbd0ad4decd2ea067a3c2f615a865c"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "protocol/PROBE_PROTOCOL_FREEZE.json",
+      "sha256": "fe2902048571528f2946614d55c504f30170d2c1e1764e5932b3ada714c01ace"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "protocol/chat_template.jinja",
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "protocol/token_decode_mapping.jsonl",
+      "sha256": "b50d9d3316d3dd679000c90cf8d2d94da1a91c21dc9ef907716a9c489ac92d27"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "protocol/large_obqa_C_deployment.json",
+      "sha256": "507a9c099e1836ab75cad162605a86f7e4dfd97d3bed1e8823d1a4f13dab641e"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "protocol/large_obqa_T_deployment.json",
+      "sha256": "6f4f7baa8054e9e6e50397d07492408d0e381bdee3c45a526a8a877b7441814b"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "protocol/label_token_sets.json",
+      "sha256": "3a167b79464314e00ce9cb6a92e2fe121829e9808a5f7894211c080eb7a382ac"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "protocol/FIRST_INPUT_CHECK.json",
+      "sha256": "33ff9c897d64cb7e1de521ac898f8662860d70e8652ff5be299f79ee661c3e6e"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "protocol/large_arc_C_deployment.json",
+      "sha256": "a3391054c494b06edab5e67df330283ea611f34db5cdf2c14953c593221a18b5"
+    },
+    {
+      "freeze": "PROTOCOL_FREEZE.json",
+      "path": "protocol/prefix_ids.json",
+      "sha256": "4947bce493a63335a402c84ef1bc327ca0dddc281ef07980fe902a574aac8899"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "path": "src/render.py",
+      "sha256": "646a3445a228e7bdd645c144f71ffb7b1dbaf9b3c51215e5e0fd07c7c2343a81"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "path": "src/validate_sources.py",
+      "sha256": "f2169229f71538353629746ca851c271551ec546111e7adc33d8f2a7f6e635c6"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "path": "src/supervise.py",
+      "sha256": "3c950f61bb907fc9b7e105c160c8178653bb80f5604f9514eba730efe115b1c1"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "path": "src/submit.py",
+      "sha256": "656f096173627d2edcd178580bf48feac5983efd2f40ccbe52dd484d06441b82"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "path": "src/common.py",
+      "sha256": "28f6fcba74fc4fcd891a525346bc46a918e7be212ee9e4f7b0f9a36a4efb7082"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "path": "src/build_execution.py",
+      "sha256": "1c9d9d4d65884f72b903336c2b7c50f86861d9ef80801ac22990713fd552d3bc"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "path": "src/prepare.py",
+      "sha256": "9f7b6b98fd1008e80634e6d91708478974f4e9c5bd459575855499fcb906fddc"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "path": "src/analyze.py",
+      "sha256": "8a28892fa77d88ec96e1c24f359f7a7e6935f5491988a6dc2bd866e20ffbb952"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "path": "src/native_adapter.py",
+      "sha256": "4709d439ec57f5e64dc79ba85f1295f73d1b08b29da2588c830b1e2daa22aab7"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "path": "src/execute.py",
+      "sha256": "2c20e873d7d145433a8427ff7d2bd9437840416936c3ed961b9211e7de18dd61"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "path": "src/receiver_prompt.py",
+      "sha256": "868a4760d92b123127b347a9e5e69dec2f00855d17e2eee0eec4876d7cb21c66"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "path": "src/pbs_entry.py",
+      "sha256": "8e020ac67e80e72da4c00ca5594f7d5cce834ab52857ac2c8bdf74b406384c01"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "path": "src/build_adapter.py",
+      "sha256": "53bc90877b82549e9667d868ec1767d88cb1bceb7711d77bf972d666f4af694d"
+    },
+    {
+      "freeze": "IMPLEMENTATION_FREEZE.json",
+      "path": "run_e2e.pbs",
+      "sha256": "c41baf263bdb198c52727aa9d412c9c1d05c34c2782c3a02c03caedfd662e83e"
+    },
+    {
+      "freeze": "PANEL_VALIDATION_FREEZE.json",
+      "path": "inputs/evaluation_existing_gold.jsonl",
+      "sha256": "0754eaf8ad5e631dc12a1438001c798703f14ce145263cba13d6d8ade656d08b"
+    },
+    {
+      "freeze": "PANEL_VALIDATION_FREEZE.json",
+      "path": "inputs/component_estimates.jsonl",
+      "sha256": "8df2f85cf14284689d466ad58e9df459957c316e9738f90e231f3ffa79e21c74"
+    },
+    {
+      "freeze": "PANEL_VALIDATION_FREEZE.json",
+      "path": "evidence/panel_source_checks.json",
+      "sha256": "86cfe451ed2734c11375b2967370d03a8a8898ece199975d0d72058ed47afc70"
+    },
+    {
+      "freeze": "REPLAY_COMPLETE.json",
+      "path": "records/e2e_requests.jsonl",
+      "sha256": "35c95585e4820b93d867dd585068b257e8459927d1969bbd38baeaee74317432"
+    },
+    {
+      "freeze": "REPLAY_COMPLETE.json",
+      "path": "records/attempts.jsonl",
+      "sha256": "eff6c09e2f658a513bfca3fc54944a66e56c024dd6291f25c830fc1ca19a0ddf"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "path": "summary/component_vs_e2e.csv",
+      "sha256": "32c4e9a22dee45af5055f2a4a447b271edb170aac878bc7fd72de816bf5c9da4"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "path": "summary/paired_bootstrap.csv",
+      "sha256": "117221d56c7aab4cd7df2ae20f363fde009805e8a631891b5ffdac7025d85d8b"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "path": "summary/e2e_summary.csv",
+      "sha256": "430ce4b6294f5c7bf85ff7c7315097f45447828238515bc6b36c77a61f864992"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "path": "summary/output_diagnostics.csv",
+      "sha256": "41319a1f14088442be710310b23ec7dca758cb29b4ce20a0f63466651f56f89c"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "path": "summary/paired_per_question.csv",
+      "sha256": "c099e28a9b4b81c692a288b8b3c10d3980a12205d3fc14668392d1f4e326a0f3"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "path": "summary/arc_bootstrap_indices.npz",
+      "sha256": "d05b2b29d55fe872bc7ca472b6b1bae669cd6e24a6e6d7ffbf02ee78e0a77b07"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "path": "summary/obqa_bootstrap_indices.npz",
+      "sha256": "03b4a79fa2e91a4121ff970be8365a1851a041b16b0abb07c34ade98157fd602"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "path": "summary/diagnostics.json",
+      "sha256": "6325d9ffe6c2db47518e1a8c98d6908070fcad30e168f6d1ad8eb9ed6132c995"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "path": "records/paired_e2e_512.jsonl",
+      "sha256": "5f822b024b3cc3c7d0621f92b580cffde949fcb1fc83720572501d96c2082e10"
+    },
+    {
+      "freeze": "ANALYSIS_FREEZE.json",
+      "path": "NUMERICAL_VALIDATION.json",
+      "sha256": "3817195f38298bc7d28720764ee5aeb194f5089dcb98cc2fce68041b882c7807"
+    }
+  ],
+  "parent_sources_unchanged": true,
+  "numerical_validation": "NUMERICAL_VALIDATION.json",
+  "TeX_compiled": false
+}

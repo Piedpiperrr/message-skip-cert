@@ -1,0 +1,202 @@
+{
+  "utc": "2026-09-20T23:20:52Z",
+  "ranks_preflight": 8,
+  "ranks_smoke": 8,
+  "obqa_rows_checked": {
+    "R": 128,
+    "T": 128
+  },
+  "obqa_mismatches": {
+    "R": 0,
+    "T": 0
+  },
+  "smoke_questions": 16,
+  "smoke_invalid_R": 0,
+  "smoke_invalid_T": 0,
+  "empty_helper_messages": 0,
+  "gen_tokens_R": [
+    202,
+    195,
+    158,
+    221,
+    256,
+    112,
+    320,
+    320,
+    241,
+    320,
+    157,
+    263,
+    105,
+    251,
+    198,
+    145
+  ],
+  "gen_tokens_T": [
+    142,
+    114,
+    127,
+    128,
+    110,
+    99,
+    177,
+    181,
+    123,
+    219,
+    82,
+    118,
+    73,
+    176,
+    103,
+    100
+  ],
+  "rescore_check": [
+    {
+      "id": "gsm8k_train_01444",
+      "gen_tokens": 202,
+      "retokenized_tokens": 200,
+      "common_prefix_tokens": 200,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 3,
+      "max_abs_logprob_diff": 0.0
+    },
+    {
+      "id": "gsm8k_train_03992",
+      "gen_tokens": 195,
+      "retokenized_tokens": 193,
+      "common_prefix_tokens": 193,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 3,
+      "max_abs_logprob_diff": 0.0
+    },
+    {
+      "id": "gsm8k_train_01336",
+      "gen_tokens": 158,
+      "retokenized_tokens": 156,
+      "common_prefix_tokens": 156,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 1,
+      "max_abs_logprob_diff": 0.0
+    },
+    {
+      "id": "gsm8k_train_03505",
+      "gen_tokens": 221,
+      "retokenized_tokens": 219,
+      "common_prefix_tokens": 219,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 2,
+      "max_abs_logprob_diff": 0.0
+    },
+    {
+      "id": "gsm8k_train_02089",
+      "gen_tokens": 256,
+      "retokenized_tokens": 254,
+      "common_prefix_tokens": 254,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 3,
+      "max_abs_logprob_diff": 0.0
+    },
+    {
+      "id": "gsm8k_train_01513",
+      "gen_tokens": 112,
+      "retokenized_tokens": 110,
+      "common_prefix_tokens": 110,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 2,
+      "max_abs_logprob_diff": 0.0
+    },
+    {
+      "id": "gsm8k_train_03400",
+      "gen_tokens": 320,
+      "retokenized_tokens": 315,
+      "common_prefix_tokens": 315,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 2,
+      "max_abs_logprob_diff": 0.0
+    },
+    {
+      "id": "gsm8k_train_05091",
+      "gen_tokens": 320,
+      "retokenized_tokens": 320,
+      "common_prefix_tokens": 320,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 2,
+      "max_abs_logprob_diff": 0.0
+    },
+    {
+      "id": "gsm8k_train_06053",
+      "gen_tokens": 241,
+      "retokenized_tokens": 239,
+      "common_prefix_tokens": 239,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 1,
+      "max_abs_logprob_diff": 0.0
+    },
+    {
+      "id": "gsm8k_train_07406",
+      "gen_tokens": 320,
+      "retokenized_tokens": 320,
+      "common_prefix_tokens": 320,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 1,
+      "max_abs_logprob_diff": 0.0
+    },
+    {
+      "id": "gsm8k_train_02869",
+      "gen_tokens": 157,
+      "retokenized_tokens": 155,
+      "common_prefix_tokens": 155,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 2,
+      "max_abs_logprob_diff": 0.0
+    },
+    {
+      "id": "gsm8k_train_02403",
+      "gen_tokens": 263,
+      "retokenized_tokens": 261,
+      "common_prefix_tokens": 261,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 4,
+      "max_abs_logprob_diff": 0.0
+    },
+    {
+      "id": "gsm8k_train_01053",
+      "gen_tokens": 105,
+      "retokenized_tokens": 103,
+      "common_prefix_tokens": 103,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 3,
+      "max_abs_logprob_diff": 0.0
+    },
+    {
+      "id": "gsm8k_train_04151",
+      "gen_tokens": 251,
+      "retokenized_tokens": 249,
+      "common_prefix_tokens": 249,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 3,
+      "max_abs_logprob_diff": 0.0
+    },
+    {
+      "id": "gsm8k_train_06015",
+      "gen_tokens": 198,
+      "retokenized_tokens": 196,
+      "common_prefix_tokens": 196,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 2,
+      "max_abs_logprob_diff": 0.0
+    },
+    {
+      "id": "gsm8k_train_02126",
+      "gen_tokens": 145,
+      "retokenized_tokens": 143,
+      "common_prefix_tokens": 143,
+      "exact_retokenization": true,
+      "overlapping_answer_tokens": 3,
+      "max_abs_logprob_diff": 0.0
+    }
+  ],
+  "criterion": "all 16 stored OBQA rows reproduce bit for bit on both paths; INVALID <= 2/16 on receiver-only and on Text",
+  "GATE_PASS": true,
+  "gold_read": false
+}

@@ -1,0 +1,30 @@
+{
+  "utc": "2026-09-19T09:00:31.194096+00:00",
+  "job_id": "run020",
+  "checks": {
+    "current_job_state_R": true,
+    "current_user": true,
+    "account_project": true,
+    "queue_debug_2": true,
+    "nodect_2": true,
+    "requested_ngpus_0_ClusterA": true,
+    "allocated_ngpus_0_ClusterA": true,
+    "assigned_host_matches_process": true,
+    "exec_host_matches_process": true,
+    "PBS_nodefile_matches_process": true,
+    "fsreq_home_sharedfs": true,
+    "stage2_walltime_cap": true
+  },
+  "assigned_vnodes": [
+    {
+      "node": "compute-node",
+      "ngpus": 0
+    },
+    {
+      "node": "compute-node",
+      "ngpus": 0
+    }
+  ],
+  "status": "PASS",
+  "walltime_seconds": 3300
+}

@@ -1,0 +1,16 @@
+{
+  "helper_pair": "large",
+  "n": 16,
+  "argmax_label_distribution": {
+    "A": 5,
+    "B": 2,
+    "D": 6,
+    "C": 3
+  },
+  "label_union_mass_min": 0.9970707893371582,
+  "label_union_mass_mean": 0.9997878447175026,
+  "HelperMax_min": 0.0,
+  "HelperMax_max": 0.4105491042137146,
+  "failures": 0,
+  "gold_read": false
+}

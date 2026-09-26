@@ -1,0 +1,17 @@
+{
+  "utc": "2026-09-14T17:14:17.456770+00:00",
+  "job_id": "run018",
+  "heads": 0,
+  "fit_attempts": 0,
+  "probes": 7044,
+  "prefill_attempts": 7044,
+  "new_calibration": 140,
+  "reused_calibration": 20,
+  "new_dev_routes": 3422,
+  "reused_dev_routes": 742,
+  "helper_forward": 0,
+  "answer_generation": 0,
+  "new_protocol_requests": 0,
+  "evaluations": 3422,
+  "CPU_with_reserve": 473.450877
+}

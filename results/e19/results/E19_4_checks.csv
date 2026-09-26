@@ -1,0 +1,9 @@
+check,status,detail
+"frozen e15_1.py re-run on the original 25 settings reproduces stored e15_1_candidates.csv (all columns, all rows)",PASS,
+"frozen e15_1.py re-run on the original 25 settings reproduces stored e15_1_per_setting.csv (all columns, all rows)",PASS,
+"frozen e15_1.py re-run on the original 25 settings reproduces stored e15_1_summary.csv (all columns, all rows)",PASS,
+"frozen e15_1.py re-run on the original 25 settings reproduces stored e15_1_checks.csv (all columns, all rows)",PASS,
+"('strong-helper', 'OBQA', 'Text'): cal disagreements / deployed == E16_5_PRE_GOLD.json",PASS,297 vs 297; q=0.0
+"('strong-helper', 'ARC', 'Text'): cal disagreements / deployed == E16_5_PRE_GOLD.json",PASS,55 vs 55; q=0.0
+"frozen e15_1.py on the new settings: per-setting loop completed (all 4 settings, 20 candidates each)",PASS,KeyError 'abs_err_fitcov_ms' raised in e15_1.py after the per-setting loop (summary block)
+e15_1.py SHA-256 == value recorded in PREREG_E19.md,PASS,d6bfc055f3db73af06e8c8e61bfcc9d277c54125ae74c5ed6db622c3e26ab485

@@ -1,0 +1,18 @@
+{
+  "utc": "2026-09-14T17:14:17.435306+00:00",
+  "files": {
+    "records/large_obqa_T_routes.jsonl": "656e91e2891923232844bbf79f3fcf8e614a6143c31dabe4e3e79849e32b38da",
+    "records/large_obqa_C_routes.jsonl": "37ba9265fe3557fde54bc17b355fbbade55cbab472eec6281995f283a29232ed",
+    "records/large_arc_T_routes.jsonl": "6ee84fd27762b5abf96a905fbcf5aa122ce86dcae900a629e2aabefedebb86fb",
+    "records/large_arc_C_routes.jsonl": "2172d096a8c470e4735e60c2ed65eb4b746930b9c7f9bcc549f0dd63c70bbe22",
+    "records/small_obqa_T_routes.jsonl": "8eda7c56022c959e4d7da8470bea55ccfc0f7e26eebf6e0af1d0dc3b923f86db",
+    "records/small_obqa_C_routes.jsonl": "75eb937f2e040fc84de0f85c6a1d644b182b07b6737dc2373bdefa360193304e",
+    "records/small_arc_T_routes.jsonl": "35ed08dfa65a80eb0c570b058ad8e884299901e0d07059efac79cc9e2bf46aa6",
+    "records/small_arc_C_routes.jsonl": "b6d93703c65526015eda9c51e1afb8e1d2a90659f2b5ea4475d11449f52be8cd",
+    "summary/calibration_all_160.csv": "b3038de19871c55222e69243299c1da7e459c382cc688d8d22ca5e20a7a896cc",
+    "deployments/all.json": "959a01ca64c9f9f246a68867bff58913d623a2da65b852bd6db8fbb0612b1e24"
+  },
+  "new_deployment_rows": 3422,
+  "reused_deployment_rows": 742,
+  "gold_or_correctness_associated": false
+}

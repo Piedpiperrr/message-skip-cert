@@ -1,0 +1,8 @@
+{
+  "path": "$DATA_DIR/P2_V2_BASELINES_FFR_E0_20260913T000052Z/P2_V2_BASELINES_FFR_E0_PREPARATION_BUNDLE.tar.gz",
+  "sha256": "766020fbca3a4a55b54450bfc50f657b8847ed480e3faa498f82e2ca269e5d43",
+  "bytes": 214295,
+  "members": 28,
+  "contains_models_or_features": false,
+  "stage_is_partial": true
+}

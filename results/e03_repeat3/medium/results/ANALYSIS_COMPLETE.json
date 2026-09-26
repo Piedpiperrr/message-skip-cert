@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-19T09:31:43.899310+00:00",
+  "actual_requests": 512,
+  "online_probes": 256,
+  "pairs": 256,
+  "gold_associated_after_replay": true,
+  "CPU_process_seconds": 0.712353237,
+  "classifications": {
+    "obqa": "E2E_POSITIVE",
+    "arc": "E2E_POSITIVE"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "utc": "2026-09-19T20:44:49.880982+00:00",
+  "note": "completeness and cross-job determinism; outputs only, no gold read",
+  "aligned_input_checks": {
+    "arc_chain_06": {
+      "n": 1418,
+      "question_equal": 1418,
+      "logged_choices_equal": 1418,
+      "unlogged_columns_empty": 1418,
+      "evaluator_prompt_equal": 1418,
+      "aligned_input_length_equal": 1418,
+      "receiver_nonpad_ids_equal": 1418,
+      "llama_today_date": [
+        "19 Sep 2026"
+      ],
+      "pad_positions": [
+        27
+      ],
+      "K_gt_4": [
+        {
+          "id": "TIMSS_1995_8_N3",
+          "K": 5,
+          "csv_input_length": 211,
+          "aligned_len": 211,
+          "all_checks": true
+        },
+        {
+          "id": "TIMSS_2003_8_pg29",
+          "K": 5,
+          "csv_input_length": 140,
+          "aligned_len": 140,
+          "all_checks": true
+        }
+      ],
+      "partial_rows": 240,
+      "partial_prefix_identical": true
+    },
+    "obqa_chain_04": {
+      "n": 2104,
+      "question_equal": 2104,
+      "logged_choices_equal": 2104,
+      "unlogged_columns_empty": 2104,
+      "evaluator_prompt_equal": 2104,
+      "aligned_input_length_equal": 2104,
+      "receiver_nonpad_ids_equal": 2104,
+      "llama_today_date": [
+        "19 Sep 2026"
+      ],
+      "pad_positions": [
+        27
+      ],
+      "K_gt_4": [],
+      "partial_rows": 2104,
+      "partial_prefix_identical": true
+    },
+    "obqa_chain_05": {
+      "n": 2104,
+      "question_equal": 2104,
+      "logged_choices_equal": 2104,
+      "unlogged_columns_empty": 2104,
+      "evaluator_prompt_equal": 2104,
+      "aligned_input_length_equal": 2104,
+      "receiver_nonpad_ids_equal": 2104,
+      "llama_today_date": [
+        "19 Sep 2026"
+      ],
+      "pad_positions": [
+        27
+      ],
+      "K_gt_4": [],
+      "partial_rows": 2104,
+      "partial_prefix_identical": true
+    }
+  },
+  "helper": {
+    "rows": 5626,
+    "keys_equal_population": true,
+    "runtime_errors": 0,
+    "bos_count_not_1": 0,
+    "output_tokens_eq_256": 0,
+    "output_tokens_mean": 33.126910771418416,
+    "empty_messages": 0
+  },
+  "Text": {
+    "rows": 5626,
+    "keys_equal_population": true,
+    "runtime_errors": 0,
+    "obqa_fit_INVALID": "67/2100",
+    "obqa_cal_INVALID": "37/1366",
+    "obqa_dev_INVALID": "20/742",
+    "arc_fit_INVALID": "29/671",
+    "arc_cal_INVALID": "26/448",
+    "arc_dev_INVALID": "14/299"
+  },
+  "C2C": {
+    "rows": 5626,
+    "keys_equal_population": true,
+    "runtime_errors": 0,
+    "obqa_fit_INVALID": "146/2100",
+    "obqa_cal_INVALID": "102/1366",
+    "obqa_dev_INVALID": "51/742",
+    "arc_fit_INVALID": "36/671",
+    "arc_cal_INVALID": "25/448",
+    "arc_dev_INVALID": "17/299"
+  },
+  "smoke_vs_full": {
+    "n": 16,
+    "helper_message_equal": 16,
+    "Text_raw_equal": 16,
+    "C2C_raw_equal": 16
+  }
+}

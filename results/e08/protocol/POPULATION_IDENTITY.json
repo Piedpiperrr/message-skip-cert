@@ -1,0 +1,201 @@
+{
+  "dataset_revision": "b189ec765aa7ed75c8acfea42df31fdae71f97be",
+  "raw_rows": 12032,
+  "groups": 11641,
+  "split_summary": {
+    "fit": {
+      "rows": 3093,
+      "groups": 3000,
+      "category_rows": {
+        "biology": 181,
+        "business": 202,
+        "chemistry": 292,
+        "computer science": 105,
+        "economics": 216,
+        "engineering": 250,
+        "health": 211,
+        "history": 98,
+        "law": 284,
+        "math": 347,
+        "other": 238,
+        "philosophy": 128,
+        "physics": 335,
+        "psychology": 206
+      },
+      "category_reps": {
+        "biology": 163,
+        "business": 201,
+        "chemistry": 292,
+        "computer science": 105,
+        "economics": 216,
+        "engineering": 250,
+        "health": 176,
+        "history": 98,
+        "law": 247,
+        "math": 347,
+        "other": 238,
+        "philosophy": 128,
+        "physics": 334,
+        "psychology": 205
+      },
+      "K_rows": {
+        "3": 6,
+        "4": 147,
+        "5": 14,
+        "6": 23,
+        "7": 37,
+        "8": 92,
+        "9": 209,
+        "10": 2565
+      },
+      "K_reps": {
+        "3": 6,
+        "4": 146,
+        "5": 14,
+        "6": 21,
+        "7": 36,
+        "8": 90,
+        "9": 203,
+        "10": 2484
+      }
+    },
+    "cal": {
+      "rows": 6196,
+      "groups": 6000,
+      "category_rows": {
+        "biology": 357,
+        "business": 410,
+        "chemistry": 583,
+        "computer science": 212,
+        "economics": 438,
+        "engineering": 499,
+        "health": 415,
+        "history": 197,
+        "law": 572,
+        "math": 699,
+        "other": 476,
+        "philosophy": 258,
+        "physics": 669,
+        "psychology": 411
+      },
+      "category_reps": {
+        "biology": 327,
+        "business": 401,
+        "chemistry": 583,
+        "computer science": 211,
+        "economics": 432,
+        "engineering": 499,
+        "health": 352,
+        "history": 197,
+        "law": 495,
+        "math": 693,
+        "other": 476,
+        "philosophy": 257,
+        "physics": 667,
+        "psychology": 410
+      },
+      "K_rows": {
+        "3": 8,
+        "4": 325,
+        "5": 24,
+        "6": 47,
+        "7": 82,
+        "8": 158,
+        "9": 397,
+        "10": 5155
+      },
+      "K_reps": {
+        "3": 8,
+        "4": 320,
+        "5": 23,
+        "6": 45,
+        "7": 81,
+        "8": 154,
+        "9": 386,
+        "10": 4983
+      }
+    },
+    "dev": {
+      "rows": 2743,
+      "groups": 2641,
+      "category_rows": {
+        "biology": 179,
+        "business": 177,
+        "chemistry": 257,
+        "computer science": 93,
+        "economics": 190,
+        "engineering": 220,
+        "health": 192,
+        "history": 86,
+        "law": 245,
+        "math": 305,
+        "other": 210,
+        "philosophy": 113,
+        "physics": 295,
+        "psychology": 181
+      },
+      "category_reps": {
+        "biology": 144,
+        "business": 177,
+        "chemistry": 257,
+        "computer science": 93,
+        "economics": 190,
+        "engineering": 220,
+        "health": 155,
+        "history": 86,
+        "law": 217,
+        "math": 305,
+        "other": 210,
+        "philosophy": 113,
+        "physics": 293,
+        "psychology": 181
+      },
+      "K_rows": {
+        "3": 7,
+        "4": 134,
+        "5": 14,
+        "6": 23,
+        "7": 39,
+        "8": 70,
+        "9": 195,
+        "10": 2261
+      },
+      "K_reps": {
+        "3": 7,
+        "4": 133,
+        "5": 12,
+        "6": 23,
+        "7": 36,
+        "8": 67,
+        "9": 189,
+        "10": 2174
+      }
+    }
+  },
+  "category_counts": {
+    "biology": 717,
+    "business": 789,
+    "chemistry": 1132,
+    "computer science": 410,
+    "economics": 844,
+    "engineering": 969,
+    "health": 818,
+    "history": 381,
+    "law": 1101,
+    "math": 1351,
+    "other": 924,
+    "philosophy": 499,
+    "physics": 1299,
+    "psychology": 798
+  },
+  "K_distribution": {
+    "3": 21,
+    "4": 606,
+    "5": 52,
+    "6": 93,
+    "7": 158,
+    "8": 320,
+    "9": 801,
+    "10": 9981
+  }
+}

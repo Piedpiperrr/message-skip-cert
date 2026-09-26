@@ -1,0 +1,156 @@
+{
+  "status": "CANDIDATE_ONLY_NOT_EXECUTION_AUTHORIZED",
+  "plan": "C",
+  "seed": "P2_MMLU_PRO_BREADTH_20260915_v1",
+  "dataset_revision": "b189ec765aa7ed75c8acfea42df31fdae71f97be",
+  "selection_uses": [
+    "source_split",
+    "category",
+    "question_id",
+    "question",
+    "ordered_options"
+  ],
+  "selection_does_not_use": [
+    "gold",
+    "answer_index",
+    "cot_content",
+    "model_outputs",
+    "correctness"
+  ],
+  "summary": {
+    "pairs": [
+      "large"
+    ],
+    "group_N": 11641,
+    "fit": 3000,
+    "cal": 6000,
+    "rows": 12032,
+    "splits": {
+      "fit": {
+        "rows": 3093,
+        "primary_groups": 3000,
+        "category_primary_counts": {
+          "biology": 163,
+          "business": 201,
+          "chemistry": 292,
+          "computer science": 105,
+          "economics": 216,
+          "engineering": 250,
+          "health": 176,
+          "history": 98,
+          "law": 247,
+          "math": 347,
+          "other": 238,
+          "philosophy": 128,
+          "physics": 334,
+          "psychology": 205
+        },
+        "category_row_counts": {
+          "biology": 181,
+          "business": 202,
+          "chemistry": 292,
+          "computer science": 105,
+          "economics": 216,
+          "engineering": 250,
+          "health": 211,
+          "history": 98,
+          "law": 284,
+          "math": 347,
+          "other": 238,
+          "philosophy": 128,
+          "physics": 335,
+          "psychology": 206
+        }
+      },
+      "cal": {
+        "rows": 6196,
+        "primary_groups": 6000,
+        "category_primary_counts": {
+          "biology": 327,
+          "business": 401,
+          "chemistry": 583,
+          "computer science": 211,
+          "economics": 432,
+          "engineering": 499,
+          "health": 352,
+          "history": 197,
+          "law": 495,
+          "math": 693,
+          "other": 476,
+          "philosophy": 257,
+          "physics": 667,
+          "psychology": 410
+        },
+        "category_row_counts": {
+          "biology": 357,
+          "business": 410,
+          "chemistry": 583,
+          "computer science": 212,
+          "economics": 438,
+          "engineering": 499,
+          "health": 415,
+          "history": 197,
+          "law": 572,
+          "math": 699,
+          "other": 476,
+          "philosophy": 258,
+          "physics": 669,
+          "psychology": 411
+        }
+      },
+      "dev": {
+        "rows": 2743,
+        "primary_groups": 2641,
+        "category_primary_counts": {
+          "biology": 144,
+          "business": 177,
+          "chemistry": 257,
+          "computer science": 93,
+          "economics": 190,
+          "engineering": 220,
+          "health": 155,
+          "history": 86,
+          "law": 217,
+          "math": 305,
+          "other": 210,
+          "philosophy": 113,
+          "physics": 293,
+          "psychology": 181
+        },
+        "category_row_counts": {
+          "biology": 179,
+          "business": 177,
+          "chemistry": 257,
+          "computer science": 93,
+          "economics": 190,
+          "engineering": 220,
+          "health": 192,
+          "history": 86,
+          "law": 245,
+          "math": 305,
+          "other": 210,
+          "philosophy": 113,
+          "physics": 295,
+          "psychology": 181
+        }
+      }
+    },
+    "excluded_groups": 0,
+    "excluded_rows": 0,
+    "categories": 14,
+    "repeated_stems_locked": true,
+    "calibration_counts_only_one_preselected_representative_per_stem": true,
+    "primary_population": "equal-weight minimum-question_id representative of each whitespace-normalized question-stem group; all selected group members retained for row-level descriptive reporting",
+    "e2e_panel_size": 128,
+    "new_strata": 2
+  },
+  "hashes": {
+    "cal_groups.json": "f6ecbfb4c2190b993c3f4888b061dd47d4d3809e028f880df5da9bfe8d89cbfa",
+    "cal_ids.json": "b49a9b9e1468382990fa292cb402f6a630bcf87c6db8365783b708b1b98b82a0",
+    "candidate_e2e128_ids.json": "0aff4667135fd51c63ecf0dc22099c1d36394537ba972ca7f51b11c5005a933d",
+    "dev_groups.json": "848be2786457c2aa169281a7f2fc33b95988b5f6753bd830085e5894882642cd",
+    "dev_ids.json": "040e556d520d94b1840712658e2fe8989e6103e3d3f891e1765c1e2145cd0707",
+    "fit_groups.json": "0a03684d33083a2a5b22914e0600ab3f3c1a92971853b775e2ffb5102df21cb6",
+    "fit_ids.json": "ed3e0862c7b2b50ab86e3c393d00db9553be3e309832381634a1527bea9c0852"
+  }
+}

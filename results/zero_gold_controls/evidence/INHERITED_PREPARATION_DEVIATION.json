@@ -1,0 +1,16 @@
+{
+  "kind": "two-row historical label interface preview before subset lists materialized",
+  "source": "$DATA_DIR/P2_RISK_CALIBRATION_BINARY_20260914T043954Z/inputs/baseline_fit.jsonl",
+  "ids": [
+    "14-1371",
+    "14-97"
+  ],
+  "previewed_y_R": [
+    1,
+    1
+  ],
+  "scope": "Raw schema example showed these two historical correctness rows; no new subset labels/classes summarized before freeze. Historical y_T/harm fields also appeared in the schema preview and are not supplied to training.",
+  "mitigation": "Budgets/repeats/sorting/RNG mandated by user before preview; no seed or subset adjustment; all actual fitter inputs created after SUBSETS_FREEZE; disclose in report",
+  "source_of_rule": "current user prompt",
+  "rerandomization": false
+}

@@ -1,0 +1,31 @@
+{
+  "historical_train_RT_protocol_requests_reused": 6932,
+  "protocol_requests_are_not_forward_counts": true,
+  "historical_train_RT_request_seconds_estimated_from_256_panel_means": 4232.460525241839,
+  "historical_train_features_reused": 3466,
+  "historical_train_feature_wall_seconds": 139.4436415543314,
+  "new_protocol_requests": 0,
+  "new_helper_forward": 0,
+  "new_answer_generation": 0,
+  "new_prefill_attempts": 742,
+  "new_prefill_success": 742,
+  "dev_cached_reused": 0,
+  "new_feature_wall_seconds": 29.742794196354225,
+  "new_prefill_CUDA_event_seconds": 28.716962810516357,
+  "new_model_load_wall_seconds": 130.58787003392354,
+  "new_fit_wall_seconds": 1.0309721461962909,
+  "new_fit_CPU_seconds": 1.0208338949999982,
+  "head_selector_measured_seconds_by_family": {
+    "D": 0.08725331299999997,
+    "R": 0.07413394200000002,
+    "Diff": 0.14181209400000008,
+    "H": 0.07098513300000005,
+    "Random": 0.0010748779999999994
+  },
+  "all_diagnostic_features_charged_to_experiment_even_if_fallback": true,
+  "historical_resources_references": [
+    "$DATA_DIR/P2_E1_E2E_OBQA_20260913T174210Z/RESOURCE_RECEIPT.json",
+    "$DATA_DIR/P2_E1_DIRECTION_20260913T053456Z/RESOURCE_RECEIPT.json"
+  ],
+  "allocation_ledger": "evidence/CPU_runs.json and RESOURCE_RECEIPT.json; distinct from component compute times"
+}

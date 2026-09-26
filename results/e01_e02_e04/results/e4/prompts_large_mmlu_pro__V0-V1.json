@@ -1,0 +1,38 @@
+[
+  {
+    "variant": "V0",
+    "pos": 0,
+    "id": "test:3261",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nSuppose you discovered a new species of bioluminescent worm . How could you prove that it was the worm itself and not some contaminating bacteria that was producing the light ?\n\nChoices:\nA. Place the worm in a dark environment\nB. Measure the light intensity emitted by the worm over time\nC. Feed the worm with different food sources\nD. Place the light-producing substance in complete growth media or physically examine it under a microscope\nE. Perform a chemical analysis of the light-producing substance\nF. Expose the worm to high temperatures\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D/E/F\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V1",
+    "pos": 0,
+    "id": "test:3261",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nSuppose you discovered a new species of bioluminescent worm . How could you prove that it was the worm itself and not some contaminating bacteria that was producing the light ?\n\nChoices:\nA. Expose the worm to high temperatures\nB. Place the worm in a dark environment\nC. Measure the light intensity emitted by the worm over time\nD. Feed the worm with different food sources\nE. Place the light-producing substance in complete growth media or physically examine it under a microscope\nF. Perform a chemical analysis of the light-producing substance\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D/E/F\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V0",
+    "pos": 1,
+    "id": "test:3202",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nWhich of the following principles is NOT part of Darwin's theory of evolution by natural selection?\n\nChoices:\nA. Evolution does not occur within an individual's lifespan.\nB. Natural selection favors traits that are beneficial for survival.\nC. Evolution occurs in response to changes in the environment.\nD. Every population has tremendous variation.\nE. Species can develop new traits during their lifetime, which they can pass on to their offspring.\nF. Survival of the fittest ensures that only the strongest survive.\nG. Evolution is a gradual process that occurs over a long period of time.\nH. Every species has the potential to evolve.\nI. Organisms will overpopulate area, giving rise to competition.\nJ. Mutations are the main source of all variation in a population.\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D/E/F/G/H/I/J\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V1",
+    "pos": 1,
+    "id": "test:3202",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nWhich of the following principles is NOT part of Darwin's theory of evolution by natural selection?\n\nChoices:\nA. Mutations are the main source of all variation in a population.\nB. Evolution does not occur within an individual's lifespan.\nC. Natural selection favors traits that are beneficial for survival.\nD. Evolution occurs in response to changes in the environment.\nE. Every population has tremendous variation.\nF. Species can develop new traits during their lifetime, which they can pass on to their offspring.\nG. Survival of the fittest ensures that only the strongest survive.\nH. Evolution is a gradual process that occurs over a long period of time.\nI. Every species has the potential to evolve.\nJ. Organisms will overpopulate area, giving rise to competition.\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D/E/F/G/H/I/J\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V0",
+    "pos": 2,
+    "id": "test:2846",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nIf a particular character in a certain species of animal were always transmitted from the mother to the offspring, but never from the father to the offspring, what could you conclude about its mode of inheritance?\n\nChoices:\nA. Mutation\nB. Codominance\nC. Sex-linked dominant inheritance\nD. Absence of certain genes in the father\nE. Polygenic inheritance\nF. Environmental influence\nG. Extrachromosomal inheritance\nH. Autosomal recessive inheritance\nI. Inheritance from the father\nJ. Incomplete dominance\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D/E/F/G/H/I/J\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V1",
+    "pos": 2,
+    "id": "test:2846",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nIf a particular character in a certain species of animal were always transmitted from the mother to the offspring, but never from the father to the offspring, what could you conclude about its mode of inheritance?\n\nChoices:\nA. Incomplete dominance\nB. Mutation\nC. Codominance\nD. Sex-linked dominant inheritance\nE. Absence of certain genes in the father\nF. Polygenic inheritance\nG. Environmental influence\nH. Extrachromosomal inheritance\nI. Autosomal recessive inheritance\nJ. Inheritance from the father\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D/E/F/G/H/I/J\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  }
+]

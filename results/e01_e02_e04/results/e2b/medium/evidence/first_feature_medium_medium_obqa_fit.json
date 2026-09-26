@@ -1,0 +1,32 @@
+{
+  "pair": "medium",
+  "dataset": "medium_obqa_fit",
+  "id": "14-1371",
+  "row": 0,
+  "actual_AC_module": "model.layers[19]",
+  "side": "output[0], before next block input RMSNorm",
+  "zero_based_index": 19,
+  "equivalent_hidden_states_index": 20,
+  "actual_final_module": "model.norm",
+  "side_final": "output after final RMSNorm",
+  "final_hidden_states_index": -1,
+  "AC_equals_next_block_input_exact": true,
+  "final_equals_backbone_last_hidden_state_exact": true,
+  "shape_AC": [
+    1,
+    132,
+    2048
+  ],
+  "shape_norm": [
+    1,
+    132,
+    2048
+  ],
+  "last_valid_token_position": 131,
+  "token_count": 132,
+  "last_token_id": 271,
+  "finite": true,
+  "normalized_dimension": 4096,
+  "no_extra_prefill": true,
+  "job_id": "run021"
+}

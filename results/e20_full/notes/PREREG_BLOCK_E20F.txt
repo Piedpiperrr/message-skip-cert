@@ -1,0 +1,66 @@
+E20-full. Setting (frozen by the pilot's selection): SQuAD v1.1 train pool (passages <= 300 words, deduplicated, SHA order), helper
+Qwen2.5-7B-Instruct at the pilot's revision writing the Text message (max 256 tokens), receiver Llama-3.1-8B-Instruct @ 0e9e39f2 (default
+chat template, no system prompt, one BOS), prompts exactly as PROMPTS_E20.md, greedy bf16 batch 1, receiver max 32 new tokens, the pilot's
+frozen extraction and SQuAD normalization (INVALID = empty; two INVALIDs agree), change = 1[normalized o_R != normalized o_b], score s2
+exactly as the pilot code computes it. The system's output is the normalized answer; the certificate covers changes of it only.
+Splits (frozen by the pilot): fit 500, calibration 2,000, dev 1,000, the next items after the 400 pilot ids in the frozen SHA order.
+Extensions added here, before any E20-full output: (E1) fit questions also get helper messages and receiver-with-message outputs, used
+only for re-splits and descriptive fit statistics; certification reads only fit s2. (E2) a test split of the next 1,000 questions.
+Certification: the paper's function, unchanged: tau_q is its q-quantile of the 500 fit s2 values for q in {.05, ..., .95}; q = 1 is the
+fixed-receiver endpoint (omit every question), as in the paper; omit iff s2 <= tau; p = P[Bin(n, .05) <= k], with p = 1 when n = 0; accept
+if p <= .001; deploy the largest accepted q, otherwise fallback. One family of 20 tests.
+Order: job 1 produces fit and calibration outputs; CERT_E20F.json is computed from them and hashed BEFORE any dev or test output exists.
+Job 2 then produces dev outputs, and test outputs only if a threshold was deployed. Dev and test statistics are computed and hashed
+(STATS_E20F.json, ROUTES_E20F.json) before gold answers are read, which happens only for accuracy.
+Report regardless of outcome:
+- calibration: the 20 candidates (q, tau, n, k, p, accepted, .999 Clopper-Pearson upper bound); deployed q or fallback; disagreement
+  k/2,000; INVALID for R and reference; always-omit change rate; max empirical TPR/FPR against C(pi, alpha); if fallback, the calibration
+  size the paper's rule says would be needed;
+- dev: disagreement rate d [two-sided 95% CP]; AUROC of s2 for disagreement (ties 1/2) with bootstrap 95% interval (seed 0, 2,000);
+  coverage; change rate among omitted questions [CP]; the split of those changes into both-parse / only-R-INVALID / only-reference-INVALID;
+  INVALID for R and reference; the E17-5 binormal P(certify) from dev (d, AUROC) at N_cal 2,000 and the dev AUROC against .80;
+- surface form (descriptive, never certified): among omitted dev questions, the change rate on raw extracted strings before
+  normalization, and with "one normalized answer contains the other" counted as agreement; the share of changes with containment; the
+  median token-F1 between the two answers among changes; the share of outputs where extraction did more than normalization;
+- lengths: median answer words and 32-token cap hits for R and reference; helper message tokens (median; share at the 256 cap);
+- test (only if deployed): omitted n, changed k, change rate [CP], exact binomial p of the single test at the frozen threshold, coverage.
+  Pass rule: two-sided 95% CP upper bound below 5% = pass; CP lower bound above 5% = fail; otherwise inconclusive; also state whether
+  p <= .001;
+- accuracy (exact match against any gold answer after the same normalization) of R, Text and the policy on dev and test, as x/1000 with
+  paired bootstrap 95% intervals (seed 0, 2,000); G = acc(Text) - acc(R) with interval; kappa*alpha (dev coverage times 5 points) against
+  G; among changes, how many the reference corrects and breaks;
+- 200 re-splits of fit + calibration (seeds 1 to 200, same sizes; dev and test fixed): share with the original outcome, median deployed q,
+  median dev coverage (descriptive);
+- the pilot's binormal prediction (P = .975 at N_cal 2,000; conservative .081) next to the outcome, as a prospective test;
+- value estimate (only if deployed; not a replay): per dev question, 1[omit] * (helper + receiver-with-message time) - receiver-only
+  time, since s2 needs the receiver-only answer, which is served when omitted and wasted when routed; mean with paired bootstrap interval;
+  also the always-omit estimate and the component means, with the pilot code's wall-clock definition. Sequential execution is assumed,
+  which is conservative against running the helper in parallel; the times come from ClusterA, not from the paper's main replay hardware.
+Writing rules (Paper A). The pilot PREREG's rules, restated, with the title rule and the test condition narrowed here, before any
+E20-full output (narrowing recorded in DEVIATIONS.md and in the paper's order of events):
+(1) Certified with dev coverage >= 10%, dev change-rate CP lower bound <= 5%, and the held-out test passing: the abstract says
+    certification extends to extractive short-answer question answering (SQuAD, Llama-3.1-8B receiver), the one of eight pilot settings
+    the label-free rule selected; the title becomes exactly "Safe to Omit, Worth Omitting? Risk and Cost Boundaries of Skipping
+    Communication Between Two LLM Agents on Multiple-Choice and Extractive Questions"; the main text reports d, AUROC, q, coverage, change
+    rate [CI], G with kappa*alpha against G, the both-parse vs exactly-one-INVALID split, and the test result.
+(1a) As (1) but the test is inconclusive: the main text reports the certificate and the inconclusive test; the abstract may state the
+    certificate with "held-out test inconclusive"; the title is exactly "Safe to Omit, Worth Omitting? Risk and Cost Boundaries of Skipping
+    Communication Between Two LLM Agents on Multiple Choice".
+(1b) As (1) but the test fails: the main text says it fails its held-out test next to the certificate; abstract unchanged; title
+    "... on Multiple Choice" as in (1a).
+(2) Certified with dev coverage < 10%, or with dev CP lower bound > 5%: reported as such in Sec. 4 and the appendix; abstract unchanged;
+    title "... on Multiple Choice".
+(3) Fallback: Sec. 7 reports it in one sentence with d and AUROC; title "... on Multiple Choice"; no test is scored.
+(4) Always (pilot PREREG, verbatim in substance): the full-run setting joins the certification-outcome count and is reported as a
+    prospective test of the binormal prediction; the pilot settings are not certification outcomes; an appendix reports every pilot
+    setting, the selection rule and the order of events; the provenance table gets a row (later extension, run after the GSM8K fallback,
+    label-free pilot on disjoint questions, rule hashed before selection); the main text notes that the selected setting's predicted P is
+    inflated by choosing the best of eight and that the four Qwen3-receiver settings were not eligible.
+(5) Redundancy: if G's interval includes 0 or G <= kappa*alpha, the main text says the certificate finds the helper's message redundant
+    on SQuAD, so an operator with labels could retire it.
+(6) Value is reported only as an estimate from recorded per-row times.
+(7) Deadline: the run is complete when fit/calibration/dev outputs, CERT and the dev statistics exist. If that is not the case by Sep 23
+    06:00 CDT, the paper reports the pilot only, states that the full run was not completed, and the title is "... on Multiple Choice". A
+    late test does not make the run incomplete; it is reported only if finished before the paper is frozen.
+Precedence: these rules decide the title. The E18 PREREG's clause that the title keeps "on Multiple Choice" means only that E18 alone never
+changes it.

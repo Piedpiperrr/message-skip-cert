@@ -1,0 +1,9 @@
+{
+  "utc": "2026-09-15T16:56:52.543336+00:00",
+  "job_id": "run002",
+  "host": "REDACTED",
+  "cgroup_raw": "13:rdma:/\n12:freezer:/jobs/185997\n11:cpuset:/jobs/185997\n10:perf_event:/\n9:misc:/\n8:memory:/jobs/185997\n7:devices:/jobs/185997\n6:pids:/jobs/185997\n5:hugetlb:/\n4:blkio:/system.slice/pbs.service\n3:net_cls,net_prio:/\n2:cpu,cpuacct:/jobs/185997\n1:name=systemd:/system.slice/pbs.service\n",
+  "legacy_cgroup_pattern_match": true,
+  "legacy_match_is_fatal": false,
+  "CUDA_VISIBLE_DEVICES": null
+}

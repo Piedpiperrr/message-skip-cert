@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-14T18:11:21.227645+00:00",
+  "archive": "$DATA_DIR/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z/P2_FROZEN_POLICY_E2E_VALIDATION_20260914T174120Z_WORK_LIGHT.tar.gz",
+  "bytes": 2237651,
+  "sha256": "074bed425720bc9d660b3e25e1cb56a040fd49a81a176a5b99b71c8fa446bf07",
+  "file_count": 128,
+  "status": "COMPLETE",
+  "all_disk_and_archive_members_match_SHA256SUMS": true,
+  "excluded_runtime_stdout": "evidence/finalize_stdout.json",
+  "no_weights_or_full_vocab_logits": true
+}

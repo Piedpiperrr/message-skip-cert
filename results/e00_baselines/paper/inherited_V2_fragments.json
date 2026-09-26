@@ -1,0 +1,22 @@
+[
+  {
+    "path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/paper/01_evaluation_protocol.tex",
+    "sha256": "c1137f17d20807d8c23ce5d5fe7e7f4a2b1d8ee83d8f0e733a7594eb824477f4",
+    "role": "completed V2 evidence, reused without rescoring"
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/paper/02_complementarity.tex",
+    "sha256": "a25ab178003e0ba0d37933d4ca2f43bf633c0c5fc45c634193358b3f61b66b9b",
+    "role": "completed V2 evidence, reused without rescoring"
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/paper/03_flip_labels.tex",
+    "sha256": "eb9b3218158950c780663748b04bafb6bae36571ab94f162c02e60720b20dbe4",
+    "role": "completed V2 evidence, reused without rescoring"
+  },
+  {
+    "path": "$DATA_DIR/P2_SCORING_V2_20260912T191445Z/paper/04_frozen_routing.tex",
+    "sha256": "f11dcc1ca69ad90a864f21a0278b085fc5b1c762eacc5cfcab78d9c9cea89340",
+    "role": "completed V2 evidence, reused without rescoring"
+  }
+]

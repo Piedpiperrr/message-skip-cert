@@ -1,0 +1,365 @@
+diff -ruN '--exclude=__pycache__' $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/analyze.py P2_R1_E3_P2R1_MMLU_C2C_FULL_20260919T065245Z/src/analyze.py
+--- $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/analyze.py	2026-09-16 21:28:41.000000000 +0000
++++ P2_R1_E3_P2R1_MMLU_C2C_FULL_20260919T065245Z/src/analyze.py	2026-09-19 06:52:45.000000000 +0000
+@@ -10,14 +10,15 @@
+ assert sha(P/'records/attempts.jsonl')==complete['attempts_sha256']
+ save(P/'evidence/ANALYSIS_START.json',dict(utc=utc(),job_terminal_before_analysis=True,freeze_sha256=sha(FREEZE)))
+ rr=rows(P/'records/four_arm_requests.jsonl');pp=rows(P/'records/two_policy_probes.jsonl');attempts=rows(P/'records/attempts.jsonl')
+-ids=read(P/'inputs/candidate_e2e128_ids.json');panel=read(P/'protocol/PANEL_MANIFEST.json');meta={r['id']:r for r in panel['rows']}
+-assert len(rr)==512 and len(pp)==256 and len({r['key'] for r in rr})==512 and len({r['key'] for r in pp})==256
+-assert len(ids)==len(set(ids))==128
++ids=read(P/'inputs/panel_ids.json');panel=read(P/'protocol/PANEL_MANIFEST.json');meta={r['id']:r for r in panel['rows']}
++N=len(ids);NREQ=N*len(ARMS);NPOL=N*sum(a.startswith('policy') for a in ARMS);REFS=[(x,{'T':'Text','C':'C2C'}[x]) for x in dict.fromkeys(a[-1] for a in ARMS)]  # E3 FULL: derived counts
++assert len(rr)==NREQ and len(pp)==NPOL and len({r['key'] for r in rr})==NREQ and len({r['key'] for r in pp})==NPOL
++assert len(ids)==len(set(ids))==cfg['expected_counts']['questions']
+ rm={(r['id'],r['arm']):r for r in rr};pm={r['key']:r for r in pp}
+ assert set(rm)=={(i,a) for i in ids for a in ARMS}
+ assert [r['key'] for r in rr]==[f'mmlu_pro|{i}|{a}' for n,i in enumerate(ids) for a in order_for(n)]
+ assert [r['key'] for r in attempts if r['event']=='START']==[r['key'] for r in rr]==[r['key'] for r in attempts if r['event']=='SUCCESS']
+-assert len(attempts)==1024 and sum(r['first_formal_request_global'] for r in rr)==1 and rr[0]['first_formal_request_global']
++assert len(attempts)==2*NREQ and sum(r['first_formal_request_global'] for r in rr)==1 and rr[0]['first_formal_request_global']
+ parser=load_module(P/'protocol/scoring_v2.py','stage2_analysis_parser')
+ for r in rr:
+     ispolicy=r['arm'].startswith('policy');ref=r['arm'][-1]
+@@ -37,8 +38,8 @@
+         assert not pr['cache_reused'] and not pr['invalid_probe'] and pr['last_valid_position']==pr['input_tokens']-1
+         assert all(pm[r['key']][k]==v for k,v in pr.items()) and pm[r['key']]['route']==r['selected']
+     else:assert r['probe'] is None and r['selected']==ref
+-save(P/'NUMERICAL_VALIDATION.json',dict(utc=utc(),status='FULL_COMPLETENESS_PASS_ANALYSIS_PENDING',requests=512,online_probes=256,
+-    N=128,duplicate_request_keys=0,missing_requests=0,input_hash_mismatches=0,reparsed_outputs=512,runtime_failures=0,retries=0))
++save(P/'NUMERICAL_VALIDATION.json',dict(utc=utc(),status='FULL_COMPLETENESS_PASS_ANALYSIS_PENDING',requests=NREQ,online_probes=NPOL,
++    N=N,duplicate_request_keys=0,missing_requests=0,input_hash_mismatches=0,reparsed_outputs=NREQ,runtime_failures=0,retries=0))
+ # Existing gold and Stage1 outputs are first linked after full replay completeness.
+ import pyarrow.parquet as pq
+ gold={f'test:{r["question_id"]}':r['answer'] for r in pq.read_table(REVIEW/'dataset/test-00000-of-00001.parquet',columns=['question_id','answer']).to_pylist()}
+@@ -52,10 +53,10 @@
+         r=json.loads(line)
+         if r['id'] in old:old[r['id']]['P']=r
+ assert all(set(v)==set('RTCP') for v in old.values())
+-startup=read(P/'evidence/STARTUP.json');b=np.load(P/'protocol/bootstrap_indices.npz');idx=b['indices'];assert b['ids'].tolist()==ids and idx.shape==(2000,128)
+-assert np.array_equal(idx,np.random.default_rng(0).integers(0,128,size=(2000,128)))
++startup=read(P/'evidence/STARTUP.json');b=np.load(P/'protocol/bootstrap_indices.npz');idx=b['indices'];assert b['ids'].tolist()==ids and idx.shape==(2000,N)
++assert np.array_equal(idx,np.random.default_rng(0).integers(0,N,size=(2000,N)))
+ paired=[];ident=[];summary=[];boot=[];runtime=[];correct_rows=[];probe_rows=[]
+-for ref,label in [('T','Text'),('C','C2C')]:
++for ref,label in REFS:
+     pairs=[]
+     for ordinal,i in enumerate(ids):
+         fixed=rm[i,'fixed_'+ref];policy=rm[i,'policy_'+ref];route=policy['selected'];expected=fixed if route==ref else old[i]['R']
+@@ -83,9 +84,9 @@
+             saved_inner_probe_ms=policy['probe']['latency_ms'],ProbeMax=policy['probe']['ProbeMax'],route=route,probe_shared=False))
+     def arr(key):return np.asarray([r[key] for r in pairs],dtype=float)
+     savings=arr('saving_ms');bootmeans=savings[idx].mean(axis=1);lo,hi=map(float,np.quantile(bootmeans,[.025,.975],method='linear'))
+-    for n,x in enumerate(bootmeans):boot.append(dict(reference=label,resample=n,mean_saving_ms=float(x),seed=0,N=128))
++    for n,x in enumerate(bootmeans):boot.append(dict(reference=label,resample=n,mean_saving_ms=float(x),seed=0,N=N))
+     nR=sum(z['route']=='R' for z in pairs);fmean=float(arr('fixed_ms').mean());pmean=float(arr('policy_ms').mean());mean=float(savings.mean())
+-    summary.append(dict(reference=label,N=128,q=.4,threshold=THRESHOLD,route_to_R_count=nR,coverage=nR/128,
++    summary.append(dict(reference=label,N=N,q=.4,threshold=THRESHOLD,route_to_R_count=nR,coverage=nR/N,
+         fixed_reference_correct=int(arr('fixed_correct').sum()),policy_correct=int(arr('policy_correct').sum()),
+         fixed_reference_accuracy=float(arr('fixed_correct').mean()),policy_accuracy=float(arr('policy_correct').mean()),accuracy_difference_pp=100*float(arr('accuracy_difference').mean()),
+         policy_mean_ms=pmean,policy_median_ms=float(np.median(arr('policy_ms'))),fixed_mean_ms=fmean,fixed_median_ms=float(np.median(arr('fixed_ms'))),
+@@ -101,22 +102,22 @@
+         invalid=sum(r['invalid'] for r in selected),first_arm_request_id=selected[0]['id'],first_arm_request_ms=selected[0]['latency_ms'],
+         first_formal_request_kept=True,independent_online_probe_count=sum(r['probe'] is not None for r in selected),
+         startup_total_seconds=startup['startup_total_including_runtime_import_seconds'],startup_amortized=False,same_allocation_same_residency=True)
+-    for pos in range(4):diagnostic['order_position_'+str(pos)]=sum(r['order_position']==pos for r in selected)
++    for pos in range(len(ARMS)):diagnostic['order_position_'+str(pos)]=sum(r['order_position']==pos for r in selected)
+     for key in selected[0]['parts_ms']:diagnostic[key+'_mean']=float(np.mean([r['parts_ms'][key] for r in selected]))
+     runtime.append(diagnostic)
+ write_rows(P/'records/four_arm_requests_with_correctness.jsonl',correct_rows)
+ write_rows(P/'records/paired_per_question.jsonl',paired)
+ for name,data in [('mmlu_pro_e2e_summary',summary),('paired_per_question',paired),('runtime_diagnostics',runtime),('output_identity_checks',ident),('probe_timing',probe_rows),('bootstrap_resample_means',boot)]:csvout(P/f'summary/{name}.csv',data)
+-csvout(P/'summary/paired_latency_bootstrap.csv',[dict(reference=r['reference'],N=128,paired_mean_saving_ms=r['paired_mean_saving_ms'],paired_median_saving_ms=r['paired_median_saving_ms'],
++csvout(P/'summary/paired_latency_bootstrap.csv',[dict(reference=r['reference'],N=N,paired_mean_saving_ms=r['paired_mean_saving_ms'],paired_median_saving_ms=r['paired_median_saving_ms'],
+     CI95_low_ms=r['descriptive_bootstrap95_low_ms'],CI95_high_ms=r['descriptive_bootstrap95_high_ms'],seed=0,resamples=2000,unit='paired question',
+     indices_sha256=sha(P/'protocol/bootstrap_indices.npz'),interval='percentile mean; exposed panel descriptive') for r in summary])
+ save(P/'summary/mmlu_pro_e2e_summary.json',summary)
+ csvout(P/'summary/panel_category_distribution.csv',[dict(category=k,N=v) for k,v in panel['category_counts'].items()])
+ csvout(P/'summary/panel_K_distribution.csv',[dict(K=k,N=v) for k,v in panel['K_distribution'].items()])
+-v=read(P/'NUMERICAL_VALIDATION.json');v.update(status='PASS',utc=utc(),same_allocation=True,one_residency=True,each_arm_each_position_32=True,
+-    independent_online_probes_per_policy=128,no_probe_KV_or_prefill_reuse=True,first_formal_request_kept=True,gold_linked_after_complete_replay=True,
++v=read(P/'NUMERICAL_VALIDATION.json');v.update(status='PASS',utc=utc(),same_allocation=True,one_residency=True,each_arm_each_position_balanced=True,
++    independent_online_probes_per_policy=N,no_probe_KV_or_prefill_reuse=True,first_formal_request_kept=True,gold_linked_after_complete_replay=True,
+     scientific_analysis_complete=True,output_identity_mismatches=sum(not r['required_output_identity_pass'] for r in ident),
+-    MMLU_TEXT_E2E=summary[0]['classification'],MMLU_C2C_E2E=summary[1]['classification'])
++    **{'MMLU_'+r['reference'].upper()+'_E2E':r['classification'] for r in summary})
+ save(P/'NUMERICAL_VALIDATION.json',v)
+ save(P/'ANALYSIS_COMPLETE.json',dict(utc=utc(),status='COMPLETE_MMLU_PRO_STAGE2',classifications={r['reference']:r['classification'] for r in summary},
+     no_policy_selection=True,no_new_calibration=True,no_next_task=True))
+diff -ruN '--exclude=__pycache__' $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/common.py P2_R1_E3_P2R1_MMLU_C2C_FULL_20260919T065245Z/src/common.py
+--- $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/common.py	2026-09-16 21:23:35.000000000 +0000
++++ P2_R1_E3_P2R1_MMLU_C2C_FULL_20260919T065245Z/src/common.py	2026-09-19 06:52:45.000000000 +0000
+@@ -10,7 +10,7 @@
+ PYTHON=DATA_ROOT/'software/envs/c2c_official/bin/python'
+ FREEZE=P/'MMLU_PRO_E2E_STAGE2_FREEZE.json'
+ PARENT_HASH='c6300cff73ef096c81fb07cdab3eef68050265fec97ec2fcecfbf94e25a38624'
+-ARMS=['fixed_T','policy_T','fixed_C','policy_C']
++ARMS=['fixed_C','policy_C']  # E3 FULL: fixed C2C and C2C policy only
+ THRESHOLD=3.838539123535156e-05
+ def utc():return datetime.datetime.now(datetime.timezone.utc).isoformat()
+ def sha(path):
+@@ -41,7 +41,7 @@
+     s=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
+ def queryhash(q):return hashlib.sha256(json.dumps(q,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
+ def order_for(i):
+-    offset=i%4;return ARMS[offset:]+ARMS[:offset]
++    offset=i%len(ARMS);return ARMS[offset:]+ARMS[:offset]  # E3 FULL: alternates which arm runs first
+ def stop_check():
+     if time.time()>float(os.environ.get('MMLU_DEADLINE_EPOCH','inf')):raise RuntimeError('WALLTIME_STOP_NO_RESUBMISSION')
+     if (P/'STOP').exists():raise RuntimeError('EXPLICIT_STOP_NO_RESUBMISSION')
+diff -ruN '--exclude=__pycache__' $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/execute.py P2_R1_E3_P2R1_MMLU_C2C_FULL_20260919T065245Z/src/execute.py
+--- $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/execute.py	2026-09-16 21:23:36.000000000 +0000
++++ P2_R1_E3_P2R1_MMLU_C2C_FULL_20260919T065245Z/src/execute.py	2026-09-19 06:52:45.000000000 +0000
+@@ -34,22 +34,23 @@
+         warmup_requests=0,synthetic_forward_requests=0,amortized_into_question_latency=False,
+         first_formal_request_retained=True,one_residency=True))
+     print('STRICT_LOAD_PASS',json.dumps(rt.load_times),flush=True)
+-    panel=rows(P/'inputs/panel_queries.jsonl');ids=read(P/'inputs/candidate_e2e128_ids.json')
+-    assert [r['id'] for r in panel]==ids and len(ids)==128
+-    schedule=read(P/'protocol/FOUR_ARM_SCHEDULE.json');attempt=probes=0;success=[];started=time.perf_counter()
++    panel=rows(P/'inputs/panel_queries.jsonl');ids=read(P/'inputs/panel_ids.json')
++    N=len(ids);NREQ=N*len(ARMS);NPOL=N*sum(a.startswith('policy') for a in ARMS)  # E3 FULL: counts derived from the list length
++    assert [r['id'] for r in panel]==ids and N==len(set(ids))==cfg['expected_counts']['questions'] and NREQ==cfg['expected_counts']['complete_action_requests']
++    schedule=read(P/'protocol/ARM_SCHEDULE.json');attempt=probes=0;success=[];started=time.perf_counter()
+     def progress(state='RUNNING'):
+         elapsed=time.perf_counter()-started
+         save(P/'REPLAY_PROGRESS.json',dict(utc=utc(),status=state,job_id=os.environ['PBS_JOBID'],complete_requests=len(success),
+-            complete_questions=len(success)//4,online_probe_attempts=probes,attempts=attempt,expected_requests=512,expected_probes=256,
+-            successful_keys=success,elapsed_seconds=elapsed,ETA_remaining_seconds=elapsed*(512-len(success))/len(success) if success else None,
++            complete_questions=len(success)//len(ARMS),online_probe_attempts=probes,attempts=attempt,expected_requests=NREQ,expected_probes=NPOL,
++            successful_keys=success,elapsed_seconds=elapsed,ETA_remaining_seconds=elapsed*(NREQ-len(success))/len(success) if success else None,
+             remaining_wall_seconds=max(0,float(os.environ['MMLU_DEADLINE_EPOCH'])-time.time()),scientific_analysis_performed=False))
+     progress()
+     for ordinal,row in enumerate(panel):
+         assert schedule[ordinal]['id']==row['id'] and schedule[ordinal]['arms']==order_for(ordinal)
+         for position,arm in enumerate(schedule[ordinal]['arms']):
+-            stop_check();attempt+=1;assert attempt<=512
++            stop_check();attempt+=1;assert attempt<=NREQ
+             is_policy=arm.startswith('policy');reference=arm[-1]
+-            if is_policy:probes+=1;assert probes<=256
++            if is_policy:probes+=1;assert probes<=NPOL
+             key=f'mmlu_pro|{row["id"]}|{arm}';threshold=cfg['deployments'][reference]['threshold'];assert threshold==THRESHOLD
+             append(P/'records/attempts.jsonl',dict(event='START',utc=utc(),key=key,attempt=attempt,probe_attempt=probes if is_policy else None,
+                 panel_ordinal=ordinal,order_position=position,query_sha256=queryhash(row),job_id=os.environ['PBS_JOBID']))
+@@ -70,7 +71,7 @@
+                     route=selected,threshold=threshold,independent_online_probe=True,**probe))
+                 append(P/'records/attempts.jsonl',dict(event='SUCCESS',utc=utc(),key=key,attempt=attempt));success.append(key)
+                 if attempt%16==0:
+-                    progress();print('PROGRESS',len(success),'/512','ONLINE_PROBES',probes,'/256',flush=True)
++                    progress();print('PROGRESS',len(success),f'/{NREQ}','ONLINE_PROBES',probes,f'/{NPOL}',flush=True)
+                 del result,record,probe
+             except BaseException as error:
+                 append(P/'records/attempts.jsonl',dict(event='FAILURE',utc=utc(),key=key,attempt=attempt,error=repr(error)))
+@@ -78,10 +79,10 @@
+                 save(P/'REQUEST_FAILURE.json',dict(utc=utc(),key=key,attempt=attempt,error=repr(error),traceback=traceback.format_exc(),
+                     complete_requests=len(success),successful_keys=success,resubmit_allowed=False))
+                 raise
+-    assert attempt==len(success)==len(set(success))==512 and probes==256
++    assert attempt==len(success)==len(set(success))==NREQ and probes==NPOL
+     progress('REPLAY_COMPLETE')
+-    save(P/'REPLAY_COMPLETE.json',dict(utc=utc(),status='COMPLETE',job_id=os.environ['PBS_JOBID'],complete_requests=512,
+-        fixed_Text=128,policy_Text=128,fixed_C2C=128,policy_C2C=128,online_ProbeMax=256,retries=0,
++    save(P/'REPLAY_COMPLETE.json',dict(utc=utc(),status='COMPLETE',job_id=os.environ['PBS_JOBID'],complete_requests=NREQ,
++        per_arm_requests={a:N for a in ARMS},online_ProbeMax=NPOL,retries=0,
+         requests_sha256=sha(P/'records/four_arm_requests.jsonl'),probes_sha256=sha(P/'records/two_policy_probes.jsonl'),
+         attempts_sha256=sha(P/'records/attempts.jsonl'),gold_read=False,Stage1_outputs_read=False,scientific_analysis_performed=False))
+     print('REPLAY_COMPLETE',flush=True)
+diff -ruN '--exclude=__pycache__' $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/guard_checks.py P2_R1_E3_P2R1_MMLU_C2C_FULL_20260919T065245Z/src/guard_checks.py
+--- $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/guard_checks.py	2026-09-16 21:21:47.000000000 +0000
++++ P2_R1_E3_P2R1_MMLU_C2C_FULL_20260919T065245Z/src/guard_checks.py	2026-09-19 06:52:45.000000000 +0000
+@@ -21,9 +21,9 @@
+     checks={'current_job_state_R':job.get('job_state')=='R',
+         'current_user':job.get('Job_Owner','').split('@')[0]=='user',
+         'account_project':job.get('Account_Name')=='project',
+-        'queue_gpu_queue':job.get('queue')=='gpu-queue','nodect_1':int(r.get('nodect',0))==1,
+-        'requested_ngpus_2':int(r.get('ngpus',0))==2,
+-        'allocated_ngpus_2':sum(item['ngpus'] for item in assigned)==2,
++        'queue_node_queue':job.get('queue')=='node-queue','nodect_1':int(r.get('nodect',0))==1,
++        'requested_ngpus_8':int(r.get('ngpus',0))==8,
++        'allocated_ngpus_8':sum(item['ngpus'] for item in assigned)==8,
+         'assigned_host_matches_process':bool(assigned) and {item['node'].split('.')[0] for item in assigned}=={short},
+         'exec_host_matches_process':{part.split('/')[0].split('.')[0] for part in job.get('exec_host','').split('+')}=={short},
+         'PBS_nodefile_matches_process':{node.split('.')[0] for node in nodefile_nodes}=={short},
+diff -ruN '--exclude=__pycache__' $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/pbs_entry.py P2_R1_E3_P2R1_MMLU_C2C_FULL_20260919T065245Z/src/pbs_entry.py
+--- $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/pbs_entry.py	2026-09-16 21:26:11.000000000 +0000
++++ P2_R1_E3_P2R1_MMLU_C2C_FULL_20260919T065245Z/src/pbs_entry.py	2026-09-19 06:52:45.000000000 +0000
+@@ -12,10 +12,10 @@
+     check=allocation_identity(j,socket.gethostname(),Path(os.environ['PBS_NODEFILE']).read_text().split())
+     save(P/'evidence/ALLOCATION_GUARD.json',dict(utc=utc(),job_id=jid,**check));assert check['status']=='PASS',check
+     start=datetime.datetime.strptime(j['stime'],'%a %b %d %H:%M:%S %Y').replace(tzinfo=datetime.timezone.utc).timestamp()
+-    research_stop=datetime.datetime(2026,9,20,tzinfo=datetime.timezone.utc).timestamp()
++    research_stop=datetime.datetime(2026,9,23,tzinfo=datetime.timezone.utc).timestamp()  # E3: moved from 2026-09-20
+     assert start+check['walltime_seconds']<=research_stop,'RESEARCH_HARD_STOP'
+-    deadline=start+check['walltime_seconds']-45;os.environ['MMLU_DEADLINE_EPOCH']=str(deadline)
+-    save(P/'evidence/DEADLINE.json',dict(utc=utc(),PBS_stime=j['stime'],walltime_seconds=check['walltime_seconds'],deadline_epoch=deadline,safety_margin_seconds=45))
++    replay_start=float(os.environ['R1E3_REPLAY_START_EPOCH']);deadline=replay_start+3600-45;os.environ['MMLU_DEADLINE_EPOCH']=str(deadline)  # E3: own start + original 3600 s budget, original 45 s margin
++    save(P/'evidence/DEADLINE.json',dict(utc=utc(),PBS_stime=j['stime'],E3_replay_start_epoch=replay_start,E3_replay_budget_seconds=3600,walltime_seconds=check['walltime_seconds'],deadline_epoch=deadline,safety_margin_seconds=45))
+     phase='CUDA_DEVICE_GUARD'
+     import torch
+     n=torch.cuda.device_count();available=torch.cuda.is_available()
+@@ -28,7 +28,7 @@
+     from execute import main
+     main()
+     save(P/'JOB_WORK_COMPLETE.json',dict(utc=utc(),job_id=jid,status='COLLECTION_COMPLETE',entry_wall_seconds=time.perf_counter()-entry,
+-        complete_requests=512,online_ProbeMax=256,scientific_analysis_performed=False))
++        complete_requests=read(P/'REPLAY_COMPLETE.json')['complete_requests'],online_ProbeMax=read(P/'REPLAY_COMPLETE.json')['online_ProbeMax'],scientific_analysis_performed=False))
+ except BaseException as exc:
+     path=P/'records/four_arm_requests.jsonl';completed=[]
+     if path.exists():
+diff -ruN '--exclude=__pycache__' $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/prepare_freeze.py P2_R1_E3_P2R1_MMLU_C2C_FULL_20260919T065245Z/src/prepare_freeze.py
+--- $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/src/prepare_freeze.py	2026-09-16 21:26:12.000000000 +0000
++++ P2_R1_E3_P2R1_MMLU_C2C_FULL_20260919T065245Z/src/prepare_freeze.py	2026-09-19 06:52:45.000000000 +0000
+@@ -1,17 +1,22 @@
++"""E3 FULL: new pre-request freeze + model-free CPU preflight for the 2,641-question two-arm C2C replay.
++Adapted from the original Stage2 prepare_freeze.py: panel = all development group representatives in frozen Stage1
++order; arms fixed_C/policy_C alternating first per question; bootstrap default_rng(0).integers(0,N,(2000,N));
++counts derived from the list length; q=.40 threshold unchanged. No model load, forward, gold or outcome read."""
+ from common import *
+ import ast,collections,subprocess
+ import numpy as np
+ from transformers import AutoTokenizer
+ assert not os.environ.get('CUDA_VISIBLE_DEVICES','') and not FREEZE.exists()
++assert ARMS==['fixed_C','policy_C']
+ print('RESOLVED_PATHS',json.dumps(resolved_paths()),flush=True)
+ assert sha(STAGE1/'MMLU_PRO_STAGE1_PROTOCOL_FREEZE.json')==PARENT_HASH
+ parent=read(STAGE1/'MMLU_PRO_STAGE1_PROTOCOL_FREEZE.json');assert read(STAGE1/'NUMERICAL_VALIDATION.json')['status']=='PASS'
+ assert read(STAGE1/'FINAL_STATE.json')['status']=='COMPLETE_MMLU_PRO_STAGE1'
+-original=REVIEW/'candidates/PLAN_C/candidate_e2e128_ids.json';panelpath=P/'inputs/candidate_e2e128_ids.json';ph=sha(panelpath)
+-assert ph==sha(original)==sha(STAGE1/'splits/candidate_e2e128_ids.json')==parent['frozen_files']['splits/candidate_e2e128_ids.json']
+-assert ph==read(REVIEW/'candidates/PLAN_C/MANIFEST.json')['hashes']['candidate_e2e128_ids.json']
+-ii=read(panelpath);assert len(ii)==len(set(ii))==128
+-groups={g['representative_id']:g for g in read(STAGE1/'splits/dev_groups.json')};assert set(ii)<=set(groups)
++groups_path=STAGE1/'splits/dev_groups.json';gh=sha(groups_path)
++assert gh==parent['frozen_files']['splits/dev_groups.json'],'dev_groups.json must be the Stage1-frozen split'
++dev_groups=read(groups_path);ii=[g['representative_id'] for g in dev_groups];N=len(ii)
++assert N==len(set(ii))==2641
++groups={g['representative_id']:g for g in dev_groups}
+ meta={r['id']:r for r in rows(STAGE1/'inputs/queries_only.jsonl') if r['source_split']=='test'}
+ qh=read(STAGE1/'protocol/QUERY_IDENTITIES.json');manifest=[];queries=[]
+ for ordinal,ident in enumerate(ii):
+@@ -20,25 +25,20 @@
+     g=groups[ident];assert ident==min(g['members'],key=lambda x:int(x.split(':')[1]))
+     manifest.append(dict(ordinal=ordinal,id=ident,question_id=r['question_id'],representative_id=ident,group_hash=g['group_hash'],
+         category=r['category'],K=r['K'],query_sha256=qh[ident]));queries.append(q)
+-assert len({r['group_hash'] for r in manifest})==128
+-write_rows(P/'inputs/panel_queries.jsonl',queries)
+-first=min(read(STAGE1/f'shards/{i}/OUTCOMES_OBSERVED.json')['utc'] for i in [1,2])
+-mtime=datetime.datetime.fromtimestamp(original.stat().st_mtime,datetime.timezone.utc).isoformat()
+-review_created=read(REVIEW/'CANDIDATE_RECOMMENDATION_MANIFEST.json')['created_at_utc']
+-assert mtime<first and review_created<first and parent['utc']<first
+-save(P/'protocol/PANEL_MANIFEST.json',dict(status='FROZEN_EXISTING_CANDIDATE_NOW_AUTHORIZED_STAGE2',N=128,IDs=ii,rows=manifest,
++assert len({r['group_hash'] for r in manifest})==N
++(P/'inputs').mkdir(exist_ok=True);save(P/'inputs/panel_ids.json',ii);write_rows(P/'inputs/panel_queries.jsonl',queries)
++save(P/'protocol/PANEL_MANIFEST.json',dict(status='E3_FULL_ALL_DEVELOPMENT_GROUP_REPRESENTATIVES',N=N,IDs=ii,rows=manifest,
+     category_counts=dict(sorted(collections.Counter(r['category'] for r in manifest).items())),K_distribution=dict(sorted(collections.Counter(r['K'] for r in manifest).items())),
+-    original_candidate_path=str(original),candidate_sha256=ph,original_candidate_mtime_utc=mtime,review_recommendation_created_utc=review_created,
+-    parent_freeze_utc=parent['utc'],first_MMLU_Pro_outcome_utc=first,
+-    pre_outcome_identity_evidence='candidate hash already embedded in immutable Stage1 pre-outcome freeze and original review Plan C manifest; mtime is additional evidence',
+-    selection_changed=False,Stage1_score_route_correctness_used_for_selection=False))
++    source=str(groups_path),source_sha256=gh,order='frozen Stage1 dev_groups.json representative order',
++    selection='all development group representatives; no subset selection',selection_changed=False,Stage1_score_route_correctness_used_for_selection=False))
+ schedule=[dict(ordinal=i,id=ident,arms=order_for(i)) for i,ident in enumerate(ii)]
+-save(P/'protocol/FOUR_ARM_SCHEDULE.json',schedule)
+-for arm in ARMS:assert [sum(r['arms'][pos]==arm for r in schedule) for pos in range(4)]==[32]*4
+-idx=np.random.default_rng(0).integers(0,128,size=(2000,128));np.savez_compressed(P/'protocol/bootstrap_indices.npz',ids=np.array(ii),indices=idx,seed=0)
++save(P/'protocol/ARM_SCHEDULE.json',schedule)
++assert [r['arms'] for r in schedule[:2]]==[['fixed_C','policy_C'],['policy_C','fixed_C']]
++first_counts={arm:sum(r['arms'][0]==arm for r in schedule) for arm in ARMS};assert max(first_counts.values())-min(first_counts.values())<=1
++idx=np.random.default_rng(0).integers(0,N,size=(2000,N));np.savez_compressed(P/'protocol/bootstrap_indices.npz',ids=np.array(ii),indices=idx,seed=0)
+ deps=read(P/'protocol/Stage1_deployment_configs.json')['deployments']
+ assert sha(P/'protocol/Stage1_deployment_configs.json')==sha(STAGE1/'deployments/deployment_configs.json')
+-for ref in ['T','C']:assert deps[ref]['q']==.4 and deps[ref]['threshold']==THRESHOLD and deps[ref]['mode']=='selective'
++assert deps['C']['q']==.4 and deps['C']['threshold']==THRESHOLD and deps['C']['mode']=='selective'
+ assert sha(P/'src/native_runtime.py')==sha(STAGE1/'src/native_runtime.py')
+ for file in (P/'protocol').glob('*'):
+     if (STAGE1/'protocol'/file.name).is_file():assert sha(file)==sha(STAGE1/'protocol'/file.name)
+@@ -54,8 +54,6 @@
+         assert all(tok.decode([i],skip_special_tokens=False,clean_up_tokenization_spaces=False).strip()==label for i in sets[label])
+     assert not parser.parse_answer('The correct answer is '+chr(65+K),labels)['valid']
+     assert not parser.parse_answer('The correct answer is A or B',labels)['valid']
+-# Exercise wrapper accounting with artificial placeholder data and fake calls;
+-# no model loading, forward, project answer, gold or benchmark score is used.
+ from execute import timed_arm
+ class Dummy:
+     def __init__(self,u):self.u=u;self.calls=[]
+@@ -63,45 +61,44 @@
+     def probe(self,q):self.calls.append('probe');return {'ProbeMax':self.u}
+     def action(self,q,a):self.calls.append(a);return {'synthetic':True}
+ dummyq=dict(id='SYNTHETIC',question_stem='Placeholder.',choice_labels=list('ABCDEFGHIJ'),choice_text=['placeholder']*10)
++cases=0
+ for u in [0.,THRESHOLD,THRESHOLD+1e-8,1.]:
+     for arm in ARMS:
+         rt=Dummy(u);chosen,probe,res,parts,elapsed=timed_arm(rt,dummyq,arm,THRESHOLD,lambda:None)
+         expected=('R' if u<=THRESHOLD else arm[-1]) if arm.startswith('policy') else arm[-1]
+         assert chosen==expected and rt.calls==(['probe',expected] if arm.startswith('policy') else [expected])
+-        assert abs(sum(parts.values())-elapsed)<1e-8
++        assert abs(sum(parts.values())-elapsed)<1e-8;cases+=1
+ source=read(P/'RUNTIME_SOURCE_INDEX.json')
+ for rel in ['MMLU_PRO_STAGE1_PROTOCOL_FREEZE.json','MODEL_SOURCE_INDEX.json','deployments/deployment_configs.json','src/native_runtime.py',
+-    'splits/candidate_e2e128_ids.json','splits/dev_groups.json','protocol/QUERY_IDENTITIES.json','FINAL_STATE.json','ARTIFACT_SHA256SUMS']:
++    'splits/dev_groups.json','protocol/QUERY_IDENTITIES.json','inputs/queries_only.jsonl','FINAL_STATE.json','ARTIFACT_SHA256SUMS']:
+     source[str(STAGE1/rel)]=sha(STAGE1/rel)
+-source[str(original)]=ph;source[str(REVIEW/'candidates/PLAN_C/MANIFEST.json')]=sha(REVIEW/'candidates/PLAN_C/MANIFEST.json')
+ for directory in ['actions','probes']:
+     path=STAGE1/f'shards/2/{directory}/dev.jsonl';expected=read(STAGE1/'shards/2/INFERENCE_COMPLETE.json')['files'][directory+'/dev.jsonl']
+     assert sha(path)==expected;source[str(path)]=expected
+ for path,h in source.items():assert sha(path)==h,path
+ save(P/'SOURCE_INDEX.json',dict(parent_Stage1=str(STAGE1),source_hashes=source))
+ save(P/'evidence/CPU_PREFLIGHT.json',dict(utc=utc(),status='PASS',model_loads=0,model_forwards=0,GPU_calls=0,
+-    panel_group_reps=128,panel_ids_unchanged=True,pre_outcome_manifest_verified=True,rotation_positions_each_arm=[32]*4,
+-    synthetic_wrapper_cases=16,native_runtime_byte_identical=True,parser_token_checks='K=3..10 PASS',paths=resolved_paths()))
++    panel_group_reps=N,panel_order='frozen Stage1 dev_groups representative order',first_arm_counts=first_counts,
++    synthetic_wrapper_cases=cases,native_runtime_byte_identical=True,parser_token_checks='K=3..10 PASS',paths=resolved_paths()))
+ paths=[*P.glob('src/*.py'),*P.glob('protocol/*'),*P.glob('inputs/*'),P/'run_mmlu_stage2.pbs',P/'MODEL_SOURCE_INDEX.json',P/'DATASET_SOURCE_INDEX.json',P/'RUNTIME_SOURCE_INDEX.json',P/'SOURCE_INDEX.json',P/'evidence/CPU_PREFLIGHT.json']
+-cfg=dict(task='P2_MMLU_PRO_E2E_STAGE2',status='PASS',utc=utc(),MMLU_PRO_STAGE2_RESULTS_OBSERVED=False,
++cfg=dict(task='P2_R1_E3_MMLU_C2C_FULL',status='PASS',utc=utc(),MMLU_PRO_STAGE2_RESULTS_OBSERVED=False,
+     parent_Stage1_protocol_freeze_sha256=PARENT_HASH,Stage1_deployment_sha256=sha(STAGE1/'deployments/deployment_configs.json'),
+-    deployments={ref:dict(reference=deps[ref]['reference'],q=.4,threshold=THRESHOLD,comparison='u<=threshold; no panel quantile') for ref in ['T','C']},
+-    candidate_e2e128_manifest_sha256=ph,panel_manifest_sha256=sha(P/'protocol/PANEL_MANIFEST.json'),panel_manifest=read(P/'protocol/PANEL_MANIFEST.json'),
++    deployments={'C':dict(reference=deps['C']['reference'],q=.4,threshold=THRESHOLD,comparison='u<=threshold; no panel quantile')},
++    panel_source_sha256=gh,panel_manifest_sha256=sha(P/'protocol/PANEL_MANIFEST.json'),
+     models={role:{k:v for k,v in m.items() if k!='files'} for role,m in read(P/'MODEL_SOURCE_INDEX.json')['models'].items()},model_file_hash_index_sha256=sha(P/'MODEL_SOURCE_INDEX.json'),
+-    source_hashes=source,Stage1_native_runtime_file_unchanged=True,model_and_generation_semantics='exact Stage1 dynamic-K R/Text/C2C and FP32 ProbeMax, V2 parser, thinking off, receiver64/helper256 greedy',
+-    topology=dict(GPUs=2,helper='cuda:0',receiver_fuser='cuda:1',batch=1,one_residency=True,same_allocation=True),
+-    execution_order=dict(question_order='verbatim pre-outcome candidate ID order',arms=ARMS,rotation='left rotation by question ordinal modulo 4; each arm each position exactly 32 times',schedule_sha256=sha(P/'protocol/FOUR_ARM_SCHEDULE.json')),
+-    expected_counts=dict(questions=128,complete_action_requests=512,each_arm=128,online_ProbeMax=256,online_ProbeMax_each_policy=128,warmup=0,synthetic_forwards=0,retries=0),
++    source_hashes=source,Stage1_native_runtime_file_unchanged=True,model_and_generation_semantics='exact Stage1 dynamic-K R/C2C and FP32 ProbeMax, V2 parser, thinking off, receiver64 greedy',
++    topology=dict(GPUs=2,helper='cuda:0',receiver_fuser='cuda:1',batch=1,one_residency=True,same_allocation=True,node='exclusive node-queue 8-GPU node; GPUs 2-7 idle'),
++    execution_order=dict(question_order='frozen Stage1 dev_groups representative order (all development group representatives)',arms=ARMS,rotation='alternating per question ordinal: even fixed_C first, odd policy_C first',schedule_sha256=sha(P/'protocol/ARM_SCHEDULE.json')),
++    expected_counts=dict(questions=N,complete_action_requests=N*len(ARMS),each_arm=N,online_ProbeMax=N,online_ProbeMax_each_policy=N,warmup=0,synthetic_forwards=0,retries=0),
+     timing_boundary='authoritative outer perf_counter: input preparation and entry hooks; independent unchanged online ProbeMax with tokenization/transfer/full prefill/last-position lm_head/FP32 label aggregation and diagnostics; selector; complete selected native R/Text/C2C generation/decode/V2 parser/hook removal; final cleanup and two-GPU sync. Pre-request drain sync precedes timer. Disk logging/JSON serialization, gold/identity analysis and startup are excluded; startup reported separately. No KV/prefill reuse, no shared policy probe.',
+-    bootstrap=dict(seed=0,resamples=2000,N=128,unit='question-level paired fixed-policy saving',indices='protocol/bootstrap_indices.npz',indices_sha256=sha(P/'protocol/bootstrap_indices.npz'),generator='numpy.random.default_rng(0).integers(0,128,size=(2000,128)); same draws for the two reference-specific paired comparisons',interval='numpy.quantile(mean_savings,[.025,.975],method=linear); descriptive percentile 95%',numpy_version=np.__version__),
+-    positive_gate='per reference E2E_POSITIVE iff paired mean(fixed-policy)>0 and descriptive bootstrap 95% lower>0; otherwise E2E_UNCERTAIN_OR_NEGATIVE; not population guarantee',
+-    metrics=['N','route-to-R count and coverage','policy/fixed correct and descriptive accuracy difference','policy/fixed mean and median ms','paired saving mean and median','paired mean saving descriptive bootstrap95','probe mean ms','selector mean ms','startup separate','invalid separate from runtime failure','category/K panel distribution only'],
+-    identity='route reference compares same-round fixed reference; route R compares saved Stage1 native R; raw/parsed/tokens retained; differences reported without reruns; gold only linked after complete replay',
+-    reporting='retain first formal request and all invalid/long/mismatched items, all results positive or negative; no policy selection/calibration/subgroup guarantee/headroom analysis',
+-    positioning='post-hoc benchmark breadth extension; exposed development-panel E2E evidence; not sealed/independent/test confirmation/calibration/threshold selection/open-ended generalization',
+-    budget=dict(max_formal_PBS_jobs=1,GPUs=2,walltime='01:00:00',max_GPU_allocation_hours=2,resubmission_allowed=False),
++    bootstrap=dict(seed=0,resamples=2000,N=N,unit='question-level paired fixed-policy saving',indices='protocol/bootstrap_indices.npz',indices_sha256=sha(P/'protocol/bootstrap_indices.npz'),generator=f'numpy.random.default_rng(0).integers(0,{N},size=(2000,{N}))',interval='numpy.quantile(mean_savings,[.025,.975],method=linear); descriptive percentile 95%',numpy_version=np.__version__),
++    positive_gate='E2E_POSITIVE iff paired mean(fixed-policy)>0 and descriptive bootstrap 95% lower>0; otherwise E2E_UNCERTAIN_OR_NEGATIVE; not population guarantee',
++    identity='route C compares same-round fixed C2C; route R compares saved Stage1 native R; raw/parsed/tokens retained; differences reported without reruns; gold only linked after complete replay',
++    reporting='records only inside the job; retain first formal request and all invalid/long/mismatched items; analysis later on the login node',
++    positioning='E3 reviewer request: full development-population E2E for the C2C reference; exposed development data; not sealed/test confirmation',
++    budget=dict(max_formal_PBS_jobs=1,queue='node-queue',select=1,replay_GPUs=2,walltime='01:00:00',resubmission_allowed=False),
+     PBS_script_sha256=sha(P/'run_mmlu_stage2.pbs'),manuscript_or_supplement_changes=False,
+     frozen_files={str(path.relative_to(P)):sha(path) for path in sorted(paths) if path.is_file()})
+ save(FREEZE,cfg);save(P/'evidence/FREEZE_RECEIPT.json',dict(utc=utc(),freeze_sha256=sha(FREEZE),MMLU_PRO_STAGE2_RESULTS_OBSERVED=False))
+-save(P/'RESOURCE_LEDGER.json',dict(status='PREPARED',utc=utc(),max_formal_PBS_jobs=1,formal_PBS_submissions=0,GPUs=2,max_GPUh=2,walltime='01:00:00'))
+-print('CPU_PREFLIGHT_AND_STAGE2_FREEZE_PASS',sha(FREEZE),flush=True)
++save(P/'RESOURCE_LEDGER.json',dict(status='PREPARED',utc=utc(),max_formal_PBS_jobs=1,formal_PBS_submissions=0,queue='node-queue',select=1,walltime='01:00:00'))
++print('CPU_PREFLIGHT_AND_E3_FULL_FREEZE_PASS',N,sha(FREEZE),flush=True)
+--- $DATA_DIR/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z/run_mmlu_stage2.pbs	2026-09-16 21:28:40.000000000 +0000
++++ P2_R1_E3_P2R1_MMLU_C2C_FULL_20260919T065245Z/run_mmlu_stage2.pbs	2026-09-19 06:52:45.000000000 +0000
+@@ -10,9 +10,9 @@
+ # [scheduler directive removed for anonymity]
+ set -uo pipefail
+ source "$HOME/.config/ClusterB-storage.sh"
+-export P2_STAGE="$DATA_ROOT/projects/iclr2027_p2/P2_MMLU_PRO_E2E_STAGE2_20260916T212147Z"
+-export P2_RUN="$DATA_ROOT/runs/iclr2027_p2/${PBS_JOBID}_mmlu_stage2"
+-export TMPDIR="$DATA_ROOT/tmp/$PBS_JOBID"
++export P2_STAGE="$DATA_DIR/P2_R1_E3_P2R1_MMLU_C2C_FULL_20260919T065245Z"
++export P2_RUN="$P2_STAGE/run_logs"
++export TMPDIR="$P2_STAGE/tmp"
+ export TMP="$TMPDIR" TEMP="$TMPDIR" PYTHONDONTWRITEBYTECODE=1
+ export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 TOKENIZERS_PARALLELISM=false
+ export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 BLIS_NUM_THREADS=1

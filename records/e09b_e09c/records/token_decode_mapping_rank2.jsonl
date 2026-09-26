@@ -1,0 +1,30 @@
+{"label": "A", "token_id": 32, "token_string": "A", "decoded": "A"}
+{"label": "B", "token_id": 33, "token_string": "B", "decoded": "B"}
+{"label": "C", "token_id": 34, "token_string": "C", "decoded": "C"}
+{"label": "D", "token_id": 35, "token_string": "D", "decoded": "D"}
+{"label": "E", "token_id": 36, "token_string": "E", "decoded": "E"}
+{"label": "F", "token_id": 37, "token_string": "F", "decoded": "F"}
+{"label": "G", "token_id": 38, "token_string": "G", "decoded": "G"}
+{"label": "H", "token_id": 39, "token_string": "H", "decoded": "H"}
+{"label": "I", "token_id": 40, "token_string": "I", "decoded": "I"}
+{"label": "J", "token_id": 41, "token_string": "J", "decoded": "J"}
+{"label": "C", "token_id": 356, "token_string": "ĠC", "decoded": " C"}
+{"label": "I", "token_id": 358, "token_string": "ĠI", "decoded": " I"}
+{"label": "A", "token_id": 362, "token_string": "ĠA", "decoded": " A"}
+{"label": "D", "token_id": 422, "token_string": "ĠD", "decoded": " D"}
+{"label": "B", "token_id": 425, "token_string": "ĠB", "decoded": " B"}
+{"label": "F", "token_id": 434, "token_string": "ĠF", "decoded": " F"}
+{"label": "E", "token_id": 468, "token_string": "ĠE", "decoded": " E"}
+{"label": "H", "token_id": 472, "token_string": "ĠH", "decoded": " H"}
+{"label": "G", "token_id": 479, "token_string": "ĠG", "decoded": " G"}
+{"label": "J", "token_id": 619, "token_string": "ĠJ", "decoded": " J"}
+{"label": "C", "token_id": 6258, "token_string": "ĉC", "decoded": "\tC"}
+{"label": "G", "token_id": 9600, "token_string": "ĉG", "decoded": "\tG"}
+{"label": "D", "token_id": 10957, "token_string": "ĉD", "decoded": "\tD"}
+{"label": "F", "token_id": 12727, "token_string": "ĉF", "decoded": "\tF"}
+{"label": "B", "token_id": 12791, "token_string": "ĉB", "decoded": "\tB"}
+{"label": "H", "token_id": 13292, "token_string": "ĉH", "decoded": "\tH"}
+{"label": "J", "token_id": 17100, "token_string": "ĉJ", "decoded": "\tJ"}
+{"label": "E", "token_id": 22784, "token_string": "ĉE", "decoded": "\tE"}
+{"label": "A", "token_id": 22985, "token_string": "ĉA", "decoded": "\tA"}
+{"label": "I", "token_id": 24486, "token_string": "ĉI", "decoded": "\tI"}

@@ -1,0 +1,6 @@
+policy,extractor,omitted,n_AD,k,rate,CP_lo,CP_hi,p_H0_rho_ge_05,CP_hi_ge_05,label_differences_outputs,V2_reparse_mismatches,stored_V2,label
+held-out large/OBQA/Text q=.80,official,595,595,11,0.018487394957983194,0.009264067978424799,0.032837856954048214,5.478631847989169e-05,False,1,,595/12,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy"
+held-out large/OBQA/Text q=.80,V2,595,595,12,0.020168067226890758,0.010463502254555295,0.03496433812646629,0.00014723087130060828,False,,0,595/12,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy"
+held-out large/OBQA/Text+fact q=.75,official,558,558,16,0.02867383512544803,0.01647651395534893,0.046147654682029395,0.009202289986172313,False,0,,558/16,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy"
+held-out large/OBQA/Text+fact q=.75,V2,558,558,16,0.02867383512544803,0.01647651395534893,0.046147654682029395,0.009202289986172313,False,,0,558/16,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy"
+sealed large/ARC/Text (restated from E14-1),official,,1097,20,0.018231540565177756,0.011170967158872714,0.02801725918329626,3.25693820850885e-08,False,,,,"POST-HOC descriptive re-analysis (E17, PREREG.md); does not change any deployed policy"

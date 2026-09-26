@@ -1,0 +1,1194 @@
+{
+  "slot": "r0",
+  "pair": "small",
+  "utc_start": "2026-09-20T01:40:29.624212+00:00",
+  "import_seconds": 66.2,
+  "host": "REDACTED",
+  "CUDA_VISIBLE_DEVICES": "0,1",
+  "load_seconds": 48.5,
+  "load_breakdown": {
+    "helper": 27.76089747902006,
+    "receiver": 13.34470273181796,
+    "fuser": 7.200226622866467
+  },
+  "mechanical_smoke": "PASS",
+  "a_obqa_bit_for_bit": {
+    "check": "small_obqa_fit_bit_for_bit",
+    "utc": "2026-09-20T01:41:48.415745+00:00",
+    "pair": "small",
+    "n_rows": 16,
+    "ids": [
+      "10-1178",
+      "14-1364",
+      "14-1141",
+      "12-807",
+      "12-240",
+      "12-916",
+      "14-359",
+      "13-1039",
+      "13-674",
+      "573",
+      "7-348",
+      "12-532",
+      "7-1130",
+      "12-245",
+      "13-336",
+      "10-647"
+    ],
+    "sources": [
+      "$DATA_DIR/P2_10_20260911T122423Z/results/small/obqa/train_cases.jsonl",
+      "$DATA_DIR/P2_CONFIDENCE_REFERENCE_BOUNDARIES_20260914T165012Z/records/small_obqa_fit_probes.jsonl"
+    ],
+    "all_bit_for_bit": true,
+    "action_mismatches": [],
+    "probe_mismatches": [],
+    "per_row": [
+      {
+        "id": "10-1178",
+        "actions": {
+          "R": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true
+            },
+            "new_answer_label": "D",
+            "saved_raw_len": 33
+          },
+          "T": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true,
+              "helper_generated_token_ids": true,
+              "helper_message": true
+            },
+            "new_answer_label": "C",
+            "saved_raw_len": 36
+          },
+          "C": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true
+            },
+            "new_answer_label": "D",
+            "saved_raw_len": 24
+          }
+        },
+        "probe": {
+          "match": true,
+          "fields": {
+            "ProbeMax_exact": true,
+            "p_labels_exact": true,
+            "argmax_probe_label": true,
+            "input_tokens": true,
+            "probe_ids": true,
+            "last_valid_position": true,
+            "probe_ids_sha256": true,
+            "rendered_sha256": true
+          },
+          "new_ProbeMax": 7.748603820800781e-06,
+          "saved_ProbeMax": 7.748603820800781e-06
+        }
+      },
+      {
+        "id": "14-1364",
+        "actions": {
+          "R": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 45
+          },
+          "T": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true,
+              "helper_generated_token_ids": true,
+              "helper_message": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 45
+          },
+          "C": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true
+            },
+            "new_answer_label": "B",
+            "saved_raw_len": 24
+          }
+        },
+        "probe": {
+          "match": true,
+          "fields": {
+            "ProbeMax_exact": true,
+            "p_labels_exact": true,
+            "argmax_probe_label": true,
+            "input_tokens": true,
+            "probe_ids": true,
+            "last_valid_position": true,
+            "probe_ids_sha256": true,
+            "rendered_sha256": true
+          },
+          "new_ProbeMax": 0.01813507080078125,
+          "saved_ProbeMax": 0.01813507080078125
+        }
+      },
+      {
+        "id": "14-1141",
+        "actions": {
+          "R": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 24
+          },
+          "T": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true,
+              "helper_generated_token_ids": true,
+              "helper_message": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 24
+          },
+          "C": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 24
+          }
+        },
+        "probe": {
+          "match": true,
+          "fields": {
+            "ProbeMax_exact": true,
+            "p_labels_exact": true,
+            "argmax_probe_label": true,
+            "input_tokens": true,
+            "probe_ids": true,
+            "last_valid_position": true,
+            "probe_ids_sha256": true,
+            "rendered_sha256": true
+          },
+          "new_ProbeMax": 0.02974081039428711,
+          "saved_ProbeMax": 0.02974081039428711
+        }
+      },
+      {
+        "id": "12-807",
+        "actions": {
+          "R": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 38
+          },
+          "T": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true,
+              "helper_generated_token_ids": true,
+              "helper_message": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 38
+          },
+          "C": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 24
+          }
+        },
+        "probe": {
+          "match": true,
+          "fields": {
+            "ProbeMax_exact": true,
+            "p_labels_exact": true,
+            "argmax_probe_label": true,
+            "input_tokens": true,
+            "probe_ids": true,
+            "last_valid_position": true,
+            "probe_ids_sha256": true,
+            "rendered_sha256": true
+          },
+          "new_ProbeMax": 0.0007159113883972168,
+          "saved_ProbeMax": 0.0007159113883972168
+        }
+      },
+      {
+        "id": "12-240",
+        "actions": {
+          "R": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true
+            },
+            "new_answer_label": "D",
+            "saved_raw_len": 35
+          },
+          "T": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true,
+              "helper_generated_token_ids": true,
+              "helper_message": true
+            },
+            "new_answer_label": "INVALID",
+            "saved_raw_len": 30
+          },
+          "C": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true
+            },
+            "new_answer_label": "D",
+            "saved_raw_len": 24
+          }
+        },
+        "probe": {
+          "match": true,
+          "fields": {
+            "ProbeMax_exact": true,
+            "p_labels_exact": true,
+            "argmax_probe_label": true,
+            "input_tokens": true,
+            "probe_ids": true,
+            "last_valid_position": true,
+            "probe_ids_sha256": true,
+            "rendered_sha256": true
+          },
+          "new_ProbeMax": 0.5756539702415466,
+          "saved_ProbeMax": 0.5756539702415466
+        }
+      },
+      {
+        "id": "12-916",
+        "actions": {
+          "R": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 34
+          },
+          "T": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true,
+              "helper_generated_token_ids": true,
+              "helper_message": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 35
+          },
+          "C": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 193
+          }
+        },
+        "probe": {
+          "match": true,
+          "fields": {
+            "ProbeMax_exact": true,
+            "p_labels_exact": true,
+            "argmax_probe_label": true,
+            "input_tokens": true,
+            "probe_ids": true,
+            "last_valid_position": true,
+            "probe_ids_sha256": true,
+            "rendered_sha256": true
+          },
+          "new_ProbeMax": 0.00042134523391723633,
+          "saved_ProbeMax": 0.00042134523391723633
+        }
+      },
+      {
+        "id": "14-359",
+        "actions": {
+          "R": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true
+            },
+            "new_answer_label": "C",
+            "saved_raw_len": 35
+          },
+          "T": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true,
+              "helper_generated_token_ids": true,
+              "helper_message": true
+            },
+            "new_answer_label": "C",
+            "saved_raw_len": 35
+          },
+          "C": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true
+            },
+            "new_answer_label": "C",
+            "saved_raw_len": 24
+          }
+        },
+        "probe": {
+          "match": true,
+          "fields": {
+            "ProbeMax_exact": true,
+            "p_labels_exact": true,
+            "argmax_probe_label": true,
+            "input_tokens": true,
+            "probe_ids": true,
+            "last_valid_position": true,
+            "probe_ids_sha256": true,
+            "rendered_sha256": true
+          },
+          "new_ProbeMax": 0.0020366311073303223,
+          "saved_ProbeMax": 0.0020366311073303223
+        }
+      },
+      {
+        "id": "13-1039",
+        "actions": {
+          "R": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true
+            },
+            "new_answer_label": "D",
+            "saved_raw_len": 44
+          },
+          "T": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true,
+              "helper_generated_token_ids": true,
+              "helper_message": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 46
+          },
+          "C": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true
+            },
+            "new_answer_label": "D",
+            "saved_raw_len": 108
+          }
+        },
+        "probe": {
+          "match": true,
+          "fields": {
+            "ProbeMax_exact": true,
+            "p_labels_exact": true,
+            "argmax_probe_label": true,
+            "input_tokens": true,
+            "probe_ids": true,
+            "last_valid_position": true,
+            "probe_ids_sha256": true,
+            "rendered_sha256": true
+          },
+          "new_ProbeMax": 0.438495934009552,
+          "saved_ProbeMax": 0.438495934009552
+        }
+      },
+      {
+        "id": "13-674",
+        "actions": {
+          "R": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true
+            },
+            "new_answer_label": "D",
+            "saved_raw_len": 31
+          },
+          "T": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true,
+              "helper_generated_token_ids": true,
+              "helper_message": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 30
+          },
+          "C": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true
+            },
+            "new_answer_label": "B",
+            "saved_raw_len": 28
+          }
+        },
+        "probe": {
+          "match": true,
+          "fields": {
+            "ProbeMax_exact": true,
+            "p_labels_exact": true,
+            "argmax_probe_label": true,
+            "input_tokens": true,
+            "probe_ids": true,
+            "last_valid_position": true,
+            "probe_ids_sha256": true,
+            "rendered_sha256": true
+          },
+          "new_ProbeMax": 0.08362889289855957,
+          "saved_ProbeMax": 0.08362889289855957
+        }
+      },
+      {
+        "id": "573",
+        "actions": {
+          "R": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 40
+          },
+          "T": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true,
+              "helper_generated_token_ids": true,
+              "helper_message": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 40
+          },
+          "C": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true
+            },
+            "new_answer_label": "B",
+            "saved_raw_len": 24
+          }
+        },
+        "probe": {
+          "match": true,
+          "fields": {
+            "ProbeMax_exact": true,
+            "p_labels_exact": true,
+            "argmax_probe_label": true,
+            "input_tokens": true,
+            "probe_ids": true,
+            "last_valid_position": true,
+            "probe_ids_sha256": true,
+            "rendered_sha256": true
+          },
+          "new_ProbeMax": 0.0036295652389526367,
+          "saved_ProbeMax": 0.0036295652389526367
+        }
+      },
+      {
+        "id": "7-348",
+        "actions": {
+          "R": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 47
+          },
+          "T": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true,
+              "helper_generated_token_ids": true,
+              "helper_message": true
+            },
+            "new_answer_label": "D",
+            "saved_raw_len": 24
+          },
+          "C": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 24
+          }
+        },
+        "probe": {
+          "match": true,
+          "fields": {
+            "ProbeMax_exact": true,
+            "p_labels_exact": true,
+            "argmax_probe_label": true,
+            "input_tokens": true,
+            "probe_ids": true,
+            "last_valid_position": true,
+            "probe_ids_sha256": true,
+            "rendered_sha256": true
+          },
+          "new_ProbeMax": 0.06818485260009766,
+          "saved_ProbeMax": 0.06818485260009766
+        }
+      },
+      {
+        "id": "12-532",
+        "actions": {
+          "R": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 61
+          },
+          "T": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true,
+              "helper_generated_token_ids": true,
+              "helper_message": true
+            },
+            "new_answer_label": "C",
+            "saved_raw_len": 56
+          },
+          "C": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 60
+          }
+        },
+        "probe": {
+          "match": true,
+          "fields": {
+            "ProbeMax_exact": true,
+            "p_labels_exact": true,
+            "argmax_probe_label": true,
+            "input_tokens": true,
+            "probe_ids": true,
+            "last_valid_position": true,
+            "probe_ids_sha256": true,
+            "rendered_sha256": true
+          },
+          "new_ProbeMax": 4.0590763092041016e-05,
+          "saved_ProbeMax": 4.0590763092041016e-05
+        }
+      },
+      {
+        "id": "7-1130",
+        "actions": {
+          "R": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 57
+          },
+          "T": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true,
+              "helper_generated_token_ids": true,
+              "helper_message": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 24
+          },
+          "C": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 24
+          }
+        },
+        "probe": {
+          "match": true,
+          "fields": {
+            "ProbeMax_exact": true,
+            "p_labels_exact": true,
+            "argmax_probe_label": true,
+            "input_tokens": true,
+            "probe_ids": true,
+            "last_valid_position": true,
+            "probe_ids_sha256": true,
+            "rendered_sha256": true
+          },
+          "new_ProbeMax": 0.0008715987205505371,
+          "saved_ProbeMax": 0.0008715987205505371
+        }
+      },
+      {
+        "id": "12-245",
+        "actions": {
+          "R": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 38
+          },
+          "T": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true,
+              "helper_generated_token_ids": true,
+              "helper_message": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 38
+          },
+          "C": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 24
+          }
+        },
+        "probe": {
+          "match": true,
+          "fields": {
+            "ProbeMax_exact": true,
+            "p_labels_exact": true,
+            "argmax_probe_label": true,
+            "input_tokens": true,
+            "probe_ids": true,
+            "last_valid_position": true,
+            "probe_ids_sha256": true,
+            "rendered_sha256": true
+          },
+          "new_ProbeMax": 0.0013277530670166016,
+          "saved_ProbeMax": 0.0013277530670166016
+        }
+      },
+      {
+        "id": "13-336",
+        "actions": {
+          "R": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true
+            },
+            "new_answer_label": "INVALID",
+            "saved_raw_len": 30
+          },
+          "T": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true,
+              "helper_generated_token_ids": true,
+              "helper_message": true
+            },
+            "new_answer_label": "B",
+            "saved_raw_len": 39
+          },
+          "C": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true
+            },
+            "new_answer_label": "B",
+            "saved_raw_len": 39
+          }
+        },
+        "probe": {
+          "match": true,
+          "fields": {
+            "ProbeMax_exact": true,
+            "p_labels_exact": true,
+            "argmax_probe_label": true,
+            "input_tokens": true,
+            "probe_ids": true,
+            "last_valid_position": true,
+            "probe_ids_sha256": true,
+            "rendered_sha256": true
+          },
+          "new_ProbeMax": 0.3209778666496277,
+          "saved_ProbeMax": 0.3209778666496277
+        }
+      },
+      {
+        "id": "10-647",
+        "actions": {
+          "R": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true
+            },
+            "new_answer_label": "A",
+            "saved_raw_len": 37
+          },
+          "T": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true,
+              "helper_generated_token_ids": true,
+              "helper_message": true
+            },
+            "new_answer_label": "D",
+            "saved_raw_len": 42
+          },
+          "C": {
+            "match": true,
+            "fields": {
+              "raw_answer": true,
+              "generated_token_ids": true,
+              "receiver_input_tokens": true,
+              "helper_input_tokens": true
+            },
+            "new_answer_label": "D",
+            "saved_raw_len": 42
+          }
+        },
+        "probe": {
+          "match": true,
+          "fields": {
+            "ProbeMax_exact": true,
+            "p_labels_exact": true,
+            "argmax_probe_label": true,
+            "input_tokens": true,
+            "probe_ids": true,
+            "last_valid_position": true,
+            "probe_ids_sha256": true,
+            "rendered_sha256": true
+          },
+          "new_ProbeMax": 0.016451537609100342,
+          "saved_ProbeMax": 0.016451537609100342
+        }
+      }
+    ],
+    "gold_read": false
+  },
+  "c_smoke": {
+    "check": "smoke_mmlu_pro",
+    "utc": "2026-09-20T01:42:24.910905+00:00",
+    "pair": "small",
+    "n_rows": 16,
+    "ids": [
+      "test:3284",
+      "test:3394",
+      "test:3078",
+      "test:2967",
+      "test:3433",
+      "test:3499",
+      "test:3001",
+      "test:3164",
+      "test:3080",
+      "test:3162",
+      "test:3029",
+      "test:3118",
+      "test:3136",
+      "test:3247",
+      "test:3027",
+      "test:3241"
+    ],
+    "invalid_counts": {
+      "R": 1,
+      "T": 2,
+      "C": 2
+    },
+    "invalid_threshold_per_action": 4,
+    "exceeded": [],
+    "mean_latency_ms": {
+      "R": 360.2,
+      "T": 1234.7,
+      "C": 610.8,
+      "P": 26.9
+    },
+    "measured_seconds_per_row": 2.2327,
+    "per_row": [
+      {
+        "id": "test:3284",
+        "K": 10,
+        "answers": {
+          "R": "A",
+          "T": "B",
+          "C": "B"
+        },
+        "invalid": {
+          "R": false,
+          "T": false,
+          "C": false
+        },
+        "ProbeMax": 0.0037174224853515625
+      },
+      {
+        "id": "test:3394",
+        "K": 10,
+        "answers": {
+          "R": "A",
+          "T": "C",
+          "C": "C"
+        },
+        "invalid": {
+          "R": false,
+          "T": false,
+          "C": false
+        },
+        "ProbeMax": 0.0023931264877319336
+      },
+      {
+        "id": "test:3078",
+        "K": 10,
+        "answers": {
+          "R": "G",
+          "T": "G",
+          "C": "G"
+        },
+        "invalid": {
+          "R": false,
+          "T": false,
+          "C": false
+        },
+        "ProbeMax": 0.01415485143661499
+      },
+      {
+        "id": "test:2967",
+        "K": 10,
+        "answers": {
+          "R": "A",
+          "T": "B",
+          "C": "J"
+        },
+        "invalid": {
+          "R": false,
+          "T": false,
+          "C": false
+        },
+        "ProbeMax": 0.24119460582733154
+      },
+      {
+        "id": "test:3433",
+        "K": 10,
+        "answers": {
+          "R": "D",
+          "T": "E",
+          "C": "D"
+        },
+        "invalid": {
+          "R": false,
+          "T": false,
+          "C": false
+        },
+        "ProbeMax": 0.14666104316711426
+      },
+      {
+        "id": "test:3499",
+        "K": 10,
+        "answers": {
+          "R": "E",
+          "T": "B",
+          "C": "E"
+        },
+        "invalid": {
+          "R": false,
+          "T": false,
+          "C": false
+        },
+        "ProbeMax": 0.11302882432937622
+      },
+      {
+        "id": "test:3001",
+        "K": 8,
+        "answers": {
+          "R": "A",
+          "T": "INVALID",
+          "C": "B"
+        },
+        "invalid": {
+          "R": false,
+          "T": true,
+          "C": false
+        },
+        "ProbeMax": 0.010252594947814941
+      },
+      {
+        "id": "test:3164",
+        "K": 10,
+        "answers": {
+          "R": "C",
+          "T": "C",
+          "C": "C"
+        },
+        "invalid": {
+          "R": false,
+          "T": false,
+          "C": false
+        },
+        "ProbeMax": 0.6948353052139282
+      },
+      {
+        "id": "test:3080",
+        "K": 10,
+        "answers": {
+          "R": "D",
+          "T": "A",
+          "C": "B"
+        },
+        "invalid": {
+          "R": false,
+          "T": false,
+          "C": false
+        },
+        "ProbeMax": 0.5436062812805176
+      },
+      {
+        "id": "test:3162",
+        "K": 10,
+        "answers": {
+          "R": "J",
+          "T": "D",
+          "C": "J"
+        },
+        "invalid": {
+          "R": false,
+          "T": false,
+          "C": false
+        },
+        "ProbeMax": 0.002600550651550293
+      },
+      {
+        "id": "test:3029",
+        "K": 10,
+        "answers": {
+          "R": "A",
+          "T": "INVALID",
+          "C": "INVALID"
+        },
+        "invalid": {
+          "R": false,
+          "T": true,
+          "C": true
+        },
+        "ProbeMax": 0.011949300765991211
+      },
+      {
+        "id": "test:3118",
+        "K": 9,
+        "answers": {
+          "R": "A",
+          "T": "B",
+          "C": "D"
+        },
+        "invalid": {
+          "R": false,
+          "T": false,
+          "C": false
+        },
+        "ProbeMax": 0.02730923891067505
+      },
+      {
+        "id": "test:3136",
+        "K": 10,
+        "answers": {
+          "R": "INVALID",
+          "T": "E",
+          "C": "E"
+        },
+        "invalid": {
+          "R": true,
+          "T": false,
+          "C": false
+        },
+        "ProbeMax": 0.1553945541381836
+      },
+      {
+        "id": "test:3247",
+        "K": 10,
+        "answers": {
+          "R": "J",
+          "T": "D",
+          "C": "J"
+        },
+        "invalid": {
+          "R": false,
+          "T": false,
+          "C": false
+        },
+        "ProbeMax": 0.23145651817321777
+      },
+      {
+        "id": "test:3027",
+        "K": 10,
+        "answers": {
+          "R": "A",
+          "T": "B",
+          "C": "INVALID"
+        },
+        "invalid": {
+          "R": false,
+          "T": false,
+          "C": true
+        },
+        "ProbeMax": 0.008697926998138428
+      },
+      {
+        "id": "test:3241",
+        "K": 10,
+        "answers": {
+          "R": "D",
+          "T": "B",
+          "C": "D"
+        },
+        "invalid": {
+          "R": false,
+          "T": false,
+          "C": false
+        },
+        "ProbeMax": 0.43687039613723755
+      }
+    ],
+    "gold_read": false
+  }
+}

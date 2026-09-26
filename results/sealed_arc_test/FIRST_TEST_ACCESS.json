@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-14T21:33:37.727113+00:00",
+  "ARC_TEST_ACCESSED": true,
+  "event": "immediately before first projected parquet read",
+  "columns": [
+    "id",
+    "question",
+    "choices"
+  ],
+  "gold_column_read": false,
+  "pre_test_freeze_sha256": "dc5762ee919d4b05b44b797bc97cdaf44dab3f03d9192c67e0c25a48bee155f9",
+  "source_sha256": "62f03257e737aed263f55c6abf87c7bb0028a44a6bdd2a26eb1279eb42c1d1e9",
+  "job_id": "run001"
+}

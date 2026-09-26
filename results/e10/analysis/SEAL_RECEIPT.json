@@ -1,0 +1,25 @@
+{
+  "utc": "2026-09-21T00:11:27Z",
+  "stage": "P2_R4_E10_20260920T225954Z",
+  "prereg_sha256": "a07185d35c84533e8a4d5c9054a60ab868a11a709c3f9ffb15276de532e0d785",
+  "extractor_sha256": "c7f5a0f2452da787c7af1620da668f3a9824094046b3d8766b58c81831ba984c",
+  "prompts_sha256": "8d5809beb9451e1670a468a3213ccc8435fdc24694c0ddf8d7742c2a86c2afc7",
+  "records": {
+    "main_rank0.jsonl": "0b937bf8ec7dfadb41452b3f950e3c82b59dbaa0e70b455ffdb1d4a9e39bb825",
+    "main_rank1.jsonl": "19e4ee3ec775b85e49f6c3875be2d6001714bbed118b7adff72541c3db642bf1",
+    "main_rank2.jsonl": "287ee0b8caf98691c9f36b3809d0dd1103b0581b01423473f09701419e8c6c6d",
+    "main_rank3.jsonl": "f5a6f3e947dcf1920635b9379baeb876d96fa4ecece376812a87b3a24458737e",
+    "main_rank4.jsonl": "bce0628ae491de6d4a7b22e0aaa9438a176503402efcdb7c71b7ff5999131636",
+    "main_rank5.jsonl": "685c3f9e4e1c18b137f3343f1ae09e326a362df626edc4c51dd36434262e465b",
+    "main_rank6.jsonl": "e82611511ccfa724dcabf828e3f165e38a616216716813041f98cfee0e88a085",
+    "main_rank7.jsonl": "28ea536ae97c5f53ddd39e8570a2d332fa211bfe345cd7b3e5420e2a14434e9d"
+  },
+  "files": {
+    "E10_SEALED.json": "4f224e2b748ce8103bbfeb55433fb1350fdfef838102741c4ba1b6648a1240ff",
+    "SEALED_DEV_ROUTES.jsonl": "a349df671f8a5c2097bfff1f0b43559e1e89339c2352bd55321af66bf9c5161c",
+    "SEALED_CAL_TESTS.jsonl": "4092572b88d5ef91169f9289df2b5570f63a00f01fabc4d032a1f3754a52b0b0",
+    "SEALED_SCORES.jsonl": "e1ef2b47fbb7331052fac0f64a4254c5acba72d869466e296808ece207db3038"
+  },
+  "gold_read": false,
+  "note": "step 5 of PREREG_E10 order of operations; no gold answer has been opened"
+}

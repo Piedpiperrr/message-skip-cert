@@ -1,0 +1,15 @@
+{"name": "R32_r0", "utc": "2026-09-14T05:57:18.728734+00:00", "event": "START_LR", "attempt": 1}
+{"name": "R128_r0", "utc": "2026-09-14T05:57:20.320175+00:00", "event": "START_LR", "attempt": 2}
+{"name": "R512_r0", "utc": "2026-09-14T05:57:26.108683+00:00", "event": "START_LR", "attempt": 3}
+{"name": "R32_r1", "utc": "2026-09-14T05:57:26.479860+00:00", "event": "START_LR", "attempt": 4}
+{"name": "R128_r1", "utc": "2026-09-14T05:57:27.456272+00:00", "event": "START_LR", "attempt": 5}
+{"name": "R512_r1", "utc": "2026-09-14T05:57:31.005931+00:00", "event": "START_LR", "attempt": 6}
+{"name": "R32_r2", "utc": "2026-09-14T05:57:31.411618+00:00", "event": "START_LR", "attempt": 7}
+{"name": "R128_r2", "utc": "2026-09-14T05:57:32.213307+00:00", "event": "START_LR", "attempt": 8}
+{"name": "R512_r2", "utc": "2026-09-14T05:57:35.044373+00:00", "event": "START_LR", "attempt": 9}
+{"name": "R32_r3", "utc": "2026-09-14T05:57:35.364809+00:00", "event": "START_LR", "attempt": 10}
+{"name": "R128_r3", "utc": "2026-09-14T05:57:35.881297+00:00", "event": "START_LR", "attempt": 11}
+{"name": "R512_r3", "utc": "2026-09-14T05:57:37.963139+00:00", "event": "START_LR", "attempt": 12}
+{"name": "R32_r4", "utc": "2026-09-14T05:57:38.186300+00:00", "event": "START_LR", "attempt": 13}
+{"name": "R128_r4", "utc": "2026-09-14T05:57:38.648660+00:00", "event": "START_LR", "attempt": 14}
+{"name": "R512_r4", "utc": "2026-09-14T05:57:40.347107+00:00", "event": "START_LR", "attempt": 15}

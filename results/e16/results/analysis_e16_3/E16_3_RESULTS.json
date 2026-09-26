@@ -1,0 +1,1192 @@
+{
+  "utc": "2026-09-21T19:46:51.774937+00:00",
+  "receiver_benchmark": [
+    {
+      "receiver": "qwen3_0_6b",
+      "benchmark": "arc",
+      "units": 1417,
+      "bf16_computed": 1417,
+      "fp32_computed": 1417,
+      "bf16_u_equal_stored": 1417,
+      "share_u0": 0.0,
+      "max_exp_m_u0": null,
+      "min_exp_m_upos": 2.5307714880162956e-07,
+      "min_gap_u0": null,
+      "m_units_in_ties": 2,
+      "m_tied_values": 1,
+      "gap_units_in_ties": 1409,
+      "gap_tied_values": 89,
+      "share_u32_0": 0.0
+    },
+    {
+      "receiver": "qwen3_0_6b",
+      "benchmark": "mmlu_pro",
+      "units": 11641,
+      "bf16_computed": 11641,
+      "fp32_computed": 11641,
+      "bf16_u_equal_stored": 11641,
+      "share_u0": 0.0,
+      "max_exp_m_u0": null,
+      "min_exp_m_upos": 9.988006109746153e-07,
+      "min_gap_u0": null,
+      "m_units_in_ties": 0,
+      "m_tied_values": 0,
+      "gap_units_in_ties": 11537,
+      "gap_tied_values": 461,
+      "share_u32_0": 0.0
+    },
+    {
+      "receiver": "qwen3_0_6b",
+      "benchmark": "obqa",
+      "units": 4208,
+      "bf16_computed": 4208,
+      "fp32_computed": 4208,
+      "bf16_u_equal_stored": 4208,
+      "share_u0": 0.0,
+      "max_exp_m_u0": null,
+      "min_exp_m_upos": 2.127102361958214e-07,
+      "min_gap_u0": null,
+      "m_units_in_ties": 103,
+      "m_tied_values": 51,
+      "gap_units_in_ties": 4201,
+      "gap_tied_values": 96,
+      "share_u32_0": 0.0
+    },
+    {
+      "receiver": "qwen3_1_7b",
+      "benchmark": "arc",
+      "units": 1417,
+      "bf16_computed": 1417,
+      "fp32_computed": 1417,
+      "bf16_u_equal_stored": 1417,
+      "share_u0": 0.570924488355681,
+      "max_exp_m_u0": 9.465983956792695e-08,
+      "min_exp_m_upos": 6.836674422262858e-08,
+      "min_gap_u0": 16.75,
+      "m_units_in_ties": 50,
+      "m_tied_values": 25,
+      "gap_units_in_ties": 1406,
+      "gap_tied_values": 119,
+      "share_u32_0": 0.5702187720536345
+    },
+    {
+      "receiver": "qwen3_1_7b",
+      "benchmark": "mmlu_pro",
+      "units": 11641,
+      "bf16_computed": 11641,
+      "fp32_computed": 11641,
+      "bf16_u_equal_stored": 11641,
+      "share_u0": 0.11794519371188042,
+      "max_exp_m_u0": 9.987670387945228e-08,
+      "min_exp_m_upos": 6.225894959001217e-08,
+      "min_gap_u0": 16.75,
+      "m_units_in_ties": 11,
+      "m_tied_values": 5,
+      "gap_units_in_ties": 11628,
+      "gap_tied_values": 116,
+      "share_u32_0": 0.11846061334936861
+    },
+    {
+      "receiver": "qwen3_1_7b",
+      "benchmark": "obqa",
+      "units": 4208,
+      "bf16_computed": 4208,
+      "fp32_computed": 4208,
+      "bf16_u_equal_stored": 4208,
+      "share_u0": 0.4460551330798479,
+      "max_exp_m_u0": 9.802872451078404e-08,
+      "min_exp_m_upos": 6.160213464613298e-08,
+      "min_gap_u0": 16.75,
+      "m_units_in_ties": 306,
+      "m_tied_values": 147,
+      "gap_units_in_ties": 4199,
+      "gap_tied_values": 116,
+      "share_u32_0": 0.44843155893536124
+    },
+    {
+      "receiver": "qwen3_8b",
+      "benchmark": "arc",
+      "units": 1417,
+      "bf16_computed": 1417,
+      "fp32_computed": 1417,
+      "bf16_u_equal_stored": 1417,
+      "share_u0": 0.7282992237120678,
+      "max_exp_m_u0": 7.47746816632801e-08,
+      "min_exp_m_upos": 6.03779280240582e-08,
+      "min_gap_u0": 16.75,
+      "m_units_in_ties": 14,
+      "m_tied_values": 7,
+      "gap_units_in_ties": 1392,
+      "gap_tied_values": 147,
+      "share_u32_0": 0.7240649258997883
+    },
+    {
+      "receiver": "qwen3_8b",
+      "benchmark": "mmlu_pro",
+      "units": 11641,
+      "bf16_computed": 11641,
+      "fp32_computed": 11641,
+      "bf16_u_equal_stored": 11641,
+      "share_u0": 0.24052916416115455,
+      "max_exp_m_u0": 1.0281729994149749e-07,
+      "min_exp_m_upos": 6.454597202518108e-08,
+      "min_gap_u0": 16.75,
+      "m_units_in_ties": 0,
+      "m_tied_values": 0,
+      "gap_units_in_ties": 11625,
+      "gap_tied_values": 162,
+      "share_u32_0": 0.238123872519543
+    },
+    {
+      "receiver": "qwen3_8b",
+      "benchmark": "obqa",
+      "units": 4208,
+      "bf16_computed": 4208,
+      "fp32_computed": 4208,
+      "bf16_u_equal_stored": 4208,
+      "share_u0": 0.4859790874524715,
+      "max_exp_m_u0": 1.0792092149674736e-07,
+      "min_exp_m_upos": 6.195720979105927e-08,
+      "min_gap_u0": 16.75,
+      "m_units_in_ties": 116,
+      "m_tied_values": 58,
+      "gap_units_in_ties": 4188,
+      "gap_tied_values": 140,
+      "share_u32_0": 0.48193916349809884
+    }
+  ],
+  "settings_a": [
+    {
+      "setting": "small/OBQA/Text",
+      "original_q": "fallback",
+      "q_m": "fallback",
+      "dev_coverage_m": 0.0,
+      "dev_changed_m": 0,
+      "dev_omitted_m": 0,
+      "dev_CP95_m": [
+        NaN,
+        NaN
+      ],
+      "jaccard_m": null,
+      "q_neg_gap": "fallback",
+      "dev_coverage_neg_gap": 0.0,
+      "dev_changed_neg_gap": 0,
+      "dev_omitted_neg_gap": 0,
+      "dev_CP95_neg_gap": [
+        NaN,
+        NaN
+      ],
+      "jaccard_neg_gap": null,
+      "original_dev_coverage": 0.0
+    },
+    {
+      "setting": "small/OBQA/C2C",
+      "original_q": "fallback",
+      "q_m": "fallback",
+      "dev_coverage_m": 0.0,
+      "dev_changed_m": 0,
+      "dev_omitted_m": 0,
+      "dev_CP95_m": [
+        NaN,
+        NaN
+      ],
+      "jaccard_m": null,
+      "q_neg_gap": "fallback",
+      "dev_coverage_neg_gap": 0.0,
+      "dev_changed_neg_gap": 0,
+      "dev_omitted_neg_gap": 0,
+      "dev_CP95_neg_gap": [
+        NaN,
+        NaN
+      ],
+      "jaccard_neg_gap": null,
+      "original_dev_coverage": 0.0
+    },
+    {
+      "setting": "small/ARC/Text",
+      "original_q": "fallback",
+      "q_m": "fallback",
+      "dev_coverage_m": 0.0,
+      "dev_changed_m": 0,
+      "dev_omitted_m": 0,
+      "dev_CP95_m": [
+        NaN,
+        NaN
+      ],
+      "jaccard_m": null,
+      "q_neg_gap": "fallback",
+      "dev_coverage_neg_gap": 0.0,
+      "dev_changed_neg_gap": 0,
+      "dev_omitted_neg_gap": 0,
+      "dev_CP95_neg_gap": [
+        NaN,
+        NaN
+      ],
+      "jaccard_neg_gap": null,
+      "original_dev_coverage": 0.0
+    },
+    {
+      "setting": "small/ARC/C2C",
+      "original_q": "fallback",
+      "q_m": "fallback",
+      "dev_coverage_m": 0.0,
+      "dev_changed_m": 0,
+      "dev_omitted_m": 0,
+      "dev_CP95_m": [
+        NaN,
+        NaN
+      ],
+      "jaccard_m": null,
+      "q_neg_gap": "fallback",
+      "dev_coverage_neg_gap": 0.0,
+      "dev_changed_neg_gap": 0,
+      "dev_omitted_neg_gap": 0,
+      "dev_CP95_neg_gap": [
+        NaN,
+        NaN
+      ],
+      "jaccard_neg_gap": null,
+      "original_dev_coverage": 0.0
+    },
+    {
+      "setting": "medium/OBQA/Text",
+      "original_q": "fallback",
+      "q_m": "fallback",
+      "dev_coverage_m": 0.0,
+      "dev_changed_m": 0,
+      "dev_omitted_m": 0,
+      "dev_CP95_m": [
+        NaN,
+        NaN
+      ],
+      "jaccard_m": null,
+      "q_neg_gap": "fallback",
+      "dev_coverage_neg_gap": 0.0,
+      "dev_changed_neg_gap": 0,
+      "dev_omitted_neg_gap": 0,
+      "dev_CP95_neg_gap": [
+        NaN,
+        NaN
+      ],
+      "jaccard_neg_gap": null,
+      "original_dev_coverage": 0.0
+    },
+    {
+      "setting": "medium/OBQA/C2C",
+      "original_q": 0.55,
+      "q_m": 0.55,
+      "dev_coverage_m": 0.5242587601078167,
+      "dev_changed_m": 11,
+      "dev_omitted_m": 389,
+      "dev_CP95_m": [
+        0.014198835686796031,
+        0.05003236400811133
+      ],
+      "jaccard_m": 0.9974358974358974,
+      "q_neg_gap": 0.5,
+      "dev_coverage_neg_gap": 0.4811320754716981,
+      "dev_changed_neg_gap": 7,
+      "dev_omitted_neg_gap": 357,
+      "dev_CP95_neg_gap": [
+        0.007918829196007558,
+        0.03998068804536817
+      ],
+      "jaccard_neg_gap": 0.9153846153846154,
+      "original_dev_coverage": 0.5256064690026954
+    },
+    {
+      "setting": "medium/ARC/Text",
+      "original_q": "fallback",
+      "q_m": "fallback",
+      "dev_coverage_m": 0.0,
+      "dev_changed_m": 0,
+      "dev_omitted_m": 0,
+      "dev_CP95_m": [
+        NaN,
+        NaN
+      ],
+      "jaccard_m": null,
+      "q_neg_gap": "fallback",
+      "dev_coverage_neg_gap": 0.0,
+      "dev_changed_neg_gap": 0,
+      "dev_omitted_neg_gap": 0,
+      "dev_CP95_neg_gap": [
+        NaN,
+        NaN
+      ],
+      "jaccard_neg_gap": null,
+      "original_dev_coverage": 0.0
+    },
+    {
+      "setting": "medium/ARC/C2C",
+      "original_q": 0.6,
+      "q_m": 0.6,
+      "dev_coverage_m": 0.6254180602006689,
+      "dev_changed_m": 3,
+      "dev_omitted_m": 187,
+      "dev_CP95_m": [
+        0.003320705435971421,
+        0.04616568007291618
+      ],
+      "jaccard_m": 0.9894179894179894,
+      "q_neg_gap": 0.6,
+      "dev_coverage_neg_gap": 0.6254180602006689,
+      "dev_changed_neg_gap": 3,
+      "dev_omitted_neg_gap": 187,
+      "dev_CP95_neg_gap": [
+        0.003320705435971421,
+        0.04616568007291618
+      ],
+      "jaccard_neg_gap": 0.9894179894179894,
+      "original_dev_coverage": 0.6321070234113713
+    },
+    {
+      "setting": "large/OBQA/Text",
+      "original_q": 0.8,
+      "q_m": 0.8,
+      "dev_coverage_m": 0.77088948787062,
+      "dev_changed_m": 19,
+      "dev_omitted_m": 572,
+      "dev_CP95_m": [
+        0.0201148221780326,
+        0.051387485520858665
+      ],
+      "jaccard_m": 1.0,
+      "q_neg_gap": 0.8,
+      "dev_coverage_neg_gap": 0.7749326145552561,
+      "dev_changed_neg_gap": 19,
+      "dev_omitted_neg_gap": 575,
+      "dev_CP95_neg_gap": [
+        0.02000926478761058,
+        0.051121896491591504
+      ],
+      "jaccard_neg_gap": 0.9947826086956522,
+      "original_dev_coverage": 0.77088948787062
+    },
+    {
+      "setting": "large/OBQA/C2C",
+      "original_q": 0.8,
+      "q_m": 0.8,
+      "dev_coverage_m": 0.77088948787062,
+      "dev_changed_m": 13,
+      "dev_omitted_m": 572,
+      "dev_CP95_m": [
+        0.012155514944778248,
+        0.03855077573314515
+      ],
+      "jaccard_m": 1.0,
+      "q_neg_gap": 0.8,
+      "dev_coverage_neg_gap": 0.7749326145552561,
+      "dev_changed_neg_gap": 13,
+      "dev_omitted_neg_gap": 575,
+      "dev_CP95_neg_gap": [
+        0.012091811036564473,
+        0.038351268558475114
+      ],
+      "jaccard_neg_gap": 0.9947826086956522,
+      "original_dev_coverage": 0.77088948787062
+    },
+    {
+      "setting": "large/ARC/Text",
+      "original_q": 0.95,
+      "q_m": 0.95,
+      "dev_coverage_m": 0.9498327759197325,
+      "dev_changed_m": 9,
+      "dev_omitted_m": 284,
+      "dev_CP95_m": [
+        0.014591145519933221,
+        0.05930334123334969
+      ],
+      "jaccard_m": 1.0,
+      "q_neg_gap": 0.95,
+      "dev_coverage_neg_gap": 0.9498327759197325,
+      "dev_changed_neg_gap": 9,
+      "dev_omitted_neg_gap": 284,
+      "dev_CP95_neg_gap": [
+        0.014591145519933221,
+        0.05930334123334969
+      ],
+      "jaccard_neg_gap": 1.0,
+      "original_dev_coverage": 0.9498327759197325
+    },
+    {
+      "setting": "large/ARC/C2C",
+      "original_q": 0.9,
+      "q_m": 0.9,
+      "dev_coverage_m": 0.903010033444816,
+      "dev_changed_m": 3,
+      "dev_omitted_m": 270,
+      "dev_CP95_m": [
+        0.0022972658375898353,
+        0.032126193689306796
+      ],
+      "jaccard_m": 1.0,
+      "q_neg_gap": 0.9,
+      "dev_coverage_neg_gap": 0.903010033444816,
+      "dev_changed_neg_gap": 3,
+      "dev_omitted_neg_gap": 270,
+      "dev_CP95_neg_gap": [
+        0.0022972658375898353,
+        0.032126193689306796
+      ],
+      "jaccard_neg_gap": 1.0,
+      "original_dev_coverage": 0.903010033444816
+    },
+    {
+      "setting": "large/MMLU-Pro/Text",
+      "original_q": 0.4,
+      "q_m": 0.4,
+      "dev_coverage_m": 0.40477092010602045,
+      "dev_changed_m": 40,
+      "dev_omitted_m": 1069,
+      "dev_CP95_m": [
+        0.026864122170024176,
+        0.050606521808391244
+      ],
+      "jaccard_m": 1.0,
+      "q_neg_gap": 0.4,
+      "dev_coverage_neg_gap": 0.41234380916319574,
+      "dev_changed_neg_gap": 41,
+      "dev_omitted_neg_gap": 1089,
+      "dev_CP95_neg_gap": [
+        0.027150684007512114,
+        0.05073096038818542
+      ],
+      "jaccard_neg_gap": 0.9816345270890725,
+      "original_dev_coverage": 0.40477092010602045
+    },
+    {
+      "setting": "large/MMLU-Pro/C2C",
+      "original_q": 0.4,
+      "q_m": 0.4,
+      "dev_coverage_m": 0.40477092010602045,
+      "dev_changed_m": 37,
+      "dev_omitted_m": 1069,
+      "dev_CP95_m": [
+        0.02448468599592269,
+        0.047394159674553994
+      ],
+      "jaccard_m": 1.0,
+      "q_neg_gap": 0.4,
+      "dev_coverage_neg_gap": 0.41234380916319574,
+      "dev_changed_neg_gap": 40,
+      "dev_omitted_neg_gap": 1089,
+      "dev_CP95_neg_gap": [
+        0.026368338201406664,
+        0.04968338184096884
+      ],
+      "jaccard_neg_gap": 0.9816345270890725,
+      "original_dev_coverage": 0.40477092010602045
+    },
+    {
+      "setting": "small/MMLU-Pro/Text",
+      "original_q": "fallback",
+      "q_m": "fallback",
+      "dev_coverage_m": 0.0,
+      "dev_changed_m": 0,
+      "dev_omitted_m": 0,
+      "dev_CP95_m": [
+        NaN,
+        NaN
+      ],
+      "jaccard_m": null,
+      "q_neg_gap": "fallback",
+      "dev_coverage_neg_gap": 0.0,
+      "dev_changed_neg_gap": 0,
+      "dev_omitted_neg_gap": 0,
+      "dev_CP95_neg_gap": [
+        NaN,
+        NaN
+      ],
+      "jaccard_neg_gap": null,
+      "original_dev_coverage": 0.0
+    },
+    {
+      "setting": "small/MMLU-Pro/C2C",
+      "original_q": "fallback",
+      "q_m": "fallback",
+      "dev_coverage_m": 0.0,
+      "dev_changed_m": 0,
+      "dev_omitted_m": 0,
+      "dev_CP95_m": [
+        NaN,
+        NaN
+      ],
+      "jaccard_m": null,
+      "q_neg_gap": "fallback",
+      "dev_coverage_neg_gap": 0.0,
+      "dev_changed_neg_gap": 0,
+      "dev_omitted_neg_gap": 0,
+      "dev_CP95_neg_gap": [
+        NaN,
+        NaN
+      ],
+      "jaccard_neg_gap": null,
+      "original_dev_coverage": 0.0
+    },
+    {
+      "setting": "medium/MMLU-Pro/Text",
+      "original_q": "fallback",
+      "q_m": "fallback",
+      "dev_coverage_m": 0.0,
+      "dev_changed_m": 0,
+      "dev_omitted_m": 0,
+      "dev_CP95_m": [
+        NaN,
+        NaN
+      ],
+      "jaccard_m": null,
+      "q_neg_gap": "fallback",
+      "dev_coverage_neg_gap": 0.0,
+      "dev_changed_neg_gap": 0,
+      "dev_omitted_neg_gap": 0,
+      "dev_CP95_neg_gap": [
+        NaN,
+        NaN
+      ],
+      "jaccard_neg_gap": null,
+      "original_dev_coverage": 0.0
+    },
+    {
+      "setting": "medium/MMLU-Pro/C2C",
+      "original_q": "fallback",
+      "q_m": "fallback",
+      "dev_coverage_m": 0.0,
+      "dev_changed_m": 0,
+      "dev_omitted_m": 0,
+      "dev_CP95_m": [
+        NaN,
+        NaN
+      ],
+      "jaccard_m": null,
+      "q_neg_gap": "fallback",
+      "dev_coverage_neg_gap": 0.0,
+      "dev_changed_neg_gap": 0,
+      "dev_omitted_neg_gap": 0,
+      "dev_CP95_neg_gap": [
+        NaN,
+        NaN
+      ],
+      "jaccard_neg_gap": null,
+      "original_dev_coverage": 0.0
+    },
+    {
+      "setting": "X1-Llama/OBQA/Text",
+      "original_q": "fallback",
+      "q_m": "fallback",
+      "dev_coverage_m": 0.0,
+      "dev_changed_m": 0,
+      "dev_omitted_m": 0,
+      "dev_CP95_m": [
+        NaN,
+        NaN
+      ],
+      "jaccard_m": null,
+      "q_neg_gap": "fallback",
+      "dev_coverage_neg_gap": 0.0,
+      "dev_changed_neg_gap": 0,
+      "dev_omitted_neg_gap": 0,
+      "dev_CP95_neg_gap": [
+        NaN,
+        NaN
+      ],
+      "jaccard_neg_gap": null,
+      "original_dev_coverage": 0.0
+    },
+    {
+      "setting": "X1-Llama/OBQA/C2C",
+      "original_q": "fallback",
+      "q_m": "fallback",
+      "dev_coverage_m": 0.0,
+      "dev_changed_m": 0,
+      "dev_omitted_m": 0,
+      "dev_CP95_m": [
+        NaN,
+        NaN
+      ],
+      "jaccard_m": null,
+      "q_neg_gap": "fallback",
+      "dev_coverage_neg_gap": 0.0,
+      "dev_changed_neg_gap": 0,
+      "dev_omitted_neg_gap": 0,
+      "dev_CP95_neg_gap": [
+        NaN,
+        NaN
+      ],
+      "jaccard_neg_gap": null,
+      "original_dev_coverage": 0.0
+    },
+    {
+      "setting": "X1-Llama/ARC/Text",
+      "original_q": "fallback",
+      "q_m": "fallback",
+      "dev_coverage_m": 0.0,
+      "dev_changed_m": 0,
+      "dev_omitted_m": 0,
+      "dev_CP95_m": [
+        NaN,
+        NaN
+      ],
+      "jaccard_m": null,
+      "q_neg_gap": "fallback",
+      "dev_coverage_neg_gap": 0.0,
+      "dev_changed_neg_gap": 0,
+      "dev_omitted_neg_gap": 0,
+      "dev_CP95_neg_gap": [
+        NaN,
+        NaN
+      ],
+      "jaccard_neg_gap": null,
+      "original_dev_coverage": 0.0
+    },
+    {
+      "setting": "X1-Llama/ARC/C2C",
+      "original_q": "fallback",
+      "q_m": "fallback",
+      "dev_coverage_m": 0.0,
+      "dev_changed_m": 0,
+      "dev_omitted_m": 0,
+      "dev_CP95_m": [
+        NaN,
+        NaN
+      ],
+      "jaccard_m": null,
+      "q_neg_gap": "fallback",
+      "dev_coverage_neg_gap": 0.0,
+      "dev_changed_neg_gap": 0,
+      "dev_omitted_neg_gap": 0,
+      "dev_CP95_neg_gap": [
+        NaN,
+        NaN
+      ],
+      "jaccard_neg_gap": null,
+      "original_dev_coverage": 0.0
+    },
+    {
+      "setting": "large/OBQA/Text+fact",
+      "original_q": 0.75,
+      "q_m": 0.75,
+      "dev_coverage_m": 0.7223719676549866,
+      "dev_changed_m": 13,
+      "dev_omitted_m": 536,
+      "dev_CP95_m": [
+        0.012975852337398362,
+        0.041117534187256916
+      ],
+      "jaccard_m": 1.0,
+      "q_neg_gap": 0.75,
+      "dev_coverage_neg_gap": 0.7237196765498652,
+      "dev_changed_neg_gap": 13,
+      "dev_omitted_neg_gap": 537,
+      "dev_CP95_neg_gap": [
+        0.012951572835366396,
+        0.041041628912522075
+      ],
+      "jaccard_neg_gap": 0.9981378026070763,
+      "original_dev_coverage": 0.7223719676549866
+    }
+  ],
+  "settings_b": [
+    {
+      "setting": "small/OBQA/Text",
+      "original_q": "fallback",
+      "original_tau": null,
+      "q_full_procedure_fp32": "fallback",
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "small/OBQA/C2C",
+      "original_q": "fallback",
+      "original_tau": null,
+      "q_full_procedure_fp32": "fallback",
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "small/ARC/Text",
+      "original_q": "fallback",
+      "original_tau": null,
+      "q_full_procedure_fp32": "fallback",
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "small/ARC/C2C",
+      "original_q": "fallback",
+      "original_tau": null,
+      "q_full_procedure_fp32": "fallback",
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "medium/OBQA/Text",
+      "original_q": "fallback",
+      "original_tau": null,
+      "q_full_procedure_fp32": "fallback",
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "medium/OBQA/C2C",
+      "original_q": 0.55,
+      "original_tau": 1.3113021850585938e-06,
+      "cal_n_frozen_tau": 745,
+      "cal_k_frozen_tau": 19,
+      "cal_p_frozen_tau": 0.0005920314211453805,
+      "frozen_tau_still_accepted": true,
+      "dev_coverage_u32": 0.5350404312668463,
+      "dev_coverage_original": 0.5256064690026954,
+      "dev_changed_u32": 11,
+      "dev_omitted_u32": 397,
+      "dev_CP95_u32": [
+        0.013911060975894434,
+        0.049035284990334736
+      ],
+      "jaccard_u32": 0.9724310776942355,
+      "q_full_procedure_fp32": 0.55,
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "medium/ARC/Text",
+      "original_q": "fallback",
+      "original_tau": null,
+      "q_full_procedure_fp32": "fallback",
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "medium/ARC/C2C",
+      "original_q": 0.6,
+      "original_tau": 3.5762786865234375e-07,
+      "cal_n_frozen_tau": 288,
+      "cal_k_frozen_tau": 2,
+      "cal_p_frozen_tau": 5.0173468690969704e-05,
+      "frozen_tau_still_accepted": true,
+      "dev_coverage_u32": 0.6254180602006689,
+      "dev_coverage_original": 0.6321070234113713,
+      "dev_changed_u32": 3,
+      "dev_omitted_u32": 187,
+      "dev_CP95_u32": [
+        0.003320705435971421,
+        0.04616568007291618
+      ],
+      "jaccard_u32": 0.9894179894179894,
+      "q_full_procedure_fp32": 0.6,
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "large/OBQA/Text",
+      "original_q": 0.8,
+      "original_tau": 0.001170039176940918,
+      "cal_n_frozen_tau": 1066,
+      "cal_k_frozen_tau": 19,
+      "cal_p_frozen_tau": 3.2119805425291636e-08,
+      "frozen_tau_still_accepted": true,
+      "dev_coverage_u32": 0.77088948787062,
+      "dev_coverage_original": 0.77088948787062,
+      "dev_changed_u32": 19,
+      "dev_omitted_u32": 572,
+      "dev_CP95_u32": [
+        0.0201148221780326,
+        0.051387485520858665
+      ],
+      "jaccard_u32": 0.9895652173913043,
+      "q_full_procedure_fp32": 0.8,
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "large/OBQA/C2C",
+      "original_q": 0.8,
+      "original_tau": 0.001170039176940918,
+      "cal_n_frozen_tau": 1066,
+      "cal_k_frozen_tau": 22,
+      "cal_p_frozen_tau": 6.305043849704124e-07,
+      "frozen_tau_still_accepted": true,
+      "dev_coverage_u32": 0.77088948787062,
+      "dev_coverage_original": 0.77088948787062,
+      "dev_changed_u32": 13,
+      "dev_omitted_u32": 572,
+      "dev_CP95_u32": [
+        0.012155514944778248,
+        0.03855077573314515
+      ],
+      "jaccard_u32": 0.9895652173913043,
+      "q_full_procedure_fp32": 0.8,
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "large/ARC/Text",
+      "original_q": 0.95,
+      "original_tau": 0.01800704002380371,
+      "cal_n_frozen_tau": 421,
+      "cal_k_frozen_tau": 4,
+      "cal_p_frozen_tau": 5.008654866234748e-06,
+      "frozen_tau_still_accepted": true,
+      "dev_coverage_u32": 0.9464882943143813,
+      "dev_coverage_original": 0.9498327759197325,
+      "dev_changed_u32": 9,
+      "dev_omitted_u32": 283,
+      "dev_CP95_u32": [
+        0.01464306501726977,
+        0.05950987031149499
+      ],
+      "jaccard_u32": 0.9964788732394366,
+      "q_full_procedure_fp32": 0.95,
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "large/ARC/C2C",
+      "original_q": 0.9,
+      "original_tau": 0.0007095932960510254,
+      "cal_n_frozen_tau": 405,
+      "cal_k_frozen_tau": 7,
+      "cal_p_frozen_tau": 0.0005211798309613595,
+      "frozen_tau_still_accepted": true,
+      "dev_coverage_u32": 0.8996655518394648,
+      "dev_coverage_original": 0.903010033444816,
+      "dev_changed_u32": 3,
+      "dev_omitted_u32": 269,
+      "dev_CP95_u32": [
+        0.002305827926398838,
+        0.03224433992903975
+      ],
+      "jaccard_u32": 0.9962962962962963,
+      "q_full_procedure_fp32": 0.9,
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "large/MMLU-Pro/Text",
+      "original_q": 0.4,
+      "original_tau": 3.838539123535156e-05,
+      "cal_n_frozen_tau": 2349,
+      "cal_k_frozen_tau": 66,
+      "cal_p_frozen_tau": 8.99000999775e-08,
+      "frozen_tau_still_accepted": true,
+      "dev_coverage_u32": 0.40136312003029156,
+      "dev_coverage_original": 0.40477092010602045,
+      "dev_changed_u32": 40,
+      "dev_omitted_u32": 1060,
+      "dev_CP95_u32": [
+        0.027093359626105262,
+        0.05103322015188091
+      ],
+      "jaccard_u32": 0.9767873723305478,
+      "q_full_procedure_fp32": 0.4,
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "large/MMLU-Pro/C2C",
+      "original_q": 0.4,
+      "original_tau": 3.838539123535156e-05,
+      "cal_n_frozen_tau": 2349,
+      "cal_k_frozen_tau": 73,
+      "cal_p_frozen_tau": 4.483205480846789e-06,
+      "frozen_tau_still_accepted": true,
+      "dev_coverage_u32": 0.40136312003029156,
+      "dev_coverage_original": 0.40477092010602045,
+      "dev_changed_u32": 36,
+      "dev_omitted_u32": 1060,
+      "dev_CP95_u32": [
+        0.023897882733062,
+        0.046709988442712486
+      ],
+      "jaccard_u32": 0.9767873723305478,
+      "q_full_procedure_fp32": 0.4,
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "small/MMLU-Pro/Text",
+      "original_q": "fallback",
+      "original_tau": null,
+      "q_full_procedure_fp32": "fallback",
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "small/MMLU-Pro/C2C",
+      "original_q": "fallback",
+      "original_tau": null,
+      "q_full_procedure_fp32": "fallback",
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "medium/MMLU-Pro/Text",
+      "original_q": "fallback",
+      "original_tau": null,
+      "q_full_procedure_fp32": "fallback",
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "medium/MMLU-Pro/C2C",
+      "original_q": "fallback",
+      "original_tau": null,
+      "q_full_procedure_fp32": "fallback",
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "X1-Llama/OBQA/Text",
+      "original_q": "fallback",
+      "original_tau": null,
+      "q_full_procedure_fp32": "fallback",
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "X1-Llama/OBQA/C2C",
+      "original_q": "fallback",
+      "original_tau": null,
+      "q_full_procedure_fp32": "fallback",
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "X1-Llama/ARC/Text",
+      "original_q": "fallback",
+      "original_tau": null,
+      "q_full_procedure_fp32": "fallback",
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "X1-Llama/ARC/C2C",
+      "original_q": "fallback",
+      "original_tau": null,
+      "q_full_procedure_fp32": "fallback",
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "large/OBQA/Text+fact",
+      "original_q": 0.75,
+      "original_tau": 0.0002611875534057617,
+      "cal_n_frozen_tau": 999,
+      "cal_k_frozen_tau": 23,
+      "cal_p_frozen_tau": 1.1158052326655015e-05,
+      "frozen_tau_still_accepted": true,
+      "dev_coverage_u32": 0.7223719676549866,
+      "dev_coverage_original": 0.7223719676549866,
+      "dev_changed_u32": 13,
+      "dev_omitted_u32": 536,
+      "dev_CP95_u32": [
+        0.012975852337398362,
+        0.041117534187256916
+      ],
+      "jaccard_u32": 0.9962756052141527,
+      "q_full_procedure_fp32": 0.75,
+      "MATERIAL_CHANGE": false,
+      "material_reasons": []
+    },
+    {
+      "setting": "medium/OBQA/C2C at q=.50",
+      "original_q": 0.5,
+      "original_tau": 2.384185791015625e-07,
+      "cal_n_frozen_tau": 673,
+      "cal_k_frozen_tau": 10,
+      "cal_p_frozen_tau": 1.1264367875618438e-06,
+      "frozen_tau_still_accepted": true,
+      "dev_coverage_u32": 0.48517520215633425,
+      "dev_coverage_original": 0.4784366576819407,
+      "dev_changed_u32": 7,
+      "dev_omitted_u32": 360,
+      "dev_CP95_u32": [
+        0.007852543551021744,
+        0.03965096955471794
+      ],
+      "jaccard_u32": 0.9696969696969697
+    }
+  ],
+  "prefill_env": {
+    "qwen3_0_6b_bf16_q06b_bf16.env.json": {
+      "receiver": "qwen3_0_6b",
+      "dtype": "bf16",
+      "attn_implementation": "sdpa",
+      "sdp_flags": {
+        "flash": true,
+        "mem_efficient": true,
+        "math": true
+      },
+      "sdpa_kernels_first_row": [
+        "void (anonymous namespace)::softmax_warp_forward<float, float, float, 2, true, false>(float*, float const*, int, int, int, bool const*, int, bool)",
+        "void pytorch_flash::flash_fwd_kernel<pytorch_flash::Flash_fwd_kernel_traits<128, 128, 64, 4, false, false, cutlass::bfloat16_t, pytorch_flash::Flash_kernel_traits<128, 128, 64, 4, cutlass::bfloat16_t> >, false, true, false, false, false, true, false>(pytorch_flash::Flash_fwd_params)"
+      ],
+      "tf32": {
+        "matmul": false,
+        "cudnn": false
+      }
+    },
+    "qwen3_0_6b_fp32_q06b_fp32.env.json": {
+      "receiver": "qwen3_0_6b",
+      "dtype": "fp32",
+      "attn_implementation": "sdpa",
+      "sdp_flags": {
+        "flash": true,
+        "mem_efficient": true,
+        "math": true
+      },
+      "sdpa_kernels_first_row": [
+        "fmha_cutlassF_f32_aligned_64x128_rf_sm80(PyTorchMemEffAttention::AttentionKernel<float, cutlass::arch::Sm80, true, 64, 128, 128, true, true>::Params)",
+        "void (anonymous namespace)::softmax_warp_forward<float, float, float, 2, true, false>(float*, float const*, int, int, int, bool const*, int, bool)"
+      ],
+      "tf32": {
+        "matmul": false,
+        "cudnn": false
+      }
+    },
+    "qwen3_1_7b_bf16_q17b_bf16.env.json": {
+      "receiver": "qwen3_1_7b",
+      "dtype": "bf16",
+      "attn_implementation": "sdpa",
+      "sdp_flags": {
+        "flash": true,
+        "mem_efficient": true,
+        "math": true
+      },
+      "sdpa_kernels_first_row": [
+        "void (anonymous namespace)::softmax_warp_forward<float, float, float, 2, true, false>(float*, float const*, int, int, int, bool const*, int, bool)",
+        "void pytorch_flash::flash_fwd_kernel<pytorch_flash::Flash_fwd_kernel_traits<128, 128, 64, 4, false, false, cutlass::bfloat16_t, pytorch_flash::Flash_kernel_traits<128, 128, 64, 4, cutlass::bfloat16_t> >, false, true, false, false, false, true, false>(pytorch_flash::Flash_fwd_params)"
+      ],
+      "tf32": {
+        "matmul": false,
+        "cudnn": false
+      }
+    },
+    "qwen3_1_7b_fp32_q17b_fp32.env.json": {
+      "receiver": "qwen3_1_7b",
+      "dtype": "fp32",
+      "attn_implementation": "sdpa",
+      "sdp_flags": {
+        "flash": true,
+        "mem_efficient": true,
+        "math": true
+      },
+      "sdpa_kernels_first_row": [
+        "fmha_cutlassF_f32_aligned_64x128_rf_sm80(PyTorchMemEffAttention::AttentionKernel<float, cutlass::arch::Sm80, true, 64, 128, 128, true, true>::Params)",
+        "void (anonymous namespace)::softmax_warp_forward<float, float, float, 2, true, false>(float*, float const*, int, int, int, bool const*, int, bool)"
+      ],
+      "tf32": {
+        "matmul": false,
+        "cudnn": false
+      }
+    },
+    "qwen3_8b_bf16_q8b_bf16.env.json": {
+      "receiver": "qwen3_8b",
+      "dtype": "bf16",
+      "attn_implementation": "sdpa",
+      "sdp_flags": {
+        "flash": true,
+        "mem_efficient": true,
+        "math": true
+      },
+      "sdpa_kernels_first_row": [
+        "void (anonymous namespace)::softmax_warp_forward<float, float, float, 2, true, false>(float*, float const*, int, int, int, bool const*, int, bool)",
+        "void pytorch_flash::flash_fwd_kernel<pytorch_flash::Flash_fwd_kernel_traits<128, 128, 64, 4, false, false, cutlass::bfloat16_t, pytorch_flash::Flash_kernel_traits<128, 128, 64, 4, cutlass::bfloat16_t> >, false, true, false, false, false, true, false>(pytorch_flash::Flash_fwd_params)"
+      ],
+      "tf32": {
+        "matmul": false,
+        "cudnn": false
+      }
+    },
+    "qwen3_8b_fp32_q8b_fp32_s0.env.json": {
+      "receiver": "qwen3_8b",
+      "dtype": "fp32",
+      "attn_implementation": "sdpa",
+      "sdp_flags": {
+        "flash": true,
+        "mem_efficient": true,
+        "math": true
+      },
+      "sdpa_kernels_first_row": [
+        "fmha_cutlassF_f32_aligned_64x128_rf_sm80(PyTorchMemEffAttention::AttentionKernel<float, cutlass::arch::Sm80, true, 64, 128, 128, true, true>::Params)",
+        "void (anonymous namespace)::softmax_warp_forward<float, float, float, 2, true, false>(float*, float const*, int, int, int, bool const*, int, bool)"
+      ],
+      "tf32": {
+        "matmul": false,
+        "cudnn": false
+      }
+    },
+    "qwen3_8b_fp32_q8b_fp32_s1.env.json": {
+      "receiver": "qwen3_8b",
+      "dtype": "fp32",
+      "attn_implementation": "sdpa",
+      "sdp_flags": {
+        "flash": true,
+        "mem_efficient": true,
+        "math": true
+      },
+      "sdpa_kernels_first_row": [
+        "fmha_cutlassF_f32_aligned_64x128_rf_sm80(PyTorchMemEffAttention::AttentionKernel<float, cutlass::arch::Sm80, true, 64, 128, 128, true, true>::Params)",
+        "void (anonymous namespace)::softmax_warp_forward<float, float, float, 2, true, false>(float*, float const*, int, int, int, bool const*, int, bool)"
+      ],
+      "tf32": {
+        "matmul": false,
+        "cudnn": false
+      }
+    },
+    "qwen3_8b_fp32_q8b_fp32_s2.env.json": {
+      "receiver": "qwen3_8b",
+      "dtype": "fp32",
+      "attn_implementation": "sdpa",
+      "sdp_flags": {
+        "flash": true,
+        "mem_efficient": true,
+        "math": true
+      },
+      "sdpa_kernels_first_row": [
+        "fmha_cutlassF_f32_aligned_64x128_rf_sm80(PyTorchMemEffAttention::AttentionKernel<float, cutlass::arch::Sm80, true, 64, 128, 128, true, true>::Params)",
+        "void (anonymous namespace)::softmax_warp_forward<float, float, float, 2, true, false>(float*, float const*, int, int, int, bool const*, int, bool)"
+      ],
+      "tf32": {
+        "matmul": false,
+        "cudnn": false
+      }
+    },
+    "qwen3_8b_fp32_q8b_fp32_s3.env.json": {
+      "receiver": "qwen3_8b",
+      "dtype": "fp32",
+      "attn_implementation": "sdpa",
+      "sdp_flags": {
+        "flash": true,
+        "mem_efficient": true,
+        "math": true
+      },
+      "sdpa_kernels_first_row": [
+        "fmha_cutlassF_f32_aligned_64x128_rf_sm80(PyTorchMemEffAttention::AttentionKernel<float, cutlass::arch::Sm80, true, 64, 128, 128, true, true>::Params)",
+        "void (anonymous namespace)::softmax_warp_forward<float, float, float, 2, true, false>(float*, float const*, int, int, int, bool const*, int, bool)"
+      ],
+      "tf32": {
+        "matmul": false,
+        "cudnn": false
+      }
+    },
+    "qwen3_8b_fp32_q8b_fp32_s4.env.json": {
+      "receiver": "qwen3_8b",
+      "dtype": "fp32",
+      "attn_implementation": "sdpa",
+      "sdp_flags": {
+        "flash": true,
+        "mem_efficient": true,
+        "math": true
+      },
+      "sdpa_kernels_first_row": [
+        "fmha_cutlassF_f32_aligned_64x128_rf_sm80(PyTorchMemEffAttention::AttentionKernel<float, cutlass::arch::Sm80, true, 64, 128, 128, true, true>::Params)",
+        "void (anonymous namespace)::softmax_warp_forward<float, float, float, 2, true, false>(float*, float const*, int, int, int, bool const*, int, bool)"
+      ],
+      "tf32": {
+        "matmul": false,
+        "cudnn": false
+      }
+    }
+  }
+}

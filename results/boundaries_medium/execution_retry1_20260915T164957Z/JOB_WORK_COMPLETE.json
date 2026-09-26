@@ -1,0 +1,26 @@
+{
+  "utc": "2026-09-15T19:33:47.068606+00:00",
+  "job_id": "run002",
+  "status": "COMPLETE_MEDIUM_STAGE1",
+  "phases": [
+    {
+      "phase": "execute.py",
+      "exit_code": 0,
+      "wall_seconds": 9330.308259665035,
+      "log": "$DATA_DIR/runs/iclr2027_p2/run003/execute.log"
+    },
+    {
+      "phase": "analyze.py",
+      "exit_code": 0,
+      "wall_seconds": 28.92743641906418,
+      "log": "$DATA_DIR/runs/iclr2027_p2/run003/analyze.log"
+    },
+    {
+      "phase": "validate_results.py",
+      "exit_code": 0,
+      "wall_seconds": 3.6905796111095697,
+      "log": "$DATA_DIR/runs/iclr2027_p2/run003/validate_results.log"
+    }
+  ],
+  "CPU_children_seconds": 8999.377676
+}

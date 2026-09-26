@@ -1,0 +1,56 @@
+[
+  {
+    "variant": "V0",
+    "pos": 0,
+    "id": "10-1005",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nSoil is produced naturally when, over a period of many years\n\nChoices:\nA. stones are rock solid\nB. stones are blown up\nC. stones are vaporized by storms\nD. stones are worn down\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V1",
+    "pos": 0,
+    "id": "10-1005",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nSoil is produced naturally when, over a period of many years\n\nChoices:\nA. stones are worn down\nB. stones are rock solid\nC. stones are blown up\nD. stones are vaporized by storms\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V2",
+    "pos": 0,
+    "id": "10-1005",
+    "rendered": "<|im_start|>user\nIn one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nSoil is produced naturally when, over a period of many years\n\nChoices:\nA. stones are rock solid\nB. stones are blown up\nC. stones are vaporized by storms\nD. stones are worn down\n\n\nDo NOT directly solve or give answer to the question.<|im_end|>\n<|im_start|>assistant\nA. plants<|im_end|>\n<|im_start|>user\nAccurately answer the following question:\n\nSoil is produced naturally when, over a period of many years\n\nChoices:\nA. stones are rock solid\nB. stones are blown up\nC. stones are vaporized by storms\nD. stones are worn down\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V0",
+    "pos": 1,
+    "id": "10-1009",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nA sandbar is in the shallow portion of water where\n\nChoices:\nA. water is bloody\nB. water is harder\nC. water is falling\nD. water adjusts things\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V1",
+    "pos": 1,
+    "id": "10-1009",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nA sandbar is in the shallow portion of water where\n\nChoices:\nA. water adjusts things\nB. water is bloody\nC. water is harder\nD. water is falling\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V2",
+    "pos": 1,
+    "id": "10-1009",
+    "rendered": "<|im_start|>user\nIn one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nA sandbar is in the shallow portion of water where\n\nChoices:\nA. water is bloody\nB. water is harder\nC. water is falling\nD. water adjusts things\n\n\nDo NOT directly solve or give answer to the question.<|im_end|>\n<|im_start|>assistant\nA light bulb will turn on when it receives electrical current.<|im_end|>\n<|im_start|>user\nAccurately answer the following question:\n\nA sandbar is in the shallow portion of water where\n\nChoices:\nA. water is bloody\nB. water is harder\nC. water is falling\nD. water adjusts things\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V0",
+    "pos": 2,
+    "id": "10-1018",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nSome monkey babies may be\n\nChoices:\nA. turned into canned meat\nB. taken to a hospital\nC. run out of the pact\nD. taken care with two parents\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V1",
+    "pos": 2,
+    "id": "10-1018",
+    "rendered": "<|im_start|>user\nAccurately answer the following question:\n\nSome monkey babies may be\n\nChoices:\nA. taken care with two parents\nB. turned into canned meat\nC. taken to a hospital\nD. run out of the pact\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  },
+  {
+    "variant": "V2",
+    "pos": 2,
+    "id": "10-1018",
+    "rendered": "<|im_start|>user\nIn one clear sentence, describe the most essential background knowledge needed to answer the question:\n\nSome monkey babies may be\n\nChoices:\nA. turned into canned meat\nB. taken to a hospital\nC. run out of the pact\nD. taken care with two parents\n\n\nDo NOT directly solve or give answer to the question.<|im_end|>\n<|im_start|>assistant\nThe sun is a star, which is a large, hot, and luminous celestial body that emits light and heat due to nuclear fusion reactions in its core.<|im_end|>\n<|im_start|>user\nAccurately answer the following question:\n\nSome monkey babies may be\n\nChoices:\nA. turned into canned meat\nB. taken to a hospital\nC. run out of the pact\nD. taken care with two parents\n\n\nInstructions:\n- Carefully read the question and all options.\n- Select the single most correct answer.\n- Respond ONLY in the following format: \"The correct answer is A/B/C/D\".\n- Do not include any explanations, additional text, or punctuation besides the answer.\n\nThe correct answer is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n"
+  }
+]

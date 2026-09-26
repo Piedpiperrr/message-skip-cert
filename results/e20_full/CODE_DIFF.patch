@@ -1,0 +1,1257 @@
+# CODE_DIFF.patch — E20-full code against the pilot's CODE_FREEZE (P2_R8_E20P_20260921T224653Z/notes/CODE_FREEZE.json).
+# Unchanged and imported from the pilot directory: src/e20_prompts.py, src/e20_extract.py, src/e20_exec_common.py (prompts, extraction,
+# normalization, scores, model specs). Byte-identical copies used only to rebuild the pool: pool/src/e20_pool.py, pool/src/e20_extract.py.
+# In src/e20f_exec.py the pilot functions log, sync, FakeModel, load_model, free, special_ids, e20_helper, e20_receiver are verbatim (asserted).
+--- pilot/src/e20_exec.py
++++ e20f/src/e20f_exec.py
+@@ -1,32 +1,30 @@
+-"""E20-pilot GPU driver: one process per GPU (8 per job), sharded by question. No gold is read anywhere (the pilot files carry no answers).
+-
+-Rank 0, before anyone generates E20 outputs (GATE):
+-  (i)  preflight: the reused frozen Text pipeline (helper Qwen2.5-7B + receiver Qwen3-8B on one GPU, 64-token frozen paths, the E10 preflight
+-       code) must reproduce 16 stored large-pair OBQA fit rows bitwise on receiver-only and Text; the reused X3 Llama path (add_special_tokens
+-       =False, saved helper message) must reproduce 16 stored X3 OBQA rows bitwise on R and T. Decode tokens/s measured. Job B skips (i) if
+-       records/jobA/PREFLIGHT.json says PASS.
+-  (ii) smoke: first 8 pilot questions of each dataset, receiver-only E20 path, Qwen3 and Llama: a dataset is dropped if, for either receiver,
+-       > 2/8 outputs are INVALID or the median answer length (words of the normalized answer; INVALID = 0) is > 10.
+-  Projection: elapsed + measured load times + worst case (256 helper tokens, 32 receiver tokens per generation) at the measured rates for this
+-  rank's shard; if > 45 min, every rank uses the first 300 pilot questions of each dataset (recorded in GATE.json -> DEVIATIONS.md).
+-  Writes PREFLIGHT.json, smoke_rank0.jsonl, GATE.json. Other ranks wait for GATE.json and stop unless it says PASS.
+-All ranks: (iii) helper writes all messages of the shard, freed; (iv) Qwen3-8B receiver-only + receiver-with-message, freed; (v) Llama same.
+-Receiver E20 path: rendered chat template (enable_thinking=False) -> tokenizer(add_special_tokens=False) -> greedy generate (32 new tokens,
+-the frozen generate_receiver arguments) with output_logits=True; per position float64 chosen-token log-prob and 1 - max p (total non-argmax
+-probability) from the raw logits; extraction and s1/s2/s3 by e20_extract. Rows appended with fsync as they are produced.
+-usage: e20_exec.py --job {A,B} --rank R --nranks N --job-start EPOCH --deadline-epoch EPOCH [--dry-run --dry-limit K]
+-"""
+-import os, sys, json, time, math, argparse, traceback, gc, hashlib, types, statistics
++"""E20-full GPU driver: one process per GPU (8 per job), sharded by question. Derived from the pilot's frozen src/e20_exec.py
++(P2_R8_E20P_20260921T224653Z; diff in CODE_DIFF.patch). The pilot functions log, sync, FakeModel, load_model, free, special_ids, e20_helper and
++e20_receiver are copied VERBATIM (asserted at start-up against the pilot file), and the pilot modules e20_prompts, e20_extract and
++e20_exec_common are imported from the pilot directory unmodified: prompts, extraction, normalization, scores and decoding are the pilot's.
++Pre-authorized changes only: SQuAD and the Llama-3.1-8B receiver (no Qwen3); items from inputs/FULL_<split>.jsonl; fit questions get helper
++messages and receiver-with-message outputs too (E1); a new preflight; a per-job plan so a later job continues the remainder by question id.
++Phases: fitcal = fit + cal (job 1); devtest = dev, and test only if CERT_E20F.json (hash verified) deployed a threshold (job 2).
++Rank 0 first reruns the first 16 pilot SQuAD questions (PILOT_squad.jsonl) with this code and requires bitwise equality with the pilot's stored
++rows (results/E20P_jobA_rows.jsonl): helper-message token IDs, receiver-only and receiver-with-message token IDs, s1/s2/s3 of both; then writes
++PLAN_j<tag>.json (PASS + per-rank question ids of every question without a stored receiver row). Other ranks wait for the plan; no production
++on FAIL. Per rank: helper -> messages for its questions -> freed; Llama -> receiver-only + receiver-with-message -> freed. Rows appended with
++fsync; no new question is started after the deadline (job start + 48 min). No gold is read anywhere.
++usage: e20f_exec.py --phase {fitcal,devtest} --job-tag TAG --rank R --nranks N --job-start EPOCH --deadline-epoch EPOCH
++                    [--dry-run --dry-limit K]"""
++import os, sys, json, time, math, argparse, traceback, gc, hashlib, types, statistics, ast
+ sys.dont_write_bytecode = True
+ from pathlib import Path
+ HERE = Path(__file__).resolve().parent
+ sys.path.insert(0, str(HERE))
+-from e20_exec_common import *
+-import e20_prompts as PR
+-from e20_extract import extract, scores, INVALID
++import e20f_common as FC                             # inserts the pilot src directory into sys.path
++from e20_exec_common import *                        # pilot module (MODELS, CFG, load_tokenizer, utc, jl, save, append, PILOT, ...)
++import e20_prompts as PR                             # pilot module
++from e20_extract import extract, scores, INVALID     # pilot module
+ 
+ ap = argparse.ArgumentParser()
+-ap.add_argument('--job', required=True, choices=['A', 'B'])
++ap.add_argument('--phase', required=True, choices=['fitcal', 'devtest'])
++ap.add_argument('--job-tag', required=True)
+ ap.add_argument('--rank', type=int, required=True)
+ ap.add_argument('--nranks', type=int, required=True)
+ ap.add_argument('--job-start', type=float, required=True)
+@@ -34,19 +32,26 @@
+ ap.add_argument('--dry-run', action='store_true')
+ ap.add_argument('--dry-limit', type=int, default=0)
+ a = ap.parse_args()
+-DS = JOBS[a.job]
+-BASE = (STAGE / 'notes/dryrun') if a.dry_run else (STAGE / 'records')
+-OUT = BASE / f'job{a.job}'; OUT.mkdir(parents=True, exist_ok=True)
+-PROJ_LIMIT_S, N_FULL, N_REDUCED, N_SMOKE = 45 * 60, 400, 300, 8
++TAG = a.job_tag
++OUT = FC.base(a.dry_run) / 'records' / a.phase; OUT.mkdir(parents=True, exist_ok=True)
++VERBATIM = ['log', 'sync', 'FakeModel', 'load_model', 'free', 'special_ids', 'e20_helper', 'e20_receiver']
+ 
+ 
+-def log(*x): print(f'[{utc()}] rank={a.rank}', *x, flush=True)
++def _segments(path):
++    t = Path(path).read_text(); out = {}
++    for n in ast.parse(t).body:
++        if isinstance(n, (ast.FunctionDef, ast.ClassDef)) and n.name in VERBATIM:
++            s = min([d.lineno for d in n.decorator_list] + [n.lineno]); out[n.name] = '\n'.join(t.split('\n')[s - 1:n.end_lineno])
++    return out
+ 
+ 
+-if not a.dry_run:   # code/input freeze written with PREREG_E20P.md
+-    fz = json.loads((STAGE / 'notes/CODE_FREEZE.json').read_text())
+-    bad = [f for f, h in fz['files'].items() if sha(STAGE / f) != h]
+-    assert not bad, f'CODE_FREEZE mismatch: {bad}'
++_mine, _pilot = _segments(__file__), _segments(FC.PILOT_DIR / 'src/e20_exec.py')
++assert set(_mine) == set(VERBATIM) and all(_mine[k] == _pilot[k] for k in VERBATIM), 'verbatim pilot functions differ'
++if not a.dry_run:
++    FC.check_freezes()
++SPLITS = FC.phase_splits(a.phase, a.dry_run)
++ITEMS = [(sp, it) for sp in SPLITS for it in FC.split_items(sp)]
++assert all(len([1 for s, _ in ITEMS if s == sp]) == FC.N_SPLIT[sp] for sp in SPLITS)
+ 
+ import torch
+ from transformers import AutoModelForCausalLM, AutoConfig, GenerationConfig
+@@ -57,22 +62,16 @@
+     assert torch.cuda.is_available() and torch.cuda.device_count() == 1, torch.cuda.device_count()
+ DEV = 'cpu' if a.dry_run else 'cuda:0'
+ 
+-# ---- frozen paper modules (preflight paths only)
++# ---- frozen paper module for the loader (as in the pilot)
+ sys.path.insert(0, str(P10))
+ import protocol_min
+ import legacy_methods as lm
+-ORIG_FMT = protocol_min.format_openbook            # X3 used this for OBQA (captured before the adapter, as in run_x3.py)
+-import arc_runtime_adapter  # noqa: F401            # the large-pair runtime (and E10's preflight) loaded this adapter
+-ADAPT_FMT = protocol_min.format_openbook
+-from protocol_min import apply_generation_config, generate_receiver
++from protocol_min import apply_generation_config
+ sys.path.remove(str(P10))
+-assert ADAPT_FMT is not ORIG_FMT and lm.BACKGROUND_PROMPT == PR.BACKGROUND_PROMPT
+-lm.cuda_wall_stage = lambda fn, device: (fn(), 0., 0.)
+-lm.wall_stage = lambda fn: (fn(), 0.)
+-lm.extract_prediction = lambda text: None
++assert lm.BACKGROUND_PROMPT == PR.BACKGROUND_PROMPT
+ 
+ 
+-def use_fmt(f): protocol_min.format_openbook = f; lm.format_openbook = f
++def log(*x): print(f'[{utc()}] rank={a.rank}', *x, flush=True)
+ 
+ 
+ def sync():
+@@ -130,7 +129,6 @@
+     return s
+ 
+ 
+-# ------------------------------------------------------------------------------------------------ E20 paths
+ @torch.inference_mode()
+ def e20_helper(model, tok, ds, item):
+     """Frozen T2THelperBundle.run with the E20 helper body (options removed; passage block for passage datasets)."""
+@@ -180,202 +178,123 @@
+                 input_ids_sha256=hashlib.sha256(json.dumps(iid).encode()).hexdigest(), wall_ms=(time.perf_counter() - t) * 1000)
+ 
+ 
+-# ------------------------------------------------------------------------------------------------ preflight (frozen paths)
+-def preflight_obqa(h, htok, q, qtok):
+-    """E10 phase_preflight, unchanged in substance: 16 stored P2_10 large OBQA fit rows, receiver-only and Text, bitwise."""
+-    use_fmt(ADAPT_FMT)
+-    lm.HELPER_CONFIG = h.config; lm.RECEIVER_CONFIG = q.config
+-    th = lm.T2THelperBundle(h, htok); tr = lm.T2TReceiverBundle(q, qtok)
+-    fit = json.loads((BOUND / 'splits/obqa_fit_representatives.json').read_text())
+-    qs = {r['id']: r for r in jl(BOUND / 'inputs/obqa_train_queries.jsonl')}
+-    rows = jl(P10 / 'results/large/obqa/train_historical_rtc.jsonl')
+-    rep, rate = {}, dict(helper_tokens=0, helper_s=0., receiver_tokens=0, receiver_s=0.)
+-    for act, native in [('R', 'receiver_only'), ('T', 'text')]:
+-        by = {r['id']: {'raw_answer': r['raw_answer'], 'generated_token_ids': r['generated_token_ids']}
+-              for r in rows if r['action'] == native}       # gold_answer deliberately not projected
+-        ids = [i for i in fit if i in by][:16]
+-        det = []
+-        for i in ids:
+-            row = {k: (list(qs[i][k]) if isinstance(qs[i][k], list) else qs[i][k]) for k in ['question_stem', 'choice_labels', 'choice_text']}
+-            with torch.inference_mode():
+-                if act == 'R':
+-                    sync(); t = time.perf_counter()
+-                    _, _, tn = protocol_min.receiver_prompt_tensors(qtok, row, q.device)
+-                    text, g = generate_receiver(q, qtok, tn); gids = g.cpu().tolist()
+-                    sync(); rate['receiver_s'] += time.perf_counter() - t; rate['receiver_tokens'] += len(gids)
+-                else:
+-                    sync(); t = time.perf_counter(); msg = th.run(row); sync()
+-                    rate['helper_s'] += time.perf_counter() - t; rate['helper_tokens'] += len(msg['helper_generated_token_ids'])
+-                    res = tr.consume(row, msg['helper_body'], msg['helper_message']); text, gids = res['generated_text'], res['generated_token_ids']
+-            ok = text == by[i]['raw_answer'] and list(gids) == list(by[i]['generated_token_ids'])
+-            det.append(dict(id=i, match=ok, got=text, expected=by[i]['raw_answer'], token_ids_match=list(gids) == list(by[i]['generated_token_ids'])))
+-        rep[act] = dict(n=len(ids), mismatches=sum(not d['match'] for d in det), rows=det)
+-        log('PREFLIGHT OBQA', act, rep[act]['n'], 'mismatches', rep[act]['mismatches'])
+-    return dict(source='P2_10 results/large/obqa/train_historical_rtc.jsonl (first 16 fit representatives present)', per_action=rep,
+-                n=sum(v['n'] for v in rep.values()), matched=sum(v['n'] - v['mismatches'] for v in rep.values()),
+-                PASS=all(v['n'] == 16 and v['mismatches'] == 0 for v in rep.values())), rate
+-
+-
+-def preflight_x3(m, tok):
+-    """X3 run_x3.py R and T paths for Llama-3.1-8B (OBQA uses the pre-adapter format_openbook, R tokenized with add_special_tokens=False)."""
+-    use_fmt(ORIG_FMT)
+-    tr = lm.T2TReceiverBundle(m, tok)
+-    inp = [r for r in jl(X3 / 'records/work/run/chain_00.jsonl') if r['dataset'] == 'obqa'][:16]
+-    exp = {r['id']: r for r in jl(X3 / 'results/runs/chain_00.jsonl') if r['dataset'] == 'obqa'}
+-    det, rate = [], dict(receiver_tokens=0, receiver_s=0.)
+-    for r in inp:
+-        e = exp[r['id']]; qq = r['query']
+-        assert e['runtime_error'] is None and hashlib.sha256(r['helper_message'].encode()).hexdigest() == r['helper_message_sha256']
+-        with torch.inference_mode():
+-            sync(); t = time.perf_counter()
+-            prompt = protocol_min.format_openbook(qq, use_template=True)
+-            rendered = tok.apply_chat_template([{"role": "user", "content": prompt}], tokenize=False, add_generation_prompt=True, enable_thinking=False)
+-            tn = tok(rendered, return_tensors='pt', add_special_tokens=False); tn = {k: v.to(DEV) for k, v in tn.items()}
+-            textR, g = generate_receiver(m, tok, tn); gR = g.cpu().tolist()
+-            sync(); rate['receiver_s'] += time.perf_counter() - t; rate['receiver_tokens'] += len(gR)
+-            res = tr.consume(qq, protocol_min.format_openbook(qq, use_template=False), r['helper_message'])
+-        okR = textR == e['R']['raw'] and gR == e['R']['generated_token_ids']
+-        okT = res['generated_text'] == e['T']['raw'] and res['generated_token_ids'] == e['T']['generated_token_ids']
+-        det.append(dict(id=r['id'], R_match=okR, T_match=okT, R_got=textR, R_expected=e['R']['raw'], T_got=res['generated_text'], T_expected=e['T']['raw']))
+-    n = len(det); mR = sum(not d['R_match'] for d in det); mT = sum(not d['T_match'] for d in det)
+-    log('PREFLIGHT X3 n', n, 'R mismatches', mR, 'T mismatches', mT)
+-    return dict(source='P2_R6_X3 records/work/run/chain_00.jsonl -> results/runs/chain_00.jsonl (first 16 OBQA rows)', n=n,
+-                R_mismatches=mR, T_mismatches=mT, rows_all_equal=n - sum(not (d['R_match'] and d['T_match']) for d in det), rows=det,
+-                PASS=n == 16 and mR == 0 and mT == 0), rate
+-
+-
+-def smoke(m, tok, recv, pilot, fh):
+-    SPECIAL = special_ids(tok, m); res = {}; toks, secs = 0, 0.
+-    for ds in DS:
+-        outs = []
+-        for it in pilot[ds][:N_SMOKE]:
+-            r = e20_receiver(m, tok, PR.receiver_only_messages(ds, it), SPECIAL)
+-            toks += r['n_gen_tokens']; secs += r['wall_ms'] / 1000
+-            append(fh, dict(stage='smoke', dataset=ds, id=it['id'], receiver=recv, utc=utc(), R=r)); outs.append(r)
+-        inv = sum(o['invalid'] for o in outs); med = statistics.median(o['words'] for o in outs)
+-        res[ds] = dict(n=len(outs), invalid=inv, median_words=med, fail=inv > 2 or med > 10, answers=[o['answer'] for o in outs])
+-        log('SMOKE', recv, ds, 'INVALID', inv, '/', len(outs), 'median words', med)
+-    return res, (toks / secs if secs else None)
+-
+-
+-def gate_rank0(pilot):
+-    g = dict(job=a.job, dry_run=a.dry_run, utc_start=utc(), datasets=DS)
+-    pf_path = OUT / 'PREFLIGHT.json'
+-    pa = BASE / 'jobA/PREFLIGHT.json'
+-    skip = a.job == 'B' and pa.exists() and json.loads(pa.read_text()).get('PASS') is True
+-    if a.job == 'B' and pa.exists() and json.loads(pa.read_text()).get('PASS') is False:
+-        g.update(PASS=False, reason='job A preflight FAILED (records/jobA/PREFLIGHT.json); job B stops'); save(OUT / 'GATE.json', g); return g
+-    fh = open(OUT / 'smoke_rank0.jsonl', 'a')
+-    pf = dict(job=a.job, skipped=skip)
+-    loads = {}
+-    if skip:
+-        A = json.loads(pa.read_text()); pf.update(skipped_because='records/jobA/PREFLIGHT.json PASS', jobA_rates=A['rates'])
+-        helper_tps = A['rates']['helper_tokens_per_s']
+-        q, qtok, loads['qwen3'] = load_model('qwen3'); loads['helper'] = loads['qwen3']
+-    else:
+-        h, htok, lh = load_model('helper'); q, qtok, lq = load_model('qwen3'); loads['helper'], loads['qwen3'] = lh, lq
+-        pf['first_output_utc'] = utc()
+-        pf['obqa'], r1 = preflight_obqa(h, htok, q, qtok)
+-        free(h); del h
+-        helper_tps = r1['helper_tokens'] / r1['helper_s']
+-        pf['rates'] = dict(helper_tokens_per_s=helper_tps, qwen3_frozen_R_tokens_per_s=r1['receiver_tokens'] / r1['receiver_s'], **r1)
+-        if not pf['obqa']['PASS'] and not a.dry_run:
+-            pf['PASS'] = False; save(pf_path, pf); g.update(PASS=False, reason='OBQA preflight failed'); save(OUT / 'GATE.json', g); return g
+-    sm = {}
+-    sm['qwen3'], qtps = smoke(q, qtok, 'qwen3', pilot, fh); free(q); del q
+-    lm_, ltok, loads['llama'] = load_model('llama')
+-    if not skip:
+-        pf['x3'], r2 = preflight_x3(lm_, ltok)
+-        pf['rates']['llama_frozen_R_tokens_per_s'] = r2['receiver_tokens'] / r2['receiver_s']
+-        pf['PASS'] = pf['obqa']['PASS'] and pf['x3']['PASS']
+-        pf['load_seconds'] = loads
+-        save(pf_path, pf)
+-        if not pf['x3']['PASS'] and not a.dry_run:
+-            g.update(PASS=False, reason='X3 preflight failed'); save(OUT / 'GATE.json', g); return g
+-    else:
+-        save(pf_path, pf)
+-    sm['llama'], ltps = smoke(lm_, ltok, 'llama', pilot, fh); free(lm_); del lm_
+-    fh.close()
+-    kept = [ds for ds in DS if not (sm['qwen3'][ds]['fail'] or sm['llama'][ds]['fail'])]
+-    nq = math.ceil(N_FULL * len(kept) / a.nranks)
+-    el = time.time() - a.job_start
+-    proj = el + loads['helper'] + loads['qwen3'] + loads['llama'] + nq * HELPER_MAX_NEW / helper_tps + 2 * nq * RECEIVER_MAX_NEW / qtps \
+-        + 2 * nq * RECEIVER_MAX_NEW / ltps
+-    n_use = N_FULL if proj <= PROJ_LIMIT_S else N_REDUCED
+-    g.update(PASS=bool(kept) and (pf.get('PASS', False) or skip or a.dry_run), preflight_PASS=pf.get('PASS'), preflight_skipped=skip,
+-             smoke=sm, datasets_kept=kept, datasets_dropped=[ds for ds in DS if ds not in kept], n_per_dataset=n_use,
+-             reduced_to_300=n_use == N_REDUCED,
+-             projection=dict(elapsed_s=el, load_s=loads, helper_tokens_per_s=helper_tps, qwen3_e20_tokens_per_s=qtps, llama_e20_tokens_per_s=ltps,
+-                             questions_per_rank=nq, worst_case_projected_total_s=proj, limit_s=PROJ_LIMIT_S), utc_gate=utc())
+-    if not kept: g['reason'] = 'all datasets dropped by the smoke'
+-    save(OUT / 'GATE.json', g)
+-    log('GATE', g['PASS'], 'kept', kept, 'n', n_use, f'projection {proj / 60:.1f} min')
+-    return g
+-
+-
+-# ------------------------------------------------------------------------------------------------ main
+-pilot = {ds: jl(PILOT(ds)) for ds in DS}
+-assert all(len(v) == N_FULL for v in pilot.values())
++# ------------------------------------------------------------------------------------------------ E20F preflight, plan, production
++PILOT_ROWS = FC.PILOT_DIR / 'results/E20P_jobA_rows.jsonl'
++
++
++def preflight():
++    """First 16 pilot SQuAD questions through this code; bitwise vs the pilot's stored rows."""
++    stored = {r['id']: r for r in jl(PILOT_ROWS) if r['dataset'] == 'squad'}
++    items = jl(PILOT('squad'))[:16]
++    pf = dict(job=TAG, phase=a.phase, utc_start=utc(), n=len(items), pilot_rows=str(PILOT_ROWS), pilot_rows_sha256=sha(PILOT_ROWS), rows=[])
++    h, htok, lh = load_model('helper'); pf['first_output_utc'] = utc()
++    msgs = {it['id']: e20_helper(h, htok, 'squad', it) for it in items}
++    free(h); del h
++    m, tok, ll = load_model('llama'); SPECIAL = special_ids(tok, m)
++    for it in items:
++        P = stored[it['id']]; hm = msgs[it['id']]
++        R = e20_receiver(m, tok, PR.receiver_only_messages('squad', it), SPECIAL)
++        T = e20_receiver(m, tok, PR.receiver_with_message_messages('squad', it, hm['helper_message']), SPECIAL)
++        c = dict(id=it['id'], helper_ids=hm['helper_generated_token_ids'] == P['helper']['helper_generated_token_ids'],
++                 helper_text=hm['helper_message'] == P['helper']['helper_message'],
++                 R_ids=R['generated_token_ids'] == P['llama']['R']['generated_token_ids'],
++                 T_ids=T['generated_token_ids'] == P['llama']['T']['generated_token_ids'],
++                 s123=all(X[s] == P['llama'][k][s] for X, k in [(R, 'R'), (T, 'T')] for s in ('s1', 's2', 's3')),
++                 logp_nonmax=all(X[f] == P['llama'][k][f] for X, k in [(R, 'R'), (T, 'T')] for f in ('logp', 'nonmax')),
++                 answers=R['answer'] == P['llama']['R']['answer'] and T['answer'] == P['llama']['T']['answer'],
++                 wall_ms=dict(helper=hm['wall_ms'], R=R['wall_ms'], T=T['wall_ms']))
++        c['all'] = c['helper_ids'] and c['R_ids'] and c['T_ids'] and c['s123']
++        pf['rows'].append(c)
++    free(m); del m
++    for k in ['helper_ids', 'helper_text', 'R_ids', 'T_ids', 's123', 'logp_nonmax', 'answers', 'all']:
++        pf[f'n_{k}'] = sum(c[k] for c in pf['rows'])
++    pf.update(load_seconds=dict(helper=lh, llama=ll), PASS=len(pf['rows']) == 16 and pf['n_all'] == 16, utc_end=utc())
++    log('PREFLIGHT', {k: pf[f'n_{k}'] for k in ['helper_ids', 'R_ids', 'T_ids', 's123', 'all']}, 'PASS', pf['PASS'])
++    return pf
++
++
++def ok_rows(pat):
++    d = {}
++    for f in sorted(OUT.glob(pat)):
++        for r in jl(f):
++            if r.get('runtime_error') is None: d.setdefault(r['id'], r)
++    return d
++
++
++def over(): return time.time() > a.deadline_epoch
++
++
+ t0 = time.time()
++PLANF = OUT / f'PLAN_j{TAG}.json'
+ if a.rank == 0:
+     try:
+-        G = gate_rank0(pilot)
++        pf = preflight()
+     except Exception:
+-        G = dict(PASS=False, reason='exception in gate', traceback=traceback.format_exc()); save(OUT / 'GATE.json', G); log(G['traceback'])
++        pf = dict(PASS=False, reason='exception in preflight', traceback=traceback.format_exc()); log(pf['traceback'])
++    save(OUT / f'PREFLIGHT_j{TAG}.json', pf)
++    plan = dict(job=TAG, phase=a.phase, splits=SPLITS, dry_run=a.dry_run, preflight_PASS=pf.get('PASS'), PASS=bool(pf.get('PASS')) or a.dry_run,
++                utc=utc())
++    if plan['PASS']:
++        hdone, rdone = set(ok_rows('helper_*.jsonl')), set(ok_rows('recv_llama_*.jsonl'))
++        todo = [x for x in ITEMS if x[1]['id'] not in rdone]
++        plan.update(n_items=len(ITEMS), n_done_before=len(ITEMS) - len(todo), n_todo=len(todo),
++                    assign={str(r): [it['id'] for _, it in todo[r::a.nranks]] for r in range(a.nranks)},
++                    helper_needed=sorted(it['id'] for _, it in todo if it['id'] not in hdone))
++    save(PLANF, plan)
+ else:
+-    while not (OUT / 'GATE.json').exists():
+-        if time.time() > a.deadline_epoch: log('no GATE before deadline'); sys.exit(6)
++    while not PLANF.exists():
++        if over(): log('no plan before the deadline'); sys.exit(6)
+         time.sleep(5)
+-    time.sleep(1); G = json.loads((OUT / 'GATE.json').read_text())
+-if not G.get('PASS'):
+-    log('GATE not PASS; no E20 generation on this rank:', G.get('reason')); sys.exit(5)
++    time.sleep(1); plan = json.loads(PLANF.read_text())
++if not plan['PASS']:
++    log('preflight not PASS; no production on this rank'); sys.exit(5)
+ 
+-items = [(ds, it) for ds in G['datasets_kept'] for it in pilot[ds][:G['n_per_dataset']]]
+-mine = items[a.rank::a.nranks]
++BYID = {it['id']: (sp, it) for sp, it in ITEMS}
++mine = [BYID[i] for i in plan['assign'][str(a.rank)]]
+ if a.dry_run and a.dry_limit: mine = mine[:a.dry_limit]
+-status = dict(rank=a.rank, job=a.job, n_items=len(mine), utc_start=utc(), stages={}, errors=[], stopped_early=False)
+-log('shard', len(mine), 'items')
+-
+-
+-def over(): return time.time() > a.deadline_epoch
+-
++need_h = set(plan['helper_needed'])
++status = dict(rank=a.rank, job=TAG, phase=a.phase, n_items=len(mine), n_helper_needed=sum(it['id'] in need_h for _, it in mine),
++              utc_start=utc(), stages={}, errors=[], stopped_early=False)
++log('shard', len(mine), 'items;', status['n_helper_needed'], 'need helper messages')
+ 
+ # (iii) helper
+-hp = OUT / f'helper_rank{a.rank}.jsonl'
+-h, htok, lt = load_model('helper'); t = time.time(); done = 0
+-with open(hp, 'a') as fh:
+-    for ds, it in mine:
+-        if over(): status['stopped_early'] = True; break
+-        try:
+-            append(fh, dict(**e20_helper(h, htok, ds, it), utc=utc(), runtime_error=None)); done += 1
+-        except Exception:
+-            status['errors'].append(dict(stage='helper', dataset=ds, id=it['id'], tb=traceback.format_exc()[-1500:]))
+-            append(fh, dict(dataset=ds, id=it['id'], utc=utc(), runtime_error=traceback.format_exc()[-1500:]))
+-status['stages']['helper'] = dict(load_s=lt, done=done, seconds=time.time() - t); free(h); del h
+-log('helper done', done)
+-MSG = {(r['dataset'], r['id']): r for r in jl(hp)}
+-
+-# (iv) Qwen3-8B, (v) Llama-3.1-8B
+-for recv in RECEIVERS:
+-    if over(): status['stopped_early'] = True; break
+-    m, tok, lt = load_model(recv); SPECIAL = special_ids(tok, m); t = time.time(); done = 0
+-    with open(OUT / f'recv_{recv}_rank{a.rank}.jsonl', 'a') as fh:
+-        for ds, it in mine:
++hitems = [x for x in mine if x[1]['id'] in need_h]
++if hitems:
++    h, htok, lt = load_model('helper'); t = time.time(); done = 0
++    with open(OUT / f'helper_j{TAG}_rank{a.rank}.jsonl', 'a') as fh:
++        for sp, it in hitems:
++            if over(): status['stopped_early'] = True; break
++            try:
++                append(fh, dict(**e20_helper(h, htok, 'squad', it), split=sp, utc=utc(), runtime_error=None)); done += 1
++            except Exception:
++                status['errors'].append(dict(stage='helper', id=it['id'], tb=traceback.format_exc()[-1500:]))
++                append(fh, dict(dataset='squad', id=it['id'], split=sp, utc=utc(), runtime_error=traceback.format_exc()[-1500:]))
++    status['stages']['helper'] = dict(load_s=lt, done=done, seconds=time.time() - t); free(h); del h
++    log('helper done', done)
++MSG = ok_rows('helper_*.jsonl')
++
++# (v) Llama-3.1-8B receiver
++if not over():
++    m, tok, lt = load_model('llama'); SPECIAL = special_ids(tok, m); t = time.time(); done = 0
++    with open(OUT / f'recv_llama_j{TAG}_rank{a.rank}.jsonl', 'a') as fh:
++        for sp, it in mine:
+             if over(): status['stopped_early'] = True; break
+-            hm = MSG.get((ds, it['id']))
+-            rec = dict(dataset=ds, id=it['id'], receiver=recv, utc=utc(), runtime_error=None,
++            hm = MSG.get(it['id'])
++            rec = dict(dataset='squad', id=it['id'], split=sp, receiver='llama', utc=utc(), runtime_error=None,
+                        helper_message_sha256=hm.get('helper_message_sha256') if hm else None)
+             try:
+-                rec['R'] = e20_receiver(m, tok, PR.receiver_only_messages(ds, it), SPECIAL)
+-                rec['T'] = e20_receiver(m, tok, PR.receiver_with_message_messages(ds, it, hm['helper_message']), SPECIAL)
++                rec['R'] = e20_receiver(m, tok, PR.receiver_only_messages('squad', it), SPECIAL)
++                rec['T'] = e20_receiver(m, tok, PR.receiver_with_message_messages('squad', it, hm['helper_message']), SPECIAL)
+                 done += 1
+             except Exception:
+                 rec['runtime_error'] = traceback.format_exc()[-1500:]
+-                status['errors'].append(dict(stage=recv, dataset=ds, id=it['id'], tb=rec['runtime_error']))
++                status['errors'].append(dict(stage='llama', id=it['id'], tb=rec['runtime_error']))
+             append(fh, rec)
+-    status['stages'][recv] = dict(load_s=lt, done=done, seconds=time.time() - t, special_ids=sorted(SPECIAL))
+-    free(m); del m
+-    log(recv, 'done', done)
+-status.update(utc_end=utc(), wall_s=time.time() - t0, complete=all(status['stages'].get(s, {}).get('done') == len(mine) for s in ['helper'] + RECEIVERS))
+-save(OUT / f'status_rank{a.rank}.json', status)
++    status['stages']['llama'] = dict(load_s=lt, done=done, seconds=time.time() - t, special_ids=sorted(SPECIAL)); free(m); del m
++    log('llama done', done)
++else:
++    status['stopped_early'] = True
++status.update(utc_end=utc(), wall_s=time.time() - t0,
++              complete=status['stages'].get('llama', {}).get('done') == len(mine) and not status['errors'])
++save(OUT / f'status_j{TAG}_rank{a.rank}.json', status)
+ log('END complete', status['complete'], 'errors', len(status['errors']))
+--- pilot/src/e20_merge.py
++++ e20f/src/e20f_merge.py
+@@ -1,58 +1,56 @@
+-"""E20P merge (end of each job, CPU): per-rank helper / receiver files -> results/E20P_job<J>_rows.jsonl (one row per question, pilot order),
+-results/MERGE_job<J>.json (completeness, errors, first output time), results/OUTPUTS_HASH_job<J>.txt (SHA-256 of every output file + UTC).
+-usage: e20_merge.py --job {A,B} [--dry-run]"""
+-import sys, json, glob, argparse, pathlib, os
++"""E20F merge (end of each job, CPU; derived from the pilot's src/e20_merge.py): all helper / receiver rows of a phase (every job so far) ->
++results/E20F_<phase>_rows.jsonl (one row per question: split, id, helper, llama; split and file order), results/MERGE_<phase>_j<tag>.json
++(completeness per split, errors, duplicates, first output time) and results/OUTPUTS_HASH_<phase>_j<tag>.txt (SHA-256 of every file of the
++phase + the merged rows + UTC). A question counts once: the first row without a runtime error.
++usage: e20f_merge.py --phase {fitcal,devtest} --job-tag TAG [--dry-run]"""
++import sys, json, glob, argparse, pathlib, os, datetime
+ sys.dont_write_bytecode = True
+-HERE = pathlib.Path(__file__).resolve().parent
+-sys.path.insert(0, str(HERE))
+-from e20_exec_common import *
++sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
++import e20f_common as FC
+ 
+-ap = argparse.ArgumentParser(); ap.add_argument('--job', required=True, choices=['A', 'B']); ap.add_argument('--dry-run', action='store_true')
+-a = ap.parse_args()
+-BASE = (STAGE / 'notes/dryrun') if a.dry_run else (STAGE / 'records')
+-RES = (STAGE / 'notes/dryrun/results') if a.dry_run else (STAGE / 'results')
+-OUT = BASE / f'job{a.job}'; RES.mkdir(parents=True, exist_ok=True)
+-G = json.loads((OUT / 'GATE.json').read_text()) if (OUT / 'GATE.json').exists() else dict(PASS=False, reason='no GATE.json')
++ap = argparse.ArgumentParser(); ap.add_argument('--phase', required=True, choices=['fitcal', 'devtest']); ap.add_argument('--job-tag', required=True)
++ap.add_argument('--dry-run', action='store_true'); a = ap.parse_args()
++B = FC.base(a.dry_run); OUT = B / 'records' / a.phase; RES = B / 'results'; RES.mkdir(parents=True, exist_ok=True)
++utc = lambda: datetime.datetime.now(datetime.timezone.utc).isoformat()
+ 
+ 
+ def collect(pat):
+-    d = {}
+-    for f in sorted(glob.glob(str(OUT / pat))):
+-        for r in jl(f):
+-            k = (r['dataset'], r['id']); assert k not in d, ('duplicate', f, k); d[k] = r
+-    return d
++    d, dup, err = {}, 0, 0
++    for f in sorted(OUT.glob(pat)):
++        for r in FC.jl(f):
++            if r.get('runtime_error') is not None: err += 1; continue
++            if r['id'] in d: dup += 1; continue
++            d[r['id']] = r
++    return d, dup, err
+ 
+ 
+-H = collect('helper_rank*.jsonl'); RC = {rc: collect(f'recv_{rc}_rank*.jsonl') for rc in RECEIVERS}
+-summ = dict(job=a.job, utc=utc(), gate_PASS=G.get('PASS'), gate_reason=G.get('reason'), datasets_kept=G.get('datasets_kept'),
+-            n_per_dataset=G.get('n_per_dataset'), per_dataset={})
+-rows_path = RES / f'E20P_job{a.job}_rows.jsonl'
+-if G.get('PASS'):
+-    with open(rows_path, 'w') as f:
+-        for ds in G['datasets_kept']:
+-            exp = [it['id'] for it in jl(PILOT(ds))[:G['n_per_dataset']]]
+-            st = dict(expected=len(exp), helper=0, helper_errors=0, **{rc: 0 for rc in RECEIVERS}, **{rc + '_errors': 0 for rc in RECEIVERS})
+-            for i in exp:
+-                h = H.get((ds, i)); row = dict(dataset=ds, id=i, helper=h)
+-                st['helper'] += h is not None; st['helper_errors'] += bool(h and h.get('runtime_error'))
+-                for rc in RECEIVERS:
+-                    r = RC[rc].get((ds, i)); row[rc] = r
+-                    st[rc] += r is not None; st[rc + '_errors'] += bool(r and r.get('runtime_error'))
+-                f.write(json.dumps(row, ensure_ascii=False, allow_nan=False) + '\n')
+-            st['complete'] = st['helper'] == st['expected'] and all(st[rc] == st['expected'] for rc in RECEIVERS) and \
+-                not st['helper_errors'] and not any(st[rc + '_errors'] for rc in RECEIVERS)
+-            summ['per_dataset'][ds] = st
+-    summ['rows_file'] = str(rows_path.relative_to(STAGE))
++H, hdup, herr = collect('helper_*.jsonl'); L, ldup, lerr = collect('recv_llama_*.jsonl')
++splits = FC.phase_splits(a.phase, a.dry_run)
++summ = dict(phase=a.phase, job=a.job_tag, utc=utc(), splits=splits, helper_error_rows=herr, llama_error_rows=lerr, helper_duplicate_ok_rows=hdup,
++            llama_duplicate_ok_rows=ldup, per_split={})
++rows_path = RES / f'E20F_{a.phase}_rows.jsonl'
++with open(rows_path, 'w') as f:
++    for sp in splits:
++        ids = [it['id'] for it in FC.split_items(sp)]
++        st = dict(expected=len(ids), helper=sum(i in H for i in ids), llama=sum(i in L for i in ids))
++        st['complete'] = st['helper'] == st['llama'] == st['expected']
++        summ['per_split'][sp] = st
++        for i in ids:
++            f.write(json.dumps(dict(split=sp, id=i, helper=H.get(i), llama=L.get(i)), ensure_ascii=False, allow_nan=False) + '\n')
++summ['complete'] = all(v['complete'] for v in summ['per_split'].values())
++summ['rows_file'] = str(rows_path.relative_to(B))
++summ['plans'] = {pathlib.Path(p).name: {k: v for k, v in json.loads(pathlib.Path(p).read_text()).items() if k not in ('assign', 'helper_needed')}
++                 for p in sorted(glob.glob(str(OUT / 'PLAN_j*.json')))}
+ summ['rank_status'] = {pathlib.Path(p).name: {k: v for k, v in json.loads(pathlib.Path(p).read_text()).items() if k != 'errors'}
+-                       for p in sorted(glob.glob(str(OUT / 'status_rank*.json')))}
+-utcs = [r['utc'] for f in sorted(glob.glob(str(OUT / 'smoke_rank*.jsonl'))) for r in jl(f)] + [r['utc'] for r in H.values()]
+-summ['first_e20_output_utc'] = min(utcs) if utcs else None
+-pf = OUT / 'PREFLIGHT.json'
+-summ['preflight_first_output_utc'] = json.loads(pf.read_text()).get('first_output_utc') if pf.exists() else None
+-save(RES / f'MERGE_job{a.job}.json', summ)
+-files = sorted([p for p in OUT.rglob('*') if p.is_file() and not p.name.endswith('.tmp')]) + \
+-    [p for p in [rows_path, RES / f'MERGE_job{a.job}.json'] if p.exists()]
+-with open(RES / f'OUTPUTS_HASH_job{a.job}.txt', 'w') as f:
+-    for p in files: f.write(f'{sha(p)}  {p.relative_to(STAGE)}\n')
+-    f.write(f'# utc={utc()} job={os.environ.get("PBS_JOBID", "none")} E20P job {a.job}\n')
+-print(json.dumps({k: v for k, v in summ.items() if k != 'rank_status'}, indent=1))
++                       for p in sorted(glob.glob(str(OUT / 'status_j*_rank*.json')))}
++utcs = [r['utc'] for r in H.values()] + [r['utc'] for r in L.values()]
++summ['first_output_utc'] = min(utcs) if utcs else None
++summ['preflight_first_output_utc'] = {pathlib.Path(p).name: json.loads(pathlib.Path(p).read_text()).get('first_output_utc')
++                                      for p in sorted(glob.glob(str(OUT / 'PREFLIGHT_j*.json')))}
++mp = RES / f'MERGE_{a.phase}_j{a.job_tag}.json'
++mp.write_text(json.dumps(summ, indent=1) + '\n')
++files = sorted([p for p in OUT.rglob('*') if p.is_file() and not p.name.endswith('.tmp')]) + [rows_path, mp]
++with open(RES / f'OUTPUTS_HASH_{a.phase}_j{a.job_tag}.txt', 'w') as f:
++    for p in files: f.write(f'{FC.sha(p)}  {p.relative_to(B)}\n')
++    f.write(f'# utc={utc()} job={os.environ.get("PBS_JOBID", "none")} E20F {a.phase}\n')
++print(json.dumps({k: v for k, v in summ.items() if k not in ('rank_status', 'plans')}, indent=1))
+--- pilot/jobs/e20_jobA.pbs
++++ e20f/jobs/e20f_fitcal.pbs
+@@ -2,29 +2,32 @@
+ # [scheduler directive removed for anonymity]
+ # [scheduler directive removed for anonymity]
+ # [scheduler directive removed for anonymity]
+-# [scheduler directive removed for anonymity]
+-# [scheduler directive removed for anonymity]
+-# [scheduler directive removed for anonymity]
+-# E20-pilot job A (SQuAD + NQ-passage), ClusterA debug, 2 nodes = 8 A100 40GB, one process per GPU, sharded by question.
+-# Rank 0: preflight (16 OBQA large-pair rows + 16 X3 Llama rows bitwise) + smoke -> GATE.json; all ranks: helper -> Qwen3-8B -> Llama-3.1-8B.
+-# Submit: submit-job  -q debug -l select=2 -l walltime=00:55:00 -l fsreq=<fs> $DATA_DIR/P2_R8_E20P_20260921T224653Z/jobs/e20_jobA.pbs
++# [scheduler directive removed for anonymity]
++# [scheduler directive removed for anonymity]
++# [scheduler directive removed for anonymity]
++# E20-full, phase fitcal (fit 500 + calibration 2,000), ClusterA debug, 2 nodes = 8 A100 40GB,
++# one process per GPU, sharded by question. Rank 0: 16-row pilot preflight (bitwise) -> PLAN_j<tag>.json; all ranks: helper -> Llama-3.1-8B.
++# Re-running this script continues the remainder of the phase by question id (tag = PBS job number).
++# Submit: submit-job  -q debug -l select=2 -l walltime=00:55:00 -l fsreq=<fs> $DATA_DIR/P2_R8_E20F_20260922T003652Z/jobs/e20f_fitcal.pbs
+ set -uo pipefail
+-export E20_DIR=$DATA_DIR/P2_R8_E20P_20260921T224653Z E20_JOB=A E20_NRANKS=8
++export E20F_DIR=$DATA_DIR/P2_R8_E20F_20260922T003652Z E20F_PHASE=fitcal E20F_NRANKS=8
++export E20F_TAG="${PBS_JOBID%%.*}"
+ source "$HOME/.config/ClusterB-storage.sh"
+ export http_proxy=http://proxy.cluster.invalid:3128 https_proxy=http://proxy.cluster.invalid:3128 HTTP_PROXY=http://proxy.cluster.invalid:3128 HTTPS_PROXY=http://proxy.cluster.invalid:3128
+ export CUDA_DEVICE_ORDER=PCI_BUS_ID PATH="$PATH:/opt/pbs/bin"
+-export E20_PY="$DATA_ROOT/software/envs/c2c_official/bin/python"
+-export E20_START=$(date +%s)
+-export E20_DEADLINE=$(( E20_START + 3000 ))      # stop generating at T+50 min; merge after
+-L="$E20_DIR/logs/jobs"; mkdir -p "$L"
++export E20F_PY="$DATA_ROOT/software/envs/c2c_official/bin/python"
++export E20F_START=$(date +%s)
++export E20F_DEADLINE=$(( E20F_START + 2880 ))      # no new question after T+48 min; flush, merge, exit
++L="$E20F_DIR/logs/jobs"; mkdir -p "$L"
+ {
+-  echo "JOB_START_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ) head=$(hostname) PBS_JOBID=${PBS_JOBID:-none} E20_JOB=$E20_JOB"
+-  echo "PREREG=$(head -1 "$E20_DIR/PREREG_E20P.sha256")"
+-  sha256sum "$E20_DIR"/src/*.py "$E20_DIR"/jobs/*
++  echo "JOB_START_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ) head=$(hostname) PBS_JOBID=${PBS_JOBID:-none} PHASE=$E20F_PHASE TAG=$E20F_TAG"
++  echo "PREREG=$(head -1 "$E20F_DIR/PREREG_E20F.sha256")"
++  [ "$E20F_PHASE" = devtest ] && echo "CERT=$(head -1 "$E20F_DIR/CERT_E20F.sha256")"
++  sha256sum "$E20F_DIR"/src/*.py "$E20F_DIR"/jobs/*
+   echo "PBS_NODEFILE:"; cat "$PBS_NODEFILE"; nvidia-smi -L
+   job-status -f "$PBS_JOBID" | grep -E 'queue =|Resource_List|exec_vnode' || true
+-} > "$L/E20P_${E20_JOB}_env.txt" 2>&1
+-mpiexec -n 8 --ppn 4 --hostfile "$PBS_NODEFILE" --cpu-bind none bash "$E20_DIR/jobs/e20_slot.sh" 2>&1 | tee "$L/E20P_${E20_JOB}_mpi.log"
+-echo "MPI_EXIT=$? $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$L/E20P_${E20_JOB}_env.txt"
+-OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 "$E20_PY" "$E20_DIR/src/e20_merge.py" --job "$E20_JOB" > "$L/E20P_${E20_JOB}_merge.log" 2>&1
+-echo "MERGE_EXIT=$? JOB_END_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$L/E20P_${E20_JOB}_env.txt"
++} > "$L/E20F_${E20F_PHASE}_${E20F_TAG}_env.txt" 2>&1
++mpiexec -n 8 --ppn 4 --hostfile "$PBS_NODEFILE" --cpu-bind none bash "$E20F_DIR/jobs/e20f_slot.sh" 2>&1 | tee "$L/E20F_${E20F_PHASE}_${E20F_TAG}_mpi.log"
++echo "MPI_EXIT=$? $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$L/E20F_${E20F_PHASE}_${E20F_TAG}_env.txt"
++OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 "$E20F_PY" "$E20F_DIR/src/e20f_merge.py" --phase "$E20F_PHASE" --job-tag "$E20F_TAG" > "$L/E20F_${E20F_PHASE}_${E20F_TAG}_merge.log" 2>&1
++echo "MERGE_EXIT=$? JOB_END_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$L/E20F_${E20F_PHASE}_${E20F_TAG}_env.txt"
+--- pilot/jobs/e20_jobA.pbs
++++ e20f/jobs/e20f_devtest.pbs
+@@ -2,29 +2,32 @@
+ # [scheduler directive removed for anonymity]
+ # [scheduler directive removed for anonymity]
+ # [scheduler directive removed for anonymity]
+-# [scheduler directive removed for anonymity]
+-# [scheduler directive removed for anonymity]
+-# [scheduler directive removed for anonymity]
+-# E20-pilot job A (SQuAD + NQ-passage), ClusterA debug, 2 nodes = 8 A100 40GB, one process per GPU, sharded by question.
+-# Rank 0: preflight (16 OBQA large-pair rows + 16 X3 Llama rows bitwise) + smoke -> GATE.json; all ranks: helper -> Qwen3-8B -> Llama-3.1-8B.
+-# Submit: submit-job  -q debug -l select=2 -l walltime=00:55:00 -l fsreq=<fs> $DATA_DIR/P2_R8_E20P_20260921T224653Z/jobs/e20_jobA.pbs
++# [scheduler directive removed for anonymity]
++# [scheduler directive removed for anonymity]
++# [scheduler directive removed for anonymity]
++# E20-full, phase devtest (dev 1,000, plus test 1,000 only if CERT_E20F.json deployed a threshold), ClusterA debug, 2 nodes = 8 A100 40GB,
++# one process per GPU, sharded by question. Rank 0: 16-row pilot preflight (bitwise) -> PLAN_j<tag>.json; all ranks: helper -> Llama-3.1-8B.
++# Re-running this script continues the remainder of the phase by question id (tag = PBS job number).
++# Submit: submit-job  -q debug -l select=2 -l walltime=00:55:00 -l fsreq=<fs> $DATA_DIR/P2_R8_E20F_20260922T003652Z/jobs/e20f_devtest.pbs
+ set -uo pipefail
+-export E20_DIR=$DATA_DIR/P2_R8_E20P_20260921T224653Z E20_JOB=A E20_NRANKS=8
++export E20F_DIR=$DATA_DIR/P2_R8_E20F_20260922T003652Z E20F_PHASE=devtest E20F_NRANKS=8
++export E20F_TAG="${PBS_JOBID%%.*}"
+ source "$HOME/.config/ClusterB-storage.sh"
+ export http_proxy=http://proxy.cluster.invalid:3128 https_proxy=http://proxy.cluster.invalid:3128 HTTP_PROXY=http://proxy.cluster.invalid:3128 HTTPS_PROXY=http://proxy.cluster.invalid:3128
+ export CUDA_DEVICE_ORDER=PCI_BUS_ID PATH="$PATH:/opt/pbs/bin"
+-export E20_PY="$DATA_ROOT/software/envs/c2c_official/bin/python"
+-export E20_START=$(date +%s)
+-export E20_DEADLINE=$(( E20_START + 3000 ))      # stop generating at T+50 min; merge after
+-L="$E20_DIR/logs/jobs"; mkdir -p "$L"
++export E20F_PY="$DATA_ROOT/software/envs/c2c_official/bin/python"
++export E20F_START=$(date +%s)
++export E20F_DEADLINE=$(( E20F_START + 2880 ))      # no new question after T+48 min; flush, merge, exit
++L="$E20F_DIR/logs/jobs"; mkdir -p "$L"
+ {
+-  echo "JOB_START_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ) head=$(hostname) PBS_JOBID=${PBS_JOBID:-none} E20_JOB=$E20_JOB"
+-  echo "PREREG=$(head -1 "$E20_DIR/PREREG_E20P.sha256")"
+-  sha256sum "$E20_DIR"/src/*.py "$E20_DIR"/jobs/*
++  echo "JOB_START_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ) head=$(hostname) PBS_JOBID=${PBS_JOBID:-none} PHASE=$E20F_PHASE TAG=$E20F_TAG"
++  echo "PREREG=$(head -1 "$E20F_DIR/PREREG_E20F.sha256")"
++  [ "$E20F_PHASE" = devtest ] && echo "CERT=$(head -1 "$E20F_DIR/CERT_E20F.sha256")"
++  sha256sum "$E20F_DIR"/src/*.py "$E20F_DIR"/jobs/*
+   echo "PBS_NODEFILE:"; cat "$PBS_NODEFILE"; nvidia-smi -L
+   job-status -f "$PBS_JOBID" | grep -E 'queue =|Resource_List|exec_vnode' || true
+-} > "$L/E20P_${E20_JOB}_env.txt" 2>&1
+-mpiexec -n 8 --ppn 4 --hostfile "$PBS_NODEFILE" --cpu-bind none bash "$E20_DIR/jobs/e20_slot.sh" 2>&1 | tee "$L/E20P_${E20_JOB}_mpi.log"
+-echo "MPI_EXIT=$? $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$L/E20P_${E20_JOB}_env.txt"
+-OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 "$E20_PY" "$E20_DIR/src/e20_merge.py" --job "$E20_JOB" > "$L/E20P_${E20_JOB}_merge.log" 2>&1
+-echo "MERGE_EXIT=$? JOB_END_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$L/E20P_${E20_JOB}_env.txt"
++} > "$L/E20F_${E20F_PHASE}_${E20F_TAG}_env.txt" 2>&1
++mpiexec -n 8 --ppn 4 --hostfile "$PBS_NODEFILE" --cpu-bind none bash "$E20F_DIR/jobs/e20f_slot.sh" 2>&1 | tee "$L/E20F_${E20F_PHASE}_${E20F_TAG}_mpi.log"
++echo "MPI_EXIT=$? $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$L/E20F_${E20F_PHASE}_${E20F_TAG}_env.txt"
++OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 "$E20F_PY" "$E20F_DIR/src/e20f_merge.py" --phase "$E20F_PHASE" --job-tag "$E20F_TAG" > "$L/E20F_${E20F_PHASE}_${E20F_TAG}_merge.log" 2>&1
++echo "MERGE_EXIT=$? JOB_END_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$L/E20F_${E20F_PHASE}_${E20F_TAG}_env.txt"
+--- pilot/jobs/e20_slot.sh
++++ e20f/jobs/e20f_slot.sh
+@@ -1,14 +1,14 @@
+ #!/bin/bash
+-# One E20 slot = one GPU (CUDA_VISIBLE_DEVICES = local rank). Always exits 0 so one rank never kills the allocation.
++# One E20F slot = one GPU (CUDA_VISIBLE_DEVICES = local rank). Always exits 0 so one rank never kills the allocation.
+ set -u
+ GR="${PALS_RANKID:-${PMI_RANK:-0}}"
+ LR="${PALS_LOCAL_RANKID:-${PMI_LOCAL_RANK:-0}}"
+ export CUDA_VISIBLE_DEVICES=$LR
+ export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=8 TOKENIZERS_PARALLELISM=false PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+ export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 HF_DATASETS_OFFLINE=1
+-export TMPDIR="/tmp/e20.$GR"; mkdir -p "$TMPDIR"
+-echo "E20 SLOT job=$E20_JOB rank=$GR local=$LR gpu=$CUDA_VISIBLE_DEVICES host=$(hostname) $(date -u +%H:%M:%S)"
+-"$E20_PY" -u "$E20_DIR/src/e20_exec.py" --job "$E20_JOB" --rank "$GR" --nranks "$E20_NRANKS" \
+-          --job-start "$E20_START" --deadline-epoch "$E20_DEADLINE" > "$E20_DIR/logs/jobs/E20P_${E20_JOB}_rank${GR}.log" 2>&1
+-echo "E20 job=$E20_JOB rank=$GR exit=$? $(date -u +%H:%M:%S)"
++export TMPDIR="/tmp/e20f.$GR"; mkdir -p "$TMPDIR"
++echo "E20F SLOT phase=$E20F_PHASE tag=$E20F_TAG rank=$GR local=$LR gpu=$CUDA_VISIBLE_DEVICES host=$(hostname) $(date -u +%H:%M:%S)"
++"$E20F_PY" -u "$E20F_DIR/src/e20f_exec.py" --phase "$E20F_PHASE" --job-tag "$E20F_TAG" --rank "$GR" --nranks "$E20F_NRANKS" \
++          --job-start "$E20F_START" --deadline-epoch "$E20F_DEADLINE" > "$E20F_DIR/logs/jobs/E20F_${E20F_PHASE}_${E20F_TAG}_rank${GR}.log" 2>&1
++echo "E20F phase=$E20F_PHASE rank=$GR exit=$? $(date -u +%H:%M:%S)"
+ exit 0
+--- /dev/null
++++ e20f/src/e20f_common.py
+@@ -0,0 +1,56 @@
++"""E20F shared paths, split lists and hash checks (no torch). Pilot modules are imported from the pilot directory, unmodified."""
++import sys, json, hashlib, pathlib
++sys.dont_write_bytecode = True
++E20F = pathlib.Path(__file__).resolve().parents[1]
++ROOT = E20F.parent
++PILOT_DIR = ROOT / 'P2_R8_E20P_20260921T224653Z'
++if str(PILOT_DIR / 'src') not in sys.path: sys.path.insert(0, str(PILOT_DIR / 'src'))
++PHASES = {'fitcal': ['fit', 'cal'], 'devtest': ['dev', 'test']}
++N_SPLIT = {'fit': 500, 'cal': 2000, 'dev': 1000, 'test': 1000}
++
++
++def sha(p):
++    h = hashlib.sha256()
++    with open(p, 'rb') as f:
++        for b in iter(lambda: f.read(1 << 22), b''): h.update(b)
++    return h.hexdigest()
++
++
++def jl(p):
++    with open(p) as f:
++        return [json.loads(s) for s in f if s.strip()]
++
++
++def base(dry): return E20F / 'notes/dryrun' if dry else E20F
++
++
++def check_hashfile(hf, name):
++    """'<sha>  <name>' first line; returns the sha after verifying the file."""
++    h, n = pathlib.Path(hf).read_text().split('\n')[0].split('  ')
++    assert n == name and sha(pathlib.Path(hf).parent / n) == h, f'{name} missing or changed since it was hashed'
++    return h
++
++
++def load_cert(dry):
++    b = base(dry)
++    h = check_hashfile(b / 'CERT_E20F.sha256', 'CERT_E20F.json')
++    return json.loads((b / 'CERT_E20F.json').read_text()), h
++
++
++def phase_splits(phase, dry):
++    """fitcal -> fit, cal; devtest -> dev, plus test only if CERT_E20F.json (hash verified) deployed a threshold."""
++    if phase == 'fitcal': return ['fit', 'cal']
++    cert, _ = load_cert(dry)
++    return ['dev'] + (['test'] if cert['deployed_q'] > 0 else [])
++
++
++def split_items(sp): return jl(E20F / f'inputs/FULL_{sp}.jsonl')
++
++
++def check_freezes():
++    """Pilot CODE_FREEZE.json (27 files) and this stage's notes/CODE_FREEZE_E20F.json, file by file."""
++    bad = []
++    for base_dir, fz in [(PILOT_DIR, PILOT_DIR / 'notes/CODE_FREEZE.json'), (E20F, E20F / 'notes/CODE_FREEZE_E20F.json')]:
++        for f, h in json.loads(fz.read_text())['files'].items():
++            if sha(base_dir / f) != h: bad.append(str(base_dir / f))
++    assert not bad, f'CODE_FREEZE mismatch: {bad}'
+--- /dev/null
++++ e20f/src/e20f_cert.py
+@@ -0,0 +1,79 @@
++"""E20F certification functions = the paper's, unchanged (as used for X3 Llama-8B and by E16/E17):
++P2_R1_CPU_20260919T045556Z/src/common_r1.py thresholds / pval / cp999 / deploy / GRID / tv and data_r1.py route_mask (imported, hashes
++checked); ledger_rows = verbatim copy of P2_R6_X3_20260921T052602Z/src/analyze_x3.py ledger_rows (= r2_common.ledger_rows), and needed_m =
++verbatim copy of P2_R7_E16_20260921T184114Z/src/analyze_e16_5.py needed_m (E5-b rule); both copies are asserted equal to the source text.
++Run as a script: G4 reproduction on the stored X3 Llama-8B OBQA fit + calibration records (q = .60; 21 changes among 800 omitted;
++p = 5.7e-4) -> notes/G4_CERT_REPRO.json."""
++import sys, json, hashlib, pathlib, ast, glob
++sys.dont_write_bytecode = True
++ROOT = pathlib.Path(__file__).resolve().parents[2]
++R1 = ROOT / 'P2_R1_CPU_20260919T045556Z/src'
++X3 = ROOT / 'P2_R6_X3_20260921T052602Z'
++E16 = ROOT / 'P2_R7_E16_20260921T184114Z/src/analyze_e16_5.py'
++sha = lambda p: hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()
++sys.path.insert(0, str(R1))
++from common_r1 import thresholds, pval, cp999, deploy, GRID, tv   # noqa: E402
++from data_r1 import route_mask                                     # noqa: E402
++import numpy as np                                                 # noqa: E402
++from scipy.stats import binom                                      # noqa: E402
++
++FUNC_SOURCES = {'common_r1.py': str(R1 / 'common_r1.py'), 'data_r1.py': str(R1 / 'data_r1.py'), 'analyze_x3.py': str(X3 / 'src/analyze_x3.py'),
++                'analyze_e16_5.py': str(E16)}
++
++
++def ledger_rows(u_cal, d_cal, cuts, keep=None):   # = r2_common.ledger_rows (E5-b / E11-a / E13)
++    if keep is not None: u_cal, d_cal = u_cal[keep], d_cal[keep]
++    rows = []
++    for q, t in zip(GRID, cuts):
++        m = route_mask(u_cal, q, t); n = int(m.sum()); k = int(d_cal[m].sum())
++        rows.append(dict(q=q, threshold=t, N=len(u_cal), n=n, k=k, p=pval(k, n), CP999=cp999(k, n), accepted=pval(k, n) <= .001))
++    return rows
++
++
++def needed_m(rows, N_cal):   # E5-b rule (P2_R2_CPU scripts/e5b.py needed_m)
++    best = min(rows, key=lambda r: (r['p'], r['q'])); n, k = best['n'], best['k']
++    if n == 0: return dict(min_p_q=best['q'], needed='unreachable (n=0 at the smallest-p candidate)')
++    r = k / n
++    if r >= .05: return dict(min_p_q=best['q'], r=r, needed='unreachable (r >= .05)')
++    m = 1
++    while m < 2_000_000 and binom.cdf(int(np.floor(r * m)), m, .05) > .001: m += 1
++    return dict(min_p_q=best['q'], r=r, m=m, needed_N_cal=round(m * N_cal / n)) if m < 2_000_000 else dict(min_p_q=best['q'], r=r, needed='unreachable (m > 2e6)')
++
++
++def _src(path, name):
++    t = pathlib.Path(path).read_text(); fn = next(n for n in ast.walk(ast.parse(t)) if isinstance(n, ast.FunctionDef) and n.name == name)
++    return ast.get_source_segment(t, fn)
++
++
++_me = pathlib.Path(__file__).read_text()
++for _name, _path in [('ledger_rows', X3 / 'src/analyze_x3.py'), ('needed_m', E16)]:
++    assert _src(_path, _name) == _src(__file__, _name), f'{_name} copy differs from {_path}'
++
++if __name__ == '__main__':
++    S = pathlib.Path(__file__).resolve().parents[1]
++    sys.path.insert(0, str(X3 / 'src'))
++    from xfam_common import jl                                     # noqa: E402
++    out = {}
++    for f in sorted(glob.glob(str(X3 / 'results/runs/chain_*.jsonl'))):
++        for r in jl(f):
++            if r['dataset'] == 'obqa': assert r['id'] not in out; out[r['id']] = r
++    ans = lambda r, a: (r[a]['parsed'] if r.get('runtime_error') is None else 'INVALID')   # = analyze_x3 ans
++    D = {}
++    for sp in ['fit', 'cal']:
++        reps = [r['id'] for r in jl(X3 / f'records/populations/obqa_{sp}.jsonl') if r['representative']]
++        rr = [out[i] for i in reps]
++        D[sp] = dict(n=len(rr), u=np.array([r['P']['ProbeMax'] for r in rr], float),
++                     d=np.array([ans(r, 'R') for r in rr], object) != np.array([ans(r, 'T') for r in rr], object))
++    cuts = thresholds(list(D['fit']['u'])); led = ledger_rows(D['cal']['u'], D['cal']['d'], cuts); q, acc = deploy(led)
++    row = led[GRID.index(q)]
++    stored = [l.split(',') for l in (X3 / 'results/analysis/certification_ledger_40.csv').read_text().splitlines() if l.startswith('obqa/Text,')]
++    st = next(s for s in stored if float(s[1]) == q)
++    ok = q == .6 and row['n'] == 800 and row['k'] == 21 and abs(row['p'] - 5.7e-4) < 5e-5 and repr(row['p']) == st[6] and \
++        all(repr(r['p']) == s[6] and str(r['n']) == s[4] and str(r['k']) == s[5] for r, s in zip(led, stored))
++    res = dict(N_fit=D['fit']['n'], N_cal=D['cal']['n'], deployed_q=q, accepted=acc, n=row['n'], k=row['k'], p=row['p'],
++               all_20_rows_equal_stored_csv=all(repr(r['p']) == s[6] and str(r['n']) == s[4] and str(r['k']) == s[5] for r, s in zip(led, stored)),
++               PASS=bool(ok), function_files={k: dict(path=v, sha256=sha(v)) for k, v in FUNC_SOURCES.items()},
++               this_module=dict(path=str(pathlib.Path(__file__).resolve()), sha256=sha(__file__)))
++    (S / 'notes/G4_CERT_REPRO.json').write_text(json.dumps(res, indent=1) + '\n')
++    print(json.dumps({k: v for k, v in res.items() if k != 'function_files'}, indent=0))
++    sys.exit(0 if ok else 1)
+--- /dev/null
++++ e20f/src/e20f_cert_run.py
+@@ -0,0 +1,69 @@
++"""E20F Step 4 (login node; gold never read): certification from fit + calibration outputs ONLY, with the paper's function (e20f_cert.py:
++common_r1 thresholds / pval / cp999 / deploy + data_r1 route_mask + analyze_x3 ledger_rows). Certification reads only fit s2 (the 500 fit
++receiver-only s2 values -> 20 thresholds) and calibration s2 + change. Refuses to run if any dev/test output exists or if any fit / calibration
++question lacks an error-free row. Writes CERT_E20F.json and CERT_E20F.sha256 (SHA-256 + UTC) at once.
++Calibration statistics: 20 candidates (q, tau, n, k, p, accepted, .999 CP upper bound); deployed q or fallback; disagreement k/2,000;
++INVALID R / reference; always-omit change rate (q = 1 row); max empirical TPR/FPR over the 20 candidates against C(pi, alpha) =
++(1 - pi)(1 - alpha)/(pi alpha), pi = agreement share (E17-5(a) definition); if fallback, the E5-b needed_m rule. Fit (E1) is descriptive only.
++usage: e20f_cert_run.py [--dry-run]"""
++import sys, json, glob, argparse, pathlib, datetime, math
++sys.dont_write_bytecode = True
++sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
++import e20f_common as FC
++from e20f_cert import thresholds, pval, cp999, deploy, GRID, ledger_rows, needed_m, FUNC_SOURCES
++from e20_extract import changed, INVALID                                     # pilot module
++import numpy as np
++
++ap = argparse.ArgumentParser(); ap.add_argument('--dry-run', action='store_true'); a = ap.parse_args()
++B = FC.base(a.dry_run); RES = B / 'results'
++utc = lambda: datetime.datetime.now(datetime.timezone.utc).isoformat()
++assert not (B / 'CERT_E20F.json').exists(), 'CERT_E20F.json already exists'
++dt = list((B / 'records/devtest').glob('*')) if (B / 'records/devtest').exists() else []
++assert not dt, f'dev/test outputs already exist: {dt[:3]}'
++man = sorted(glob.glob(str(RES / 'OUTPUTS_HASH_fitcal_j*.txt'))); assert man
++for hp in man:
++    for ln in pathlib.Path(hp).read_text().splitlines():
++        if ln.startswith('#'): continue
++        h, p = ln.split('  ', 1)
++        if p == 'results/E20F_fitcal_rows.jsonl' and hp != man[-1]: continue     # re-merged by a later job; checked in its own manifest
++        assert FC.sha(B / p) == h, (hp, p)
++rows = FC.jl(RES / 'E20F_fitcal_rows.jsonl')
++S = {}
++for sp in ['fit', 'cal']:
++    rr = [r for r in rows if r['split'] == sp]
++    assert len(rr) == FC.N_SPLIT[sp] and all(r['llama'] is not None and r['helper'] is not None for r in rr), f'{sp} incomplete'
++    S[sp] = dict(ids=[r['id'] for r in rr], s2=np.array([r['llama']['R']['s2'] for r in rr], float),
++                 oR=[r['llama']['R']['answer'] for r in rr], oT=[r['llama']['T']['answer'] for r in rr])
++    S[sp]['d'] = np.array([changed(u, v) for u, v in zip(S[sp]['oR'], S[sp]['oT'])], bool)
++    assert np.isfinite(S[sp]['s2']).all()
++cuts = thresholds(list(S['fit']['s2']))                                          # fit s2 only
++C = S['cal']; led = ledger_rows(C['s2'], C['d'], cuts); q, acc = deploy(led)
++N, K = len(C['d']), int(C['d'].sum()); A_, Dn = N - K, K
++pi = A_ / N; Cpi = (1 - pi) * (1 - .05) / (pi * .05) if 0 < pi < 1 else None
++best = -1.0
++for r in led:
++    if r['n'] == 0 or Dn == 0 or A_ == 0: continue
++    best = max(best, float('inf') if r['k'] == 0 else ((r['n'] - r['k']) / A_) / (r['k'] / Dn))
++F = S['fit']
++cert = dict(utc=utc(), experiment='E20-full', setting='SQuAD v1.1 | helper Qwen2.5-7B-Instruct Text message | receiver Llama-3.1-8B-Instruct | score s2',
++            dry_run=a.dry_run, gold_read=False, N_fit=len(F['ids']), N_cal=N,
++            ledger=[dict(q=r['q'], tau=r['threshold'], n=r['n'], k=r['k'], p=r['p'], CP999_upper=r['CP999'], accepted=r['accepted']) for r in led],
++            accepted_q=acc, deployed_q=q, deployed=q > 0, threshold=(cuts[GRID.index(q)] if q > 0 else None),
++            deployed_row=(led[GRID.index(q)] if q > 0 else None),
++            cal=dict(disagreements=K, n=N, disagreement_rate=K / N, invalid_R=sum(v == INVALID for v in C['oR']), invalid_ref=sum(v == INVALID for v in C['oT']),
++                     always_omit_change_rate=led[-1]['k'] / led[-1]['n'], always_omit_k=led[-1]['k'], always_omit_n=led[-1]['n'],
++                     max_TPR_over_FPR='inf' if math.isinf(best) else best, C_pi_alpha=Cpi, pi=pi, max_ge_C=bool(Cpi is not None and best >= Cpi),
++                     min_p=min(r['p'] for r in led), min_p_q=min(led, key=lambda r: (r['p'], r['q']))['q']),
++            needed_N_cal=(needed_m(led, N) if q == 0 else None),
++            fit_descriptive_E1=dict(note='fit reference outputs (E1) are never used by certification', disagreements=int(F['d'].sum()), n=len(F['d']),
++                                    invalid_R=sum(v == INVALID for v in F['oR']), invalid_ref=sum(v == INVALID for v in F['oT'])),
++            inputs=dict(rows_file='results/E20F_fitcal_rows.jsonl', rows_sha256=FC.sha(RES / 'E20F_fitcal_rows.jsonl'),
++                        manifests={pathlib.Path(p).name: FC.sha(p) for p in man}),
++            code=dict(e20f_cert_run=FC.sha(__file__), e20f_cert=FC.sha(pathlib.Path(__file__).parent / 'e20f_cert.py'),
++                      paper_functions={k: FC.sha(v) for k, v in FUNC_SOURCES.items()}))
++cp = B / 'CERT_E20F.json'
++cp.write_text(json.dumps(cert, indent=1, allow_nan=False) + '\n')
++(B / 'CERT_E20F.sha256').write_text(f'{FC.sha(cp)}  CERT_E20F.json\nhashed_utc: {utc()}\n')
++print(json.dumps({k: cert[k] for k in ['deployed_q', 'threshold', 'accepted_q', 'cal', 'needed_N_cal']}, indent=1))
++for r in cert['ledger']: print(r)
++print((B / 'CERT_E20F.sha256').read_text())
+--- /dev/null
++++ e20f/src/e20f_stats.py
+@@ -0,0 +1,180 @@
++"""E20F Step 6 (login node; gold never read): dev and test statistics at the frozen CERT_E20F.json threshold, surface-form and length diagnostics,
++200 re-splits, binormal P from dev, value estimate. Writes STATS_E20F.json + .sha256 and ROUTES_E20F.json + .sha256 (per question: split, id,
++s2, route), both hashed before any gold is read.
++Definitions (fixed before any E20-full output): change = normalized o_R != normalized o_b (two INVALIDs agree); omit iff s2 <= tau (route_mask;
++fallback omits nothing); CP = two-sided 95% Clopper-Pearson; AUROC = explicit Mann-Whitney, ties 1/2 (analyze_x3 mw); bootstrap = dev rows
++resampled with replacement, numpy default_rng(0), 2,000 resamples, single-class resamples skipped (counted), percentile 2.5/97.5; binormal =
++frozen e17_5 draws/run/summarize (hash verified) with prevalence = dev d, AUROC = dev AUROC, N_fit 500, N_cal 2,000, 1,000 simulations,
++default_rng(0) (the pilot's settings). Surface form (on omitted dev questions; also on all dev): raw-string change = pilot 'extracted' strings
++(before NFKD + SQuAD normalization) differ; containment-as-agreement = change and not (both parse and one normalized answer contains the other);
++token-F1 = SQuAD token F1 of the normalized answers (INVALID = no tokens); extraction-beyond-normalization = extract(raw).answer !=
++normalize_text(raw) (empty -> INVALID), over the R and reference outputs. Lengths: words of the normalized answer (INVALID = 0), cap hit =
++32 generated tokens, helper cap = 256 tokens. Test (only if deployed): single exact binomial test at the frozen threshold; pass iff CP upper
++< .05, fail iff CP lower > .05, else inconclusive. Re-splits: E5-b / X3 rule (sorted fit + cal ids, random.Random(seed).shuffle, first 500 =
++fit), seeds 1..200, dev fixed; agreement = same deploy/fallback outcome. Value (only if deployed; not a replay): per dev question
++1[omit] * (helper + receiver-with-message wall ms) - receiver-only wall ms (pilot wall-clock definition), mean with bootstrap interval; also
++always-omit (omit every question) and the component means.
++usage: e20f_stats.py [--dry-run]"""
++import sys, json, glob, argparse, pathlib, datetime, math, random, statistics, collections
++sys.dont_write_bytecode = True
++sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
++import e20f_common as FC
++from e20f_cert import thresholds, pval, deploy, GRID, ledger_rows, route_mask
++from e20_extract import changed, INVALID, normalize_text, extract          # pilot module
++import numpy as np
++from scipy.stats import beta
++E17S = FC.ROOT / 'P2_R7_E17_20260921T183100Z/scripts'
++assert FC.sha(E17S / 'e17_5.py') == 'ef1537c7289b30d7a0adfe5b9180fc9a53a35bf6cb6aba1021ebf6759dde2b6b'
++assert FC.sha(E17S / 'e17_common.py') == '84367e204e17b21702715bd1e2a67d594eca14a3b02c197d422a3c7ed5cc8a60'
++sys.path.insert(0, str(E17S))
++from e17_5 import draws, run, summarize                                     # noqa: E402
++
++ap = argparse.ArgumentParser(); ap.add_argument('--dry-run', action='store_true'); a = ap.parse_args()
++B = FC.base(a.dry_run); RES = B / 'results'
++utc = lambda: datetime.datetime.now(datetime.timezone.utc).isoformat()
++assert not (B / 'STATS_E20F.json').exists(), 'STATS_E20F.json already exists'
++cert, cert_sha = FC.load_cert(a.dry_run)
++q, tau = cert['deployed_q'], cert['threshold']
++for ph in ['fitcal', 'devtest']:
++    man = sorted(glob.glob(str(RES / f'OUTPUTS_HASH_{ph}_j*.txt'))); assert man, ph
++    for hp in man:
++        for ln in pathlib.Path(hp).read_text().splitlines():
++            if ln.startswith('#'): continue
++            h, p = ln.split('  ', 1)
++            if p == f'results/E20F_{ph}_rows.jsonl' and hp != man[-1]: continue
++            assert FC.sha(B / p) == h, (hp, p)
++assert FC.sha(RES / 'E20F_fitcal_rows.jsonl') == cert['inputs']['rows_sha256'], 'fit/cal rows changed since CERT'
++ROWS = FC.jl(RES / 'E20F_fitcal_rows.jsonl') + FC.jl(RES / 'E20F_devtest_rows.jsonl')
++SPL = ['fit', 'cal', 'dev']
++TEST_ROWS = [r for r in ROWS if r['split'] == 'test' and r['llama'] is not None and r['helper'] is not None]
++if q > 0 and len(TEST_ROWS) == FC.N_SPLIT['test']: SPL.append('test')          # a late test is reported only if complete (rule 7)
++
++
++def arr(sp):
++    rr = [r for r in ROWS if r['split'] == sp]
++    assert len(rr) == FC.N_SPLIT[sp] and all(r['llama'] is not None and r['helper'] is not None for r in rr), f'{sp} incomplete'
++    L = [r['llama'] for r in rr]
++    X = dict(ids=[r['id'] for r in rr], s2=np.array([x['R']['s2'] for x in L], float), oR=[x['R']['answer'] for x in L], oT=[x['T']['answer'] for x in L],
++             exR=[x['R']['extracted'] for x in L], exT=[x['T']['extracted'] for x in L], rawR=[x['R']['raw'] for x in L], rawT=[x['T']['raw'] for x in L],
++             wR=[x['R']['words'] for x in L], wT=[x['T']['words'] for x in L], nR=[x['R']['n_gen_tokens'] for x in L], nT=[x['T']['n_gen_tokens'] for x in L],
++             hms=np.array([r['helper']['wall_ms'] for r in rr], float), Rms=np.array([x['R']['wall_ms'] for x in L], float),
++             Tms=np.array([x['T']['wall_ms'] for x in L], float), htok=[len(r['helper']['helper_generated_token_ids']) for r in rr])
++    X['d'] = np.array([changed(u, v) for u, v in zip(X['oR'], X['oT'])], bool)
++    X['omit'] = route_mask(X['s2'], q, tau) if q > 0 else np.zeros(len(rr), bool)
++    return X
++
++
++D = {sp: arr(sp) for sp in SPL}
++
++
++def cp95(k, n):
++    if n == 0: return (None, None)
++    return (float(beta.ppf(.025, k, n - k + 1)) if k > 0 else 0.0, float(beta.ppf(.975, k + 1, n - k)) if k < n else 1.0)
++
++
++def mw(d, u):   # = analyze_x3 mw (E13 item 8): explicit Mann-Whitney, ties 1/2
++    d = np.asarray(d, bool); u = np.asarray(u, float); pos, neg = u[d], u[~d]
++    if not len(pos) or not len(neg): return float('nan')
++    return float(((pos[:, None] > neg[None, :]).sum() + .5 * (pos[:, None] == neg[None, :]).sum()) / (len(pos) * len(neg)))
++
++
++def boot(n, f, B_=2000):
++    rng = np.random.default_rng(0); v = []; skip = 0
++    for _ in range(B_):
++        x = f(rng.integers(0, n, n))
++        if x is None: skip += 1; continue
++        v.append(x)
++    return (float(np.percentile(v, 2.5)), float(np.percentile(v, 97.5))) if v else (None, None), skip
++
++
++def f1(a, b):
++    ta, tb = ([] if a == INVALID else a.split()), ([] if b == INVALID else b.split())
++    if not ta or not tb: return float(ta == tb)
++    c = sum((collections.Counter(ta) & collections.Counter(tb)).values())
++    if c == 0: return 0.0
++    p, r = c / len(ta), c / len(tb); return 2 * p * r / (p + r)
++
++
++def cont(a, b): return a != INVALID and b != INVALID and (a in b or b in a)
++
++
++def split_changes(X, m):
++    ch = [(u, v) for u, v, dd, mm in zip(X['oR'], X['oT'], X['d'], m) if dd and mm]
++    return dict(both_parse=sum(u != INVALID and v != INVALID for u, v in ch), only_R_INVALID=sum(u == INVALID and v != INVALID for u, v in ch),
++                only_ref_INVALID=sum(u != INVALID and v == INVALID for u, v in ch))
++
++
++def surface(X, m):
++    idx = np.where(m)[0]
++    if not len(idx): return None
++    d = X['d'][idx]; ch = [i for i in idx if X['d'][i]]
++    beyond = [extract(raw)['answer'] != (normalize_text(raw) or INVALID) for i in idx for raw in (X['rawR'][i], X['rawT'][i])]
++    return dict(n=len(idx), change_rate_normalized=float(d.mean()), raw_string_change_rate=float(np.mean([X['exR'][i] != X['exT'][i] for i in idx])),
++                containment_as_agreement_change_rate=float(np.mean([X['d'][i] and not cont(X['oR'][i], X['oT'][i]) for i in idx])),
++                n_changes=len(ch), containment_share_of_changes=(float(np.mean([cont(X['oR'][i], X['oT'][i]) for i in ch])) if ch else None),
++                median_token_F1_among_changes=(float(statistics.median([f1(X['oR'][i], X['oT'][i]) for i in ch])) if ch else None),
++                extraction_beyond_normalization_share=float(np.mean(beyond)), n_outputs=len(beyond))
++
++
++def lengths(X):
++    return dict(median_words_R=statistics.median(X['wR']), median_words_ref=statistics.median(X['wT']),
++                cap32_hits_R=sum(n >= 32 for n in X['nR']), cap32_hits_ref=sum(n >= 32 for n in X['nT']),
++                helper_tokens_median=statistics.median(X['htok']), helper_cap256_share=float(np.mean([t >= 256 for t in X['htok']])),
++                helper_cap256_n=sum(t >= 256 for t in X['htok']), n=len(X['htok']))
++
++
++out = dict(utc=utc(), gold_read=False, dry_run=a.dry_run, cert_sha256=cert_sha, deployed_q=q, threshold=tau, deployed=q > 0)
++V = D['dev']; n = len(V['d']); k = int(V['d'].sum())
++auc = mw(V['d'], V['s2'])
++ci, skip = boot(n, lambda ix: (None if V['d'][ix].all() or not V['d'][ix].any() else mw(V['d'][ix], V['s2'][ix])))
++no, ko = int(V['omit'].sum()), int(V['d'][V['omit']].sum())
++P, mode, mc = summarize(*run(draws(np.random.default_rng(0), 1000, 500, 2000, k / n), k / n, auc, 500, 2000))
++out['dev'] = dict(n=n, disagreements=k, d=k / n, d_CP95=cp95(k, n), AUROC_s2=auc, AUROC_s2_CI95=ci, bootstrap_skipped=skip,
++                  omitted=no, coverage=no / n, omitted_changes=ko, omitted_change_rate=(ko / no if no else None), omitted_change_CP95=cp95(ko, no),
++                  omitted_changes_split=split_changes(V, V['omit']), invalid_R=sum(v == INVALID for v in V['oR']), invalid_ref=sum(v == INVALID for v in V['oT']),
++                  binormal_P_certify_at_Ncal2000=P, binormal_modal_q=mode, binormal_median_coverage_when_certified=mc,
++                  AUROC_ge_080=bool(auc >= .80))
++out['surface'] = dict(omitted_dev=surface(V, V['omit']), all_dev=surface(V, np.ones(n, bool)))
++out['lengths'] = dict(dev=lengths(V), cal=lengths(D['cal']))
++if q > 0 and 'test' not in D:
++    out['test'] = dict(status='incomplete', complete_rows=len(TEST_ROWS), needed=FC.N_SPLIT['test'])
++elif q > 0:
++    T = D['test']; nt, kt = int(T['omit'].sum()), int(T['d'][T['omit']].sum()); lo, hi = cp95(kt, nt); pt = pval(kt, nt)
++    out['test'] = dict(n_questions=len(T['d']), omitted=nt, changed=kt, change_rate=(kt / nt if nt else None), CP95=[lo, hi], p=pt, p_le_001=pt <= .001,
++                       coverage=nt / len(T['d']), verdict=('pass' if hi is not None and hi < .05 else 'fail' if lo is not None and lo > .05 else 'inconclusive'),
++                       disagreements_all=int(T['d'].sum()), invalid_R=sum(v == INVALID for v in T['oR']), invalid_ref=sum(v == INVALID for v in T['oT']),
++                       omitted_changes_split=split_changes(T, T['omit']), surface_omitted=surface(T, T['omit']), lengths=lengths(T))
++else:
++    out['test'] = None
++# re-splits (E5-b / X3 rule)
++pool = D['fit']['ids'] + D['cal']['ids']; up = np.concatenate([D['fit']['s2'], D['cal']['s2']]); dp = np.concatenate([D['fit']['d'], D['cal']['d']])
++rs = []
++for seed in range(1, 201):
++    reps = sorted(pool); random.Random(seed).shuffle(reps); f = set(reps[:500]); m = np.array([i in f for i in pool], bool)
++    c_s = thresholds(list(up[m])); l_s = ledger_rows(up[~m], dp[~m], c_s); q_s, _ = deploy(l_s)
++    row = dict(seed=seed, q=q_s)
++    if q_s > 0:
++        md = route_mask(V['s2'], q_s, c_s[GRID.index(q_s)]); row.update(dev_coverage=float(md.mean()), dev_omitted=int(md.sum()), dev_changed=int(V['d'][md].sum()))
++    rs.append(row)
++cq = [r['q'] for r in rs if r['q'] > 0]
++out['resplits'] = dict(n=200, certification_rate=len(cq) / 200, agreement_with_original=sum((r['q'] > 0) == (q > 0) for r in rs) / 200,
++                       same_q_share=sum(r['q'] == q for r in rs) / 200, median_q=(float(np.median(cq)) if cq else None),
++                       median_dev_coverage=(float(np.median([r['dev_coverage'] for r in rs if r['q'] > 0])) if cq else None), per_seed=rs)
++sel = json.loads((FC.PILOT_DIR / 'SELECTION_E20P.json').read_text())['selected'][0]
++out['prediction'] = dict(pilot_P_at_2000=sel['P']['2000'], pilot_conservative_P_at_2000=sel['conservative_P']['2000'], outcome=('deployed' if q > 0 else 'fallback'))
++if q > 0:
++    om = V['omit'].astype(float); v = om * (V['hms'] + V['Tms']) - V['Rms']; w = V['hms'] + V['Tms'] - V['Rms']
++    out['value_estimate_ms'] = dict(note='estimate from recorded per-row wall-clock on ClusterA A100 (pilot definition), sequential execution assumed; not a replay',
++                                    policy_mean=float(v.mean()), policy_CI95=boot(n, lambda ix: float(v[ix].mean()))[0],
++                                    always_omit_mean=float(w.mean()), always_omit_CI95=boot(n, lambda ix: float(w[ix].mean()))[0],
++                                    helper_mean=float(V['hms'].mean()), receiver_only_mean=float(V['Rms'].mean()), receiver_with_message_mean=float(V['Tms'].mean()))
++else:
++    out['value_estimate_ms'] = None
++sp_ = B / 'STATS_E20F.json'; sp_.write_text(json.dumps(out, indent=1, allow_nan=False) + '\n')
++(B / 'STATS_E20F.sha256').write_text(f'{FC.sha(sp_)}  STATS_E20F.json\nhashed_utc: {utc()}\n')
++routes = [dict(split=sp, id=i, s2=float(s), route='omit' if o else 'message') for sp in SPL for i, s, o in zip(D[sp]['ids'], D[sp]['s2'], D[sp]['omit'])]
++rp = B / 'ROUTES_E20F.json'; rp.write_text(json.dumps(dict(utc=utc(), deployed_q=q, threshold=tau, routes=routes), indent=0) + '\n')
++(B / 'ROUTES_E20F.sha256').write_text(f'{FC.sha(rp)}  ROUTES_E20F.json\nhashed_utc: {utc()}\n')
++print(json.dumps({k: v for k, v in out.items() if k != 'resplits'}, indent=1, default=str)[:6000])
++print('resplits', {k: v for k, v in out['resplits'].items() if k != 'per_seed'})
++print((B / 'STATS_E20F.sha256').read_text(), (B / 'ROUTES_E20F.sha256').read_text())
+--- /dev/null
++++ e20f/src/e20f_gold.py
+@@ -0,0 +1,68 @@
++"""E20F Step 7 (login node), ONLY after STATS_E20F.json and ROUTES_E20F.json are hashed: gold answers (SQuAD answers.text of the pinned train
++parquet, read only for dev / test ids) for accuracy. Exact match after the pilot normalization (e20_extract.normalize_text) against any gold
++answer; INVALID is incorrect. Policy output = receiver-only answer if routed 'omit', else the receiver-with-message answer (ROUTES_E20F.json).
++Per split (dev; test if routed): R, Text, policy as x/n with paired bootstrap 95% intervals (numpy default_rng(0), 2,000, the same resample
++indices for all), G = acc(Text) - acc(R) with interval; kappa*alpha = dev coverage x .05 against G; among changes (and among omitted changes):
++reference corrects (R wrong, Text right) / breaks (R right, Text wrong) / both wrong. Writes results/ACCURACY_E20F.json and
++logs/GOLD_FIRST_OPENED.utc. usage: e20f_gold.py [--dry-run --manifest <synthetic manifest>]"""
++import sys, json, argparse, pathlib, datetime
++sys.dont_write_bytecode = True
++sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
++import e20f_common as FC
++from e20_extract import INVALID, normalize_text, changed                     # pilot module
++import numpy as np
++import pyarrow as pa
++pa.set_cpu_count(1); pa.set_io_thread_count(1)
++import pyarrow.parquet as pq
++
++ap = argparse.ArgumentParser(); ap.add_argument('--dry-run', action='store_true'); ap.add_argument('--manifest', default=None); a = ap.parse_args()
++REAL = FC.E20F / 'pool/notes/DOWNLOAD_MANIFEST.json'
++MANP = pathlib.Path(a.manifest) if a.manifest else REAL
++assert not a.dry_run or MANP.resolve() != REAL.resolve(), 'dry run must not open the real gold files'
++B = FC.base(a.dry_run); RES = B / 'results'
++utc = lambda: datetime.datetime.now(datetime.timezone.utc).isoformat()
++hs = FC.check_hashfile(B / 'STATS_E20F.sha256', 'STATS_E20F.json'); hr = FC.check_hashfile(B / 'ROUTES_E20F.sha256', 'ROUTES_E20F.json')
++gl = (RES if a.dry_run else B / 'logs') / 'GOLD_FIRST_OPENED.utc'
++if not gl.exists(): gl.write_text(utc() + f'  (after STATS_E20F.json {hs} and ROUTES_E20F.json {hr})\n')
++stats = json.loads((B / 'STATS_E20F.json').read_text()); routes = json.loads((B / 'ROUTES_E20F.json').read_text())['routes']
++R = {(r['split'], r['id']): r['route'] for r in routes}
++rows = {r['id']: r for r in FC.jl(RES / 'E20F_devtest_rows.jsonl')}
++SPL = [sp for sp in ['dev', 'test'] if any(k[0] == sp for k in R)]
++want = {i for (sp, i) in R if sp in SPL}
++man = json.loads(MANP.read_text())['squad']; (fn, v), = man['files'].items(); assert FC.sha(v['path']) == v['sha256']
++gold = {}
++for x in pq.read_table(v['path'], columns=['id', 'answers'], use_threads=False).to_pylist():
++    if x['id'] in want and x['id'] not in gold: gold[x['id']] = {normalize_text(t) for t in x['answers']['text']} - {''}
++assert want <= set(gold), 'gold missing for some ids'
++
++
++def ci(v): return [float(np.percentile(v, 2.5)), float(np.percentile(v, 97.5))]
++
++
++out = dict(utc=utc(), stats_sha256=hs, routes_sha256=hr, splits={})
++for sp in SPL:
++    ids = [i for (s, i) in R if s == sp]
++    oR = [rows[i]['llama']['R']['answer'] for i in ids]; oT = [rows[i]['llama']['T']['answer'] for i in ids]
++    om = np.array([R[(sp, i)] == 'omit' for i in ids], bool)
++    cR = np.array([a_ != INVALID and a_ in gold[i] for a_, i in zip(oR, ids)], bool)
++    cT = np.array([b != INVALID and b in gold[i] for b, i in zip(oT, ids)], bool)
++    cP = np.where(om, cR, cT); d = np.array([changed(x, y) for x, y in zip(oR, oT)], bool); n = len(ids)
++    rng = np.random.default_rng(0); bs = {k: [] for k in ['R', 'Text', 'policy', 'G']}
++    for _ in range(2000):
++        ix = rng.integers(0, n, n)
++        bs['R'].append(cR[ix].mean()); bs['Text'].append(cT[ix].mean()); bs['policy'].append(cP[ix].mean()); bs['G'].append(cT[ix].mean() - cR[ix].mean())
++    G = float(cT.mean() - cR.mean())
++
++    def cb(m): return dict(n=int(m.sum()), reference_corrects=int((m & ~cR & cT).sum()), reference_breaks=int((m & cR & ~cT).sum()),
++                           both_wrong=int((m & ~cR & ~cT).sum()), both_right=int((m & cR & cT).sum()))
++    out['splits'][sp] = dict(n=n, R_correct=int(cR.sum()), Text_correct=int(cT.sum()), policy_correct=int(cP.sum()),
++                             acc_R=float(cR.mean()), acc_Text=float(cT.mean()), acc_policy=float(cP.mean()),
++                             CI95={k: ci(v_) for k, v_ in bs.items()}, G=G, omitted=int(om.sum()), coverage=float(om.mean()),
++                             changes=cb(d), omitted_changes=cb(d & om))
++dv = out['splits']['dev']
++ka = stats['dev']['coverage'] * .05
++out['kappa_alpha'] = dict(value=ka, definition='dev coverage x 5 points', G_dev=dv['G'], G_dev_CI95=dv['CI95']['G'], G_le_kappa_alpha=dv['G'] <= ka,
++                          G_CI_includes_0=dv['CI95']['G'][0] <= 0 <= dv['CI95']['G'][1])
++out['rule5_redundancy_triggered'] = bool(out['kappa_alpha']['G_le_kappa_alpha'] or out['kappa_alpha']['G_CI_includes_0'])
++(RES / 'ACCURACY_E20F.json').write_text(json.dumps(out, indent=1) + '\n')
++print(json.dumps(out, indent=1))
+--- /dev/null
++++ e20f/src/e20f_results.py
+@@ -0,0 +1,46 @@
++"""E20F: RESULTS_E20F.md from CERT_E20F.json, STATS_E20F.json, results/ACCURACY_E20F.json (all hash-checked) and the writing-rule branch of
++PREREG_E20F.md: (7) if CERT or STATS was written after 2026-09-23T11:00:00Z (Sep 23 06:00 CDT); else (3) fallback; else, with dev coverage >= .10
++and the dev omitted-change two-sided 95% CP lower bound <= .05: (1) test pass, (1a) inconclusive, (1b) fail; otherwise (2). Rule (5) = dev G
++interval includes 0 or G <= kappa*alpha. usage: e20f_results.py [--dry-run]"""
++import sys, json, argparse, pathlib, datetime
++sys.dont_write_bytecode = True
++sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
++import e20f_common as FC
++
++ap = argparse.ArgumentParser(); ap.add_argument('--dry-run', action='store_true'); a = ap.parse_args()
++B = FC.base(a.dry_run)
++cert, hc = FC.load_cert(a.dry_run); hs = FC.check_hashfile(B / 'STATS_E20F.sha256', 'STATS_E20F.json')
++S = json.loads((B / 'STATS_E20F.json').read_text()); A = json.loads((B / 'results/ACCURACY_E20F.json').read_text())
++DL = '2026-09-23T11:00:00+00:00'
++f = lambda x, n=4: 'N/A' if x is None else (f'{x:.{n}f}' if isinstance(x, float) else str(x))
++ci = lambda v: f'[{f(v[0])}, {f(v[1])}]' if v and v[0] is not None else '[N/A]'
++dv, t = S['dev'], S['test']
++if cert['utc'] > DL or S['utc'] > DL: br = '(7)'
++elif not cert['deployed']: br = '(3)'
++elif dv['coverage'] >= .10 and dv['omitted_change_CP95'][0] <= .05:
++    br = {'pass': '(1)', 'inconclusive': '(1a)', 'fail': '(1b)'}.get((t or {}).get('verdict'), 'undetermined: test incomplete')
++else: br = '(2)'
++L = ['# RESULTS_E20F — E20-full (SQuAD v1.1, helper Qwen2.5-7B-Instruct Text, receiver Llama-3.1-8B-Instruct, score s2)', '',
++     f'CERT_E20F.json {hc} ({cert["utc"]}); STATS_E20F.json {hs} ({S["utc"]}); accuracy {A["utc"]}. Writing-rule branch: **{br}**; '
++     f'rule (5) triggered: **{A["rule5_redundancy_triggered"]}**.', '', '## Calibration (fit 500 -> 20 thresholds; calibration 2,000)', '',
++     '| q | tau | n | k | p | .999 CP up | accepted |', '|---|---|---|---|---|---|---|']
++L += [f"| {r['q']:.2f} | {r['tau']} | {r['n']} | {r['k']} | {r['p']:.3g} | {r['CP999_upper']:.4f} | {r['accepted']} |" for r in cert['ledger']]
++c = cert['cal']
++L += ['', f"Deployed q = **{cert['deployed_q'] if cert['deployed'] else 'fallback'}** (threshold {cert['threshold']}). Disagreement {c['disagreements']}/{c['n']}; "
++      f"INVALID R {c['invalid_R']}, reference {c['invalid_ref']}; always-omit change rate {f(c['always_omit_change_rate'])}; max TPR/FPR {c['max_TPR_over_FPR']} "
++      f"vs C = {f(c['C_pi_alpha'])}; needed N_cal (if fallback): {cert['needed_N_cal']}.", '', '## Dev (1,000)', '',
++      f"d = {dv['disagreements']}/{dv['n']} = {f(dv['d'])} {ci(dv['d_CP95'])}; AUROC s2 {f(dv['AUROC_s2'])} {ci(dv['AUROC_s2_CI95'])} (>= .80: {dv['AUROC_ge_080']}); "
++      f"coverage {f(dv['coverage'])}; omitted changes {dv['omitted_changes']}/{dv['omitted']} = {f(dv['omitted_change_rate'])} {ci(dv['omitted_change_CP95'])}; "
++      f"split {dv['omitted_changes_split']}; INVALID R {dv['invalid_R']}, reference {dv['invalid_ref']}; binormal P(certify) from dev at N_cal 2,000 = "
++      f"{f(dv['binormal_P_certify_at_Ncal2000'], 3)}.", '', f"Surface (omitted dev): {S['surface']['omitted_dev']}", '', f"Surface (all dev): {S['surface']['all_dev']}",
++      '', f"Lengths: {S['lengths']}", '', '## Test', '', f"{t}", '', '## Accuracy', '']
++for sp, x in A['splits'].items():
++    L.append(f"- {sp}: R {x['R_correct']}/{x['n']} {ci(x['CI95']['R'])}; Text {x['Text_correct']}/{x['n']} {ci(x['CI95']['Text'])}; policy {x['policy_correct']}/{x['n']} "
++             f"{ci(x['CI95']['policy'])}; G {f(x['G'])} {ci(x['CI95']['G'])}; changes {x['changes']}; omitted changes {x['omitted_changes']}")
++rs = S['resplits']
++L += ['', f"kappa*alpha = {f(A['kappa_alpha']['value'])} vs dev G {f(A['kappa_alpha']['G_dev'])}.", '', '## Re-splits, prediction, value', '',
++      f"Re-splits: agreement {f(rs['agreement_with_original'], 3)}, certification rate {f(rs['certification_rate'], 3)}, same q {f(rs['same_q_share'], 3)}, "
++      f"median q {rs['median_q']}, median dev coverage {f(rs['median_dev_coverage'])}.", '',
++      f"Pilot binormal prediction P@2000 = {S['prediction']['pilot_P_at_2000']} (conservative {S['prediction']['pilot_conservative_P_at_2000']}); outcome: "
++      f"{S['prediction']['outcome']}.", '', f"Value estimate (ms): {S['value_estimate_ms']}"]
++(B / 'RESULTS_E20F.md').write_text('\n'.join(L) + '\n'); print('\n'.join(L))
+--- /dev/null
++++ e20f/src/e20f_g1_verify.py
+@@ -0,0 +1,20 @@
++"""E20F G1 (login node): verify the pilot's PREREG_E20P.md, SELECTION_E20P.json, PROMPTS_E20.md and every file in its CODE_FREEZE.json
++against the hashes stored in the pilot directory. Writes notes/G1_VERIFY.json; exit 1 on any difference."""
++import sys, json, hashlib, pathlib, datetime
++S = pathlib.Path(__file__).resolve().parents[1]; P = S.parent / 'P2_R8_E20P_20260921T224653Z'
++sha = lambda p: hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()
++out = dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(), pilot_dir=str(P), checks=[])
++def chk(name, stored, now): out['checks'].append(dict(item=name, stored=stored, now=now, ok=stored == now))
++for f in ['PREREG_E20P', 'SELECTION_E20P']:
++    h, n = (P / f'{f}.sha256').read_text().split('\n')[0].split('  '); assert n == f'{f}.md' or n == f'{f}.json'
++    chk(n, h, sha(P / n))
++chk('PREREG_E20P.md (task-stated)', 'c02cf958a7c972c6c976da4100d02293fcd81ba91b5f614d02b3cf0a1ab7adb5', sha(P / 'PREREG_E20P.md'))
++pre = (P / 'PREREG_E20P.md').read_text()
++ph = pre.split('PROMPTS_E20.md sha256 `')[1].split('`')[0]; chk('PROMPTS_E20.md (hash in PREREG_E20P.md)', ph, sha(P / 'PROMPTS_E20.md'))
++fh = pre.split('notes/CODE_FREEZE.json sha256 `')[1].split('`')[0]; chk('notes/CODE_FREEZE.json (hash in PREREG_E20P.md)', fh, sha(P / 'notes/CODE_FREEZE.json'))
++fz = json.loads((P / 'notes/CODE_FREEZE.json').read_text())['files']
++for f, h in fz.items(): chk(f'CODE_FREEZE: {f}', h, sha(P / f))
++out['n_code_freeze_files'] = len(fz); out['all_ok'] = all(c['ok'] for c in out['checks'])
++(S / 'notes/G1_VERIFY.json').write_text(json.dumps(out, indent=1) + '\n')
++print('G1', 'PASS' if out['all_ok'] else 'FAIL', f"{sum(c['ok'] for c in out['checks'])}/{len(out['checks'])} checks; CODE_FREEZE files {len(fz)}")
++sys.exit(0 if out['all_ok'] else 1)
+--- /dev/null
++++ e20f/src/e20f_splits.py
+@@ -0,0 +1,39 @@
++"""E20F G2 (login node, no model): full-run split files from the rebuilt SQuAD pool order (pool/inputs/POOL_ORDER_squad.txt, produced by the
++byte-identical frozen e20_pool.py). Reads only the id, question and context columns of the pinned SQuAD train parquet (the answers column is
++never read), builds each item exactly as e20_pool.py does (question.strip(), passage = context.strip()), and writes inputs/FULL_<split>.jsonl
++with only id, question, passage: pool positions [400,900) fit, [900,2900) cal, [2900,3900) dev, [3900,4900) test. Checks: the first 400
++reconstructed items serialize byte-identically to the pilot's PILOT_squad.jsonl lines; all sets disjoint; <= 300 words. -> notes/SPLITS_E20F.json"""
++import json, hashlib, pathlib, datetime
++import pyarrow as pa
++pa.set_cpu_count(1); pa.set_io_thread_count(1)
++import pyarrow.parquet as pq
++S = pathlib.Path(__file__).resolve().parents[1]; P = S.parent / 'P2_R8_E20P_20260921T224653Z'
++sha = lambda p: hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()
++man = json.loads((S / 'pool/notes/DOWNLOAD_MANIFEST.json').read_text())['squad']
++assert man['revision'] == '7b6d24c440a36b6815f21b70d25016731768db1f'
++(fn, v), = man['files'].items(); assert sha(v['path']) == v['sha256']
++rows = pq.read_table(v['path'], columns=['id', 'question', 'context'], use_threads=False).to_pylist()
++item = {}
++for x in rows:
++    assert x['id'] not in item
++    item[x['id']] = dict(id=x['id'], question=x['question'].strip(), passage=x['context'].strip())
++order = (S / 'pool/inputs/POOL_ORDER_squad.txt').read_text().split('\n')[:-1]
++assert len(order) == 86830 and len(set(order)) == len(order)
++line = lambda i: json.dumps(item[i], ensure_ascii=False) + '\n'
++pilot_lines = (P / 'inputs/PILOT_squad.jsonl').read_text().splitlines(keepends=True)
++assert [line(i) for i in order[:400]] == pilot_lines, 'reconstruction differs from the pilot file'
++SPL = {'fit': (400, 900), 'cal': (900, 2900), 'dev': (2900, 3900), 'test': (3900, 4900)}
++out = dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(), source=dict(repo='rajpurkar/squad', revision=man['revision'], file=fn,
++           sha256=v['sha256'], columns_read=['id', 'question', 'context']), gold_read=False,
++           pool_order=dict(path='pool/inputs/POOL_ORDER_squad.txt', sha256=sha(S / 'pool/inputs/POOL_ORDER_squad.txt'), n=len(order)),
++           pilot_reconstruction_byte_identical=True, splits={})
++ids = {'pilot': set(order[:400])}
++for sp, (a, b) in SPL.items():
++    p = S / f'inputs/FULL_{sp}.jsonl'; p.write_text(''.join(line(i) for i in order[a:b]))
++    ids[sp] = set(order[a:b]); assert all(len(item[i]['passage'].split()) <= 300 for i in order[a:b])
++    out['splits'][sp] = dict(pool_positions=[a, b], n=b - a, path=str(p.relative_to(S)), sha256=sha(p), first_id=order[a], last_id=order[b - 1])
++names = list(ids); out['pairwise_intersections'] = {f'{x}&{y}': len(ids[x] & ids[y]) for i, x in enumerate(names) for y in names[i + 1:]}
++out['all_disjoint'] = all(v == 0 for v in out['pairwise_intersections'].values())
++(S / 'notes/SPLITS_E20F.json').write_text(json.dumps(out, indent=1) + '\n')
++(S / 'notes/FULL_IDS_4500.txt').write_text(''.join(i + '\n' for i in order[400:4900]))
++print(json.dumps(out['splits'], indent=0)); print('disjoint', out['all_disjoint'], out['pairwise_intersections'])

@@ -1,0 +1,14 @@
+{
+  "tokenizer_mapping_check_wall_seconds": 1.4572546919807792,
+  "model_load_wall_seconds": 12.548994357930496,
+  "torch": "2.6.0+cu124",
+  "transformers": "4.52.4",
+  "GPU": "_CudaDeviceProperties(name='NVIDIA A100-SXM4-40GB', major=8, minor=0, total_memory=40441MB, multi_processor_count=108, uuid=5987fde9-b207-331e-62ec-40d01391e053, L2_cache_size=40MB)",
+  "CUDA_VISIBLE_DEVICES": null,
+  "model_path": "<private_path>/Qwen--Qwen3-0.6B",
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "receiver_only": true,
+  "helper_loaded": false,
+  "generation": false
+}

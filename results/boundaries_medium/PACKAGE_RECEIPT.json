@@ -1,0 +1,9 @@
+{
+  "utc": "2026-09-15T14:55:11.229740+00:00",
+  "archive": "$DATA_DIR/P2_MEDIUM_PAIR_BOUNDARY_EXTENSION_STAGE1_20260915T144407Z/WORK_HANDOFF.tar.gz",
+  "bytes": 8351139,
+  "sha256": "a434a6112bb2ecea34552f09958df677395f2ff3d89b9c4171e0d7941e0cb3d1",
+  "contents_manifest": "SHA256SUMS",
+  "verified_content_files": 116,
+  "status": "BLOCKED_MEDIUM_STAGE1"
+}

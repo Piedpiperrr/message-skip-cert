@@ -1,0 +1,126 @@
+{
+  "large": {
+    "rows": 2048,
+    "expected": 2048,
+    "complete": true,
+    "marker": "COMPLETE",
+    "arms": {
+      "fixed": 512,
+      "original": 512,
+      "reuse": 512,
+      "argmax": 512
+    },
+    "position_cells_all_32": true,
+    "distinct_position_cells": 16,
+    "position_cell_counts": [
+      128
+    ],
+    "frozen_identity_checked": 1536,
+    "frozen_identity_failures": 0,
+    "invalid": 0,
+    "runtime_failures": 0,
+    "omitted_per_arm": {
+      "original": 429,
+      "reuse": 429,
+      "argmax": 429
+    },
+    "mean_latency_ms": {
+      "argmax": 117.9,
+      "fixed": 571.9,
+      "original": 290.7,
+      "reuse": 291.0
+    },
+    "reuse_vs_original_output_differences": 10,
+    "gold_read": false
+  },
+  "mmlu": {
+    "rows": 1024,
+    "expected": 1024,
+    "complete": true,
+    "marker": "COMPLETE",
+    "arms": {
+      "fixed": 256,
+      "original": 256,
+      "reuse": 256,
+      "argmax": 256
+    },
+    "position_cells_all_32": true,
+    "distinct_position_cells": 16,
+    "position_cell_counts": [
+      64
+    ],
+    "frozen_identity_checked": 0,
+    "frozen_identity_failures": 0,
+    "invalid": 4,
+    "runtime_failures": 0,
+    "omitted_per_arm": {
+      "original": 96,
+      "reuse": 96,
+      "argmax": 96
+    },
+    "mean_latency_ms": {
+      "argmax": 463.8,
+      "fixed": 684.5,
+      "original": 544.6,
+      "reuse": 541.1
+    },
+    "reuse_vs_original_output_differences": 0,
+    "gold_read": false
+  },
+  "medium": {
+    "rows": 1024,
+    "expected": 1024,
+    "complete": true,
+    "marker": "COMPLETE",
+    "arms": {
+      "fixed": 256,
+      "original": 256,
+      "reuse": 256,
+      "argmax": 256
+    },
+    "position_cells_all_32": true,
+    "distinct_position_cells": 16,
+    "position_cell_counts": [
+      64
+    ],
+    "frozen_identity_checked": 0,
+    "frozen_identity_failures": 0,
+    "invalid": 24,
+    "runtime_failures": 0,
+    "omitted_per_arm": {
+      "original": 143,
+      "reuse": 143,
+      "argmax": 138
+    },
+    "mean_latency_ms": {
+      "argmax": 174.6,
+      "fixed": 332.0,
+      "original": 268.0,
+      "reuse": 268.0
+    },
+    "reuse_vs_original_output_differences": 3,
+    "gold_read": false
+  },
+  "e6replay": {
+    "rows": 256,
+    "expected": 256,
+    "complete": true,
+    "marker": "COMPLETE",
+    "arms": {
+      "fixed_TF": 128,
+      "policy_TF": 128
+    },
+    "selected": {
+      "fixed_TF|TF": 128,
+      "policy_TF|TF": 36,
+      "policy_TF|R": 92
+    },
+    "omitted": 92,
+    "invalid": 0,
+    "runtime_failures": 0,
+    "mean_latency_ms": {
+      "fixed_TF": 726.5,
+      "policy_TF": 383.1
+    }
+  }
+}
